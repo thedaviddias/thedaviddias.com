@@ -1,0 +1,439 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.framework.id": "next",
+  "frontMatter.content.publicFolder": "public",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "articles",
+      "path": "[[workspace]]/content/articles"
+    },
+    {
+      "title": "notes",
+      "path": "[[workspace]]/content/notes"
+    },
+    {
+      "title": "pages",
+      "path": "[[workspace]]/content/pages"
+    }
+  ],
+  "frontMatter.preview.pathName": "/articles",
+  "frontMatter.site.baseURL": "https://thedaviddias.dev",
+  "frontMatter.taxonomy.alignFilename": true,
+  "frontMatter.templates.prefix": "",
+  "frontMatter.telemetry.disable": true,
+  "frontMatter.panel.freeform": true,
+  "frontMatter.templates.enabled": true,
+  "frontMatter.content.autoUpdateDate": false,
+  "frontMatter.dashboard.openOnStart": true,
+  "frontMatter.taxonomy.seoTitleLength": 70,
+  "frontMatter.framework.startCommand": "pnpm dev",
+  "frontMatter.preview.host": "http://localhost:3000/",
+  "frontMatter.taxonomy.tags": [
+    "astuces",
+    "aws",
+    "best-practices",
+    "canada",
+    "coding",
+    "collaboration",
+    "dev-journal",
+    "entree-express",
+    "front-end-checklist",
+    "front-end-development",
+    "gaming",
+    "github",
+    "github-actions",
+    "html",
+    "life-lessons",
+    "morning-routines",
+    "netlify",
+    "new-zealand",
+    "nextjs",
+    "npm",
+    "open-source",
+    "performance",
+    "pnpm",
+    "react",
+    "security",
+    "self-improvement",
+    "steam-deck",
+    "toronto",
+    "travel",
+    "typescript",
+    "usa",
+    "user-experience",
+    "user-interface",
+    "user-testing",
+    "web-accessibilite"
+  ],
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "article",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "boolean"
+        },
+        {
+          "title": "locale",
+          "name": "locale",
+          "type": "choice",
+          "choices": [
+            "en",
+            "fr"
+          ]
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Preview image",
+          "name": "preview",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Content preview",
+              "name": "url",
+              "type": "image"
+            },
+            {
+              "title": "Content preview alt",
+              "name": "alt",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "Author",
+          "name": "author",
+          "type": "dataFile",
+          "dataFileId": "authors",
+          "dataFileValue": "name",
+          "dataFileKey": "name",
+          "multiple": false
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "Previously published",
+          "name": "published",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Platform name",
+              "name": "on",
+              "type": "string"
+            },
+            {
+              "title": "Publication URL",
+              "name": "url",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "Hreflang (Fr)",
+          "name": "langFr",
+          "type": "string"
+        },
+        {
+          "title": "Hreflang (En)",
+          "name": "langEn",
+          "type": "string"
+        },
+        {
+          "title": "Type of publication",
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "title": "Last modification date",
+          "name": "lastmod",
+          "type": "datetime"
+        }
+      ]
+    },
+    {
+      "name": "note",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "boolean"
+        },
+        {
+          "title": "locale",
+          "name": "locale",
+          "type": "choice",
+          "choices": [
+            "en",
+            "fr"
+          ]
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Author",
+          "name": "author",
+          "type": "dataFile",
+          "dataFileId": "authors",
+          "dataFileValue": "name",
+          "dataFileKey": "name",
+          "multiple": false
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Type of publication",
+          "name": "type",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "page",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "boolean"
+        },
+        {
+          "title": "locale",
+          "name": "locale",
+          "type": "choice",
+          "choices": [
+            "en",
+            "fr"
+          ]
+        },
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "date",
+          "name": "date",
+          "type": "datetime"
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "frontMatter.taxonomy.categories": [
+    "automation",
+    "expatriation",
+    "management",
+    "productivity",
+    "reflexion",
+    "side-project",
+    "user-experience",
+    "web-development"
+  ],
+  "frontMatter.data.files": [
+    {
+      "id": "social",
+      "title": "Social Medias",
+      "file": "[[workspace]]/data/social.json",
+      "fileType": "json",
+      "labelField": "label",
+      "schema": {
+        "title": "Social Medias",
+        "type": "object",
+        "required": [
+          "label",
+          "link"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "Name"
+          },
+          "link": {
+            "type": "string",
+            "title": "URL"
+          }
+        }
+      }
+    },
+    {
+      "id": "categories",
+      "title": "Categories",
+      "file": "[[workspace]]/data/categories.json",
+      "fileType": "json",
+      "labelField": "name",
+      "schema": {
+        "title": "Category",
+        "type": "object",
+        "required": [
+          "name",
+          "description"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description"
+          }
+        }
+      }
+    },
+    {
+      "id": "tags",
+      "title": "Tags",
+      "file": "[[workspace]]/data/tags.json",
+      "fileType": "json",
+      "labelField": "name",
+      "schema": {
+        "title": "Tag",
+        "type": "object",
+        "required": [
+          "name",
+          "description"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description"
+          },
+          "logo": {
+            "type": "string",
+            "title": "Logo path"
+          }
+        }
+      }
+    },
+    {
+      "id": "authors",
+      "title": "Authors",
+      "file": "[[workspace]]/data/authors.json",
+      "fileType": "json",
+      "labelField": "name",
+      "schema": {
+        "title": "Author",
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "slug": {
+            "type": "string",
+            "title": "Slug"
+          }
+        }
+      }
+    },
+    {
+      "id": "uses",
+      "title": "Uses",
+      "file": "[[workspace]]/data/uses.json",
+      "fileType": "json",
+      "labelField": "title",
+      "schema": {
+        "title": "Title",
+        "type": "object",
+        "required": [
+          "title",
+          "url",
+          "description_en",
+          "category_en",
+          "image"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "url": {
+            "type": "string",
+            "title": "Url"
+          },
+          "description_en": {
+            "type": "string",
+            "title": "Description (EN)"
+          },
+          "category_en": {
+            "type": "string",
+            "title": "Category (EN)"
+          },
+          "image": {
+            "type": "string",
+            "title": "Image"
+          },
+          "description_fr": {
+            "type": "string",
+            "title": "Description (FR)"
+          },
+          "category_fr": {
+            "type": "string",
+            "title": "Catégorie (FR)"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "clean": "turbo clean",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://thedaviddias@github.com/thedaviddias/thedaviddias-blog.git"
+  },
+  "keywords": [],
+  "author": "David Dias <thedaviddias@gmail.com> (https://thedaviddias.dev/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thedaviddias/thedaviddias-blog/issues"
+  },
+  "homepage": "https://github.com/thedaviddias/thedaviddias-blog#readme",
+  "packageManager": "pnpm@7.15.0",
+  "dependencies": {
+    "husky": "^8.0.3",
+    "turbo": "^1.10.8"
+  }
+}

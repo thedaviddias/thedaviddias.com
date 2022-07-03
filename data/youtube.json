@@ -1,0 +1,106 @@
+{
+  "videos": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3g27Qd3oIQ4_4s10Ss9mvcZpnHY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "CcJJhJWEERk"
+      },
+      "snippet": {
+        "publishedAt": "2019-01-18T13:33:55Z",
+        "channelId": "UCXYs_tVa-VFm5f6bWrPybhA",
+        "title": "Ressources INDISPENSABLES pour Développeur Web Débutant",
+        "description": "J'ai compilé la liste des ressources indispensables pour apprendre à devenir développeur Front-End. Vous trouverez dans cette ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CcJJhJWEERk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CcJJhJWEERk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CcJJhJWEERk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "The David Dias",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-01-18T13:33:55Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NzkjLq__np8onlw7oacgS4uTuug",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "G9Q8KthzPpM"
+      },
+      "snippet": {
+        "publishedAt": "2019-01-12T18:56:26Z",
+        "channelId": "UCXYs_tVa-VFm5f6bWrPybhA",
+        "title": "Comment synchroniser Chrome avec son compte Google",
+        "description": "Vous venez d'installer Chrome... Et vous ne savez par quoi commencer. Google Chrome Sync vous permet de vous connecter à ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/G9Q8KthzPpM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/G9Q8KthzPpM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/G9Q8KthzPpM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "The David Dias",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-01-12T18:56:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "sitAu4ZP7evJ7p39JdGiBdklHgY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "FL0hVIPFPc8"
+      },
+      "snippet": {
+        "publishedAt": "2019-01-08T09:00:00Z",
+        "channelId": "UCXYs_tVa-VFm5f6bWrPybhA",
+        "title": "Astuces pour s&#39;expatrier au 🇨🇦CANADA",
+        "description": "Vous avez envie de partir vivre à l'étranger ? Travailler et gagner de l'expérience en travaillant dans le web ? Voici quelques ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FL0hVIPFPc8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FL0hVIPFPc8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FL0hVIPFPc8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "The David Dias",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-01-08T09:00:00Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://thedaviddias.dev</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority><xhtml:link rel="alternate" hreflang="en" href="https://thedaviddias.dev"/><xhtml:link rel="alternate" hreflang="fr" href="https://thedaviddias.dev/fr"/></url>
+<url><loc>https://thedaviddias.dev/about</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority><xhtml:link rel="alternate" hreflang="en" href="https://thedaviddias.dev/about"/><xhtml:link rel="alternate" hreflang="fr" href="https://thedaviddias.dev/fr/about"/></url>
+<url><loc>https://thedaviddias.dev/articles</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority><xhtml:link rel="alternate" hreflang="en" href="https://thedaviddias.dev/articles"/><xhtml:link rel="alternate" hreflang="fr" href="https://thedaviddias.dev/fr/articles"/></url>
+<url><loc>https://thedaviddias.dev/dashboard</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority><xhtml:link rel="alternate" hreflang="en" href="https://thedaviddias.dev/dashboard"/><xhtml:link rel="alternate" hreflang="fr" href="https://thedaviddias.dev/fr/dashboard"/></url>
+<url><loc>https://thedaviddias.dev/notes</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority><xhtml:link rel="alternate" hreflang="en" href="https://thedaviddias.dev/notes"/><xhtml:link rel="alternate" hreflang="fr" href="https://thedaviddias.dev/fr/notes"/></url>
+<url><loc>https://thedaviddias.dev/projects</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority><xhtml:link rel="alternate" hreflang="en" href="https://thedaviddias.dev/projects"/><xhtml:link rel="alternate" hreflang="fr" href="https://thedaviddias.dev/fr/projects"/></url>
+<url><loc>https://thedaviddias.dev/tags</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority><xhtml:link rel="alternate" hreflang="en" href="https://thedaviddias.dev/tags"/><xhtml:link rel="alternate" hreflang="fr" href="https://thedaviddias.dev/fr/tags"/></url>
+<url><loc>https://thedaviddias.dev/uses</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority><xhtml:link rel="alternate" hreflang="en" href="https://thedaviddias.dev/uses"/><xhtml:link rel="alternate" hreflang="fr" href="https://thedaviddias.dev/fr/uses"/></url>
+<url><loc>https://thedaviddias.dev/fr/articles</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/categories/side-project</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/categories/web-development</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/categories/productivity</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/categories/user-experience</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/categories/expatriation</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/categories/management</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/categories/reflexion</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/fr/dashboard</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/fr/about</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/fr/notes</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/fr</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/github</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/user-experience</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/front-end-development</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/open-source</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/front-end-checklist</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/best-practices</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/security</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/user-testing</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/canada</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/travel</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/usa</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/new-zealand</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/dev-journal</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/collaboration</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/user-interface</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/morning-routines</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/self-improvement</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/aws</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/github-actions</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/netlify</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/nextjs</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/raycast</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/vercel</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/visual-studio-code</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/life-lessons</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/coding</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/npm</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/steam-deck</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/gaming</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/audio</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/application</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/pnpm</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/product</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/business</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/tags/html</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/fr/tags</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/fr/uses</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/fr/projects</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/articles/9-best-practices-ux-for-two-factor-authentification</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/fr/articles/9-reponses-questions-vous-vous-posez-toronto-canada</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/fr/articles/astuces-dexpat-pour-faciliter-demarches-administratives</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/articles/beyond-user-testing-leveraging-frontend-experience</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/articles/choose-city-country-front-developer</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/fr/articles/comment-canada-devenu-maison-4-ans-tentatives</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/articles/decade-web-development-personal-journey-showcase</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/articles/front-end-checklist-just-tool-everything-depends-on-you</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/articles/front-end-performance-checklist-speeds-up-web-developments</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/articles/how-front-end-developers-ui-ux-could-better-collaborate-together</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/articles/how-morning-routine-can-positively-change-your-life-forever</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/articles/how-my-open-source-project-earned-6000-stars-on-github-in-just-5-days</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/articles/how-to-deploy-your-nextjs-app-on-netlify-using-github-actions</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/articles/learned-presenting-side-project-europe</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/fr/articles/outils-astuces-rendre-accessible-performante-application-react</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/articles/raycast-applications-super-developer</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/articles/you-have-something-in-you-the-world-needs</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/notes/finally-received-steam-deck-confirmation-email</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/notes/how-to-convert-mp3-to-m4b-for-audiobooks</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/notes/how-to-fix-post-pre-build-pnpm</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/notes/how-to-fix-set-output-nvmrc-github-actions</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/notes/methodology-principle-user-first</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://thedaviddias.dev/notes/stop-using-thematic-break-to-design-horizontal-line</loc><lastmod>2023-07-19T02:35:38.262Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>

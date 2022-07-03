@@ -1,0 +1,309 @@
+{
+  "title": "The David Dias",
+  "titleTemplate": "Développeur Front-End, podcasteur & créateur de contenu",
+  "date": "MMM dd, yyyy",
+  "layout": {
+    "a11y": {
+      "skipContent": "Skip to content"
+    },
+    "nav": {
+      "home": "Home",
+      "notes": "Notes",
+      "articles": "Articles",
+      "projects": "Projects",
+      "bookmarks": "Bookmarks",
+      "about": "About",
+      "rss": "RSS"
+    },
+    "darkMode": {
+      "light": "Switch to light mode",
+      "dark": "Switch to dark mode"
+    },
+    "language": {
+      "fr": {
+        "fullName": "French",
+        "switch": "Switch to the {{lang}} version",
+        "abbreviation": "FR"
+      },
+      "en": {
+        "fullName": "Anglaise",
+        "switch": "Changer pour la version {{lang}}",
+        "abbreviation": "EN"
+      }
+    },
+    "footer": {
+      "name": "Footer",
+      "general": "General",
+      "social": "Social media",
+      "extra": "Extra links",
+      "extra_links": {
+        "tags": "Topics",
+        "uses": "Uses",
+        "gear": "Gear",
+        "dashboard": "Dashboard",
+        "newsletter": "Newsletter",
+        "resume": "Resume",
+        "analytics": "Analytics"
+      }
+    }
+  },
+  "home": {
+    "path": "/",
+    "seo": {
+      "title": "The David Dias | Front-End Developer, podcaster & content creator",
+      "description": "Hey, I'm David Dias! Front-End Developer based in Toronto/Canada. I love talking about code, technology, expatriation and life."
+    },
+    "hero": {
+      "greetings1": "Hey there!",
+      "greetings2": " I'm David Dias",
+      "presentation": "I'm a Front-End Developer, podcaster and content creator passionate about solving digital and human problems! I enjoy meeting new people, building communities and talking about tech, expatriation and the web."
+    },
+    "sections": {
+      "podcast": {
+        "latest_podcasts": "Latest podcast",
+        "view_website": "View more on the website",
+        "url": "https://worldwebstories.com"
+      }
+    }
+  },
+  "articles": {
+    "path": "/articles",
+    "seo": {
+      "title": "All my Articles about web development and more",
+      "description": "Articles about web development and anything that piques my curiosity and interest.",
+      "url": "articles"
+    },
+    "h1": "All my Articles",
+    "sections": {
+      "latest-posts": "Latest articles",
+      "viewAll": "→ View all my articles",
+      "category_filter": "Access articles by categories",
+      "search": "Search by title keyword",
+      "search_placeholder": "Type a word to search"
+    }
+  },
+  "notes": {
+    "path": "/notes",
+    "seo": {
+      "title": "My daily Notes about the world around me",
+      "description": "Find short and sweet notes I regularly publish. From discovery to experimentation and technical challenges I finally figured out, I have a lot to share!",
+      "url": "notes"
+    },
+    "h1": "My Notes",
+    "sections": {
+      "latest-notes": "Latest notes",
+      "viewAll": "→ View all my notes",
+      "search": "Search by keyword",
+      "search_placeholder": "Tapez un mot pour faire une recherche"
+    }
+  },
+  "about": {
+    "path": "/about",
+    "seo": {
+      "url": "about",
+      "title": "About me",
+      "description": "Learn a little bit about 'The David Dias'"
+    }
+  },
+  "uses": {
+    "path": "/uses",
+    "seo": {
+      "title": "",
+      "description": "",
+      "url": "uses"
+    }
+  },
+  "projects": {
+    "path": "/projects",
+    "seo": {
+      "url": "projects",
+      "title": "My Projects",
+      "description": "Discover all the projects I've worked on or I'm currently working on."
+    },
+    "updated": "Updated {{date}} ago",
+    "sections": {
+      "popular": "Popular Github Projects",
+      "popular_description": "My most popular open-source projects. Feel free to take a look and contribute!",
+      "viewAll": "→ View all my projects",
+      "latest-projects": "Current projects"
+    }
+  },
+  "openProjects": {
+    "path": "/projects",
+    "seo": {
+      "url": "projects",
+      "title": "My Projects",
+      "description": "Discover all the projects I've worked on or I'm currently working on."
+    },
+    "updated": "Updated {{date}} ago",
+    "sections": {
+      "popular": "Popular Github Projects",
+      "popular_description": "My most popular open-source projects. Feel free to take a look and contribute!",
+      "viewAll": "→ View all my projects",
+      "latest-projects": "Updated Open-Source projects"
+    }
+  },
+  "tags": {
+    "path": "/tags",
+    "seo": {
+      "title": "Notes related to {{name}}",
+      "url": "tags",
+      "title_all": "All the Tags",
+      "description": "All my posts related to {{name}}.",
+      "description_all": "All the tags attached to my articles and notes, sorted by posts published."
+    },
+    "view_all_tags": "→ View all tags",
+    "section": "Tags",
+    "latest_posts": "List of all the posts related to {{name}}",
+    "h1": "Tag: {{name}}"
+  },
+  "bookmarks": {
+    "path": "/bookmarks",
+    "seo": {
+      "url": "bookmarks",
+      "title": "Bookmarks",
+      "description": "List of bookmarks I regularly update about web development, career and open-source."
+    },
+    "bookmark_filter": "Filters bookmarks by topic"
+  },
+  "category": {
+    "path": "/categories",
+    "seo": {
+      "title": "Articles about {{name}}",
+      "description": "You will find all my posts related to {{name}}."
+    },
+    "h1": "Category: {{name}}"
+  },
+  "rss": {
+    "path": "/rss/feed.xml"
+  },
+  "404": {
+    "back_home": "Back Home",
+    "seo": {
+      "title": "Sorry 😩, this page can't be found.",
+      "description": "This page is the nightmare of any user. It's usually an ugly page that just tells you that the link doesn't exist. Fortunately, the world doesn't end yet!"
+    }
+  },
+  "500": {
+    "title": "Wow 😱, you broke everything.",
+    "seo": {
+      "title": "",
+      "description": ""
+    }
+  },
+  "posts": {
+    "empty": "No articles found for that query.",
+    "continue": "Continue reading →",
+    "updated": "Updated on",
+    "published": "Originally published on",
+    "tableContent": "Table of Contents",
+    "previous": "Previous post",
+    "next": "Next post"
+  },
+  "webmentions": {
+    "title": "Webmentions",
+    "description": "Tweet about this post and have it showing up here!",
+    "show": "Show",
+    "hide": "Hide",
+    "details": "{{show}} details of mentions",
+    "activity_reply": "this post {{date}} ago:",
+    "activity_others": "this post.",
+    "activity": {
+      "link": "linked to",
+      "reply": "replied to",
+      "repost": "retweeted",
+      "like": "liked"
+    }
+  },
+  "comments": {
+    "title": "Comments",
+    "description": "Don't hesitate to leave your comment! In case you don't have a Github account, you can always tweet about it!",
+    "leave_comment": "Leave a comment"
+  },
+  "dashboard": {
+    "path": "/dashboard",
+    "seo": {
+      "url": "dashboard",
+      "title": "Dashboard",
+      "description": "Find all the metrics related to all my activities and interests."
+    },
+    "sections": {
+      "coding": {
+        "title": "Coding / Open source",
+        "url": "https://wakatime.com/@thedaviddias",
+        "average_activity": "Average coding activity per day",
+        "average_activity_duration": "(last 7 days)",
+        "total_time": "Total coding time",
+        "total_time_duration": "(last 7 days)",
+        "open_collective_fec": "Front-End Checklist balance",
+        "open_collective_fec_url": "https://opencollective.com/front-end-checklist",
+        "open_collective_htmlhint": "HTMLHint balance",
+        "open_collective_htmlhint_url": "https://opencollective.com/htmlhint"
+      },
+      "photos": {
+        "title": "Photos",
+        "url": "https://unsplash.com/@thedaviddias",
+        "downloads": "Unsplash downloads",
+        "views": "Unsplash views"
+      },
+      "tv": {
+        "title": "TV Shows and Movies",
+        "url": "https://simkl.com/5311920",
+        "total_spent": "Spent watching",
+        "total_spent_duration": "(since forever)",
+        "last_week_spent": "Spent watching TV Shows",
+        "last_week_spent_duration": "(last week)"
+      },
+      "gaming": {
+        "title": "Gaming",
+        "total_number": "Total number of Steam games",
+        "most_played": "Most played game duration: {{name}}",
+        "most_played_duration": "(last 2 weeks)"
+      },
+      "latest-dashboard": "Mini Dashboard",
+      "viewAll": "→ View my full dashboard"
+    },
+    "unsplash": {
+      "downloads": "Unsplash Downloads",
+      "views": "Unsplash Views"
+    }
+  },
+  "books": {
+    "currently": "Currently reading",
+    "next": "To read next",
+    "sections": {
+      "viewAll": "→ View my profile on Goodreads"
+    }
+  },
+  "youtube": {
+    "sections": {
+      "latest_videos": "Latest Youtube videos",
+      "viewAll": "→ Access my Youtube channel"
+    }
+  },
+  "newsletter": {
+    "title": "Subscribe to my Newsletter",
+    "description": "Get emails from me about A11y, web development, tech and expatriation!",
+    "subscribers": "{{number}} subscribers",
+    "form": {
+      "input": {
+        "placeholder": "username@email.com",
+        "label": "Email for newsletter"
+      },
+      "submit": {
+        "text": "Subscribe"
+      },
+      "success": {
+        "text": "You're now on the list! Don't forget to validate your subscription with the email you probably received."
+      }
+    },
+    "all_issues": "Access all past issues"
+  },
+  "related": {
+    "title": "Related posts",
+    "description": "You might also like these posts:"
+  },
+  "share": {
+    "title": "Share this post"
+  }
+}

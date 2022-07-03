@@ -1,0 +1,10 @@
+{
+  "about": {
+    "path": "/about",
+    "seo": {
+      "url": "about",
+      "title": "About me",
+      "description": "Learn a little bit about 'The David Dias'"
+    }
+  }
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Raycast",
+    "url": "https://www.raycast.com/",
+    "description_en": "Alfred was the number one software I installed on any new Mac device (since 2015). But I decided to switch to Raycast and haven't look back.",
+    "description_fr": "Alfred était le logiciel numéro un que j'ai installé sur tout nouvel appareil Mac (depuis 2015). Mais j'ai décidé de passer à Raycast et je n'ai pas regardé en arrière.",
+    "category_en": "Essentials",
+    "category_fr": "Essentiels",
+    "image": "/images/uses/raycast.png"
+  },
+  {
+    "title": "CleanShot X",
+    "url": "https://cleanshot.com/",
+    "description_en": "By far, the best software for taking screenshots and screen recordings. Bought the licence the day it came out!",
+    "description_fr": " De loin, le meilleur logiciel pour faire des captures d'écran et des enregistrements d'écran. J'ai acheté la licence le jour de sa sortie !",
+    "category_en": "Productivity",
+    "category_fr": "Productivité",
+    "image": "/images/uses/cleanshotx.png"
+  },
+  {
+    "title": "Tower",
+    "url": "https://www.git-tower.com/p/refer-a-friend/R-D9FLZ7R2ZG/mac",
+    "description_en": "The most powerful Git client I've been using since 2015",
+    "description_fr": "Le client Git le plus puissant que j'utilise depuis 2015",
+    "category_en": "Coding",
+    "category_fr": "Code",
+    "image": "/images/uses/tower.png"
+  },
+  {
+    "title": "iTerm 2",
+    "url": "https://iterm2.com/",
+    "description_en": "The best terminal emulator for macOS",
+    "description_fr": "Le meilleur émulateur de terminal pour macOS",
+    "category_en": "Coding",
+    "category_fr": "Code",
+    "image": "/images/uses/iterm.png"
+  },
+  {
+    "title": "Eagle",
+    "url": "https://en.eagle.cool/",
+    "description_en": "After being a fan of Pixave, I moved to Eagle and it has been amazing! Eagle has regular updates and allow me to vizualize icons, photos, screenshots...",
+    "description_fr": "Après avoir été un fan de Pixave, j'ai adopté Eagle and c'est un excellent choix que j'ai fais! Eagle a des mis à jour régulières et me permet de consulter l'ensemble de mes icônes, photos, capture d'écrans...",
+    "category_en": "Productivity",
+    "category_fr": "Productivité",
+    "image": "/images/uses/eagle.png"
+  },
+  {
+    "title": "DEVONthink 3",
+    "url": "https://www.devontechnologies.com/apps/devonthink",
+    "description_en": "I store all online articles, PDF and sometimes images on DEVONthink. The integration with macOS and the automation possibilities makes it perfect to handle my different workflows.",
+    "category_en": "Productivity",
+    "image": "/images/uses/devonthink.png",
+    "description_fr": "Je stocke tous les articles en ligne, PDF et parfois des images sur DEVONthink. L'intégration avec macOS et les possibilités d'automatisation le rends parfait pour gérer mes différents flux de travail.",
+    "category_fr": "Productivité"
+  },
+  {
+    "title": "1Password",
+    "url": "https://1password.com/",
+    "description_en": "After using LastPass, I switched to the Toronto based product: 1password has been my go to password manager for few years now.",
+    "category_en": "Essentials",
+    "image": "/images/uses/1password.png",
+    "category_fr": "Essentiels",
+    "description_fr": " Après avoir utilisé LastPass, je suis passé au produit basé à Toronto: 1password est mon gestionnaire de mots de passe depuis quelques années maintenant."
+  },
+  {
+    "title": "Visual Studio Code",
+    "url": "https://code.visualstudio.com/",
+    "category_en": "Coding",
+    "image": "/images/uses/vscode.png",
+    "description_en": " No need to present VSCode, one of the best code editors out there!",
+    "description_fr": "Inutile de présenter VSCode, l'un des meilleurs éditeurs de code du marché !",
+    "category_fr": "Code"
+  },
+  {
+    "title": "Fantastical",
+    "url": "https://flexibits.com/fantastical",
+    "description_en": "I use Fantastical to manage personal and professional events. The default Apple Calendar is far from having enough features for my needs.",
+    "category_en": "Productivity",
+    "image": "/images/uses/fantastical.png",
+    "description_fr": "J'utilise Fantastical pour gérer des événements personnels et professionnels. Le calendrier Apple par défaut est loin d'avoir suffisamment de fonctionnalités pour mes besoins.",
+    "category_fr": "Productivité"
+  },
+  {
+    "title": "Logic Pro X",
+    "category_en": "Audio / video",
+    "image": "/images/uses/logic.png",
+    "url": "https://www.apple.com/ca/logic-pro/",
+    "description_en": "I'm a huge fan of Adobe Audition, but I can't justify paying for the subscription. Logic Pro is a very powerful audio workstation and does everything I need!",
+    "category_fr": "Audio / vidéo",
+    "description_fr": "Je suis un grand fan d'Adobe Audition, mais je ne peux pas justifier le paiement de l'abonnement. Logic Pro est une station de travail audio très puissante et fait tout ce dont j'ai besoin !"
+  },
+  {
+    "title": "Final Cut Pro",
+    "url": "https://www.apple.com/ca/final-cut-pro/",
+    "category_en": "Audio / video",
+    "image": "/images/uses/final.png",
+    "description_en": "I used Adobe Premiere for many years, but I fell in love with Final Cut Pro. The integration with other Apple devices and products makes it the best companion for editing all my videos.",
+    "description_fr": "J'ai utilisé Adobe Premiere pendant de nombreuses années, mais je suis tombé amoureux de Final Cut Pro. L'intégration avec d'autres appareils et produits Apple en fait le meilleur compagnon pour éditer toutes mes vidéos.",
+    "category_fr": "Audio / vidéo"
+  },
+  {
+    "title": "Obsidian",
+    "category_en": "Productivity",
+    "category_fr": "Productivité",
+    "url": "https://obsidian.md/",
+    "image": "/images/uses/obsidian.png",
+    "description_en": "Obsidian is a beautiful peace of software. I use it daily to keep track of courses I'm studying, goals for the year and projects I want to work on.",
+    "description_fr": "Obsidian est un superbe logiciel. Je l'utilise quotidiennement pour garder une trace des cours que j'étudie, des objectifs pour l'année et des projets sur lesquels je veux travailler."
+  }
+]

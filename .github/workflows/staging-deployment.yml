@@ -1,0 +1,92 @@
+name: Staging deployment
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      # - name: Cancel Previous Runs
+      #   uses: styfle/cancel-workflow-action@0.10.0
+      #   with:
+      #     access_token: ${{ github.token }}
+
+      - name: Git checkout
+        uses: actions/checkout@v3
+
+      - name: Detect Node version
+        run: echo "##[set-output name=version;]$(cat .nvmrc)"
+        id: nvmrc
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '${{ steps.nvmrc.outputs.version }}'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.2
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - name: Cache pnpm
+        uses: actions/cache@v3
+        with:
+          path: |
+            ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        if: steps.pnpm-cache.outputs.cache-hit != 'true'
+        run: pnpm install
+
+      - name: Run tests
+        run: pnpm test
+
+      - name: Upload translations
+        uses: simplelocalize/upload@latest
+        with:
+          apiKey: ${{ secrets.SIMPLE_LOCALIZE_KEY }}
+          uploadPath: ./locales/{lang}/{ns}.json
+          uploadFormat: single-language-json
+
+      - name: Build Next.js project
+        run: pnpm build
+        env:
+          RAINDROP_COLLECTION: ${{ secrets.RAINDROP_COLLECTION }}
+          RAINDROP_TOKEN: ${{ secrets.RAINDROP_TOKEN }}
+          GH_PUBLIC_TOKEN: ${{ secrets.GH_PUBLIC_TOKEN }}
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+
+      - name: Deploy to Staging
+        id: deploy-vercel-staging
+        uses: BetaHuhn/deploy-to-vercel-action@v1
+        with:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID}}
+          PRODUCTION: false
+          BUILD_ENV: |
+            RAINDROP_COLLECTION=${{ secrets.RAINDROP_COLLECTION }}
+            RAINDROP_TOKEN=${{ secrets.RAINDROP_TOKEN }}
+            GH_PUBLIC_TOKEN=${{ secrets.GH_PUBLIC_TOKEN }}
+            SPOTIFY_CLIENT_ID=${{ secrets.SPOTIFY_CLIENT_ID }}
+            SPOTIFY_CLIENT_SECRET=${{ secrets.SPOTIFY_CLIENT_SECRET }}
+            SPOTIFY_REFRESH_TOKEN=${{ secrets.SPOTIFY_REFRESH_TOKEN }}

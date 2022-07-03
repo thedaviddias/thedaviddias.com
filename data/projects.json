@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Front-End Checklist V1",
+    "url": "https://frontendchecklist.io/",
+    "status": "active",
+    "description_en": "The Front-End Checklist is an exhaustive list of all elements you need to have / to test before launching your website / HTML page to production.",
+    "description_fr": "",
+    "category_en": "",
+    "category_fr": ""
+  },
+  {
+    "title": "UI Patterns for developers",
+    "url": "https://ui-patterns-dev.vercel.app/fr",
+    "status": "work in progress",
+    "description_en": "A full guide on all UI Patterns, practices, pitfalls and gotchas for front-end developers.",
+    "description_fr": "",
+    "category_en": "",
+    "category_fr": ""
+  }
+]

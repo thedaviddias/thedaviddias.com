@@ -1,0 +1,119 @@
+[
+  {
+    "name": "best-practices",
+    "description": "Best practices are rules generally accepted which can help you solve a problem... At least, that's one definition."
+  },
+  {
+    "name": "nextjs",
+    "logo": "/images/tags/nextjs.png",
+    "description": "Next.js is a React framework that offers statis and server rendering. The current blog is build using Next.js."
+  },
+  {
+    "name": "github",
+    "description": "Github is a  code hosting platform for collaboration and version control. All my projects are stored on Github."
+  },
+  {
+    "name": "open-source",
+    "description": "Open-source (OSS) is used to indicate that a software or application which code can be seen, modified and distributed by anyone."
+  },
+  {
+    "name": "front-end-checklist",
+    "description": "The Front-End Checklist is one of my open-source project which came out in 2017."
+  },
+  {
+    "name": "user-experience",
+    "description": "User exerperience encompasses all aspects of the end-user's interaction with the company, its services, and its products. (By Don Norman, Jakob Nielsen)"
+  },
+  {
+    "name": "security",
+    "description": "Security is an important topic, as a developer, security is always a domain we constantsly need to learn more about."
+  },
+  {
+    "name": "canada",
+    "description": "Canada is the country I decided to move to in 2018. It's a country I love and lucky to call my home."
+  },
+  {
+    "name": "netlify",
+    "description": "Netlify is a cloud computing company that offers free hosting and serverless services. Most of my projects are deployed using Netlify."
+  },
+  {
+    "name": "user-interface",
+    "description": "User Interface often comes with UX, but UI is only for digital product and focus on user aesthetics."
+  },
+  {
+    "name": "self-improvement",
+    "description": "Selft Improvement is one of my favourite topic. I've been reading books with related topics since I'm a teenager."
+  },
+  {
+    "name": "front-end-development",
+    "description": "Front-End Development is my specialty. Usually Front-End regroups everything that is around HTML, CSS and JavaScript."
+  },
+  {
+    "name": "steam-deck",
+    "description": "The Steam deck is a handheld gaming computer I received in August 2022. This is a perfect device for a non hard gamer like me."
+  },
+  {
+    "name": "usa",
+    "description": "The United States of America is the closest country from Canada. I had the chance to collaborate and participate to events there."
+  },
+  {
+    "name": "travel",
+    "description": "I've had the chance to travel a lot the past 20 years. I hope to discover new continents (like Asia) in the future."
+  },
+  {
+    "name": "new-zealand",
+    "description": "I've always been fascinated by New Zealand. It has been one of the country in my list to move in. But I choose Canada instead."
+  },
+  {
+    "name": "collaboration",
+    "description": "Collaboration is at the center of any professional relationship. I've always been a fervent advogate for more collaboration between different deparments."
+  },
+  {
+    "name": "aws",
+    "description": "Amazon Web Services is a cloud computing platforms which I use to storage or APIs. I still have so much to explore!"
+  },
+  {
+    "name": "github-actions",
+    "description": "Github Actions is a continuous integration and continuous delivery (CI/CD) platform I've been using for years to automate builds and deployments."
+  },
+  {
+    "name": "morning-routines",
+    "description": "Morning routines are essential for a good health and to maximise your energy along the day! I've experiements different routines in the past years."
+  },
+  {
+    "name": "npm",
+    "description": "NPM is a Node Package Manager / registry for JavaScript projects."
+  },
+  {
+    "name": "pnpm",
+    "description": "PNPM is a really fast package manager. Currently used for this blog."
+  },
+  {
+    "name": "coding",
+    "description": "Coding has been one of my passion since 2004. Even when I started working professionally in 2011, coding is still a big passion for me."
+  },
+  {
+    "name": "gaming",
+    "description": "I'm not a hard gamer, I've started playing with DOS games and have been an occasional player for many years."
+  },
+  {
+    "name": "life-lessons",
+    "description": "Every day is a new day and a new lesson for me. I try to document everything I learn on this blog."
+  },
+  {
+    "name": "astuces",
+    "description": "Vous vouliez des astuces...? En voilà!"
+  },
+  {
+    "name": "web-accessibilite",
+    "description": "L'Accessibilité Web a toujours été un des mes sujets de prédilection. Il est important que chaque développeur soit familiarisé avec le sujet."
+  },
+  {
+    "name": "application",
+    "description": "I love apps, I often test or share my experience with apps I use."
+  },
+  {
+    "name": "audio",
+    "description": " "
+  }
+]

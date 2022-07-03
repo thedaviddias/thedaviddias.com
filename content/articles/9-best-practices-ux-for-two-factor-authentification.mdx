@@ -1,0 +1,153 @@
+---
+title: 9 Best Practices & UX Improvements for the two-factor authentication (2FA)
+date: 2021-02-25T00:01:00.000Z
+locale: en
+description: The best and recommended features for any website or company that takes the
+  security of their users seriously.
+author: David Dias
+draft: false
+categories:
+  - user-experience
+tags:
+  - best-practices
+  - security
+  - user-experience
+lastmod: 2022-02-09T02:36:00.044Z
+type: article
+preview:
+  url: /images/articles/9-best-practices-ux-for-two-factor-authentification/featured.jpg
+---
+
+In 2023 alone, cybercriminals will steal 33 billion records. It takes 196 days on average to identify a data breach. The cost of a data breach will reach $150 million by 2020...
+These numbers may be scary but they are only previsions. Things could be much worse in the near future. Security has become a hot topic these last years, almost everyone on the planet has already heard about a company data breach or even a friend that lost his Facebook account because someone hacked it! No one is completely safe nowadays.
+![Photo of a white lock icon on a purple fullscreen background displayed on a cellphone screen](/images/articles/9-best-practices-ux-for-two-factor-authentification/featured.jpg)
+
+I've recently spent multiple hours ensuring that all the accounts I possess use a unique password, complex and long with at least 20 characters and with the two-factor authentication (2FA) enable if present. I've discovered so many disparities between companies and so many issues in terms of features and user experience. I wanted to share with you in this article, what I believe are the best and recommended features for any website or company that takes the security of their users seriously.
+
+## 1. Offer two-factor authentication options
+
+That is the starting point.
+
+If you care about your users or customers, you should give them the choice to activate the two-factor authentication. On around 800 websites where I have an account, **only 5% offer a 2FA option**. Some may argue that if you don't have highly sensitive information, it may be overkill to offer the 2FA. But any personal information could be considered sensitive.
+
+If you care about your users and their security, give them the option to enable the 2FA. Period.
+
+## 2. Don't force the users to choose only one 2FA method
+
+[Google](https://www.google.ca/landing/2step/), [Facebook](https://www.facebook.com/help/148233965247823), [Twitter](https://help.twitter.com/en/managing-your-account/two-factor-authentication)... they all offer simultaneous ways for 2FA: text message, authentication app and security key. More commonly, at least in a text message and authentication app, the security key seems to be set up only on certain services.
+
+But I've been surprised to see [Etsy](https://help.etsy.com/hc/en-us/articles/115015569567-How-to-Make-Your-Account-More-Secure?segment=shopping), even they use toggles on their UI, to force you to only choose one of the options. I'm not even sure if it was originally designed to work like that.
+
+![Screenshot of the two-factor options on Etsy](/images/articles/9-best-practices-ux-for-two-factor-authentification/etsy.jpg 'The two-factor options on Etsy')
+
+[Bit.ly](https://support.bitly.com/hc/en-us/articles/230650187-What-is-2-step-verification-) and [booking.com](https://partner.booking.com/en-gb/help/legal-security/what-2-factor-authentication-2fa) in other hand only allow you to use your phone as a 2FA device. So if you lose your phone and your email access, you could be screwed.
+
+![Screenshot of the verification code form on Booking.com. A verification code field is showed empty with a blue button below saying "Verify and sign in"](/images/articles/9-best-practices-ux-for-two-factor-authentification/booking.jpg 'The verification code view on Booking.com')
+
+[Mailchimp](https://mailchimp.com/help/set-up-a-two-factor-authentication-app-at-login/) and [Tumblr](https://tumblr.zendesk.com/hc/en-us/articles/226270148-Two-factor-authentication), on the contrary, only offer 2FA using an authentication app.
+
+[Zapier](https://zapier.com/help/account/manage-account/set-up-two-factor-authentication-for-your-zapier-account) has an awesome step by step 2FA setup, probably one of the best I found. They offer multiple complementary ways and specifically tell you "in the event you get locked out of your account and have lost both your authentication device and recovery codes". The user understands that providing his phone number is an additional way to ensure he/she can access his account in case he/she lost the other ways to connect to their web app.
+
+![Screenshot of the two-factor set by step setup on Zapier. Currently showing the "Emergency Verification" step which contains a Phone Number field with a verification code field.](/images/articles/9-best-practices-ux-for-two-factor-authentification/zapier.jpg 'The two-factor set by step setup on Zapier')
+
+## 3. Make the QR code an image
+
+I have been using [1Password](https://1password.com/) for quite some time now and the modal that scans the QR code doesn't always find the QR code. In that case, I found myself drag and dropping the QR into that modal to be recognized. But it only works when the code is an image.
+
+I would recommend having it as a format image that can be saved / drag and dropped.
+
+[Reddit](https://www.reddit.com/) for example don't have the QR code as an image. Fortunately, everyone offers the text version of the QR code that you can use in your authentication application.
+
+## 4. Keep the code you send by email in the same format as requested in your app or website
+
+This one only happened to me once. It happened with Instagram.
+
+When [Instagram](https://help.instagram.com/843785199163974) sends a "verification code" by SMS, they included a space. If you copy-paste that code where it's required, first the input doesn't want the space and the last digit is not included in your paste. It's an annoying issue that could be fixed easily!
+
+![Instagram verification SMS code](/images/articles/9-best-practices-ux-for-two-factor-authentification/instagram-login-code-space.jpg 'Instagram verification SMS code')
+
+## 5. Give the option to have recovery/backup codes
+
+Sounds weird when said at loud but a lot of websites don't offer backup/recovery codes when you enable the 2FA. This was a surprise for me at first, **2FA means you will always have backup codes in case you lost access** to your phone, email or the app you use to generate the random number. Nowadays, some websites don't offer that option. I tend to be really careful with those.
+
+[Kickstarter](https://help.kickstarter.com/hc/en-us/articles/115005127094-How-can-I-enable-two-factor-authentication-) and [WPEngine](https://wpengine.com/support/multi-factor-authentication/) are examples of websites that don't offer you any recovery/backup codes. I hope they could improve that.
+
+![The Kickstarter security modal](/images/articles/9-best-practices-ux-for-two-factor-authentification/kickstarter.jpg 'The Kickstarter security modal')
+
+## 6. Always give the option to download the recovery codes
+
+Most of the websites propose to copy the recovery codes. This is not the best option.
+
+It's nice to have it, sure, but it's not enough. I personally store all my recovery codes in multiple places: one is the [vault from Dropbox](https://www.dropbox.com/features/security/vault). Having just to drag and paste a simple text file is easy and fast.
+
+If you offer only the option to copy, then you could be forcing the user to:
+
+1. open the text editor
+2. paste the codes
+3. give a name
+4. save the file on your device
+
+Technology is there to save user's time.
+
+[Slack](https://slack.com/intl/en-ca/help/articles/204509068-Set-up-two-factor-authentication) for example allows you to "Print codes" but not download them. Why not? I have to generate a PDF instead of my simple text file. Not the best user experience.
+
+![The Two-Factor Authentication Backup Codes modal on Slack](/images/articles/9-best-practices-ux-for-two-factor-authentification/slack.jpg 'The Two-Factor Authentication Backup Codes modal on Slack')
+
+## 7. In the recovery code text file, always write which platform these codes are coming from
+
+Even Facebook can make mistakes and this one is important for me. Currently, if you download the recovery codes from Facebook, you open the file and you can't find any mention of Facebook or the name of the account. The file name `facebook_recovery_codes` is helpful but in my opinion, not enough. **The name of the account and the name of the platform should be a minimum.**
+
+And to make it more useful, adding the date when the codes were generated could also be added.
+
+Google which is a good example, uses your username in the name of the file, and also adds:
+
+```text
+SAVE YOUR BACKUP CODES
+Keep these backup codes somewhere safe but accessible.
+
+LIST OF CODES
+
+(email@gmail.com)
+
+* You can only use each backup code once.
+* Need more? Visit https://g.co/2sv
+* These codes were generated on: Date, 2021.
+```
+
+## 8. Allow the user to regenerate recovery/backup codes
+
+It's essential to give the user the ability to regenerate recovery codes. Some don't offer this useful option.
+
+## 9. Offer more than one code (maybe?)
+
+This one is less important but I still wanted to mention a key difference in terms of recovery/backup codes.
+
+Most of the companies only offer one code vs a list of multiples codes that can be used. It's hard for me to defend one approach vs the other one. I just know that I feel better when I have more than one code.
+
+## About security keys
+
+Security keys are the less common way to secure your account. If you are a public figure or someone with a high level of responsibility, having a security key could give you a little bit more peace of mind. But for a normal user, it may be overkill. Nonetheless, I wanted to maximize the security of my accounts and recently bought the [Titan Security Key](https://store.google.com/ca/product/titan_security_key) from Google. The USB version works on any computer and I use the Bluetooth version in case I'm on my iPhone or iPad.
+
+![The white box of the Titan Security Keys by Google showing the bluetooth and USB 3.0 key](/images/articles/9-best-practices-ux-for-two-factor-authentification/titan-security-keys.jpeg 'The box of the Titan Security Keys by Google')
+
+They both are not cheap, but security should be part of your "unlimited budget", the same as for food.
+
+## Conclusion
+
+I'm not a security expert and have limited knowledge in terms of security. But as a Software Engineer and particularly a user, I believe we have a long way ahead until most of the platforms implement all the tools to ensure secure access for users.
+
+_Recap:_
+
+1. Offer two-factor authentication options
+2. Don't force the users to choose only one 2FA method
+3. Make the QR code an image
+4. Keep the code you send by email in the same format as requested in your app or website
+5. Give the option to have recovery/backup codes
+6. Always give the option to download the recovery codes
+7. In the recovery code text file, always write which platform these codes are coming from
+8. Allow the user to regenerate recovery/backup codes
+9. Offer more than one code (maybe?)
+
+Thanks for reading, I hope these suggestions would help you to have a better UX and improve your 2FA implementation.
+
+Feel free to ask me anything in the comments below!

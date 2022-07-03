@@ -1,0 +1,41 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;
+@tailwind screens;
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Oswald', sans-serif;
+}
+
+.small-title {
+  @apply text-sm font-title font-semibold text-gray-500 tracking-wider uppercase my-2;
+}
+
+/* .separator {
+  @apply border-t border-gray-200 dark: border-gray-600;
+} */
+
+/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+/* ::marker {
+  @apply text-gray-300 dark:text-gray-500;
+} */

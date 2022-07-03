@@ -1,0 +1,74 @@
+{
+  "tools": [
+    {
+      "title": "Visual Studio Code",
+      "description": "VSC is a go-to when it comes to web development.",
+      "url": "https://code.visualstudio.com/",
+      "image": "/images/vsc.svg",
+      "category": "development"
+    },
+    {
+      "title": "Brave",
+      "description": "Brave is a chromium web browser with built-in privacy settings. Blocks ads and trackers!",
+      "url": "https://brave.com/",
+      "image": "/images/brave.svg",
+      "category": "development"
+    },
+    {
+      "title": "Sizzy",
+      "description": "The browser for developers. It’s a feature rich browser with lots of dev tools.",
+      "url": "https://sizzy.co/",
+      "image": "/images/sizzy.png",
+      "category": "development"
+    },
+    {
+      "title": "Figma",
+      "description": "My #1 design tool. I do all my UI design in Figma.",
+      "url": "https://figma.com/",
+      "image": "/images/figma.svg",
+      "category": "design"
+    },
+    {
+      "title": "Sip",
+      "description": "This is the coolest color picker.",
+      "url": "https://sipapp.io/",
+      "image": "/images/sip.png",
+      "category": "design"
+    },
+    {
+      "title": "Notion",
+      "description": "I believe it’s the most popular note taking app right now.",
+      "url": "https://notion.so/",
+      "image": "/images/notion.svg",
+      "category": "productivity"
+    },
+    {
+      "title": "Obsidian",
+      "description": "Obsidian is your Notion alternative, but with more privacy and no backend.",
+      "url": "https://obsidian.md/",
+      "image": "/images/obsidian.svg",
+      "category": "productivity"
+    },
+    {
+      "title": "CleanShot X",
+      "description": "For taking and sharing screenshots and screen recordings.",
+      "url": "https://cleanshot.com/",
+      "image": "/images/cleanshot.png",
+      "category": "productivity"
+    },
+    {
+      "title": "Final Cut Pro",
+      "description": "",
+      "url": "https://www.apple.com/ca/final-cut-pro/",
+      "image": "/images/vsc.svg",
+      "category": "video"
+    },
+    {
+      "title": "Screenflow",
+      "description": "Making screencasts in Screenflow is super easy!",
+      "url": "http://www.telestream.net/screenflow/overview.htm",
+      "image": "/images/screenflow.png",
+      "category": "video"
+    }
+  ]
+}

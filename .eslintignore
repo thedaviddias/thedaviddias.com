@@ -1,0 +1,13 @@
+.next
+next-env.d.ts
+node_modules
+package.json
+package-lock.json
+public
+coverage
+docs
+
+npm-debug.log*
+.DS_Store
+.vscode
+!.storybook

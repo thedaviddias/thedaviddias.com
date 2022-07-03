@@ -1,0 +1,76 @@
+{
+  "title": "The David Dias",
+  "hero": {
+    "greetings1": "Hey there!",
+    "greetings2": " I'm David Dias",
+    "presentation": "I'm a Front-End Developer, podcaster, content creator passionate about solving digital and human problems! I enjoy meeting new people, building communities and talking about tech, expatriation and web."
+  },
+  "date_format": "MMM dd, yyyy",
+  "a11y": {
+    "skipContent": "Skip to content"
+  },
+  "seo": {
+    "image": {
+      "url": "/images/preview.png",
+      "alt": ""
+    },
+    "rss": {
+      "en": "RSS feed for english speaker",
+      "fr": "RSS feed for french speaker"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "about": "About",
+    "uses": "Uses",
+    "language": "Change to the French version",
+    "theme": "Change theme"
+  },
+  "blog": {
+    "latest-posts": "Lastest blog posts",
+    "previous": "Previous post",
+    "next": "Next post"
+  },
+  "footer": {
+    "name": "Footer",
+    "general": "General",
+    "social": "Social media",
+    "extra": "Extra links",
+    "extra_links": {
+      "dashboard": "Dashboard",
+      "newsletter": "Newsletter",
+      "analytics": "Analytics"
+    },
+    "rssEn": {
+      "name": "RSS Feed in English",
+      "href": "/en.feed.xml"
+    },
+    "rssFr": {
+      "name": "RSS Feed in French",
+      "href": "/fr.feed.xml"
+    }
+  },
+  "posts": {
+    "empty": "No articles found for that query.",
+    "viewAll": "→ View all blog posts",
+    "continue": "Continue reading →",
+    "updated": "Updated on",
+    "published": "Originally published on"
+  },
+  "tags": "Tags",
+  "404": {
+    "title": "Sorry 😩, this page can't be found.",
+    "seo": {
+      "title": "404",
+      "description": ""
+    }
+  },
+  "500": {
+    "title": "Wow 😱, you broke everything",
+    "seo": {
+      "title": "",
+      "description": ""
+    }
+  }
+}

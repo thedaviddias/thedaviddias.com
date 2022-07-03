@@ -1,0 +1,11 @@
+{
+  "title": "Blog",
+  "search": {
+    "placeholder": "Rechercher dans les articles"
+  },
+  "none": "Aucun article trouvé",
+  "seo": {
+    "title": "Blog",
+    "description": "Web development, with a focus on the React ecosystem."
+  }
+}

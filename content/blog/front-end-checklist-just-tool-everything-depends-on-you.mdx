@@ -1,0 +1,72 @@
+---
+draft: false
+locale: en
+title: 'The Front-End Checklist is just a tool… everything depends on you'
+date: '2017-12-08T00:01:00.000Z'
+description: "The steps you need to follow to use efficiently the application frontendchecklist.io"
+publishedOn: CSS-Tricks
+publishedUrl: https://css-tricks.com/front-end-checklist-just-tool-everything-depends/
+category: Project
+tags:
+  - github
+  - open-source
+---
+
+One month ago, I launched the [Front-End Checklist on GitHub](https://github.com/thedaviddias/Front-End-Checklist). In less than 2 weeks, more than 10,000 people around the world starred the repository. That was completely unexpected and incredible!
+
+I’ve been working as a front-end developer since 2011, but I started to build websites in [2000](http://www.csszengarden.com/). Since then, like us all, I’ve been trying to improve the quality of my code and deliver websites faster. Along the way, I’ve been managing developers from two different countries. That has helped me to produce a checklist a little different than what I’ve found on around the web over the years.
+
+While I was creating the checklist, I continuously had the book “[The Checklist Manifesto: How to Get Things Right](https://amzn.to/2k9f6XG)” by Atul Gawade in mind. That book has helped me build checklists for my work and personal life, and simplify things that sometimes seem too complex.
+
+If you are working alone or in a team, individually, remotely, or on-site, I wanted to share some advice on using the Front-End Checklist and the [web application](http://frontendchecklist.io/) that goes with it. Perhaps I can convince you to integrate it into your development cycle.
+
+## Decide which rules your project and team need to follow
+
+Every project is different. Before starting a new project, the whole team (i.e. the project managers, designers, developers, QA, etc.) need to agree on what the deliverables will be.
+
+To help you to decide, I created 3 different levels of priority: high, medium, and low. You don’t necessarily need to agree with those distinctions, but they may help order your tasks.
+
+The Front-End Checklist app was done to facilitate the creation of personalized checklists. Change some JSON files to your liking and you are ready to start!
+
+## Define the rules to check at beginning, during, and at the end of your project
+
+You shouldn’t check all these rules only at the end of a project. You know as well as I do how projects are at the very end! Too hectic. Most of the items of the Front-End Checklist can be considered at the beginning of your development. It’s up to you to decide. Make it clear to your team upfront what happens when.
+
+## Learn a little more about each rule
+
+Who loves reading the [docs](https://devdocs.io/)? Not most of us, but it’s essential. If you want to understand the reasons for the rule, you can’t avoid reading up about them. The more you understand the why of each rule, the better developer you become.
+
+## Start to check!
+
+The [Front-End Checklist](https://frontendchecklist.io/) app can facilitate your life as a developer. It’s a live checklist, so as you complete items your progress and grade are updated live. Everything is saved in localStorage so you can leave and come back as needed.
+
+The project is open source, so feel free to fork it and use it however you like. I’m working on making sure all the files are commented. I especially invite those interested in [Pug](https://pugjs.org/api/getting-started.html) to take a look at the [views folder](https://github.com/thedaviddias/Front-End-Checklist/tree/master/src/views).
+
+<!-- ![A screenshot of the HEAD section on frontendchecklist.io](./images/start-to-check.jpg) -->
+
+
+## Integrate automated testing in your workflow
+
+We all dream of automation (or is it just me?). For now, the Front-End Checklist is just an interactive list, but some of the tasks can be automated in your workflow.
+
+Take a look at the [gulpfile](https://github.com/thedaviddias/Front-End-Checklist/blob/master/gulpfile.babel.js) used to generate the project. All tasks are packages you can use with [npm](https://scotch.io/tutorials/using-npm-as-a-build-tool), [webpack](https://webpack.js.org/), etc.
+
+## Validate every page before sending to QA team and to production
+
+<!-- ![A screenshot of the print version of frontendchecklist.io](./images/validate-before-qa.jpg) -->
+
+If you’re passionate about generating clean code and care about your code quality, you should be regularly testing your pages. It’s so easy to make mistakes and remove some essential code. Or, someone else on your team might have done it, but it’s your shared responsibilty to be catching things like that.
+
+The Front-End Checklist can generate beautiful reports you can send to a project manager or Quality Assurance team.
+
+## Enjoy your work above all
+
+Some people might look at such a long checklist and feel sick to their stomach. Going through such a list might cause anxiety and really not be any fun.
+
+But the Front-End Checklist is just a tool to help you deliver higher quality code. Code that affects all aspects of a project: the SEO, the user experience, the ROI, and ultimately the success of the project. A tool that can help across all those things might actually help reduce your anxiety and improve your health!
+
+## Conclusion
+
+The success the Front-End Checklist received in such a short time reminded me that a lot of people are really interested in finding ways to improve their work. But just because the tool exists doesn’t directly help with that. You also need to commit to using it.
+
+In a time where AI is taking over many manual tasks, quality is a must-have. Even if automation takes over a lot of our tasks, some level of quality will remain impossible to automate, and us front-end developers still have many long days to enjoy our jobs.

@@ -22,8 +22,8 @@ type LinksExternalResponse = {
 
 export const MENU_LINKS = (translate: Translate): LinksInternalResponse[] => [
   routes(translate).blog,
-  routes(translate).bookmarks,
-  routes(translate).uses,
+  // routes(translate).bookmarks,
+  // routes(translate).uses,
   routes(translate).about,
 ]
 
@@ -32,10 +32,10 @@ export const FOOTER_MENU_LINKS = (translate: Translate): LinksInternalResponse[]
   ...[...MENU_LINKS(translate)],
 ]
 
-export const EXTRA_LINKS = (translate: Translate): LinksInternalResponse[] => [
-  routes(translate).newsletter,
-  routes(translate).analytics,
-]
+// export const EXTRA_LINKS = (translate: Translate): LinksInternalResponse[] => [
+//   routes(translate).newsletter,
+//   routes(translate).analytics,
+// ]
 
 export const SOCIAL_LINKS: LinksExternalResponse[] = [
   {

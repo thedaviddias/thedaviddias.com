@@ -4,9 +4,6 @@
   "pages": {
     "*": ["common"],
     "/": ["home"],
-    "/blog": ["blog"],
-    "/dashboard": ["dashboard"],
-    "/bookmarks": ["bookmarks"],
-    "/uses": ["uses"]
+    "/blog": ["blog"]
   }
 }

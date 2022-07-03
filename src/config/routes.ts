@@ -25,14 +25,14 @@ export const routes = (translate: Translate) => ({
       url: 'blog',
     }),
   },
-  bookmarks: {
-    label: translate('nav.bookmarks'),
-    path: '/bookmarks',
-  },
-  uses: {
-    label: translate('nav.uses'),
-    path: '/uses',
-  },
+  // bookmarks: {
+  //   label: translate('nav.bookmarks'),
+  //   path: '/bookmarks',
+  // },
+  // uses: {
+  //   label: translate('nav.uses'),
+  //   path: '/uses',
+  // },
   about: {
     label: translate('nav.about'),
     path: '/about',
@@ -41,12 +41,12 @@ export const routes = (translate: Translate) => ({
       url: 'about',
     }),
   },
-  newsletter: {
-    label: translate('footer.extra_links.newsletter'),
-    path: '/newsletter',
-  },
-  analytics: {
-    label: translate('footer.extra_links.analytics'),
-    path: 'https://plausible.io/thedaviddias.dev',
-  },
+  // newsletter: {
+  //   label: translate('footer.extra_links.newsletter'),
+  //   path: '/newsletter',
+  // },
+  // analytics: {
+  //   label: translate('footer.extra_links.analytics'),
+  //   path: 'https://plausible.io/thedaviddias.dev',
+  // },
 })

@@ -5,6 +5,7 @@ import useTranslation from 'next-translate/useTranslation'
 
 import { BlogPost } from '@/components/blog-post'
 import { Container } from '@/components/container'
+import { Newsletter } from '@/components/newsletter'
 
 import { routes } from '@/config/routes'
 import { getBlogsInformation } from '@/utils/get-blog-posts'
@@ -34,6 +35,9 @@ const Home: NextPage = ({ posts }) => {
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">
             <BlogPost posts={posts} />
           </div>
+        </section>
+        <section>
+          <Newsletter />
         </section>
       </div>
     </Container>

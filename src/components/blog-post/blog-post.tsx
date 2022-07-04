@@ -1,5 +1,6 @@
 import { format } from 'date-fns'
 import Link from 'next/link'
+import slugify from 'slugify'
 
 import { H3 } from '../heading'
 
@@ -24,10 +25,14 @@ export const BlogPost = ({ posts }: { posts: BlogPostTypes[] }) => {
             </div>
             <div className="flex-grow text-left lg:text-right lg:ml-8">
               <div className="float-right lg:float-none !text-sm sm:!text-base lg:!text-lg !font-semibold lg:!font-extrabold !text-gray-700 hover:!text-black dark:!text-gray-300 dark:hover:!text-white !mb-1">
-                <a href="/tag/javascript">
-                  <span className="sr-only">Tag: </span>
-                  {post.tags[0]}
-                </a>
+                {post.category && (
+                  <Link href={`/category/${slugify(post.category)}`} passHref>
+                    <a>
+                      <span className="sr-only">Category: </span>
+                      {post.category}
+                    </a>
+                  </Link>
+                )}
               </div>
               <div className="inline-block lg:block !text-gray-500 dark:!text-gray-400 !font-medium !text-sm sm:!text-base !mb-1 align-top">
                 <time dateTime="2021-12-17T05:00:00.000Z">

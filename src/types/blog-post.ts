@@ -5,4 +5,5 @@ export type BlogPost = {
   slug: string
   locale: string
   tags: string[]
+  category: string
 }

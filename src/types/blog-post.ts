@@ -6,5 +6,5 @@ export type BlogPost = {
   locale: string
   tags: string[]
   category: string
-  lastmod: string
+  lastmod?: string
 }

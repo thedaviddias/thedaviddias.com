@@ -186,7 +186,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         readingTime: readingTime(content).text,
         slug,
         tags,
-        lastmod,
+        lastmod: lastmod || null,
       },
     }
   }

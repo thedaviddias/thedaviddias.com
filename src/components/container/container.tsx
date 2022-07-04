@@ -7,7 +7,7 @@ type Props = PropsWithChildren<{}>
 
 export const Container = ({ children }: Props) => {
   return (
-    <div className="">
+    <div className="sticky">
       <Header />
       <div className="mx-auto max-w-[60rem] px-4 sm:px-6 lg:px-8">{children}</div>
       <Footer />

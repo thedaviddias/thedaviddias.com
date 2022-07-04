@@ -10,15 +10,21 @@ export const BlogPost = ({ posts }: { posts: BlogPostTypes[] }) => {
   return (
     <>
       {posts.map((post) => (
-        <article className=" pt-10 pb-8 border-t border-gray-200 dark:border-gray-700 !border-t-0 transition-colors duration-200">
+        <article
+          className="pt-10 pb-8 border-t border-gray-200 dark:border-gray-700 !border-t-0 transition-colors duration-200"
+          key={post.slug}
+        >
           <div className="flex flex-col-reverse lg:flex-row">
             <div className="max-w-[37rem] w-full">
-              <Link
-                className="!no-underline !text-xl sm:!text-2xl !font-extrabold tracking-tight serif:tracking-normal serif:font-title-serif !text-gray-900 dark:!text-gray-100 block"
-                href={`/blog/${post.slug}`}
-              >
-                <H3>{post.title}</H3>
-              </Link>
+              <H3>
+                <Link
+                  className="!no-underline !text-xl sm:!text-2xl !font-extrabold tracking-tight serif:tracking-normal serif:font-title-serif !text-gray-900 dark:!text-gray-100 block"
+                  href={`/blog/${post.slug}`}
+                >
+                  {post.title}
+                </Link>
+              </H3>
+
               <div className="!text-sm sm:!text-base !text-gray-600 dark:!text-gray-400 !mt-2">
                 {post.description}
               </div>

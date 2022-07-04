@@ -27,7 +27,7 @@ const Home: NextPage = ({ posts }) => {
         openGraph={routes(t).home.seo.openGraph}
       />
 
-      <div className="mx-auto max-w-[40rem] space-y-20 divide-y divide-slate-200 sm:space-y-24 lg:max-w-none lg:space-y-32">
+      <div className="mx-auto space-y-20 divide-y divide-slate-200 sm:space-y-24 lg:max-w-none lg:space-y-32">
         <section className="grid grid-cols-1 gap-y-10 gap-x-6 pt-10">
           <h2 className="text-2xl font-semibold leading-9 tracking-tight text-slate-900 dark:text-white">
             Articles

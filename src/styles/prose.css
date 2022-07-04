@@ -55,7 +55,7 @@ pre {
 }
 
 /* I think this is a bug in the tailwind/typography thing */
-.dark .dark\:prose-dark thead {
+.dark thead {
   color: var(--color-blueGray-500);
 }
 

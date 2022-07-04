@@ -5,15 +5,15 @@ import { Container } from '@/components/container'
 
 import { routes } from '@/config/routes'
 
-export default function About() {
+export default function Blog() {
   const { t } = useTranslation('common')
 
   return (
     <Container>
       <NextSeo
-        title={routes(t).about.seo.title}
-        description={routes(t).about.seo.description}
-        openGraph={routes(t).about.seo.openGraph}
+        title={routes(t).blog.seo.title}
+        description={routes(t).blog.seo.description}
+        openGraph={routes(t).blog.seo.openGraph}
       />
     </Container>
   )

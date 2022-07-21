@@ -18,8 +18,8 @@ export const Header = () => {
       <div className="max-w-[60rem] mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex justify-between h-16">
           <div className="flex-1 flex items-center sm:justify-start align-middle">
-            <Link className="sm:mr-6" href="/" passHref>
-              <span className="font-extrabold text-base xs:text-lg sm:!text-xl sm:mt-[-3px]">
+            <Link href="/" passHref>
+              <span className="font-extrabold text-base xs:text-lg sm:!text-xl sm:mt-[-3px] sm:mr-6">
                 The David Dias
               </span>
             </Link>
@@ -69,7 +69,7 @@ export const Header = () => {
                 </svg>
               )}
             </button>
-            <div className="">
+            <div className="block sm:hidden">
               <nav>
                 <button
                   aria-label="Toggle menu"

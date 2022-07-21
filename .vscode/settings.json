@@ -42,9 +42,5 @@
     "*.js": "javascript",
     "**/*.test.tsx": "typescriptreact",
     "**/*.test.ts": "typescript"
-  },
-  "frontMatter.preview.host": "http://localhost:3000/",
-  "frontMatter.framework.startCommand": "pnpm dev",
-  "frontMatter.dashboard.openOnStart": true,
-  "frontMatter.content.autoUpdateDate": false
+  }
 }

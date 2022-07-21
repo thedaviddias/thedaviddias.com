@@ -7,7 +7,7 @@ export const Footer = () => {
   const { t } = useTranslation('common')
 
   return (
-    <div className="flex-grow-0 flex-shrink-0">
+    <div className="mt-auto">
       <footer
         className="main-footer bg-gray-50 dark:bg-gray-850 mt-6 sm:mt-10 transform"
         aria-labelledby="footer-heading"

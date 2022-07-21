@@ -7,5 +7,13 @@
       "title": "blog",
       "path": "[[workspace]]/content/blog"
     }
+  ],
+  "frontMatter.content.autoUpdateDate": false,
+  "frontMatter.dashboard.openOnStart": true,
+  "frontMatter.framework.startCommand": "pnpm dev",
+  "frontMatter.preview.host": "http://localhost:3000/",
+  "frontMatter.taxonomy.tags": [
+    "Github",
+    "Open-source"
   ]
 }

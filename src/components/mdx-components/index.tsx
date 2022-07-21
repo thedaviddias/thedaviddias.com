@@ -1,7 +1,9 @@
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import darkTheme from 'prism-react-renderer/themes/nightOwl'
 import lightTheme from 'prism-react-renderer/themes/nightOwlLight'
+import { TwitterEmbed } from 'react-social-media-embed'
 import slugify from 'slugify'
 
 import { H1, H2, H3, H4 } from '@/components/heading'
@@ -101,6 +103,7 @@ export const MDXComponents = {
   h2: (props) => <H2 as="h2" {...props} />,
   h3: (props) => <H3 as="h3" {...props} />,
   h4: (props) => <H4 as="h4" {...props} />,
+  Tweet: (props) => <TwitterEmbed {...props} />,
   // hr: (props) => <chakra.hr apply="mdx.hr" {...props} />,
   // strong: (props) => <Box as="strong" fontWeight="semibold" {...props} />,
   // pre: Pre,

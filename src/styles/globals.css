@@ -6,6 +6,10 @@
 @tailwind utilities;
 @tailwind screens;
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
 
 .main-header:before {
   position: absolute;

@@ -52,19 +52,41 @@ export const getAllPostsWithFrontMatter = ({
 }: GetAllPostsWithFrontMatter) => {
   const blogs = getAllPosts(dataType)
 
+  console.log('#### blogs', blogs)
+
   return blogs
-    .map((blog): Information => {
-      const slug = blog.replace(/\.mdx/, '')
-      const source = getPost(slug, dataType)
+    .reduce((allPosts, postSlug) => {
+      const source = fs.readFileSync(
+        path.join(process.cwd(), 'content', dataType, postSlug),
+        'utf8'
+      )
+      const { data, content } = matter(source)
 
-      const { data, content } = matter(source.trim())
+      console.log('filterByTag', data.tags)
 
-      return {
-        frontMatter: data,
-        readingTime: readingTime(content),
-        slug,
+      if (filterByTag) {
+        if (data.tags.includes(filterByTag)) {
+          return [
+            {
+              frontMatter: data,
+              slug: postSlug.replace('.mdx', ''),
+            },
+            ...allPosts,
+          ]
+        } else {
+          return allPosts
+        }
       }
-    })
+
+      return [
+        {
+          frontMatter: data,
+          readingTime: readingTime(content),
+          slug: postSlug.replace('.mdx', ''),
+        },
+        ...allPosts,
+      ]
+    }, [])
     .filter((blog) => !blog.frontMatter.draft)
     .filter((blog) => blog.frontMatter.locale === locale)
     .sort(

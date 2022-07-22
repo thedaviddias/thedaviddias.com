@@ -47,6 +47,8 @@ const Home: NextPage = ({ posts }) => {
 export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => {
   const posts = getAllPostsWithFrontMatter({ dataType: 'blog', locale, limit: 5 })
 
+  console.log('##$#$#$#', posts)
+
   const props: Props = {
     posts,
   }

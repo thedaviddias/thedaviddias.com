@@ -38,8 +38,6 @@ const TagPage: NextPage = ({ posts, tag }) => {
 export const getStaticPaths = async () => {
   const tags = await getTags('blog')
 
-  // console.log('tags', tags)
-
   const paths = tags.map((tag: string) => ({
     params: {
       tag,

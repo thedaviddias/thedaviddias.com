@@ -12,11 +12,11 @@ import { getAllPostsWithFrontMatter } from '@/utils/get-blog-posts'
 
 import type { BlogPost as BlogPostTypes } from '@/types/blog-post'
 
-type Props = {
+type HomeProps = {
   posts: BlogPostTypes[]
 }
 
-const Home: NextPage = ({ posts }) => {
+const Home: NextPage<HomeProps> = ({ posts }) => {
   const { t } = useTranslation('common')
 
   return (
@@ -44,12 +44,10 @@ const Home: NextPage = ({ posts }) => {
   )
 }
 
-export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => {
+export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const posts = getAllPostsWithFrontMatter({ dataType: 'blog', locale, limit: 5 })
 
-  console.log('##$#$#$#', posts)
-
-  const props: Props = {
+  const props: HomeProps = {
     posts: JSON.parse(JSON.stringify(posts)),
   }
 

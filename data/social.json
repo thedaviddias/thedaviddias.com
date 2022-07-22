@@ -1,0 +1,34 @@
+[
+  {
+    "label": "Twitter",
+    "link": "https://ddias.run/tw"
+  },
+  {
+    "label": "Github",
+    "link": "https://github.com/thedaviddias"
+  },
+  {
+    "label": "Youtube",
+    "link": "https://ddias.run/yt"
+  },
+  {
+    "label": "Twitch",
+    "link": "https://ddias.run/twi"
+  },
+  {
+    "label": "LinkedIn",
+    "link": "https://linkedin.com/in/thedaviddias"
+  },
+  {
+    "label": "Instagram",
+    "link": "https://www.instagram.com/thedaviddias/"
+  },
+  {
+    "label": "Facebook",
+    "link": "https://www.facebook.com/thedaviddias"
+  },
+  {
+    "label": "RSS feed",
+    "link": "https://thedaviddias.dev/rss.xml"
+  }
+]

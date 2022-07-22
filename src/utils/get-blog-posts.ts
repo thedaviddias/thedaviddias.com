@@ -60,8 +60,6 @@ export const getAllPostsWithFrontMatter = ({
       )
       const { data, content } = matter(source)
 
-      console.log('filterByTag', data.tags)
-
       if (filterByTag) {
         if (data.tags.includes(filterByTag)) {
           return [

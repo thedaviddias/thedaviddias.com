@@ -8,6 +8,9 @@
       "path": "[[workspace]]/content/blog"
     }
   ],
+  "frontMatter.telemetry.disable": false,
+  "frontMatter.panel.freeform": false,
+  "frontMatter.templates.enabled": true,
   "frontMatter.content.autoUpdateDate": false,
   "frontMatter.dashboard.openOnStart": true,
   "frontMatter.framework.startCommand": "pnpm dev",
@@ -36,58 +39,12 @@
   ],
   "frontMatter.taxonomy.contentTypes": [
     {
-      "name": "default",
+      "name": "blog-post",
       "pageBundle": false,
-      "previewPath": null,
       "fields": [
         {
           "title": "Title",
           "name": "title",
-          "type": "string"
-        },
-        {
-          "title": "Description",
-          "name": "description",
-          "type": "string"
-        },
-        {
-          "title": "Publishing date",
-          "name": "date",
-          "type": "datetime",
-          "default": "{{now}}",
-          "isPublishDate": true
-        },
-        {
-          "title": "Content preview",
-          "name": "preview",
-          "type": "image"
-        },
-        {
-          "title": "Is in draft",
-          "name": "draft",
-          "type": "draft"
-        },
-        {
-          "title": "Tags",
-          "name": "tags",
-          "type": "tags"
-        },
-        {
-          "title": "Categories",
-          "name": "categories",
-          "type": "categories"
-        }
-      ]
-    }
-  ],
-  "frontMatter.taxonomy.contentTypes": [
-    {
-      "name": "Blog",
-      "pageBundle": false,
-      "fields": [
-        {
-          "title": "locale",
-          "name": "locale",
           "type": "string"
         },
         {
@@ -96,23 +53,8 @@
           "type": "string"
         },
         {
-          "title": "Is in draft",
-          "name": "draft",
-          "type": "boolean"
-        },
-        {
-          "title": "Categories",
-          "name": "categories",
-          "type": "categories"
-        },
-        {
-          "title": "Title",
-          "name": "title",
-          "type": "string"
-        },
-        {
-          "title": "Description",
-          "name": "description",
+          "title": "locale",
+          "name": "locale",
           "type": "string"
         },
         {
@@ -123,9 +65,29 @@
           "isPublishDate": true
         },
         {
-          "title": "lastmod",
+          "title": "Last modification date",
           "name": "lastmod",
           "type": "datetime"
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "boolean"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
         },
         {
           "title": "Content preview",
@@ -133,9 +95,14 @@
           "type": "image"
         },
         {
-          "title": "Tags",
-          "name": "tags",
-          "type": "tags"
+          "title": "Previously published platform",
+          "name": "publishedOn",
+          "type": "string"
+        },
+        {
+          "title": "Previously published URL",
+          "name": "publishedUrl",
+          "type": "string"
         }
       ]
     }
@@ -147,5 +114,32 @@
     "Project",
     "Reflexion",
     "Security"
+  ],
+  "frontMatter.data.files": [
+    {
+      "id": "social",
+      "title": "Social Medias",
+      "file": "[[workspace]]/data/social.json",
+      "fileType": "json",
+      "labelField": "label",
+      "schema": {
+        "title": "Social Medias",
+        "type": "object",
+        "required": [
+          "label",
+          "link"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "Name"
+          },
+          "link": {
+            "type": "string",
+            "title": "URL"
+          }
+        }
+      }
+    }
   ]
 }

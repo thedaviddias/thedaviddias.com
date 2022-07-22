@@ -12,8 +12,9 @@ import slugify from 'slugify'
 import { Container } from '@/components/container'
 import { H1 } from '@/components/heading'
 import { MDXComponents } from '@/components/mdx-components'
+import { Newsletter } from '@/components/newsletter'
 
-import { getBlogBySlug, getBlogs } from '@/utils/get-blog-posts'
+import { getAllPosts, getPost, getPostBySlug } from '@/utils/get-blog-posts'
 import { readBlogPost } from '@/utils/read-blog-post'
 
 import { BlogPost } from '@/types/blog-post'
@@ -114,7 +115,7 @@ const BlogPostPage = ({ title, date, source, readingTime, tags, description, las
                 </nav>
               </aside>
 
-              <div className="mt-6">
+              <aside className="mt-6">
                 <aside className="w-full">
                   <div className="mb-2 uppercase tracking-widest font-semibold text-gray-400 dark:text-gray-500 text-sm">
                     Tags
@@ -125,7 +126,7 @@ const BlogPostPage = ({ title, date, source, readingTime, tags, description, las
                         <li key={tag}>
                           <Link
                             className="block mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-                            href={`/tag/${slugify(tag)}`}
+                            href={`/tag/${slugify(tag, { lower: true })}`}
                           >
                             {tag}
                           </Link>
@@ -134,22 +135,24 @@ const BlogPostPage = ({ title, date, source, readingTime, tags, description, las
                     </ul>
                   </nav>
                 </aside>
-              </div>
+              </aside>
             </div>
           </div>
         </div>
       </article>
+      <Newsletter />
     </Container>
   )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const blogs = getBlogs()
+  const blogs = getAllPosts('blog')
 
   const paths: GetStaticPathsResult['paths'] = []
   blogs.forEach((blog) => {
     const slug = blog.replace(/\.mdx/, '')
-    const source = getBlogBySlug(slug)
+    const source = getPost(slug, 'blog')
+
     const { data } = matter(source.trim())
 
     if (!data.draft) {

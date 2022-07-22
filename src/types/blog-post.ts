@@ -1,10 +1,12 @@
 export type BlogPost = {
-  title: string
-  description: string
-  date: string
+  frontMatter: {
+    title: string
+    description: string
+    date: string
+    locale: string
+    tags: string[]
+    category: string
+    lastmod?: string
+  }
   slug: string
-  locale: string
-  tags: string[]
-  category: string
-  lastmod?: string
 }

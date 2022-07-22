@@ -93,6 +93,33 @@ import { Paragraph } from '../paragraph'
 //   )
 // }
 
+// const CustomHeading = ({ as, id, ...props }) => {
+//   if (id) {
+//     return (
+//       <Link href={`#${id}`}>
+//         <NextLink href={`#${id}`}>
+//           <Heading
+//             as={as}
+//             display="inline"
+//             id={id}
+//             lineHeight={'1em'}
+//             {...props}
+//             _hover={{
+//               _before: {
+//                 content: '"#"',
+//                 position: 'relative',
+//                 marginLeft: '-1.2ch',
+//                 paddingRight: '0.2ch',
+//               },
+//             }}
+//           />
+//         </NextLink>
+//       </Link>
+//     );
+//   }
+//   return <Heading as={as} {...props} />;
+// };
+
 const ResponsiveImage = (props) => <img alt={props.alt} layout="responsive" {...props} />
 
 export const MDXComponents = {

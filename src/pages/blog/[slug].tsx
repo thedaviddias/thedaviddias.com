@@ -177,7 +177,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     const {
       content,
-      data: { title, description, date, tags, lastmod },
+      data: { title, description, tags, lastmod },
     } = matter(postContent)
 
     return {

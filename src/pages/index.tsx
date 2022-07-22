@@ -50,7 +50,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => {
   console.log('##$#$#$#', posts)
 
   const props: Props = {
-    posts,
+    posts: posts,
   }
 
   return {

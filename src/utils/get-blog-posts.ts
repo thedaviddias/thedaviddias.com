@@ -52,8 +52,6 @@ export const getAllPostsWithFrontMatter = ({
 }: GetAllPostsWithFrontMatter) => {
   const blogs = getAllPosts(dataType)
 
-  console.log('#### blogs', blogs)
-
   return blogs
     .reduce((allPosts, postSlug) => {
       const source = fs.readFileSync(

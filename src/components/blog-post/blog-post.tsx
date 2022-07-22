@@ -42,7 +42,7 @@ export const BlogPost = ({ posts }: { posts: BlogPostTypes[] }) => {
               </div>
               <div className="inline-block lg:block !text-gray-500 dark:!text-gray-400 !font-medium !text-sm sm:!text-base !mb-1 align-top">
                 <time dateTime="2021-12-17T05:00:00.000Z">
-                  {format(new Date(post.frontMatter.date), 'eee, dd MMM yyyy')}
+                  {format(new Date(post.frontMatter.date.toString()), 'eee, dd MMM yyyy')}
                 </time>
               </div>
             </div>

@@ -13,7 +13,21 @@
   "frontMatter.framework.startCommand": "pnpm dev",
   "frontMatter.preview.host": "http://localhost:3000/",
   "frontMatter.taxonomy.tags": [
-    "Github",
-    "Open-source"
+    "accessibilite",
+    "astuces",
+    "aws-amplify",
+    "best-practices",
+    "github",
+    "github-actions",
+    "life",
+    "life-lessons",
+    "netlify",
+    "nextjs",
+    "open-source",
+    "performance",
+    "psychology",
+    "react",
+    "two-factor-authentication",
+    "ux"
   ]
 }

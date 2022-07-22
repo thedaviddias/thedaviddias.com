@@ -177,7 +177,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     const {
       content,
-      data: { title, description, tags, lastmod },
+      data: { title, description, tags, date, lastmod },
     } = matter(postContent)
 
     return {
@@ -185,7 +185,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         source: await serialize(content),
         title,
         description,
-        date,
+        date: JSON.parse(JSON.stringify(date)),
         readingTime: readingTime(content).text,
         slug,
         tags,

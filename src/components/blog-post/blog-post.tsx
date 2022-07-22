@@ -31,11 +31,11 @@ export const BlogPost = ({ posts }: { posts: BlogPostTypes[] }) => {
             </div>
             <div className="flex-grow text-left lg:text-right lg:ml-8">
               <div className="float-right lg:float-none !text-sm sm:!text-base lg:!text-lg !font-semibold lg:!font-extrabold !text-gray-700 hover:!text-black dark:!text-gray-300 dark:hover:!text-white !mb-1">
-                {post.frontMatter.category && (
-                  <Link href={`/category/${slugify(post.frontMatter.category)}`} passHref>
+                {post.frontMatter.categories && (
+                  <Link href={`/category/${slugify(post.frontMatter.categories[0])}`} passHref>
                     <a>
                       <span className="sr-only">Category: </span>
-                      {post.frontMatter.category}
+                      {post.frontMatter.categories[0]}
                     </a>
                   </Link>
                 )}

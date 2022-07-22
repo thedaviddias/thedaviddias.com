@@ -5,7 +5,7 @@ export type BlogPost = {
     date: string
     locale: string
     tags: string[]
-    category: string
+    categories: string[]
     lastmod?: string
   }
   slug: string

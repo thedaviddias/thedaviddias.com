@@ -29,10 +29,14 @@ export const routes = (translate: Translate) => ({
   //   label: translate('nav.bookmarks'),
   //   path: '/bookmarks',
   // },
-  // uses: {
-  //   label: translate('nav.uses'),
-  //   path: '/uses',
-  // },
+  uses: {
+    label: translate('nav.uses'),
+    path: '/uses',
+    seo: extendSEO({
+      title: 'What I use',
+      url: 'uses',
+    }),
+  },
   about: {
     label: translate('nav.about'),
     path: '/about',

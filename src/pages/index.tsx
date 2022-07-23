@@ -1,12 +1,12 @@
 import type { NextPage } from 'next'
 import { GetStaticProps } from 'next'
-import Link from 'next/link'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 
 import { BlogPost } from '@/components/blog-post'
 import { Container } from '@/components/container'
 import { Newsletter } from '@/components/newsletter'
+import { NextLink } from '@/components/next-link'
 
 import { routes } from '@/config/routes'
 import { getAllPostsWithFrontMatter } from '@/utils/get-blog-posts'
@@ -28,7 +28,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         openGraph={routes(t).home.seo.openGraph}
       />
 
-      <div className="mx-auto space-y-20 divide-y divide-slate-200 sm:space-y-24 lg:max-w-none lg:space-y-32">
+      <main className="mx-auto space-y-20 divide-y divide-slate-200 sm:space-y-24 lg:max-w-none lg:space-y-32">
         <section className="-mt-36 pb-8 pt-48 sm:pt-60 sm:pb-8 text-center relative block ">
           <h1 className="-mt-10 block text-6xl sm:text-7xl lg:text-8xl mb-4 serif:font-bold dark:text-white leading-tighter transition-colors">
             <p className="text-4xl p-0">HEY THERE!</p>
@@ -57,13 +57,13 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
             ))}
           </div>
           <footer className="text-right">
-            <Link href="/blog">{t('posts.viewAll')}</Link>
+            <NextLink href="/blog">{t('posts.viewAll')}</NextLink>
           </footer>
         </section>
         <section className="border-none">
           <Newsletter />
         </section>
-      </div>
+      </main>
     </Container>
   )
 }

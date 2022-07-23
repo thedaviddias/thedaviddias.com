@@ -8,7 +8,7 @@ export const Newsletter = () => {
           Sign up to my newsletter
         </H2>
         <form>
-          <input type="email" />
+          <input aria-label="Newsletter" type="email" />
         </form>
       </div>
     </section>

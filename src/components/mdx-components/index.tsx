@@ -20,9 +20,9 @@ export const MDXComponents = {
   img: ResponsiveImage,
   inlineCode: InlineCode,
   li: (props) => <li {...props} className="nested-list" />,
-  ol: (props) => <ol {...props} className="list-inside list-decimal" />,
+  ol: (props) => <ol {...props} className="list-decimal" />,
   p: Paragraph,
   pre: ({ children }) => children,
   Tweet,
-  ul: (props) => <ul {...props} className="list-inside list-disc" />,
+  ul: (props) => <ul {...props} className="list-disc" />,
 }

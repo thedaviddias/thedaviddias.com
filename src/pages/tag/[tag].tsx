@@ -26,7 +26,9 @@ const TagPage: NextPage = ({ posts, tag }) => {
             Tag: <>{tag}</>
           </h2>
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">
-            <BlogPost posts={posts} />
+            {posts?.map((post) => (
+              <BlogPost key={post.title} post={post} />
+            ))}
           </div>
         </section>
         <section></section>

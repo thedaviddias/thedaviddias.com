@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-export const ResponsiveImage = ({ src, alt = '', height, width, ...rest }) => {
+export const ResponsiveImage = ({ src, title, alt = '', height, width, ...rest }) => {
   return (
-    <div className="my-3">
+    <figure className="my-3">
       <Image
         layout="responsive"
         src={src}
@@ -12,6 +12,9 @@ export const ResponsiveImage = ({ src, alt = '', height, width, ...rest }) => {
         className="rounded-lg"
         {...rest}
       />
-    </div>
+      <figcaption className="z-10 mt-4 text-sm italic text-gray-600 text-center">
+        {title}
+      </figcaption>
+    </figure>
   )
 }

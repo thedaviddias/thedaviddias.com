@@ -20,6 +20,7 @@
     "home": "Home",
     "blog": "Blog",
     "about": "About",
+    "uses": "Uses",
     "language": "Change to the French version",
     "theme": "Change theme"
   },
@@ -43,7 +44,8 @@
   },
   "posts": {
     "empty": "No articles found for that query.",
-    "viewAll": "View all blog posts"
+    "viewAll": "View all blog posts",
+    "continue": "Continue reading →"
   },
   "404": {
     "title": "Sorry 😩, this page can't be found.",

@@ -23,7 +23,7 @@ type LinksExternalResponse = {
 export const MENU_LINKS = (translate: Translate): LinksInternalResponse[] => [
   routes(translate).blog,
   // routes(translate).bookmarks,
-  // routes(translate).uses,
+  routes(translate).uses,
   routes(translate).about,
 ]
 

@@ -7,6 +7,7 @@ import { useRouter } from 'next/router'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import { NextSeo } from 'next-seo'
+import useTranslation from 'next-translate/useTranslation'
 import readingTime from 'reading-time'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeImgSize from 'rehype-img-size'
@@ -18,8 +19,10 @@ import { Container } from '@/components/container'
 import { H1 } from '@/components/heading'
 import { MDXComponents } from '@/components/mdx-components'
 import { Newsletter } from '@/components/newsletter'
+import { NextLink } from '@/components/next-link'
 import { TableOfContents } from '@/components/table-of-contents/table-of-contents'
 
+import { routes } from '@/config/routes'
 import { getAllPosts, getPost } from '@/utils/get-blog-posts'
 import { readBlogPost } from '@/utils/read-blog-post'
 import rehypeExtractHeadings from '@/utils/rehype-extract-headings'
@@ -33,8 +36,9 @@ type Props = BlogPost & {
 }
 
 const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
-  const { title, description, tags, categories, date, lastmod, permalink } = frontMatter
+  const { title, description, tags, categories, date, lastmod, permalink, author } = frontMatter
   const { isFallback } = useRouter()
+  const { t } = useTranslation('common')
 
   if (isFallback || !title) {
     return <div>Loading...</div>
@@ -65,86 +69,92 @@ const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
           ],
         }}
       />
-      <article className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <header className="pb-10 text-center border-b border-gray-200 dark:border-gray-700 mb-8 transition-colors duration-200">
-          {categories && (
-            <div className="text-gray-500 dark:text-gray-400 font-medium mb-2 text-sm sm:text-base transition-colors duration-200">
-              <span className="sr-only">Category</span>
-              {categories.map((category) => (
-                <Link
-                  key={category}
-                  href={`/category/${slugify(category, { lower: true })}`}
-                  passHref
-                >
-                  <a className="block mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x !font-semibold">
+      <main>
+        <article className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <header className="pb-10 text-center border-b border-gray-200 dark:border-gray-700 mb-8 transition-colors duration-200">
+            {categories && (
+              <div className="text-gray-500 dark:text-gray-400 font-medium mb-2 text-sm sm:text-base transition-colors duration-200">
+                <span className="sr-only">Category</span>
+                {categories.map((category) => (
+                  <NextLink
+                    key={category}
+                    href={`/category/${slugify(category, { lower: true })}`}
+                    passHref
+                    className="block mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x !font-semibold"
+                  >
                     {category}
-                  </a>
-                </Link>
-              ))}
-            </div>
-          )}
-          <H1>
-            <span className="block mt-1.5 mb-6 serif:mt-2 text-black dark:text-white mt-0 leading-none transition-colors duration-200 font-extrabold">
-              {title}
-            </span>
-            <span className="sr-only"> — </span>
-            <div className="font-medium text-lg sm:text-xl text-gray-500 dark:text-gray-400 mt-3 mb-6 tracking-wide">
-              {description}
-            </div>
-          </H1>
-          <div className="relative flex w-full items-center justify-center font-sans">
-            <div className="absolute h-px w-full max-w-md bg-gradient-to-r from-transparent via-light-overlay-700 to-transparent"></div>
-            <div className="relative bg-surface-base px-4 text-xs font-medium text-foreground-300 md:text-sm">
-              <time dateTime={date}>{format(new Date(date), 'eeee, dd MMMM yyyy')}</time>{' '}
-              {lastmod && (
-                <>
-                  <span className="sr-only">Article updated on</span>
-                  <time dateTime={lastmod}>
-                    ({format(new Date(lastmod), 'eeee, dd MMMM yyyy')})
-                  </time>
-                </>
-              )}
-            </div>
-          </div>
-
-          <aside className="flex items-center justify-center font-sans mt-6">
-            <div className="flex-shrink-0 group block">
-              <div className="flex items-center">
-                <div>
-                  <Image
-                    className="inline-block h-9 w-9 rounded-full"
-                    src="/images/david-dias-round.png"
-                    width={50}
-                    height={50}
-                    alt=""
-                  />
-                </div>
-                <div className="ml-3">
-                  <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
-                    David Dias
-                  </p>
-                  <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">
-                    View profile
-                  </p>
-                </div>
+                  </NextLink>
+                ))}
+              </div>
+            )}
+            <H1>
+              <span className="block mt-1.5 mb-6 serif:mt-2 text-black dark:text-white mt-0 leading-none transition-colors duration-200 font-extrabold">
+                {title}
+              </span>
+              <span className="sr-only"> — </span>
+              <div className="font-medium text-lg sm:text-xl text-gray-500 dark:text-gray-400 mt-3 mb-6 tracking-wide">
+                {description}
+              </div>
+            </H1>
+            <div className="relative flex w-full items-center justify-center font-sans">
+              <div className="absolute h-px w-full max-w-md bg-gradient-to-r from-transparent via-light-overlay-700 to-transparent"></div>
+              <div className="relative bg-surface-base px-4 text-xs font-medium text-foreground-300 md:text-sm">
+                <time dateTime={date}>{format(new Date(date), 'eeee, dd MMMM yyyy')}</time>{' '}
+                {lastmod && (
+                  <>
+                    <span className="sr-only">Article updated on</span>
+                    <time dateTime={lastmod}>
+                      ({format(new Date(lastmod), 'eeee, dd MMMM yyyy')})
+                    </time>
+                  </>
+                )}
               </div>
             </div>
-          </aside>
-        </header>
-        <div className="block lg:flex w-full">
-          <div className="max-w-full">
-            <div className="  w-[40em] lg:w-[37rem] !max-w-full">
-              <section className="prose prose-sm sm:prose dark:prose-light serif:prose-serif !max-w-full hide-first-paragraph">
-                <MDXRemote {...source} components={MDXComponents} />
+
+            {author && (
+              <aside className="flex items-center justify-center font-sans mt-6">
+                <div className="flex-shrink-0 group block">
+                  <NextLink href={routes(t).about.path}>
+                    <div className="flex items-center">
+                      <div>
+                        <Image
+                          className="inline-block h-9 w-9 rounded-full"
+                          src="/images/david-dias-round.png"
+                          width={50}
+                          height={50}
+                          alt="Profile avatar of David Dias"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
+                          {author}
+                        </p>
+                        <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">
+                          About me
+                        </p>
+                      </div>
+                    </div>
+                  </NextLink>
+                </div>
+              </aside>
+            )}
+          </header>
+          <div className="block lg:flex w-full">
+            <div className="max-w-full">
+              <div className="  w-[40em] lg:w-[37rem] !max-w-full">
+                <section className="prose prose-sm sm:prose dark:prose-light serif:prose-serif !max-w-full hide-first-paragraph">
+                  <MDXRemote {...source} components={MDXComponents} />
+                </section>
                 {tags && (
                   <aside className="w-full mt-3 print:hidden">
                     <div className="mb-2 uppercase tracking-widest font-semibold text-gray-400 dark:text-gray-500 text-sm">
                       Tags
                     </div>
-                    <nav className="tag-list">
-                      <ul>
+                    <nav>
+                      <ul className="flex items-center space-x-5">
                         {tags.map((tag) => (
-                          <li key={tag}>
+                          <li key={tag} className="border border-gray-200 rounded-md p-2">
                             <Link
                               className="block mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
                               href={`/tag/${slugify(tag, { lower: true })}`}
@@ -157,22 +167,22 @@ const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
                     </nav>
                   </aside>
                 )}
-              </section>
+              </div>
             </div>
-          </div>
 
-          <div className="flex-auto ml-16 hidden lg:block">
-            <div className="sticky top-10 w-full">
-              {headings && (
-                <aside className="w-full mt-3">
-                  <TableOfContents items={headings} />
-                </aside>
-              )}
+            <div className="flex-auto ml-16 hidden lg:block">
+              <div className="sticky top-10 w-full">
+                {headings && (
+                  <aside className="w-full mt-3">
+                    <TableOfContents items={headings} />
+                  </aside>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-      </article>
-      <Newsletter />
+        </article>
+        <Newsletter />
+      </main>
     </Container>
   )
 }
@@ -209,7 +219,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     const {
       content,
-      data: { title, description, tags, date, categories, lastmod },
+      data: { title, description, tags, date, categories, lastmod, author },
     } = matter(postContent)
 
     const headings = []
@@ -223,6 +233,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           tags,
           categories: categories || null,
           lastmod: lastmod || null,
+          author: author || null,
         },
         readingTime: readingTime(content).text,
         headings,

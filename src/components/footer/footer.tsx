@@ -1,7 +1,8 @@
-import NextLink from 'next/link'
 import { useTheme } from 'next-themes'
 import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
+
+import { NextLink } from '@/components/next-link'
 
 import { FOOTER_MENU_LINKS, SOCIAL_LINKS } from '@/constants'
 
@@ -14,7 +15,7 @@ export const Footer = () => {
   return (
     <div className="mt-auto">
       <footer
-        className="main-footer bg-gray-50 dark:bg-gray-850 mt-5 sm:mt-8 transform"
+        className="main-footer bg-gray-50 dark:bg-black mt-5 sm:mt-8 transform"
         aria-labelledby="footer-heading"
       >
         <h2 id="footer-heading" className="sr-only">
@@ -57,8 +58,12 @@ export const Footer = () => {
           </div>
           <div className="xl:grid xl:grid-cols-3 xl:gap-8 print:hidden">
             <div className="space-y-8 xl:col-span-1">
-              The David Dias
-              <p className="text-gray-500 text-base">....</p>
+              <span>The David Dias</span>
+              <p className="text-gray-500 text-sm">
+                I like solving digital and human problems! I spend most of my time coding using
+                modern HTML, CSS, and Javascript. Outside of work, I enjoy meeting new people,
+                building communities and producing multimedia content.
+              </p>
               <div className="flex space-x-6"></div>
             </div>
 
@@ -73,7 +78,7 @@ export const Footer = () => {
                     {FOOTER_MENU_LINKS(t).map(({ path, label }) => (
                       <li key={path}>
                         <NextLink href={path} passHref>
-                          <a>{label}</a>
+                          {label}
                         </NextLink>
                       </li>
                     ))}

@@ -1,8 +1,9 @@
-import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
 import { useState } from 'react'
 
 import { MENU_LINKS } from '@/constants'
+
+import { NextLink } from '../next-link'
 
 export const Header = ({ pathname }) => {
   const { t } = useTranslation('common')
@@ -14,26 +15,28 @@ export const Header = ({ pathname }) => {
       <div className="max-w-[60rem] mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex justify-between h-16">
           <div className="flex-1 flex items-center sm:justify-between align-middle">
-            <Link href="/" passHref>
-              <a className="font-extrabold text-base xs:text-lg sm:!text-xl sm:mt-[-3px] sm:mr-6">
-                The David Dias
-              </a>
-            </Link>
-            <nav className="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <NextLink
+              href="/"
+              passHref
+              className="font-extrabold text-base xs:text-lg sm:!text-xl sm:mt-[-3px] sm:mr-6"
+            >
+              The David Dias
+            </NextLink>
+            <nav className="hidden sm:flex">
               {MENU_LINKS(t).map((item) => (
-                <Link href={item.path} passHref key={item.label}>
-                  <a
-                    href={item.path}
-                    aria-current={pathname === item.path ? 'page' : undefined}
-                    className={
-                      pathname === item.path
-                        ? 'mr-6 font-bold'
-                        : 'mr-6 hover:text-black hover:underline dark:hover:text-white'
-                    }
-                  >
-                    {item.label}
-                  </a>
-                </Link>
+                <NextLink
+                  href={item.path}
+                  passHref
+                  key={item.label}
+                  aria-current={pathname === item.path ? 'page' : undefined}
+                  className={
+                    pathname === item.path
+                      ? 'mr-10 font-bold'
+                      : 'mr-10 hover:text-black hover:underline dark:hover:text-white'
+                  }
+                >
+                  {item.label}
+                </NextLink>
               ))}
             </nav>
           </div>
@@ -72,14 +75,14 @@ export const Header = ({ pathname }) => {
                     <div className="text-center mt-6 inset-y-1/2 flex-grow">
                       <div className="mt-12">
                         {MENU_LINKS(t).map(({ path, label }) => (
-                          <Link
+                          <NextLink
                             href={path}
                             passHref
                             key={label}
                             className="block mt-2 mb-5 title text-black dark:text-white"
                           >
                             <div>{label}</div>
-                          </Link>
+                          </NextLink>
                         ))}
                       </div>
                     </div>

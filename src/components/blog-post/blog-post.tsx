@@ -11,7 +11,7 @@ export const BlogPost = ({ posts }: { posts: BlogPostTypes[] }) => {
     <>
       {posts.map((post) => (
         <article
-          className="pt-10 pb-8 border-t border-gray-200 dark:border-gray-700 !border-t-0 transition-colors duration-200"
+          className="pt-10 pb-8 border-t border-gray-200 dark:border-gray-700"
           key={post.slug}
         >
           <div className="flex flex-col-reverse lg:flex-row">
@@ -30,10 +30,11 @@ export const BlogPost = ({ posts }: { posts: BlogPostTypes[] }) => {
               </div>
             </div>
             <div className="flex-grow text-left lg:text-right lg:ml-8">
-              <div className="float-right lg:float-none !text-sm sm:!text-base lg:!text-lg !font-semibold lg:!font-extrabold !text-gray-700 hover:!text-black dark:!text-gray-300 dark:hover:!text-white !mb-1">
+              <div className="float-right lg:float-none !mb-1">
                 {post.frontMatter.categories && (
                   <Link href={`/category/${slugify(post.frontMatter.categories[0])}`} passHref>
-                    <a>
+                    <a className="block mb-1 !font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x">
+                      {/* <a className="!text-sm sm:!text-base lg:!text-lg !font-semibold lg:!font-extrabold !text-gray-700 hover:!text-black dark:!text-gray-300 dark:hover:!text-white"> */}
                       <span className="sr-only">Category: </span>
                       {post.frontMatter.categories[0]}
                     </a>

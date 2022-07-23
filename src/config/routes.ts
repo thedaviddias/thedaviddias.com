@@ -20,7 +20,7 @@ export const routes = (translate: Translate) => ({
     path: '/blog',
     seo: extendSEO({
       title: 'Blog',
-      description: '',
+      description: 'Articles about my passions (including web development and leardership).',
       image: 'images/og/blog.png',
       url: 'blog',
     }),
@@ -41,10 +41,6 @@ export const routes = (translate: Translate) => ({
       url: 'about',
     }),
   },
-  // newsletter: {
-  //   label: translate('footer.extra_links.newsletter'),
-  //   path: '/newsletter',
-  // },
   // analytics: {
   //   label: translate('footer.extra_links.analytics'),
   //   path: 'https://plausible.io/thedaviddias.dev',

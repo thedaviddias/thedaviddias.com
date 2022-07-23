@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 import { MENU_LINKS } from '@/constants'
 
-export const Header = () => {
+export const Header = ({ pathname }) => {
   const { t } = useTranslation('common')
 
   const [mobileMenuState, setMobileMenuState] = useState(false)
@@ -15,19 +15,24 @@ export const Header = () => {
         <div className="relative flex justify-between h-16">
           <div className="flex-1 flex items-center sm:justify-between align-middle">
             <Link href="/" passHref>
-              <span className="font-extrabold text-base xs:text-lg sm:!text-xl sm:mt-[-3px] sm:mr-6">
+              <a className="font-extrabold text-base xs:text-lg sm:!text-xl sm:mt-[-3px] sm:mr-6">
                 The David Dias
-              </span>
+              </a>
             </Link>
             <nav className="hidden sm:ml-6 sm:flex sm:space-x-8">
-              {MENU_LINKS(t).map(({ path, label }) => (
-                <Link
-                  href={path}
-                  passHref
-                  key={label}
-                  className="mr-6 hover:text-black dark:hover:text-white"
-                >
-                  {label}
+              {MENU_LINKS(t).map((item) => (
+                <Link href={item.path} passHref key={item.label}>
+                  <a
+                    href={item.path}
+                    aria-current={pathname === item.path ? 'page' : undefined}
+                    className={
+                      pathname === item.path
+                        ? 'mr-6 font-bold'
+                        : 'mr-6 hover:text-black hover:underline dark:hover:text-white'
+                    }
+                  >
+                    {item.label}
+                  </a>
                 </Link>
               ))}
             </nav>

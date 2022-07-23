@@ -16,7 +16,7 @@ export const Paragraph = ({
   ...rest
 }: ParagraphProps) => {
   return React.createElement(as, {
-    className: 'max-w-full text-lg',
+    className: 'max-w-full text-lg my-3 leading-relaxed',
     ...rest,
   })
 }

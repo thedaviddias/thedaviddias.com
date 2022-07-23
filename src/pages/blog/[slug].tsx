@@ -32,8 +32,8 @@ type Props = BlogPost & {
   headings: any
 }
 
-const BlogPostPage = ({ frontMatter, source, headings, readingTime }: Props) => {
-  const { title, description, tags, categories, date, lastmod } = frontMatter
+const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
+  const { title, description, tags, categories, date, lastmod, permalink } = frontMatter
   const { isFallback } = useRouter()
 
   if (isFallback || !title) {
@@ -47,11 +47,11 @@ const BlogPostPage = ({ frontMatter, source, headings, readingTime }: Props) => 
         openGraph={{
           title,
           description,
-          url: 'https://www.example.com/articles/article-title',
+          url: permalink,
           type: 'article',
           article: {
             publishedTime: date,
-            modifiedTime: '',
+            modifiedTime: lastmod,
             authors: ['https://www.example.com/authors/@firstnameA-lastnameA'],
             tags,
           },
@@ -67,25 +67,69 @@ const BlogPostPage = ({ frontMatter, source, headings, readingTime }: Props) => 
       />
       <article className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <header className="pb-10 text-center border-b border-gray-200 dark:border-gray-700 mb-8 transition-colors duration-200">
-          <div className="text-gray-500 dark:text-gray-400 font-medium mb-2 text-sm sm:text-base transition-colors duration-200">
-            <span className="sr-only">Article posted on</span>
-            <time dateTime={date}>{format(new Date(date), 'eeee, dd MMMM yyyy')}</time>{' '}
-            {lastmod && (
-              <>
-                <span className="sr-only">Article updated on</span>
-                <time dateTime={lastmod}>({format(new Date(lastmod), 'eeee, dd MMMM yyyy')})</time>
-              </>
-            )}
-          </div>
+          {categories && (
+            <div className="text-gray-500 dark:text-gray-400 font-medium mb-2 text-sm sm:text-base transition-colors duration-200">
+              <span className="sr-only">Category</span>
+              {categories.map((category) => (
+                <Link
+                  key={category}
+                  href={`/category/${slugify(category, { lower: true })}`}
+                  passHref
+                >
+                  <a className="block mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x !font-semibold">
+                    {category}
+                  </a>
+                </Link>
+              ))}
+            </div>
+          )}
           <H1>
-            <span className="pt-1.5 serif:mt-2 text-black dark:text-white mt-0 leading-none transition-colors duration-200 font-extrabold">
+            <span className="block mt-1.5 mb-6 serif:mt-2 text-black dark:text-white mt-0 leading-none transition-colors duration-200 font-extrabold">
               {title}
             </span>
             <span className="sr-only"> — </span>
-            <div className="font-medium text-lg sm:text-xl text-gray-500 dark:text-gray-400 mt-3">
+            <div className="font-medium text-lg sm:text-xl text-gray-500 dark:text-gray-400 mt-3 mb-6 tracking-wide">
               {description}
             </div>
           </H1>
+          <div className="relative flex w-full items-center justify-center font-sans">
+            <div className="absolute h-px w-full max-w-md bg-gradient-to-r from-transparent via-light-overlay-700 to-transparent"></div>
+            <div className="relative bg-surface-base px-4 text-xs font-medium text-foreground-300 md:text-sm">
+              <time dateTime={date}>{format(new Date(date), 'eeee, dd MMMM yyyy')}</time>{' '}
+              {lastmod && (
+                <>
+                  <span className="sr-only">Article updated on</span>
+                  <time dateTime={lastmod}>
+                    ({format(new Date(lastmod), 'eeee, dd MMMM yyyy')})
+                  </time>
+                </>
+              )}
+            </div>
+          </div>
+
+          <aside className="flex items-center justify-center font-sans mt-6">
+            <div className="flex-shrink-0 group block">
+              <div className="flex items-center">
+                <div>
+                  <Image
+                    className="inline-block h-9 w-9 rounded-full"
+                    src="/images/david-dias-round.png"
+                    width={50}
+                    height={50}
+                    alt=""
+                  />
+                </div>
+                <div className="ml-3">
+                  <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
+                    David Dias
+                  </p>
+                  <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">
+                    View profile
+                  </p>
+                </div>
+              </div>
+            </div>
+          </aside>
         </header>
         <div className="block lg:flex w-full">
           <div className="max-w-full">
@@ -118,63 +162,7 @@ const BlogPostPage = ({ frontMatter, source, headings, readingTime }: Props) => 
           </div>
 
           <div className="flex-auto ml-16 hidden lg:block">
-            <div className="sticky top-24 w-full">
-              <aside className="w-full">
-                <div className="mb-2 uppercase tracking-widest font-semibold text-gray-400 dark:text-gray-500 text-sm">
-                  Author
-                </div>
-                <a href="#" className="flex-shrink-0 group block">
-                  <div className="flex items-center">
-                    <div>
-                      <Image
-                        className="inline-block h-9 w-9 rounded-full"
-                        src="/images/david-dias-round.png"
-                        width={50}
-                        height={50}
-                        alt=""
-                      />
-                    </div>
-                    <div className="ml-3">
-                      <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
-                        David Dias
-                      </p>
-                      <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">
-                        View profile
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </aside>
-
-              {categories && (
-                <aside className="w-full mt-3">
-                  <div className="mb-2 uppercase tracking-widest font-semibold text-gray-400 dark:text-gray-500 text-sm">
-                    Category
-                  </div>
-                  <nav className="tag-list">
-                    <ul>
-                      {categories.map((category) => (
-                        <li key={category}>
-                          <Link
-                            className="block mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-                            href={`/category/${slugify(category, { lower: true })}`}
-                          >
-                            {category}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </nav>
-                </aside>
-              )}
-
-              <aside className="w-full mt-3">
-                <div className="mb-2 uppercase tracking-widest font-semibold text-gray-400 dark:text-gray-500 text-sm">
-                  Reading time
-                </div>
-                {readingTime}
-              </aside>
-
+            <div className="sticky top-10 w-full">
               {headings && (
                 <aside className="w-full mt-3">
                   <TableOfContents items={headings} />

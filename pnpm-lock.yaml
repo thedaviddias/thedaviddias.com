@@ -48,6 +48,7 @@ specifiers:
   rehype-toc: ^3.0.2
   remark-gfm: ^3.0.1
   slugify: ^1.6.5
+  swr: ^1.3.0
   tailwindcss: ^3.1.4
   typescript: 4.7.4
   unist-util-visit: ^4.1.0
@@ -63,6 +64,7 @@ dependencies:
   react-social-media-embed: 2.2.2_biqbaboplfbrettd7655fr4n2y
   rehype-stringify: 9.0.3
   rehype-toc: 3.0.2
+  swr: 1.3.0_react@18.2.0
 
 devDependencies:
   '@babel/core': 7.18.6
@@ -3926,6 +3928,14 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
     dev: true
+
+  /swr/1.3.0_react@18.2.0:
+    resolution: {integrity: sha512-dkghQrOl2ORX9HYrMDtPa7LTVHJjCTeZoB1dqTbnnEDlSvN8JEKpYIYurDfvbQFUUS8Cg8PceFVZNkW0KNNYPw==}
+    peerDependencies:
+      react: ^16.11.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /synckit/0.7.2:
     resolution: {integrity: sha512-CSZRtSRZ8RhJGMtWyLRqlarmWPPlsgZJHtV6cz0VTHNOg+R7UBoE2eNPQmB5Qrhtk3RX2AAcJmVwMXFULVQSwg==}

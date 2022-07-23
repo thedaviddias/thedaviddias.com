@@ -2,7 +2,6 @@ import { format } from 'date-fns'
 import matter from 'gray-matter'
 import { GetStaticPaths, GetStaticPathsResult, GetStaticProps } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
@@ -23,16 +22,33 @@ import { NextLink } from '@/components/next-link'
 import { TableOfContents } from '@/components/table-of-contents/table-of-contents'
 
 import { routes } from '@/config/routes'
-import { getAllPosts, getPost } from '@/utils/get-blog-posts'
-import { readBlogPost } from '@/utils/read-blog-post'
+import { getAllPosts, getPost, readBlogPost } from '@/utils/get-blog-posts'
 import rehypeExtractHeadings from '@/utils/rehype-extract-headings'
 
-import { BlogPost } from '@/types/blog-post'
+export type BlogPost = {
+  frontMatter: {
+    author?: string
+    categories: string[]
+    date: string
+    description: string
+    lastmod?: string
+    locale: string
+    permalink: string
+    tags?: string[]
+    title: string
+  }
+  slug: string
+}
+
+export type Headings = {
+  id: string
+  title: string
+}
 
 type Props = BlogPost & {
   source: MDXRemoteSerializeResult
   readingTime: string
-  headings: any
+  headings: Headings[]
 }
 
 const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
@@ -143,7 +159,7 @@ const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
           <div className="block lg:flex w-full">
             <div className="max-w-full">
               <div className="  w-[40em] lg:w-[37rem] !max-w-full">
-                <section className="prose prose-sm sm:prose dark:prose-light serif:prose-serif !max-w-full hide-first-paragraph">
+                <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl serif:prose-serif !max-w-full mb-10">
                   <MDXRemote {...source} components={MDXComponents} />
                 </section>
                 {tags && (
@@ -155,12 +171,12 @@ const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
                       <ul className="flex items-center space-x-5">
                         {tags.map((tag) => (
                           <li key={tag} className="border border-gray-200 rounded-md p-2">
-                            <Link
+                            <NextLink
                               className="block mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
                               href={`/tag/${slugify(tag, { lower: true })}`}
                             >
                               {tag}
-                            </Link>
+                            </NextLink>
                           </li>
                         ))}
                       </ul>
@@ -216,13 +232,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (params?.slug) {
     const slug = params.slug as string
     const postContent = await readBlogPost(slug)
+    const headings: Headings[] = []
 
     const {
       content,
       data: { title, description, tags, date, categories, lastmod, author },
     } = matter(postContent)
-
-    const headings = []
 
     return {
       props: {

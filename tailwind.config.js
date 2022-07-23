@@ -1,9 +1,29 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/pages/**/*.{ts,tsx}', './src/components/**/*.{ts,tsx}'],
+  purge: ['./src/pages/**/*.{ts,tsx}', './src/components/**/*.{ts,tsx}'],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      typography: (theme) => ({
+        dark: {
+          css: {
+            a: {
+              color: theme('colors.blue.300'),
+            },
+          },
+        },
+        DEFAULT: {
+          css: {
+            a: {
+              color: theme('colors.blue.700'),
+              '&:hover': {
+                color: '#2c5282',
+              },
+            },
+          },
+        },
+      }),
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),

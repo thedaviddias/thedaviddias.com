@@ -1,3 +1,3 @@
-export const InlineCode = () => {
-  return <></>
+export const InlineCode = ({ chilren }) => {
+  return <span>{children}</span>
 }

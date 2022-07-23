@@ -20,7 +20,10 @@
   "javascript.validate.enable": false,
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.validate.enable": true,
-  "editor.codeActionsOnSave": ["source.fixAll.eslint", "source.fixAll.format"],
+  "editor.codeActionsOnSave": [
+    "source.fixAll.eslint",
+    "source.fixAll.format"
+  ],
   "[javascript]": {
     "editor.formatOnSave": true
   },
@@ -37,10 +40,20 @@
   "eslint.packageManager": "npm",
   "eslint.lintTask.enable": true,
   "eslint.nodePath": "node_modules",
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "files.associations": {
     "*.js": "javascript",
     "**/*.test.tsx": "typescriptreact",
     "**/*.test.ts": "typescript"
-  }
+  },
+  "cSpell.words": [
+    "lastmod",
+    "rehype",
+    "semibold"
+  ]
 }

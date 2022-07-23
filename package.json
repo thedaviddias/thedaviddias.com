@@ -23,7 +23,8 @@
     "react-dom": "18.2.0",
     "react-social-media-embed": "^2.2.2",
     "rehype-stringify": "^9.0.3",
-    "rehype-toc": "^3.0.2"
+    "rehype-toc": "^3.0.2",
+    "swr": "^1.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",

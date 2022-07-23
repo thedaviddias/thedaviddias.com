@@ -1,12 +1,18 @@
 import React from 'react'
 
-export const TableOfContents = (props) => {
+import { Headings } from '@/pages/blog/[slug]'
+
+type TableOfContentsType = {
+  items: Headings[]
+}
+
+export const TableOfContents = ({ items }: TableOfContentsType) => {
   return (
     <div className="mb-2  text-gray-400 dark:text-gray-500 text-sm">
       <details open>
         <summary className="uppercase font-semibold mb-5">Table of Contents</summary>
         <ol>
-          {props.items.map((item) => (
+          {items.map((item) => (
             <li key={item.id} className="mb-2">
               <a
                 href={`#${item.id}`}

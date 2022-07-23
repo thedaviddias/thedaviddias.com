@@ -33,7 +33,7 @@ export const getPostBySlug = (slug: string, dataType: string) => {
   }
 }
 
-export const test = (slug: string): string => {
+export const readBlogPost = (slug: string): string => {
   return fs.readFileSync(path.join(process.cwd(), './content/blog/', `${slug}.mdx`), 'utf8')
 }
 

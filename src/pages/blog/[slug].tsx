@@ -112,49 +112,50 @@ const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
                 {description}
               </div>
             </H1>
-            <div className="relative flex w-full items-center justify-center font-sans">
-              <div className="absolute h-px w-full max-w-md bg-gradient-to-r from-transparent via-light-overlay-700 to-transparent"></div>
-              <div className="relative bg-surface-base px-4 text-xs font-medium text-foreground-300 md:text-sm">
-                <time dateTime={date}>{format(new Date(date), 'eeee, dd MMMM yyyy')}</time>{' '}
-                {lastmod && (
-                  <>
-                    <span className="sr-only">Article updated on</span>
-                    <time dateTime={lastmod}>
-                      ({format(new Date(lastmod), 'eeee, dd MMMM yyyy')})
-                    </time>
-                  </>
-                )}
+
+            <div className="flex justify-between">
+              {author && (
+                <aside className="flex items-center justify-center font-sans">
+                  <div className="flex-shrink-0 group block">
+                    <CustomLink href={routes(t).about.path}>
+                      <div className="flex items-center">
+                        <div>
+                          <Image
+                            className="inline-block h-9 w-9 rounded-full"
+                            src="/images/david-dias-round.png"
+                            width={50}
+                            height={50}
+                            alt="Profile avatar of David Dias"
+                            aria-hidden="true"
+                          />
+                        </div>
+                        <div className="ml-3 text-left">
+                          <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
+                            {author}
+                          </p>
+                          <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">
+                            About me
+                          </p>
+                        </div>
+                      </div>
+                    </CustomLink>
+                  </div>
+                </aside>
+              )}
+              <div className="flex items-center justify-center font-sans">
+                <div className="ml-3 text-left">
+                  <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
+                    <time dateTime={date}>{format(new Date(date), 'MMM dd, yyyy')}</time>{' '}
+                  </p>
+                  {lastmod && (
+                    <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">
+                      <span className="sr-only">Article updated on</span>
+                      <time dateTime={lastmod}>({format(new Date(lastmod), 'MMM dd, yyyy')})</time>
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
-
-            {author && (
-              <aside className="flex items-center justify-center font-sans mt-6">
-                <div className="flex-shrink-0 group block">
-                  <CustomLink href={routes(t).about.path}>
-                    <div className="flex items-center">
-                      <div>
-                        <Image
-                          className="inline-block h-9 w-9 rounded-full"
-                          src="/images/david-dias-round.png"
-                          width={50}
-                          height={50}
-                          alt="Profile avatar of David Dias"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      <div className="ml-3">
-                        <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
-                          {author}
-                        </p>
-                        <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">
-                          About me
-                        </p>
-                      </div>
-                    </div>
-                  </CustomLink>
-                </div>
-              </aside>
-            )}
           </header>
           <div className="block lg:flex w-full">
             <div className="max-w-full">

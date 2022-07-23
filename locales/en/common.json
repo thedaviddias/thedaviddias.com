@@ -44,7 +44,7 @@
   },
   "posts": {
     "empty": "No articles found for that query.",
-    "viewAll": "View all blog posts",
+    "viewAll": "→ View all blog posts",
     "continue": "Continue reading →"
   },
   "404": {

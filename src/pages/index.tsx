@@ -28,7 +28,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         openGraph={routes(t).home.seo.openGraph}
       />
 
-      <main className="mx-auto space-y-20 divide-y divide-slate-200 sm:space-y-24 lg:max-w-none lg:space-y-32">
+      <main className="mx-auto space-y-20 divide-y divide-slate-200 sm:space-y-24 lg:max-w-none lg:space-y-10">
         <section className="-mt-36 pb-8 pt-48 sm:pt-60 sm:pb-8 text-center relative block ">
           <h1 className="-mt-10 block text-6xl sm:text-7xl lg:text-8xl mb-4 serif:font-bold dark:text-white leading-tighter transition-colors">
             <p className="text-4xl p-0">HEY THERE!</p>
@@ -40,15 +40,16 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
             communities and producing multimedia content.
           </div>
 
-          <section className="">
-            <a href="https://changelog.thedaviddias.dev">Personal changelog</a>
-          </section>
+          <div className="flex justify-center mt-10 space-x-5">
+            <CustomLink href="https://changelog.thedaviddias.dev">Personal changelog</CustomLink>
+            <CustomLink href="https://changelog.thedaviddias.dev">Twitter</CustomLink>
+          </div>
         </section>
 
-        <section className="grid grid-cols-1 gap-y-10 pt-10 border-none">
+        <section className="grid grid-cols-1 gap-y-10 border-none">
           <header>
             <h2 className="text-2xl font-semibold leading-9 tracking-tight text-slate-900 dark:text-white">
-              Articles
+              Lastest blog posts
             </h2>
           </header>
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">

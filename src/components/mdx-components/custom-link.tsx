@@ -10,8 +10,8 @@ export const CustomLink = ({ href, children }) => {
     )
   }
   return (
-    <NextLink href={href} passHref>
+    <CustomLink href={href} passHref>
       {children}
-    </NextLink>
+    </CustomLink>
   )
 }

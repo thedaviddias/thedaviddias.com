@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import { MENU_LINKS } from '@/constants'
 
-import { NextLink } from '../next-link'
+import { CustomLink } from '../custom-link'
 
 export const Header = ({ pathname }) => {
   const { t } = useTranslation('common')
@@ -15,16 +15,16 @@ export const Header = ({ pathname }) => {
       <div className="max-w-[60rem] mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex justify-between h-16">
           <div className="flex-1 flex items-center sm:justify-between align-middle">
-            <NextLink
+            <CustomLink
               href="/"
               passHref
               className="font-extrabold text-base xs:text-lg sm:!text-xl sm:mt-[-3px] sm:mr-6"
             >
               The David Dias
-            </NextLink>
+            </CustomLink>
             <nav className="hidden sm:flex">
               {MENU_LINKS(t).map((item) => (
-                <NextLink
+                <CustomLink
                   href={item.path}
                   passHref
                   key={item.label}
@@ -36,7 +36,7 @@ export const Header = ({ pathname }) => {
                   }
                 >
                   {item.label}
-                </NextLink>
+                </CustomLink>
               ))}
             </nav>
           </div>
@@ -75,14 +75,14 @@ export const Header = ({ pathname }) => {
                     <div className="text-center mt-6 inset-y-1/2 flex-grow">
                       <div className="mt-12">
                         {MENU_LINKS(t).map(({ path, label }) => (
-                          <NextLink
+                          <CustomLink
                             href={path}
                             passHref
                             key={label}
                             className="block mt-2 mb-5 title text-black dark:text-white"
                           >
                             <div>{label}</div>
-                          </NextLink>
+                          </CustomLink>
                         ))}
                       </div>
                     </div>

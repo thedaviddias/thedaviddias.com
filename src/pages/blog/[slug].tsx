@@ -15,10 +15,10 @@ import remarkGfm from 'remark-gfm'
 import slugify from 'slugify'
 
 import { Container } from '@/components/container'
+import { CustomLink } from '@/components/custom-link'
 import { H1 } from '@/components/heading'
 import { MDXComponents } from '@/components/mdx-components'
 import { Newsletter } from '@/components/newsletter'
-import { NextLink } from '@/components/next-link'
 import { TableOfContents } from '@/components/table-of-contents/table-of-contents'
 
 import { routes } from '@/config/routes'
@@ -92,14 +92,14 @@ const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
               <div className="text-gray-500 dark:text-gray-400 font-medium mb-2 text-sm sm:text-base transition-colors duration-200">
                 <span className="sr-only">Category</span>
                 {categories.map((category) => (
-                  <NextLink
+                  <CustomLink
                     key={category}
                     href={`/category/${slugify(category, { lower: true })}`}
                     passHref
                     className="block mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x !font-semibold"
                   >
                     {category}
-                  </NextLink>
+                  </CustomLink>
                 ))}
               </div>
             )}
@@ -130,7 +130,7 @@ const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
             {author && (
               <aside className="flex items-center justify-center font-sans mt-6">
                 <div className="flex-shrink-0 group block">
-                  <NextLink href={routes(t).about.path}>
+                  <CustomLink href={routes(t).about.path}>
                     <div className="flex items-center">
                       <div>
                         <Image
@@ -151,7 +151,7 @@ const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
                         </p>
                       </div>
                     </div>
-                  </NextLink>
+                  </CustomLink>
                 </div>
               </aside>
             )}
@@ -171,12 +171,12 @@ const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
                       <ul className="flex items-center space-x-5">
                         {tags.map((tag) => (
                           <li key={tag} className="border border-gray-200 rounded-md p-2">
-                            <NextLink
+                            <CustomLink
                               className="block mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
                               href={`/tag/${slugify(tag, { lower: true })}`}
                             >
                               {tag}
-                            </NextLink>
+                            </CustomLink>
                           </li>
                         ))}
                       </ul>

@@ -5,16 +5,16 @@ import useTranslation from 'next-translate/useTranslation'
 
 import { BlogPost } from '@/components/blog-post'
 import { Container } from '@/components/container'
+import { CustomLink } from '@/components/custom-link'
 import { Newsletter } from '@/components/newsletter'
-import { NextLink } from '@/components/next-link'
 
 import { routes } from '@/config/routes'
 import { getAllPostsWithFrontMatter } from '@/utils/get-blog-posts'
 
-import type { BlogPost as BlogPostTypes } from '@/types/blog-post'
+import { BlogPost as BlogPostComponent } from './blog/[slug]'
 
 type HomeProps = {
-  posts: BlogPostTypes[]
+  posts: BlogPostComponent[]
 }
 
 const Home: NextPage<HomeProps> = ({ posts }) => {
@@ -53,11 +53,11 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           </header>
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">
             {posts.map((post) => (
-              <BlogPost key={post.title} post={post} />
+              <BlogPost key={post.frontMatter.title} post={post} />
             ))}
           </div>
           <footer className="text-right">
-            <NextLink href="/blog">{t('posts.viewAll')}</NextLink>
+            <CustomLink href="/blog">{t('posts.viewAll')}</CustomLink>
           </footer>
         </section>
         <section className="border-none">

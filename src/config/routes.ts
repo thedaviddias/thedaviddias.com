@@ -34,6 +34,7 @@ export const routes = (translate: Translate) => ({
     path: '/uses',
     seo: extendSEO({
       title: 'What I use',
+      description: 'This is the list of the tools and softwares I use frequently.',
       url: 'uses',
     }),
   },

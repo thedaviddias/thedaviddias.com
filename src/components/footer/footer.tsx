@@ -2,7 +2,7 @@ import { useTheme } from 'next-themes'
 import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
 
-import { NextLink } from '@/components/next-link'
+import { CustomLink } from '@/components/custom-link'
 
 import { FOOTER_MENU_LINKS, SOCIAL_LINKS } from '@/constants'
 
@@ -45,9 +45,9 @@ export const Footer = () => {
                   <ul className="mt-3 space-y-3">
                     {FOOTER_MENU_LINKS(t).map(({ path, label }) => (
                       <li key={path}>
-                        <NextLink href={path} passHref>
+                        <CustomLink href={path} passHref>
                           {label}
-                        </NextLink>
+                        </CustomLink>
                       </li>
                     ))}
                   </ul>
@@ -59,9 +59,9 @@ export const Footer = () => {
                   <ul className="mt-3 space-y-3">
                     {SOCIAL_LINKS.map(({ label, link }) => (
                       <li key={link}>
-                        <NextLink href={link} passHref>
+                        <CustomLink href={link} passHref>
                           <a>{label}</a>
-                        </NextLink>
+                        </CustomLink>
                       </li>
                     ))}
                   </ul>

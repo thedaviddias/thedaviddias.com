@@ -4,6 +4,7 @@ import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 
 import { Container } from '@/components/container'
+import { H1 } from '@/components/heading'
 
 import { routes } from '@/config/routes'
 
@@ -18,7 +19,14 @@ const NotFoundPage: NextPage = () => {
         description={routes(t).error404.seo.description}
         openGraph={routes(t).error404.seo.openGraph}
       />
-      {`This page doesn't exist.`}
+      <section className="pt-10 border-none">
+        <header>
+          <H1>{routes(t).error404.seo.title}</H1>
+          <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 mt-2">
+            {routes(t).error404.seo.description}
+          </p>
+        </header>
+      </section>
       <button onClick={() => router.push('/')}>Back Home</button>
     </Container>
   )

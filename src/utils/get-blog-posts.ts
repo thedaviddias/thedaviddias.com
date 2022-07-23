@@ -90,11 +90,11 @@ export const getAllPostsWithFrontMatter = ({
     }, [])
     .filter((blog) => !blog.frontMatter.draft)
     .filter((blog) => blog.frontMatter.locale === locale)
+    .filter((_, index) => index < limit)
     .sort(
       (a, b) =>
         Number(new Date(b.frontMatter.publishedAt)) - Number(new Date(a.frontMatter.publishedAt))
     )
-    .filter((_, index) => index < limit)
 }
 
 export type TagOptions = {

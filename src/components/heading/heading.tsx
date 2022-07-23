@@ -17,7 +17,7 @@ type TitleProps = {
 
 const fontSize = {
   h1: 'leading-tight text-4xl md:text-5xl',
-  h2: 'leading-tight text-3xl md:text-4xl',
+  h2: 'leading-tight text-2xl md:text-4xl',
   h3: 'text-2xl font-medium md:text-3xl',
   h4: 'text-xl font-medium md:text-2xl',
   h5: 'text-lg font-medium md:text-xl',

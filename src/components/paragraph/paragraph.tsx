@@ -16,9 +16,7 @@ export const Paragraph = ({
   ...rest
 }: ParagraphProps) => {
   return React.createElement(as, {
-    className: clsx('max-w-full text-lg', textColorClassName, className, {
-      'prose prose-light dark:prose-dark': prose,
-    }),
+    className: 'max-w-full text-lg',
     ...rest,
   })
 }

@@ -43,9 +43,18 @@
       "pageBundle": false,
       "fields": [
         {
-          "title": "Title",
-          "name": "title",
-          "type": "string"
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "boolean"
+        },
+        {
+          "title": "locale",
+          "name": "locale",
+          "type": "choice",
+          "choices": [
+            "en",
+            "fr"
+          ]
         },
         {
           "title": "type",
@@ -53,9 +62,27 @@
           "type": "string"
         },
         {
-          "title": "locale",
-          "name": "locale",
+          "title": "Title",
+          "name": "title",
           "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Content preview",
+          "name": "preview",
+          "type": "image"
+        },
+        {
+          "title": "Author",
+          "name": "author",
+          "type": "choice",
+          "choices": [
+            "David Dias"
+          ]
         },
         {
           "title": "Publishing date",
@@ -70,11 +97,6 @@
           "type": "datetime"
         },
         {
-          "title": "Is in draft",
-          "name": "draft",
-          "type": "boolean"
-        },
-        {
           "title": "Tags",
           "name": "tags",
           "type": "tags"
@@ -85,16 +107,6 @@
           "type": "categories"
         },
         {
-          "title": "Description",
-          "name": "description",
-          "type": "string"
-        },
-        {
-          "title": "Content preview",
-          "name": "preview",
-          "type": "image"
-        },
-        {
           "title": "Previously published platform",
           "name": "publishedOn",
           "type": "string"
@@ -102,6 +114,11 @@
         {
           "title": "Previously published URL",
           "name": "publishedUrl",
+          "type": "string"
+        },
+        {
+          "title": "canonical",
+          "name": "canonical",
           "type": "string"
         }
       ]

@@ -7,7 +7,7 @@ module.exports = nextTranslate({
     dirs: ['src'],
   },
   images: {
-    domains: ['img.youtube.com'],
+    domains: ['img.youtube.com', 'media.giphy.com'],
   },
   async rewrites() {
     return [

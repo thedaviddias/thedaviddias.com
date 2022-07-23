@@ -53,19 +53,23 @@ export const getAllPostsWithFrontMatter = ({
   const blogs = getAllPosts(dataType)
 
   return blogs
-    .reduce((allPosts, postSlug) => {
+    .reduce((allPosts, filename) => {
       const source = fs.readFileSync(
-        path.join(process.cwd(), 'content', dataType, postSlug),
+        path.join(process.cwd(), 'content', dataType, filename),
         'utf8'
       )
       const { data, content } = matter(source)
+
+      const filenameNoExtension = filename.replace('.mdx', '')
+      const permalink = `/${dataType}/${filenameNoExtension}`
 
       if (filterByTag) {
         if (data.tags.includes(filterByTag)) {
           return [
             {
               frontMatter: data,
-              slug: postSlug.replace('.mdx', ''),
+              permalink,
+              slug: filenameNoExtension,
             },
             ...allPosts,
           ]
@@ -78,7 +82,8 @@ export const getAllPostsWithFrontMatter = ({
         {
           frontMatter: data,
           readingTime: readingTime(content),
-          slug: postSlug.replace('.mdx', ''),
+          permalink,
+          slug: filenameNoExtension,
         },
         ...allPosts,
       ]

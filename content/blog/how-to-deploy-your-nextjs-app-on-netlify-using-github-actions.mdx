@@ -91,28 +91,28 @@ ntl init
 ```
 The first question you are asked is if you want to connect this directory to an existing Netlify site or create & configure a new site. Choose **Create & configure a new site**:
 
-![Connect to an existing directory or create and configure a new site](https://dev-to-uploads.s3.amazonaws.com/i/3lfvvphd22o7itwliymi.jpg)
+![Connect to an existing directory or create and configure a new site](/images/blog/connect-existing-direction.jpeg)
 
 Then you have to choose your **team**:
 
-![Question about the name of the team](https://dev-to-uploads.s3.amazonaws.com/i/o2pxn7nwxd8bsxe440vy.jpg)
+![Question about the name of the team](/images/blog/question-name-team.jpeg)
 
 Choose the **name of your application**:
 
-![Screenshot of the CLI asking for the name of your application](https://dev-to-uploads.s3.amazonaws.com/i/iaih9331d9wzvyxun64e.jpg)
+![Screenshot of the CLI asking for the name of your application](/images/blog/cli-name-application.jpeg)
 
 After entering the name of your project, the site is created and few URLs populated the CLI which gave you access to your admin URL, the URL of your site and the Site ID. Keep the site ID aside, you will need that number later on.
 
 For the next 3 questions (build, start and function), **insert a space**. We are not going to directly use the NPM scripts, our Github actions will later trigger each command.
-![Screenshot of the CLI with the build, start and function script command suggestion](https://dev-to-uploads.s3.amazonaws.com/i/0bl7dmlmnq91fam6cnfy.jpg)
+![Screenshot of the CLI with the build, start and function script command suggestion](/images/blog/cli-build-start-function-script.jpeg)
 
 Finally, automatically create a netlify.toml file, which we will edit later. If your respond no, you can still create that file manually at the root of your project.
 
-![Screenshot of the CLI asking to create a netlify.toml file](https://dev-to-uploads.s3.amazonaws.com/i/gjeo2l0ojuqu3papjrcy.jpg)
+![Screenshot of the CLI asking to create a netlify.toml file](/images/blog/automatically-create-netlify-toml.jpeg)
 
 Once you provided an answer to all the questions, your terminal should look like this:
 
-![Screenshot of the CLI after all the questions are answered](https://dev-to-uploads.s3.amazonaws.com/i/lmupvfb8aj5n17rl6nyk.jpg)
+![Screenshot of the CLI after all the questions are answered](/images/blog/cli-after-all-questions-answered.jpeg)
 
 ## Updating our Netlify project
 
@@ -122,17 +122,17 @@ It's now time to change some options on our Netlify project. Open directly your 
 ntl open
 ```
 
-![Screenshot of the Netlify project created](https://dev-to-uploads.s3.amazonaws.com/i/dw42yr8q0qg5tnau04b9.jpg)
+![Screenshot of the Netlify project created](/images/blog/netlify-project-created.jpeg)
 
 You should see that our production deployment failed. You don't have to worry, this is totally normal. We need to disable our automatic build because our Github Actions will take care of it.
 
 Go in your Settings > Build & deploy. Click on `Edit settings` and `Stop builds`. Save.
 
-![Screenshot of the Build settings on Netlify](https://dev-to-uploads.s3.amazonaws.com/i/uzlpzxz6jnixwxdtwbsf.jpg)
+![Screenshot of the Build settings on Netlify](/images/blog/build-settings-netlify.jpeg)
 
 Just below, go to the `Deploy contexts` section and select `None` for the Deploy previews.
 
-![Screenshot of the Deploy context section on Netlify](https://dev-to-uploads.s3.amazonaws.com/i/wb9npfwim3m3huk6sfmi.jpg)
+![Screenshot of the Deploy context section on Netlify](/images/blog/deploy-context-section-netlify.jpeg)
 
 Don't worry, like the build, we will create our preview URL using Github actions.
 
@@ -210,7 +210,7 @@ Go to your `Github project > Settings > Secrets > New repository secret`
 | `NETLIFY_AUTH_TOKEN` | Request your token [here](https://app.netlify.com/user/applications#personal-access-tokens)                                    |
 | `NETLIFY_SITE_ID`    | The site to where deploy your site (get it from the API ID on your Site Settings)                                              |
 
-![Screenshot of the Actions secrets page on Github](https://dev-to-uploads.s3.amazonaws.com/i/nhyz9ipggiss8l2pfw4w.jpg)
+![Screenshot of the Actions secrets page on Github](/images/blog/actions-secrets-netlify.jpeg)
 
 Create a new file called `main.yml` inside `.github/workflows`. Copy-paste the following code and read the explanation of it after this snippet.
 
@@ -277,11 +277,11 @@ jobs:
 6. Specify the ***version of Node*** you want to use, in my case, I choose the most recent version of Node 14th.
 7. ***Install the dependencies*** of your project.
 8. ***Build your project***. Remember that after the build, the post-build command will be launch. This is what you should see in the `build` logs in your Github Action tab:
-![Screenshot of the build-in Github Action](https://dev-to-uploads.s3.amazonaws.com/i/vgv3g9u9wuo1besc5v2d.jpg)
+![Screenshot of the build-in Github Action](/images/blog/build-in-github-action-netlify.jpeg)
 9. I added lint and test commands, which I commented. You can use these to trigger ESLint, Jest (even Cypress) or any other plugin that ensures your code doesn't have any issue.
 10. Finally, we trigger the Netlify deployment to deploy our Next.js app to Netlify. 🎉
 
-![Screenshot of all Github actions](https://dev-to-uploads.s3.amazonaws.com/i/n6i27u3pwq1l3am12u8n.jpg)
+![Screenshot of all Github actions](/images/blog/all-github-actions-netlify.jpeg)
 
 You may have seen an argument passed to the Netlify deploy:
 
@@ -290,7 +290,7 @@ args: deploy -m 'v${{ steps.package-version.outputs.current-version}} ・ ${{ gi
 ```
 This will add a message for each Deploy Preview, a way to keep track of which PR generated which Deploy.
 
-![Screenshot of the Deploy page on Netlify](https://dev-to-uploads.s3.amazonaws.com/i/d0f20hzeayxu0hnqt6ry.jpg)
+![Screenshot of the Deploy page on Netlify](/images/blog/deploy-netlify-preview.jpeg)
 
 On the same deploy page, you can click on the Deploy Preview and access your app using the preview URL.
 
@@ -310,7 +310,7 @@ A better way would be to use another task to automatically populate your pull re
 
 This will automatically create a comment in your PR.
 
-![Screenshot of the PR on Github specifying the link to the logs and preview deploy URL](https://dev-to-uploads.s3.amazonaws.com/i/4m7fz8scb7knsclnb5cj.jpg)
+![Screenshot of the PR on Github specifying the link to the logs and preview deploy URL](/images/blog/pr-github-preview-deploy-url.jpeg)
 
 ## Summary
 

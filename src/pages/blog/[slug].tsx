@@ -1,30 +1,39 @@
 import { format } from 'date-fns'
 import matter from 'gray-matter'
 import { GetStaticPaths, GetStaticPathsResult, GetStaticProps } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import { NextSeo } from 'next-seo'
 import readingTime from 'reading-time'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeImgSize from 'rehype-img-size'
+import rehypeSlug from 'rehype-slug'
+import remarkGfm from 'remark-gfm'
 import slugify from 'slugify'
 
 import { Container } from '@/components/container'
 import { H1 } from '@/components/heading'
 import { MDXComponents } from '@/components/mdx-components'
 import { Newsletter } from '@/components/newsletter'
+import { TableOfContents } from '@/components/table-of-contents/table-of-contents'
 
-import { getAllPosts, getPost, getPostBySlug } from '@/utils/get-blog-posts'
+import { getAllPosts, getPost } from '@/utils/get-blog-posts'
 import { readBlogPost } from '@/utils/read-blog-post'
+import rehypeExtractHeadings from '@/utils/rehype-extract-headings'
 
 import { BlogPost } from '@/types/blog-post'
 
 type Props = BlogPost & {
   source: MDXRemoteSerializeResult
   readingTime: string
+  headings: any
 }
 
-const BlogPostPage = ({ title, date, source, readingTime, tags, description, lastmod }: Props) => {
+const BlogPostPage = ({ frontMatter, source, headings, readingTime }: Props) => {
+  const { title, description, tags, categories, date, lastmod } = frontMatter
   const { isFallback } = useRouter()
 
   if (isFallback || !title) {
@@ -83,6 +92,27 @@ const BlogPostPage = ({ title, date, source, readingTime, tags, description, las
             <div className="  w-[40em] lg:w-[37rem] !max-w-full">
               <section className="prose prose-sm sm:prose dark:prose-light serif:prose-serif !max-w-full hide-first-paragraph">
                 <MDXRemote {...source} components={MDXComponents} />
+                {tags && (
+                  <aside className="w-full mt-3 print:hidden">
+                    <div className="mb-2 uppercase tracking-widest font-semibold text-gray-400 dark:text-gray-500 text-sm">
+                      Tags
+                    </div>
+                    <nav className="tag-list">
+                      <ul>
+                        {tags.map((tag) => (
+                          <li key={tag}>
+                            <Link
+                              className="block mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                              href={`/tag/${slugify(tag, { lower: true })}`}
+                            >
+                              {tag}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </nav>
+                  </aside>
+                )}
               </section>
             </div>
           </div>
@@ -90,52 +120,66 @@ const BlogPostPage = ({ title, date, source, readingTime, tags, description, las
           <div className="flex-auto ml-16 hidden lg:block">
             <div className="sticky top-24 w-full">
               <aside className="w-full">
-                <div className="mb-2 uppercase tracking-widest font-semibold text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 text-sm">
-                  Reading time
+                <div className="mb-2 uppercase tracking-widest font-semibold text-gray-400 dark:text-gray-500 text-sm">
+                  Author
                 </div>
-                {readingTime}
+                <a href="#" className="flex-shrink-0 group block">
+                  <div className="flex items-center">
+                    <div>
+                      <Image
+                        className="inline-block h-9 w-9 rounded-full"
+                        src="/images/david-dias-round.png"
+                        width={50}
+                        height={50}
+                        alt=""
+                      />
+                    </div>
+                    <div className="ml-3">
+                      <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
+                        David Dias
+                      </p>
+                      <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">
+                        View profile
+                      </p>
+                    </div>
+                  </div>
+                </a>
               </aside>
 
-              <aside className="w-full">
-                <div className="mb-2 uppercase tracking-widest font-semibold text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 text-sm">
-                  <a href="#top">Table of contents</a>
-                </div>
-                <nav className="table-of-contents max-h-[55vh] overflow-y-auto overflow-x-hidden">
-                  <ul>
-                    <li className="last:mb-0">
-                      <a
-                        className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-                        href="#what-are-they"
-                        data-title="h2"
-                      >
-                        What are they?
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </aside>
-
-              <aside className="mt-6">
-                <aside className="w-full">
+              {categories && (
+                <aside className="w-full mt-3">
                   <div className="mb-2 uppercase tracking-widest font-semibold text-gray-400 dark:text-gray-500 text-sm">
-                    Tags
+                    Category
                   </div>
                   <nav className="tag-list">
                     <ul>
-                      {tags.map((tag) => (
-                        <li key={tag}>
+                      {categories.map((category) => (
+                        <li key={category}>
                           <Link
                             className="block mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-                            href={`/tag/${slugify(tag, { lower: true })}`}
+                            href={`/category/${slugify(category, { lower: true })}`}
                           >
-                            {tag}
+                            {category}
                           </Link>
                         </li>
                       ))}
                     </ul>
                   </nav>
                 </aside>
+              )}
+
+              <aside className="w-full mt-3">
+                <div className="mb-2 uppercase tracking-widest font-semibold text-gray-400 dark:text-gray-500 text-sm">
+                  Reading time
+                </div>
+                {readingTime}
               </aside>
+
+              {headings && (
+                <aside className="w-full mt-3">
+                  <TableOfContents items={headings} />
+                </aside>
+              )}
             </div>
           </div>
         </div>
@@ -177,19 +221,34 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     const {
       content,
-      data: { title, description, tags, date, lastmod },
+      data: { title, description, tags, date, categories, lastmod },
     } = matter(postContent)
+
+    const headings = []
 
     return {
       props: {
-        source: await serialize(content),
-        title,
-        description,
-        date: JSON.parse(JSON.stringify(date)),
+        frontMatter: {
+          title,
+          description,
+          date: JSON.parse(JSON.stringify(date)),
+          tags,
+          categories: categories || null,
+          lastmod: lastmod || null,
+        },
         readingTime: readingTime(content).text,
-        slug,
-        tags,
-        lastmod: lastmod || null,
+        headings,
+        source: await serialize(content, {
+          mdxOptions: {
+            remarkPlugins: [remarkGfm],
+            rehypePlugins: [
+              [rehypeImgSize, { dir: 'public/' }],
+              rehypeSlug,
+              [rehypeAutolinkHeadings],
+              [rehypeExtractHeadings, { rank: 2, headings }],
+            ],
+          },
+        }),
       },
     }
   }

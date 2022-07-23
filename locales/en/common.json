@@ -42,11 +42,11 @@
     }
   },
   "posts": {
-    "empty": "No articles for that query",
+    "empty": "No articles found for that query.",
     "viewAll": "View all blog posts"
   },
   "404": {
-    "title": "Sorry 😩, this page can't be found",
+    "title": "Sorry 😩, this page can't be found.",
     "seo": {
       "title": "404",
       "description": ""

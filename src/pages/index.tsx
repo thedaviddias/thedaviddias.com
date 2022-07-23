@@ -39,6 +39,10 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
             HTML, CSS, and Javascript. Outside of work, I enjoy meeting new people, building
             communities and producing multimedia content.
           </div>
+
+          <section className="">
+            <a href="https://changelog.thedaviddias.dev">Personal changelog</a>
+          </section>
         </section>
 
         <section className="grid grid-cols-1 gap-y-10 pt-10 border-none">
@@ -48,10 +52,12 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
             </h2>
           </header>
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">
-            <BlogPost posts={posts} />
+            {posts.map((post) => (
+              <BlogPost key={post.title} post={post} />
+            ))}
           </div>
           <footer className="text-right">
-            <Link href="/blog">→ Checkout other articles</Link>
+            <Link href="/blog">{t('posts.viewAll')}</Link>
           </footer>
         </section>
         <section className="border-none">

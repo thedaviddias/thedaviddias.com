@@ -4,9 +4,7 @@ import path from 'path'
 import readingTime from 'reading-time'
 import slugify from 'slugify'
 
-import { BlogPost } from '@/types/blog-post'
-
-type getAllPosts = {}
+import { BlogPostProps } from '@/pages/blog/[slug]'
 
 /**
  * Gets the list of content files
@@ -51,7 +49,7 @@ export const getAllPostsWithFrontMatter = ({
   filterByCategory = null,
   locale = 'en',
   limit = 99,
-}: GetAllPostsWithFrontMatter) => {
+}: GetAllPostsWithFrontMatter): BlogPostProps => {
   const blogs = getAllPosts(dataType)
 
   return blogs
@@ -108,10 +106,7 @@ export const getAllPostsWithFrontMatter = ({
     .filter((blog) => !blog.frontMatter.draft)
     .filter((blog) => blog.frontMatter.locale === locale)
     .filter((_, index) => index < limit)
-    .sort(
-      (a, b) =>
-        Number(new Date(b.frontMatter.publishedAt)) - Number(new Date(a.frontMatter.publishedAt))
-    )
+    .sort((a, b) => Number(new Date(b.frontMatter.date)) - Number(new Date(a.frontMatter.date)))
 }
 
 export type TagOptions = {

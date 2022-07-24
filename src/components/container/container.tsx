@@ -12,7 +12,10 @@ export const Container = ({ children }: Props) => {
   return (
     <div className="min-h-screen">
       <Header pathname={router.pathname} />
-      <div className="flex-grow-1 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">{children}</div>
+      <div className="flex-grow-1 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        {children}
+        {/* <Newsletter /> */}
+      </div>
       <Footer />
     </div>
   )

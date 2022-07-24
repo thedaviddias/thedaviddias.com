@@ -14,11 +14,10 @@ import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import slugify from 'slugify'
 
-import { Container } from '@/components/container'
+import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/custom-link'
 import { H1 } from '@/components/heading'
 import { MDXComponents } from '@/components/mdx-components'
-import { Newsletter } from '@/components/newsletter'
 import { TableOfContents } from '@/components/table-of-contents/table-of-contents'
 
 import { routes } from '@/config/routes'
@@ -26,7 +25,7 @@ import seo from '@/config/seo'
 import { getAllPosts, getPost, readBlogPost } from '@/utils/get-blog-posts'
 import rehypeExtractHeadings from '@/utils/rehype-extract-headings'
 
-export type BlogPost = {
+export type BlogPostProps = {
   frontMatter: {
     author?: string
     categories: string[]
@@ -47,7 +46,7 @@ export type Headings = {
   title: string
 }
 
-type Props = BlogPost & {
+type Props = BlogPostProps & {
   source: MDXRemoteSerializeResult
   readingTime: string
   headings: Headings[]
@@ -124,19 +123,19 @@ const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
                       <div className="flex items-center">
                         <div>
                           <Image
-                            className="inline-block h-9 w-9 rounded-full"
+                            className="inline-block rounded-full"
                             src="/images/david-dias-round.png"
-                            width={50}
-                            height={50}
+                            width={40}
+                            height={40}
                             alt="Profile avatar of David Dias"
                             aria-hidden="true"
                           />
                         </div>
                         <div className="ml-3 text-left">
-                          <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
+                          <p className="text-base font-medium text-gray-700 group-hover:text-gray-900">
                             {author}
                           </p>
-                          <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">
+                          <p className="text-sm font-medium text-gray-500 group-hover:text-gray-700">
                             About me
                           </p>
                         </div>
@@ -145,15 +144,15 @@ const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
                   </div>
                 </aside>
               )}
-              <div className="flex items-center justify-center font-sans">
-                <div className="ml-3 text-left">
-                  <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
+              <div className="flex items-center justify-center">
+                <div className="ml-3 text-right">
+                  <p className="text-base font-medium text-gray-700 group-hover:text-gray-900">
                     <time dateTime={date}>{format(new Date(date), 'MMM dd, yyyy')}</time>{' '}
                   </p>
                   {lastmod && (
-                    <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">
-                      <span className="sr-only">Article updated on</span>
-                      <time dateTime={lastmod}>({format(new Date(lastmod), 'MMM dd, yyyy')})</time>
+                    <p className="text-sm font-medium text-gray-500 group-hover:text-gray-700">
+                      <span>(Updated on</span>{' '}
+                      <time dateTime={lastmod}>{format(new Date(lastmod), 'MMM dd, yyyy')})</time>
                     </p>
                   )}
                 </div>
@@ -201,7 +200,6 @@ const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
             </div>
           </div>
         </article>
-        <Newsletter />
       </main>
     </Container>
   )
@@ -251,7 +249,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           date: JSON.parse(JSON.stringify(date)),
           tags,
           categories: categories || null,
-          lastmod: lastmod || null,
+          lastmod: (lastmod && JSON.parse(JSON.stringify(lastmod))) || null,
           author: author || null,
         },
         readingTime: readingTime(content).text,

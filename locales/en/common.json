@@ -25,6 +25,9 @@
     "language": "Change to the French version",
     "theme": "Change theme"
   },
+  "blog": {
+    "latest-posts": "Lastest blog posts"
+  },
   "footer": {
     "general": "General",
     "social": "Social media",

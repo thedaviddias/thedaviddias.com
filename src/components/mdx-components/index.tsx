@@ -4,6 +4,7 @@ import { Blockquote } from './blockquote'
 import { CodeHighlight } from './code-highlight'
 import { CustomLink } from './custom-link'
 import { InlineCode } from './inline-code'
+import { Pre } from './pre'
 import { ResponsiveImage } from './responsive-image'
 import { Tweet } from './tweet'
 import { Paragraph } from '../paragraph'
@@ -19,10 +20,10 @@ export const MDXComponents = {
   h4: (props) => <H4 as="h4" {...props} />,
   img: ResponsiveImage,
   inlineCode: InlineCode,
-  li: (props) => <li {...props} className="nested-list" />,
-  ol: (props) => <ol {...props} className="list-decimal" />,
+  li: (props) => <li {...props} className="nested-list text-lg" />,
+  ol: (props) => <ol {...props} className="list-decimal text-lg" />,
   p: Paragraph,
-  // pre: ({ children }) => children,
+  pre: Pre,
   Tweet,
   ul: (props) => <ul {...props} className="list-disc" />,
 }

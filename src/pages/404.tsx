@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 
-import { Container } from '@/components/container'
+import { Container } from '@/components/Container'
 import { H1 } from '@/components/heading'
 
 import { routes } from '@/config/routes'

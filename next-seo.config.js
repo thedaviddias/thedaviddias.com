@@ -6,13 +6,14 @@
 
 const BASE_URL = 'https://thedaviddias.dev'
 
-const title = ''
+const title = 'The David Dias | Developer and content creator'
 const description = ''
 
 const SEO = {
   title,
   description,
   url: `${BASE_URL}`,
+  titleTemplate: '%s | The David Dias',
   canonical: `${BASE_URL}`,
   twitter: {
     handle: '@handle',
@@ -27,7 +28,7 @@ const SEO = {
     description,
     images: [
       {
-        url: `${BASE_URL}/static/images/logo.png`,
+        url: `${BASE_URL}/images/logo.png`,
         alt: title,
         width: 1280,
         height: 720,

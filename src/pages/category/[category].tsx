@@ -1,18 +1,28 @@
 import categories from 'data/categories.json'
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 
-import { BlogPost } from '@/components/blog-post'
-import { Container } from '@/components/container'
+import { BlogPost } from '@/components/BlogPost'
+import { Container } from '@/components/Container'
 import { H1 } from '@/components/heading'
 
 import { routes } from '@/config/routes'
 import { getAllPostsWithFrontMatter, getCategories } from '@/utils/get-blog-posts'
 
-const CategoryPage: NextPage = ({ posts, category }) => {
+import { BlogPostProps } from '../blog/[slug]'
+
+type CategoryPageProps = {
+  posts: BlogPostProps[]
+  category: {
+    name: string
+    description: string
+  }
+}
+
+const CategoryPage = ({ posts, category }: CategoryPageProps) => {
   const { t } = useTranslation('common')
   const { name, description } = category
   const router = useRouter()
@@ -34,7 +44,11 @@ const CategoryPage: NextPage = ({ posts, category }) => {
 
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">
             {posts?.map((post) => (
-              <BlogPost key={post.title} post={post} isCategoryPage={router.query?.category} />
+              <BlogPost
+                key={post.frontMatter.title}
+                post={post}
+                isCategoryPage={router.query?.category}
+              />
             ))}
           </div>
         </section>
@@ -59,7 +73,7 @@ export const getStaticPaths = async () => {
   }
 }
 
-export const getStaticProps = async ({ params }: Params) => {
+export const getStaticProps: GetStaticProps<CategoryPageProps> = async ({ params }: Params) => {
   const posts = await getAllPostsWithFrontMatter({
     dataType: 'blog',
     filterByCategory: params.category,

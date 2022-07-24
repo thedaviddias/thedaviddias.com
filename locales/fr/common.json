@@ -12,6 +12,9 @@
     "language": "Changer pour la version anglaise",
     "theme": "Change theme"
   },
+  "blog": {
+    "latest-posts": "Derniers articles"
+  },
   "footer": {
     "general": "Général",
     "social": "Réseaux sociaux",
@@ -21,6 +24,11 @@
       "newsletter": "Newsletter",
       "analytics": "Statistics"
     }
+  },
+  "posts": {
+    "empty": "Aucun articles trouvé basé sur votre recherche.",
+    "viewAll": "→ Voir tous les articles",
+    "continue": "Continue de lire →"
   },
   "404": {
     "title": "Désolé 😩, cette page ne peut pas être trouvée.",

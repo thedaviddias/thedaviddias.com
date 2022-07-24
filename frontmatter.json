@@ -125,6 +125,7 @@
     }
   ],
   "frontMatter.taxonomy.categories": [
+    "code",
     "coding",
     "expatriation",
     "productivity",

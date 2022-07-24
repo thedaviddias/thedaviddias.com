@@ -12,7 +12,7 @@ export const BlogPost = ({
   isCategoryPage,
 }: {
   post: BlogPostTypes
-  isCategoryPage?: string
+  isCategoryPage?: string | string[]
 }) => {
   const { t } = useTranslation('common')
 

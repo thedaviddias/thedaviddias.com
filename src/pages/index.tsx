@@ -4,11 +4,10 @@ import Image from 'next/image'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 
-import { BlogPost } from '@/components/blog-post'
-import { Container } from '@/components/container'
+import { BlogPost } from '@/components/BlogPost'
+import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/custom-link'
 import { H5 } from '@/components/heading'
-import { Newsletter } from '@/components/newsletter'
 
 import { routes } from '@/config/routes'
 import { getAllPostsWithFrontMatter } from '@/utils/get-blog-posts'
@@ -27,6 +26,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
       <NextSeo
         title={routes(t).home.seo.title}
         description={routes(t).home.seo.description}
+        titleTemplate="%s"
         openGraph={routes(t).home.seo.openGraph}
       />
 
@@ -68,7 +68,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
 
         <section className="grid grid-cols-1 gap-y-10 border-none">
           <header>
-            <H5 as="h2">Lastest blog posts</H5>
+            <H5 as="h2">{t('blog.latest-posts')}</H5>
           </header>
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">
             {posts.map((post) => (
@@ -78,9 +78,6 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           <footer className="text-right">
             <CustomLink href="/blog">{t('posts.viewAll')}</CustomLink>
           </footer>
-        </section>
-        <section className="border-none">
-          <Newsletter />
         </section>
       </main>
     </Container>

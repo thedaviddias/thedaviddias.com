@@ -2,8 +2,8 @@ import type { NextPage } from 'next'
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 import { NextSeo } from 'next-seo'
 
-import { BlogPost } from '@/components/blog-post'
-import { Container } from '@/components/container'
+import { BlogPost } from '@/components/BlogPost'
+import { Container } from '@/components/Container'
 import { HeaderPage } from '@/components/header-page'
 
 import { getAllPostsWithFrontMatter, getTags } from '@/utils/get-blog-posts'
@@ -15,7 +15,7 @@ const TagPage: NextPage = ({ posts, tag }) => {
     <Container>
       <NextSeo title={title} />
       <main className="mx-auto space-y-20 divide-y divide-slate-200 sm:space-y-16 lg:max-w-none lg:space-y-32">
-        <HeaderPage title={title} />
+        <HeaderPage title={title} description={`All my articles related to the ${tag} topic.`} />
         <div className="grid grid-cols-1 gap-4 lg:col-span-2">
           {posts?.map((post) => (
             <BlogPost key={post.title} post={post} />

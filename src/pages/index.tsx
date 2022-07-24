@@ -36,7 +36,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
             <h1 className="block mb-4 dark:text-white transition-colors">
               <p className="text-3xl p-0 font-light">HEY THERE!</p>
               <span className="text-5xl lg:text-6xl font-title font-medium leading-snug">
-                I'm David Dias
+                I&lsquo; m David Dias
               </span>
             </h1>
             <div className="max-w-xl lg:px-0.5 text-base lg:text-lg sm:text-xl text-gray-500 dark:text-gray-400">

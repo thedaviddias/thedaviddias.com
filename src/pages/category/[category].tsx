@@ -1,5 +1,5 @@
 import categories from 'data/categories.json'
-import type { GetStaticProps, NextPage } from 'next'
+import type { GetStaticProps } from 'next'
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'

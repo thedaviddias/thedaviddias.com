@@ -18,6 +18,7 @@ import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
 import { H1 } from '@/components/Heading'
 import { MDXComponents } from '@/components/MdxComponents'
+import { Share } from '@/components/Share'
 import { TableOfContents } from '@/components/TableOfContents/TableOfContents'
 
 import { routes } from '@/config/routes'
@@ -191,6 +192,7 @@ const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
 
             <div className="flex-auto ml-16 hidden lg:block">
               <div className="sticky top-10 w-full">
+                <Share title={title} tags={tags && tags} slug={permalink} />
                 {headings && (
                   <aside className="w-full mt-3">
                     <TableOfContents items={headings} />

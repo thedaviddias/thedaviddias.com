@@ -157,6 +157,31 @@
           }
         }
       }
+    },
+    {
+      "id": "categories",
+      "title": "Categories",
+      "file": "[[workspace]]/data/categories.json",
+      "fileType": "json",
+      "labelField": "id",
+      "schema": {
+        "title": "Category",
+        "type": "object",
+        "required": [
+          "id",
+          "description"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "ID"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description"
+          }
+        }
+      }
     }
   ]
 }

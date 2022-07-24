@@ -42,8 +42,8 @@ export const routes = (translate: Translate) => ({
     label: translate('nav.about'),
     path: '/about',
     seo: extendSEO({
-      title: 'About',
-      description: 'About me',
+      title: 'About David Dias',
+      description: 'Learn a little bit about me',
       url: 'about',
     }),
   },

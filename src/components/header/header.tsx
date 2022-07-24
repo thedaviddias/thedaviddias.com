@@ -11,7 +11,7 @@ export const Header = ({ pathname }) => {
   const [mobileMenuState, setMobileMenuState] = useState(false)
 
   return (
-    <header className="dark:text-gray-200 bg-white dark:bg-gray-800 transition-colors duration-200 py-3 top-0 mb-12">
+    <header className="dark:text-gray-200 transition-colors duration-200 py-3 top-0 mb-12">
       <div className="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex justify-between h-16">
           <div className="flex-1 flex items-center sm:justify-between align-middle">

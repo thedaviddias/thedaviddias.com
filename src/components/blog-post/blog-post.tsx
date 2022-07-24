@@ -7,7 +7,13 @@ import { H2 } from '@/components/heading'
 
 import type { BlogPost as BlogPostTypes } from '@/types/blog-post'
 
-export const BlogPost = ({ post }: { post: BlogPostTypes }) => {
+export const BlogPost = ({
+  post,
+  isCategoryPage,
+}: {
+  post: BlogPostTypes
+  isCategoryPage?: string
+}) => {
   const { t } = useTranslation('common')
 
   return (
@@ -29,19 +35,21 @@ export const BlogPost = ({ post }: { post: BlogPostTypes }) => {
             </p>
           </div>
           <div className="flex-grow text-left lg:text-right lg:ml-8">
-            <div className="float-right lg:float-none !mb-1">
-              {post.frontMatter.categories && (
-                <CustomLink
-                  href={`/category/${slugify(post.frontMatter.categories[0], { lower: true })}`}
-                  passHref
-                  className="block mb-1 !font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x"
-                >
-                  <span className="sr-only">Category: </span>
-                  {post.frontMatter.categories[0]}
-                </CustomLink>
-              )}
-            </div>
-            <div className="inline-block lg:block !text-gray-500 dark:!text-gray-400 !font-medium lg:text-xs !mb-1 align-top">
+            {!isCategoryPage && (
+              <div className="float-right lg:float-none !mb-1">
+                {post.frontMatter.categories && (
+                  <CustomLink
+                    href={`/category/${slugify(post.frontMatter.categories[0], { lower: true })}`}
+                    passHref
+                    className="block mb-1 !font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x"
+                  >
+                    <span className="sr-only">Category: </span>
+                    {post.frontMatter.categories[0]}
+                  </CustomLink>
+                )}
+              </div>
+            )}
+            <div className="inline-block lg:block !text-gray-500 dark:!text-gray-400 !font-medium !mb-1 align-top">
               <time dateTime={post.frontMatter.date.toString()}>
                 {format(new Date(post.frontMatter.date.toString()), 'MMM dd, yyyy')}
               </time>

@@ -13,6 +13,7 @@
   "frontMatter.templates.enabled": true,
   "frontMatter.content.autoUpdateDate": false,
   "frontMatter.dashboard.openOnStart": true,
+  "frontMatter.taxonomy.seoTitleLength": 65,
   "frontMatter.framework.startCommand": "pnpm dev",
   "frontMatter.preview.host": "http://localhost:3000/",
   "frontMatter.taxonomy.tags": [

@@ -105,11 +105,11 @@ const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
               </div>
             )}
             <H1>
-              <span className="block mt-1.5 mb-6 serif:mt-2 text-black dark:text-white mt-0 leading-none transition-colors duration-200 font-extrabold">
+              <span className="block mt-1.5 mb-6 serif:mt-2 text-black dark:text-white mt-0 leading-none transition-colors duration-200 ">
                 {title}
               </span>
               <span className="sr-only"> — </span>
-              <div className="font-medium text-lg sm:text-xl text-gray-500 dark:text-gray-400 mt-3 mb-6 tracking-wide">
+              <div className="font-body text-lg sm:text-xl text-gray-500 dark:text-gray-400 mt-3 mb-6 tracking-wide font-light">
                 {description}
               </div>
             </H1>

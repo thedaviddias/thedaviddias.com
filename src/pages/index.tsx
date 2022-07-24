@@ -7,6 +7,7 @@ import useTranslation from 'next-translate/useTranslation'
 import { BlogPost } from '@/components/blog-post'
 import { Container } from '@/components/container'
 import { CustomLink } from '@/components/custom-link'
+import { H5 } from '@/components/heading'
 import { Newsletter } from '@/components/newsletter'
 
 import { routes } from '@/config/routes'
@@ -32,26 +33,29 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
       <main className="mx-auto space-y-20 divide-y divide-slate-200 sm:space-y-24 lg:max-w-none lg:space-y-10">
         <section className="-mt-36 pb-8 pt-48 sm:pt-60 sm:pb-8 text-center relative block ">
           <h1 className="-mt-10 block text-6xl sm:text-7xl lg:text-8xl mb-4 serif:font-bold dark:text-white leading-tighter transition-colors">
-            <p className="text-4xl p-0">HEY THERE!</p>
-            <span className="text-6xl">I'm David Dias</span>
+            <p className="text-3xl p-0 leading-3">HEY THERE!</p>
+            <span className="text-6xl leading-3">I'm David Dias</span>
           </h1>
           <div className="max-w-xl lg:px-0.5 mx-auto text-lg sm:text-xl text-gray-500 dark:text-gray-400 -mt-1">
-            I like solving digital and human problems! I spend most of my time coding using modern
-            HTML, CSS, and Javascript. Outside of work, I enjoy meeting new people, building
-            communities and producing multimedia content.
+            {t('hero.presentation')}
           </div>
 
           <div className="flex justify-center mt-10 space-x-5">
-            <CustomLink href="https://changelog.thedaviddias.dev">Personal changelog</CustomLink>
-            <CustomLink href="https://changelog.thedaviddias.dev">Twitter</CustomLink>
+            <CustomLink href="https://changelog.thedaviddias.dev" className="font-semibold ">
+              Personal changelog
+            </CustomLink>
+            <CustomLink href="https://changelog.thedaviddias.dev" className="font-semibold ">
+              Twitter
+            </CustomLink>
+            <CustomLink href="https://changelog.thedaviddias.dev" className="font-semibold ">
+              Github
+            </CustomLink>
           </div>
         </section>
 
         <section className="grid grid-cols-1 gap-y-10 border-none">
           <header>
-            <h2 className="text-2xl font-semibold leading-9 tracking-tight text-slate-900 dark:text-white">
-              Lastest blog posts
-            </h2>
+            <H5 as="h2">Lastest blog posts</H5>
           </header>
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">
             {posts.map((post) => (

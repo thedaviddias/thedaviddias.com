@@ -23,10 +23,10 @@ export const Footer = () => {
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
-        <div className="max-w-[60rem] px-2 mx-auto py-12 sm:px-6 lg:py-16 lg:px-8">
-          <div className="xl:grid xl:grid-cols-3 xl:gap-8 print:hidden">
-            <div className="space-y-8 xl:col-span-1">
-              <span>The David Dias</span>
+        <div className="max-w-[60rem] px-2 mx-auto py-12 sm:px-6 lg:py-7 lg:px-8">
+          <div className="flex flex-col-reverse sm:flex-row print:hidden">
+            <div className="w-full sm:w-1/2 lg:w-[40%] text-center sm:text-left flex-grow sm:mb-0 pr-24">
+              <span className="mb-5 block">The David Dias</span>
               <p className="text-gray-500 text-sm">
                 I like solving digital and human problems! I spend most of my time coding using
                 modern HTML, CSS, and Javascript. Outside of work, I enjoy meeting new people,
@@ -35,7 +35,7 @@ export const Footer = () => {
               <div className="flex space-x-6"></div>
             </div>
 
-            <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+            <div className="w-full sm:w-1/2 lg:w-[60%] !max-w-full flex-shrink-0 flex-grow flex justify-between text-gray-600 dark:text-gray-400">
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
                   {t('footer.general')}
@@ -51,6 +51,7 @@ export const Footer = () => {
                   ))}
                 </ul>
               </div>
+              <div></div>
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
                   {t('footer.social')}
@@ -68,7 +69,7 @@ export const Footer = () => {
             </div>
           </div>
           <div className="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
-            <p>&copy; {new Date().getFullYear()} David Dias</p>
+            <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} David Dias</p>
 
             <button
               aria-label="Toggle Dark Mode"

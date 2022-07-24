@@ -3,7 +3,7 @@ import useTranslation from 'next-translate/useTranslation'
 import slugify from 'slugify'
 
 import { CustomLink } from '@/components/custom-link'
-import { H3 } from '@/components/heading'
+import { H2 } from '@/components/heading'
 
 import type { BlogPost as BlogPostTypes } from '@/types/blog-post'
 
@@ -15,18 +15,18 @@ export const BlogPost = ({ post }: { post: BlogPostTypes }) => {
       <article className="pt-10 pb-8 border-t border-gray-200 dark:border-gray-700" key={post.slug}>
         <div className="flex flex-col-reverse lg:flex-row">
           <div className="max-w-[37rem] w-full">
-            <H3>
+            <H2 as="h3">
               <CustomLink
-                className="!text-xl sm:!text-2xl !font-extrabold tracking-tight serif:tracking-normal serif:font-title-serif !text-gray-900 dark:!text-gray-100 block"
+                className="dark:!text-gray-100 block tracking-tight"
                 href={`/blog/${post.slug}`}
               >
                 {post.frontMatter.title}
               </CustomLink>
-            </H3>
+            </H2>
 
-            <div className="!text-sm sm:!text-base !text-gray-600 dark:!text-gray-400 !mt-2">
+            <p className="!text-gray-600 dark:!text-gray-400 !mt-4">
               {post.frontMatter.description}
-            </div>
+            </p>
           </div>
           <div className="flex-grow text-left lg:text-right lg:ml-8">
             <div className="float-right lg:float-none !mb-1">
@@ -58,3 +58,5 @@ export const BlogPost = ({ post }: { post: BlogPostTypes }) => {
     </>
   )
 }
+
+// !text-xl sm:!text-2xl !font-bold tracking-tight serif:tracking-normal serif:font-title-serif !text-gray-900 dark:!text-gray-100 block

@@ -222,18 +222,36 @@ const BlogPostPage = ({ frontMatter, source, headings, adjacentPosts }: Props) =
                   </aside>
                 )}
 
-                <div>
-                  {adjacentPosts.previous && (
-                    <CustomLink href={adjacentPosts.previous.slug}>
-                      {adjacentPosts.previous.title}
-                    </CustomLink>
-                  )}
-                  {adjacentPosts.next && (
-                    <CustomLink href={adjacentPosts.next.slug}>
-                      {adjacentPosts.next.title}
-                    </CustomLink>
-                  )}
-                </div>
+                {adjacentPosts && (
+                  <div className="mt-20">
+                    <nav aria-label="Posts">
+                      <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="nav-previous">
+                          {adjacentPosts.previous && (
+                            <CustomLink href={adjacentPosts.previous.slug}>
+                              <span className="text-base mb-2"></span>
+                              <span className="sr-only">Previous post:</span>
+                              <span className="text-primary-500 leading-6">
+                                {adjacentPosts.previous.title}
+                              </span>
+                            </CustomLink>
+                          )}
+                        </div>
+                        <div className="nav-next text-right">
+                          {adjacentPosts.next && (
+                            <CustomLink href={adjacentPosts.next.slug}>
+                              <span className="text-base mb-2">Next: </span>
+                              <span className="sr-only">Next post:</span>
+                              <span className="text-primary-500 leading-6">
+                                {adjacentPosts.next.title}
+                              </span>
+                            </CustomLink>
+                          )}
+                        </div>
+                      </div>
+                    </nav>
+                  </div>
+                )}
               </div>
             </div>
 

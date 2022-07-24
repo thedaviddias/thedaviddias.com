@@ -24,7 +24,7 @@ import { TableOfContents } from '@/components/TableOfContents/TableOfContents'
 
 import { routes } from '@/config/routes'
 import seo from '@/config/seo'
-import { getAllPosts, getPost, readBlogPost } from '@/utils/get-blog-posts'
+import { getAdjacentPosts, getAllPosts, getPost, readBlogPost } from '@/utils/get-blog-posts'
 import rehypeExtractHeadings from '@/utils/rehype-extract-headings'
 
 export type BlogPostProps = {
@@ -44,6 +44,7 @@ export type BlogPostProps = {
       publishedUrl?: string
     }
   }
+  permalink: string
   slug: string
 }
 
@@ -52,13 +53,22 @@ export type Headings = {
   title: string
 }
 
+type AdjacentPosts = {
+  slug: string
+  title: string
+}
+
 type Props = BlogPostProps & {
   source: MDXRemoteSerializeResult
   readingTime: string
   headings: Headings[]
+  adjacentPosts: {
+    previous?: AdjacentPosts
+    next?: AdjacentPosts
+  }
 }
 
-const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
+const BlogPostPage = ({ frontMatter, source, headings, adjacentPosts }: Props) => {
   const {
     title,
     description,
@@ -211,6 +221,19 @@ const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
                     </nav>
                   </aside>
                 )}
+
+                <div>
+                  {adjacentPosts.previous && (
+                    <CustomLink href={adjacentPosts.previous.slug}>
+                      {adjacentPosts.previous.title}
+                    </CustomLink>
+                  )}
+                  {adjacentPosts.next && (
+                    <CustomLink href={adjacentPosts.next.slug}>
+                      {adjacentPosts.next.title}
+                    </CustomLink>
+                  )}
+                </div>
               </div>
             </div>
 
@@ -287,13 +310,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           categories: categories || null,
           lastmod: (lastmod && JSON.parse(JSON.stringify(lastmod))) || null,
           author: author || null,
-          published: {
-            publishedOn,
-            publishedUrl,
-          },
+          ...(publishedOn && {
+            published: {
+              publishedOn,
+              publishedUrl,
+            },
+          }),
         },
         readingTime: readingTime(content).text,
         headings,
+        adjacentPosts: getAdjacentPosts(params.slug),
         source: await serialize(content, {
           mdxOptions: {
             remarkPlugins: [remarkGfm],

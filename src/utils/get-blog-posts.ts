@@ -49,7 +49,7 @@ export const getAllPostsWithFrontMatter = ({
   filterByCategory = null,
   locale = 'en',
   limit = 99,
-}: GetAllPostsWithFrontMatter): BlogPostProps => {
+}: GetAllPostsWithFrontMatter): BlogPostProps[] => {
   const blogs = getAllPosts(dataType)
 
   return blogs
@@ -147,4 +147,31 @@ export async function getCategories(dataType: string) {
   }
 
   return categories[dataType]
+}
+
+export interface AdjacentPosts {
+  previous: { slug: string; title: string } | null
+  next: { slug: string; title: string } | null
+}
+
+export function getAdjacentPosts(slug: string): AdjacentPosts {
+  const allPostHeaders = getAllPostsWithFrontMatter({ dataType: 'blog' })
+
+  const postIndex = allPostHeaders.findIndex((postHeader) => postHeader?.slug === slug)
+  return {
+    previous:
+      postIndex <= 0
+        ? null
+        : {
+            slug: allPostHeaders[postIndex - 1]!.permalink,
+            title: allPostHeaders[postIndex - 1]!.frontMatter.title,
+          },
+    next:
+      postIndex >= allPostHeaders.length - 1
+        ? null
+        : {
+            slug: allPostHeaders[postIndex + 1]!.permalink,
+            title: allPostHeaders[postIndex + 1]!.frontMatter.title,
+          },
+  }
 }

@@ -10,7 +10,7 @@ export const CodeHighlight: FC<CodeHighlightProps> = ({ children, className }) =
   const language = className?.replace('language-', '').trim()
 
   if (!language) {
-    return <code>{children}</code>
+    return <code className="bg-slate-200 rounded-md pr-1 pl-1 pt-1 pb-1 font-mono">{children}</code>
   }
 
   // const showLineNumbers = !['shell', 'text'].includes(language)

@@ -18,6 +18,7 @@ import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
 import { H1 } from '@/components/Heading'
 import { MDXComponents } from '@/components/MdxComponents'
+import { Paragraph } from '@/components/Paragraph'
 import { Share } from '@/components/Share'
 import { TableOfContents } from '@/components/TableOfContents/TableOfContents'
 
@@ -38,6 +39,10 @@ export type BlogPostProps = {
     tags?: string[]
     title: string
     preview: string
+    published?: {
+      publishedOn?: string
+      publishedUrl?: string
+    }
   }
   slug: string
 }
@@ -54,8 +59,18 @@ type Props = BlogPostProps & {
 }
 
 const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
-  const { title, description, tags, categories, date, lastmod, permalink, author, preview } =
-    frontMatter
+  const {
+    title,
+    description,
+    tags,
+    categories,
+    date,
+    lastmod,
+    permalink,
+    author,
+    preview,
+    published,
+  } = frontMatter
   const { isFallback } = useRouter()
   const { t } = useTranslation('common')
 
@@ -165,6 +180,15 @@ const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
               <div className="  w-[40em] lg:w-[37rem] !max-w-full">
                 <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl serif:prose-serif !max-w-full mb-10">
                   <MDXRemote {...source} components={MDXComponents} />
+
+                  {published?.publishedUrl && (
+                    <Paragraph className="italic pt-8">
+                      Originally published on{' '}
+                      <CustomLink href={published.publishedUrl} as="span">
+                        {published.publishedOn}
+                      </CustomLink>
+                    </Paragraph>
+                  )}
                 </section>
                 {tags && (
                   <aside className="w-full mt-3 print:hidden">
@@ -240,7 +264,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     const {
       content,
-      data: { title, description, tags, date, categories, lastmod, author },
+      data: {
+        title,
+        description,
+        tags,
+        date,
+        categories,
+        lastmod,
+        author,
+        publishedOn,
+        publishedUrl,
+      },
     } = matter(postContent)
 
     return {
@@ -253,6 +287,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           categories: categories || null,
           lastmod: (lastmod && JSON.parse(JSON.stringify(lastmod))) || null,
           author: author || null,
+          published: {
+            publishedOn,
+            publishedUrl,
+          },
         },
         readingTime: readingTime(content).text,
         headings,

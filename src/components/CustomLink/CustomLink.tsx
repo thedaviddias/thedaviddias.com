@@ -11,7 +11,12 @@ export const CustomLink: FC<CustomLinkProps> = ({ href, className, children, ...
   const external = !href.startsWith('/')
   if (external) {
     return (
-      <a href={href} rel="noopener noreferrer" target="_blank" className={`${className} flex`}>
+      <a
+        href={href}
+        rel="noopener noreferrer"
+        target="_blank"
+        className={`inline-flex ${className}`}
+      >
         {children}
         <span className="inline-flex items-center">
           <svg

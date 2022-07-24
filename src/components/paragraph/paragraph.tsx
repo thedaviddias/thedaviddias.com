@@ -8,7 +8,9 @@ type ParagraphProps = {
 
 export const Paragraph = ({ className, prose = true, as = 'p', ...rest }: ParagraphProps) => {
   return React.createElement(as, {
-    className: `${className} ${prose} max-w-full text-lg my-3 leading-relaxed`,
+    className: `${
+      prose && 'prose'
+    } max-w-full text-lg my-3 leading-relaxed ${className} ${className}`,
     ...rest,
   })
 }

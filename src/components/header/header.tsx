@@ -11,14 +11,14 @@ export const Header = ({ pathname }) => {
   const [mobileMenuState, setMobileMenuState] = useState(false)
 
   return (
-    <header className="flex-grow-0 flex-shrink-0 dark:text-gray-200 bg-white dark:bg-gray-800 transition-colors duration-200 py-3 top-0 mb-12">
-      <div className="max-w-[60rem] mx-auto px-2 sm:px-6 lg:px-8">
+    <header className="dark:text-gray-200 bg-white dark:bg-gray-800 transition-colors duration-200 py-3 top-0 mb-12">
+      <div className="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex justify-between h-16">
           <div className="flex-1 flex items-center sm:justify-between align-middle">
             <CustomLink
               href="/"
               passHref
-              className="font-extrabold text-base xs:text-lg sm:!text-xl sm:mt-[-3px] sm:mr-6"
+              className="font-extrabold text-2xl lg:text-xl sm:mt-[-3px] sm:mr-6"
             >
               The David Dias
             </CustomLink>
@@ -40,7 +40,7 @@ export const Header = ({ pathname }) => {
               ))}
             </nav>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:pr-0">
+          <div className="absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:pr-0 print:hidden">
             <div className="block sm:hidden">
               <nav>
                 <button

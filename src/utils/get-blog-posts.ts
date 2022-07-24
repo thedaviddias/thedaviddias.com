@@ -40,6 +40,7 @@ export const readBlogPost = (slug: string): string => {
 type GetAllPostsWithFrontMatter = {
   dataType: string
   filterByTag?: string | null
+  filterByCategory?: string | null
   locale?: string
   limit?: number
 }
@@ -47,6 +48,7 @@ type GetAllPostsWithFrontMatter = {
 export const getAllPostsWithFrontMatter = ({
   dataType,
   filterByTag = null,
+  filterByCategory = null,
   locale = 'en',
   limit = 99,
 }: GetAllPostsWithFrontMatter) => {
@@ -65,6 +67,21 @@ export const getAllPostsWithFrontMatter = ({
 
       if (filterByTag) {
         if (data.tags.includes(filterByTag)) {
+          return [
+            {
+              frontMatter: data,
+              permalink,
+              slug: filenameNoExtension,
+            },
+            ...allPosts,
+          ]
+        } else {
+          return allPosts
+        }
+      }
+
+      if (filterByCategory) {
+        if (data.categories.includes(filterByCategory)) {
           return [
             {
               frontMatter: data,
@@ -101,7 +118,7 @@ export type TagOptions = {
   [key: string]: string[]
 }
 
-async function collateTags(dataType: string) {
+async function collateTags(dataType: string, type: string) {
   const files = getAllPosts(dataType)
   const allTags = new Set<string>() // to ensure only unique tags are added
 
@@ -109,7 +126,13 @@ async function collateTags(dataType: string) {
     const source = fs.readFileSync(path.join(process.cwd(), 'content', dataType, postSlug), 'utf8')
     const { data } = matter(source)
 
-    data.tags.forEach((tag: string) => allTags.add(slugify(tag, { lower: true })))
+    if (type === 'tags') {
+      data.tags.forEach((tag: string) => allTags.add(slugify(tag, { lower: true })))
+    }
+
+    if (type === 'categories') {
+      data.categories.forEach((category: string) => allTags.add(slugify(category, { lower: true })))
+    }
   })
 
   return Array.from(allTags)
@@ -117,8 +140,16 @@ async function collateTags(dataType: string) {
 
 export async function getTags(dataType: string) {
   const tags: TagOptions = {
-    blog: await collateTags('blog'),
+    blog: await collateTags('blog', 'tags'),
   }
 
   return tags[dataType]
+}
+
+export async function getCategories(dataType: string) {
+  const categories: TagOptions = {
+    blog: await collateTags('blog', 'categories'),
+  }
+
+  return categories[dataType]
 }

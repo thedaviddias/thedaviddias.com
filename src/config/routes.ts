@@ -43,6 +43,7 @@ export const routes = (translate: Translate) => ({
     path: '/about',
     seo: extendSEO({
       title: 'About',
+      description: 'About me',
       url: 'about',
     }),
   },

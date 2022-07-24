@@ -23,15 +23,11 @@ export const Footer = () => {
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
-        <div className="max-w-[60rem] px-2 mx-auto py-12 sm:px-6 lg:py-7 lg:px-8">
+        <div className="max-w-5xl px-2 mx-auto py-12 sm:px-6 lg:py-7 lg:px-8">
           <div className="flex flex-col-reverse sm:flex-row print:hidden">
             <div className="w-full sm:w-1/2 lg:w-[40%] text-center sm:text-left flex-grow sm:mb-0 pr-24">
-              <span className="mb-5 block">The David Dias</span>
-              <p className="text-gray-500 text-sm">
-                I like solving digital and human problems! I spend most of my time coding using
-                modern HTML, CSS, and Javascript. Outside of work, I enjoy meeting new people,
-                building communities and producing multimedia content.
-              </p>
+              <span className="mb-5 block">{t('title')}</span>
+              <p className="text-gray-500 text-sm">{t('hero.presentation')}</p>
               <div className="flex space-x-6"></div>
             </div>
 

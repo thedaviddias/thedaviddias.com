@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { GetStaticProps } from 'next'
-import dynamic from 'next/dynamic'
+import Image from 'next/image'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 
@@ -30,26 +30,39 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         openGraph={routes(t).home.seo.openGraph}
       />
 
-      <main className="mx-auto space-y-20 divide-y divide-slate-200 sm:space-y-24 lg:max-w-none lg:space-y-10">
-        <section className="-mt-36 pb-8 pt-48 sm:pt-60 sm:pb-8 text-center relative block ">
-          <h1 className="-mt-10 block text-6xl sm:text-7xl lg:text-8xl mb-4 serif:font-bold dark:text-white leading-tighter transition-colors">
-            <p className="text-3xl p-0 leading-3">HEY THERE!</p>
-            <span className="text-6xl leading-3">I'm David Dias</span>
-          </h1>
-          <div className="max-w-xl lg:px-0.5 mx-auto text-lg sm:text-xl text-gray-500 dark:text-gray-400 -mt-1">
-            {t('hero.presentation')}
-          </div>
+      <main>
+        <section className="pb-20 pt-0 lg:pt-10 relative flex justify-evenly">
+          <div className="text-left">
+            <h1 className="block mb-4 dark:text-white transition-colors">
+              <p className="text-3xl p-0 font-light">HEY THERE!</p>
+              <span className="text-5xl lg:text-6xl font-title font-medium leading-snug">
+                I'm David Dias
+              </span>
+            </h1>
+            <div className="max-w-xl lg:px-0.5 text-base lg:text-lg sm:text-xl text-gray-500 dark:text-gray-400">
+              {t('hero.presentation')}
+            </div>
 
-          <div className="flex justify-center mt-10 space-x-5">
-            <CustomLink href="https://changelog.thedaviddias.dev" className="font-semibold ">
-              Personal changelog
-            </CustomLink>
-            <CustomLink href="https://changelog.thedaviddias.dev" className="font-semibold ">
-              Twitter
-            </CustomLink>
-            <CustomLink href="https://changelog.thedaviddias.dev" className="font-semibold ">
-              Github
-            </CustomLink>
+            <div className="flex justify-left mt-10 space-x-5">
+              <CustomLink href="https://changelog.thedaviddias.dev" className="font-semibold ">
+                Personal changelog
+              </CustomLink>
+              <CustomLink href="https://changelog.thedaviddias.dev" className="font-semibold ">
+                Twitter
+              </CustomLink>
+              <CustomLink href="https://changelog.thedaviddias.dev" className="font-semibold ">
+                Github
+              </CustomLink>
+            </div>
+          </div>
+          <div className="hidden lg:block">
+            <Image
+              className="rounded-full"
+              src="/images/david-dias-round.jpg"
+              width={270}
+              height={270}
+              alt="Photo of David Dias"
+            />
           </div>
         </section>
 
@@ -75,7 +88,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
 }
 
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
-  const posts = getAllPostsWithFrontMatter({ dataType: 'blog', locale, limit: 4 })
+  const posts = getAllPostsWithFrontMatter({ dataType: 'blog', locale, limit: 3 })
 
   const props: HomeProps = {
     posts: JSON.parse(JSON.stringify(posts)),

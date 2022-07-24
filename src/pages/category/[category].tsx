@@ -7,9 +7,9 @@ import { BlogPost } from '@/components/blog-post'
 import { Container } from '@/components/container'
 
 import { routes } from '@/config/routes'
-import { getAllPostsWithFrontMatter, getTags } from '@/utils/get-blog-posts'
+import { getAllPostsWithFrontMatter, getCategories } from '@/utils/get-blog-posts'
 
-const TagPage: NextPage = ({ posts, tag }) => {
+const CategoryPage: NextPage = ({ posts, category }) => {
   const { t } = useTranslation('common')
 
   return (
@@ -23,7 +23,7 @@ const TagPage: NextPage = ({ posts, tag }) => {
       <main className="mx-auto space-y-20 divide-y divide-slate-200 sm:space-y-16 lg:max-w-none lg:space-y-32">
         <section className="grid grid-cols-1 gap-y-10 gap-x-6 pt-10">
           <h2 className="text-2xl font-semibold leading-9 tracking-tight text-slate-900 dark:text-white">
-            Tag: <>{tag}</>
+            Category: <>{category}</>
           </h2>
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">
             {posts?.map((post) => (
@@ -38,11 +38,11 @@ const TagPage: NextPage = ({ posts, tag }) => {
 }
 
 export const getStaticPaths = async () => {
-  const tags = await getTags('blog')
+  const categories = await getCategories('blog')
 
-  const paths = tags.map((tag: string) => ({
+  const paths = categories.map((category: string) => ({
     params: {
-      tag,
+      category,
     },
   }))
 
@@ -53,14 +53,17 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }: Params) => {
-  const posts = await getAllPostsWithFrontMatter({ dataType: 'blog', filterByTag: params.tag })
+  const posts = await getAllPostsWithFrontMatter({
+    dataType: 'blog',
+    filterByCategory: params.category,
+  })
 
   return {
     props: {
       posts: JSON.parse(JSON.stringify(posts)),
-      tag: params.tag,
+      category: params.category,
     },
   }
 }
 
-export default TagPage
+export default CategoryPage

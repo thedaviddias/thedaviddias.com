@@ -125,12 +125,12 @@
     }
   ],
   "frontMatter.taxonomy.categories": [
-    "Coding",
-    "Expatriation",
-    "Productivity",
-    "Reflexion",
-    "Security",
-    "Side Project"
+    "coding",
+    "expatriation",
+    "productivity",
+    "reflexion",
+    "security",
+    "side-project"
   ],
   "frontMatter.data.files": [
     {

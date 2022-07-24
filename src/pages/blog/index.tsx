@@ -29,7 +29,7 @@ const Blog = ({ posts }) => {
         description={routes(t).blog.seo.description}
         openGraph={routes(t).blog.seo.openGraph}
       />
-      <main className="divide-slate-200 sm:space-y-24 lg:max-w-none">
+      <main className="divide-slate-200 sm:space-y-16 lg:max-w-none">
         <section className="pt-10 border-none">
           <header>
             <H1>{routes(t).blog.seo.title}</H1>

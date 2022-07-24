@@ -1,12 +1,14 @@
 import { useRouter } from 'next/router'
-import { PropsWithChildren } from 'react'
+import { FC } from 'react'
 
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 
-type Props = PropsWithChildren<{}>
+type ContainerProps = {
+  children: React.ReactNode
+}
 
-export const Container = ({ children }: Props) => {
+export const Container: FC<ContainerProps> = ({ children }) => {
   const router = useRouter()
 
   return (

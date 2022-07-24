@@ -56,7 +56,7 @@ export const Footer = () => {
                   {SOCIAL_LINKS.map(({ label, link }) => (
                     <li key={link}>
                       <CustomLink href={link} passHref>
-                        <a>{label}</a>
+                        {label}
                       </CustomLink>
                     </li>
                   ))}

@@ -60,3 +60,18 @@ export const SOCIAL_LINKS: LinksExternalResponse[] = [
     link: LINKEDIN_PROFILE,
   },
 ]
+
+export const HERO_LINKS = [
+  {
+    label: 'Personal changelog',
+    link: POLYWORK_PROFILE,
+  },
+  {
+    label: 'Twitter',
+    link: TWITTER_PROFILE,
+  },
+  {
+    label: 'Github',
+    link: GITHUB_PROFILE,
+  },
+]

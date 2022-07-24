@@ -10,6 +10,7 @@ import { CustomLink } from '@/components/CustomLink'
 import { H5 } from '@/components/Heading'
 
 import { routes } from '@/config/routes'
+import { HERO_LINKS } from '@/constants'
 import { getAllPostsWithFrontMatter } from '@/utils/get-blog-posts'
 
 import { BlogPost as BlogPostComponent } from './blog/[slug]'
@@ -34,9 +35,9 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         <section className="pb-20 pt-0 lg:pt-10 relative flex justify-evenly">
           <div className="text-left">
             <h1 className="block mb-4 dark:text-white transition-colors">
-              <p className="text-3xl p-0 font-light">HEY THERE!</p>
+              <p className="text-3xl p-0 font-light uppercase">{t('hero.greetings1')}</p>
               <span className="text-5xl lg:text-6xl font-title font-medium leading-snug">
-                I&lsquo; m David Dias
+                {t('hero.greetings2')}
               </span>
             </h1>
             <div className="max-w-xl lg:px-0.5 text-base lg:text-lg sm:text-xl text-gray-500 dark:text-gray-400">
@@ -44,15 +45,11 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
             </div>
 
             <div className="flex justify-left mt-10 space-x-5">
-              <CustomLink href="https://changelog.thedaviddias.dev" className="font-semibold ">
-                Personal changelog
-              </CustomLink>
-              <CustomLink href="https://changelog.thedaviddias.dev" className="font-semibold ">
-                Twitter
-              </CustomLink>
-              <CustomLink href="https://changelog.thedaviddias.dev" className="font-semibold ">
-                Github
-              </CustomLink>
+              {HERO_LINKS.map(({ label, link }) => (
+                <CustomLink href={link} passHref key={link} className="font-semibold">
+                  {label}
+                </CustomLink>
+              ))}
             </div>
           </div>
           <div className="hidden lg:block">

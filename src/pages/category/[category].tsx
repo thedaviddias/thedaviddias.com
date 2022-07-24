@@ -17,8 +17,8 @@ import { BlogPostProps } from '../blog/[slug]'
 type CategoryPageProps = {
   posts: BlogPostProps[]
   category: {
-    name: string
-    description: string
+    name?: string
+    description?: string
   }
 }
 
@@ -85,7 +85,7 @@ export const getStaticProps: GetStaticProps<CategoryPageProps> = async ({ params
     props: {
       posts: JSON.parse(JSON.stringify(posts)),
       category: {
-        name: params.category,
+        name: params?.category,
         ...currentCategory,
       },
     },

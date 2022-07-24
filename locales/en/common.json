@@ -1,7 +1,8 @@
 {
   "title": "The David Dias",
   "hero": {
-    "greetings": "Hey there! I'm David Dias",
+    "greetings1": "Hey there!",
+    "greetings2": " I'm David Dias",
     "presentation": "I'm a Front-End Developer, podcaster, content creator passionate about solving digital and human problems! I enjoy meeting new people, building communities and talking about tech, expatriation and web."
   },
   "a11y": {

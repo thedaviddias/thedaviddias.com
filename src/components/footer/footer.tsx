@@ -2,7 +2,7 @@ import { useTheme } from 'next-themes'
 import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
 
-import { CustomLink } from '@/components/custom-link'
+import { CustomLink } from '@/components/CustomLink'
 
 import { FOOTER_MENU_LINKS, SOCIAL_LINKS } from '@/constants'
 

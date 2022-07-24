@@ -1,4 +1,4 @@
-import { H1, H2, H3, H4 } from '@/components/heading'
+import { H1, H2, H3, H4 } from '@/components/Heading'
 
 import { Blockquote } from './blockquote'
 import { CodeHighlight } from './code-highlight'
@@ -7,7 +7,7 @@ import { InlineCode } from './inline-code'
 import { Pre } from './pre'
 import { ResponsiveImage } from './responsive-image'
 import { Tweet } from './tweet'
-import { Paragraph } from '../paragraph'
+import { Paragraph } from '../Paragraph'
 
 export const MDXComponents = {
   // hr: (props) => <chakra.hr apply="mdx.hr" {...props} />,

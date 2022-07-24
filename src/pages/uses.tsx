@@ -2,8 +2,8 @@ import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 
 import { Container } from '@/components/Container'
-import { HeaderPage } from '@/components/header-page'
-import { H1 } from '@/components/heading'
+import { H1 } from '@/components/Heading'
+import { PageHeader } from '@/components/PageHeader'
 
 import { routes } from '@/config/routes'
 
@@ -18,7 +18,7 @@ export default function About() {
         openGraph={routes(t).uses.seo.openGraph}
       />
       <main className="pt-10 border-none">
-        <HeaderPage title={routes(t).uses.seo.title} description={routes(t).uses.seo.description} />
+        <PageHeader title={routes(t).uses.seo.title} description={routes(t).uses.seo.description} />
       </main>
     </Container>
   )

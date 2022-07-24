@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import { MENU_LINKS } from '@/constants'
 
-import { CustomLink } from '../custom-link'
+import { CustomLink } from '../CustomLink'
 
 export const Header = ({ pathname }) => {
   const { t } = useTranslation('common')

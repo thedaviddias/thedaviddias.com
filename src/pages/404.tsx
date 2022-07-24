@@ -4,7 +4,7 @@ import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 
 import { Container } from '@/components/Container'
-import { H1 } from '@/components/heading'
+import { H1 } from '@/components/Heading'
 
 import { routes } from '@/config/routes'
 

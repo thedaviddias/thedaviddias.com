@@ -6,8 +6,8 @@ import useTranslation from 'next-translate/useTranslation'
 
 import { BlogPost } from '@/components/BlogPost'
 import { Container } from '@/components/Container'
-import { CustomLink } from '@/components/custom-link'
-import { H5 } from '@/components/heading'
+import { CustomLink } from '@/components/CustomLink'
+import { H5 } from '@/components/Heading'
 
 import { routes } from '@/config/routes'
 import { getAllPostsWithFrontMatter } from '@/utils/get-blog-posts'

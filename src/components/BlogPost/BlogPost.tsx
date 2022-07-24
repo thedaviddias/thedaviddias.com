@@ -2,8 +2,8 @@ import { format } from 'date-fns'
 import useTranslation from 'next-translate/useTranslation'
 import slugify from 'slugify'
 
-import { CustomLink } from '@/components/custom-link'
-import { H2 } from '@/components/heading'
+import { CustomLink } from '@/components/CustomLink'
+import { H2 } from '@/components/Heading'
 
 import type { BlogPost as BlogPostTypes } from '@/types/blog-post'
 

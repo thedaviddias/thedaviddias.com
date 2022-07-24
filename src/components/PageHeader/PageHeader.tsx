@@ -1,11 +1,11 @@
-import { H1 } from '@/components/heading'
+import { H1 } from '@/components/Heading'
 
 type HeaderPageProps = {
   title: string
   description?: string
 }
 
-export const HeaderPage = ({ title, description }: HeaderPageProps) => {
+export const PageHeader = ({ title, description }: HeaderPageProps) => {
   return (
     <header>
       <H1>{title}</H1>

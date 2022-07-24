@@ -3,7 +3,7 @@ import useSWR from 'swr'
 
 import fetcher from '@/utils/fetcher'
 
-import { H2 } from '../heading'
+import { H2 } from '../Heading'
 
 export enum Form {
   Initial,

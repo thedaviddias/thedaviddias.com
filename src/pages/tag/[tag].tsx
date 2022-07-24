@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 import { NextSeo } from 'next-seo'
 
@@ -8,7 +8,14 @@ import { PageHeader } from '@/components/PageHeader'
 
 import { getAllPostsWithFrontMatter, getTags } from '@/utils/get-blog-posts'
 
-const TagPage: NextPage = ({ posts, tag }) => {
+import { BlogPostProps } from '../blog/[slug]'
+
+type CategoryPageProps = {
+  posts: BlogPostProps[]
+  tag: string
+}
+
+const TagPage: NextPage<CategoryPageProps> = ({ posts, tag }) => {
   const title = `Tag: ${tag}`
 
   return (
@@ -18,7 +25,7 @@ const TagPage: NextPage = ({ posts, tag }) => {
         <PageHeader title={title} description={`All my articles related to the ${tag} topic.`} />
         <div className="grid grid-cols-1 gap-4 lg:col-span-2">
           {posts?.map((post) => (
-            <BlogPost key={post.title} post={post} />
+            <BlogPost key={post.frontMatter.title} post={post} />
           ))}
         </div>
       </main>
@@ -41,7 +48,7 @@ export const getStaticPaths = async () => {
   }
 }
 
-export const getStaticProps = async ({ params }: Params) => {
+export const getStaticProps: GetStaticProps<CategoryPageProps> = async ({ params }: Params) => {
   const posts = await getAllPostsWithFrontMatter({ dataType: 'blog', filterByTag: params.tag })
 
   return {

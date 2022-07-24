@@ -1,6 +1,5 @@
 import Highlight, { defaultProps } from 'prism-react-renderer'
-// import darkTheme from 'prism-react-renderer/themes/nightOwl'
-import lightTheme from 'prism-react-renderer/themes/nightOwlLight'
+import darkTheme from 'prism-react-renderer/themes/nightOwl'
 import { FC } from 'react'
 
 type CodeHighlightProps = {
@@ -10,8 +9,14 @@ type CodeHighlightProps = {
 export const CodeHighlight: FC<CodeHighlightProps> = ({ children, className }) => {
   const language = className?.replace('language-', '').trim()
 
+  if (!language) {
+    return <code>{children}</code>
+  }
+
+  // const showLineNumbers = !['shell', 'text'].includes(language)
+
   return (
-    <Highlight {...defaultProps} theme={lightTheme} code={children} language={language}>
+    <Highlight {...defaultProps} theme={darkTheme} code={children} language={language}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={className} style={style}>
           {tokens.map((line, i) => (

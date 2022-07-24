@@ -2,7 +2,7 @@ export const baseUrl = process.env.NODE_ENV === 'production' ? 'https://thedavid
 export const baseEmail = 'hello@thedaviddias.com'
 
 const title = 'The David Dias | Developer and content creator'
-const description = ''
+const description = 'Discover'
 
 export const defaultSEO = {
   title,

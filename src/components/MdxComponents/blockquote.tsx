@@ -1,5 +1,1 @@
-export const Blockquote = ({ children }) => (
-  <blockquote>
-    <p>{children}</p>
-  </blockquote>
-)
+export const Blockquote = ({ children }) => <blockquote>{children}</blockquote>

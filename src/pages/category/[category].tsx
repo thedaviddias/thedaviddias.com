@@ -1,5 +1,5 @@
 import categories from 'data/categories.json'
-import type { GetStaticProps } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
@@ -22,7 +22,7 @@ type CategoryPageProps = {
   }
 }
 
-const CategoryPage = ({ posts, category }: CategoryPageProps) => {
+const CategoryPage: NextPage<CategoryPageProps> = ({ posts, category }: CategoryPageProps) => {
   const { t } = useTranslation('common')
   const { name, description } = category
   const router = useRouter()

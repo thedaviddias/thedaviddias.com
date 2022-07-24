@@ -1,1 +1,1 @@
-export const Pre = ({ children }) => <pre>{children}</pre>
+export const Pre = ({ children }) => <>{children}</>

@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import { GetStaticProps } from 'next'
+import dynamic from 'next/dynamic'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 

@@ -22,7 +22,7 @@ export const MDXComponents = {
   li: (props) => <li {...props} className="nested-list" />,
   ol: (props) => <ol {...props} className="list-decimal" />,
   p: Paragraph,
-  pre: ({ children }) => children,
+  // pre: ({ children }) => children,
   Tweet,
   ul: (props) => <ul {...props} className="list-disc" />,
 }

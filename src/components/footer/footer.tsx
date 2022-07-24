@@ -23,7 +23,7 @@ export const Footer = () => {
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+        <div className="max-w-[60rem] px-2 mx-auto py-12 sm:px-6 lg:py-16 lg:px-8">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8 print:hidden">
             <div className="space-y-8 xl:col-span-1">
               <span>The David Dias</span>
@@ -36,36 +36,34 @@ export const Footer = () => {
             </div>
 
             <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-              <div className="md:grid md:grid-cols-2 md:gap-8">
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                    {t('footer.general')}
-                  </h3>
+              <div>
+                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                  {t('footer.general')}
+                </h3>
 
-                  <ul className="mt-3 space-y-3">
-                    {FOOTER_MENU_LINKS(t).map(({ path, label }) => (
-                      <li key={path}>
-                        <CustomLink href={path} passHref>
-                          {label}
-                        </CustomLink>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                    {t('footer.social')}
-                  </h3>
-                  <ul className="mt-3 space-y-3">
-                    {SOCIAL_LINKS.map(({ label, link }) => (
-                      <li key={link}>
-                        <CustomLink href={link} passHref>
-                          <a>{label}</a>
-                        </CustomLink>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <ul className="mt-3 space-y-3">
+                  {FOOTER_MENU_LINKS(t).map(({ path, label }) => (
+                    <li key={path}>
+                      <CustomLink href={path} passHref>
+                        {label}
+                      </CustomLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                  {t('footer.social')}
+                </h3>
+                <ul className="mt-3 space-y-3">
+                  {SOCIAL_LINKS.map(({ label, link }) => (
+                    <li key={link}>
+                      <CustomLink href={link} passHref>
+                        <a>{label}</a>
+                      </CustomLink>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>

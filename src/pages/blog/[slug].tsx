@@ -12,6 +12,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeImgSize from 'rehype-img-size'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
+import prism from 'remark-prism'
 import slugify from 'slugify'
 
 import { Container } from '@/components/container'
@@ -171,7 +172,7 @@ const BlogPostPage = ({ frontMatter, source, headings }: Props) => {
                     <nav>
                       <ul className="flex items-center space-x-5">
                         {tags.map((tag) => (
-                          <li key={tag} className="border border-gray-200 rounded-md p-2">
+                          <li key={tag} className="border border-gray-200 rounded-md px-2 py-1">
                             <CustomLink
                               className="block mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
                               href={`/tag/${slugify(tag, { lower: true })}`}

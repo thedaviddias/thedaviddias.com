@@ -58,6 +58,7 @@ export const getAllPostsWithFrontMatter = ({
         path.join(process.cwd(), 'content', dataType, filename),
         'utf8'
       )
+
       const { data, content } = matter(source)
 
       const filenameNoExtension = filename.replace('.mdx', '')
@@ -93,6 +94,8 @@ export const getAllPostsWithFrontMatter = ({
         }
       }
 
+      console.log(data.title)
+
       return [
         {
           frontMatter: data,
@@ -105,7 +108,7 @@ export const getAllPostsWithFrontMatter = ({
     }, [])
     .filter((blog) => !blog.frontMatter.draft)
     .filter((blog) => blog.frontMatter.locale === locale)
-    .filter((_, index) => index < limit)
+    .filter((_, index) => index > limit)
     .sort((a, b) => Number(new Date(b.frontMatter.date)) - Number(new Date(a.frontMatter.date)))
 }
 

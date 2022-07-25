@@ -33,6 +33,7 @@
     "next": "Next post"
   },
   "footer": {
+    "name": "Footer",
     "general": "General",
     "social": "Social media",
     "extra": "Extra links",

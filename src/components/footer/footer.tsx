@@ -21,7 +21,7 @@ export const Footer = () => {
         aria-labelledby="footer-heading"
       >
         <h2 id="footer-heading" className="sr-only">
-          Footer
+          {t('footer.name')}
         </h2>
         <div className="max-w-5xl px-2 mx-auto py-12 sm:px-6 lg:py-7 lg:px-8">
           <div className="flex flex-col-reverse sm:flex-row print:hidden">
@@ -64,9 +64,8 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
+          <div className="mt-8 border-t border-gray-200 pt-8 flex items-center justify-between">
             <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} David Dias</p>
-
             <button
               aria-label="Toggle Dark Mode"
               type="button"

@@ -151,7 +151,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                     </p>
                     {lastmod && (
                       <p className="text-sm font-medium text-gray-500 group-hover:text-gray-700">
-                        <span>({t('posts.updated')}`</span>{' '}
+                        <span>({t('posts.updated')}</span>{' '}
                         <time dateTime={lastmod}>{format(new Date(lastmod), 'MMM dd, yyyy')})</time>
                       </p>
                     )}

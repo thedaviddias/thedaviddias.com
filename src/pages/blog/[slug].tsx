@@ -162,13 +162,13 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
           </header>
           <div className="block lg:flex w-full">
             <div className="max-w-full">
-              <div className="  w-[40em] lg:w-[37rem] !max-w-full">
+              <div className=" w-[40em] lg:w-[37rem] !max-w-full">
                 <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl serif:prose-serif !max-w-full mb-10">
                   <MDXRemote {...source} components={MDXComponents} />
 
                   {published?.publishedUrl && (
                     <Paragraph className="italic pt-8">
-                      Originally published on{' '}
+                      {t('posts.published')}{' '}
                       <CustomLink href={published.publishedUrl} as="span">
                         {published.publishedOn}
                       </CustomLink>
@@ -182,7 +182,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
               </div>
             </div>
 
-            <div className="flex-auto ml-16 hidden lg:block">
+            <div className="flex-auto ml-16 hidden lg:block print:hidden">
               <div className="sticky top-10 w-full">
                 <Share title={title} tags={tags && tags} slug={permalink} />
                 {headings && (

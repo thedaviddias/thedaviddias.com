@@ -54,7 +54,8 @@
     "empty": "No articles found for that query.",
     "viewAll": "→ View all blog posts",
     "continue": "Continue reading →",
-    "updated": "Updated on"
+    "updated": "Updated on",
+    "published": "Originally published on"
   },
   "tags": "Tags",
   "404": {

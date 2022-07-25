@@ -126,8 +126,6 @@ export const getAllPostsWithFrontMatter = ({
         }
       }
 
-      console.log(data.title)
-
       return [
         {
           frontMatter: data,

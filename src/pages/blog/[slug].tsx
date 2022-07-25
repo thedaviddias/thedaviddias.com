@@ -70,6 +70,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
   frontMatter,
   source,
   headings,
+  permalink,
   adjacentPosts,
 }) => {
   const {
@@ -79,7 +80,6 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
     categories,
     date,
     lastmod,
-    permalink,
     author,
     preview,
     published,
@@ -237,8 +237,6 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
       permalink,
       readingTime
     } = postContent
-
-    console.log('getAdjacentPosts(slug)', getAdjacentPosts(slug))
 
     return {
       props: {

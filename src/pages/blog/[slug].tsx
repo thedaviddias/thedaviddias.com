@@ -1,4 +1,4 @@
-import { format } from 'date-fns'
+
 import matter from 'gray-matter'
 import { GetStaticPaths, GetStaticPathsResult, GetStaticProps, NextPage } from 'next'
 import { useRouter } from 'next/router'
@@ -6,12 +6,14 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
-import readingTime from 'reading-time'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeImgSize from 'rehype-img-size'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import slugify from 'slugify'
+import rehypePrismPlus from 'rehype-prism-plus'
+import remarkCodeTitles from '@/utils/remark-code-titles'
+import { ScrollTop } from '@/components/ScrollTop'
 
 import { AdjacentPosts, PreviousNext } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
@@ -26,8 +28,10 @@ import { Tags } from '@/components/Tags'
 
 import { routes } from '@/config/routes'
 import seo from '@/config/seo'
-import { getAdjacentPosts, getAllPosts, getPost, readBlogPost } from '@/utils/get-blog-posts'
+import { getAdjacentPosts, getAllPosts, getPost, getPostBySlug } from '@/utils/get-blog-posts'
 import rehypeExtractHeadings from '@/utils/rehype-extract-headings'
+import { DatePost } from '@/components/DatePost'
+import { ReadTimeResults } from 'reading-time'
 
 export type BlogPostProps = {
   frontMatter: {
@@ -42,8 +46,8 @@ export type BlogPostProps = {
     title: string
     preview: string
     published?: {
-      publishedOn?: string
-      publishedUrl?: string
+      publishedOn: string
+      publishedUrl: string
     }
   }
   permalink: string
@@ -57,7 +61,7 @@ export type Headings = {
 
 type BlogPostPageProps = BlogPostProps & {
   source: MDXRemoteSerializeResult
-  readingTime: string
+  readingTime: ReadTimeResults
   headings: Headings[]
   adjacentPosts: PreviousNext
 }
@@ -89,6 +93,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
 
   return (
     <Container>
+      <ScrollTop />
       <NextSeo
         title={title}
         openGraph={{
@@ -123,7 +128,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                     key={category}
                     href={`/category/${slugify(category, { lower: true })}`}
                     passHref
-                    className="mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x !font-semibold"
+                    className="mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x !font-semibold transition-colors duration-200"
                   >
                     {category}
                   </CustomLink>
@@ -143,21 +148,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
             <div className="flex justify-between">
               {author && <Author name={author} routes={routes} />}
 
-              {date && (
-                <div className="flex items-center justify-center">
-                  <div className="ml-3 text-right">
-                    <p className="text-base font-medium text-gray-700 dark:text-gray-400">
-                      <time dateTime={date}>{format(new Date(date), 'MMM dd, yyyy')}</time>{' '}
-                    </p>
-                    {lastmod && (
-                      <p className="text-sm font-medium text-gray-500 group-hover:text-gray-700">
-                        <span>({t('posts.updated')}</span>{' '}
-                        <time dateTime={lastmod}>{format(new Date(lastmod), 'MMM dd, yyyy')})</time>
-                      </p>
-                    )}
-                  </div>
-                </div>
-              )}
+              {date && <DatePost date={date} lastmod={lastmod} />}
             </div>
           </header>
           <div className="block lg:flex w-full">
@@ -184,7 +175,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
 
             <div className="flex-auto ml-16 hidden lg:block print:hidden">
               <div className="sticky top-10 w-full">
-                <Share title={title} tags={tags && tags} slug={permalink} />
+                {permalink && <Share title={title} tags={tags && tags} slug={permalink} />}
                 {headings && (
                   <aside className="w-full mt-3">
                     <TableOfContents items={headings} />
@@ -224,15 +215,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params }) => {
   if (params?.slug) {
     const slug = params.slug as string
-    const postContent = await readBlogPost(slug)
+    const postContent = await getPostBySlug(slug, 'blog')
     const headings: Headings[] = []
 
     const {
-      content,
-      data: {
+      markdownBody,
+      frontMatter: {
         title,
         description,
         tags,
@@ -241,9 +232,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         lastmod,
         author,
         publishedOn,
-        publishedUrl,
+        publishedUrl
       },
-    } = matter(postContent)
+      permalink,
+      readingTime
+    } = postContent
+
+    console.log('getAdjacentPosts(slug)', getAdjacentPosts(slug))
 
     return {
       props: {
@@ -262,13 +257,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             },
           }),
         },
-        readingTime: readingTime(content).text,
+        permalink,
+        slug,
+        readingTime,
         headings,
-        adjacentPosts: getAdjacentPosts(params.slug),
-        source: await serialize(content, {
+        adjacentPosts: getAdjacentPosts(slug),
+        source: await serialize(markdownBody, {
           mdxOptions: {
-            remarkPlugins: [remarkGfm],
+            remarkPlugins: [remarkGfm, remarkCodeTitles],
             rehypePlugins: [
+              [rehypePrismPlus, { ignoreMissing: true }],
               [rehypeImgSize, { dir: 'public/' }],
               rehypeSlug,
               [rehypeAutolinkHeadings],

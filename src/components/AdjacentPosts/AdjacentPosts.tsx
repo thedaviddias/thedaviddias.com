@@ -9,8 +9,8 @@ type AdjacentPosts = {
 }
 
 export type PreviousNext = {
-  previous?: AdjacentPosts
-  next?: AdjacentPosts
+  previous: AdjacentPosts | null
+  next: AdjacentPosts | null
 }
 
 type AdjacentPostsProps = {

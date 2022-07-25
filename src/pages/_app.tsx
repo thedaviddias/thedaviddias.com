@@ -3,7 +3,8 @@ import PlausibleProvider from 'next-plausible'
 import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
 
-import '../styles/globals.css'
+import '@/styles/globals.css'
+import '@/styles/prism.css'
 
 import SEO from '../../next-seo.config'
 

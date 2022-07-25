@@ -3,7 +3,7 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html className="scroll-smooth">
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
             </>
           )}
         </Head>
-        <body>
+        <body className="antialiased">
           <Main />
           <NextScript />
         </body>

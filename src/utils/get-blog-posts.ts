@@ -6,6 +6,26 @@ import slugify from 'slugify'
 
 import { BlogPostProps } from '@/pages/blog/[slug]'
 
+export const createPermalink = (filename, dataType) => {
+  const filenameNoExtension = filename.replace('.mdx', '')
+  const permalink = `/${dataType}/${filenameNoExtension}`
+
+  return permalink
+}
+
+/**
+ * Sort by date descendant
+ *
+ * @param a - The first date to use to sort
+ * @param b - The second date to use to sort
+ * @returns
+ */
+export function dateSortDesc(a: number, b: number) {
+  if (a > b) return -1
+  if (a < b) return 1
+  return 0
+}
+
 /**
  * Gets the list of content files
  *
@@ -16,24 +36,36 @@ export const getAllPosts = (dataType: string): string[] => {
   return fs.readdirSync(path.join(process.cwd(), 'content', dataType), 'utf-8')
 }
 
+/**
+ *
+ * @param slug
+ * @param dataType
+ * @returns
+ */
 export const getPost = (slug: string, dataType: string) =>
   fs.readFileSync(path.join(process.cwd(), 'content', dataType, `${slug}.mdx`), 'utf8')
 
+/**
+ *
+ * @param slug
+ * @param dataType
+ * @returns
+ */
 export const getPostBySlug = (slug: string, dataType: string) => {
   const source = getPost(slug, dataType)
+
+  const permalink = `/${dataType}/${slug}`
 
   const { data, content } = matter(source)
 
   return {
     frontMatter: data,
+    permalink,
     readingTime: readingTime(content),
     markdownBody: content,
   }
 }
 
-export const readBlogPost = (slug: string): string => {
-  return fs.readFileSync(path.join(process.cwd(), './content/blog/', `${slug}.mdx`), 'utf8')
-}
 
 type GetAllPostsWithFrontMatter = {
   dataType: string
@@ -62,7 +94,7 @@ export const getAllPostsWithFrontMatter = ({
       const { data, content } = matter(source)
 
       const filenameNoExtension = filename.replace('.mdx', '')
-      const permalink = `/${dataType}/${filenameNoExtension}`
+      const permalink = createPermalink(filename, dataType)
 
       if (filterByTag) {
         if (data.tags.includes(filterByTag)) {
@@ -109,7 +141,7 @@ export const getAllPostsWithFrontMatter = ({
     .filter((blog) => !blog.frontMatter.draft)
     .filter((blog) => blog.frontMatter.locale === locale)
     .filter((_, index) => index < limit)
-    .sort((a, b) => Number(new Date(b.frontMatter.date)) - Number(new Date(a.frontMatter.date)))
+    .sort((a, b) => dateSortDesc(Number(new Date(a.frontMatter.date)), Number(new Date(b.frontMatter.date))))
 }
 
 export type TagOptions = {

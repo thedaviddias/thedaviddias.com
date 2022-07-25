@@ -153,7 +153,7 @@ npm install -D next-on-netlify
 
 We must build our Next.js app as a serverless app
 
-```javascript title=next.config.js
+```javascript:next.config.js
 module.exports = {
   // Target must be serverless
   target: "serverless",
@@ -164,7 +164,7 @@ module.exports = {
 
 We need to add a `postbuild` command that is automatically triggered after our `build` command finishes. `next-on-netlify` does a lot of "magic" to copy and set up our Next.js app to be correctly hosted on Netlify.
 
-```bash title=package.json
+```bash:package.json
 {
   "name": "next-netlify-github-actions-starter",
   "version": "0.1.0",
@@ -183,7 +183,7 @@ We need to add a `postbuild` command that is automatically triggered after our `
 
 Remember the file that was automatically created and called `netlify.toml`? You can remove all the boilerplate and replace it with only this code (be careful in respecting the indentation):
 
-```toml title=netlify.toml
+```toml:netlify.toml
 [build]
   command   = ""
   functions = "out_functions"
@@ -193,7 +193,7 @@ Technically, when `next-on-netlify` will run, it will take what is in these fold
 
 Don't forget to add these line to your `.gitignore` file
 
-```git title=.gitignore
+```git:.gitignore
 # Netlify build
 out_*
 ```
@@ -215,7 +215,7 @@ Go to your `Github project > Settings > Secrets > New repository secret`
 
 Create a new file called `main.yml` inside `.github/workflows`. Copy-paste the following code and read the explanation of it after this snippet.
 
-```yml title=main.yml
+```yml:.github/workflows/main.yml
 name: Main workflow
 
 on:
@@ -286,7 +286,7 @@ jobs:
 
 You may have seen an argument passed to the Netlify deploy:
 
-```yml
+```yml:.github/workflows/main.yml
 args: deploy -m 'v${{ steps.package-version.outputs.current-version}} ・ ${{ github.head_ref }}'
 ```
 This will add a message for each Deploy Preview, a way to keep track of which PR generated which Deploy.
@@ -297,7 +297,7 @@ On the same deploy page, you can click on the Deploy Preview and access your app
 
 A better way would be to use another task to automatically populate your pull request with the log and preview URL. At the end of your file, add this action:
 
-```yml
+```yml:.github/workflows/main.yml
 # Publish the inspect and preview link to the PR
 - name: 👓 Netlify Preview URL
   uses: unsplash/comment-on-pr@master

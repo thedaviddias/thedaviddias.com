@@ -18,11 +18,16 @@ export const Share: FC<ShareProps> = ({ slug, title, tags }) => {
   const hashtags = arr.join(' ')
 
   return (
-    <section>
-      <Twitter small message={`${title} ${hashtags} by @thedaviddias`} link={slug} />
-      <Facebook small link={slug} />
-      <Linkedin small message={title} link={slug} />
-      <Reddit small link={slug} />
-    </section>
+    <aside>
+      <Twitter
+        small
+        message={`${title} ${hashtags} by @thedaviddias`}
+        link={slug}
+        className="h-8 w-10"
+      />
+      <Facebook small link={slug} className="h-8 w-10" />
+      <Linkedin small message={title} link={slug} className="h-8 w-10" />
+      <Reddit small link={slug} className="h-8 w-10" />
+    </aside>
   )
 }

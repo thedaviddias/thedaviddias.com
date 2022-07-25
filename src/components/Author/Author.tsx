@@ -12,7 +12,7 @@ export const Author: FC<AuthorProps> = ({ name, routes }) => {
   const { t } = useTranslation('common')
 
   return (
-    <aside className="flex items-center justify-center font-sans">
+    <div className="flex items-center justify-center font-sans">
       <div className="flex-shrink-0 group block">
         <CustomLink href={routes(t).about.path}>
           <div className="flex items-center">
@@ -37,6 +37,6 @@ export const Author: FC<AuthorProps> = ({ name, routes }) => {
           </div>
         </CustomLink>
       </div>
-    </aside>
+    </div>
   )
 }

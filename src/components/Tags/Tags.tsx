@@ -14,14 +14,14 @@ export const Tags: FC<TagsProps> = ({ tags }) => {
   return (
     <aside className="w-full mt-3 print:hidden">
       <div className="small-title">{t('tags')}</div>
-      <nav>
+      <nav arial-label="Tags">
         <ul className="flex items-center space-x-5">
           {tags.map((tag) => (
             <li
               key={tag}
-              className="py-1 px-2 mr-3 mb-2 text-base font-medium leading-6 text-gray-600 bg-gray-100 dark:text-gray-100 dark:bg-gray-700
+              className="py-1 px-2 mr-3 mb-2 text-base font-medium leading-6 text-gray-600 bg-gray-100 hover:bg-gray-200 dark:text-gray-100 dark:bg-gray-700
             rounded-lg border dark:border-gray-800 border-solid cursor-pointer box-border
-            hover:bg-gray-700
+            dark:hover:bg-gray-700
             "
             >
               <CustomLink

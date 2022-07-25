@@ -15,7 +15,7 @@ export const CustomLink: FC<CustomLinkProps> = ({ href, children }) => {
           href={href}
           rel="noopener noreferrer"
           target="_blank"
-          className="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-800 dark:hover:text-indigo-500 hover:no-underline"
+          className="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-800 dark:hover:text-indigo-500 hover:no-underline transition-colors duration-200"
         >
           {children}
         </a>

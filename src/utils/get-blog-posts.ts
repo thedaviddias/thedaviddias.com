@@ -108,7 +108,7 @@ export const getAllPostsWithFrontMatter = ({
     }, [])
     .filter((blog) => !blog.frontMatter.draft)
     .filter((blog) => blog.frontMatter.locale === locale)
-    .filter((_, index) => index > limit)
+    .filter((_, index) => index < limit)
     .sort((a, b) => Number(new Date(b.frontMatter.date)) - Number(new Date(a.frontMatter.date)))
 }
 

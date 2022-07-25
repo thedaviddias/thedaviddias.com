@@ -21,3 +21,11 @@ h5,
 h6 {
   font-family: 'Oswald', sans-serif;
 }
+
+.small-title {
+  @apply text-sm font-title font-semibold text-gray-500 tracking-wider uppercase my-2;
+}
+
+/* .separator {
+  @apply border-t border-gray-200 dark: border-gray-600;
+} */

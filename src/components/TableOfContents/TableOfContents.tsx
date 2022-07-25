@@ -10,9 +10,7 @@ export const TableOfContents = ({ items }: TableOfContentsType) => {
   return (
     <div className="mb-2  text-gray-400 dark:text-gray-500 text-sm">
       <details open>
-        <summary className="text-sm font-title font-semibold text-gray-500 tracking-wider uppercase mb-5 hover:cursor-pointer">
-          Table of Contents
-        </summary>
+        <summary className="small-title">Table of Contents</summary>
         <ol>
           {items.map((item) => (
             <li key={item.id} className="mb-2">

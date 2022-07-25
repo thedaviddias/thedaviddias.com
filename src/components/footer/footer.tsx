@@ -33,9 +33,7 @@ export const Footer = () => {
 
             <div className="w-full sm:w-1/2 lg:w-[60%] !max-w-full flex-shrink-0 flex-grow flex justify-between text-gray-600 dark:text-gray-400">
               <div>
-                <h3 className="text-sm font-semibold text-gray-500 tracking-wider uppercase">
-                  {t('footer.general')}
-                </h3>
+                <h3 className="small-title">{t('footer.general')}</h3>
 
                 <ul className="mt-3 space-y-3">
                   {FOOTER_MENU_LINKS(t).map(({ path, label }) => (
@@ -49,9 +47,7 @@ export const Footer = () => {
               </div>
               <div></div>
               <div>
-                <h3 className="text-sm font-semibold text-gray-500 tracking-wider uppercase">
-                  {t('footer.social')}
-                </h3>
+                <h3 className="small-title">{t('footer.social')}</h3>
                 <ul className="mt-3 space-y-3">
                   {SOCIAL_LINKS.map(({ label, link }) => (
                     <li key={link}>

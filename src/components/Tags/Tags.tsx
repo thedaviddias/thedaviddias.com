@@ -13,15 +13,19 @@ export const Tags: FC<TagsProps> = ({ tags }) => {
 
   return (
     <aside className="w-full mt-3 print:hidden">
-      <div className="mb-2 uppercase tracking-widest font-semibold text-gray-400 dark:text-gray-500 text-sm">
-        {t('tags')}
-      </div>
+      <div className="small-title">{t('tags')}</div>
       <nav>
         <ul className="flex items-center space-x-5">
           {tags.map((tag) => (
-            <li key={tag} className="border border-gray-200 rounded-md">
+            <li
+              key={tag}
+              className="py-1 px-2 mr-3 mb-2 text-base font-medium leading-6 text-gray-600 bg-gray-100 dark:text-gray-100 dark:bg-gray-700
+            rounded-lg border dark:border-gray-800 border-solid cursor-pointer box-border
+            hover:bg-gray-700
+            "
+            >
               <CustomLink
-                className="!no-underline block mb-1 px-2 py-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                className="!no-underline font-medium leading-6 dark:text-gray-100 cursor-pointer"
                 href={`/tag/${slugify(tag, { lower: true })}`}
               >
                 {tag}

@@ -10,9 +10,16 @@ export const CustomLink: FC<CustomLinkProps> = ({ href, children }) => {
   const external = !href.startsWith('/')
   if (external) {
     return (
-      <a href={href} rel="noopener noreferrer" target="_blank" className="text-indigo-200">
-        {children}
-      </a>
+      <span className="not-prose">
+        <a
+          href={href}
+          rel="noopener noreferrer"
+          target="_blank"
+          className="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-800 dark:hover:text-indigo-500 hover:no-underline"
+        >
+          {children}
+        </a>
+      </span>
     )
   }
   return (

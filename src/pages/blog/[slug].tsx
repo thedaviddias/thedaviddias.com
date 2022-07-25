@@ -1,7 +1,6 @@
 import { format } from 'date-fns'
 import matter from 'gray-matter'
-import { GetStaticPaths, GetStaticPathsResult, GetStaticProps } from 'next'
-import Image from 'next/image'
+import { GetStaticPaths, GetStaticPathsResult, GetStaticProps, NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
@@ -14,6 +13,8 @@ import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import slugify from 'slugify'
 
+import { AdjacentPosts, PreviousNext } from '@/components/AdjacentPosts'
+import { Author } from '@/components/Author'
 import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
 import { H1 } from '@/components/Heading'
@@ -21,6 +22,7 @@ import { MDXComponents } from '@/components/MdxComponents'
 import { Paragraph } from '@/components/Paragraph'
 import { Share } from '@/components/Share'
 import { TableOfContents } from '@/components/TableOfContents/TableOfContents'
+import { Tags } from '@/components/Tags'
 
 import { routes } from '@/config/routes'
 import seo from '@/config/seo'
@@ -53,22 +55,19 @@ export type Headings = {
   title: string
 }
 
-type AdjacentPosts = {
-  slug: string
-  title: string
-}
-
-type Props = BlogPostProps & {
+type BlogPostPageProps = BlogPostProps & {
   source: MDXRemoteSerializeResult
   readingTime: string
   headings: Headings[]
-  adjacentPosts: {
-    previous?: AdjacentPosts
-    next?: AdjacentPosts
-  }
+  adjacentPosts: PreviousNext
 }
 
-const BlogPostPage = ({ frontMatter, source, headings, adjacentPosts }: Props) => {
+const BlogPostPage: NextPage<BlogPostPageProps> = ({
+  frontMatter,
+  source,
+  headings,
+  adjacentPosts,
+}) => {
   const {
     title,
     description,
@@ -124,7 +123,7 @@ const BlogPostPage = ({ frontMatter, source, headings, adjacentPosts }: Props) =
                     key={category}
                     href={`/category/${slugify(category, { lower: true })}`}
                     passHref
-                    className="block mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x !font-semibold"
+                    className="mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x !font-semibold"
                   >
                     {category}
                   </CustomLink>
@@ -142,47 +141,23 @@ const BlogPostPage = ({ frontMatter, source, headings, adjacentPosts }: Props) =
             </H1>
 
             <div className="flex justify-between">
-              {author && (
-                <aside className="flex items-center justify-center font-sans">
-                  <div className="flex-shrink-0 group block">
-                    <CustomLink href={routes(t).about.path}>
-                      <div className="flex items-center">
-                        <div>
-                          <Image
-                            className="inline-block rounded-full"
-                            src="/images/david-dias-round.png"
-                            width={40}
-                            height={40}
-                            alt="Profile avatar of David Dias"
-                            aria-hidden="true"
-                          />
-                        </div>
-                        <div className="ml-3 text-left">
-                          <p className="text-base font-medium text-gray-700 group-hover:text-gray-900">
-                            {author}
-                          </p>
-                          <p className="text-sm font-medium text-gray-500 group-hover:text-gray-700">
-                            About me
-                          </p>
-                        </div>
-                      </div>
-                    </CustomLink>
-                  </div>
-                </aside>
-              )}
-              <div className="flex items-center justify-center">
-                <div className="ml-3 text-right">
-                  <p className="text-base font-medium text-gray-700 group-hover:text-gray-900">
-                    <time dateTime={date}>{format(new Date(date), 'MMM dd, yyyy')}</time>{' '}
-                  </p>
-                  {lastmod && (
-                    <p className="text-sm font-medium text-gray-500 group-hover:text-gray-700">
-                      <span>(Updated on</span>{' '}
-                      <time dateTime={lastmod}>{format(new Date(lastmod), 'MMM dd, yyyy')})</time>
+              {author && <Author name={author} routes={routes} />}
+
+              {date && (
+                <div className="flex items-center justify-center">
+                  <div className="ml-3 text-right">
+                    <p className="text-base font-medium text-gray-700 dark:text-gray-400">
+                      <time dateTime={date}>{format(new Date(date), 'MMM dd, yyyy')}</time>{' '}
                     </p>
-                  )}
+                    {lastmod && (
+                      <p className="text-sm font-medium text-gray-500 group-hover:text-gray-700">
+                        <span>({t('posts.updated')}`</span>{' '}
+                        <time dateTime={lastmod}>{format(new Date(lastmod), 'MMM dd, yyyy')})</time>
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </header>
           <div className="block lg:flex w-full">
@@ -200,58 +175,10 @@ const BlogPostPage = ({ frontMatter, source, headings, adjacentPosts }: Props) =
                     </Paragraph>
                   )}
                 </section>
-                {tags && (
-                  <aside className="w-full mt-3 print:hidden">
-                    <div className="mb-2 uppercase tracking-widest font-semibold text-gray-400 dark:text-gray-500 text-sm">
-                      Tags
-                    </div>
-                    <nav>
-                      <ul className="flex items-center space-x-5">
-                        {tags.map((tag) => (
-                          <li key={tag} className="border border-gray-200 rounded-md px-2 py-1">
-                            <CustomLink
-                              className="block mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-                              href={`/tag/${slugify(tag, { lower: true })}`}
-                            >
-                              {tag}
-                            </CustomLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </nav>
-                  </aside>
-                )}
 
-                {adjacentPosts && (
-                  <div className="mt-20">
-                    <nav aria-label="Posts">
-                      <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="nav-previous">
-                          {adjacentPosts.previous && (
-                            <CustomLink href={adjacentPosts.previous.slug}>
-                              <span className="text-base mb-2"></span>
-                              <span className="sr-only">Previous post:</span>
-                              <span className="text-primary-500 leading-6">
-                                {adjacentPosts.previous.title}
-                              </span>
-                            </CustomLink>
-                          )}
-                        </div>
-                        <div className="nav-next text-right">
-                          {adjacentPosts.next && (
-                            <CustomLink href={adjacentPosts.next.slug}>
-                              <span className="text-base mb-2">Next: </span>
-                              <span className="sr-only">Next post:</span>
-                              <span className="text-primary-500 leading-6">
-                                {adjacentPosts.next.title}
-                              </span>
-                            </CustomLink>
-                          )}
-                        </div>
-                      </div>
-                    </nav>
-                  </div>
-                )}
+                {tags && <Tags tags={tags} />}
+
+                {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
               </div>
             </div>
 

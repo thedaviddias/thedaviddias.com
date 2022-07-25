@@ -5,6 +5,7 @@
     "greetings2": " I'm David Dias",
     "presentation": "I'm a Front-End Developer, podcaster, content creator passionate about solving digital and human problems! I enjoy meeting new people, building communities and talking about tech, expatriation and web."
   },
+  "date_format": "MMM dd, yyyy",
   "a11y": {
     "skipContent": "Skip to content"
   },
@@ -27,7 +28,9 @@
     "theme": "Change theme"
   },
   "blog": {
-    "latest-posts": "Lastest blog posts"
+    "latest-posts": "Lastest blog posts",
+    "previous": "Previous post",
+    "next": "Next post"
   },
   "footer": {
     "general": "General",
@@ -50,8 +53,10 @@
   "posts": {
     "empty": "No articles found for that query.",
     "viewAll": "→ View all blog posts",
-    "continue": "Continue reading →"
+    "continue": "Continue reading →",
+    "updated": "Updated on"
   },
+  "tags": "Tags",
   "404": {
     "title": "Sorry 😩, this page can't be found.",
     "seo": {

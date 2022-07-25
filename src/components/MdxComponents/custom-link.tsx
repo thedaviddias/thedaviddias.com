@@ -10,7 +10,7 @@ export const CustomLink: FC<CustomLinkProps> = ({ href, children }) => {
   const external = !href.startsWith('/')
   if (external) {
     return (
-      <a href={href} rel="noopener noreferrer" target="_blank">
+      <a href={href} rel="noopener noreferrer" target="_blank" className="text-indigo-200">
         {children}
       </a>
     )

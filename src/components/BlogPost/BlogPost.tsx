@@ -49,7 +49,7 @@ export const BlogPost = ({
                 )}
               </div>
             )}
-            <div className="inline-block lg:block !text-gray-500 dark:!text-gray-400 !font-medium !mb-1 align-top">
+            <div className="inline-block lg:block !text-gray-500 dark:text-gray-300 !font-medium !mb-1 align-top">
               <time dateTime={post.frontMatter.date.toString()}>
                 {format(new Date(post.frontMatter.date.toString()), 'MMM dd, yyyy')}
               </time>
@@ -57,7 +57,7 @@ export const BlogPost = ({
           </div>
         </div>
         <CustomLink
-          className="!no-underline !text-gray-800 hover:!text-black dark:!text-gray-200 dark:hover:!text-white !text-sm sm:!text-base sm:!text-lg !font-semibold !mt-2 !mb-1 sm:!mt-4 block"
+          className="!text-gray-800 hover:!text-black dark:!text-gray-200 dark:hover:!text-white !text-sm sm:!text-base sm:!text-lg !font-semibold !mt-2 !mb-1 sm:!mt-4 block"
           href={`/blog/${post.slug}`}
         >
           {t('posts.continue')}

@@ -20,7 +20,7 @@ export const Header = ({ pathname }) => {
               passHref
               className="font-extrabold text-2xl lg:text-xl sm:mt-[-3px] sm:mr-6"
             >
-              The David Dias
+              {t('title')}
             </CustomLink>
             <nav className="hidden sm:flex">
               {MENU_LINKS(t).map((item) => (
@@ -31,7 +31,7 @@ export const Header = ({ pathname }) => {
                   aria-current={pathname === item.path ? 'page' : undefined}
                   className={
                     pathname === item.path
-                      ? 'mr-10 font-bold'
+                      ? 'mr-10 font-bold !no-underline'
                       : 'mr-10 hover:text-black hover:underline dark:hover:text-white'
                   }
                 >

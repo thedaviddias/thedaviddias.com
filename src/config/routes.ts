@@ -25,10 +25,6 @@ export const routes = (translate: Translate) => ({
       url: 'blog',
     }),
   },
-  // bookmarks: {
-  //   label: translate('nav.bookmarks'),
-  //   path: '/bookmarks',
-  // },
   uses: {
     label: translate('nav.uses'),
     path: '/uses',
@@ -47,6 +43,10 @@ export const routes = (translate: Translate) => ({
       url: 'about',
     }),
   },
+  // bookmarks: {
+  //   label: translate('nav.bookmarks'),
+  //   path: '/bookmarks',
+  // },
   // analytics: {
   //   label: translate('footer.extra_links.analytics'),
   //   path: 'https://plausible.io/thedaviddias.dev',

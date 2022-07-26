@@ -66,7 +66,6 @@ export const getPostBySlug = (slug: string, dataType: string) => {
   }
 }
 
-
 type GetAllPostsWithFrontMatter = {
   dataType: string
   filterByTag?: string | null
@@ -84,7 +83,7 @@ export const getAllPostsWithFrontMatter = ({
 }: GetAllPostsWithFrontMatter): BlogPostProps[] => {
   const blogs = getAllPosts(dataType)
 
-  return blogs
+  const allBlogs = blogs
     .reduce((allPosts, filename) => {
       const source = fs.readFileSync(
         path.join(process.cwd(), 'content', dataType, filename),
@@ -138,8 +137,11 @@ export const getAllPostsWithFrontMatter = ({
     }, [])
     .filter((blog) => !blog.frontMatter.draft)
     .filter((blog) => blog.frontMatter.locale === locale)
-    .filter((_, index) => index < limit)
-    .sort((a, b) => dateSortDesc(Number(new Date(a.frontMatter.date)), Number(new Date(b.frontMatter.date))))
+    .sort((a, b) =>
+      dateSortDesc(Number(new Date(a.frontMatter.date)), Number(new Date(b.frontMatter.date)))
+    )
+
+  return allBlogs.slice(0, limit)
 }
 
 export type TagOptions = {

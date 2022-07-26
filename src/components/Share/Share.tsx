@@ -11,9 +11,10 @@ type ShareProps = {
 export const Share: FC<ShareProps> = ({ slug, title, tags }) => {
   const arr: string[] = []
 
-  tags?.map((tag: string) => {
-    arr.push(`#${camelCase(tag)}`)
-  })
+  tags &&
+    tags?.map((tag: string) => {
+      arr.push(`#${camelCase(tag)}`)
+    })
 
   const hashtags = arr.join(' ')
 

@@ -43,7 +43,7 @@ This will install a new application using a basic Next.js boilerplate. Don't for
 
 Once your Next.js project is locally created, you can create a new project on Github and push the code generated.
 
-*(For those you are new to coding, feel free to [follow these steps](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-new-repository) to create a new repository on Github.)*
+_(For those you are new to coding, feel free to [follow these steps](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-new-repository) to create a new repository on Github.)_
 
 ## Setting up your Netlify project
 
@@ -90,6 +90,7 @@ Now that your CLI is authorized to communicate with your Netlify account, it's t
 # create a new Netlify site using the Netlify shortcut: ntl
 ntl init
 ```
+
 The first question you are asked is if you want to connect this directory to an existing Netlify site or create & configure a new site. Choose **Create & configure a new site**:
 
 ![Connect to an existing directory or create and configure a new site](/images/blog/connect-existing-direction.jpeg)
@@ -141,7 +142,7 @@ Don't worry, like the build, we will create our preview URL using Github actions
 
 If you have been using Next.js you are aware of the capability to do the server-side rendering. But usually, you will need to configure a Node server and that's something we don't want to have to deal with. Around October 2020, the Netlify team started working on `next-on-netlify`, a utility to enable SSR in Next.js on Netlify. That's what we are going to use here.
 
-*(In case you are not interested in Github Actions and want to use Netlify to build your project, take a look at how to use the [Next on Netlify Plugin](https://github.com/netlify/netlify-plugin-nextjs). It directly wraps your Next.js app and doesn't need as much configuration as we are going to explain.)*
+_(In case you are not interested in Github Actions and want to use Netlify to build your project, take a look at how to use the [Next on Netlify Plugin](https://github.com/netlify/netlify-plugin-nextjs). It directly wraps your Next.js app and doesn't need as much configuration as we are going to explain.)_
 
 Let's start by installing our utility:
 
@@ -189,7 +190,8 @@ Remember the file that was automatically created and called `netlify.toml`? You 
   functions = "out_functions"
   publish   = "out_publish"
 ```
-Technically, when `next-on-netlify` will run, it will take what is in these folders and host it on Netlify. ***DO NOT CHANGE*** the name of these folders as these are hardcoded into the utility.
+
+Technically, when `next-on-netlify` will run, it will take what is in these folders and host it on Netlify. **_DO NOT CHANGE_** the name of these folders as these are hardcoded into the utility.
 
 Don't forget to add these line to your `.gitignore` file
 
@@ -206,10 +208,10 @@ The netlify configuration is now done, all dependencies installed, it's time to 
 
 Go to your `Github project > Settings > Secrets > New repository secret`
 
-| Actions secret name  | Comments                                                                                                                       |
-|----------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| `NETLIFY_AUTH_TOKEN` | Request your token [here](https://app.netlify.com/user/applications#personal-access-tokens)                                    |
-| `NETLIFY_SITE_ID`    | The site to where deploy your site (get it from the API ID on your Site Settings)                                              |
+| Actions secret name  | Comments                                                                                    |
+| -------------------- | ------------------------------------------------------------------------------------------- |
+| `NETLIFY_AUTH_TOKEN` | Request your token [here](https://app.netlify.com/user/applications#personal-access-tokens) |
+| `NETLIFY_SITE_ID`    | The site to where deploy your site (get it from the API ID on your Site Settings)           |
 
 ![Screenshot of the Actions secrets page on Github](/images/blog/actions-secrets-netlify.jpeg)
 
@@ -268,17 +270,18 @@ jobs:
         with:
           args: deploy -m 'v${{ steps.package-version.outputs.current-version}} ・ ${{ github.head_ref }}'
 ```
+
 ### Detailed explanation of the main workflow file
 
-1. ***Give a name*** to your Github action
-2. Choose which ***type of the event*** should trigger this action, you can use push instead of pull_request, it's up to you.
-3. Specify on ***which system*** this action should be launched, I choose the latest version of Ubuntu (Linux).
-4. ***Checkout your code***
-5. ***Cache your node modules*** and the .next/cache folder. When you will first run this action, it will take some time. On the second launch, the action will take the modules that exist in the cache and will then proceed way faster.
-6. Specify the ***version of Node*** you want to use, in my case, I choose the most recent version of Node 14th.
-7. ***Install the dependencies*** of your project.
-8. ***Build your project***. Remember that after the build, the post-build command will be launch. This is what you should see in the `build` logs in your Github Action tab:
-![Screenshot of the build-in Github Action](/images/blog/build-in-github-action-netlify.jpeg)
+1. **_Give a name_** to your Github action
+2. Choose which **_type of the event_** should trigger this action, you can use push instead of pull_request, it's up to you.
+3. Specify on **_which system_** this action should be launched, I choose the latest version of Ubuntu (Linux).
+4. **_Checkout your code_**
+5. **_Cache your node modules_** and the .next/cache folder. When you will first run this action, it will take some time. On the second launch, the action will take the modules that exist in the cache and will then proceed way faster.
+6. Specify the **_version of Node_** you want to use, in my case, I choose the most recent version of Node 14th.
+7. **_Install the dependencies_** of your project.
+8. **_Build your project_**. Remember that after the build, the post-build command will be launch. This is what you should see in the `build` logs in your Github Action tab:
+   ![Screenshot of the build-in Github Action](/images/blog/build-in-github-action-netlify.jpeg)
 9. I added lint and test commands, which I commented. You can use these to trigger ESLint, Jest (even Cypress) or any other plugin that ensures your code doesn't have any issue.
 10. Finally, we trigger the Netlify deployment to deploy our Next.js app to Netlify. 🎉
 
@@ -289,6 +292,7 @@ You may have seen an argument passed to the Netlify deploy:
 ```yml:.github/workflows/main.yml
 args: deploy -m 'v${{ steps.package-version.outputs.current-version}} ・ ${{ github.head_ref }}'
 ```
+
 This will add a message for each Deploy Preview, a way to keep track of which PR generated which Deploy.
 
 ![Screenshot of the Deploy page on Netlify](/images/blog/deploy-netlify-preview.jpeg)
@@ -322,6 +326,7 @@ The next step for you now will be to add some linting rules and tests to ensure 
 Feel free to [download or fork the `next-netlify-github-actions-starter`](https://github.com/thedaviddias/next-netlify-github-actions-starter), open an issue if you find any problem or send me any suggestion to make it better!
 
 ### Sources:
+
 - [How to Deploy Next.js Sites to Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/) by Jason Lengstorf
 - [Preview Mode for Next.js now fully supported on Netlify](https://www.netlify.com/blog/2020/10/27/preview-mode-for-next.js-now-fully-supported-on-netlify/) by Cassidy Williams
 - [Announcing one-click install Next.js Build Plugin on Netlify](https://www.netlify.com/blog/2020/12/07/announcing-one-click-install-next.js-build-plugin-on-netlify/) by Cassidy Williams

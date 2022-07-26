@@ -1,4 +1,3 @@
-
 import matter from 'gray-matter'
 import { GetStaticPaths, GetStaticPathsResult, GetStaticProps, NextPage } from 'next'
 import { useRouter } from 'next/router'
@@ -73,17 +72,8 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
   permalink,
   adjacentPosts,
 }) => {
-  const {
-    title,
-    description,
-    tags,
-    categories,
-    date,
-    lastmod,
-    author,
-    preview,
-    published,
-  } = frontMatter
+  const { title, description, tags, categories, date, lastmod, author, preview, published } =
+    frontMatter
   const { isFallback } = useRouter()
   const { t } = useTranslation('common')
 
@@ -155,7 +145,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
             <div className="max-w-full">
               <div className=" w-[40em] lg:w-[37rem] !max-w-full">
                 <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl !max-w-full mb-10">
-                  <MDXRemote {...source} components={MDXComponents} />
+                  <MDXRemote {...source} components={MDXComponents} lazy />
 
                   {published?.publishedUrl && (
                     <Paragraph className="italic pt-8">
@@ -232,10 +222,10 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
         lastmod,
         author,
         publishedOn,
-        publishedUrl
+        publishedUrl,
       },
       permalink,
-      readingTime
+      readingTime,
     } = postContent
 
     return {

@@ -3,7 +3,7 @@ draft: false
 locale: fr
 title: Outils et astuces pour rendre accessible et performante son application React
 date: 2018-12-24T02:34:11.000Z
-description: ""
+description: ''
 author: David Dias
 categories:
   - code
@@ -18,6 +18,7 @@ L’accessibilité et la performance sont deux (vastes) sujets qui m’ont toujo
 Que vous connaissiez React ou pas, que vous utilisiez un framework JavaScript ou que vous développiez un simple site web en HTML et CSS, les outils et astuces que j’ai rassemblé dans cet article vous permettront de mieux appréhender ces problématiques et d’y répondre correctement dans vos projets (présents et futurs).
 
 ## TOUT LE MONDE A BESOIN D’ACCESSIBILITÉ
+
 L’accessibilité (aussi appelée a11y) est un sujet qui a toujours été présent depuis le début du web.
 
 Encore de nos jours, certaines entreprises et même développeurs continuent pourtant de penser que l’accessibilité est un sujet à part… tout comme certains pensaient il y a quelques années que l’UX (Expérience Utilisateur) n’était pas importante… Hum hum. Je vais prendre un exemple très simple pour vous démontrer l’importance de rendre un site internet ou une application web accessible.
@@ -29,6 +30,7 @@ Je ne pense pas avoir besoin d’aller plus loin. J’ai beaucoup d’autre exem
 La documentation de React consacre toute une page concernant l’accessibilité et vous y trouverez des éléments complémentaires au contenu de mon article.
 
 ## MES OUTILS DE BASE POUR « MESURER ET ANALYSER »
+
 Que vous veniez de commencer à développer votre application ou que vous deviez optimiser un projet existant, il y a certains outils que vous pouvez utiliser pour vous donner un aperçu du statut de votre projet.
 
 Lighthouse
@@ -48,7 +50,6 @@ Lecteur vidéo
 
 00:00
 00:03
-
 
 … et les autres
 Dareboost (entreprise française) et Calibre sont d’autres services que j’utilise selon les projets et que vous pouvez tester gratuitement pour une durée ou un nombre de fois limité.
@@ -109,7 +110,6 @@ Lecteur vidéo
 00:00
 00:06
 
-
 Choisir une meilleure alternative
 Si webpack-bundle-analyser a mis un évidence certains modules qui pourraient impacter vos performances, vous pouvez alors utiliser Bundlephobia pour choisir d’autres modules équivalents (et plus léger). Un simple exemple avec la fameuse librairie Moment.js qui en général est utilisée à tort et à travers et qui pourrait très souvent être remplacée par d’autres librairies beaucoup plus petites.
 
@@ -117,8 +117,6 @@ Avant de choisir d’utiliser quelqueconque plugin, n’hésitez pas à vous dem
 
 Analyser vos props pour éviter le rendu inutile
 Le module why-did-you-update peut vous permettre de vous alerter lorsque vos props sont re-rendu inutilement.
-
-
 
 Il vous suffit d’installer le package dans votre projet et insérer ce bout de code dans votre app.js :
 
@@ -131,7 +129,9 @@ whyDidYouUpdate(React);
 }
 
 ```
+
 ## ASTUCES POUR AMÉLIORER LES PERFORMANCES DE VOTRE APPLICATION REACT
+
 Utiliser le tree-shaking
 Le « tree-shaking » est une technique qui permet, à la création de votre bundle, de ne pas inclure du « code mort » dont vous n’avez pas besoin. Vous vous retrouvez donc avec un bundle plus léger.
 

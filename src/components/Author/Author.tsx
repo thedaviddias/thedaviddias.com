@@ -6,6 +6,7 @@ import { CustomLink } from '@/components/CustomLink'
 
 type AuthorProps = {
   name: string
+  routes: any
 }
 
 export const Author: FC<AuthorProps> = ({ name, routes }) => {

@@ -9,7 +9,7 @@
     }
   ],
   "frontMatter.telemetry.disable": false,
-  "frontMatter.panel.freeform": false,
+  "frontMatter.panel.freeform": true,
   "frontMatter.templates.enabled": true,
   "frontMatter.content.autoUpdateDate": false,
   "frontMatter.dashboard.openOnStart": true,
@@ -21,7 +21,9 @@
     "astuces",
     "aws-amplify",
     "best-practices",
+    "collaboration",
     "front-end-checklist",
+    "front-end-development",
     "github",
     "github-actions",
     "life",
@@ -35,7 +37,9 @@
     "psychology",
     "react",
     "self-improvement",
+    "teamwork",
     "two-factor-authentication",
+    "ui",
     "ux"
   ],
   "frontMatter.taxonomy.contentTypes": [
@@ -52,10 +56,7 @@
           "title": "locale",
           "name": "locale",
           "type": "choice",
-          "choices": [
-            "en",
-            "fr"
-          ]
+          "choices": ["en", "fr"]
         },
         {
           "title": "type",
@@ -81,9 +82,7 @@
           "title": "Author",
           "name": "author",
           "type": "choice",
-          "choices": [
-            "David Dias"
-          ]
+          "choices": ["David Dias"]
         },
         {
           "title": "Publishing date",
@@ -116,11 +115,6 @@
           "title": "Previously published URL",
           "name": "publishedUrl",
           "type": "string"
-        },
-        {
-          "title": "canonical",
-          "name": "canonical",
-          "type": "string"
         }
       ]
     }
@@ -129,10 +123,11 @@
     "code",
     "coding",
     "expatriation",
+    "management",
     "productivity",
     "reflexion",
-    "security",
-    "side-project"
+    "side-project",
+    "user-experience"
   ],
   "frontMatter.data.files": [
     {
@@ -144,10 +139,7 @@
       "schema": {
         "title": "Social Medias",
         "type": "object",
-        "required": [
-          "label",
-          "link"
-        ],
+        "required": ["label", "link"],
         "properties": {
           "label": {
             "type": "string",
@@ -169,10 +161,7 @@
       "schema": {
         "title": "Category",
         "type": "object",
-        "required": [
-          "id",
-          "description"
-        ],
+        "required": ["id", "description"],
         "properties": {
           "id": {
             "type": "string",

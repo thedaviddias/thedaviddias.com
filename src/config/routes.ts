@@ -1,21 +1,18 @@
 import { Translate } from 'next-translate'
 
-import { defaultSEO, extendSEO } from './seo'
+import { defaultSEO, extendSEO, SEOProps } from './seo'
 
-export type RoutesResponse = {
-  [key: string]: {
-    label: string
-    path: string
-    seo: {
-      title: string
-      description: string
-      image: string
-      url: string
+export interface RoutesResponse {
+  (param: Translate): {
+    [key: string]: {
+      label: string
+      path: string
+      seo: SEOProps
     }
   }
 }
 
-export const routes: RoutesResponse = (translate: Translate) => ({
+export const routes: RoutesResponse = (translate) => ({
   error404: {
     label: translate('404.title'),
     seo: extendSEO({

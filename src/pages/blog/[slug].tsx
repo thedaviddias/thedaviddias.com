@@ -7,7 +7,7 @@ import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { ReadTimeResults } from 'reading-time'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypeImgSize from 'rehype-img-size'
+import rehypeImagePlaceholder from 'rehype-image-placeholder'
 import rehypePrismPlus from 'rehype-prism-plus'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
@@ -29,8 +29,8 @@ import { Tags } from '@/components/Tags'
 import { routes } from '@/config/routes'
 import seo from '@/config/seo'
 import { getAdjacentPosts, getAllPosts, getPost, getPostBySlug } from '@/utils/get-blog-posts'
-import rehypeExtractHeadings from '@/utils/rehype-extract-headings'
-import remarkCodeTitles from '@/utils/remark-code-titles'
+import { rehypeExtractHeadings } from '@/utils/rehype-extract-headings'
+import { remarkCodeTitles } from '@/utils/remark-code-titles'
 
 export type BlogPostProps = {
   frontMatter: {
@@ -255,7 +255,7 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
             remarkPlugins: [remarkGfm, remarkCodeTitles],
             rehypePlugins: [
               [rehypePrismPlus, { ignoreMissing: true }],
-              [rehypeImgSize, { dir: 'public/' }],
+              [rehypeImagePlaceholder, { dir: 'public/' }],
               rehypeSlug,
               [rehypeAutolinkHeadings],
               [rehypeExtractHeadings, { rank: 2, headings }],

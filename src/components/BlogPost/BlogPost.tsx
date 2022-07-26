@@ -1,19 +1,19 @@
 import { format } from 'date-fns'
 import useTranslation from 'next-translate/useTranslation'
+import { FC } from 'react'
 import slugify from 'slugify'
 
 import { CustomLink } from '@/components/CustomLink'
 import { H2 } from '@/components/Heading'
 
-import type { BlogPost as BlogPostTypes } from '@/types/blog-post'
+import { BlogPostProps as BlogPostTypes } from '@/pages/blog/[slug]'
 
-export const BlogPost = ({
-  post,
-  isCategoryPage,
-}: {
+type BlogPostProps = {
   post: BlogPostTypes
   isCategoryPage?: string | string[]
-}) => {
+}
+
+export const BlogPost: FC<BlogPostProps> = ({ post, isCategoryPage }) => {
   const { t } = useTranslation('common')
 
   return (

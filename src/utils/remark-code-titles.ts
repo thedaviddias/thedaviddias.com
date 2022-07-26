@@ -1,8 +1,13 @@
-import { visit } from 'unist-util-visit'
+import { Parent, visit } from 'unist-util-visit'
 
-export default function remarkCodeTitles() {
-  return (tree: unknown & { lang?: string }) =>
-    visit(tree, 'code', (node: unknown & { lang?: string }, index, parent: unknown) => {
+/**
+ * Add title support for code blocks
+ *
+ * @returns
+ */
+export const remarkCodeTitles = () => {
+  return (tree: Parent & { lang?: string }) =>
+    visit(tree, 'code', (node: Parent & { lang?: string }, index, parent: Parent) => {
       const nodeLang = node.lang || ''
       let language = ''
       let title = ''

@@ -1,11 +1,15 @@
 import useTranslation from 'next-translate/useTranslation'
-import { useState } from 'react'
+import { FC, useState } from 'react'
 
 import { MENU_LINKS } from '@/constants'
 
 import { CustomLink } from '../CustomLink'
 
-export const Header = ({ pathname }) => {
+type HeaderProps = {
+  pathname: string
+}
+
+export const Header: FC<HeaderProps> = ({ pathname }) => {
   const { t } = useTranslation('common')
 
   const [mobileMenuState, setMobileMenuState] = useState(false)

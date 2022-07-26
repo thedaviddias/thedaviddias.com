@@ -5,15 +5,8 @@ on: [push, pull_request]
 jobs:
   lint:
     name: Lint
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
-    strategy:
-      fail-fast: false
-      matrix:
-        pnpm:
-          - 4.11.1
-        os:
-          - ubuntu-latest
     steps:
       - name: Git checkout
         uses: actions/checkout@v3
@@ -21,10 +14,11 @@ jobs:
       - name: Detect Node version
         run: echo "##[set-output name=version;]$(cat .nvmrc)"
         id: nvmrc
+
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '${{ steps.nvmrc.outputs.version }}'
+          node-version: "${{ steps.nvmrc.outputs.version }}"
 
       - uses: pnpm/action-setup@v2.0.1
         name: Install pnpm
@@ -51,3 +45,6 @@ jobs:
 
       - name: Lint files
         run: pnpm lint
+
+      - name: Build
+        run: pnpm run build

@@ -11,12 +11,11 @@ import { H5 } from '@/components/Heading'
 
 import { routes } from '@/config/routes'
 import { HERO_LINKS } from '@/constants'
+import { BlogPostProps } from '@/pages/blog/[slug]'
 import { getAllPostsWithFrontMatter } from '@/utils/get-blog-posts'
 
-import { BlogPost as BlogPostComponent } from './blog/[slug]'
-
 type HomeProps = {
-  posts: BlogPostComponent[]
+  posts: BlogPostProps[]
 }
 
 const Home: NextPage<HomeProps> = ({ posts }) => {
@@ -28,7 +27,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         title={routes(t).home.seo.title}
         description={routes(t).home.seo.description}
         titleTemplate="%s"
-        openGraph={routes(t).home.seo.openGraph}
+        openGraph={routes(t).home.seo}
       />
 
       <main>

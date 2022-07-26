@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: "${{ steps.nvmrc.outputs.version }}"
+          node-version: '${{ steps.nvmrc.outputs.version }}'
 
       - uses: pnpm/action-setup@v2.0.1
         name: Install pnpm
@@ -42,9 +42,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-
-      - name: Lint files
-        run: pnpm lint
 
       - name: Build
         run: pnpm run build

@@ -1,8 +1,7 @@
 import { FormEvent, useState } from 'react'
-import useSWR from 'swr'
 
-import fetcher from '@/utils/fetcher'
-
+// import useSWR from 'swr'
+// import fetcher from '@/utils/fetcher'
 import { H2 } from '../Heading'
 
 export enum Form {
@@ -19,7 +18,7 @@ export type FormState = {
 
 export const Newsletter = () => {
   const [form, setForm] = useState<FormState>({ state: Form.Initial })
-  const { data } = useSWR('/api/newsletter/subscribers', fetcher)
+  // const { data } = useSWR('/api/newsletter/subscribers', fetcher)
 
   const subscribe = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()

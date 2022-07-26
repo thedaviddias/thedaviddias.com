@@ -26,6 +26,9 @@ module.exports = {
       version: 'detect',
     },
     'import/resolver': {
+      node: {
+        extensions: ['.ts', '.tsx'],
+      },
       typescript: {
         project: './tsconfig.json',
       },

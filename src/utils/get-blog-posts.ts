@@ -4,6 +4,8 @@ import path from 'path'
 import readingTime from 'reading-time'
 import slugify from 'slugify'
 
+import { PreviousNext } from '@/components/AdjacentPosts'
+
 import { BlogPostProps } from '@/pages/blog/[slug]'
 
 export const createPermalink = (filename, dataType) => {
@@ -184,12 +186,7 @@ export async function getCategories(dataType: string) {
   return categories[dataType]
 }
 
-export interface AdjacentPosts {
-  previous: { slug: string; title: string } | null
-  next: { slug: string; title: string } | null
-}
-
-export function getAdjacentPosts(slug: string): AdjacentPosts {
+export function getAdjacentPosts(slug: string): PreviousNext {
   const allPostHeaders = getAllPostsWithFrontMatter({ dataType: 'blog' })
 
   const postIndex = allPostHeaders.findIndex((postHeader) => postHeader?.slug === slug)
@@ -198,15 +195,15 @@ export function getAdjacentPosts(slug: string): AdjacentPosts {
       postIndex <= 0
         ? null
         : {
-            slug: allPostHeaders[postIndex - 1]!.permalink,
-            title: allPostHeaders[postIndex - 1]!.frontMatter.title,
+            slug: allPostHeaders[postIndex - 1]?.permalink,
+            title: allPostHeaders[postIndex - 1]?.frontMatter.title,
           },
     next:
       postIndex >= allPostHeaders.length - 1
         ? null
         : {
-            slug: allPostHeaders[postIndex + 1]!.permalink,
-            title: allPostHeaders[postIndex + 1]!.frontMatter.title,
+            slug: allPostHeaders[postIndex + 1]?.permalink,
+            title: allPostHeaders[postIndex + 1]?.frontMatter.title,
           },
   }
 }

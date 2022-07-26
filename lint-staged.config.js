@@ -5,7 +5,8 @@ const removeIgnoredFiles = async (files) => {
   const isIgnored = await Promise.all(
     files.map((file) => {
       return eslint.isPathIgnored(file)
-    }))
+    })
+  )
   const filteredFiles = files.filter((_, i) => !isIgnored[i])
   return filteredFiles.join(' ')
 }
@@ -17,23 +18,18 @@ module.exports = {
   // Lint then format TypeScript and JavaScript files
   '**/*.(ts|tsx|js)': async (files) => {
     const filesToLint = await removeIgnoredFiles(files)
-    return filesToLint
-      ? [
-        `eslint --fix --max-warnings=0 ${filesToLint}`,
-        `prettier --write ${filesToLint}`
-      ]
-      : []
+    return filesToLint ? [`eslint --fix ${filesToLint}`, `prettier --write ${filesToLint}`] : []
   },
 
   // Lint then format JSON files
   '/**/*.json,!package.json,!package-lock.json': async (files) => {
     const filesToLint = await removeIgnoredFiles(files)
-    return [`eslint --fix --max-warnings=0 ${filesToLint}`, `prettier --write ${filesToLint}`]
+    return [`eslint --fix ${filesToLint}`, `prettier --write ${filesToLint}`]
   },
 
   // Format YAML, MarkDown, JSON
   '**/*.(yml|md)': (filenames) => `prettier --write ${filenames.join(' ')}`,
 
   // Format the package.json
-  'package.json': 'npx sort-package-json',
+  // 'package.json': 'npx sort-package-json',
 }

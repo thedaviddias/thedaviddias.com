@@ -17,18 +17,16 @@
   "frontMatter.framework.startCommand": "pnpm dev",
   "frontMatter.preview.host": "http://localhost:3000/",
   "frontMatter.taxonomy.tags": [
-    "accessibilite",
+    "a11y",
     "astuces",
-    "aws-amplify",
+    "aws",
     "best-practices",
     "collaboration",
     "front-end-checklist",
     "front-end-development",
     "github",
     "github-actions",
-    "life",
     "life-lessons",
-    "meditation",
     "morning-routines",
     "netlify",
     "nextjs",
@@ -36,11 +34,12 @@
     "performance",
     "psychology",
     "react",
+    "security",
     "self-improvement",
     "teamwork",
-    "two-factor-authentication",
+    "typescript",
     "ui",
-    "ux"
+    "user-experience"
   ],
   "frontMatter.taxonomy.contentTypes": [
     {

@@ -4,9 +4,11 @@ import { FC } from 'react'
 
 import { CustomLink } from '@/components/CustomLink'
 
+import { RoutesResponse } from '@/config/routes'
+
 type AuthorProps = {
   name: string
-  routes: any
+  routes: RoutesResponse
 }
 
 export const Author: FC<AuthorProps> = ({ name, routes }) => {

@@ -1,9 +1,8 @@
-import { Parent } from 'unist'
 import { visit } from 'unist-util-visit'
 
 export default function remarkCodeTitles() {
-  return (tree: Parent & { lang?: string }) =>
-    visit(tree, 'code', (node: Parent & { lang?: string }, index, parent: Parent) => {
+  return (tree: unknown & { lang?: string }) =>
+    visit(tree, 'code', (node: unknown & { lang?: string }, index, parent: unknown) => {
       const nodeLang = node.lang || ''
       let language = ''
       let title = ''

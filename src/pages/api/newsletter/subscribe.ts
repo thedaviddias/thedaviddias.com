@@ -16,7 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   })
   const subscribers = await existingSubscribers.json()
 
-  if (subscribers.some((sub) => sub.email === email)) {
+  if (subscribers.some((sub: { email: string }) => sub.email === email)) {
     return res.status(201).json({ error: '', message: `You're already subscribed! 😊` })
   }
 

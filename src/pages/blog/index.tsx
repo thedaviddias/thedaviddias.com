@@ -29,7 +29,7 @@ const Blog = ({ posts }: BlogProps) => {
       <NextSeo
         title={routes(t).blog.seo.title}
         description={routes(t).blog.seo.description}
-        openGraph={routes(t).blog.seo.openGraph}
+        openGraph={routes(t).blog.seo}
       />
       <main className="divide-slate-200 sm:space-y-16 lg:max-w-none">
         <section className="pt-10 border-none">

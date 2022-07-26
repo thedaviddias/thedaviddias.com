@@ -27,7 +27,7 @@ export const Newsletter = () => {
 
     const res = await fetch('/api/newsletter/subscribe', {
       body: JSON.stringify({
-        email: e.currentTarget.elements['email'].value,
+        // email: e.currentTarget.elements['email'].value,
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ export const Newsletter = () => {
             className="px-4 py-3 rounded-lg"
           />
           <button aria-label="Subscribe" type="submit" name="subscribe">
-            Join {data?.count}+ subscribers
+            {/* Join {data?.count}+ subscribers */}
           </button>
         </form>
         {form.state === Form.Success && <p>{form.message}</p>}

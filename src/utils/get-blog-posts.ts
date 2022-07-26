@@ -8,7 +8,7 @@ import { PreviousNext } from '@/components/AdjacentPosts'
 
 import { BlogPostProps } from '@/pages/blog/[slug]'
 
-export const createPermalink = (filename, dataType) => {
+export const createPermalink = (filename: string, dataType: string) => {
   const filenameNoExtension = filename.replace('.mdx', '')
   const permalink = `/${dataType}/${filenameNoExtension}`
 
@@ -86,7 +86,7 @@ export const getAllPostsWithFrontMatter = ({
   const blogs = getAllPosts(dataType)
 
   const allBlogs = blogs
-    .reduce((allPosts, filename) => {
+    .reduce((allPosts: any, filename: string) => {
       const source = fs.readFileSync(
         path.join(process.cwd(), 'content', dataType, filename),
         'utf8'
@@ -137,9 +137,9 @@ export const getAllPostsWithFrontMatter = ({
         ...allPosts,
       ]
     }, [])
-    .filter((blog) => !blog.frontMatter.draft)
-    .filter((blog) => blog.frontMatter.locale === locale)
-    .sort((a, b) =>
+    .filter((blog: BlogPostProps) => !blog.frontMatter.draft)
+    .filter((blog: BlogPostProps) => blog.frontMatter.locale === locale)
+    .sort((a: BlogPostProps, b: BlogPostProps) =>
       dateSortDesc(Number(new Date(a.frontMatter.date)), Number(new Date(b.frontMatter.date)))
     )
 

@@ -5,7 +5,7 @@ interface Props {
 }
 
 export const Pre = ({ children }: Props) => {
-  const textInput = useRef(null)
+  const textInput = useRef<HTMLPreElement>(null)
   const [hovered, setHovered] = useState(false)
   const [copied, setCopied] = useState(false)
 
@@ -18,14 +18,14 @@ export const Pre = ({ children }: Props) => {
   }
   const onCopy = () => {
     setCopied(true)
-    navigator.clipboard.writeText(textInput?.current?.textContent)
+    textInput.current?.textContent && navigator.clipboard.writeText(textInput.current.textContent)
     setTimeout(() => {
       setCopied(false)
     }, 2000)
   }
 
   return (
-    <div ref={textInput} onMouseEnter={onEnter} onMouseLeave={onExit} className="relative">
+    <div onMouseEnter={onEnter} onMouseLeave={onExit} className="relative">
       {hovered && (
         <button
           aria-label="Copy code"
@@ -67,7 +67,7 @@ export const Pre = ({ children }: Props) => {
         </button>
       )}
 
-      <pre>{children}</pre>
+      <pre ref={textInput}>{children}</pre>
     </div>
   )
 }

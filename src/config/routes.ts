@@ -15,6 +15,7 @@ export interface RoutesResponse {
 export const routes: RoutesResponse = (translate) => ({
   error404: {
     label: translate('404.title'),
+    path: '',
     seo: extendSEO({
       title: translate('404.seo.title'),
       description: translate('404.seo.description'),

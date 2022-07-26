@@ -14,7 +14,7 @@ export default function About() {
       <NextSeo
         title={routes(t).uses.seo.title}
         description={routes(t).uses.seo.description}
-        openGraph={routes(t).uses.seo.openGraph}
+        openGraph={routes(t).uses.seo}
       />
       <main className="pt-10 border-none">
         <PageHeader title={routes(t).uses.seo.title} description={routes(t).uses.seo.description} />

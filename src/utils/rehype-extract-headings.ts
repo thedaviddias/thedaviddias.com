@@ -15,7 +15,7 @@ type ExtractHeadingsConfig = {
  */
 export const rehypeExtractHeadings = ({ rank = 2, headings }: ExtractHeadingsConfig) => {
   return (tree: Parent) => {
-    visit(tree, 'element', (node: Root) => {
+    visit(tree, 'element', (node: any) => {
       if (headingRank(node) === rank && node.properties && hasProperty(node, 'id')) {
         headings.push({
           title: toString(node),

@@ -8,8 +8,8 @@ type CustomLinkProps = LinkProps & {
 }
 
 export const CustomLink: FC<CustomLinkProps> = ({ href, className, children, ...rest }) => {
-  const external = !href.startsWith('/')
-  if (external) {
+  const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'))
+  if (!isInternalLink) {
     return (
       <a
         href={href}

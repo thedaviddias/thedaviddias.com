@@ -27,13 +27,14 @@ import { TableOfContents } from '@/components/TableOfContents/TableOfContents'
 import { Tags } from '@/components/Tags'
 
 import { routes } from '@/config/routes'
-import seo from '@/config/seo'
+import { baseUrl } from '@/config/seo'
 import { getAdjacentPosts, getAllPosts, getPost, getPostBySlug } from '@/utils/get-blog-posts'
 import { rehypeExtractHeadings } from '@/utils/rehype-extract-headings'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
 
 export type BlogPostProps = {
   frontMatter: {
+    draft: boolean
     author?: string
     categories: string[]
     date: string
@@ -99,7 +100,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
           },
           images: [
             {
-              url: `${seo}/images/${preview}`,
+              url: `${baseUrl}/images/${preview}`,
               width: 850,
               height: 650,
               alt: '',

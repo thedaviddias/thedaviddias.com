@@ -9,7 +9,9 @@ module.exports = nextTranslate({
   images: {
     domains: ['img.youtube.com', 'media.giphy.com'],
   },
-  ignoreDuringBuilds: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   async rewrites() {
     return [
       {

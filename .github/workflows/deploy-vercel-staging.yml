@@ -20,8 +20,8 @@ jobs:
         with:
           node-version: '${{ steps.nvmrc.outputs.version }}'
 
-      - uses: pnpm/action-setup@v2.0.1
-        name: Install pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
         id: pnpm-install
         with:
           version: 7
@@ -32,11 +32,13 @@ jobs:
         run: |
           echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
 
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
         with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: |
+            ${{ github.workspace }}/.next/cache
+            ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 

@@ -31,7 +31,7 @@ export const routes: RoutesResponse = (translate) => ({
     path: '/blog',
     seo: extendSEO({
       title: 'Blog',
-      description: 'Articles about my passions (including web development and leardership).',
+      description: 'Articles about my passions (including web development and leadership).',
       image: 'images/og/blog.png',
       url: 'blog',
     }),

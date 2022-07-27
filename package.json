@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:format": "prettier --check .",
+    "check:lint": "eslint . --ext js,ts,tsx",
+    "check:types": "tsc -p tsconfig.json --noEmit --pretty",
+    "format": "prettier --write .",
+    "lint:write": "eslint . --ext js,ts,tsx --fix --max-warnings=0"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",

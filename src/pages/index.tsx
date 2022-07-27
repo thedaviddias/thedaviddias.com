@@ -1,14 +1,16 @@
 import type { GetStaticProps, NextPage } from 'next'
-import useTranslation from 'next-translate/useTranslation'
-import { routes } from '@/config/routes'
+import Image from 'next/image'
 import { NextSeo } from 'next-seo'
-import { getAllPostsWithFrontMatter } from '@/utils/get-blog-posts'
+import useTranslation from 'next-translate/useTranslation'
+
+import { BlogPost } from '@/components/BlogPost'
 import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
-import { HERO_LINKS } from '@/constants'
-import Image from 'next/image'
 import { H5 } from '@/components/Headings'
-import { BlogPost } from '@/components/BlogPost'
+
+import { routes } from '@/config/routes'
+import { HERO_LINKS } from '@/constants'
+import { getAllPostsWithFrontMatter } from '@/utils/get-blog-posts'
 
 type HomeProps = {
   posts: any[]

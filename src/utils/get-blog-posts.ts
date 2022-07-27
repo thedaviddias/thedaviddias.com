@@ -28,6 +28,7 @@ export type BlogPostProps = {
   slug: string
 }
 
+
 export const createPermalink = (filename: string, dataType: string) => {
   const filenameNoExtension = filename.replace('.mdx', '')
   const permalink = `/${dataType}/${filenameNoExtension}`

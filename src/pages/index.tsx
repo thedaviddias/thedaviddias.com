@@ -1,16 +1,14 @@
 import type { GetStaticProps, NextPage } from 'next'
-import Image from 'next/image'
-import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
-
-import { BlogPost } from '@/components/BlogPost'
+import { routes } from '@/config/routes'
+import { NextSeo } from 'next-seo'
+import { getAllPostsWithFrontMatter } from '@/utils/get-blog-posts'
 import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
-import { H5 } from '@/components/Headings'
-
-import { routes } from '@/config/routes'
 import { HERO_LINKS } from '@/constants'
-import { getAllPostsWithFrontMatter } from '@/utils/get-blog-posts'
+import Image from 'next/image'
+import { H5 } from '@/components/Headings'
+import { BlogPost } from '@/components/BlogPost'
 
 type HomeProps = {
   posts: any[]
@@ -27,7 +25,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         titleTemplate="%s"
         openGraph={routes(t).home.seo}
       />
-      <main>
+            <main>
         <section className="pb-20 pt-0 lg:pt-10 relative flex justify-evenly">
           <div className="text-left">
             <h1 className="block mb-4 dark:text-white transition-colors">

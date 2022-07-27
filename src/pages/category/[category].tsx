@@ -12,6 +12,8 @@ import { H1 } from '@/components/Headings'
 import { routes } from '@/config/routes'
 import { getAllPostsWithFrontMatter, getCategories } from '@/utils/get-blog-posts'
 
+
+
 type CategoryPageProps = {
   posts: any[]
   category: {

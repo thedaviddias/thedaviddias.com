@@ -22,7 +22,7 @@ export const Header: FC<HeaderProps> = ({ pathname }) => {
             <CustomLink
               href="/"
               passHref
-              className="font-extrabold text-2xl lg:text-xl sm:mt-[-3px] sm:mr-6"
+              className="font-extrabold text-2xl lg:text-xl sm:mt-[-3px] sm:mr-6 !no-underline"
             >
               {t('title')}
             </CustomLink>
@@ -76,20 +76,25 @@ export const Header: FC<HeaderProps> = ({ pathname }) => {
                   <div className="w-[300%] absolute h-[200%] top-0 right-full bg-white dark:bg-gray-900 bg-opacity-90 dark:bg-opacity-80 backdrop-filter backdrop-blur-sm"></div>
                   <div className="w-full absolute h-[300%] top-full left-0 bg-white dark:bg-gray-900 bg-opacity-90 dark:bg-opacity-80 backdrop-filter backdrop-blur-sm"></div>
                   <div id="mobile-menu">
-                    <div className="text-center mt-6 inset-y-1/2 flex-grow">
-                      <div className="mt-12">
+                    <nav className="text-center mt-6 inset-y-1/2 flex-grow">
+                      <ul className="mt-12">
                         {MENU_LINKS(t).map(({ path, label }) => (
-                          <CustomLink
-                            href={path}
-                            passHref
-                            key={label}
-                            className="block mt-2 mb-5 title text-black dark:text-white"
-                          >
-                            <div>{label}</div>
-                          </CustomLink>
+                          <li key={label}>
+                            <CustomLink
+                              href={path}
+                              passHref
+                              className="block mt-2 mb-5 title text-black dark:text-white"
+                            >
+                              <div
+                                className={pathname === path ? 'text-2xl font-bold' : 'text-2xl'}
+                              >
+                                {label}
+                              </div>
+                            </CustomLink>
+                          </li>
                         ))}
-                      </div>
-                    </div>
+                      </ul>
+                    </nav>
                   </div>
                 </div>
               </nav>

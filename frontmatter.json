@@ -13,7 +13,7 @@
   "frontMatter.templates.enabled": true,
   "frontMatter.content.autoUpdateDate": false,
   "frontMatter.dashboard.openOnStart": true,
-  "frontMatter.taxonomy.seoTitleLength": 65,
+  "frontMatter.taxonomy.seoTitleLength": 70,
   "frontMatter.framework.startCommand": "pnpm dev",
   "frontMatter.preview.host": "http://localhost:3000/",
   "frontMatter.taxonomy.tags": [
@@ -55,7 +55,10 @@
           "title": "locale",
           "name": "locale",
           "type": "choice",
-          "choices": ["en", "fr"]
+          "choices": [
+            "en",
+            "fr"
+          ]
         },
         {
           "title": "type",
@@ -81,7 +84,9 @@
           "title": "Author",
           "name": "author",
           "type": "choice",
-          "choices": ["David Dias"]
+          "choices": [
+            "David Dias"
+          ]
         },
         {
           "title": "Publishing date",
@@ -138,7 +143,10 @@
       "schema": {
         "title": "Social Medias",
         "type": "object",
-        "required": ["label", "link"],
+        "required": [
+          "label",
+          "link"
+        ],
         "properties": {
           "label": {
             "type": "string",
@@ -160,7 +168,10 @@
       "schema": {
         "title": "Category",
         "type": "object",
-        "required": ["id", "description"],
+        "required": [
+          "id",
+          "description"
+        ],
         "properties": {
           "id": {
             "type": "string",

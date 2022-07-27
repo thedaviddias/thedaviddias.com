@@ -18,7 +18,7 @@ export const BlogPost: FC<BlogPostProps> = ({ post, isCategoryPage }) => {
 
   return (
     <>
-      <article className="pt-10 pb-8 border-t border-gray-200 dark:border-gray-700" key={post.slug}>
+      <article className="pt-8 pb-6 border-t border-gray-200 dark:border-gray-700" key={post.slug}>
         <div className="flex flex-col-reverse lg:flex-row">
           <div className="max-w-[44rem] w-full">
             <H2 as="h3">

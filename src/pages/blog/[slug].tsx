@@ -13,26 +13,23 @@ import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import slugify from 'slugify'
 
-
+import { AdjacentPosts } from '@/components/AdjacentPosts'
+import { Author } from '@/components/Author'
 import { Container } from '@/components/Container'
-
+import { CustomLink } from '@/components/CustomLink'
+import { DatePost } from '@/components/DatePost'
+import { H1 } from '@/components/Headings'
 import { MDXComponents } from '@/components/MdxComponents'
-
+import { Paragraph } from '@/components/Paragraph'
+import { Share } from '@/components/Share'
+import { TableOfContents } from '@/components/TableOfContents'
+import { Tags } from '@/components/Tags'
 
 import { routes } from '@/config/routes'
 import { baseUrl } from '@/config/seo'
 import { getAdjacentPosts, getAllPosts, getPost, getPostBySlug } from '@/utils/get-blog-posts'
 import { rehypeExtractHeadings } from '@/utils/rehype-extract-headings'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
-import { H1 } from '@/components/Headings'
-import { CustomLink } from '@/components/CustomLink'
-import { Paragraph } from '@/components/Paragraph'
-import { Author } from '@/components/Author'
-import { DatePost } from '@/components/DatePost'
-import { Tags } from '@/components/Tags'
-import { TableOfContents } from '@/components/TableOfContents'
-import { AdjacentPosts } from '@/components/AdjacentPosts'
-import { Share } from '@/components/Share'
 
 export type BlogPostProps = {
   frontMatter: {

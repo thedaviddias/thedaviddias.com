@@ -6,28 +6,7 @@ module.exports = {
     fontFamily: {
       body: ['Source Sans Pro', 'sans-serif'],
       title: ['Oswald', 'serif'],
-    },
-    // extend: {
-    //   typography: (theme) => ({
-    //     dark: {
-    //       css: {
-    //         a: {
-    //           color: theme('colors.blue.100'),
-    //         },
-    //       },
-    //     },
-    //     DEFAULT: {
-    //       css: {
-    //         a: {
-    //           color: theme('colors.blue.700'),
-    //           '&:hover': {
-    //             color: '#2c5282',
-    //           },
-    //         },
-    //       },
-    //     },
-    //   }),
-    // },
+    }
   },
   plugins: [
     require('@tailwindcss/typography'),

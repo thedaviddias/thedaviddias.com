@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:format": "prettier --check .",
+    "check:lint": "eslint . --ext js,ts,tsx",
+    "check:types": "tsc -p tsconfig.json --noEmit --pretty",
+    "format": "prettier --write .",
+    "lint:write": "eslint . --ext js,ts,tsx --fix --max-warnings=0"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",
@@ -36,9 +41,14 @@
     "date-fns": "^2.29.1",
     "eslint": "8.20.0",
     "eslint-config-next": "12.2.3",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "hast-util-has-property": "^2.0.0",
     "hast-util-heading-rank": "^2.1.0",
     "hast-util-to-string": "^2.0.0",
+    "prettier": "^2.7.1",
     "react-social-media-embed": "^2.2.2",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-image-placeholder": "^1.0.1",

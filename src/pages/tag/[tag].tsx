@@ -18,7 +18,7 @@ const TagPage: NextPage<CategoryPageProps> = ({ posts, tag }) => {
 
   return (
     <Container>
-      <NextSeo title={title} />
+      <NextSeo title={`Posts related to ${tag}`} />
       <main className="mx-auto space-y-20 divide-y divide-slate-200 sm:space-y-16 lg:max-w-none lg:space-y-32">
         <PageHeader title={title} description={`All my articles related to the ${tag} topic.`} />
         <div className="grid grid-cols-1 gap-4 lg:col-span-2">

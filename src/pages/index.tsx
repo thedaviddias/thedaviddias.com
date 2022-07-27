@@ -78,7 +78,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
 }
 
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
-  const posts = getAllPostsWithFrontMatter({ dataType: 'blog', locale, limit: 3 })
+  const posts = getAllPostsWithFrontMatter({ dataType: 'blog', locale, limit: 4 })
 
   const props: HomeProps = {
     posts: JSON.parse(JSON.stringify(posts)),

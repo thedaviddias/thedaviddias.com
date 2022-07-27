@@ -37,19 +37,19 @@ export interface SEOProps {
   url?: string
 }
 
-export function extendSEO(options: SEOProps) {
-  const images = options.image
-    ? [{ url: `${baseUrl}/images/${options.image}` }]
+export function extendSEO(options?: SEOProps) {
+  const images = options?.image
+    ? [{ url: `${baseUrl}/images/og/${options.image}` }]
     : defaultSEO.openGraph.images
 
   return {
     ...defaultSEO,
     ...options,
-    url: `${baseUrl}/${options.url}`,
+    url: `${baseUrl}/${options?.url}`,
     openGraph: {
       ...defaultSEO.openGraph,
       images,
-      url: `${baseUrl}/${options.url}`,
+      url: `${baseUrl}/${options?.url}`,
     },
   }
 }

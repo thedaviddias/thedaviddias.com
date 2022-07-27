@@ -63,3 +63,26 @@ export const routes: RoutesResponse = (translate) => ({
   //   path: 'https://plausible.io/thedaviddias.dev',
   // },
 })
+
+export interface PagesResponse {
+  (param: Translate, name?: string): {
+    [key: string]: {
+      title: string
+      h1: string
+      description: string
+    }
+  }
+}
+
+export const pages: PagesResponse = (translate, name) => ({
+  category: {
+    title: translate('category.title', { name }),
+    h1: translate('category.h1', { name }),
+    description: translate('category.description', { name }),
+  },
+  tag: {
+    title: translate('tags.title', { name }),
+    h1: translate('tags.h1', { name }),
+    description: translate('tags.description', { name }),
+  },
+})

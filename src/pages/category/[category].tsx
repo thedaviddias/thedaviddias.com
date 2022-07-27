@@ -7,9 +7,9 @@ import useTranslation from 'next-translate/useTranslation'
 
 import { BlogPost } from '@/components/BlogPost'
 import { Container } from '@/components/Container'
-import { H1 } from '@/components/Headings'
+import { PageHeader } from '@/components/PageHeader'
 
-import { routes } from '@/config/routes'
+import { pages } from '@/config/routes'
 import { getAllPostsWithFrontMatter, getCategories } from '@/utils/get-blog-posts'
 
 type CategoryPageProps = {
@@ -20,25 +20,20 @@ type CategoryPageProps = {
   }
 }
 
-const CategoryPage: NextPage<CategoryPageProps> = ({ posts, category }: CategoryPageProps) => {
+const CategoryPage: NextPage<CategoryPageProps> = ({ posts, category }) => {
   const { t } = useTranslation('common')
   const { name, description } = category
   const router = useRouter()
 
+  const titlePage = pages(t, name).category.title
+  const descriptionPage = pages(t, name).category.description || description
+
   return (
     <Container>
-      <NextSeo title={routes(t).home.seo.title} description={description} />
-
+      <NextSeo title={titlePage} description={descriptionPage} />
       <main className="mx-auto space-y-20 divide-y divide-slate-200 sm:space-y-16 lg:max-w-none lg:space-y-32">
         <section className="grid grid-cols-1 gap-y-10 gap-x-6 pt-10">
-          <header>
-            <H1>
-              Category: <>{name}</>
-            </H1>
-            <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 mt-2">
-              {description}
-            </p>
-          </header>
+          <PageHeader title={titlePage} description={descriptionPage} />
 
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">
             {posts?.map((post) => (
@@ -50,7 +45,6 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ posts, category }: Category
             ))}
           </div>
         </section>
-        <section></section>
       </main>
     </Container>
   )
@@ -77,7 +71,7 @@ export const getStaticProps: GetStaticProps<CategoryPageProps> = async ({ params
     filterByCategory: params.category,
   })
 
-  const currentCategory = Object.values(categories).find((el) => el.id === params.category)
+  const currentCategory = Object.values(categories).find((cat) => cat.id === params.category)
 
   return {
     props: {

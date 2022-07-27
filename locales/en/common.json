@@ -58,7 +58,16 @@
     "updated": "Updated on",
     "published": "Originally published on"
   },
-  "tags": "Tags",
+  "tags": {
+    "title": "Posts related to {{name}}",
+    "h1": "Tags: {{name}}",
+    "description": "All my articles related to {{name}} topic."
+  },
+  "category": {
+    "title": "Read my content about {{name}}",
+    "h1": "Category: {{name}}",
+    "description": "You will find all my posts related to {{name}}."
+  },
   "404": {
     "title": "Sorry 😩, this page can't be found.",
     "seo": {

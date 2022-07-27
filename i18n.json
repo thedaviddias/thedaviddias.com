@@ -1,9 +1,12 @@
 {
-  "locales": ["en", "fr"],
+  "locales": [
+    "en",
+    "fr"
+  ],
   "defaultLocale": "en",
   "pages": {
-    "*": ["common"],
-    "/": ["home"],
-    "/blog": ["blog"]
+    "*": [
+      "common"
+    ]
   }
 }

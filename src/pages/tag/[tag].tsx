@@ -1,11 +1,13 @@
 import type { GetStaticProps, NextPage } from 'next'
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 import { NextSeo } from 'next-seo'
+import useTranslation from 'next-translate/useTranslation'
 
 import { BlogPost } from '@/components/BlogPost'
 import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 
+import { pages } from '@/config/routes'
 import { getAllPostsWithFrontMatter, getTags } from '@/utils/get-blog-posts'
 
 type CategoryPageProps = {
@@ -14,18 +16,27 @@ type CategoryPageProps = {
 }
 
 const TagPage: NextPage<CategoryPageProps> = ({ posts, tag }) => {
-  const title = `Tag: ${tag}`
+  const { t } = useTranslation('common')
+
+  const titlePage = pages(t, tag).tag.title
+  const descriptionPage = pages(t, tag).tag.description
 
   return (
     <Container>
-      <NextSeo title={`Posts related to ${tag}`} />
+      <NextSeo title={titlePage} description={descriptionPage} />
       <main className="mx-auto space-y-20 divide-y divide-slate-200 sm:space-y-16 lg:max-w-none lg:space-y-32">
-        <PageHeader title={title} description={`All my articles related to the ${tag} topic.`} />
-        <div className="grid grid-cols-1 gap-4 lg:col-span-2">
-          {posts?.map((post) => (
-            <BlogPost key={post.frontMatter.title} post={post} />
-          ))}
-        </div>
+        <section className="grid grid-cols-1 gap-y-10 gap-x-6 pt-10">
+          <PageHeader
+            title={titlePage}
+            description={`All my articles related to the ${tag} topic.`}
+          />
+
+          <div className="grid grid-cols-1 gap-4 lg:col-span-2">
+            {posts?.map((post) => (
+              <BlogPost key={post.frontMatter.title} post={post} />
+            ))}
+          </div>
+        </section>
       </main>
     </Container>
   )

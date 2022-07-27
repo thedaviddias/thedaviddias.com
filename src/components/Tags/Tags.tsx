@@ -15,7 +15,7 @@ export const Tags: FC<TagsProps> = ({ tags }) => {
     <aside className="w-full mt-3 print:hidden">
       <div className="small-title">{t('tags')}</div>
       <nav arial-label="Tags">
-        <ul className="flex items-center space-x-5">
+        <ul className="flex items-center">
           {tags.map((tag) => (
             <li
               key={tag}

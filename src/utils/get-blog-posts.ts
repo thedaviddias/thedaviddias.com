@@ -4,6 +4,8 @@ import path from 'path'
 import readingTime from 'reading-time'
 import slugify from 'slugify'
 
+import { baseUrl } from '@/config/seo'
+
 // import { PreviousNext } from '@/components/AdjacentPosts'
 
 export type BlogPostProps = {
@@ -76,7 +78,7 @@ export const getPost = (slug: string, dataType: string) =>
 export const getPostBySlug = (slug: string, dataType: string) => {
   const source = getPost(slug, dataType)
 
-  const permalink = `/${dataType}/${slug}`
+  const permalink = `${baseUrl}/${dataType}/${slug}`
 
   const { data, content } = matter(source)
 

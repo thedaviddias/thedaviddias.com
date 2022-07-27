@@ -14,12 +14,13 @@ export const ResponsiveImage: FC<ImageProps> = ({
       <Image
         alt={alt}
         className="rounded-lg"
-        height={height}
         layout="responsive"
         loading="lazy"
-        quality={90}
+        quality={80}
         src={src}
+        height={height}
         width={width}
+        placeholder="blur"
         {...rest}
       />
       {title && (

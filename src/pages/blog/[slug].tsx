@@ -21,6 +21,7 @@ import { DatePost } from '@/components/DatePost'
 import { H1 } from '@/components/Headings'
 import { MDXComponents } from '@/components/MdxComponents'
 import { Paragraph } from '@/components/Paragraph'
+import { ScrollTop } from '@/components/ScrollTop'
 import { Share } from '@/components/Share'
 import { TableOfContents } from '@/components/TableOfContents'
 import { Tags } from '@/components/Tags'
@@ -83,7 +84,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
 
   return (
     <Container>
-      {/* <ScrollTop /> */}
+      <ScrollTop />
       <NextSeo
         title={title}
         openGraph={{

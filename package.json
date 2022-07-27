@@ -11,7 +11,8 @@
     "check:lint": "eslint . --ext js,ts,tsx",
     "check:types": "tsc -p tsconfig.json --noEmit --pretty",
     "format": "prettier --write .",
-    "lint:write": "eslint . --ext js,ts,tsx --fix --max-warnings=0"
+    "lint:write": "eslint . --ext js,ts,tsx --fix --max-warnings=0",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",
@@ -52,6 +53,8 @@
     "hast-util-has-property": "^2.0.0",
     "hast-util-heading-rank": "^2.1.0",
     "hast-util-to-string": "^2.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "react-social-media-embed": "^2.2.2",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-image-placeholder": "^1.0.1",

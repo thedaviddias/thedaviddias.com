@@ -13,11 +13,9 @@ import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import slugify from 'slugify'
 
-
 import { Container } from '@/components/Container'
 
 import { MDXComponents } from '@/components/MdxComponents'
-
 
 import { routes } from '@/config/routes'
 import { baseUrl } from '@/config/seo'

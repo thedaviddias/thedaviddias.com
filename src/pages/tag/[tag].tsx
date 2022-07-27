@@ -8,8 +8,6 @@ import { PageHeader } from '@/components/PageHeader'
 
 import { getAllPostsWithFrontMatter, getTags } from '@/utils/get-blog-posts'
 
-
-
 type CategoryPageProps = {
   posts: any[]
   tag: string

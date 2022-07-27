@@ -4,9 +4,9 @@ import path from 'path'
 import readingTime from 'reading-time'
 import slugify from 'slugify'
 
-import { baseUrl } from '@/config/seo'
+import { PreviousNext } from '@/components/AdjacentPosts'
 
-// import { PreviousNext } from '@/components/AdjacentPosts'
+import { baseUrl } from '@/config/seo'
 
 export type BlogPostProps = {
   frontMatter: {
@@ -181,11 +181,14 @@ async function collateTags(dataType: string, type: string) {
     const { data } = matter(source)
 
     if (type === 'tags') {
-      data.tags.forEach((tag: string) => allTags.add(slugify(tag, { lower: true })))
+      data.tags && data.tags.forEach((tag: string) => allTags.add(slugify(tag, { lower: true })))
     }
 
     if (type === 'categories') {
-      data.categories.forEach((category: string) => allTags.add(slugify(category, { lower: true })))
+      data.categories &&
+        data.categories.forEach((category: string) =>
+          allTags.add(slugify(category, { lower: true }))
+        )
     }
   })
 
@@ -208,7 +211,7 @@ export async function getCategories(dataType: string) {
   return categories[dataType]
 }
 
-export function getAdjacentPosts(slug: string) {
+export function getAdjacentPosts(slug: string): PreviousNext {
   const allPostHeaders = getAllPostsWithFrontMatter({ dataType: 'blog' })
 
   const postIndex = allPostHeaders.findIndex((postHeader) => postHeader?.slug === slug)

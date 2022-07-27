@@ -1,0 +1,42 @@
+{
+  "search.exclude": {
+    ".git": true,
+    "node_modules": true,
+    "package.lock": true,
+    ".next": true,
+    "coverage": true,
+    "public": true,
+    "out": true,
+    "out_build": true,
+    "out_functions": true,
+    "CHANGELOG": true,
+    "CODE_OF_CONDUCT": true,
+    "CONTRIBUTING": true,
+    "LICENCE": true,
+    "package-lock.json.old": true
+  },
+  "editor.formatOnSave": true,
+  "javascript.format.enable": true,
+  "javascript.validate.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.validate.enable": true,
+  "editor.codeActionsOnSave": ["source.fixAll.eslint", "source.fixAll.format"],
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[handlebars]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "eslint.run": "onSave",
+  "eslint.packageManager": "pnpm",
+  "eslint.lintTask.enable": true,
+  "eslint.nodePath": "node_modules",
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "cSpell.words": ["lastmod", "rehype", "semibold"]
+}

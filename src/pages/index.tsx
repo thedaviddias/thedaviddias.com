@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 
+import generateRssFeed from '@/lib/generateRss'
+
 import { BlogPost } from '@/components/BlogPost'
 import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
@@ -79,6 +81,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
 
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const posts = getAllPostsWithFrontMatter({ dataType: 'blog', locale, limit: 5 })
+  await generateRssFeed()
 
   const props: HomeProps = {
     posts: JSON.parse(JSON.stringify(posts)),

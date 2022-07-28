@@ -1,6 +1,6 @@
 import { NextSeoProps } from 'next-seo'
 
-export const baseUrl = process.env.VERCEL_URL || 'http://localhost:3000'
+export const baseUrl = 'http://localhost:3000' || process.env.VERCEL_URL
 export const baseEmail = 'hello@thedaviddias.com'
 
 const title = 'The David Dias | Developer and content creator'
@@ -85,28 +85,28 @@ export const defaultSEO: NextSeoProps = {
       href: `${baseUrl}/favicons/favicon-16x16.png`,
     },
     {
-      rel: 'preload',
+      rel: 'prefetch',
       href: `${baseUrl}/fonts/oswald.woff2`,
       as: 'font',
       type: 'font/woff2',
       crossOrigin: 'anonymous',
     },
     {
-      rel: 'preload',
+      rel: 'prefetch',
       href: `${baseUrl}/fonts/SourceSansPro-Light.woff2`,
       as: 'font',
       type: 'font/woff2',
       crossOrigin: 'anonymous',
     },
     {
-      rel: 'preload',
+      rel: 'prefetch',
       href: `${baseUrl}/fonts/SourceSansPro-Regular.woff2`,
       as: 'font',
       type: 'font/woff2',
       crossOrigin: 'anonymous',
     },
     {
-      rel: 'preload',
+      rel: 'prefetch',
       href: `${baseUrl}/fonts/SourceSansPro-Bold.woff2`,
       as: 'font',
       type: 'font/woff2',

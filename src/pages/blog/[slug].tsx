@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticPathsResult, GetStaticProps, NextPage } from '
 import { useRouter } from 'next/router'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
-import { NextSeo } from 'next-seo'
+import { ArticleJsonLd, NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { ReadTimeResults } from 'reading-time'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
@@ -107,6 +107,16 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
             },
           ],
         }}
+      />
+      <ArticleJsonLd
+        type="Blog"
+        url={permalink}
+        title={title}
+        images={[`${baseUrl}/images/${preview}`]}
+        datePublished={date}
+        dateModified={lastmod}
+        authorName="David Dias"
+        description={description}
       />
       <main>
         <article className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

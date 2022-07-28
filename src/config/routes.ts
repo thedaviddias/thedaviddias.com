@@ -54,14 +54,6 @@ export const routes: RoutesResponse = (translate) => ({
       url: 'about',
     }),
   },
-  // bookmarks: {
-  //   label: translate('nav.bookmarks'),
-  //   path: '/bookmarks',
-  // },
-  // analytics: {
-  //   label: translate('footer.extra_links.analytics'),
-  //   path: 'https://plausible.io/thedaviddias.dev',
-  // },
 })
 
 export interface PagesResponse {

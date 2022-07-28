@@ -1,13 +1,16 @@
+import { NextSeoProps } from 'next-seo'
+
 export const baseUrl = process.env.VERCEL_URL || 'http://localhost:3000'
 export const baseEmail = 'hello@thedaviddias.com'
 
 const title = 'The David Dias | Developer and content creator'
 const description = `Hey, I'm David Dias! Software Engineer based in Toronto / Canada. I love talking about code, technology, expatriation and life.`
 
-export const defaultSEO = {
+export const defaultSEO: NextSeoProps = {
   title,
   description,
   titleTemplate: '%s | The David Dias',
+  defaultTitle: 'The David Dias',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -15,6 +18,11 @@ export const defaultSEO = {
     title,
     description,
     site_name: `${title}`,
+    profile: {
+      firstName: 'David',
+      lastName: 'Dias',
+      gender: 'male',
+    },
     images: [
       {
         url: `${baseUrl}/og/default.png`,
@@ -116,7 +124,7 @@ export interface SEOProps {
 export function extendSEO(options?: SEOProps) {
   const images = options?.image
     ? [{ url: `${baseUrl}/images/og/${options.image}` }]
-    : defaultSEO.openGraph.images
+    : defaultSEO?.openGraph?.images
 
   return {
     ...defaultSEO,

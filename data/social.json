@@ -1,7 +1,7 @@
 [
   {
     "label": "Twitter",
-    "link": "https://ddias.run/tw"
+    "link": "https://twitter.com/thedaviddias"
   },
   {
     "label": "Github",
@@ -9,15 +9,15 @@
   },
   {
     "label": "Youtube",
-    "link": "https://ddias.run/yt"
+    "link": "https://youtube.com/TheDavidDias"
   },
   {
     "label": "Polywork",
-    "link": "https://ddias.run/changelog"
+    "link": "https://changelog.thedaviddias.dev"
   },
   {
     "label": "Twitch",
-    "link": "https://ddias.run/twi"
+    "link": "https://twitch.com/thedaviddias"
   },
   {
     "label": "LinkedIn",
@@ -30,9 +30,5 @@
   {
     "label": "Facebook",
     "link": "https://www.facebook.com/thedaviddias"
-  },
-  {
-    "label": "RSS feed",
-    "link": "https://thedaviddias.dev/rss.xml"
   }
 ]

@@ -56,7 +56,8 @@
     "viewAll": "→ View all blog posts",
     "continue": "Continue reading →",
     "updated": "Updated on",
-    "published": "Originally published on"
+    "published": "Originally published on",
+    "tableContent": "Table of Contents"
   },
   "tags": {
     "title": "Posts related to {{name}}",

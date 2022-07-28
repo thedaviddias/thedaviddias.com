@@ -179,7 +179,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                 {permalink && <Share title={title} tags={tags && tags} slug={permalink} />}
                 {headings && (
                   <aside className="w-full mt-3">
-                    <TableOfContents items={headings} />
+                    <TableOfContents headings={headings} />
                   </aside>
                 )}
               </div>

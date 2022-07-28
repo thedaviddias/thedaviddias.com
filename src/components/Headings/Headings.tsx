@@ -16,12 +16,12 @@ type TitleProps = {
 )
 
 const fontSize = {
-  h1: 'leading-tight text-4xl md:text-5xl font-bold tracking-tight',
-  h2: 'leading-tight text-3xl md:text-4xl font-medium tracking-tight',
-  h3: 'text-2xl md:text-2xl font-normal tracking-tight',
-  h4: 'text-xl md:text-2xl',
-  h5: 'text-lg font-extralight md:text-xl',
-  h6: 'text-lg',
+  h1: 'leading-tight text-4xl md:text-5xl font-title font-bold tracking-tight',
+  h2: 'leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight',
+  h3: 'text-2xl md:text-2xl font-normal font-title tracking-tight',
+  h4: 'text-xl md:text-2xl font-title',
+  h5: 'text-lg font-light font-title md:text-xl',
+  h6: 'text-lg font-title',
 }
 
 const titleColors = {

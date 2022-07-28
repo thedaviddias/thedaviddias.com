@@ -22,7 +22,7 @@ export const Header: FC<HeaderProps> = ({ pathname }) => {
             <CustomLink
               href="/"
               passHref
-              className="font-extrabold text-2xl lg:text-xl sm:mt-[-3px] sm:mr-6 !no-underline"
+              className="font-bold text-2xl lg:text-xl sm:mt-[-3px] sm:mr-6 !no-underline"
             >
               {t('title')}
             </CustomLink>

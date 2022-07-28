@@ -13,7 +13,8 @@
     "format": "prettier --write .",
     "lint:write": "eslint . --ext js,ts,tsx --fix --max-warnings=0",
     "prepare": "husky install",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "check:all": "pnpm check:format && pnpm check:lint && pnpm check:types && pnpm build"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",

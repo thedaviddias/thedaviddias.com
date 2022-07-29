@@ -15,6 +15,7 @@ import { CustomLink } from './custom-link'
 import { InlineCode } from './inline-code'
 import { Pre } from './pre'
 import { ResponsiveImage } from './responsive-image'
+import { Strong } from './strong'
 import { Tweet } from './tweet'
 
 export const MDXComponents: any = {
@@ -23,6 +24,7 @@ export const MDXComponents: any = {
   ) => <hr {...props} />,
   a: CustomLink,
   blockquote: Blockquote,
+  strong: Strong,
   h1: (
     props: JSX.IntrinsicAttributes &
       ({
@@ -60,7 +62,7 @@ export const MDXComponents: any = {
       } & ({ children: ReactNode } | { dangerouslySetInnerHTML: { __html: string } }))
   ) => <H4 as="h4" {...props} />,
   img: ResponsiveImage,
-  inlineCode: InlineCode,
+  code: InlineCode,
   li: (
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLLIElement> &

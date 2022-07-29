@@ -25,7 +25,7 @@ export const ResponsiveImage: FC<ImageProps> = ({
       />
       {title && (
         <figcaption
-          className="z-10 mt-4 text-sm italic text-gray-600 text-center"
+          className="z-10 mt-4 text-sm italic text-gray-600 text-center dark:text-gray-300"
           dangerouslySetInnerHTML={{ __html: title }}
         />
       )}

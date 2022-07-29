@@ -52,7 +52,7 @@ export const TableOfContents = ({ headings }: TableOfContentsType) => {
                 href={`#${heading.id}`}
                 className={
                   heading.id === activeId
-                    ? 'text-gray-800 font-bold text-base'
+                    ? 'text-gray-800 font-bold text-base dark:text-white'
                     : `text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:underline`
                 }
                 data-title="h2"

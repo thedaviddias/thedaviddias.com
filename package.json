@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@next/env": "^12.2.3",
-    "@types/node": "18.6.1",
+    "@types/node": "18.6.2",
     "@types/prettier": "^2.6.4",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",

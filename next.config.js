@@ -4,7 +4,7 @@ const nextTranslate = require('next-translate')
 
 const nextConfig = nextTranslate({
   reactStrictMode: true,
-  swcMinify: true,
+  // swcMinify: true,
   pageExtensions: ['ts', 'tsx', 'mdx'],
 })
 

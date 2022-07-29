@@ -9,11 +9,11 @@ export default async function generateRssFeed() {
   const postsEn = getAllPostsWithFrontMatter({ dataType: 'blog' })
   const postsFr = getAllPostsWithFrontMatter({ dataType: 'blog', locale: 'fr' })
 
-  const siteURL = process.env.VERCEL_URL || 'https://thedaviddias.dev'
+  const siteURL = 'https://thedaviddias.dev'
   const date = new Date()
   const author = {
     name: 'David Dias',
-    email: 'thedaviddias.dev',
+    email: 'me@thedaviddias.dev',
     link: 'https://twitter.com/thedaviddias',
   }
 

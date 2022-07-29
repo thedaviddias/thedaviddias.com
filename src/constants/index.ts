@@ -4,9 +4,9 @@ import { routes } from 'src/config/routes'
 
 import { SEOProps } from '@/config/seo'
 
-export const TWITTER_PROFILE = 'https://ddias.run/tw'
+export const TWITTER_PROFILE = 'https://twitter.com/thedaviddias'
 export const GITHUB_PROFILE = 'https://github.com/thedaviddias'
-export const POLYWORK_PROFILE = 'https://ddias.run/changelog'
+export const POLYWORK_PROFILE = 'https://changelog.thedaviddias.dev'
 
 export type LinksInternalResponse = {
   /** Indicates if it should show in the navigation menu */

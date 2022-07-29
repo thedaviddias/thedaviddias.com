@@ -1,4 +1,9 @@
+# *
 User-agent: *
-Disallow:
+Allow: /
 
-sitemap: https://thedaviddias.dev/sitemap.xml
+# Host
+Host: https://thedaviddias.dev
+
+# Sitemaps
+Sitemap: https://thedaviddias.dev/sitemap.xml

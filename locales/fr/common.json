@@ -55,7 +55,7 @@
       "url": "blog"
     },
     "sections": {
-      "latest-posts": "Derniers articles"
+      "latest-posts": "Les derniers articles"
     }
   },
   "about": {
@@ -89,6 +89,13 @@
   "404": {
     "seo": {
       "title": "Désolé 😩, cette page ne peut pas être trouvée.",
+      "description": ""
+    }
+  },
+  "500": {
+    "title": "Wow 😱, you broke everything.",
+    "seo": {
+      "title": "",
       "description": ""
     }
   },

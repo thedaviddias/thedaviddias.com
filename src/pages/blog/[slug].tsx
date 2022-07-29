@@ -272,7 +272,7 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
             rehypePlugins: [
               [rehypePrismPlus, { ignoreMissing: true }],
               [rehypeImagePlaceholder, { dir: 'public/' }],
-              [rehypeFigure, { className: 'my-3' }],
+              // [rehypeFigure, { className: 'my-3' }],
               rehypeSlug,
               [rehypeAutolinkHeadings],
               [rehypeExtractHeadings, { rank: 2, headings }],

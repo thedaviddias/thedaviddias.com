@@ -1,6 +1,6 @@
 import { NextSeoProps } from 'next-seo'
 
-export const baseUrl = 'http://localhost:3000' || process.env.VERCEL_URL
+export const baseUrl = 'https://thedaviddias.dev' || process.env.VERCEL_URL
 export const baseEmail = 'hello@thedaviddias.com'
 
 const title = 'The David Dias | Developer and content creator'

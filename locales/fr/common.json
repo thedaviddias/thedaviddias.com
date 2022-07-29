@@ -31,16 +31,6 @@
     "viewAll": "→ Voir tous les articles",
     "continue": "Continue de lire →"
   },
-  "tags": {
-    "title": "Posts related to {{name}}",
-    "h1": "Tags: {{name}}",
-    "description": "All my articles related to {{name}} topic."
-  },
-  "category": {
-    "title": "Read my content about {{name}}",
-    "h1": "Category: {{name}}",
-    "description": "You will find all my posts related to {{name}}."
-  },
   "404": {
     "title": "Désolé 😩, cette page ne peut pas être trouvée.",
     "seo": {

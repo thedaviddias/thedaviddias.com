@@ -1,6 +1,7 @@
 import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
 
+import { ChangeLanguage } from '@/components/ChangeLanguage'
 import { CustomLink } from '@/components/CustomLink'
 import { ThemeSwitch } from '@/components/ThemeSwitch'
 
@@ -20,7 +21,7 @@ export const Footer = () => {
         aria-labelledby="footer-heading"
       >
         <h2 id="footer-heading" className="sr-only">
-          {t('footer.name')}
+          {t('layout.footer.name')}
         </h2>
         <div className="max-w-5xl px-2 mx-auto py-12 sm:px-6 lg:py-7 lg:px-8">
           <div className="flex flex-col-reverse sm:flex-row print:hidden">
@@ -32,12 +33,12 @@ export const Footer = () => {
 
             <div className="w-full sm:w-1/2 lg:w-[60%] !max-w-full flex-shrink-0 flex-grow flex justify-between text-gray-600 dark:text-gray-400">
               <div>
-                <h3 className="small-title">{t('footer.general')}</h3>
+                <h3 className="small-title">{t('layout.footer.general')}</h3>
 
                 <ul className="mt-3 space-y-3">
                   {FOOTER_MENU_LINKS(t).map(({ path, label }) => (
                     <li key={path}>
-                      <CustomLink href={path} passHref>
+                      <CustomLink href={path} passHref className="dark:text-white">
                         {label}
                       </CustomLink>
                     </li>
@@ -46,11 +47,11 @@ export const Footer = () => {
               </div>
               <div></div>
               <div>
-                <h3 className="small-title">{t('footer.social')}</h3>
+                <h3 className="small-title">{t('layout.footer.social')}</h3>
                 <ul className="mt-3 space-y-3">
                   {SOCIAL_LINKS.map(({ label, link }) => (
                     <li key={link}>
-                      <CustomLink href={link} passHref>
+                      <CustomLink href={link} passHref className="dark:!text-white">
                         {label}
                       </CustomLink>
                     </li>
@@ -59,9 +60,12 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="mt-8 border-t border-gray-200 pt-8 flex items-center justify-between">
-            <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} David Dias</p>
-            <ThemeSwitch />
+          <div className="mt-8 border-t border-gray-200 dark:border-gray-500 pt-8 flex items-center justify-between">
+            <p className="text-base text-gray-500">&copy; {new Date().getFullYear()} David Dias</p>
+            <div className="flex item space-x-4">
+              <ChangeLanguage />
+              <ThemeSwitch />
+            </div>
           </div>
         </div>
       </footer>

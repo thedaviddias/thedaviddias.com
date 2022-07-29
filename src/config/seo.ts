@@ -84,34 +84,6 @@ export const defaultSEO: NextSeoProps = {
       sizes: '16x16',
       href: `${baseUrl}/favicons/favicon-16x16.png`,
     },
-    {
-      rel: 'preload',
-      href: `${baseUrl}/fonts/oswald.woff2`,
-      as: 'font',
-      type: 'font/woff2',
-      crossOrigin: 'anonymous',
-    },
-    {
-      rel: 'preload',
-      href: `${baseUrl}/fonts/SourceSansPro-Light.woff2`,
-      as: 'font',
-      type: 'font/woff2',
-      crossOrigin: 'anonymous',
-    },
-    {
-      rel: 'preload',
-      href: `${baseUrl}/fonts/SourceSansPro-Regular.woff2`,
-      as: 'font',
-      type: 'font/woff2',
-      crossOrigin: 'anonymous',
-    },
-    {
-      rel: 'preload',
-      href: `${baseUrl}/fonts/SourceSansPro-Bold.woff2`,
-      as: 'font',
-      type: 'font/woff2',
-      crossOrigin: 'anonymous',
-    },
   ],
 }
 export interface SEOProps {

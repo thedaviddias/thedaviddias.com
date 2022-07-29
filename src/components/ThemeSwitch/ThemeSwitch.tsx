@@ -1,9 +1,11 @@
 import { useTheme } from 'next-themes'
+import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
 
 export const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme, resolvedTheme } = useTheme()
+  const { t } = useTranslation('common')
 
   useEffect(() => setMounted(true), [])
 
@@ -11,10 +13,16 @@ export const ThemeSwitch = () => {
     return null
   }
 
+  const switchLabel =
+    mounted && (theme === 'dark' || resolvedTheme === 'dark')
+      ? t('layout.darkMode.light')
+      : t('layout.darkMode.dark')
+
   return (
     <button
-      aria-label="Toggle Dark Mode"
       type="button"
+      aria-label={switchLabel}
+      title={switchLabel}
       className="w-8 h-8 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300  transition-all"
       onClick={() => setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')}
     >

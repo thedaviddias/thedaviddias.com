@@ -1,19 +1,16 @@
 {
   "title": "The David Dias",
-  "description": "Mon blog sur le dévelopement web, les technologies, l'expatriation et tous les autres sujets qui attisent ma curiosité et mon intérêt!",
+  "description": "Parcours mon blog sur le dévelopement web, les technologies, l'expatriation et tous les autres sujets qui attisent ma curiosité et mon intérêt!",
+  "nav": {
+    "home": "Accueil",
+    "blog": "Blog",
+    "about": "À propos",
+    "rss": "Flux RSS"
+  },
   "hero": {
     "greetings1": "Salut toi!",
     "greetings2": "Je m'appelle David Dias",
     "presentation": "Je suis développeur Front-End, podcasteur, créateur de contenu digital passioné pour résoudre les problèmes digitaux et humains! I enjoy meeting new people, building communities and talking about tech, expatriation and web."
-  },
-  "nav": {
-    "home": "Accueil",
-    "blog": "Blog",
-    "bookmarks": "Marque-pages",
-    "about": "À propos",
-    "uses": "Équipement",
-    "language": "Changer pour la version anglaise",
-    "theme": "Change theme"
   },
   "blog": {
     "latest-posts": "Derniers articles"

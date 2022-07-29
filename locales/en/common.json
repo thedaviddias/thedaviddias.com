@@ -1,44 +1,69 @@
 {
   "title": "The David Dias",
   "description": "A blog about web development, technologies, expatriation and anything that piques my curiosity and interest",
-  "hero": {
-    "greetings1": "Hey there!",
-    "greetings2": " I'm David Dias",
-    "presentation": "I'm a Front-End Developer, podcaster, content creator passionate about solving digital and human problems! I enjoy meeting new people, building communities and talking about tech, expatriation and web."
-  },
-  "date_format": "MMM dd, yyyy",
-  "a11y": {
-    "skipContent": "Skip to content"
-  },
-  "seo": {
-    "image": {
-      "url": "/images/preview.png",
-      "alt": ""
+  "layout": {
+    "a11y": {
+      "skipContent": "Skip to content"
     },
-    "rss": {
-      "en": "RSS feed for english speaker",
-      "fr": "RSS feed for french speaker"
+    "nav": {
+      "home": "Home",
+      "blog": "Blog",
+      "about": "About",
+      "rss": "RSS feed"
+    },
+    "darkMode": {
+      "light": "Switch to light mode",
+      "dark": "Switch to dark mode"
+    },
+    "date_format": "MMM dd, yyyy",
+    "language": {
+      "fr": {
+        "fullName": "French",
+        "switch": "Switch to the {{lang}} version",
+        "abbreviation": "FR"
+      },
+      "en": {
+        "fullName": "Anglaise",
+        "switch": "Changer pour la version {{lang}}",
+        "abbreviation": "EN"
+      }
+    },
+    "footer": {
+      "name": "Footer",
+      "general": "General",
+      "social": "Social media",
+      "extra": "Extra links",
+      "extra_links": {
+        "dashboard": "Dashboard",
+        "newsletter": "Newsletter",
+        "analytics": "Analytics"
+      },
+      "rssEn": {
+        "name": "RSS Feed in English",
+        "href": "/en.feed.xml"
+      },
+      "rssFr": {
+        "name": "RSS Feed in French",
+        "href": "/fr.feed.xml"
+      }
     }
   },
-  "nav": {
-    "home": "Home",
-    "blog": "Blog",
-    "about": "About",
-    "rss": "RSS",
-    "uses": "Uses",
-    "language": "Change to the French version",
-    "theme": "Change theme"
+  "home": {
+    "hero": {
+      "greetings1": "Hey there!",
+      "greetings2": " I'm David Dias",
+      "presentation": "I'm a Front-End Developer, podcaster, content creator passionate about solving digital and human problems! I enjoy meeting new people, building communities and talking about tech, expatriation and web."
+    }
   },
   "blog": {
-    "title": "Blog",
     "path": "/blog",
-    "latest-posts": "Lastest blog posts",
-    "previous": "Previous post",
-    "next": "Next post",
     "seo": {
       "title": "Blog",
       "description": "Articles about my web development and anything that piques my curiosity and interest.",
       "url": "blog"
+    },
+    "sections": {
+      "latest-posts": "Lastest blog posts"
     }
   },
   "about": {
@@ -49,23 +74,37 @@
       "url": "about"
     }
   },
-  "footer": {
-    "name": "Footer",
-    "general": "General",
-    "social": "Social media",
-    "extra": "Extra links",
-    "extra_links": {
-      "dashboard": "Dashboard",
-      "newsletter": "Newsletter",
-      "analytics": "Analytics"
+  "tags": {
+    "path": "/tags",
+    "seo": {
+      "title": "Posts related to {{name}}",
+      "description": "All my articles related to {{name}} topic."
     },
-    "rssEn": {
-      "name": "RSS Feed in English",
-      "href": "/en.feed.xml"
+    "section": "Tags",
+    "h1": "Tags: {{name}}"
+  },
+  "category": {
+    "path": "/category",
+    "seo": {
+      "title": "Read my content about {{name}}",
+      "description": "You will find all my posts related to {{name}}."
     },
-    "rssFr": {
-      "name": "RSS Feed in French",
-      "href": "/fr.feed.xml"
+    "h1": "Category: {{name}}"
+  },
+  "rss": {
+    "path": "/rss/feed.xml"
+  },
+  "404": {
+    "seo": {
+      "title": "Sorry 😩, this page can't be found.",
+      "description": "This page is the nightmare of any user. It's usually an ugly page that just tells you that the link doesn't exist. Fortunately, the world doesn't end yet!"
+    }
+  },
+  "500": {
+    "title": "Wow 😱, you broke everything.",
+    "seo": {
+      "title": "",
+      "description": ""
     }
   },
   "posts": {
@@ -74,34 +113,8 @@
     "continue": "Continue reading →",
     "updated": "Updated on",
     "published": "Originally published on",
-    "tableContent": "Table of Contents"
-  },
-  "tags": {
-    "section": "Tags",
-    "title": "Posts related to {{name}}",
-    "h1": "Tags: {{name}}",
-    "description": "All my articles related to {{name}} topic."
-  },
-  "category": {
-    "title": "Read my content about {{name}}",
-    "h1": "Category: {{name}}",
-    "description": "You will find all my posts related to {{name}}."
-  },
-  "rss": {
-    "path": "/rss/feed.xml"
-  },
-  "404": {
-    "title": "Sorry 😩, this page can't be found.",
-    "seo": {
-      "title": "404",
-      "description": ""
-    }
-  },
-  "500": {
-    "title": "Wow 😱, you broke everything",
-    "seo": {
-      "title": "",
-      "description": ""
-    }
+    "tableContent": "Table of Contents",
+    "previous": "Previous post",
+    "next": "Next post"
   }
 }

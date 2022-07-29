@@ -15,7 +15,7 @@ export const CustomLink: FC<CustomLinkProps> = ({ href, className, children, ...
         href={href}
         rel="noopener noreferrer"
         target="_blank"
-        className={`inline-flex hover:underline ${className}`}
+        className={`inline-flex hover:underline dark:text-indigo-400 ${className}`}
       >
         {children}
         <span className="inline-flex items-center">

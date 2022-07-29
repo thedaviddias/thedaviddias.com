@@ -62,13 +62,13 @@ export interface PagesResponse {
 
 export const pages: PagesResponse = (translate, name) => ({
   category: {
-    title: translate('category.title', { name }),
+    title: translate('category.seo.title', { name }),
     h1: translate('category.h1', { name }),
-    description: translate('category.description', { name }),
+    description: translate('category.seo.description', { name }),
   },
   tag: {
-    title: translate('tags.title', { name }),
+    title: translate('tags.seo.title', { name }),
     h1: translate('tags.h1', { name }),
-    description: translate('tags.description', { name }),
+    description: translate('tags.seo.description', { name }),
   },
 })

@@ -33,18 +33,23 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         <section className="pb-20 pt-0 lg:pt-10 flex justify-evenly">
           <div className="text-left">
             <h1 className="block mb-4 dark:text-white transition-colors">
-              <p className="text-3xl p-0 font-light uppercase">{t('hero.greetings1')}</p>
+              <p className="text-3xl p-0 font-light uppercase">{t('home.hero.greetings1')}</p>
               <span className="text-5xl lg:text-6xl font-title font-medium leading-snug">
-                {t('hero.greetings2')}
+                {t('home.hero.greetings2')}
               </span>
             </h1>
             <div className="max-w-xl lg:px-0.5 text-base lg:text-lg sm:text-xl text-gray-500 dark:text-gray-400">
-              {t('hero.presentation')}
+              {t('home.hero.presentation')}
             </div>
 
             <div className="flex justify-left mt-10 space-x-5">
               {HERO_LINKS.map(({ label, link }) => (
-                <CustomLink href={link} key={link} className="font-semibold" passHref>
+                <CustomLink
+                  href={link}
+                  key={link}
+                  className="font-semibold dark:!text-white"
+                  passHref
+                >
                   {label}
                 </CustomLink>
               ))}
@@ -63,7 +68,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
 
         <section className="grid grid-cols-1 gap-y-10 border-none">
           <header>
-            <H5 as="h2">{t('blog.latest-posts')}</H5>
+            <H5 as="h2">{t('blog.sections.latest-posts')}</H5>
           </header>
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">
             {posts.map((post) => (

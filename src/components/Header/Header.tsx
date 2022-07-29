@@ -27,21 +27,23 @@ export const Header: FC<HeaderProps> = ({ pathname }) => {
               {t('title')}
             </CustomLink>
             <nav className="hidden sm:flex">
-              {MENU_LINKS(t).map((item) => (
-                <CustomLink
-                  href={item.path}
-                  passHref
-                  key={item.label}
-                  aria-current={pathname === item.path ? 'page' : undefined}
-                  className={
-                    pathname === item.path
-                      ? 'mr-10 font-bold !no-underline'
-                      : 'mr-10 hover:text-black hover:underline dark:hover:text-white'
-                  }
-                >
-                  {item.label}
-                </CustomLink>
-              ))}
+              {MENU_LINKS(t)
+                .filter((item) => item.menu !== false)
+                .map((item) => (
+                  <CustomLink
+                    href={item.path}
+                    passHref
+                    key={item.label}
+                    aria-current={pathname === item.path ? 'page' : undefined}
+                    className={
+                      pathname === item.path
+                        ? 'mr-10 font-bold !no-underline'
+                        : 'mr-10 hover:text-black hover:underline dark:hover:text-white'
+                    }
+                  >
+                    {item.label}
+                  </CustomLink>
+                ))}
             </nav>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:pr-0 print:hidden">

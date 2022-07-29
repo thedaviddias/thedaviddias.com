@@ -1,14 +1,12 @@
 import { Translate } from 'next-translate'
 
-import { defaultSEO, extendSEO, SEOProps } from './seo'
+import { LinksInternalResponse } from '@/constants'
+
+import { defaultSEO, extendSEO } from './seo'
 
 export interface RoutesResponse {
   (param: Translate): {
-    [key: string]: {
-      label: string
-      path: string
-      seo: SEOProps
-    }
+    [key: string]: LinksInternalResponse
   }
 }
 
@@ -27,33 +25,28 @@ export const routes: RoutesResponse = (translate) => ({
     seo: defaultSEO,
   },
   blog: {
-    label: 'Blog',
-    path: '/blog',
+    label: translate('nav.blog'),
+    path: translate('blog.path'),
     seo: extendSEO({
-      title: 'Blog',
-      description:
-        'Articles about my web development and anything that piques my curiosity and interest.',
-      image: 'images/og/blog.png',
-      url: 'blog',
-    }),
-  },
-  uses: {
-    label: translate('nav.uses'),
-    path: '/uses',
-    seo: extendSEO({
-      title: 'What I use',
-      description: 'This is the list of the tools and softwares I use frequently.',
-      url: 'uses',
+      title: translate('blog.seo.title'),
+      description: translate('blog.seo.description'),
+      url: translate('blog.seo.url'),
     }),
   },
   about: {
     label: translate('nav.about'),
-    path: '/about',
+    path: translate('about.path'),
     seo: extendSEO({
-      title: 'About me',
-      description: 'Learn a little bit about "The David Dias"',
-      url: 'about',
+      title: translate('about.seo.title'),
+      description: translate('about.seo.description'),
+      url: translate('about.seo.url'),
     }),
+  },
+  rss: {
+    menu: false,
+    label: translate('nav.rss'),
+    path: translate('rss.path'),
+    seo: extendSEO(),
   },
 })
 

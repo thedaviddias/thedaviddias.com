@@ -78,6 +78,11 @@
           "type": "image"
         },
         {
+          "title": "Content preview alt",
+          "name": "previewalt",
+          "type": "string"
+        },
+        {
           "title": "Author",
           "name": "author",
           "type": "choice",

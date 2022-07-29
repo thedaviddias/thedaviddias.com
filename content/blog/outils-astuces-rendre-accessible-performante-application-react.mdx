@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 locale: fr
 title: Outils et astuces pour rendre accessible et performante son application React
 date: 2018-12-24T02:34:11.000Z
@@ -11,6 +11,7 @@ tags:
   - a11y
   - performance
   - react
+type: blog-post
 ---
 
 L’accessibilité et la performance sont deux (vastes) sujets qui m’ont toujours passionné et qui sont devenus ces dernières années au centre de nombreux meetups et conférences auquels j’ai pu assister (petit clin d’oeil à A11yTO). Récemment expatrié au Canada, j’ai eu l’opportunité, dans ma nouvelle entreprise, de dédier mon temps à la refonte d’un project avec React et de devoir du coup, rendre cette application accessible et performante. (Youpi !)
@@ -120,14 +121,13 @@ Le module why-did-you-update peut vous permettre de vous alerter lorsque vos pro
 
 Il vous suffit d’installer le package dans votre projet et insérer ce bout de code dans votre app.js :
 
-```
-import React from 'react';
+```js
+import React from 'react'
 
 if (process.env.NODE_ENV !== 'production') {
-const {whyDidYouUpdate} = require('why-did-you-update');
-whyDidYouUpdate(React);
+  const { whyDidYouUpdate } = require('why-did-you-update')
+  whyDidYouUpdate(React)
 }
-
 ```
 
 ## ASTUCES POUR AMÉLIORER LES PERFORMANCES DE VOTRE APPLICATION REACT
@@ -142,7 +142,7 @@ Webpack 2 ou version supérieure
 Un minifier qui supporte le tree-shaking (UglifyJS ou Babel)
 Un exemple de bonne pratique à adopter :
 
-```
+```js
 // Au lieu de
 import * from 'package'
 

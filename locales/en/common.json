@@ -23,14 +23,30 @@
     "home": "Home",
     "blog": "Blog",
     "about": "About",
+    "rss": "RSS",
     "uses": "Uses",
     "language": "Change to the French version",
     "theme": "Change theme"
   },
   "blog": {
+    "title": "Blog",
+    "path": "/blog",
     "latest-posts": "Lastest blog posts",
     "previous": "Previous post",
-    "next": "Next post"
+    "next": "Next post",
+    "seo": {
+      "title": "Blog",
+      "description": "Articles about my web development and anything that piques my curiosity and interest.",
+      "url": "blog"
+    }
+  },
+  "about": {
+    "path": "/about",
+    "seo": {
+      "title": "About me",
+      "description": "Learn a little bit about 'The David Dias'",
+      "url": "about"
+    }
   },
   "footer": {
     "name": "Footer",
@@ -69,6 +85,9 @@
     "title": "Read my content about {{name}}",
     "h1": "Category: {{name}}",
     "description": "You will find all my posts related to {{name}}."
+  },
+  "rss": {
+    "path": "/rss/feed.xml"
   },
   "404": {
     "title": "Sorry 😩, this page can't be found.",

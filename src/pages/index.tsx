@@ -30,7 +30,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         openGraph={routes(t).home.seo}
       />
       <main>
-        <section className="pb-20 pt-0 lg:pt-10 relative flex justify-evenly">
+        <section className="pb-20 pt-0 lg:pt-10 flex justify-evenly">
           <div className="text-left">
             <h1 className="block mb-4 dark:text-white transition-colors">
               <p className="text-3xl p-0 font-light uppercase">{t('hero.greetings1')}</p>

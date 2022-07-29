@@ -63,6 +63,7 @@
     "lint-staged": "^13.0.3",
     "react-social-media-embed": "^2.2.2",
     "rehype-autolink-headings": "^6.1.1",
+    "rehype-figure": "^1.0.1",
     "rehype-image-placeholder": "^1.0.1",
     "rehype-prism-plus": "^1.4.2",
     "rehype-slug": "^5.0.1",

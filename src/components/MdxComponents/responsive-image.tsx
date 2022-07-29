@@ -10,7 +10,7 @@ export const ResponsiveImage: FC<ImageProps> = ({
   ...rest
 }) => {
   return (
-    <figure className="my-3">
+    <>
       <Image
         alt={alt}
         className="rounded-lg"
@@ -29,6 +29,6 @@ export const ResponsiveImage: FC<ImageProps> = ({
           dangerouslySetInnerHTML={{ __html: title }}
         />
       )}
-    </figure>
+    </>
   )
 }

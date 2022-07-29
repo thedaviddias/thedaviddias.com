@@ -7,6 +7,7 @@ import { ArticleJsonLd, NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { ReadTimeResults } from 'reading-time'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeFigure from 'rehype-figure'
 import rehypeImagePlaceholder from 'rehype-image-placeholder'
 import rehypePrismPlus from 'rehype-prism-plus'
 import rehypeSlug from 'rehype-slug'
@@ -95,7 +96,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
           article: {
             publishedTime: date,
             modifiedTime: lastmod,
-            authors: ['https://www.example.com/authors/@firstnameA-lastnameA'],
+            authors: ['https://thedaviddias.dev/authors/@david-dias'],
             tags,
           },
           images: [
@@ -267,6 +268,7 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
             rehypePlugins: [
               [rehypePrismPlus, { ignoreMissing: true }],
               [rehypeImagePlaceholder, { dir: 'public/' }],
+              [rehypeFigure, { className: 'my-3' }],
               rehypeSlug,
               [rehypeAutolinkHeadings],
               [rehypeExtractHeadings, { rank: 2, headings }],

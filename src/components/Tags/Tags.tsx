@@ -13,7 +13,7 @@ export const Tags: FC<TagsProps> = ({ tags }) => {
 
   return (
     <aside className="w-full mt-3 print:hidden">
-      <div className="small-title">{t('tags')}</div>
+      <div className="small-title">{t('tags.section')}</div>
       <nav arial-label="Tags">
         <ul className="flex items-center flex-wrap">
           {tags.map((tag) => (

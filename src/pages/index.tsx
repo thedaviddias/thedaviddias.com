@@ -81,7 +81,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
 
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const posts = getAllPostsWithFrontMatter({ dataType: 'blog', locale, limit: 5 })
-  await generateRssFeed()
+  await generateRssFeed().then(null)
 
   const props: HomeProps = {
     posts: JSON.parse(JSON.stringify(posts)),

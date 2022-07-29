@@ -1,3 +1,4 @@
+import a11yEmoji from '@fec/remark-a11y-emoji'
 import matter from 'gray-matter'
 import { GetStaticPaths, GetStaticPathsResult, GetStaticProps, NextPage } from 'next'
 import { useRouter } from 'next/router'
@@ -7,10 +8,12 @@ import { ArticleJsonLd, NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { ReadTimeResults } from 'reading-time'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeFigure from 'rehype-figure'
 import rehypeImagePlaceholder from 'rehype-image-placeholder'
 import rehypePrismPlus from 'rehype-prism-plus'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
+import remarkValidateLinks from 'remark-validate-links'
 import slugify from 'slugify'
 
 import { AdjacentPosts } from '@/components/AdjacentPosts'
@@ -82,6 +85,9 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
     return <div>Loading...</div>
   }
 
+  // console.log('source', source)
+  // console.log('MDXComponents', MDXComponents)
+
   return (
     <Container>
       <ScrollTop />
@@ -95,12 +101,12 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
           article: {
             publishedTime: date,
             modifiedTime: lastmod,
-            authors: ['https://www.example.com/authors/@firstnameA-lastnameA'],
+            authors: ['https://thedaviddias.dev/authors/@david-dias'],
             tags,
           },
           images: [
             {
-              url: `${baseUrl}/images/${preview}`,
+              url: `${baseUrl}${preview}`,
               width: 850,
               height: 650,
               alt: '',
@@ -112,7 +118,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
         type="Blog"
         url={permalink}
         title={title}
-        images={[`${baseUrl}/images/${preview}`]}
+        images={[`${baseUrl}${preview}`]}
         datePublished={date}
         dateModified={lastmod}
         authorName="David Dias"
@@ -234,6 +240,7 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
         author,
         publishedOn,
         publishedUrl,
+        preview,
       },
       permalink,
       readingTime,
@@ -248,6 +255,7 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
           tags,
           categories: categories || null,
           lastmod: (lastmod && JSON.parse(JSON.stringify(lastmod))) || null,
+          preview,
           author: author || null,
           ...(publishedOn && {
             published: {
@@ -263,10 +271,11 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
         adjacentPosts: getAdjacentPosts(slug),
         source: await serialize(markdownBody, {
           mdxOptions: {
-            remarkPlugins: [remarkGfm, remarkCodeTitles],
+            remarkPlugins: [remarkGfm, remarkCodeTitles, remarkValidateLinks, a11yEmoji],
             rehypePlugins: [
               [rehypePrismPlus, { ignoreMissing: true }],
               [rehypeImagePlaceholder, { dir: 'public/' }],
+              [rehypeFigure, { className: 'my-3' }],
               rehypeSlug,
               [rehypeAutolinkHeadings],
               [rehypeExtractHeadings, { rank: 2, headings }],

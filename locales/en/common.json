@@ -60,6 +60,7 @@
     "tableContent": "Table of Contents"
   },
   "tags": {
+    "section": "Tags",
     "title": "Posts related to {{name}}",
     "h1": "Tags: {{name}}",
     "description": "All my articles related to {{name}} topic."

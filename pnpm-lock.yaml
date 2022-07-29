@@ -54,6 +54,7 @@ specifiers:
   rehype-slug: ^5.0.1
   remark-gfm: ^3.0.1
   slugify: ^1.6.5
+  swr: ^1.3.0
   tailwindcss: ^3.1.6
   typescript: 4.7.4
   unist-util-visit: ^4.1.0
@@ -115,6 +116,7 @@ devDependencies:
   rehype-prism-plus: 1.4.2
   rehype-slug: 5.0.1
   remark-gfm: 3.0.1
+  swr: 1.3.0_react@18.2.0
   typescript: 4.7.4
   unist-util-visit: 4.1.0
 
@@ -6133,6 +6135,14 @@ packages:
       csso: 4.2.0
       picocolors: 1.0.0
       stable: 0.1.8
+    dev: true
+
+  /swr/1.3.0_react@18.2.0:
+    resolution: {integrity: sha512-dkghQrOl2ORX9HYrMDtPa7LTVHJjCTeZoB1dqTbnnEDlSvN8JEKpYIYurDfvbQFUUS8Cg8PceFVZNkW0KNNYPw==}
+    peerDependencies:
+      react: ^16.11.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: true
 
   /synckit/0.8.1:

@@ -1,9 +1,9 @@
 ---
-draft: true
+draft: false
 locale: fr
 title: Outils et astuces pour rendre accessible et performante son application React
 date: 2018-12-24T02:34:11.000Z
-description: ''
+description: "L'accessibilité et la performance sont deux de mes sujets de prédilection. Je partage dans cet article mes astuces et conseils pour vous assurez une qualité minimum pour votre projet."
 author: David Dias
 categories:
   - code
@@ -12,112 +12,125 @@ tags:
   - performance
   - react
 type: blog-post
+preview:
+  url: ''
+published:
+  url: https://www.24joursdeweb.fr/2018/outils-et-astuces-pour-rendre-accessible-et-performante-son-application-react/
+  on: 24joursdeweb.fr
 ---
 
-L’accessibilité et la performance sont deux (vastes) sujets qui m’ont toujours passionné et qui sont devenus ces dernières années au centre de nombreux meetups et conférences auquels j’ai pu assister (petit clin d’oeil à A11yTO). Récemment expatrié au Canada, j’ai eu l’opportunité, dans ma nouvelle entreprise, de dédier mon temps à la refonte d’un project avec React et de devoir du coup, rendre cette application accessible et performante. (Youpi !)
+L’accessibilité et la performance sont deux (vastes) sujets qui m’ont toujours passionné et qui sont devenus ces dernières années au centre de nombreux meetups et conférences auquels j’ai pu assister (petit clin d’oeil à [A11yTO](http://a11yto.com/)). Récemment expatrié au Canada, j’ai eu l’opportunité, dans ma [nouvelle entreprise](https://influitive.com/), de dédier mon temps à la refonte d’un project avec React et de devoir du coup, rendre cette application accessible et performante. (Youpi !)
 
-Que vous connaissiez React ou pas, que vous utilisiez un framework JavaScript ou que vous développiez un simple site web en HTML et CSS, les outils et astuces que j’ai rassemblé dans cet article vous permettront de mieux appréhender ces problématiques et d’y répondre correctement dans vos projets (présents et futurs).
+Que **vous connaissiez React ou pas**, que vous utilisiez un framework JavaScript ou que vous développiez un simple site web en HTML et CSS, les outils et astuces que j’ai rassemblé dans cet article vous permettront de mieux appréhender ces problématiques et d’y répondre correctement dans vos projets (présents et futurs).
 
-## TOUT LE MONDE A BESOIN D’ACCESSIBILITÉ
+## Tout le monde a besoin d’accessibilité
 
-L’accessibilité (aussi appelée a11y) est un sujet qui a toujours été présent depuis le début du web.
+L’accessibilité (aussi appelée [a11y](http://mds.is/a11y/)) est un sujet qui a toujours été présent depuis le début du web.
 
 Encore de nos jours, certaines entreprises et même développeurs continuent pourtant de penser que l’accessibilité est un sujet à part… tout comme certains pensaient il y a quelques années que l’UX (Expérience Utilisateur) n’était pas importante… Hum hum. Je vais prendre un exemple très simple pour vous démontrer l’importance de rendre un site internet ou une application web accessible.
 
-Imaginons que vous deviez en urgence acheter un billet d’avion ou de train de chez vous. Vous êtes sur votre PC, vous naviguez tranquillement sur le site d’achat quand soudain… votre souris fonctionnant sur batterie, n’a plus de jus (et non vous n’avez pas de piles de rechange ni même le câble USB pour la connecter à votre ordinateur, et votre iPhone 5s vient juste de s’éteindre). Imaginons donc que vous n’ayez plus que votre clavier pour finaliser votre achat. Et maintenant imaginez que le développeur n’ait absolument pas eu envie de tester la navigation par clavier. On peut même imaginer qu’il ait gentiment mis un outline: 0; parce que le client n’aimait pas voir ce contour bleu autour des liens et boutons.
+Imaginons que vous deviez en urgence acheter un billet d’avion ou de train de chez vous. Vous êtes sur votre PC, vous naviguez tranquillement sur le site d’achat quand soudain… votre souris fonctionnant sur batterie, n’a plus de jus (et non vous n’avez pas de piles de rechange ni même le câble USB pour la connecter à votre ordinateur, et votre iPhone 5s vient juste de s’éteindre). Imaginons donc que vous n’ayez plus que votre clavier pour finaliser votre achat. Et maintenant imaginez que le développeur n’ait absolument pas eu envie de tester la navigation par clavier. On peut même imaginer qu’il ait gentiment mis un `outline: 0;` parce que le client n’aimait pas voir ce contour bleu autour des liens et boutons.
 
-Je ne pense pas avoir besoin d’aller plus loin. J’ai beaucoup d’autre exemples aussi simple que celui-ci, qui ne mettent aucun doute sur le fait que l’accessibilité n’est pas une thématique limitée aux personnes avec des handicaps ou problèmes physiques. L’accessibilité est une thématique actuelle et universelle.
+Je ne pense pas avoir besoin d’aller plus loin. J’ai beaucoup d’autre exemples aussi simple que celui-ci, qui ne mettent aucun doute sur le fait que l’accessibilité n’est pas une thématique limitée aux personnes avec des handicaps ou problèmes physiques. L’accessibilité est une **thématique actuelle et universelle**.
 
-La documentation de React consacre toute une page concernant l’accessibilité et vous y trouverez des éléments complémentaires au contenu de mon article.
+La documentation de React consacre toute [une page concernant l’accessibilité](https://reactjs.org/docs/accessibility.html) et vous y trouverez des éléments complémentaires au contenu de mon article.
 
-## MES OUTILS DE BASE POUR « MESURER ET ANALYSER »
+## Mes outils de base pour « mesurer et analyser »
 
 Que vous veniez de commencer à développer votre application ou que vous deviez optimiser un projet existant, il y a certains outils que vous pouvez utiliser pour vous donner un aperçu du statut de votre projet.
 
-Lighthouse
-Que ce soit l’accessibilité, la performance, le SEO ou tout autre domaine front-end, il est important de pouvoir mesurer régulièrement l’état de votre application avant d’y apporter des améliorations ou corrections. L’un des outils que j’utilise quotidiennement et que vous connaissez peut-être est Lighthouse.
+### Lighthouse
 
-Capture d'écran
-Résultats d’analyse de Lighthouse sur 24joursdeweb.fr.
+Que ce soit l’accessibilité, la performance, le SEO ou tout autre domaine front-end, il est important de pouvoir **mesurer régulièrement l’état de votre application** avant d’y apporter des améliorations ou corrections. L’un des outils que j’utilise quotidiennement et que vous connaissez peut-être est [Lighthouse](https://developers.google.com/web/tools/lighthouse/).
 
-Beaucoup mis en avant lors du dernier Google Dev Summit en novembre 2018, Lighthouse est l’outil que vous trouverez soit dans l’onglet « Audit » des outils de développement de Chrome, ou maintenant intégré dans la page résultat de Google PageSpeed Insights. Vous pouvez ainsi analyser n’importe quel site en utilisant n’importe quel navigateur.
+![](/images/blog/outils-astuces-rendre-accessible-performante-application-react/lighthouse-24jdw.jpg 'Résultats d’analyse de Lighthouse sur 24joursdeweb.fr.')
 
-Webhint
-Webhint est aussi un outil (open-source) qui a été créé par deux connaissances travaillant chez Microsoft. La documentation présente sur leur site est une des plus complètes que j’ai vu à ce jour, je vous recommande d’y jeter un œil.
+Beaucoup mis en avant lors du dernier Google Dev Summit en novembre 2018, Lighthouse est l’outil que vous trouverez soit dans l’onglet « Audit » des outils de développement de Chrome, ou maintenant intégré dans la page résultat de [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/). Vous pouvez ainsi analyser n’importe quel site en utilisant n’importe quel navigateur.
+
+### Webhint
+
+[Webhint](https://webhint.io/) est aussi un outil (open-source) qui a été créé par deux connaissances travaillant chez Microsoft. La [documentation](https://webhint.io/docs/user-guide/hints/) présente sur leur site est une **des plus complètes** que j’ai vu à ce jour, je vous recommande d’y jeter un œil.
 
 Vous pouvez soit utiliser leur site ou analyser n’importe quel site utilisant la ligne de commande. Webhint vous génèrera un rapport en HTML que vous pourrez partager avec vos équipes ou votre client.
 
-Lecteur vidéo
+### … et les autres
 
-00:00
-00:03
+[Dareboost](https://www.dareboost.com/fr) (entreprise française) et [Calibre](https://calibreapp.com/) sont d’autres services que j’utilise selon les projets et que vous pouvez tester gratuitement pour une durée ou un nombre de fois limité.
 
-… et les autres
-Dareboost (entreprise française) et Calibre sont d’autres services que j’utilise selon les projets et que vous pouvez tester gratuitement pour une durée ou un nombre de fois limité.
+## Repérer les erreurs et optimiser l’accessibilité
 
-REPÉRER LES ERREURS ET OPTIMISER L’ACCESSIBILITÉ
-Au delà des outils précédents qui vous donnent un aperçu global de l’état de votre site internet ou de votre application web, il m’arrive de travailler avec des packages ou modules plus spécifiques que je couple avec mon workflow de travail. Mais avant de vous les présenter, voici par quoi vous devez commencer : activer l’inspecteur d’accessibilité.
+Au delà des outils précédents qui vous donnent un aperçu global de l’état de votre site internet ou de votre application web, il m’arrive de travailler avec des packages ou modules plus spécifiques que je couple avec mon workflow de travail. Mais avant de vous les présenter, voici par quoi vous devez commencer : **activer [l’inspecteur d’accessibilité](https://developer.mozilla.org/fr/docs/Outils/Inspecteur_accessibilite)**.
 
-Dans Google Chrome:
+**Dans Google Chrome:**
 
-Depuis certaines récentes versions de Chrome, vous pouvez maintenant trouver l’onglet accessibilité dans la partie « styles » de l’onglet « Éléments » des outils de développement de Chrome.
-Capture d'écran des outils d'accessibilité dans Chrome
+- Depuis certaines récentes versions de Chrome, vous pouvez maintenant trouver l’onglet accessibilité dans la partie « styles » de l’onglet « Éléments » des outils de développement de Chrome.
 
-Dans Mozilla Firefox:
+![](/images/blog/outils-astuces-rendre-accessible-performante-application-react/chrome-a11y.jpg)
+
+**Dans Mozilla Firefox:**
 
 Ouvrez la boîte à outils du développeur dans Firefox: depuis la version 63 de Firefox, vous devriez avoir un onglet « Accessibilité » comme sur la capture suivante. Il suffit de cliquer sur le bouton pour l’activer.
-Capture d'écran de l'onglet accessibilité dans Firefox
+![](/images/blog/outils-astuces-rendre-accessible-performante-application-react/firefox-a11y.jpg)
 
-ESLint-plugin-jsx-a11y
-Si vous travaillez avec JavaScript depuis quelques temps, vous devez certainement utiliser ESLint dans votre workflow (vous pouvez lire cet article pour une complète présentation d’ESLint). ESLint-plugin-jsx-a11y, qui fonctionne avec ESLint) est un simple plugin qui va vous alerter dans le cas où votre code présente une erreur en terme d’accessibilité. Un simple outil mais efficace pour détecteur une erreur pendant le développement ou au moment du build.
+### ESLint-plugin-jsx-a11y
 
-stylelint-a11y
-Récemment sorti, stylelint-a11y, est à utiliser si bien sûr vous utiliser Stylelint de base. Le plugin vous alerte sur des possibles erreurs d’accessibilité dans votre CSS / Sass.
+Si vous travaillez avec JavaScript depuis quelques temps, vous devez certainement utiliser ESLint dans votre workflow (vous pouvez lire [cet article](https://www.synbioz.com/blog/un_code_js_impeccable_grace_a_eslint) pour une complète présentation d’ESLint). [ESLint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y), qui fonctionne avec ESLint) est un simple plugin qui va vous alerter dans le cas où votre code présente une erreur en terme d’accessibilité. Un simple outil mais efficace pour détecteur une erreur pendant le développement ou au moment du build.
+
+### stylelint-a11y
+
+Récemment sorti, [stylelint-a11y](https://github.com/YozhikM/stylelint-a11y), est à utiliser si bien sûr vous utiliser [Stylelint](https://stylelint.io/) de base. Le plugin vous alerte sur des possibles erreurs d’accessibilité dans votre CSS / Sass.
 Si par exemple, vous utilisez une taille de texte trop petite ou des display: none, stylelint-a11y vous le dira.
 
-Permettre à un utilisateur d’accéder au contenu de votre website ou application en prenant en compte tous ces facteurs est important. Addy Osmani, ingénieur chez Google, a récemment publié un article sur le « Coût du JavaScript » et présente les problématiques et les solutions pour améliorer les performances de son site ou application.
+Permettre à un utilisateur d’accéder au contenu de votre website ou application en prenant en compte tous ces facteurs est important. [Addy Osmani](https://twitter.com/addyosmani), ingénieur chez Google, a récemment publié un article sur le « [Coût du JavaScript](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4) » et présente les problématiques et les solutions pour améliorer les performances de son site ou application.
 
-react-a11y
-react-a11y est un autre module qui vous alerte de possibles problèmes d’accessibilité directement dans votre console.
+### react-a11y
 
-react-axe
-react-axe, similaire à react-a11y, mais est basé sur axe-core développé par Deque et qui permet aussi de prendre connaissance de possibles erreurs d’accessibilité. Vous pouvez aussi télécharger l’extension aXe qui rajoute un onglet à votre Google DevTools et vous donne la même chose que react-axe mais pour n’importe quel site.
+[react-a11y](https://github.com/reactjs/react-a11y) est un autre module qui vous alerte de possibles problèmes d’accessibilité directement dans votre console.
 
-D’autres plugins à explorer
+### react-axe
+
+[react-axe](https://www.npmjs.com/package/react-axe), similaire à react-a11y, mais est basé sur axe-core développé par Deque et qui permet aussi de prendre connaissance de possibles erreurs d’accessibilité. Vous pouvez aussi télécharger l’[extension aXe](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd) qui rajoute un onglet à votre Google DevTools et vous donne la même chose que react-axe mais pour n’importe quel site.
+
+### D’autres plugins à explorer
+
 Malheureusement, il serait trop long de vous parlez de tous les plugins que j’ai pu tester depuis le début de mon projet, et qui m’on permis de construire une application React plus accessible. Je vous partage toutefois une petite liste de plugins (régulièrement mis à jour) auxquels je vous recommande de jeter un œil :
 
-react-aria-live : un plugin permettant d’annoncer pages et sections, particulièrement utile avec React Router
-react-modal : pour une popin /modal parfaitement accessible
-react-dates : un datepicker accessible
-react-accessible-accordion : un accordion accessible
-Rien ne vaut le test manuel
-Bien sûr, après avoir testé et optimiser votre code à l’aide de ces outils, le seul vrai moyen de tester votre application et d’inviter des personnes avec des difficultés d’accessibilité différentes à la tester manuellement. Ils pourront ainsi vous faire des retours utiles basés sur leurs expériences et leur manière de naviguer le web.
+- [react-aria-live](https://www.npmjs.com/package/react-aria-live) : un plugin permettant d’annoncer pages et sections, particulièrement utile avec React Router
+- [react-modal](https://www.npmjs.com/package/react-modal) : pour une popin /modal parfaitement accessible
+- [react-dates](https://www.npmjs.com/package/react-dates) : un datepicker accessible
+- [react-accessible-accordion](https://github.com/springload/react-accessible-accordion) : un accordion accessible
 
-Capture d'écran « Additional items to check »
+### Rien ne vaut le test manuel
+
+Bien sûr, après avoir testé et optimiser votre code à l’aide de ces outils, **le seul vrai moyen de tester** votre application et d’inviter des personnes avec des difficultés d’accessibilité différentes à la tester manuellement. Ils pourront ainsi vous faire des retours utiles basés sur leurs expériences et leur manière de naviguer le web.
+
+![](/images/blog/outils-astuces-rendre-accessible-performante-application-react/a11y-additional-items.jpg)
 
 Après avoir traiter assez rapidement certains outils et astuces pour davantage d’accessibilité, nous allons nous pencher sur la performance.
 
-MAIS AU FAIT, C’EST QUOI LA PERFORMANCE ?
+## Mais au fait, c’est quoi la performance ?
+
 Que vous viviez en France ou au Canada, de nos jours, les connexions internet sont ici et là extrêmement rapides. Mais Internet n’est pas limité à la France, ou même à l’Europe ou à l’Amérique. Internet est accessible de n’importe où dans le monde et à travers n’importe quel appareil (téléphone, smartphone, TV, montre, réfrigérateur, tableau blanc tactile…).
 
-SAVOIR DÉTECTER LES PROBLÈMES DE PERFORMANCE
+## Savoir détecter les problèmes de performance
+
 Améliorer les performances de son site ou plus particulièrement de son application React demande l’utilisation de certains outils que nous pouvons utiliser dès le début, au milieu ou même en fin de projet.
 
-Commencer par analyser vos bundles
-webpack-bundle-analyser n’est pas un outil spécifique à React : c’est un plugin qui permet de visualiser le poids de vos modules et fichiers JavaScript présents dans vos bundles générés par Webpack. C’est un bon moyen de découvrir un potentiel module qui serait trop lourd. Il est tout à fait possible de l’utiliser dès que vous commencer à importer des packages pour votre projet.
+### Commencer par analyser vos bundles
 
-Lecteur vidéo
+[webpack-bundle-analyser](https://www.npmjs.com/package/webpack-bundle-analyzer) n’est pas un outil spécifique à React : c’est un plugin qui permet de visualiser le poids de vos modules et fichiers JavaScript présents dans vos bundles générés par Webpack. C’est un bon moyen de découvrir un potentiel module qui serait trop lourd. Il est tout à fait possible de l’utiliser dès que vous commencer à importer des packages pour votre projet.
 
-00:00
-00:06
+### Choisir une meilleure alternative
 
-Choisir une meilleure alternative
-Si webpack-bundle-analyser a mis un évidence certains modules qui pourraient impacter vos performances, vous pouvez alors utiliser Bundlephobia pour choisir d’autres modules équivalents (et plus léger). Un simple exemple avec la fameuse librairie Moment.js qui en général est utilisée à tort et à travers et qui pourrait très souvent être remplacée par d’autres librairies beaucoup plus petites.
+Si webpack-bundle-analyser a mis un évidence certains modules qui pourraient impacter vos performances, vous pouvez alors utiliser [Bundlephobia](https://bundlephobia.com/) pour choisir d’autres modules équivalents (et plus léger). Un simple exemple avec la fameuse librairie [Moment.js](https://momentjs.com/) qui en général est utilisée à tort et à travers et qui pourrait très souvent être remplacée par d’autres librairies beaucoup plus petites.
 
-Avant de choisir d’utiliser quelqueconque plugin, n’hésitez pas à vous demander si celui que vous souhaitez utiliser est vraiment utile, s’il n’existe pas d’autres alternatives ou une alternative plus légère…
+Avant de choisir d’utiliser quelqueconque plugin, n’hésitez pas à vous demander si celui que vous souhaitez utiliser est **vraiment utile**, s’il n’existe pas d’**autres alternatives** ou une alternative **plus légère**…
 
-Analyser vos props pour éviter le rendu inutile
-Le module why-did-you-update peut vous permettre de vous alerter lorsque vos props sont re-rendu inutilement.
+### Analyser vos props pour éviter le rendu inutile
+
+Le module [why-did-you-update](https://github.com/maicki/why-did-you-update) peut vous permettre de vous alerter lorsque vos props sont re-rendu inutilement.
+
+![](/images/blog/outils-astuces-rendre-accessible-performante-application-react/why-did-you-update.png)
 
 Il vous suffit d’installer le package dans votre projet et insérer ce bout de code dans votre app.js :
 
@@ -130,16 +143,18 @@ if (process.env.NODE_ENV !== 'production') {
 }
 ```
 
-## ASTUCES POUR AMÉLIORER LES PERFORMANCES DE VOTRE APPLICATION REACT
+## Astuces pour améliorer les performances de votre application react
 
-Utiliser le tree-shaking
-Le « tree-shaking » est une technique qui permet, à la création de votre bundle, de ne pas inclure du « code mort » dont vous n’avez pas besoin. Vous vous retrouvez donc avec un bundle plus léger.
+### Utiliser le tree-shaking
+
+Le « [tree-shaking](https://webpack.js.org/guides/tree-shaking/) » est une technique qui permet, à la création de votre bundle, de ne pas inclure du « code mort » dont vous n’avez pas besoin. Vous vous retrouvez donc avec un bundle plus léger.
 
 Pour cela, vous devez utiliser :
 
-Les ES2015 Modules (import, export…)
-Webpack 2 ou version supérieure
-Un minifier qui supporte le tree-shaking (UglifyJS ou Babel)
+- Les ES2015 Modules (import, export…)
+- Webpack 2 ou version supérieure
+- Un minifier qui supporte le tree-shaking ([UglifyJS](https://github.com/mishoo/UglifyJS) ou [Babel](https://babeljs.io/))
+
 Un exemple de bonne pratique à adopter :
 
 ```js
@@ -150,20 +165,26 @@ import * from 'package'
 import { module } from 'package'
 ```
 
-N’oubliez pas la mise en cache
-La mise en cache n’est pas forcément utile dans la phase de développement mais est indispensable pour une web application en production. Cela consiste tout simplement à rajouter un hash (série de chiffres et caractères) qui change à chaque fois que le contenu du fichier est modifié.
+### N’oubliez pas la mise en cache
+
+La [mise en cache](https://webpack.js.org/guides/caching/) n’est pas forcément utile dans la phase de développement mais est indispensable pour une web application en production. Cela consiste tout simplement à rajouter un hash (série de chiffres et caractères) qui change à chaque fois que le contenu du fichier est modifié.
 
 Ce que beaucoup font consiste à créer au moins un bundle (à l’aide de Webpack) « main » avec votre propre code et un fichier « vendor » qui contiendrait tous les fichiers des libraries externes que vous seriez amener à utiliser. (en production, préférer l’utilisation de contenthash).
 
-CE N’EST QU’UN DÉBUT…
+### Ce n’est qu’un début…
+
 Bien sûr dans cet article, je n’ai fait que gratter la surface (il y aurait beaucoup d’autres points à traiter), l’accessibilité et la performance web sont des spécialités à part entière qui demande beaucoup de pratique avant d’être appréhendé correctement. Mais aujourd’hui, plus que jamais, si vous n’en avez pas fait vos domaines d’expertises, ce sont définitivement des sujets qu’il est impossible d’ignorer. Le Web a toujours été un moyen de partage et de communication ouvert à tous, c’est à nous, architectes de faire en sorte que cela puisse continuer de la sorte.
 
 Je vous laisse quelques ressources complémentaires qui vous permettront d’approfondir un peu plus ces 2 thématiques !
 
-Accessibilité :
-24a11y: c’est comme 24 jours de web mais pour l’accessibilité.
-Deque University: Deque est une entreprise de consulting qui offre des certifications et ressources sur l’accessibilité.
-Accessibility sur Tuts+: une série d’articles sur l’accessibilité (en anglais)
-Performance :
-Front-End Performance Checklist: mon open-source checklist pour ce qui concerne la performance (vous y trouverez tous les liens possibles pour approndir le sujet).
+### Accessibilité :
+
+- [24a11y](https://www.24a11y.com/): c’est comme 24 jours de web mais pour l’accessibilité.
+- [Deque University](https://dequeuniversity.com/): Deque est une entreprise de consulting qui offre des certifications et ressources sur l’accessibilité.
+- [Accessibility sur Tuts+](https://webdesign.tutsplus.com/categories/accessibility): une série d’articles sur l’accessibilité (en anglais)
+
+### Performance :
+
+- [Front-End Performance Checklist](https://github.com/thedaviddias/Front-End-Performance-Checklist): mon open-source checklist pour ce qui concerne la performance (vous y trouverez tous les liens possibles pour approndir le sujet).
+
 Et bientôt, j’aurais le plaisir de publier la « Front-End Accessibility Checklist » sur GitHub, restez attentif !

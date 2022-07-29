@@ -30,9 +30,9 @@ export type BlogPostProps = {
   slug: string
 }
 
-export const createPermalink = (filename: string, dataType: string) => {
+export const createPermalink = (filename: string, dataType: string, locale?: string) => {
   const filenameNoExtension = filename.replace('.mdx', '')
-  const permalink = `/${dataType}/${filenameNoExtension}`
+  const permalink = `${locale !== 'en' ? `/${locale}` : ''}/${dataType}/${filenameNoExtension}`
 
   return permalink
 }
@@ -75,10 +75,10 @@ export const getPost = (slug: string, dataType: string) =>
  * @param dataType
  * @returns
  */
-export const getPostBySlug = (slug: string, dataType: string) => {
+export const getPostBySlug = (slug: string, dataType: string, locale?: string) => {
   const source = getPost(slug, dataType)
 
-  const permalink = `${baseUrl}/${dataType}/${slug}`
+  const permalink = `${baseUrl}${createPermalink(slug, dataType, locale)}` || ''
 
   const { data, content } = matter(source)
 
@@ -117,7 +117,7 @@ export const getAllPostsWithFrontMatter = ({
       const { data, content } = matter(source)
 
       const filenameNoExtension = filename.replace('.mdx', '')
-      const permalink = createPermalink(filename, dataType)
+      const permalink = createPermalink(filename, dataType, locale)
 
       if (filterByTag) {
         if (data.tags.includes(filterByTag)) {

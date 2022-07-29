@@ -1,18 +1,23 @@
 import type { GetStaticProps, NextPage } from 'next'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 
 import generateRssFeed from '@/lib/generateRss'
 
-import { BlogPost } from '@/components/BlogPost'
 import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
-import { H5 } from '@/components/Headings'
+import { LatestPostsSection } from '@/components/LatestPostsSection'
 
 import { routes } from '@/config/routes'
 import { HERO_LINKS } from '@/constants'
 import { getAllPostsWithFrontMatter } from '@/utils/get-blog-posts'
+
+const PodcastSection = dynamic(() => import('../components/PodcastSection'), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+})
 
 type HomeProps = {
   posts: any[]
@@ -66,26 +71,16 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           </div>
         </section>
 
-        <section className="grid grid-cols-1 gap-y-10 border-none">
-          <header>
-            <H5 as="h2">{t('blog.sections.latest-posts')}</H5>
-          </header>
-          <div className="grid grid-cols-1 gap-4 lg:col-span-2">
-            {posts.map((post) => (
-              <BlogPost key={post.frontMatter.title} post={post} />
-            ))}
-          </div>
-          <footer className="text-right">
-            <CustomLink href="/blog">{t('posts.viewAll')}</CustomLink>
-          </footer>
-        </section>
+        <LatestPostsSection posts={posts} />
+
+        <PodcastSection />
       </main>
     </Container>
   )
 }
 
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
-  const posts = getAllPostsWithFrontMatter({ dataType: 'blog', locale, limit: 5 })
+  const posts = getAllPostsWithFrontMatter({ dataType: 'blog', locale, limit: 3 })
   await generateRssFeed()
 
   const props: HomeProps = {

@@ -180,7 +180,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
 
             <div className="flex-auto ml-16 hidden lg:block print:hidden">
               <div className="sticky top-10 w-full">
-                {permalink && <Share title={title} tags={tags && tags} slug={permalink} />}
+                {permalink && <Share title={title} tags={tags && tags} permalink={permalink} />}
                 {headings && (
                   <aside className="w-full mt-3">
                     <TableOfContents headings={headings} />
@@ -223,7 +223,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params, locale }) => {
   if (params?.slug) {
     const slug = params.slug as string
-    const postContent = await getPostBySlug(slug, 'blog')
+    const postContent = await getPostBySlug(slug, 'blog', locale)
     const headings: Headings[] = []
 
     const {

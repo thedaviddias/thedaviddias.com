@@ -44,6 +44,13 @@
       "greetings1": "Hey there!",
       "greetings2": " I'm David Dias",
       "presentation": "I'm a Front-End Developer, podcaster, content creator passionate about solving digital and human problems! I enjoy meeting new people, building communities and talking about tech, expatriation and web."
+    },
+    "sections": {
+      "podcast": {
+        "latest_podcasts": "Latest podcast",
+        "view_website": "View more on the website",
+        "url": "https://worldwebstories.com"
+      }
     }
   },
   "blog": {

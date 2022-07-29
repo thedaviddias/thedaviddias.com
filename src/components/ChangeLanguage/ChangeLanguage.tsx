@@ -1,5 +1,6 @@
-import setLanguage from 'next-translate/setLanguage'
 import useTranslation from 'next-translate/useTranslation'
+
+import { CustomLink } from '@/components/CustomLink'
 
 import FrFlag from '../../../public/images/svg/fr-flag.svg'
 import UsFlag from '../../../public/images/svg/us-flag.svg'
@@ -20,20 +21,19 @@ export const ChangeLanguage = () => {
         : t(`layout.language.${lng}.switch`, { lang: t(`layout.language.${lng}.fullName`) })
 
     return (
-      <button
-        type="button"
+      <CustomLink
         key={lng}
         aria-label={switchLabel}
         className="w-8 h-8 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300  transition-all"
-        onClick={async () => await setLanguage(lng)}
-        title={switchLabel}
+        href="/"
+        locale={lng}
       >
         {lng === 'en' ? (
           <UsFlag className="w-8 h-8 rounded-lg" alt="Site Title" aria-hidden />
         ) : (
           <FrFlag className="w-8 h-8 rounded-lg" alt="Site Title" aria-hidden />
         )}
-      </button>
+      </CustomLink>
     )
   })
 

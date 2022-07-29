@@ -34,7 +34,7 @@ export const Author: FC<AuthorProps> = ({ name, routes }) => {
                 {name}
               </p>
               <p className="text-sm font-medium text-gray-500 group-hover:text-gray-700 dark:text-gray-500 dark:group-hover:text-gray-400">
-                About me
+                {routes(t).about.seo.title}
               </p>
             </div>
           </div>

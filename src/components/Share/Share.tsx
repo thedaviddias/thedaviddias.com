@@ -3,12 +3,12 @@ import React, { FC } from 'react'
 import { Facebook, Linkedin, Reddit, Twitter } from 'react-social-sharing'
 
 type ShareProps = {
-  slug: string
+  permalink: string
   title: string
   tags?: string[]
 }
 
-export const Share: FC<ShareProps> = ({ slug, title, tags }) => {
+export const Share: FC<ShareProps> = ({ permalink, title, tags }) => {
   const arr: string[] = []
 
   tags &&
@@ -23,12 +23,12 @@ export const Share: FC<ShareProps> = ({ slug, title, tags }) => {
       <Twitter
         small
         message={`${title} ${hashtags} by @thedaviddias`}
-        link={slug}
+        link={permalink}
         className="h-8 w-10"
       />
-      <Facebook small link={slug} className="h-8 w-10" />
-      <Linkedin small message={title} link={slug} className="h-8 w-10" />
-      <Reddit small link={slug} className="h-8 w-10" />
+      <Facebook small link={permalink} className="h-8 w-10" />
+      <Linkedin small message={title} link={permalink} className="h-8 w-10" />
+      <Reddit small link={permalink} className="h-8 w-10" />
     </aside>
   )
 }

@@ -45,6 +45,9 @@
       "greetings1": "Salut toi!",
       "greetings2": "Je m'appelle David Dias",
       "presentation": "Je suis développeur Front-End, podcasteur, créateur de contenu digital passioné pour résoudre les problèmes digitaux et humains! I enjoy meeting new people, building communities and talking about tech, expatriation and web."
+    },
+    "sections": {
+      "latest-podcasts": "Derniers podcasts"
     }
   },
   "blog": {
@@ -55,7 +58,7 @@
       "url": "blog"
     },
     "sections": {
-      "latest-posts": "Les derniers articles"
+      "latest-posts": "Derniers articles"
     }
   },
   "about": {
@@ -104,7 +107,7 @@
     "viewAll": "→ Voir tous les articles",
     "continue": "Continuez de lire →",
     "updated": "Mis à jour le",
-    "published": "Initiallement publié sur ",
+    "published": "Initialement publié sur ",
     "tableContent": "Table des matières",
     "previous": "Publication précédente",
     "next": "Publication suivante"

@@ -48,3 +48,11 @@ export const HERO_LINKS = [
     link: GITHUB_PROFILE,
   },
 ]
+
+export const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`
+export const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks`
+export const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`
+export const GET_PODCAST_ERREUR_200 =
+  'https://api.spotify.com/v1/shows/5vlkaq2mJ3niIkkmUcrXfS/episodes?market=FR&limit=1&offset=0'
+export const GET_PODCAST_WWS =
+  'https://api.spotify.com/v1/shows/2BYtLK0WwVz0cIfgcJwL57/episodes?market=FR&limit=1&offset=0'

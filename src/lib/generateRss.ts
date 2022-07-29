@@ -2,6 +2,8 @@ import { Feed } from 'feed'
 import fs from 'fs'
 
 import { getAllPostsWithFrontMatter } from '../utils/get-blog-posts'
+import localeEN from '../../locales/en/common.json'
+import localeFR from '../../locales/fr/common.json'
 
 export default async function generateRssFeed() {
   const postsEn = getAllPostsWithFrontMatter({ dataType: 'blog' })
@@ -17,8 +19,8 @@ export default async function generateRssFeed() {
 
   // Creating feed
   const feedEn = new Feed({
-    title: 'The David Dias',
-    description: 'Your Blog description',
+    title: localeEN.title,
+    description: localeEN.description,
     id: siteURL,
     link: siteURL,
     image: `${siteURL}/favicon.ico`,
@@ -53,8 +55,8 @@ export default async function generateRssFeed() {
 
   // Creating feed
   const feedFr = new Feed({
-    title: 'The David Dias',
-    description: 'Your Blog description',
+    title: localeFR.title,
+    description: localeFR.description,
     id: siteURL,
     link: siteURL,
     image: `${siteURL}/favicon.ico`,

@@ -5,6 +5,9 @@ export const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme, resolvedTheme } = useTheme()
 
+  console.log('theme', theme)
+  console.log('resolvedTheme', resolvedTheme)
+
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), [])
 

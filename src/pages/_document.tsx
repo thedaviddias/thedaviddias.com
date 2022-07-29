@@ -4,17 +4,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html className="scroll-smooth">
-        <Head>
-          {process.env.NODE_ENV === 'production' && (
-            <>
-              <script
-                defer
-                data-domain="thedaviddias.dev"
-                src="https://plausible.io/js/plausible.js"
-              />
-            </>
-          )}
-        </Head>
+        <Head></Head>
         <body className="antialiased">
           <Main />
           <NextScript />

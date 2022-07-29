@@ -37,7 +37,7 @@ export const BlogPost: FC<BlogPostProps> = ({ post, isCategoryPage }) => {
           <div className="flex-grow text-left lg:text-right lg:ml-8">
             {!isCategoryPage && (
               <div className="float-right lg:float-none !mb-1">
-                {post.frontMatter.categories && (
+                {post.frontMatter.categories.length && (
                   <CustomLink
                     href={`/category/${slugify(post.frontMatter.categories[0], { lower: true })}`}
                     passHref

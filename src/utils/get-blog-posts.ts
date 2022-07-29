@@ -180,15 +180,12 @@ async function collateTags(dataType: string, type: string) {
     const source = fs.readFileSync(path.join(process.cwd(), 'content', dataType, postSlug), 'utf8')
     const { data } = matter(source)
 
-    if (type === 'tags') {
+    if (type === 'tags' && data.tags.length) {
       data.tags && data.tags.forEach((tag: string) => allTags.add(slugify(tag, { lower: true })))
     }
 
-    if (type === 'categories') {
-      data.categories &&
-        data.categories.forEach((category: string) =>
-          allTags.add(slugify(category, { lower: true }))
-        )
+    if (type === 'categories' && data.categories.length) {
+      data.categories.forEach((category: string) => allTags.add(slugify(category, { lower: true })))
     }
   })
 
@@ -231,4 +228,23 @@ export function getAdjacentPosts(slug: string): PreviousNext {
             title: allPostHeaders[postIndex + 1]?.frontMatter.title,
           },
   }
+}
+
+export const getAllDraftPosts = ({ dataType }: GetAllPostsWithFrontMatter): BlogPostProps[] => {
+  const blogs = getAllPosts(dataType)
+
+  const allBlogs = blogs
+    .reduce((allPosts: any, filename: string) => {
+      const filenameNoExtension = filename.replace('.mdx', '')
+
+      return [
+        {
+          slug: filenameNoExtension,
+        },
+        ...allPosts,
+      ]
+    }, [])
+    .filter((blog: BlogPostProps) => blog.frontMatter.draft)
+
+  return allBlogs
 }

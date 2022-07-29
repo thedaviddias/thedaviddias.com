@@ -122,10 +122,10 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
       <main>
         <article className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <header className="pb-6 text-center border-b border-gray-200 dark:border-gray-700 mb-8 transition-colors duration-200">
-            {categories && (
+            {categories.length && (
               <div className="text-gray-500 dark:text-gray-400 font-medium mb-2 text-sm sm:text-base transition-colors duration-200">
                 <span className="sr-only">Category</span>
-                {categories.map((category) => (
+                {categories?.map((category) => (
                   <CustomLink
                     key={category}
                     href={`/category/${slugify(category, { lower: true })}`}

@@ -16,7 +16,7 @@ export const Tags: FC<TagsProps> = ({ tags }) => {
       <div className="small-title">{t('tags.section')}</div>
       <nav arial-label="Tags">
         <ul className="flex items-center flex-wrap">
-          {tags.map((tag) => (
+          {tags?.map((tag) => (
             <li
               key={tag}
               className="py-1 px-2 mr-3 mb-2 text-base font-medium leading-6 text-gray-600 bg-gray-100 hover:ring-2 ring-gray-300 dark:text-gray-100 dark:bg-gray-700

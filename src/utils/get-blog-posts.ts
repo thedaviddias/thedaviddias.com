@@ -208,8 +208,8 @@ export async function getCategories(dataType: string) {
   return categories[dataType]
 }
 
-export function getAdjacentPosts(slug: string): PreviousNext {
-  const allPostHeaders = getAllPostsWithFrontMatter({ dataType: 'blog' })
+export function getAdjacentPosts(slug: string, locale: string): PreviousNext {
+  const allPostHeaders = getAllPostsWithFrontMatter({ dataType: 'blog', locale })
 
   const postIndex = allPostHeaders.findIndex((postHeader) => postHeader?.slug === slug)
   return {

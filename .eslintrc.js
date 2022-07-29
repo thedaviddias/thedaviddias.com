@@ -3,6 +3,8 @@ module.exports = {
     'next/core-web-vitals',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/typescript',
+    'plugin:react-hooks/recommended',
+    'plugin:mdx/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended', // always at the end
   ],
@@ -36,7 +38,7 @@ module.exports = {
             '^\\.\\./\\.\\./\\.\\.(?!/?$)',
           ],
           ['^@/types'],
-          // other that didnt fit in
+          // other that didn't fit in
           ['^'],
         ],
       },
@@ -46,5 +48,6 @@ module.exports = {
     'import/newline-after-import': 'error',
     'import/no-duplicates': 'error',
     'no-console': ['error'],
+    'react/jsx-no-undef': ['off', { allowGlobals: true }],
   },
 }

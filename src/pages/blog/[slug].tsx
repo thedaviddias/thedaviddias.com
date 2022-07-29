@@ -45,10 +45,13 @@ export type BlogPostProps = {
     permalink: string
     tags?: string[]
     title: string
-    preview: string
+    preview: {
+      url: string
+      alt: string
+    }
     published?: {
-      publishedOn: string
-      publishedUrl: string
+      on: string
+      url: string
     }
   }
   permalink: string
@@ -101,7 +104,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
           },
           images: [
             {
-              url: `${baseUrl}/images/${preview}`,
+              url: `${baseUrl}/images/${preview?.url}`,
               width: 850,
               height: 650,
               alt: '',
@@ -113,13 +116,13 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
         type="Blog"
         url={permalink}
         title={title}
-        images={[`${baseUrl}/images/${preview}`]}
+        images={[`${baseUrl}/images/${preview?.url}`]}
         datePublished={date}
         dateModified={lastmod}
         authorName="David Dias"
         description={description}
       />
-      <main>
+      <main id="main" data-skip-link="the article">
         <article className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <header className="pb-6 text-center border-b border-gray-200 dark:border-gray-700 mb-8 transition-colors duration-200">
             {categories.length && (
@@ -159,11 +162,11 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                 <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl !max-w-full mb-10">
                   <MDXRemote {...source} components={MDXComponents} lazy />
 
-                  {published?.publishedUrl && (
+                  {published?.url && (
                     <Paragraph className="italic pt-8">
                       {t('posts.published')}{' '}
-                      <CustomLink href={published.publishedUrl} as="span">
-                        {published.publishedOn}
+                      <CustomLink href={published.url} as="span">
+                        {published.on}
                       </CustomLink>
                     </Paragraph>
                   )}
@@ -217,7 +220,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params, locale }) => {
   if (params?.slug) {
     const slug = params.slug as string
     const postContent = await getPostBySlug(slug, 'blog')
@@ -233,8 +236,8 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
         categories,
         lastmod,
         author,
-        publishedOn,
-        publishedUrl,
+        published,
+        preview,
       },
       permalink,
       readingTime,
@@ -250,10 +253,11 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
           categories: categories || null,
           lastmod: (lastmod && JSON.parse(JSON.stringify(lastmod))) || null,
           author: author || null,
-          ...(publishedOn && {
+          preview,
+          ...(published && {
             published: {
-              publishedOn,
-              publishedUrl,
+              on: published.on,
+              url: published.url,
             },
           }),
         },
@@ -261,7 +265,7 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
         slug,
         readingTime,
         headings,
-        adjacentPosts: getAdjacentPosts(slug),
+        adjacentPosts: locale && getAdjacentPosts(slug, locale),
         source: await serialize(markdownBody, {
           mdxOptions: {
             remarkPlugins: [remarkGfm, remarkCodeTitles],

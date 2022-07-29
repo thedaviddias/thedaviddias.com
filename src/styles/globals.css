@@ -1,11 +1,3 @@
-/* purgecss start ignore */
-@tailwind base;
-@tailwind components;
-/* purgecss end ignore */
-
-@tailwind utilities;
-@tailwind screens;
-
 @font-face {
   font-family: 'Oswald';
   font-style: normal;
@@ -38,6 +30,14 @@
   font-display: swap;
 }
 
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;
+@tailwind screens;
+
 html,
 body {
   width: 100%;
@@ -59,7 +59,7 @@ h6 {
 }
 
 /* .separator {
-  @apply border-t border-gray-200 dark: border-gray-600;
+  @apply border-t dark: border-gray-600;
 } */
 
 /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */

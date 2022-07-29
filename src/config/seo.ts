@@ -50,26 +50,26 @@ export const defaultSEO: NextSeoProps = {
     },
     {
       name: 'msapplication-config',
-      content: `${baseUrl}/favicons/browserconfig.xml`,
+      content: `/favicons/browserconfig.xml`,
     },
   ],
   additionalLinkTags: [
     {
       rel: 'icon',
-      href: `${baseUrl}/favicon.ico`,
+      href: `/favicon.ico`,
     },
     {
       rel: 'apple-touch-icon',
-      href: `${baseUrl}/favicons/apple-touch-icon.png`,
+      href: `/favicons/apple-touch-icon.png`,
       sizes: '76x76',
     },
     {
       rel: 'manifest',
-      href: `${baseUrl}/favicons/site.webmanifest`,
+      href: `/favicons/site.webmanifest`,
     },
     {
       rel: 'mask-icon',
-      href: `${baseUrl}/favicons/safari-pinned-tab.svg`,
+      href: `/favicons/safari-pinned-tab.svg`,
       color: '#000000',
     },
     {

@@ -23,7 +23,9 @@ export const BaseLayout: FC<BaseLayoutProps> = ({
   return (
     <Container>
       <NextSeo title={title} description={description} openGraph={openGraph} />
-      <main className={className}>{children}</main>
+      <main className={className} id="main" data-skip-link="main content">
+        {children}
+      </main>
     </Container>
   )
 }

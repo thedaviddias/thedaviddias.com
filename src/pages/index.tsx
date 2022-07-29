@@ -29,7 +29,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         titleTemplate="%s"
         openGraph={routes(t).home.seo}
       />
-      <main>
+      <main id="main" data-skip-link="main content">
         <section className="pb-20 pt-0 lg:pt-10 flex justify-evenly">
           <div className="text-left">
             <h1 className="block mb-4 dark:text-white transition-colors">

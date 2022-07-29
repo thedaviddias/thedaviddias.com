@@ -13,7 +13,7 @@ export default async function generateRssFeed() {
   const date = new Date()
   const author = {
     name: 'David Dias',
-    email: 'me@thedaviddias.dev',
+    email: 'hello@thedaviddias.dev',
     link: 'https://twitter.com/thedaviddias',
   }
 

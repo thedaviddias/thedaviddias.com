@@ -1,40 +1,105 @@
 {
   "title": "The David Dias",
   "description": "Parcours mon blog sur le dévelopement web, les technologies, l'expatriation et tous les autres sujets qui attisent ma curiosité et mon intérêt!",
-  "nav": {
-    "home": "Accueil",
-    "blog": "Blog",
-    "about": "À propos",
-    "rss": "Flux RSS"
+  "titleTemplate": "Developer and content creator",
+  "layout": {
+    "a11y": {
+      "skipContent": "Aller directement {{label}}"
+    },
+    "nav": {
+      "home": "Accueil",
+      "blog": "Blog",
+      "about": "À propos",
+      "rss": "Flux RSS"
+    },
+    "darkMode": {
+      "light": "Passer au mode clair",
+      "dark": "Passer au mode sombre"
+    },
+    "language": {
+      "fr": {
+        "fullName": "French",
+        "switch": "Switch to the {{lang}} version",
+        "abbreviation": "FR"
+      },
+      "en": {
+        "fullName": "Anglaise",
+        "switch": "Changer pour la version {{lang}}",
+        "abbreviation": "EN"
+      }
+    },
+    "footer": {
+      "name": "Pied de page",
+      "general": "Général",
+      "social": "Réseaux sociaux",
+      "extra": "Extra liens",
+      "extra_links": {
+        "dashboard": "Tableau de bord",
+        "newsletter": "Newsletter",
+        "analytics": "Statistics"
+      }
+    }
   },
-  "hero": {
-    "greetings1": "Salut toi!",
-    "greetings2": "Je m'appelle David Dias",
-    "presentation": "Je suis développeur Front-End, podcasteur, créateur de contenu digital passioné pour résoudre les problèmes digitaux et humains! I enjoy meeting new people, building communities and talking about tech, expatriation and web."
+  "home": {
+    "hero": {
+      "greetings1": "Salut toi!",
+      "greetings2": "Je m'appelle David Dias",
+      "presentation": "Je suis développeur Front-End, podcasteur, créateur de contenu digital passioné pour résoudre les problèmes digitaux et humains! I enjoy meeting new people, building communities and talking about tech, expatriation and web."
+    }
   },
   "blog": {
-    "latest-posts": "Derniers articles"
+    "path": "/blog",
+    "seo": {
+      "title": "Blog",
+      "description": "",
+      "url": "blog"
+    },
+    "sections": {
+      "latest-posts": "Derniers articles"
+    }
   },
-  "footer": {
-    "general": "Général",
-    "social": "Réseaux sociaux",
-    "extra": "Extra liens",
-    "extra_links": {
-      "dashboard": "Tableau de bord",
-      "newsletter": "Newsletter",
-      "analytics": "Statistics"
+  "about": {
+    "path": "/about",
+    "seo": {
+      "title": "À propos de moi",
+      "description": "Sachez-en un peu plus sur 'The David Dias'",
+      "url": "about"
+    }
+  },
+  "tags": {
+    "path": "/tags",
+    "seo": {
+      "title": "Publication en lien avec {{name}}",
+      "description": "Toutes mes publications en lien avec le thème de {{name}}."
+    },
+    "section": "Étiquettes",
+    "h1": "Étiquettes: {{name}}"
+  },
+  "category": {
+    "path": "/category",
+    "seo": {
+      "title": "Lisez mon contenu sur {{name}}",
+      "description": "Vous trouverez l'ensemble de mes publications en lien avec {{name}}."
+    },
+    "h1": "Catégorie: {{name}}"
+  },
+  "rss": {
+    "path": "/rss/fr/feed.xml"
+  },
+  "404": {
+    "seo": {
+      "title": "Désolé 😩, cette page ne peut pas être trouvée.",
+      "description": ""
     }
   },
   "posts": {
     "empty": "Aucun articles trouvé basé sur votre recherche.",
     "viewAll": "→ Voir tous les articles",
-    "continue": "Continue de lire →"
-  },
-  "404": {
-    "title": "Désolé 😩, cette page ne peut pas être trouvée.",
-    "seo": {
-      "title": "404",
-      "description": ""
-    }
+    "continue": "Continuez de lire →",
+    "updated": "Mis à jour le",
+    "published": "Initiallement publié sur ",
+    "tableContent": "Table des matières",
+    "previous": "Publication précédente",
+    "next": "Publication suivante"
   }
 }

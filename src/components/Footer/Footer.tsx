@@ -27,7 +27,7 @@ export const Footer = () => {
           <div className="flex flex-col-reverse sm:flex-row print:hidden">
             <div className="w-full sm:w-1/2 lg:w-[40%] text-center sm:text-left flex-grow sm:mb-0 pr-24">
               <span className="mb-5 block">{t('title')}</span>
-              <p className="text-gray-500 text-sm">{t('hero.presentation')}</p>
+              <p className="text-gray-500 text-sm">{t('home.hero.presentation')}</p>
               <div className="flex space-x-6"></div>
             </div>
 

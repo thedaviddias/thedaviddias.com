@@ -58,9 +58,11 @@
           "choices": ["en", "fr"]
         },
         {
-          "title": "type",
-          "name": "type",
-          "type": "string"
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
         },
         {
           "title": "Title",
@@ -73,32 +75,30 @@
           "type": "string"
         },
         {
-          "title": "Content preview",
+          "title": "Preview image",
           "name": "preview",
-          "type": "image"
-        },
-        {
-          "title": "Content preview alt",
-          "name": "previewalt",
-          "type": "string"
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Content preview",
+              "name": "url",
+              "type": "image"
+            },
+            {
+              "title": "Content preview alt",
+              "name": "alt",
+              "type": "string"
+            }
+          ]
         },
         {
           "title": "Author",
           "name": "author",
-          "type": "choice",
-          "choices": ["David Dias"]
-        },
-        {
-          "title": "Publishing date",
-          "name": "date",
-          "type": "datetime",
-          "default": "{{now}}",
-          "isPublishDate": true
-        },
-        {
-          "title": "Last modification date",
-          "name": "lastmod",
-          "type": "datetime"
+          "type": "dataFile",
+          "dataFileId": "authors",
+          "dataFileValue": "name",
+          "dataFileKey": "name",
+          "multiple": false
         },
         {
           "title": "Tags",
@@ -111,14 +111,31 @@
           "type": "categories"
         },
         {
-          "title": "Previously published platform",
-          "name": "publishedOn",
+          "title": "Previously published",
+          "name": "published",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Platform name",
+              "name": "on",
+              "type": "string"
+            },
+            {
+              "title": "Publication URL",
+              "name": "url",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "Type of publication",
+          "name": "type",
           "type": "string"
         },
         {
-          "title": "Previously published URL",
-          "name": "publishedUrl",
-          "type": "string"
+          "title": "Last modification date",
+          "name": "lastmod",
+          "type": "datetime"
         }
       ]
     }
@@ -175,6 +192,28 @@
           "description": {
             "type": "string",
             "title": "Description"
+          }
+        }
+      }
+    },
+    {
+      "id": "authors",
+      "title": "Authors",
+      "file": "[[workspace]]/data/authors.json",
+      "fileType": "json",
+      "labelField": "name",
+      "schema": {
+        "title": "Author",
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "slug": {
+            "type": "string",
+            "title": "Slug"
           }
         }
       }

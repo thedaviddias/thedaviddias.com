@@ -15,7 +15,6 @@
       "light": "Switch to light mode",
       "dark": "Switch to dark mode"
     },
-    "date_format": "MMM dd, yyyy",
     "language": {
       "fr": {
         "fullName": "French",
@@ -37,14 +36,6 @@
         "dashboard": "Dashboard",
         "newsletter": "Newsletter",
         "analytics": "Analytics"
-      },
-      "rssEn": {
-        "name": "RSS Feed in English",
-        "href": "/en.feed.xml"
-      },
-      "rssFr": {
-        "name": "RSS Feed in French",
-        "href": "/fr.feed.xml"
       }
     }
   },

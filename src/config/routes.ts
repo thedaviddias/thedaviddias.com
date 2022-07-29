@@ -20,12 +20,12 @@ export const routes: RoutesResponse = (translate) => ({
     }),
   },
   home: {
-    label: translate('nav.home'),
+    label: translate('layout.nav.home'),
     path: '/',
     seo: defaultSEO,
   },
   blog: {
-    label: translate('nav.blog'),
+    label: translate('layout.nav.blog'),
     path: translate('blog.path'),
     seo: extendSEO({
       title: translate('blog.seo.title'),
@@ -34,7 +34,7 @@ export const routes: RoutesResponse = (translate) => ({
     }),
   },
   about: {
-    label: translate('nav.about'),
+    label: translate('layout.nav.about'),
     path: translate('about.path'),
     seo: extendSEO({
       title: translate('about.seo.title'),
@@ -44,7 +44,7 @@ export const routes: RoutesResponse = (translate) => ({
   },
   rss: {
     menu: false,
-    label: translate('nav.rss'),
+    label: translate('layout.nav.rss'),
     path: translate('rss.path'),
     seo: extendSEO(),
   },

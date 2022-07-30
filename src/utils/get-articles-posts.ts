@@ -172,38 +172,43 @@ export type TagOptions = {
   [key: string]: string[]
 }
 
-async function collateTags(dataType: string, type: string) {
+async function collateTags(dataType: string, type: string, locale = 'en') {
   const files = getAllPosts(dataType)
   const allTags = new Set<string>() // to ensure only unique tags are added
 
   files.map((postSlug) => {
     const source = fs.readFileSync(path.join(process.cwd(), 'content', dataType, postSlug), 'utf8')
+
     const { data } = matter(source)
 
-    if (type === 'tags' && data.tags.length) {
-      data.tags && data.tags.forEach((tag: string) => allTags.add(slugify(tag, { lower: true })))
-    }
+    if (data.locale === locale) {
+      if (type === 'tags' && data.tags.length) {
+        data.tags && data.tags.forEach((tag: string) => allTags.add(slugify(tag, { lower: true })))
+      }
 
-    if (type === 'categories' && data.categories.length) {
-      data.categories.forEach((category: string) => allTags.add(slugify(category, { lower: true })))
+      if (type === 'categories' && data.categories.length) {
+        data.categories.forEach((category: string) =>
+          allTags.add(slugify(category, { lower: true }))
+        )
+      }
     }
   })
 
   return Array.from(allTags)
 }
 
-export async function getTags(dataType: string) {
+export async function getTags(dataType: string, locale?: string) {
   const tags: TagOptions = {
-    articles: await collateTags('articles', 'tags'),
-    notes: await collateTags('notes', 'tags'),
+    articles: await collateTags('articles', 'tags', locale),
+    notes: await collateTags('notes', 'tags', locale),
   }
 
   return tags[dataType]
 }
 
-export async function getCategories(dataType: string) {
+export async function getCategories(dataType: string, locale?: string) {
   const categories: TagOptions = {
-    articles: await collateTags('articles', 'categories'),
+    articles: await collateTags('articles', 'categories', locale),
   }
 
   return categories[dataType]

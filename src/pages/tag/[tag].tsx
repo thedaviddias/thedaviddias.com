@@ -29,7 +29,7 @@ const TagPage: NextPage<CategoryPageProps> = ({ posts, tag }) => {
         <section className="grid grid-cols-1 gap-y-10 gap-x-6 lg:pt-10">
           <PageHeader
             title={pages(t, tag).tag.h1}
-            description={`All my publications related to the ${tag} topic.`}
+            description={t('tags.seo.description', { name: tag })}
           />
 
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">

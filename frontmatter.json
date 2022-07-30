@@ -209,14 +209,13 @@
   ],
   "frontMatter.taxonomy.categories": [
     "automation",
-    "code",
-    "coding",
     "expatriation",
     "management",
     "productivity",
     "reflexion",
     "side-project",
-    "user-experience"
+    "user-experience",
+    "web-development"
   ],
   "frontMatter.data.files": [
     {

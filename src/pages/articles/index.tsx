@@ -4,17 +4,19 @@ import useTranslation from 'next-translate/useTranslation'
 import { useState } from 'react'
 
 import { BlogPost } from '@/components/BlogPost'
+import { CategoriesList } from '@/components/CategoriesList'
 import { Container } from '@/components/Container'
 import { H1, H5 } from '@/components/Headings'
 
 import { routes } from '@/config/routes'
-import { getAllPostsWithFrontMatter } from '@/utils/get-articles-posts'
+import { getAllPostsWithFrontMatter, getCategories } from '@/utils/get-articles-posts'
 
 type BlogProps = {
   posts: any[]
+  categories: any[]
 }
 
-const Blog = ({ posts }: BlogProps) => {
+const Blog = ({ posts, categories }: BlogProps) => {
   const { t } = useTranslation('common')
   const [searchValue, setSearchValue] = useState('')
 
@@ -42,6 +44,9 @@ const Blog = ({ posts }: BlogProps) => {
           <header>
             <h2 className="sr-only">Recent articles</h2>
           </header>
+
+          <CategoriesList categories={categories} />
+
           <form className="relative w-full mb-4">
             <fieldset>
               <H5 as="legend">Search</H5>
@@ -71,9 +76,11 @@ const Blog = ({ posts }: BlogProps) => {
 
 export const getStaticProps: GetStaticProps<BlogProps> = async ({ locale }) => {
   const posts = getAllPostsWithFrontMatter({ dataType: 'articles', locale })
+  const categories = await getCategories('articles', locale)
 
   const props = {
     posts: JSON.parse(JSON.stringify(posts)),
+    categories,
   }
 
   return {

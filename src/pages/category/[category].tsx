@@ -33,7 +33,7 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ posts, category }) => {
     <Container>
       <NextSeo title={titlePage} description={descriptionPage} />
       <main className="mx-auto space-y-20 divide-y divide-slate-200 sm:space-y-16 lg:max-w-none lg:space-y-32">
-        <section className="grid grid-cols-1 gap-y-10 gap-x-6 pt-10">
+        <section className="grid grid-cols-1 gap-y-10 gap-x-6 lg:pt-10">
           <PageHeader title={titlePage} description={descriptionPage} />
 
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">

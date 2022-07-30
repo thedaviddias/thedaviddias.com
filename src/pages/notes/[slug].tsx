@@ -102,7 +102,7 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
               </span>
             </H1>
 
-            <div className="flex justify-between w-[40em] lg:w-[37rem] mx-auto mt-16">
+            <div className="flex justify-between mx-auto mt-16">
               {author && <Author name={author} routes={routes} />}
 
               {date && <DatePost date={date} />}
@@ -110,7 +110,7 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
           </header>
 
           <div className="max-w-full">
-            <div className="w-[40em] lg:w-[37rem] mx-auto">
+            <div className="lg:w-[37rem] mx-auto">
               <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl !max-w-full mb-10">
                 <MDXRemote {...source} components={MDXComponents} lazy />
               </section>

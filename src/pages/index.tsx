@@ -8,11 +8,12 @@ import generateRssFeed from '@/lib/generateRss'
 
 import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
+import { LatestNotesSection } from '@/components/LatestNotesSection'
 import { LatestPostsSection } from '@/components/LatestPostsSection'
 
 import { routes } from '@/config/routes'
 import { HERO_LINKS } from '@/constants'
-import { getAllPostsWithFrontMatter } from '@/utils/get-blog-posts'
+import { getAllPostsWithFrontMatter } from '@/utils/get-articles-posts'
 
 const PodcastSection = dynamic(() => import('../components/PodcastSection'), {
   loading: () => <p>Loading...</p>,
@@ -20,12 +21,13 @@ const PodcastSection = dynamic(() => import('../components/PodcastSection'), {
 })
 
 type HomeProps = {
-  posts: any[]
-  // posts: BlogPostProps[]
+  articles: any[]
+  notes: any[]
 }
 
-const Home: NextPage<HomeProps> = ({ posts }) => {
+const Home: NextPage<HomeProps> = ({ articles, notes }) => {
   const { t } = useTranslation('common')
+
   return (
     <Container>
       <NextSeo
@@ -71,7 +73,9 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           </div>
         </section>
 
-        <LatestPostsSection posts={posts} />
+        <LatestNotesSection notes={notes} />
+
+        <LatestPostsSection articles={articles} />
 
         {process.env.NODE_ENV === 'production' && <PodcastSection />}
       </main>
@@ -80,11 +84,13 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
 }
 
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
-  const posts = getAllPostsWithFrontMatter({ dataType: 'blog', locale, limit: 3 })
+  const posts = getAllPostsWithFrontMatter({ dataType: 'articles', locale, limit: 3 })
+  const notes = getAllPostsWithFrontMatter({ dataType: 'notes', locale, limit: 4 })
   await generateRssFeed().then(null)
 
   const props: HomeProps = {
-    posts: JSON.parse(JSON.stringify(posts)),
+    articles: JSON.parse(JSON.stringify(posts)),
+    notes: JSON.parse(JSON.stringify(notes)),
   }
 
   return {

@@ -159,8 +159,8 @@ export const getAllPostsWithFrontMatter = ({
         ...allPosts,
       ]
     }, [])
-    .filter((blog: BlogPostProps) => !blog.frontMatter.draft)
-    .filter((blog: BlogPostProps) => blog.frontMatter.locale === locale)
+    .filter((articles: BlogPostProps) => !articles.frontMatter.draft)
+    .filter((articles: BlogPostProps) => articles.frontMatter.locale === locale)
     .sort((a: BlogPostProps, b: BlogPostProps) =>
       dateSortDesc(Number(new Date(a.frontMatter.date)), Number(new Date(b.frontMatter.date)))
     )
@@ -194,7 +194,8 @@ async function collateTags(dataType: string, type: string) {
 
 export async function getTags(dataType: string) {
   const tags: TagOptions = {
-    blog: await collateTags('blog', 'tags'),
+    articles: await collateTags('articles', 'tags'),
+    notes: await collateTags('notes', 'tags'),
   }
 
   return tags[dataType]
@@ -202,14 +203,14 @@ export async function getTags(dataType: string) {
 
 export async function getCategories(dataType: string) {
   const categories: TagOptions = {
-    blog: await collateTags('blog', 'categories'),
+    articles: await collateTags('articles', 'categories'),
   }
 
   return categories[dataType]
 }
 
 export function getAdjacentPosts(slug: string, locale: string): PreviousNext {
-  const allPostHeaders = getAllPostsWithFrontMatter({ dataType: 'blog', locale })
+  const allPostHeaders = getAllPostsWithFrontMatter({ dataType: 'articles', locale })
 
   const postIndex = allPostHeaders.findIndex((postHeader) => postHeader?.slug === slug)
   return {
@@ -244,7 +245,7 @@ export const getAllDraftPosts = ({ dataType }: GetAllPostsWithFrontMatter): Blog
         ...allPosts,
       ]
     }, [])
-    .filter((blog: BlogPostProps) => blog.frontMatter.draft)
+    .filter((articles: BlogPostProps) => articles.frontMatter.draft)
 
   return allBlogs
 }

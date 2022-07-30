@@ -7,7 +7,6 @@ import { ArticleJsonLd, NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { ReadTimeResults } from 'reading-time'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypeFigure from 'rehype-figure'
 import rehypeImagePlaceholder from 'rehype-image-placeholder'
 import rehypePrismPlus from 'rehype-prism-plus'
 import rehypeSlug from 'rehype-slug'
@@ -29,7 +28,7 @@ import { Tags } from '@/components/Tags'
 
 import { routes } from '@/config/routes'
 import { baseUrl } from '@/config/seo'
-import { getAdjacentPosts, getAllPosts, getPost, getPostBySlug } from '@/utils/get-blog-posts'
+import { getAdjacentPosts, getAllPosts, getPost, getPostBySlug } from '@/utils/get-articles-posts'
 import { rehypeExtractHeadings } from '@/utils/rehype-extract-headings'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
 
@@ -172,7 +171,12 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                   )}
                 </section>
 
-                {tags && <Tags tags={tags} />}
+                {tags && (
+                  <aside className="w-full mt-3 print:hidden">
+                    <div className="small-title">{t('tags.section')}</div>
+                    <Tags tags={tags} />
+                  </aside>
+                )}
 
                 {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
               </div>
@@ -196,12 +200,14 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const blogs = getAllPosts('blog')
+  const dataType = 'articles'
+  const blogs = getAllPosts(dataType)
 
   const paths: GetStaticPathsResult['paths'] = []
-  blogs.forEach((blog) => {
-    const slug = blog.replace(/\.mdx/, '')
-    const source = getPost(slug, 'blog')
+
+  blogs.forEach((articles) => {
+    const slug = articles.replace(/\.mdx/, '')
+    const source = getPost(slug, dataType)
 
     const { data } = matter(source.trim())
 
@@ -214,6 +220,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       })
     }
   })
+
   return {
     paths,
     fallback: false,
@@ -223,7 +230,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params, locale }) => {
   if (params?.slug) {
     const slug = params.slug as string
-    const postContent = await getPostBySlug(slug, 'blog', locale)
+    const postContent = await getPostBySlug(slug, 'articles', locale)
     const headings: Headings[] = []
 
     const {

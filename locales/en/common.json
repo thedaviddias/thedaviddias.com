@@ -1,13 +1,14 @@
 {
   "title": "The David Dias",
-  "description": "A blog about web development, technologies, expatriation and anything that piques my curiosity and interest",
+  "description": "A articles about web development, technologies, expatriation and anything that piques my curiosity and interest",
   "layout": {
     "a11y": {
       "skipContent": "Skip to content"
     },
     "nav": {
       "home": "Home",
-      "blog": "Blog",
+      "notes": "Notes",
+      "articles": "Articles",
       "about": "About",
       "rss": "RSS feed"
     },
@@ -53,15 +54,28 @@
       }
     }
   },
-  "blog": {
-    "path": "/blog",
+  "articles": {
+    "path": "/articles",
     "seo": {
-      "title": "Blog",
+      "title": "All my articles",
       "description": "Articles about my web development and anything that piques my curiosity and interest.",
-      "url": "blog"
+      "url": "articles"
     },
     "sections": {
-      "latest-posts": "Lastest blog posts"
+      "latest-posts": "Latest articles",
+      "viewAll": "→ View all my articles"
+    }
+  },
+  "notes": {
+    "path": "/notes",
+    "seo": {
+      "title": "All my Notes",
+      "description": "Find short and sweet notes I regularly publish. From discovery to experimentation and technical challenges I finally figured out, I have a lot to share!",
+      "url": "notes"
+    },
+    "sections": {
+      "latest-notes": "Latest notes",
+      "viewAll": "→ View all notes"
     }
   },
   "about": {
@@ -74,9 +88,10 @@
   },
   "tags": {
     "path": "/tags",
+    "pathNote": "/notes/tag/",
     "seo": {
-      "title": "Posts related to {{name}}",
-      "description": "All my articles related to {{name}} topic."
+      "title": "Notes related to {{name}}",
+      "description": "All my posts related to {{name}} topic."
     },
     "section": "Tags",
     "h1": "Tags: {{name}}"
@@ -107,7 +122,6 @@
   },
   "posts": {
     "empty": "No articles found for that query.",
-    "viewAll": "→ View all blog posts",
     "continue": "Continue reading →",
     "updated": "Updated on",
     "published": "Originally published on",

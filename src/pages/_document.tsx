@@ -1,7 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
-import { SkipLinks } from '@/components/SkipLinks'
-
 export default class MyDocument extends Document {
   render() {
     return (

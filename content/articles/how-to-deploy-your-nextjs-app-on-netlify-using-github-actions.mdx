@@ -14,9 +14,9 @@ tags:
   - github-actions
   - netlify
   - nextjs
-type: blog-post
+type: article
 preview:
-  url: /images/blog/how-to-deploy-your-nextjs-app-on-netlify-using-github-actions/featured.jpg
+  url: /images/articles/how-to-deploy-your-nextjs-app-on-netlify-using-github-actions/featured.jpg
 ---
 
 I've recently spent some time working with Next.js projects. Once my projects are done, the next logical step is to deploy these apps to be accessible to the world.
@@ -96,28 +96,28 @@ ntl init
 
 The first question you are asked is if you want to connect this directory to an existing Netlify site or create & configure a new site. Choose **Create & configure a new site**:
 
-![Connect to an existing directory or create and configure a new site](/images/blog/connect-existing-direction.jpeg)
+![Connect to an existing directory or create and configure a new site](/images/articles/connect-existing-direction.jpeg)
 
 Then you have to choose your **team**:
 
-![Question about the name of the team](/images/blog/question-name-team.jpeg)
+![Question about the name of the team](/images/articles/question-name-team.jpeg)
 
 Choose the **name of your application**:
 
-![Screenshot of the CLI asking for the name of your application](/images/blog/cli-name-application.jpeg)
+![Screenshot of the CLI asking for the name of your application](/images/articles/cli-name-application.jpeg)
 
 After entering the name of your project, the site is created and few URLs populated the CLI which gave you access to your admin URL, the URL of your site and the Site ID. Keep the site ID aside, you will need that number later on.
 
 For the next 3 questions (build, start and function), **insert a space**. We are not going to directly use the NPM scripts, our Github actions will later trigger each command.
-![Screenshot of the CLI with the build, start and function script command suggestion](/images/blog/cli-build-start-function-script.jpeg)
+![Screenshot of the CLI with the build, start and function script command suggestion](/images/articles/cli-build-start-function-script.jpeg)
 
 Finally, automatically create a netlify.toml file, which we will edit later. If your respond no, you can still create that file manually at the root of your project.
 
-![Screenshot of the CLI asking to create a netlify.toml file](/images/blog/automatically-create-netlify-toml.jpeg)
+![Screenshot of the CLI asking to create a netlify.toml file](/images/articles/automatically-create-netlify-toml.jpeg)
 
 Once you provided an answer to all the questions, your terminal should look like this:
 
-![Screenshot of the CLI after all the questions are answered](/images/blog/cli-after-all-questions-answered.jpeg)
+![Screenshot of the CLI after all the questions are answered](/images/articles/cli-after-all-questions-answered.jpeg)
 
 ## Updating our Netlify project
 
@@ -127,17 +127,17 @@ It's now time to change some options on our Netlify project. Open directly your 
 ntl open
 ```
 
-![Screenshot of the Netlify project created](/images/blog/netlify-project-created.jpeg)
+![Screenshot of the Netlify project created](/images/articles/netlify-project-created.jpeg)
 
 You should see that our production deployment failed. You don't have to worry, this is totally normal. We need to disable our automatic build because our Github Actions will take care of it.
 
 Go in your Settings > Build & deploy. Click on `Edit settings` and `Stop builds`. Save.
 
-![Screenshot of the Build settings on Netlify](/images/blog/build-settings-netlify.jpeg)
+![Screenshot of the Build settings on Netlify](/images/articles/build-settings-netlify.jpeg)
 
 Just below, go to the `Deploy contexts` section and select `None` for the Deploy previews.
 
-![Screenshot of the Deploy context section on Netlify](/images/blog/deploy-context-section-netlify.jpeg)
+![Screenshot of the Deploy context section on Netlify](/images/articles/deploy-context-section-netlify.jpeg)
 
 Don't worry, like the build, we will create our preview URL using Github actions.
 
@@ -216,7 +216,7 @@ Go to your `Github project > Settings > Secrets > New repository secret`
 | `NETLIFY_AUTH_TOKEN` | Request your token [here](https://app.netlify.com/user/applications#personal-access-tokens) |
 | `NETLIFY_SITE_ID`    | The site to where deploy your site (get it from the API ID on your Site Settings)           |
 
-![Screenshot of the Actions secrets page on Github](/images/blog/actions-secrets-netlify.jpeg)
+![Screenshot of the Actions secrets page on Github](/images/articles/actions-secrets-netlify.jpeg)
 
 Create a new file called `main.yml` inside `.github/workflows`. Copy-paste the following code and read the explanation of it after this snippet.
 
@@ -284,11 +284,11 @@ jobs:
 6. Specify the **_version of Node_** you want to use, in my case, I choose the most recent version of Node 14th.
 7. **_Install the dependencies_** of your project.
 8. **_Build your project_**. Remember that after the build, the post-build command will be launch. This is what you should see in the `build` logs in your Github Action tab:
-   ![Screenshot of the build-in Github Action](/images/blog/build-in-github-action-netlify.jpeg)
+   ![Screenshot of the build-in Github Action](/images/articles/build-in-github-action-netlify.jpeg)
 9. I added lint and test commands, which I commented. You can use these to trigger ESLint, Jest (even Cypress) or any other plugin that ensures your code doesn't have any issue.
 10. Finally, we trigger the Netlify deployment to deploy our Next.js app to Netlify. 🎉
 
-![Screenshot of all Github actions](/images/blog/all-github-actions-netlify.jpeg)
+![Screenshot of all Github actions](/images/articles/all-github-actions-netlify.jpeg)
 
 You may have seen an argument passed to the Netlify deploy:
 
@@ -298,7 +298,7 @@ args: deploy -m 'v${{ steps.package-version.outputs.current-version}} ・ ${{ gi
 
 This will add a message for each Deploy Preview, a way to keep track of which PR generated which Deploy.
 
-![Screenshot of the Deploy page on Netlify](/images/blog/deploy-netlify-preview.jpeg)
+![Screenshot of the Deploy page on Netlify](/images/articles/deploy-netlify-preview.jpeg)
 
 On the same deploy page, you can click on the Deploy Preview and access your app using the preview URL.
 
@@ -318,7 +318,7 @@ A better way would be to use another task to automatically populate your pull re
 
 This will automatically create a comment in your PR.
 
-![Screenshot of the PR on Github specifying the link to the logs and preview deploy URL](/images/blog/pr-github-preview-deploy-url.jpeg)
+![Screenshot of the PR on Github specifying the link to the logs and preview deploy URL](/images/articles/pr-github-preview-deploy-url.jpeg)
 
 ## Summary
 
@@ -330,6 +330,6 @@ Feel free to [download or fork the `next-netlify-github-actions-starter`](https:
 
 ### Sources:
 
-- [How to Deploy Next.js Sites to Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/) by Jason Lengstorf
-- [Preview Mode for Next.js now fully supported on Netlify](https://www.netlify.com/blog/2020/10/27/preview-mode-for-next.js-now-fully-supported-on-netlify/) by Cassidy Williams
-- [Announcing one-click install Next.js Build Plugin on Netlify](https://www.netlify.com/blog/2020/12/07/announcing-one-click-install-next.js-build-plugin-on-netlify/) by Cassidy Williams
+- [How to Deploy Next.js Sites to Netlify](https://www.netlify.com/articles/2020/11/30/how-to-deploy-next.js-sites-to-netlify/) by Jason Lengstorf
+- [Preview Mode for Next.js now fully supported on Netlify](https://www.netlify.com/articles/2020/10/27/preview-mode-for-next.js-now-fully-supported-on-netlify/) by Cassidy Williams
+- [Announcing one-click install Next.js Build Plugin on Netlify](https://www.netlify.com/articles/2020/12/07/announcing-one-click-install-next.js-build-plugin-on-netlify/) by Cassidy Williams

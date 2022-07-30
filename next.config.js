@@ -6,6 +6,15 @@ const nextConfig = nextTranslate({
   swcMinify: true,
   pageExtensions: ['ts', 'tsx', 'mdx'],
   poweredByHeader: false,
+  async redirects() {
+    return [
+      {
+        source: '/blog/:path*',
+        destination: '/articles/:path*',
+        permanent: true,
+      },
+    ]
+  },
   webpack(config) {
     const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'))
     fileLoaderRule.exclude = /\.svg$/

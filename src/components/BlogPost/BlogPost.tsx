@@ -6,7 +6,7 @@ import slugify from 'slugify'
 import { CustomLink } from '@/components/CustomLink'
 import { H2 } from '@/components/Headings'
 
-// import { BlogPostProps as BlogPostTypes } from '@/pages/blog/[slug]'
+// import { BlogPostProps as BlogPostTypes } from '@/pages/articles/[slug]'
 
 type BlogPostProps = {
   post: any
@@ -24,7 +24,7 @@ export const BlogPost: FC<BlogPostProps> = ({ post, isCategoryPage }) => {
             <H2 as="h3">
               <CustomLink
                 className="dark:!text-gray-100 block tracking-tight"
-                href={`/blog/${post.slug}`}
+                href={`/articles/${post.slug}`}
               >
                 {post.frontMatter.title}
               </CustomLink>
@@ -37,7 +37,7 @@ export const BlogPost: FC<BlogPostProps> = ({ post, isCategoryPage }) => {
           <div className="flex-grow text-left lg:text-right lg:ml-8">
             {!isCategoryPage && (
               <div className="float-right lg:float-none !mb-1">
-                {post.frontMatter.categories.length && (
+                {post.frontMatter.categories?.length && (
                   <CustomLink
                     href={`/category/${slugify(post.frontMatter.categories[0], { lower: true })}`}
                     passHref
@@ -58,7 +58,7 @@ export const BlogPost: FC<BlogPostProps> = ({ post, isCategoryPage }) => {
         </div>
         <CustomLink
           className="!text-gray-800 hover:!text-black dark:!text-gray-200 dark:hover:!text-white !text-sm sm:!text-base !font-semibold !mt-2 !mb-1 sm:!mt-4 block"
-          href={`/blog/${post.slug}`}
+          href={`/articles/${post.slug}`}
         >
           {t('posts.continue')}
         </CustomLink>

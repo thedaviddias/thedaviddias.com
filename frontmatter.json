@@ -4,8 +4,16 @@
   "frontMatter.content.publicFolder": "public",
   "frontMatter.content.pageFolders": [
     {
-      "title": "blog",
-      "path": "[[workspace]]/content/blog"
+      "title": "articles",
+      "path": "[[workspace]]/content/articles"
+    },
+    {
+      "title": "notes",
+      "path": "[[workspace]]/content/notes"
+    },
+    {
+      "title": "pages",
+      "path": "[[workspace]]/content/pages"
     }
   ],
   "frontMatter.telemetry.disable": false,
@@ -43,7 +51,7 @@
   ],
   "frontMatter.taxonomy.contentTypes": [
     {
-      "name": "blog-post",
+      "name": "article",
       "pageBundle": false,
       "fields": [
         {
@@ -136,6 +144,59 @@
           "title": "Last modification date",
           "name": "lastmod",
           "type": "datetime"
+        }
+      ]
+    },
+    {
+      "name": "post",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "boolean"
+        },
+        {
+          "title": "locale",
+          "name": "locale",
+          "type": "choice",
+          "choices": ["en", "fr"]
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Author",
+          "name": "author",
+          "type": "dataFile",
+          "dataFileId": "authors",
+          "dataFileValue": "name",
+          "dataFileKey": "name",
+          "multiple": false
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Type of publication",
+          "name": "type",
+          "type": "string"
         }
       ]
     }

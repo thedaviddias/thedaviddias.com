@@ -1,6 +1,6 @@
 {
   "title": "The David Dias",
-  "description": "Parcours mon blog sur le dévelopement web, les technologies, l'expatriation et tous les autres sujets qui attisent ma curiosité et mon intérêt!",
+  "description": "Parcours mon articles sur le dévelopement web, les technologies, l'expatriation et tous les autres sujets qui attisent ma curiosité et mon intérêt!",
   "titleTemplate": "Developer and content creator",
   "layout": {
     "a11y": {
@@ -8,7 +8,8 @@
     },
     "nav": {
       "home": "Accueil",
-      "blog": "Blog",
+      "articles": "Articles",
+      "notes": "Notes",
       "about": "À propos",
       "rss": "Flux RSS"
     },
@@ -54,15 +55,27 @@
       }
     }
   },
-  "blog": {
-    "path": "/blog",
+  "articles": {
+    "path": "/articles",
     "seo": {
       "title": "Blog",
       "description": "",
-      "url": "blog"
+      "url": "articles"
     },
     "sections": {
       "latest-posts": "Derniers articles"
+    }
+  },
+  "notes": {
+    "path": "/notes",
+    "seo": {
+      "title": "Notes",
+      "description": "Find short and sweets notes I regularly post. From discovery to experimentation and technical challenges I finally figured out, I have a lot to share!",
+      "url": "notes"
+    },
+    "sections": {
+      "empty": "Pas de publications disponibles pour le moment.",
+      "latest-notes": "Dernières Notes"
     }
   },
   "about": {

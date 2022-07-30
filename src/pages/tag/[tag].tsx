@@ -66,13 +66,24 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   }
 }
 
-export const getStaticProps: GetStaticProps<CategoryPageProps> = async ({ params }: Params) => {
-  const posts = await getAllPostsWithFrontMatter({ dataType: 'articles', filterByTag: params.tag })
-  const notes = await getAllPostsWithFrontMatter({ dataType: 'notes', filterByTag: params.tag })
+export const getStaticProps: GetStaticProps<CategoryPageProps> = async ({
+  params,
+  locale,
+}: Params) => {
+  const posts = await getAllPostsWithFrontMatter({
+    dataType: 'articles',
+    filterByTag: params.tag,
+    locale,
+  })
+  const notes = await getAllPostsWithFrontMatter({
+    dataType: 'notes',
+    filterByTag: params.tag,
+    locale,
+  })
 
   return {
     props: {

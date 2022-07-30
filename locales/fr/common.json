@@ -58,19 +58,20 @@
   "articles": {
     "path": "/articles",
     "seo": {
-      "title": "Blog",
-      "description": "",
+      "title": "Articles",
+      "description": "Retrouvez mes articles sur le dévelopement web and sur tous les autres sujets qui me fascinnent et m'intéressent.",
       "url": "articles"
     },
     "sections": {
-      "latest-posts": "Derniers articles"
+      "latest-posts": "Derniers articles",
+      "viewAll": "→ Voir tous les articles"
     }
   },
   "notes": {
     "path": "/notes",
     "seo": {
       "title": "Notes",
-      "description": "Find short and sweets notes I regularly post. From discovery to experimentation and technical challenges I finally figured out, I have a lot to share!",
+      "description": "Retrouvez l'ensemble de mes notes: des bout de code, des expérimentations, des découvertes, tout ce qu'il me semble intéressant de vous partagez!",
       "url": "notes"
     },
     "sections": {
@@ -121,7 +122,6 @@
   },
   "posts": {
     "empty": "Aucun articles trouvé basé sur votre recherche.",
-    "viewAll": "→ Voir tous les articles",
     "continue": "Continuez de lire →",
     "updated": "Mis à jour le",
     "published": "Initialement publié sur ",

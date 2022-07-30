@@ -1,4 +1,4 @@
-import categories from 'data/categories.json'
+import listCategories from 'data/categories.json'
 import type { GetStaticProps, NextPage } from 'next'
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 import { useRouter } from 'next/router'
@@ -15,18 +15,19 @@ import { getAllPostsWithFrontMatter, getCategories } from '@/utils/get-articles-
 type CategoryPageProps = {
   posts: any[]
   category: {
-    name?: string
+    name: string
     description?: string
   }
 }
 
 const CategoryPage: NextPage<CategoryPageProps> = ({ posts, category }) => {
   const { t } = useTranslation('common')
-  const { name, description } = category
   const router = useRouter()
+  const titleCategory = category?.name || ''
+  const descriptionCategory = category?.description || ''
 
-  const titlePage = pages(t, name).category.title
-  const descriptionPage = pages(t, name).category.description || description
+  const titlePage = pages(t, titleCategory).category.title
+  const descriptionPage = pages(t, descriptionCategory).category.description
 
   return (
     <Container>
@@ -61,17 +62,21 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   }
 }
 
-export const getStaticProps: GetStaticProps<CategoryPageProps> = async ({ params }: Params) => {
+export const getStaticProps: GetStaticProps<CategoryPageProps> = async ({
+  params,
+  locale,
+}: Params) => {
   const posts = await getAllPostsWithFrontMatter({
     dataType: 'articles',
+    locale,
     filterByCategory: params.category,
   })
 
-  const currentCategory = Object.values(categories).find((cat) => cat.id === params.category)
+  const currentCategory = Object.values(listCategories).find((cat) => cat.id === params.category)
 
   return {
     props: {

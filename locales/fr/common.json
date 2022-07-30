@@ -47,7 +47,11 @@
       "presentation": "Je suis développeur Front-End, podcasteur, créateur de contenu digital passioné pour résoudre les problèmes digitaux et humains! I enjoy meeting new people, building communities and talking about tech, expatriation and web."
     },
     "sections": {
-      "latest-podcasts": "Derniers podcasts"
+      "podcast": {
+        "latest_podcasts": "Dernier podcast",
+        "view_website": "En découvrir plus sur le site",
+        "url": "https://erreur200.com"
+      }
     }
   },
   "blog": {

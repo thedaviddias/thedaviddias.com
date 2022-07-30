@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import { FC } from 'react'
 import slugify from 'slugify'
 
@@ -12,7 +13,7 @@ type TagsProps = {
 export const Tags: FC<TagsProps> = ({ tags, className, slug = '/tag/' }) => {
   return (
     <nav arial-label="Tags">
-      <ul className={`flex items-center justify-center flex-wrap ${className}`}>
+      <ul className={clsx(`flex items-center flex-wrap`, className)}>
         {tags?.map((tag) => (
           <li
             key={tag}

@@ -93,7 +93,7 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
           <header className="pb-6 text-center border-b border-gray-200 dark:border-gray-700 mb-8 transition-colors duration-200">
             {tags && (
               <aside className="print:hidden">
-                <Tags tags={tags} className="mx-auto" />
+                <Tags tags={tags} className="mx-auto justify-center" />
               </aside>
             )}
             <H1>

@@ -13,7 +13,7 @@ export const Notes: FC<NotesProps> = ({ note }) => {
   return (
     <>
       <article className="pt-3 pb-0 border-t border-gray-200 dark:border-gray-700">
-        <div className="flex flex-col-reverse lg:flex-row">
+        <div className="flex flex-col lg:flex-row gap-y-5 lg:gap-x-5">
           <div className="max-w-[30rem] w-full">
             <H4 as="h3">
               <CustomLink
@@ -24,9 +24,9 @@ export const Notes: FC<NotesProps> = ({ note }) => {
               </CustomLink>
             </H4>
           </div>
-          <div className="flex-grow text-left lg:text-right lg:ml-8">
-            <div className="flex justify-end flex-wrap">
-              <Tags tags={note.frontMatter.tags} />
+          <div className="flex-grow text-left lg:text-right">
+            <div className="flex lg:justify-end flex-wrap">
+              <Tags tags={note.frontMatter.tags} className="justify-center" />
             </div>
             <div className="inline-block lg:block !text-gray-500 dark:text-gray-300 !font-medium !mb-1 align-top">
               <time dateTime={note.frontMatter.date.toString()}>

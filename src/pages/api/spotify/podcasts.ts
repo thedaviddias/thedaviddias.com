@@ -24,7 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({
       podcast: `https://open.spotify.com/embed-podcast/episode/${
         matchErreur200 && matchErreur200[2]
-      }?market=FR&`,
+      }`,
     })
   }
 
@@ -36,7 +36,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({
       podcast: `https://open.spotify.com/embed-podcast/episode/${
         matchWorldWebStories && matchWorldWebStories[2]
-      }?`,
+      }`,
     })
   }
 }

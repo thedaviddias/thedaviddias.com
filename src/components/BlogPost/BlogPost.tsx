@@ -6,8 +6,6 @@ import slugify from 'slugify'
 import { CustomLink } from '@/components/CustomLink'
 import { H2 } from '@/components/Headings'
 
-// import { BlogPostProps as BlogPostTypes } from '@/pages/articles/[slug]'
-
 type BlogPostProps = {
   post: any
   isCategoryPage?: string | string[]
@@ -56,12 +54,6 @@ export const BlogPost: FC<BlogPostProps> = ({ post, isCategoryPage }) => {
             </div>
           </div>
         </div>
-        <CustomLink
-          className="!text-gray-800 hover:!text-black dark:!text-gray-200 dark:hover:!text-white !text-sm sm:!text-base !font-semibold !mt-2 !mb-1 sm:!mt-4 block"
-          href={`/articles/${post.slug}`}
-        >
-          {t('posts.continue')}
-        </CustomLink>
       </article>
     </>
   )

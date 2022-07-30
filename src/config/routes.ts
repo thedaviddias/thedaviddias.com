@@ -24,13 +24,22 @@ export const routes: RoutesResponse = (translate) => ({
     path: '/',
     seo: defaultSEO,
   },
-  blog: {
-    label: translate('layout.nav.blog'),
-    path: translate('blog.path'),
+  articles: {
+    label: translate('layout.nav.articles'),
+    path: translate('articles.path'),
     seo: extendSEO({
-      title: translate('blog.seo.title'),
-      description: translate('blog.seo.description'),
-      url: translate('blog.seo.url'),
+      title: translate('articles.seo.title'),
+      description: translate('articles.seo.description'),
+      url: translate('articles.seo.url'),
+    }),
+  },
+  notes: {
+    label: translate('layout.nav.notes'),
+    path: translate('notes.path'),
+    seo: extendSEO({
+      title: translate('notes.seo.title'),
+      description: translate('notes.seo.description'),
+      url: translate('notes.seo.url'),
     }),
   },
   about: {

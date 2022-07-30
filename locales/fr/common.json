@@ -1,6 +1,6 @@
 {
   "title": "The David Dias",
-  "description": "Parcours mon blog sur le dévelopement web, les technologies, l'expatriation et tous les autres sujets qui attisent ma curiosité et mon intérêt!",
+  "description": "Parcours mon articles sur le dévelopement web, les technologies, l'expatriation et tous les autres sujets qui attisent ma curiosité et mon intérêt!",
   "titleTemplate": "Developer and content creator",
   "layout": {
     "a11y": {
@@ -8,7 +8,8 @@
     },
     "nav": {
       "home": "Accueil",
-      "blog": "Blog",
+      "articles": "Articles",
+      "notes": "Notes",
       "about": "À propos",
       "rss": "Flux RSS"
     },
@@ -54,15 +55,28 @@
       }
     }
   },
-  "blog": {
-    "path": "/blog",
+  "articles": {
+    "path": "/articles",
     "seo": {
-      "title": "Blog",
-      "description": "",
-      "url": "blog"
+      "title": "Articles",
+      "description": "Retrouvez mes articles sur le dévelopement web and sur tous les autres sujets qui me fascinnent et m'intéressent.",
+      "url": "articles"
     },
     "sections": {
-      "latest-posts": "Derniers articles"
+      "latest-posts": "Derniers articles",
+      "viewAll": "→ Voir tous les articles"
+    }
+  },
+  "notes": {
+    "path": "/notes",
+    "seo": {
+      "title": "Notes",
+      "description": "Retrouvez l'ensemble de mes notes: des bout de code, des expérimentations, des découvertes, tout ce qu'il me semble intéressant de vous partagez!",
+      "url": "notes"
+    },
+    "sections": {
+      "empty": "Pas de publications disponibles pour le moment.",
+      "latest-notes": "Dernières Notes"
     }
   },
   "about": {
@@ -108,7 +122,6 @@
   },
   "posts": {
     "empty": "Aucun articles trouvé basé sur votre recherche.",
-    "viewAll": "→ Voir tous les articles",
     "continue": "Continuez de lire →",
     "updated": "Mis à jour le",
     "published": "Initialement publié sur ",

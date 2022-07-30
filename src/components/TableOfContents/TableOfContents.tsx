@@ -1,7 +1,7 @@
 import useTranslation from 'next-translate/useTranslation'
 import React, { useEffect, useState } from 'react'
 
-import { Headings } from '@/pages/blog/[slug]'
+import { Headings } from '@/pages/articles/[slug]'
 
 type TableOfContentsType = {
   headings: Headings[]

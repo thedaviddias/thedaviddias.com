@@ -1,13 +1,20 @@
 import { Feed } from 'feed'
 import fs from 'fs'
 
-import { getAllPostsWithFrontMatter } from '../utils/get-blog-posts'
+import { getAllPostsWithFrontMatter } from '../utils/get-articles-posts'
 import localeEN from '../../locales/en/common.json'
 import localeFR from '../../locales/fr/common.json'
 
 export default async function generateRssFeed() {
-  const postsEn = getAllPostsWithFrontMatter({ dataType: 'blog' })
-  const postsFr = getAllPostsWithFrontMatter({ dataType: 'blog', locale: 'fr' })
+  const notesEn = getAllPostsWithFrontMatter({ dataType: 'notes' })
+  const articlesEn = getAllPostsWithFrontMatter({ dataType: 'articles' })
+
+  const postsEn = [...notesEn, ...articlesEn]
+
+  const articlesFR = getAllPostsWithFrontMatter({ dataType: 'articles', locale: 'fr' })
+  const notesFr = getAllPostsWithFrontMatter({ dataType: 'notes', locale: 'fr' })
+
+  const postsFr = [...articlesFR, ...notesFr]
 
   const siteURL = 'https://thedaviddias.dev'
   const date = new Date()
@@ -36,7 +43,7 @@ export default async function generateRssFeed() {
 
   // Adding blogs to the rss feed
   postsEn.forEach((post) => {
-    const url = `${siteURL}/blog/${post.slug}`
+    const url = `${siteURL}${post.permalink}`
     feedEn.addItem({
       title: post.frontMatter.title,
       id: url,
@@ -72,7 +79,7 @@ export default async function generateRssFeed() {
 
   // Adding blogs to the rss feed
   postsFr.forEach((post) => {
-    const url = `${siteURL}/blog/${post.slug}`
+    const url = `${siteURL}${post.permalink}`
     feedFr.addItem({
       title: post.frontMatter.title,
       id: url,

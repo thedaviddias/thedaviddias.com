@@ -6,24 +6,24 @@ import { CustomLink } from '../CustomLink'
 import { H5 } from '../Headings'
 
 type LatestPostsSection = {
-  posts: any[]
+  articles: any[]
 }
 
-export const LatestPostsSection: FC<LatestPostsSection> = ({ posts }) => {
+export const LatestPostsSection: FC<LatestPostsSection> = ({ articles }) => {
   const { t } = useTranslation('common')
 
   return (
-    <section className="grid grid-cols-1 gap-y-10 border-none">
+    <section className="grid grid-cols-1 gap-y-10 border-none  mb-10">
       <header>
-        <H5 as="h2">{t('blog.sections.latest-posts')}</H5>
+        <H5 as="h2">{t('articles.sections.latest-posts')}</H5>
       </header>
       <div className="grid grid-cols-1 gap-4 lg:col-span-2">
-        {posts.map((post) => (
-          <BlogPost key={post.frontMatter.title} post={post} />
+        {articles.map((article) => (
+          <BlogPost key={article.frontMatter.title} post={article} />
         ))}
       </div>
       <footer className="text-right">
-        <CustomLink href="/blog">{t('posts.viewAll')}</CustomLink>
+        <CustomLink href="/articles">{t('articles.sections.viewAll')}</CustomLink>
       </footer>
     </section>
   )

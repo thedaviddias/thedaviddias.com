@@ -22,7 +22,8 @@ export type LinksExternalResponse = {
 }
 
 export const MENU_LINKS = (translate: Translate): LinksInternalResponse[] => [
-  routes(translate).blog,
+  routes(translate).notes,
+  routes(translate).articles,
   routes(translate).about,
   routes(translate).rss,
 ]
@@ -56,3 +57,5 @@ export const GET_PODCAST_ERREUR_200 =
   'https://api.spotify.com/v1/shows/5vlkaq2mJ3niIkkmUcrXfS/episodes?market=FR&limit=1&offset=0'
 export const GET_PODCAST_WWS =
   'https://api.spotify.com/v1/shows/2BYtLK0WwVz0cIfgcJwL57/episodes?market=FR&limit=1&offset=0'
+
+export const REGEX_REMOVE_DATE = /[0-9]{4}\-[0-9]{2}\-[0-9]{2}\-/g

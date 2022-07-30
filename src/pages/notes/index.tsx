@@ -3,38 +3,38 @@ import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { useState } from 'react'
 
-import { BlogPost } from '@/components/BlogPost'
 import { Container } from '@/components/Container'
 import { H1, H5 } from '@/components/Headings'
+import { Notes } from '@/components/Notes'
 
 import { routes } from '@/config/routes'
-import { getAllPostsWithFrontMatter } from '@/utils/get-blog-posts'
+import { getAllPostsWithFrontMatter } from '@/utils/get-articles-posts'
 
 type BlogProps = {
-  posts: any[]
+  notes: any[]
 }
 
-const Blog = ({ posts }: BlogProps) => {
+const Til = ({ notes }: BlogProps) => {
   const { t } = useTranslation('common')
   const [searchValue, setSearchValue] = useState('')
 
-  const filteredBlogPosts = posts.filter((post) =>
-    post.frontMatter.title.toLowerCase().includes(searchValue.toLowerCase())
+  const filteredNotes = notes.filter((note) =>
+    note.frontMatter.title.toLowerCase().includes(searchValue.toLowerCase())
   )
 
   return (
     <Container>
       <NextSeo
-        title={routes(t).blog.seo.title}
-        description={routes(t).blog.seo.description}
-        openGraph={routes(t).blog.seo}
+        title={routes(t).notes.seo.title}
+        description={routes(t).notes.seo.description}
+        openGraph={routes(t).notes.seo}
       />
       <main className="divide-slate-200 sm:space-y-16 lg:max-w-none">
         <section className="pt-10 border-none">
           <header>
-            <H1>{routes(t).blog.seo.title}</H1>
+            <H1>{routes(t).notes.seo.title}</H1>
             <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 mt-2">
-              {routes(t).blog.seo.description}
+              {routes(t).notes.seo.description}
             </p>
           </header>
         </section>
@@ -56,11 +56,11 @@ const Blog = ({ posts }: BlogProps) => {
           </form>
 
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">
-            {!filteredBlogPosts.length && (
+            {!filteredNotes.length && (
               <p className="mb-4 text-gray-600 dark:text-gray-400">{t('posts.empty')}</p>
             )}
-            {filteredBlogPosts.map((post) => (
-              <BlogPost key={post.frontMatter.title} post={post} />
+            {filteredNotes.map((post) => (
+              <Notes key={post.frontMatter.title} note={post} />
             ))}
           </div>
         </section>
@@ -70,10 +70,10 @@ const Blog = ({ posts }: BlogProps) => {
 }
 
 export const getStaticProps: GetStaticProps<BlogProps> = async ({ locale }) => {
-  const posts = getAllPostsWithFrontMatter({ dataType: 'blog', locale })
+  const notes = getAllPostsWithFrontMatter({ dataType: 'notes', locale })
 
   const props = {
-    posts: JSON.parse(JSON.stringify(posts)),
+    notes: JSON.parse(JSON.stringify(notes)),
   }
 
   return {
@@ -81,4 +81,4 @@ export const getStaticProps: GetStaticProps<BlogProps> = async ({ locale }) => {
   }
 }
 
-export default Blog
+export default Til

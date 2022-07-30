@@ -11,7 +11,7 @@ tags:
   - a11y
   - performance
   - react
-type: blog-post
+type: article
 preview:
   url: ''
 published:
@@ -43,7 +43,7 @@ Que vous veniez de commencer à développer votre application ou que vous deviez
 
 Que ce soit l’accessibilité, la performance, le SEO ou tout autre domaine front-end, il est important de pouvoir **mesurer régulièrement l’état de votre application** avant d’y apporter des améliorations ou corrections. L’un des outils que j’utilise quotidiennement et que vous connaissez peut-être est [Lighthouse](https://developers.google.com/web/tools/lighthouse/).
 
-![](/images/blog/outils-astuces-rendre-accessible-performante-application-react/lighthouse-24jdw.jpg 'Résultats d’analyse de Lighthouse sur 24joursdeweb.fr.')
+![](/images/articles/outils-astuces-rendre-accessible-performante-application-react/lighthouse-24jdw.jpg 'Résultats d’analyse de Lighthouse sur 24joursdeweb.fr.')
 
 Beaucoup mis en avant lors du dernier Google Dev Summit en novembre 2018, Lighthouse est l’outil que vous trouverez soit dans l’onglet « Audit » des outils de développement de Chrome, ou maintenant intégré dans la page résultat de [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/). Vous pouvez ainsi analyser n’importe quel site en utilisant n’importe quel navigateur.
 
@@ -65,16 +65,16 @@ Au delà des outils précédents qui vous donnent un aperçu global de l’état
 
 - Depuis certaines récentes versions de Chrome, vous pouvez maintenant trouver l’onglet accessibilité dans la partie « styles » de l’onglet « Éléments » des outils de développement de Chrome.
 
-![](/images/blog/outils-astuces-rendre-accessible-performante-application-react/chrome-a11y.jpg)
+![](/images/articles/outils-astuces-rendre-accessible-performante-application-react/chrome-a11y.jpg)
 
 **Dans Mozilla Firefox:**
 
 Ouvrez la boîte à outils du développeur dans Firefox: depuis la version 63 de Firefox, vous devriez avoir un onglet « Accessibilité » comme sur la capture suivante. Il suffit de cliquer sur le bouton pour l’activer.
-![](/images/blog/outils-astuces-rendre-accessible-performante-application-react/firefox-a11y.jpg)
+![](/images/articles/outils-astuces-rendre-accessible-performante-application-react/firefox-a11y.jpg)
 
 ### ESLint-plugin-jsx-a11y
 
-Si vous travaillez avec JavaScript depuis quelques temps, vous devez certainement utiliser ESLint dans votre workflow (vous pouvez lire [cet article](https://www.synbioz.com/blog/un_code_js_impeccable_grace_a_eslint) pour une complète présentation d’ESLint). [ESLint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y), qui fonctionne avec ESLint) est un simple plugin qui va vous alerter dans le cas où votre code présente une erreur en terme d’accessibilité. Un simple outil mais efficace pour détecteur une erreur pendant le développement ou au moment du build.
+Si vous travaillez avec JavaScript depuis quelques temps, vous devez certainement utiliser ESLint dans votre workflow (vous pouvez lire [cet article](https://www.synbioz.com/articles/un_code_js_impeccable_grace_a_eslint) pour une complète présentation d’ESLint). [ESLint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y), qui fonctionne avec ESLint) est un simple plugin qui va vous alerter dans le cas où votre code présente une erreur en terme d’accessibilité. Un simple outil mais efficace pour détecteur une erreur pendant le développement ou au moment du build.
 
 ### stylelint-a11y
 
@@ -104,7 +104,7 @@ Malheureusement, il serait trop long de vous parlez de tous les plugins que j’
 
 Bien sûr, après avoir testé et optimiser votre code à l’aide de ces outils, **le seul vrai moyen de tester** votre application et d’inviter des personnes avec des difficultés d’accessibilité différentes à la tester manuellement. Ils pourront ainsi vous faire des retours utiles basés sur leurs expériences et leur manière de naviguer le web.
 
-![](/images/blog/outils-astuces-rendre-accessible-performante-application-react/a11y-additional-items.jpg)
+![](/images/articles/outils-astuces-rendre-accessible-performante-application-react/a11y-additional-items.jpg)
 
 Après avoir traiter assez rapidement certains outils et astuces pour davantage d’accessibilité, nous allons nous pencher sur la performance.
 
@@ -130,7 +130,7 @@ Avant de choisir d’utiliser quelqueconque plugin, n’hésitez pas à vous dem
 
 Le module [why-did-you-update](https://github.com/maicki/why-did-you-update) peut vous permettre de vous alerter lorsque vos props sont re-rendu inutilement.
 
-![](/images/blog/outils-astuces-rendre-accessible-performante-application-react/why-did-you-update.png)
+![](/images/articles/outils-astuces-rendre-accessible-performante-application-react/why-did-you-update.png)
 
 Il vous suffit d’installer le package dans votre projet et insérer ce bout de code dans votre app.js :
 

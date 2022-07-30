@@ -43,10 +43,10 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
                 {t('home.hero.greetings2')}
               </span>
             </h1>
-            <div className="max-w-xl lg:px-0.5 text-base lg:text-lg sm:text-xl text-gray-500 dark:text-gray-400">
-              {t('home.hero.presentation')}
-            </div>
-
+            <div
+              className="max-w-xl lg:px-0.5 text-base lg:text-lg sm:text-xl text-gray-500 dark:text-gray-400"
+              dangerouslySetInnerHTML={{ __html: t('home.hero.presentation') }}
+            />
             <div className="flex justify-left mt-10 space-x-5">
               {HERO_LINKS.map(({ label, link }) => (
                 <CustomLink

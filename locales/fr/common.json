@@ -36,7 +36,7 @@
       "extra_links": {
         "dashboard": "Tableau de bord",
         "newsletter": "Newsletter",
-        "analytics": "Statistics"
+        "analytics": "Statistiques"
       }
     }
   },
@@ -44,7 +44,7 @@
     "hero": {
       "greetings1": "Salut toi!",
       "greetings2": "Je m'appelle David Dias",
-      "presentation": "Je suis développeur Front-End, podcasteur, créateur de contenu digital passioné pour résoudre les problèmes digitaux et humains! I enjoy meeting new people, building communities and talking about tech, expatriation and web."
+      "presentation": "Je suis développeur Front-End, podcasteur, créateur de contenu numérique passioné pour résoudre les problèmes digitaux et humains! J'aime rencontré de nouvelles personnes, bâtir des communautées et parler de tech, d'expatriation et de web."
     },
     "sections": {
       "podcast": {

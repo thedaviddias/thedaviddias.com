@@ -69,6 +69,8 @@ type BlogPostPageProps = BlogPostProps & {
   adjacentPosts: any
 }
 
+const contentType = 'articles'
+
 const BlogPostPage: NextPage<BlogPostPageProps> = ({
   frontMatter,
   source,
@@ -200,7 +202,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const dataType = 'articles'
+  const dataType = contentType
   const blogs = getAllPosts(dataType)
 
   const paths: GetStaticPathsResult['paths'] = []
@@ -230,7 +232,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params, locale }) => {
   if (params?.slug) {
     const slug = params.slug as string
-    const postContent = await getPostBySlug(slug, 'articles', locale)
+    const postContent = await getPostBySlug(slug, contentType, locale)
     const headings: Headings[] = []
 
     const {
@@ -272,7 +274,7 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
         slug,
         readingTime,
         headings,
-        adjacentPosts: locale && getAdjacentPosts(slug, locale),
+        adjacentPosts: locale && getAdjacentPosts(slug, locale, contentType),
         source: await serialize(markdownBody, {
           mdxOptions: {
             remarkPlugins: [remarkGfm, remarkCodeTitles],

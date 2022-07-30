@@ -4,7 +4,6 @@ import { useRouter } from 'next/router'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import { ArticleJsonLd, NextSeo } from 'next-seo'
-import useTranslation from 'next-translate/useTranslation'
 import { ReadTimeResults } from 'reading-time'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeImagePlaceholder from 'rehype-image-placeholder'
@@ -12,6 +11,7 @@ import rehypePrismPlus from 'rehype-prism-plus'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 
+import { AdjacentPosts } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
 import { Container } from '@/components/Container'
 import { DatePost } from '@/components/DatePost'
@@ -23,15 +23,14 @@ import { Tags } from '@/components/Tags'
 
 import { routes } from '@/config/routes'
 import { getAdjacentPosts, getAllPosts, getPost, getPostBySlug } from '@/utils/get-articles-posts'
-import { rehypeExtractHeadings } from '@/utils/rehype-extract-headings'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
 
 export type BlogPostProps = {
   frontMatter: {
-    draft: boolean
     author?: string
     date: string
     description: string
+    draft: boolean
     locale: string
     permalink: string
     tags?: string[]
@@ -46,19 +45,17 @@ export type Headings = {
   title: string
 }
 
-type BlogPostPageProps = BlogPostProps & {
+type NotePageProps = BlogPostProps & {
   source: MDXRemoteSerializeResult
   readingTime: ReadTimeResults
+  adjacentPosts: any
 }
 
 const contentType = 'notes'
 
-const BlogPostPage: NextPage<BlogPostPageProps> = ({ frontMatter, source, permalink }) => {
+const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adjacentPosts }) => {
   const { title, description, tags, date, author } = frontMatter
   const { isFallback } = useRouter()
-  const { t } = useTranslation('common')
-
-  const pathSlug = t('tags.pathNote')
 
   if (isFallback || !title) {
     return <div>Loading...</div>
@@ -96,7 +93,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({ frontMatter, source, permal
           <header className="pb-6 text-center border-b border-gray-200 dark:border-gray-700 mb-8 transition-colors duration-200">
             {tags && (
               <aside className="print:hidden">
-                <Tags tags={tags} className="mx-auto" slug={pathSlug} />
+                <Tags tags={tags} className="mx-auto" />
               </aside>
             )}
             <H1>
@@ -118,6 +115,8 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({ frontMatter, source, permal
                 <MDXRemote {...source} components={MDXComponents} lazy />
               </section>
               {permalink && <Share title={title} tags={tags && tags} permalink={permalink} />}
+
+              {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
             </div>
           </div>
         </article>
@@ -154,11 +153,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params, locale }) => {
+export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
   if (params?.slug) {
     const slug = params.slug as string
     const postContent = await getPostBySlug(slug, contentType, locale)
-    const headings: Headings[] = []
 
     const {
       markdownBody,
@@ -179,8 +177,7 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
         permalink,
         slug,
         readingTime,
-        headings,
-        adjacentPosts: locale && getAdjacentPosts(slug, locale),
+        adjacentPosts: locale && getAdjacentPosts(slug, locale, contentType),
         source: await serialize(markdownBody, {
           mdxOptions: {
             remarkPlugins: [remarkGfm, remarkCodeTitles],
@@ -189,7 +186,6 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
               [rehypeImagePlaceholder, { dir: 'public/' }],
               rehypeSlug,
               [rehypeAutolinkHeadings],
-              [rehypeExtractHeadings, { rank: 2, headings }],
             ],
           },
         }),
@@ -201,4 +197,4 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
   }
 }
 
-export default BlogPostPage
+export default NotePage

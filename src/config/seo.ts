@@ -3,7 +3,7 @@ import { NextSeoProps } from 'next-seo'
 export const baseUrl = 'https://thedaviddias.dev' || process.env.VERCEL_URL
 export const baseEmail = 'hello@thedaviddias.com'
 
-const title = 'The David Dias | Developer and content creator'
+const title = 'The David Dias | Front-End Developer, podcaster & content creator'
 const description = `Hey, I'm David Dias! Software Engineer based in Toronto / Canada. I love talking about code, technology, expatriation and life.`
 
 export const defaultSEO: NextSeoProps = {

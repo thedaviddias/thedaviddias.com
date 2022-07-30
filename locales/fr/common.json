@@ -1,7 +1,7 @@
 {
   "title": "The David Dias",
   "description": "Parcours mon articles sur le dévelopement web, les technologies, l'expatriation et tous les autres sujets qui attisent ma curiosité et mon intérêt!",
-  "titleTemplate": "Developer and content creator",
+  "titleTemplate": "Front-End Developer, podcaster & content creator",
   "layout": {
     "a11y": {
       "skipContent": "Aller directement {{label}}"

@@ -1,41 +1,31 @@
-import clsx from 'clsx'
-import { useRouter } from 'next/router'
-import { NextSeo, NextSeoProps } from 'next-seo'
+import { NextSeo } from 'next-seo'
 import React, { FC } from 'react'
 
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
-import { SkipLinks } from '@/components/SkipLinks'
+import { Container } from '@/components/Container'
 
-type BaseLayoutProps = NextSeoProps & {
+import { SEOProps } from '@/config/seo'
+
+type BaseLayoutProps = {
   children: React.ReactNode
+  title: string
+  description: string
+  openGraph?: SEOProps
   className?: string
-  skipLink?: string
 }
 
 export const BaseLayout: FC<BaseLayoutProps> = ({
   children,
+  title,
+  description,
+  openGraph,
   className,
-  skipLink = 'main content',
-  ...props
 }) => {
-  const router = useRouter()
-
   return (
-    <div className="min-h-screen flex flex-col">
-      <NextSeo {...props} />
-      <SkipLinks />
-      <Header pathname={router.pathname} />
-      <div className="py-3 top-0 mb-12">
-        <main
-          className={clsx('pt-10 border-none max-w-5xl mx-auto px-2 sm:px-6 lg:px-8', className)}
-          id="main"
-          data-skip-link={skipLink}
-        >
-          {children}
-        </main>
-      </div>
-      <Footer />
-    </div>
+    <Container>
+      <NextSeo title={title} description={description} openGraph={openGraph} />
+      <main className={className} id="main" data-skip-link="main content">
+        {children}
+      </main>
+    </Container>
   )
 }

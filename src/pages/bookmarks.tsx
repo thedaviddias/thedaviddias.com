@@ -3,10 +3,8 @@ import useTranslation from 'next-translate/useTranslation'
 import { useState } from 'react'
 
 import { BookmarkCard } from '@/components/BookmarkCard'
+import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
-
-import { routes } from '@/config/routes'
-import { BaseLayout } from '@/layouts/BaseLayout'
 
 export type Bookmark = {
   link: string
@@ -36,13 +34,8 @@ const Bookmarks = ({ bookmarks, tags }: Props) => {
   }
 
   return (
-    <BaseLayout
-      title={routes(t).bookmarks.seo.title}
-      description={routes(t).bookmarks.seo.description}
-      openGraph={routes(t).bookmarks.seo}
-    >
-      <PageHeader title={`Bookmarks`} description={routes(t).bookmarks.seo.description} />
-
+    <Container>
+      <PageHeader title={`Bookmarks`} />
       <div className="mb-5 mt-5">
         <ul className="flex gap-x-5">
           <li>
@@ -69,7 +62,7 @@ const Bookmarks = ({ bookmarks, tags }: Props) => {
           />
         ))}
       </div>
-    </BaseLayout>
+    </Container>
   )
 }
 

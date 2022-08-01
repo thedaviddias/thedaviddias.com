@@ -2,14 +2,14 @@ import listCategories from 'data/categories.json'
 import type { GetStaticProps, NextPage } from 'next'
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 import { useRouter } from 'next/router'
+import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 
 import { BlogPost } from '@/components/BlogPost'
+import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 
 import { pages } from '@/config/routes'
-import { CONTENT_TYPE } from '@/constants'
-import { BaseLayout } from '@/layouts/BaseLayout'
 import { getAllPostsWithFrontMatter, getCategories } from '@/utils/get-articles-posts'
 
 type CategoryPageProps = {
@@ -23,7 +23,6 @@ type CategoryPageProps = {
 const CategoryPage: NextPage<CategoryPageProps> = ({ posts, category }) => {
   const { t } = useTranslation('common')
   const router = useRouter()
-
   const titleCategory = category?.name || ''
   const descriptionCategory = category?.description || ''
 
@@ -31,24 +30,29 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ posts, category }) => {
   const descriptionPage = pages(t, descriptionCategory).category.description
 
   return (
-    <BaseLayout title={titlePage} description={descriptionPage}>
-      <PageHeader title={titlePage} description={descriptionPage} />
+    <Container>
+      <NextSeo title={titlePage} description={descriptionPage} />
+      <main className="mx-auto space-y-20 divide-y divide-slate-200 sm:space-y-16 lg:max-w-none lg:space-y-32">
+        <section className="grid grid-cols-1 gap-y-10 gap-x-6 lg:pt-10">
+          <PageHeader title={titlePage} description={descriptionPage} />
 
-      <div className="grid grid-cols-1 gap-4 lg:col-span-2">
-        {posts?.map((post) => (
-          <BlogPost
-            key={post.frontMatter.title}
-            post={post}
-            isCategoryPage={router.query?.category}
-          />
-        ))}
-      </div>
-    </BaseLayout>
+          <div className="grid grid-cols-1 gap-4 lg:col-span-2">
+            {posts?.map((post) => (
+              <BlogPost
+                key={post.frontMatter.title}
+                post={post}
+                isCategoryPage={router.query?.category}
+              />
+            ))}
+          </div>
+        </section>
+      </main>
+    </Container>
   )
 }
 
 export const getStaticPaths = async () => {
-  const categories = await getCategories(CONTENT_TYPE.ARTICLE)
+  const categories = await getCategories('articles')
 
   const paths = categories.map((category: string) => ({
     params: {
@@ -67,7 +71,7 @@ export const getStaticProps: GetStaticProps<CategoryPageProps> = async ({
   locale,
 }: Params) => {
   const posts = await getAllPostsWithFrontMatter({
-    dataType: CONTENT_TYPE.ARTICLE,
+    dataType: 'articles',
     locale,
     filterByCategory: params.category,
   })

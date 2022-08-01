@@ -67,8 +67,3 @@ export const GET_PODCAST_WWS =
   'https://api.spotify.com/v1/shows/2BYtLK0WwVz0cIfgcJwL57/episodes?market=FR&limit=1&offset=0'
 
 export const REGEX_REMOVE_DATE = /[0-9]{4}\-[0-9]{2}\-[0-9]{2}\-/g
-
-export const CONTENT_TYPE = {
-  ARTICLE: 'articles',
-  NOTE: 'notes',
-}

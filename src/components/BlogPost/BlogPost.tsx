@@ -1,4 +1,5 @@
 import { format } from 'date-fns'
+import useTranslation from 'next-translate/useTranslation'
 import { FC } from 'react'
 import slugify from 'slugify'
 
@@ -11,6 +12,8 @@ type BlogPostProps = {
 }
 
 export const BlogPost: FC<BlogPostProps> = ({ post, isCategoryPage }) => {
+  const { t } = useTranslation('common')
+
   return (
     <>
       <article className="pt-8 pb-6 border-t border-gray-200 dark:border-gray-700" key={post.slug}>

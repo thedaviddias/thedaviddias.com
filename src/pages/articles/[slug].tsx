@@ -15,6 +15,7 @@ import slugify from 'slugify'
 
 import { AdjacentPosts } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
+import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
 import { DatePost } from '@/components/DatePost'
 import { H1 } from '@/components/Headings'
@@ -27,8 +28,6 @@ import { Tags } from '@/components/Tags'
 
 import { routes } from '@/config/routes'
 import { baseUrl } from '@/config/seo'
-import { CONTENT_TYPE } from '@/constants'
-import { BaseLayout } from '@/layouts/BaseLayout'
 import { getAdjacentPosts, getAllPosts, getPost, getPostBySlug } from '@/utils/get-articles-posts'
 import { rehypeExtractHeadings } from '@/utils/rehype-extract-headings'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
@@ -70,6 +69,8 @@ type BlogPostPageProps = BlogPostProps & {
   adjacentPosts: any
 }
 
+const contentType = 'articles'
+
 const BlogPostPage: NextPage<BlogPostPageProps> = ({
   frontMatter,
   source,
@@ -87,7 +88,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
   }
 
   return (
-    <BaseLayout skipLink="the article">
+    <Container>
       <ScrollTop />
       <NextSeo
         title={title}
@@ -122,85 +123,86 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
         authorName="David Dias"
         description={description}
       />
+      <main id="main" data-skip-link="the article">
+        <article className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <header className="pb-6 text-center border-b border-gray-200 dark:border-gray-700 mb-8 transition-colors duration-200">
+            {categories.length && (
+              <div className="text-gray-500 dark:text-gray-400 font-medium mb-2 text-sm sm:text-base transition-colors duration-200">
+                <span className="sr-only">Category</span>
+                {categories?.map((category) => (
+                  <CustomLink
+                    key={category}
+                    href={`/category/${slugify(category, { lower: true })}`}
+                    passHref
+                    className="mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x !font-semibold transition-colors duration-200"
+                  >
+                    {category}
+                  </CustomLink>
+                ))}
+              </div>
+            )}
+            <H1>
+              <span className="block mt-1.5 mb-6 serif:mt-2 text-black dark:text-white leading-none transition-colors duration-200 ">
+                {title}
+              </span>
+              <span className="sr-only"> — </span>
+              <div className="font-body text-lg sm:text-xl text-gray-600 dark:text-gray-400 mt-3 mb-6 tracking-wide font-light">
+                {description}
+              </div>
+            </H1>
 
-      <article className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <header className="pb-6 text-center border-b border-gray-200 dark:border-gray-700 mb-8 transition-colors duration-200">
-          {categories.length && (
-            <div className="text-gray-500 dark:text-gray-400 font-medium mb-2 text-sm sm:text-base transition-colors duration-200">
-              <span className="sr-only">Category</span>
-              {categories?.map((category) => (
-                <CustomLink
-                  key={category}
-                  href={`/category/${slugify(category, { lower: true })}`}
-                  passHref
-                  className="mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x !font-semibold transition-colors duration-200"
-                >
-                  {category}
-                </CustomLink>
-              ))}
+            <div className="flex justify-between">
+              {author && <Author name={author} routes={routes} />}
+
+              {date && <DatePost date={date} lastmod={lastmod} />}
             </div>
-          )}
-          <H1>
-            <span className="block mt-1.5 mb-6 serif:mt-2 text-black dark:text-white leading-none transition-colors duration-200 ">
-              {title}
-            </span>
-            <span className="sr-only"> — </span>
-            <div className="font-body text-lg sm:text-xl text-gray-600 dark:text-gray-400 mt-3 mb-6 tracking-wide font-light">
-              {description}
-            </div>
-          </H1>
+          </header>
+          <div className="block lg:flex w-full">
+            <div className="max-w-full">
+              <div className=" w-[40em] lg:w-[37rem] !max-w-full">
+                <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl !max-w-full mb-10">
+                  <MDXRemote {...source} components={MDXComponents} lazy />
 
-          <div className="flex justify-between">
-            {author && <Author name={author} routes={routes} />}
+                  {published?.url && (
+                    <Paragraph className="italic pt-8">
+                      {t('posts.published')}{' '}
+                      <CustomLink href={published.url} as="span">
+                        {published.on}
+                      </CustomLink>
+                    </Paragraph>
+                  )}
+                </section>
 
-            {date && <DatePost date={date} lastmod={lastmod} />}
-          </div>
-        </header>
-        <div className="block lg:flex w-full">
-          <div className="max-w-full">
-            <div className=" w-[40em] lg:w-[37rem] !max-w-full">
-              <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl !max-w-full mb-10">
-                <MDXRemote {...source} components={MDXComponents} lazy />
-
-                {published?.url && (
-                  <Paragraph className="italic pt-8">
-                    {t('posts.published')}{' '}
-                    <CustomLink href={published.url} as="span">
-                      {published.on}
-                    </CustomLink>
-                  </Paragraph>
+                {tags && (
+                  <aside className="w-full mt-3 print:hidden">
+                    <div className="small-title">{t('tags.section')}</div>
+                    <Tags tags={tags} />
+                  </aside>
                 )}
-              </section>
 
-              {tags && (
-                <aside className="w-full mt-3 print:hidden">
-                  <div className="small-title">{t('tags.section')}</div>
-                  <Tags tags={tags} />
-                </aside>
-              )}
+                {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
+              </div>
+            </div>
 
-              {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
+            <div className="flex-auto ml-16 hidden lg:block print:hidden">
+              <div className="sticky top-10 w-full">
+                {permalink && <Share title={title} tags={tags && tags} permalink={permalink} />}
+                {headings && (
+                  <aside className="w-full mt-3">
+                    <TableOfContents headings={headings} />
+                  </aside>
+                )}
+              </div>
             </div>
           </div>
-
-          <div className="flex-auto ml-16 hidden lg:block print:hidden">
-            <div className="sticky top-10 w-full">
-              {permalink && <Share title={title} tags={tags && tags} permalink={permalink} />}
-              {headings && (
-                <aside className="w-full mt-3">
-                  <TableOfContents headings={headings} />
-                </aside>
-              )}
-            </div>
-          </div>
-        </div>
-      </article>
-    </BaseLayout>
+        </article>
+      </main>
+    </Container>
   )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const dataType = CONTENT_TYPE.ARTICLE
+  const dataType = contentType
   const blogs = getAllPosts(dataType)
 
   const paths: GetStaticPathsResult['paths'] = []
@@ -230,7 +232,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params, locale }) => {
   if (params?.slug) {
     const slug = params.slug as string
-    const postContent = await getPostBySlug(slug, CONTENT_TYPE.ARTICLE, locale)
+    const postContent = await getPostBySlug(slug, contentType, locale)
     const headings: Headings[] = []
 
     const {
@@ -272,13 +274,14 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
         slug,
         readingTime,
         headings,
-        adjacentPosts: locale && getAdjacentPosts(slug, locale, CONTENT_TYPE.ARTICLE),
+        adjacentPosts: locale && getAdjacentPosts(slug, locale, contentType),
         source: await serialize(markdownBody, {
           mdxOptions: {
             remarkPlugins: [remarkGfm, remarkCodeTitles],
             rehypePlugins: [
               [rehypePrismPlus, { ignoreMissing: true }],
               [rehypeImagePlaceholder, { dir: 'public/' }],
+              // [rehypeFigure, { className: 'my-3' }],
               rehypeSlug,
               [rehypeAutolinkHeadings],
               [rehypeExtractHeadings, { rank: 2, headings }],

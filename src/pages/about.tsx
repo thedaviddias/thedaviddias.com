@@ -27,7 +27,12 @@ const About: NextPage<AboutProps> = ({ frontMatter, source }) => {
   const { title, description } = frontMatter
 
   return (
-    <BaseLayout title={title} description={description} openGraph={routes(t).about.seo}>
+    <BaseLayout
+      title={title}
+      description={description}
+      openGraph={routes(t).about.seo}
+      className="pt-10 border-none"
+    >
       <SocialProfileJsonLd
         type="Person"
         name="David Dias"
@@ -35,6 +40,7 @@ const About: NextPage<AboutProps> = ({ frontMatter, source }) => {
         sameAs={listSocialUrl(social)}
       />
       <PageHeader title={title} description={description} />
+
       <MDXRemote {...source} components={MDXComponents} lazy />
     </BaseLayout>
   )

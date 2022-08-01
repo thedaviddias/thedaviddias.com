@@ -19,7 +19,7 @@ const config = {
   siteUrl: process.env.SITE_URL || 'https://thedaviddias.dev',
   generateRobotsTxt: true,
   exclude: ['/404', '/fr/404'],
-  additionalPaths: async () => {
+  additionalPaths: async (config) => {
     const result = []
 
     result.push({

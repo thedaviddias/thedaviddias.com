@@ -5,7 +5,7 @@ import { serialize } from 'next-mdx-remote/serialize'
 import useTranslation from 'next-translate/useTranslation'
 
 import { CustomLink } from '@/components/CustomLink'
-import { H2, H3, H4, H5 } from '@/components/Headings'
+import { H3, H5 } from '@/components/Headings'
 import { MDXComponents } from '@/components/MdxComponents'
 import { PageHeader } from '@/components/PageHeader'
 import { Paragraph } from '@/components/Paragraph'
@@ -26,8 +26,8 @@ export type Tool = {
 }
 
 type UsesProps = {
-  categories: string
-  tools: Tool[]
+  categories: string[]
+  tools: any[]
   frontMatter: {
     title: string
     description: string
@@ -59,7 +59,7 @@ const Uses: NextPage<UsesProps> = ({ categories, tools, frontMatter, source }) =
             <H3 as="h2">{category}</H3>
           </header>
           <ul className="flex flex-col">
-            {tools[category].map((tool) => (
+            {tools[category as unknown as number].map((tool: Tool) => (
               <li key={tool.url}>
                 <article className="flex flex-row relative gap-x-5">
                   <div>
@@ -79,7 +79,7 @@ const Uses: NextPage<UsesProps> = ({ categories, tools, frontMatter, source }) =
                         {tool.title}
                       </CustomLink>
                     </H5>
-                    <Paragraph>{tool[`description_${lang}`]}</Paragraph>
+                    <Paragraph>{tool[`description_${lang}` as keyof Tool]}</Paragraph>
                   </div>
                 </article>
               </li>
@@ -101,12 +101,13 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   } = postContent
 
   const tools: { [key: string]: Tool[] } = {}
-  const category = `category_${locale}`
+  const category = `category_${locale}` as keyof Tool
 
   usesData?.forEach((tool) => {
     if (!tools[tool[category]]) {
       tools[tool[category]] = []
     }
+
     tools[tool[category]] = [...tools[tool[category]], tool]
   })
 

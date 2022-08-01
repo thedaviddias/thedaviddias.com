@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticPathsResult, GetStaticProps, NextPage } from '
 import { useRouter } from 'next/router'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
-import { ArticleJsonLd, NextSeo } from 'next-seo'
+import { ArticleJsonLd } from 'next-seo'
 import { ReadTimeResults } from 'reading-time'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeImagePlaceholder from 'rehype-image-placeholder'
@@ -13,7 +13,6 @@ import remarkGfm from 'remark-gfm'
 
 import { AdjacentPosts } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
-import { Container } from '@/components/Container'
 import { DatePost } from '@/components/DatePost'
 import { H1 } from '@/components/Headings'
 import { MDXComponents } from '@/components/MdxComponents'
@@ -22,6 +21,7 @@ import { Share } from '@/components/Share'
 import { Tags } from '@/components/Tags'
 
 import { routes } from '@/config/routes'
+import { BaseLayout } from '@/layouts/BaseLayout'
 import { getAdjacentPosts, getAllPosts, getPost, getPostBySlug } from '@/utils/get-articles-posts'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
 
@@ -62,23 +62,22 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
   }
 
   return (
-    <Container>
+    <BaseLayout
+      title={title}
+      openGraph={{
+        title,
+        description,
+        url: permalink,
+        type: 'article',
+        article: {
+          publishedTime: date,
+          authors: ['https://thedaviddias.dev/authors/@david-dias'],
+          tags,
+        },
+        images: [],
+      }}
+    >
       <ScrollTop />
-      <NextSeo
-        title={title}
-        openGraph={{
-          title,
-          description,
-          url: permalink,
-          type: 'article',
-          article: {
-            publishedTime: date,
-            authors: ['https://thedaviddias.dev/authors/@david-dias'],
-            tags,
-          },
-          images: [],
-        }}
-      />
       <ArticleJsonLd
         type="Blog"
         url={permalink}
@@ -88,40 +87,38 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
         authorName="David Dias"
         description={description}
       />
-      <main id="main" data-skip-link="the article">
-        <article className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <header className="pb-6 text-center border-b border-gray-200 dark:border-gray-700 mb-8 transition-colors duration-200">
-            {tags && (
-              <aside className="print:hidden">
-                <Tags tags={tags} className="mx-auto justify-center" />
-              </aside>
-            )}
-            <H1>
-              <span className="block mt-1.5 mb-6 serif:mt-2 text-black dark:text-white leading-none transition-colors duration-200 ">
-                {title}
-              </span>
-            </H1>
+      <article className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <header className="pb-6 text-center border-b border-gray-200 dark:border-gray-700 mb-8 transition-colors duration-200">
+          {tags && (
+            <aside className="print:hidden">
+              <Tags tags={tags} className="mx-auto justify-center" />
+            </aside>
+          )}
+          <H1>
+            <span className="block mt-1.5 mb-6 serif:mt-2 text-black dark:text-white leading-none transition-colors duration-200 ">
+              {title}
+            </span>
+          </H1>
 
-            <div className="flex justify-between mx-auto mt-16">
-              {author && <Author name={author} routes={routes} />}
+          <div className="flex justify-between mx-auto mt-16">
+            {author && <Author name={author} routes={routes} />}
 
-              {date && <DatePost date={date} />}
-            </div>
-          </header>
-
-          <div className="max-w-full">
-            <div className="lg:w-[37rem] mx-auto">
-              <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl !max-w-full mb-10">
-                <MDXRemote {...source} components={MDXComponents} lazy />
-              </section>
-              {permalink && <Share title={title} tags={tags && tags} permalink={permalink} />}
-
-              {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
-            </div>
+            {date && <DatePost date={date} />}
           </div>
-        </article>
-      </main>
-    </Container>
+        </header>
+
+        <div className="max-w-full">
+          <div className="lg:w-[37rem] mx-auto">
+            <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl !max-w-full mb-10">
+              <MDXRemote {...source} components={MDXComponents} lazy />
+            </section>
+            {permalink && <Share title={title} tags={tags && tags} permalink={permalink} />}
+
+            {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
+          </div>
+        </div>
+      </article>
+    </BaseLayout>
   )
 }
 

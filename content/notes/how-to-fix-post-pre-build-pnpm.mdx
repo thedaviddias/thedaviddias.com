@@ -11,12 +11,12 @@ tags:
   - npm
 type: note
 ---
+
 When recently working on my blog, I tried to add a `postbuild` scripts with `next-sitemap` in my `package.json`. My goal was to automatically generate `.xml` files after each Next.js builds.
 
 Using [pnpm](https://pnpm.io/), I found out that my `postbuild` was working with `npm` but not `pnpm`.
 
 I found out [this issue](https://github.com/pnpm/pnpm/issues/2891) on Github mentionning the same problem I encountered. It seems that pre/posts scripts are not activated if using pnpm.
-
 
 I found the solution adding the line below in my `.npmrc` local file:
 

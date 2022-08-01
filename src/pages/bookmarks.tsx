@@ -77,7 +77,7 @@ const Bookmarks = ({ bookmarks, tags }: Props) => {
       </div>
 
       <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 text-xl">
-        {displayBookmarks.map(({ cover, link, title, tags }) => (
+        {displayBookmarks?.map(({ cover, link, title, tags }) => (
           <BookmarkCard
             key={link}
             title={title}
@@ -96,14 +96,16 @@ const Bookmarks = ({ bookmarks, tags }: Props) => {
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const req = await loadBookmarks()
 
-  const bookmarks = req?.items.map(({ cover, title, link, tags }: Bookmark) => ({
-    link,
-    title,
-    cover,
-    tags,
-  })) as Bookmark[]
+  const bookmarks = req
+    ? req.items.map(({ cover, title, link, tags }: Bookmark) => ({
+        link,
+        title,
+        cover,
+        tags,
+      }))
+    : []
 
-  const tags = Array.from(new Set(bookmarks.flatMap(({ tags }) => tags)))
+  const tags = bookmarks ? Array.from(new Set(bookmarks.flatMap(({ tags }) => tags))) : []
 
   const props: Props = { bookmarks, tags }
 

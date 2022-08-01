@@ -48,7 +48,7 @@
     "hero": {
       "greetings1": "Hey there!",
       "greetings2": " I'm David Dias",
-      "presentation": "I'm a Front-End Developer, podcaster, content creator passionate about solving digital and human problems! I enjoy meeting new people, building communities and talking about tech, expatriation and web."
+      "presentation": "I'm a Front-End Developer, podcaster and content creator passionate about solving digital and human problems! I enjoy meeting new people, building communities and talking about tech, expatriation and the web."
     },
     "sections": {
       "podcast": {
@@ -104,7 +104,9 @@
     "path": "/tags",
     "seo": {
       "title": "Notes related to {{name}}",
-      "description": "All my posts related to {{name}} topic."
+      "title_all": "All the Tags",
+      "description": "All my posts related to {{name}} topic.",
+      "description_all": "All my posts related to {{name}} topic."
     },
     "section": "Tags",
     "h1": "Tags: {{name}}"

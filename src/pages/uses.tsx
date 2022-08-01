@@ -69,7 +69,7 @@ const Uses: NextPage<UsesProps> = ({ categories, tools, frontMatter, source }) =
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const postContent = await getPostBySlug('uses', 'pages', locale)
+  const postContent = await getPostBySlug(locale === 'en' ? 'uses' : 'utilise', 'pages', locale)
   const usesData = await readData<Tool[]>('data/uses.json')
 
   const {

@@ -6,7 +6,9 @@ import { useState } from 'react'
 import { BlogPost } from '@/components/BlogPost'
 import { Categories } from '@/components/Categories'
 import { Container } from '@/components/Container'
-import { H1, H3, H4, H5 } from '@/components/Headings'
+import { H3 } from '@/components/Headings'
+import { PageHeader } from '@/components/PageHeader'
+import { Search } from '@/components/Search'
 
 import { routes } from '@/config/routes'
 import { getAllPostsWithFrontMatter, getCategories } from '@/utils/get-articles-posts'
@@ -33,33 +35,17 @@ const Blog = ({ posts, categories }: BlogProps) => {
       />
       <main className="divide-slate-200 sm:space-y-16 lg:max-w-none">
         <section className="pt-10 border-none">
-          <header>
-            <H1>{routes(t).articles.seo.title}</H1>
-            <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 mt-2">
-              {routes(t).articles.seo.description}
-            </p>
-          </header>
+          <PageHeader
+            title={routes(t).articles.seo.title}
+            description={routes(t).articles.seo.description}
+          />
         </section>
-        <section className="border-none">
-          <header>
-            <h2 className="sr-only">{t('articles.sections.latest-posts')}</h2>
-          </header>
 
+        <section className="border-none">
           <H3 as="h2">{t('articles.sections.category_filter')}</H3>
           <Categories categories={categories} />
 
-          <form className="relative w-full mb-4">
-            <fieldset>
-              <H4 as="legend">{t('articles.sections.search')}</H4>
-              <input
-                aria-label="Search articles"
-                type="search"
-                onChange={(e) => setSearchValue(e.target.value)}
-                placeholder={t('articles.sections.search_placeholder')}
-                className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-200 rounded-md dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100"
-              />
-            </fieldset>
-          </form>
+          <Search setSearchValue={setSearchValue} />
 
           <div className="grid grid-cols-1 gap-4 lg:col-span-2 mt-16">
             {!filteredBlogPosts.length && (

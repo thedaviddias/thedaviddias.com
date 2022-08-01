@@ -363,21 +363,21 @@
             "type": "string",
             "title": "Description (EN)"
           },
-          "description_fr": {
-            "type": "string",
-            "title": "Description (FR)"
-          },
           "category_en": {
             "type": "string",
             "title": "Category (EN)"
           },
-          "category_fr": {
-            "type": "string",
-            "title": "Catégorie (FR)"
-          },
           "image": {
             "type": "string",
             "title": "Image"
+          },
+          "description_fr": {
+            "type": "string",
+            "title": "Description (FR)"
+          },
+          "category_fr": {
+            "type": "string",
+            "title": "Catégorie (FR)"
           }
         }
       }

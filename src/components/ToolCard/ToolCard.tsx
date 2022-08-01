@@ -17,7 +17,7 @@ export const ToolCard: FC<ToolCard> = ({ tool }) => {
 
   return (
     <article className="flex flex-row relative gap-x-5">
-      <div>
+      <div className="min-w-[5rem]">
         <Image alt={`Thumbnail of ${tool.title}`} src={tool.image} width="75" height="75" />
       </div>
       <div>

@@ -38,10 +38,19 @@
   {
     "title": "Eagle",
     "url": "https://en.eagle.cool/",
-    "description_en": "",
-    "description_fr": "",
+    "description_en": "After being a fan of Pixave, I moved to Eagle and it has been amazing! Eagle has regular updates and allow me to vizualize icons, photos, screenshots...",
+    "description_fr": "Après avoir été un fan de Pixave, j'ai adopté Eagle and c'est un excellent choix que j'ai fais! Eagle a des mis à jour régulières et me permet de consulter l'ensemble de mes icônes, photos, capture d'écrans...",
     "category_en": "Productivity",
     "category_fr": "Productivity",
     "image": "/images/uses/eagle.png"
+  },
+  {
+    "title": "DEVONthink 3",
+    "url": "https://www.devontechnologies.com/apps/devonthink",
+    "description_en": "I store all online articles, PDF and sometimes images on DEVONthink. The integration with macOS and the automation possibilities makes it perfect to handle my different workflows",
+    "category_en": "Productivity",
+    "image": "/images/uses/devonthink.png",
+    "description_fr": "Productivité",
+    "category_fr": " "
   }
 ]

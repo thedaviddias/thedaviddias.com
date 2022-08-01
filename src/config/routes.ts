@@ -27,8 +27,9 @@ export const routes: RoutesResponse = (translate) => ({
   articles: {
     label: translate('layout.nav.articles'),
     path: translate('articles.path'),
+    h1: translate('articles.h1'),
     seo: extendSEO({
-      title: translate('articles.seo.title'),
+      title: translate('articles.h1'),
       description: translate('articles.seo.description'),
       url: translate('articles.seo.url'),
     }),
@@ -36,6 +37,7 @@ export const routes: RoutesResponse = (translate) => ({
   notes: {
     label: translate('layout.nav.notes'),
     path: translate('notes.path'),
+    h1: translate('notes.h1'),
     seo: extendSEO({
       title: translate('notes.seo.title'),
       description: translate('notes.seo.description'),

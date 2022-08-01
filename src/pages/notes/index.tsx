@@ -32,7 +32,7 @@ const Til = ({ notes }: BlogProps) => {
       <main className="divide-slate-200 sm:space-y-16 lg:max-w-none">
         <section className="pt-10 border-none">
           <header>
-            <H1>{routes(t).notes.seo.title}</H1>
+            <H1>{routes(t).notes.h1}</H1>
             <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 mt-2">
               {routes(t).notes.seo.description}
             </p>

@@ -13,6 +13,7 @@ export type LinksInternalResponse = {
   menu?: boolean
   label: string
   path: string
+  h1?: string
   seo: SEOProps
 }
 

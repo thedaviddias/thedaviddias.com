@@ -61,10 +61,11 @@
   "articles": {
     "path": "/articles",
     "seo": {
-      "title": "All my articles",
+      "title": "All my Articles about web development and more",
       "description": "Articles about web development and anything that piques my curiosity and interest.",
       "url": "articles"
     },
+    "h1": "All my Articles",
     "sections": {
       "latest-posts": "Latest articles",
       "viewAll": "→ View all my articles",
@@ -76,10 +77,11 @@
   "notes": {
     "path": "/notes",
     "seo": {
-      "title": "All my Notes",
+      "title": "My daily Notes about the world around me",
       "description": "Find short and sweet notes I regularly publish. From discovery to experimentation and technical challenges I finally figured out, I have a lot to share!",
       "url": "notes"
     },
+    "h1": "All my Notes",
     "sections": {
       "latest-notes": "Latest notes",
       "viewAll": "→ View all notes",
@@ -91,7 +93,8 @@
     "path": "/about",
     "seo": {
       "url": "about",
-      "title": "About me"
+      "title": "About me",
+      "description": "Learn a little bit about 'The David Dias'"
     }
   },
   "uses": {
@@ -105,8 +108,8 @@
     "seo": {
       "title": "Notes related to {{name}}",
       "title_all": "All the Tags",
-      "description": "All my posts related to {{name}} topic.",
-      "description_all": "All my posts related to {{name}} topic."
+      "description": "All my posts related to {{name}}.",
+      "description_all": "All my posts related to {{name}}."
     },
     "section": "Tags",
     "h1": "Tags: {{name}}"
@@ -114,6 +117,7 @@
   "bookmarks": {
     "path": "/bookmarks",
     "seo": {
+      "url": "bookmarks",
       "title": "Bookmarks",
       "description": "List of bookmarks I regularly update about web development, career and open-source."
     },
@@ -128,7 +132,7 @@
     "h1": "Category: {{name}}"
   },
   "rss": {
-    "path": "/rss/feed.xml"
+    "path": "/feed.xml"
   },
   "404": {
     "seo": {

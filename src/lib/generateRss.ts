@@ -35,8 +35,8 @@ export default async function generateRssFeed() {
     copyright: `All rights reserved ${date.getFullYear()}, David Dias`,
     updated: date,
     feedLinks: {
-      rss2: `${siteURL}/rss/feed.xml`, // xml format
-      json: `${siteURL}/rss/feed.json`, // json fromat
+      rss2: `${siteURL}/feed.xml`, // xml format
+      json: `${siteURL}/feed.json`, // json fromat
     },
     author,
   })
@@ -57,8 +57,8 @@ export default async function generateRssFeed() {
 
   // generating the xml and json for rss
   fs.mkdirSync('./public/rss', { recursive: true })
-  fs.writeFileSync('./public/rss/feed.xml', feedEn.rss2())
-  fs.writeFileSync('./public/rss/feed.json', feedEn.json1())
+  fs.writeFileSync('./public/feed.xml', feedEn.rss2())
+  fs.writeFileSync('./public/feed.json', feedEn.json1())
 
   // Creating feed
   const feedFr = new Feed({
@@ -71,8 +71,8 @@ export default async function generateRssFeed() {
     copyright: `Tous droits réservés ${date.getFullYear()}, David Dias`,
     updated: date,
     feedLinks: {
-      rss2: `${siteURL}/rss/fr/feed.xml`,
-      json: `${siteURL}/rss/fr/feed.json`,
+      rss2: `${siteURL}/feed-fr.xml`,
+      json: `${siteURL}/feed-fr.json`,
     },
     author,
   })
@@ -91,7 +91,7 @@ export default async function generateRssFeed() {
     })
   })
 
-  fs.mkdirSync('./public/rss/fr', { recursive: true })
-  fs.writeFileSync('./public/rss/fr/feed.xml', feedFr.rss2())
-  fs.writeFileSync('./public/rss/fr/feed.json', feedFr.json1())
+  fs.mkdirSync('./public', { recursive: true })
+  fs.writeFileSync('./public/feed-fr.xml', feedFr.rss2())
+  fs.writeFileSync('./public/feed-fr.json', feedFr.json1())
 }

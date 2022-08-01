@@ -92,6 +92,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
       <ScrollTop />
       <NextSeo
         title={title}
+        description={description}
         openGraph={{
           title,
           description,
@@ -100,15 +101,15 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
           article: {
             publishedTime: date,
             modifiedTime: lastmod,
-            authors: ['https://thedaviddias.dev/authors/@david-dias'],
+            authors: ['https://thedaviddias.dev/about'],
             tags,
           },
           images: [
             {
-              url: `${baseUrl}/images/${preview?.url}`,
+              url: preview?.url,
               width: 850,
               height: 650,
-              alt: '',
+              alt: preview?.alt,
             },
           ],
         }}

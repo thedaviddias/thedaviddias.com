@@ -36,7 +36,7 @@ const Blog = ({ posts, categories }: BlogProps) => {
       <main className="divide-slate-200 sm:space-y-16 lg:max-w-none">
         <section className="pt-10 border-none">
           <PageHeader
-            title={routes(t).articles.seo.title}
+            title={routes(t).articles.h1}
             description={routes(t).articles.seo.description}
           />
         </section>

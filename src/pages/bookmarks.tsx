@@ -1,5 +1,6 @@
 import { clsx } from 'clsx'
 import { GetStaticProps } from 'next'
+import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { useState } from 'react'
 
@@ -40,6 +41,10 @@ const Bookmarks = ({ bookmarks, tags }: Props) => {
 
   return (
     <Container>
+      <NextSeo
+        title={routes(t).bookmarks.seo.title}
+        description={routes(t).bookmarks.seo.description}
+      />
       <PageHeader
         title={routes(t).bookmarks.seo.title}
         description={routes(t).bookmarks.seo.description}

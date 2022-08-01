@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>The David Dias</title>
+        <link>https://thedaviddias.dev</link>
+        <description>Parcours mon articles sur le dévelopement web, les technologies, l'expatriation et tous les autres sujets qui attisent ma curiosité et mon intérêt!</description>
+        <lastBuildDate>Mon, 01 Aug 2022 23:39:57 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <image>
+            <title>The David Dias</title>
+            <url>https://thedaviddias.dev/favicon.ico</url>
+            <link>https://thedaviddias.dev</link>
+        </image>
+        <copyright>Tous droits réservés 2022, David Dias</copyright>
+        <item>
+            <title><![CDATA[Mes astuces d'expat pour faciliter vos démarches administratives]]></title>
+            <link>https://thedaviddias.dev/fr/articles/astuces-dexpat-pour-faciliter-demarches-administratives</link>
+            <guid>https://thedaviddias.dev/fr/articles/astuces-dexpat-pour-faciliter-demarches-administratives</guid>
+            <pubDate>Fri, 21 Jun 2019 00:01:00 GMT</pubDate>
+            <description><![CDATA[Toute préparation à une possible expatriation passe par une phase inévitable: celle de rassembler tous les documents requis pour avoir la possibilité d’accomplir son rêve. Pour vous faciliter cette phase et vous permettre de sereinement vous préparer, j’ai rassemblé toutes mes astuces et habitudes qui m’ont permis de vivre sereinement mes 3 expatriations.]]></description>
+            <author>hello@thedaviddias.dev (David Dias)</author>
+        </item>
+        <item>
+            <title><![CDATA[9 réponses aux questions que vous vous posez sur Toronto et le Canada]]></title>
+            <link>https://thedaviddias.dev/fr/articles/9-reponses-questions-vous-vous-posez-toronto-canada</link>
+            <guid>https://thedaviddias.dev/fr/articles/9-reponses-questions-vous-vous-posez-toronto-canada</guid>
+            <pubDate>Mon, 17 Jun 2019 00:01:00 GMT</pubDate>
+            <description><![CDATA[Régulièrement, beaucoup de personnes me contactent pour me poser des questions sur le Canada et Toronto : parfois des jeunes qui souhaiterai s’expatrier pour la premiere fois, des couples qui souhaitent changer de vie. J’essaye autant que je peux de leur répondre avec ma petite expérience (bientôt un an) de vie dans la grande métropole. ]]></description>
+            <author>hello@thedaviddias.dev (David Dias)</author>
+        </item>
+        <item>
+            <title><![CDATA[Comment le Canada est devenu ma maison après 4 ans de tentatives?]]></title>
+            <link>https://thedaviddias.dev/fr/articles/comment-canada-devenu-maison-4-ans-tentatives</link>
+            <guid>https://thedaviddias.dev/fr/articles/comment-canada-devenu-maison-4-ans-tentatives</guid>
+            <pubDate>Tue, 02 Apr 2019 00:01:00 GMT</pubDate>
+            <description><![CDATA[C’est en 2014 que je pose les pieds au Canada pour la première fois. Depuis cette année, j’ai tenté de tout mettre en œuvre pour que ce pays, et spécialement la ville de Toronto, devienne ma maison. En juin 2018, après deux tentatives de PVT, un déménagement de deux ans à l’Île Maurice, je pose enfin les pieds au Canada avec ma femme et mon permis de travail en poche. Ce n’est que le début de l’aventure!]]></description>
+            <author>hello@thedaviddias.dev (David Dias)</author>
+        </item>
+        <item>
+            <title><![CDATA[Outils et astuces pour rendre accessible et performante son application React]]></title>
+            <link>https://thedaviddias.dev/fr/articles/outils-astuces-rendre-accessible-performante-application-react</link>
+            <guid>https://thedaviddias.dev/fr/articles/outils-astuces-rendre-accessible-performante-application-react</guid>
+            <pubDate>Mon, 24 Dec 2018 02:34:11 GMT</pubDate>
+            <description><![CDATA[L'accessibilité et la performance sont deux de mes sujets de prédilection. Je partage dans cet article mes astuces et conseils pour vous assurez une qualité minimum pour votre projet.]]></description>
+            <author>hello@thedaviddias.dev (David Dias)</author>
+        </item>
+    </channel>
+</rss>

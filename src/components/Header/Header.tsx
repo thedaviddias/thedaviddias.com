@@ -5,18 +5,21 @@ import { CustomLink } from '@/components/CustomLink'
 
 import { MENU_LINKS } from '@/constants'
 
+import { BannerLang } from '../BannerLang'
+
 type HeaderProps = {
   pathname: string
 }
 
 export const Header: FC<HeaderProps> = ({ pathname }) => {
-  const { t } = useTranslation('common')
+  const { t, lang } = useTranslation('common')
 
   const [mobileMenuState, setMobileMenuState] = useState(false)
 
   return (
-    <header className="dark:text-gray-200 transition-colors duration-200 py-3 top-0 mb-12">
-      <div className="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8">
+    <header className="dark:text-gray-200 transition-colors duration-200 ">
+      {lang === 'fr' ? <BannerLang /> : null}
+      <div className="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8 py-3 top-0 mb-12">
         <div className="relative flex justify-between h-16">
           <div className="flex-1 flex items-center sm:justify-between align-middle">
             <CustomLink

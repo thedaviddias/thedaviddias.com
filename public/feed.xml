@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>The David Dias</title>
+        <link>https://thedaviddias.dev</link>
+        <description>A articles about web development, technologies, expatriation and anything that piques my curiosity and interest</description>
+        <lastBuildDate>Mon, 01 Aug 2022 23:39:57 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <image>
+            <title>The David Dias</title>
+            <url>https://thedaviddias.dev/favicon.ico</url>
+            <link>https://thedaviddias.dev</link>
+        </image>
+        <copyright>All rights reserved 2022, David Dias</copyright>
+        <item>
+            <title><![CDATA[How to fix "postbuild" and "prebuild" not working with pnpm?]]></title>
+            <link>https://thedaviddias.dev/notes/how-to-fix-post-pre-build-pnpm</link>
+            <guid>https://thedaviddias.dev/notes/how-to-fix-post-pre-build-pnpm</guid>
+            <pubDate>Sat, 30 Jul 2022 04:38:32 GMT</pubDate>
+            <description><![CDATA[Find out what I had to update to use pre and posts scripts with pnpm.]]></description>
+            <author>hello@thedaviddias.dev (David Dias)</author>
+        </item>
+        <item>
+            <title><![CDATA[Finally received my Steam Deck confirmation email!]]></title>
+            <link>https://thedaviddias.dev/notes/finally-received-steam-deck-confirmation-email</link>
+            <guid>https://thedaviddias.dev/notes/finally-received-steam-deck-confirmation-email</guid>
+            <pubDate>Thu, 28 Jul 2022 15:47:33 GMT</pubDate>
+            <author>hello@thedaviddias.dev (David Dias)</author>
+        </item>
+        <item>
+            <title><![CDATA[How Front-End Developers, Web and UX/UI Designers could better collaborate together?]]></title>
+            <link>https://thedaviddias.dev/articles/how-front-end-developers-ui-ux-could-better-collaborate-together</link>
+            <guid>https://thedaviddias.dev/articles/how-front-end-developers-ui-ux-could-better-collaborate-together</guid>
+            <pubDate>Sun, 13 Jun 2021 22:27:03 GMT</pubDate>
+            <description><![CDATA[Collaboration between Developers and UX/UI Designers is essential to build a good product. With the right mindset, clear processes and an inclusive culture, everything is possible.]]></description>
+            <author>hello@thedaviddias.dev (David Dias)</author>
+        </item>
+        <item>
+            <title><![CDATA[9 Best Practices & UX Improvements for the two-factor authentication (2FA)]]></title>
+            <link>https://thedaviddias.dev/articles/9-best-practices-ux-for-two-factor-authentification</link>
+            <guid>https://thedaviddias.dev/articles/9-best-practices-ux-for-two-factor-authentification</guid>
+            <pubDate>Thu, 25 Feb 2021 00:01:00 GMT</pubDate>
+            <description><![CDATA[The best and recommended features for any website or company that takes the security of their users seriously.]]></description>
+            <author>hello@thedaviddias.dev (David Dias)</author>
+        </item>
+        <item>
+            <title><![CDATA[How to deploy your Next.js app on Netlify using Github Actions]]></title>
+            <link>https://thedaviddias.dev/articles/how-to-deploy-your-nextjs-app-on-netlify-using-github-actions</link>
+            <guid>https://thedaviddias.dev/articles/how-to-deploy-your-nextjs-app-on-netlify-using-github-actions</guid>
+            <pubDate>Thu, 21 Jan 2021 00:01:00 GMT</pubDate>
+            <description><![CDATA[Are you interested in Next.js and how to deploy your app to Netlify using Github Actions? Take a look at how Netlify allows you for free, to deploy your app with Server Side Rendering capabilities and more!.]]></description>
+            <author>hello@thedaviddias.dev (David Dias)</author>
+        </item>
+        <item>
+            <title><![CDATA[You have something in YOU that the world needs]]></title>
+            <link>https://thedaviddias.dev/articles/you-have-something-in-you-the-world-needs</link>
+            <guid>https://thedaviddias.dev/articles/you-have-something-in-you-the-world-needs</guid>
+            <pubDate>Fri, 21 Jun 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[Sometimes the only thing you need to remember is that you are not alone in this world.]]></description>
+            <author>hello@thedaviddias.dev (David Dias)</author>
+        </item>
+        <item>
+            <title><![CDATA[The Front-End Performance Checklist speeds up your web developments]]></title>
+            <link>https://thedaviddias.dev/articles/front-end-performance-checklist-speeds-up-web-developments</link>
+            <guid>https://thedaviddias.dev/articles/front-end-performance-checklist-speeds-up-web-developments</guid>
+            <pubDate>Sun, 22 Jul 2018 00:01:00 GMT</pubDate>
+            <description><![CDATA[An exhaustive list of all the elements that will speed up your current web developments and offer the best user experience.]]></description>
+            <author>hello@thedaviddias.dev (David Dias)</author>
+        </item>
+        <item>
+            <title><![CDATA[What I learned after presenting my side project in Europe]]></title>
+            <link>https://thedaviddias.dev/articles/learned-presenting-side-project-europe</link>
+            <guid>https://thedaviddias.dev/articles/learned-presenting-side-project-europe</guid>
+            <pubDate>Tue, 22 May 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[An overview of what I learned presenting the Front-End Checklist during my vacations in Europe]]></description>
+            <author>hello@thedaviddias.dev (David Dias)</author>
+        </item>
+        <item>
+            <title><![CDATA[Help me to choose the best city/country to be a Front-End Developer!]]></title>
+            <link>https://thedaviddias.dev/articles/choose-city-country-front-developer</link>
+            <guid>https://thedaviddias.dev/articles/choose-city-country-front-developer</guid>
+            <pubDate>Thu, 28 Dec 2017 13:07:27 GMT</pubDate>
+            <description><![CDATA[Choosing a new city or country to leave is not an easy task. I'm sharing my process to choose the next city where I wanna live.]]></description>
+            <author>hello@thedaviddias.dev (David Dias)</author>
+        </item>
+        <item>
+            <title><![CDATA[The Front-End Checklist is just a tool… everything depends on you]]></title>
+            <link>https://thedaviddias.dev/articles/front-end-checklist-just-tool-everything-depends-on-you</link>
+            <guid>https://thedaviddias.dev/articles/front-end-checklist-just-tool-everything-depends-on-you</guid>
+            <pubDate>Fri, 08 Dec 2017 00:01:00 GMT</pubDate>
+            <description><![CDATA[The steps you need to follow to efficiently use the application frontendchecklist.io]]></description>
+            <author>hello@thedaviddias.dev (David Dias)</author>
+        </item>
+        <item>
+            <title><![CDATA[How my open source project earned 6,000 stars on GitHub in just 5 days]]></title>
+            <link>https://thedaviddias.dev/articles/how-my-open-source-project-earned-6000-stars-on-github-in-just-5-days</link>
+            <guid>https://thedaviddias.dev/articles/how-my-open-source-project-earned-6000-stars-on-github-in-just-5-days</guid>
+            <pubDate>Tue, 28 Nov 2017 03:47:53 GMT</pubDate>
+            <author>hello@thedaviddias.dev (David Dias)</author>
+        </item>
+        <item>
+            <title><![CDATA[How a Morning Routine can positively change your life forever]]></title>
+            <link>https://thedaviddias.dev/articles/how-morning-routine-can-positively-change-your-life-forever</link>
+            <guid>https://thedaviddias.dev/articles/how-morning-routine-can-positively-change-your-life-forever</guid>
+            <pubDate>Sat, 21 Jan 2017 00:01:00 GMT</pubDate>
+            <description><![CDATA[An exhaustive list of all the elements that will speed up your current web developments and offer the best user experience.]]></description>
+            <author>hello@thedaviddias.dev (David Dias)</author>
+        </item>
+    </channel>
+</rss>

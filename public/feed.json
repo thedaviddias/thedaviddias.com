@@ -1,0 +1,144 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "The David Dias",
+    "home_page_url": "https://thedaviddias.dev",
+    "feed_url": "https://thedaviddias.dev/feed.json",
+    "description": "A articles about web development, technologies, expatriation and anything that piques my curiosity and interest",
+    "icon": "https://thedaviddias.dev/favicon.ico",
+    "author": {
+        "name": "David Dias",
+        "url": "https://twitter.com/thedaviddias"
+    },
+    "items": [
+        {
+            "id": "https://thedaviddias.dev/notes/how-to-fix-post-pre-build-pnpm",
+            "url": "https://thedaviddias.dev/notes/how-to-fix-post-pre-build-pnpm",
+            "title": "How to fix \"postbuild\" and \"prebuild\" not working with pnpm?",
+            "summary": "Find out what I had to update to use pre and posts scripts with pnpm.",
+            "date_modified": "2022-07-30T04:38:32.569Z",
+            "author": {
+                "name": "David Dias",
+                "url": "https://twitter.com/thedaviddias"
+            }
+        },
+        {
+            "id": "https://thedaviddias.dev/notes/finally-received-steam-deck-confirmation-email",
+            "url": "https://thedaviddias.dev/notes/finally-received-steam-deck-confirmation-email",
+            "title": "Finally received my Steam Deck confirmation email!",
+            "date_modified": "2022-07-28T15:47:33.508Z",
+            "author": {
+                "name": "David Dias",
+                "url": "https://twitter.com/thedaviddias"
+            }
+        },
+        {
+            "id": "https://thedaviddias.dev/articles/how-front-end-developers-ui-ux-could-better-collaborate-together",
+            "url": "https://thedaviddias.dev/articles/how-front-end-developers-ui-ux-could-better-collaborate-together",
+            "title": "How Front-End Developers, Web and UX/UI Designers could better collaborate together?",
+            "summary": "Collaboration between Developers and UX/UI Designers is essential to build a good product. With the right mindset, clear processes and an inclusive culture, everything is possible.",
+            "date_modified": "2021-06-13T22:27:03.206Z",
+            "author": {
+                "name": "David Dias",
+                "url": "https://twitter.com/thedaviddias"
+            }
+        },
+        {
+            "id": "https://thedaviddias.dev/articles/9-best-practices-ux-for-two-factor-authentification",
+            "url": "https://thedaviddias.dev/articles/9-best-practices-ux-for-two-factor-authentification",
+            "title": "9 Best Practices & UX Improvements for the two-factor authentication (2FA)",
+            "summary": "The best and recommended features for any website or company that takes the security of their users seriously.",
+            "date_modified": "2021-02-25T00:01:00.000Z",
+            "author": {
+                "name": "David Dias",
+                "url": "https://twitter.com/thedaviddias"
+            }
+        },
+        {
+            "id": "https://thedaviddias.dev/articles/how-to-deploy-your-nextjs-app-on-netlify-using-github-actions",
+            "url": "https://thedaviddias.dev/articles/how-to-deploy-your-nextjs-app-on-netlify-using-github-actions",
+            "title": "How to deploy your Next.js app on Netlify using Github Actions",
+            "summary": "Are you interested in Next.js and how to deploy your app to Netlify using Github Actions? Take a look at how Netlify allows you for free, to deploy your app with Server Side Rendering capabilities and more!.",
+            "date_modified": "2021-01-21T00:01:00.000Z",
+            "author": {
+                "name": "David Dias",
+                "url": "https://twitter.com/thedaviddias"
+            }
+        },
+        {
+            "id": "https://thedaviddias.dev/articles/you-have-something-in-you-the-world-needs",
+            "url": "https://thedaviddias.dev/articles/you-have-something-in-you-the-world-needs",
+            "title": "You have something in YOU that the world needs",
+            "summary": "Sometimes the only thing you need to remember is that you are not alone in this world.",
+            "date_modified": "2019-06-21T00:00:00.000Z",
+            "author": {
+                "name": "David Dias",
+                "url": "https://twitter.com/thedaviddias"
+            }
+        },
+        {
+            "id": "https://thedaviddias.dev/articles/front-end-performance-checklist-speeds-up-web-developments",
+            "url": "https://thedaviddias.dev/articles/front-end-performance-checklist-speeds-up-web-developments",
+            "title": "The Front-End Performance Checklist speeds up your web developments",
+            "summary": "An exhaustive list of all the elements that will speed up your current web developments and offer the best user experience.",
+            "date_modified": "2018-07-22T00:01:00.000Z",
+            "author": {
+                "name": "David Dias",
+                "url": "https://twitter.com/thedaviddias"
+            }
+        },
+        {
+            "id": "https://thedaviddias.dev/articles/learned-presenting-side-project-europe",
+            "url": "https://thedaviddias.dev/articles/learned-presenting-side-project-europe",
+            "title": "What I learned after presenting my side project in Europe",
+            "summary": "An overview of what I learned presenting the Front-End Checklist during my vacations in Europe",
+            "date_modified": "2018-05-22T00:00:00.000Z",
+            "author": {
+                "name": "David Dias",
+                "url": "https://twitter.com/thedaviddias"
+            }
+        },
+        {
+            "id": "https://thedaviddias.dev/articles/choose-city-country-front-developer",
+            "url": "https://thedaviddias.dev/articles/choose-city-country-front-developer",
+            "title": "Help me to choose the best city/country to be a Front-End Developer!",
+            "summary": "Choosing a new city or country to leave is not an easy task. I'm sharing my process to choose the next city where I wanna live.",
+            "date_modified": "2017-12-28T13:07:27.957Z",
+            "author": {
+                "name": "David Dias",
+                "url": "https://twitter.com/thedaviddias"
+            }
+        },
+        {
+            "id": "https://thedaviddias.dev/articles/front-end-checklist-just-tool-everything-depends-on-you",
+            "url": "https://thedaviddias.dev/articles/front-end-checklist-just-tool-everything-depends-on-you",
+            "title": "The Front-End Checklist is just a tool… everything depends on you",
+            "summary": "The steps you need to follow to efficiently use the application frontendchecklist.io",
+            "date_modified": "2017-12-08T00:01:00.000Z",
+            "author": {
+                "name": "David Dias",
+                "url": "https://twitter.com/thedaviddias"
+            }
+        },
+        {
+            "id": "https://thedaviddias.dev/articles/how-my-open-source-project-earned-6000-stars-on-github-in-just-5-days",
+            "url": "https://thedaviddias.dev/articles/how-my-open-source-project-earned-6000-stars-on-github-in-just-5-days",
+            "title": "How my open source project earned 6,000 stars on GitHub in just 5 days",
+            "date_modified": "2017-11-28T03:47:53.024Z",
+            "author": {
+                "name": "David Dias",
+                "url": "https://twitter.com/thedaviddias"
+            }
+        },
+        {
+            "id": "https://thedaviddias.dev/articles/how-morning-routine-can-positively-change-your-life-forever",
+            "url": "https://thedaviddias.dev/articles/how-morning-routine-can-positively-change-your-life-forever",
+            "title": "How a Morning Routine can positively change your life forever",
+            "summary": "An exhaustive list of all the elements that will speed up your current web developments and offer the best user experience.",
+            "date_modified": "2017-01-21T00:01:00.000Z",
+            "author": {
+                "name": "David Dias",
+                "url": "https://twitter.com/thedaviddias"
+            }
+        }
+    ]
+}

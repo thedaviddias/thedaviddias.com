@@ -37,7 +37,9 @@ export const BlogPost: FC<BlogPostProps> = ({ post, isCategoryPage }) => {
               <div className="float-right lg:float-none !mb-1">
                 {post.frontMatter.categories?.length && (
                   <CustomLink
-                    href={`/category/${slugify(post.frontMatter.categories[0], { lower: true })}`}
+                    href={`${t('category.path')}/${slugify(post.frontMatter.categories[0], {
+                      lower: true,
+                    })}`}
                     passHref
                     className="block mb-1 !font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x"
                   >

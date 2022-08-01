@@ -57,7 +57,7 @@ const Uses: NextPage<UsesProps> = ({ categories, tools, frontMatter, source }) =
             <H3 as="h2">{category}</H3>
           </header>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-y-3">
             {tools[category as unknown as number].map((tool: Tool, i: number) => (
               <ToolCard key={i} tool={tool} />
             ))}

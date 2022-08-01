@@ -42,6 +42,15 @@ export const routes: RoutesResponse = (translate) => ({
       url: translate('notes.seo.url'),
     }),
   },
+  bookmarks: {
+    label: translate('layout.nav.bookmarks'),
+    path: translate('bookmarks.path'),
+    seo: extendSEO({
+      title: translate('bookmarks.seo.title'),
+      description: translate('bookmarks.seo.description'),
+      url: translate('bookmarks.seo.url'),
+    }),
+  },
   about: {
     label: translate('layout.nav.about'),
     path: translate('about.path'),
@@ -50,6 +59,30 @@ export const routes: RoutesResponse = (translate) => ({
       description: translate('about.seo.description'),
       url: translate('about.seo.url'),
     }),
+  },
+  uses: {
+    label: translate('layout.footer.extra_links.uses'),
+    path: translate('uses.path'),
+    seo: extendSEO({
+      title: 'What I use',
+      description: 'This is the list of the tools and softwares I use frequently.',
+      url: translate('uses.seo.url'),
+    }),
+  },
+  analytics: {
+    label: translate('layout.footer.extra_links.analytics'),
+    path: 'https://plausible.io/thedaviddias.dev',
+    seo: extendSEO(),
+  },
+  resume: {
+    label: translate('layout.footer.extra_links.resume'),
+    path: 'https://read.cv/thedaviddias',
+    seo: extendSEO(),
+  },
+  gear: {
+    label: translate('layout.footer.extra_links.gear'),
+    path: 'https://kit.co/thedaviddias',
+    seo: extendSEO(),
   },
   rss: {
     menu: false,

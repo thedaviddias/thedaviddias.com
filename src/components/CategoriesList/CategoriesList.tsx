@@ -8,7 +8,7 @@ type CategoriesListProps = {
 
 export const CategoriesList: FC<CategoriesListProps> = ({ categories }) => {
   return (
-    <div className="mb-5">
+    <div className="mb-5 mt-5">
       <ul className="flex gap-x-5">
         {categories?.map((category, i) => (
           <li key={i}>

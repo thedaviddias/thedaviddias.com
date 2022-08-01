@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { BlogPost } from '@/components/BlogPost'
 import { CategoriesList } from '@/components/CategoriesList'
 import { Container } from '@/components/Container'
-import { H1, H5 } from '@/components/Headings'
+import { H1, H3, H4, H5 } from '@/components/Headings'
 
 import { routes } from '@/config/routes'
 import { getAllPostsWithFrontMatter, getCategories } from '@/utils/get-articles-posts'
@@ -45,11 +45,12 @@ const Blog = ({ posts, categories }: BlogProps) => {
             <h2 className="sr-only">Recent articles</h2>
           </header>
 
+          <H3 as="h2">Access articles by categories</H3>
           <CategoriesList categories={categories} />
 
           <form className="relative w-full mb-4">
             <fieldset>
-              <H5 as="legend">Search</H5>
+              <H4 as="legend">Search by keyword</H4>
               <input
                 aria-label="Search articles"
                 type="search"
@@ -60,7 +61,7 @@ const Blog = ({ posts, categories }: BlogProps) => {
             </fieldset>
           </form>
 
-          <div className="grid grid-cols-1 gap-4 lg:col-span-2">
+          <div className="grid grid-cols-1 gap-4 lg:col-span-2 mt-16">
             {!filteredBlogPosts.length && (
               <p className="mb-4 text-gray-600 dark:text-gray-400">{t('posts.empty')}</p>
             )}

@@ -24,13 +24,21 @@ export type LinksExternalResponse = {
 export const MENU_LINKS = (translate: Translate): LinksInternalResponse[] => [
   routes(translate).notes,
   routes(translate).articles,
+  routes(translate).bookmarks,
   routes(translate).about,
-  routes(translate).rss,
 ]
 
 export const FOOTER_MENU_LINKS = (translate: Translate): LinksInternalResponse[] => [
   routes(translate).home,
   ...[...MENU_LINKS(translate)],
+]
+
+export const EXTRA_LINKS = (translate: Translate): LinksInternalResponse[] => [
+  routes(translate).uses,
+  routes(translate).gear,
+  routes(translate).resume,
+  routes(translate).analytics,
+  routes(translate).rss,
 ]
 
 export const SOCIAL_LINKS: LinksExternalResponse[] = social.slice(0, 6)

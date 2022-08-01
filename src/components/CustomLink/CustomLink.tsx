@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import Link, { LinkProps } from 'next/link'
 import React, { FC } from 'react'
 
@@ -15,7 +16,7 @@ export const CustomLink: FC<CustomLinkProps> = ({ href, className, children, ...
         href={href}
         rel="noopener noreferrer"
         target="_blank"
-        className={`inline-flex hover:underline dark:text-indigo-400 ${className}`}
+        className={clsx(`inline-flex hover:underline dark:text-indigo-400`, className)}
       >
         {children}
         <span className="inline-flex items-center">
@@ -27,7 +28,6 @@ export const CustomLink: FC<CustomLinkProps> = ({ href, className, children, ...
             strokeLinecap="round"
             strokeLinejoin="round"
             focusable="false"
-            className="chakra-icon css-13otjrl"
             aria-hidden="true"
             height="1em"
             width="1em"

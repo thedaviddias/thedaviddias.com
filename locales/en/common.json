@@ -9,8 +9,9 @@
       "home": "Home",
       "notes": "Notes",
       "articles": "Articles",
+      "bookmarks": "Bookmarks",
       "about": "About",
-      "rss": "RSS feed"
+      "rss": "RSS"
     },
     "darkMode": {
       "light": "Switch to light mode",
@@ -34,8 +35,11 @@
       "social": "Social media",
       "extra": "Extra links",
       "extra_links": {
+        "uses": "Uses",
+        "gear": "Gear",
         "dashboard": "Dashboard",
         "newsletter": "Newsletter",
+        "resume": "Resume",
         "analytics": "Analytics"
       }
     }
@@ -58,7 +62,7 @@
     "path": "/articles",
     "seo": {
       "title": "All my articles",
-      "description": "Articles about my web development and anything that piques my curiosity and interest.",
+      "description": "Articles about web development and anything that piques my curiosity and interest.",
       "url": "articles"
     },
     "sections": {
@@ -81,9 +85,14 @@
   "about": {
     "path": "/about",
     "seo": {
-      "title": "About me",
-      "description": "Learn a little bit about 'The David Dias'",
-      "url": "about"
+      "url": "about",
+      "title": "About me"
+    }
+  },
+  "uses": {
+    "path": "/uses",
+    "seo": {
+      "url": "uses"
     }
   },
   "tags": {
@@ -96,10 +105,18 @@
     "section": "Tags",
     "h1": "Tags: {{name}}"
   },
+  "bookmarks": {
+    "path": "/bookmarks",
+    "seo": {
+      "title": "Bookmarks",
+      "description": ""
+    },
+    "h1": "Bookmarks"
+  },
   "category": {
     "path": "/category",
     "seo": {
-      "title": "Read my content about {{name}}",
+      "title": "My content about {{name}}",
       "description": "You will find all my posts related to {{name}}."
     },
     "h1": "Category: {{name}}"

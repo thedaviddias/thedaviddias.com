@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Alfred",
+    "url": "https://www.alfredapp.com/",
+    "description_en": "This is the number one software I installed in any new Mac device. (using since 2015)",
+    "description_fr": "",
+    "category_en": "Essentials",
+    "category_fr": "Essentiels",
+    "image": "/images/uses/cleanshotx.png"
+  },
+  {
+    "title": "CleanShot X",
+    "url": "https://cleanshot.com/",
+    "description_en": "By far, the best software for taking screenshots and screen recordings. Bought the licence the day it came out!",
+    "description_fr": "",
+    "category_en": "Productivity",
+    "category_fr": "Productivité",
+    "image": "/images/uses/cleanshotx.png"
+  },
+  {
+    "title": "Tower",
+    "url": "https://www.git-tower.com/p/refer-a-friend/R-D9FLZ7R2ZG/mac",
+    "description_en": "The most powerful Git client I've been using since 2015",
+    "description_fr": "",
+    "category_en": "Coding",
+    "category_fr": "Coding",
+    "image": "/images/uses/tower.png"
+  },
+  {
+    "title": "iTerm 2",
+    "url": "https://iterm2.com/",
+    "description_en": "The best terminal emulator for macOS",
+    "description_fr": "",
+    "category_en": "Coding",
+    "category_fr": "Coding",
+    "image": "/images/uses/iterm2.png"
+  },
+  {
+    "title": "Eagle",
+    "url": "https://en.eagle.cool/",
+    "description_en": "",
+    "description_fr": "",
+    "category_en": "Productivity",
+    "category_fr": "Productivity",
+    "image": "/images/uses/eagle.png"
+  }
+]

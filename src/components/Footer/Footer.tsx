@@ -5,7 +5,64 @@ import { ChangeLanguage } from '@/components/ChangeLanguage'
 import { CustomLink } from '@/components/CustomLink'
 import { ThemeSwitch } from '@/components/ThemeSwitch'
 
-import { FOOTER_MENU_LINKS, SOCIAL_LINKS } from '@/constants'
+import { EXTRA_LINKS, FOOTER_MENU_LINKS, SOCIAL_LINKS } from '@/constants'
+
+const FooterMenuLinks = () => {
+  const { t } = useTranslation('common')
+
+  return (
+    <div>
+      <h3 className="small-title">{t('layout.footer.general')}</h3>
+      <ul className="mt-3 space-y-3">
+        {FOOTER_MENU_LINKS(t).map(({ path, label }) => (
+          <li key={path}>
+            <CustomLink href={path} passHref className="dark:!text-white">
+              {label}
+            </CustomLink>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+const FooterExtraLinks = () => {
+  const { t } = useTranslation('common')
+
+  return (
+    <div>
+      <h3 className="small-title">{t('layout.footer.extra')}</h3>
+      <ul className="mt-3 space-y-3">
+        {EXTRA_LINKS(t).map(({ path, label }) => (
+          <li key={path}>
+            <CustomLink href={path} passHref className="dark:!text-white">
+              {label}
+            </CustomLink>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+const FooterSocialLinks = () => {
+  const { t } = useTranslation('common')
+
+  return (
+    <div>
+      <h3 className="small-title">{t('layout.footer.social')}</h3>
+      <ul className="mt-3 space-y-3">
+        {SOCIAL_LINKS.map(({ label, link }) => (
+          <li key={link}>
+            <CustomLink href={link} passHref className="dark:!text-white">
+              {label}
+            </CustomLink>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
 
 export const Footer = () => {
   const { t } = useTranslation('common')
@@ -32,32 +89,9 @@ export const Footer = () => {
             </div>
 
             <div className="w-full sm:w-1/2 lg:w-[60%] !max-w-full flex-shrink-0 flex-grow flex justify-between text-gray-600 dark:text-gray-400">
-              <div>
-                <h3 className="small-title">{t('layout.footer.general')}</h3>
-
-                <ul className="mt-3 space-y-3">
-                  {FOOTER_MENU_LINKS(t).map(({ path, label }) => (
-                    <li key={path}>
-                      <CustomLink href={path} passHref className="dark:text-white">
-                        {label}
-                      </CustomLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div></div>
-              <div>
-                <h3 className="small-title">{t('layout.footer.social')}</h3>
-                <ul className="mt-3 space-y-3">
-                  {SOCIAL_LINKS.map(({ label, link }) => (
-                    <li key={link}>
-                      <CustomLink href={link} passHref className="dark:!text-white">
-                        {label}
-                      </CustomLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <FooterMenuLinks />
+              <FooterExtraLinks />
+              <FooterSocialLinks />
             </div>
           </div>
           <div className="mt-8 border-t border-gray-200 dark:border-gray-500 pt-8 flex items-center justify-between">

@@ -82,9 +82,8 @@
   "about": {
     "path": "/about",
     "seo": {
-      "title": "À propos de moi",
-      "description": "Sachez-en un peu plus sur 'The David Dias'",
-      "url": "about"
+      "url": "about",
+      "title": "À propos de l'auteur"
     }
   },
   "tags": {

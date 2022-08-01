@@ -24,6 +24,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "feed": "^4.2.2",
+    "googleapis": "^105.0.0",
     "gray-matter": "^4.0.3",
     "next": "12.2.3",
     "next-mdx-remote": "^4.1.0",

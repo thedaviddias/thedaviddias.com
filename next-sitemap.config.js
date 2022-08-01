@@ -1,8 +1,8 @@
 /** @type {import('next-sitemap').IConfig} */
 
 const commonOptions = {
-  changefreq: 'daily',
-  priority: 0.7,
+  changefreq: 'weekly',
+  priority: 0.4,
   alternateRefs: [
     {
       href: 'https://thedaviddias.dev',

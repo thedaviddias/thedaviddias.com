@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 import { GetStaticProps } from 'next'
 import useTranslation from 'next-translate/useTranslation'
 import { useState } from 'react'
@@ -60,7 +60,7 @@ const Bookmarks = ({ bookmarks, tags }: Props) => {
               All
             </button>
           </li>
-          {tags.map((tag) => (
+          {tags?.map((tag) => (
             <li key={tag}>
               <button
                 onClick={() => filterBookmarks(tag)}

@@ -9,6 +9,7 @@ import { H3 } from '@/components/Headings'
 import { PageHeader } from '@/components/PageHeader'
 
 import { routes } from '@/config/routes'
+import { loadBookmarks } from '@/utils/load-bookmarks'
 
 export type Bookmark = {
   link: string
@@ -93,18 +94,9 @@ const Bookmarks = ({ bookmarks, tags }: Props) => {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const req = await fetch(
-    `https://api.raindrop.io/rest/v1/raindrops/${process.env.RAINDROP_COLLECTION}`,
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.RAINDROP_TOKEN}`,
-      },
-    }
-  )
+  const req = await loadBookmarks()
 
-  const data = await req.json()
-
-  const bookmarks = data.items.map(({ cover, title, link, tags }: Bookmark) => ({
+  const bookmarks = req?.items.map(({ cover, title, link, tags }: Bookmark) => ({
     link,
     title,
     cover,

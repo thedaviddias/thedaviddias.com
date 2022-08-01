@@ -42,15 +42,15 @@ const Blog = ({ posts, categories }: BlogProps) => {
         </section>
         <section className="border-none">
           <header>
-            <h2 className="sr-only">Recent articles</h2>
+            <h2 className="sr-only">{t('articles.sections.latest-posts')}</h2>
           </header>
 
-          <H3 as="h2">Access articles by categories</H3>
+          <H3 as="h2">{t('articles.sections.category_filter')}</H3>
           <CategoriesList categories={categories} />
 
           <form className="relative w-full mb-4">
             <fieldset>
-              <H4 as="legend">Search by keyword</H4>
+              <H4 as="legend">{t('articles.sections.search')}</H4>
               <input
                 aria-label="Search articles"
                 type="search"

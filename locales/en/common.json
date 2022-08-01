@@ -67,7 +67,9 @@
     },
     "sections": {
       "latest-posts": "Latest articles",
-      "viewAll": "→ View all my articles"
+      "viewAll": "→ View all my articles",
+      "category_filter": "Access articles by categories",
+      "search": "Search by keyword"
     }
   },
   "notes": {
@@ -109,9 +111,9 @@
     "path": "/bookmarks",
     "seo": {
       "title": "Bookmarks",
-      "description": "Bookmarks"
+      "description": "My best Bookmarks"
     },
-    "h1": "Bookmarks"
+    "bookmark_filter": "Filters bookmarks by topic"
   },
   "category": {
     "path": "/category",

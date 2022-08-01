@@ -22,14 +22,14 @@ export const BookmarkCard: FC<BookmarkCardProps> = ({
 }) => {
   return (
     <article>
-      <div className="relative">
+      <div className="relative mb-4">
         <div className="aspect-w-16 aspect-h-9 aspect-video">
-          <img alt={`Thumbnail of ${title}`} src={cover} className="aspect-video rounded-lg" />
+          <img alt="" src={cover} className="object-cover rounded-lg" />
         </div>
         <H5 as="h2">
           <CustomLink
             href={link}
-            className="before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0"
+            className="before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 dark:!text-white"
           >
             {title}
           </CustomLink>

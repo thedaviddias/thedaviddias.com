@@ -8,10 +8,11 @@
     },
     "nav": {
       "home": "Accueil",
-      "articles": "Articles",
       "notes": "Notes",
+      "articles": "Articles",
+      "bookmarks": "Marque-pages",
       "about": "À propos",
-      "rss": "Flux RSS"
+      "rss": "RSS"
     },
     "darkMode": {
       "light": "Passer au mode clair",
@@ -35,6 +36,9 @@
       "social": "Réseaux sociaux",
       "extra": "Extra liens",
       "extra_links": {
+        "uses": "Uses",
+        "gear": "Appareils",
+        "resume": "CV",
         "dashboard": "Tableau de bord",
         "newsletter": "Newsletter",
         "analytics": "Statistiques"
@@ -64,7 +68,10 @@
     },
     "sections": {
       "latest-posts": "Derniers articles",
-      "viewAll": "→ Voir tous les articles"
+      "viewAll": "→ Voir tous les articles",
+      "category_filter": "Filtrer par catégories",
+      "search": "Recherchez par mot clé",
+      "search_placeholder": "Tapez un mot pour faire une recherche"
     }
   },
   "notes": {
@@ -76,7 +83,9 @@
     },
     "sections": {
       "empty": "Pas de publications disponibles pour le moment.",
-      "latest-notes": "Dernières Notes"
+      "latest-notes": "Dernières Notes",
+      "search": "Recherchez par mot clé",
+      "search_placeholder": "Tapez un mot pour faire une recherche"
     }
   },
   "about": {
@@ -84,6 +93,12 @@
     "seo": {
       "url": "about",
       "title": "À propos de l'auteur"
+    }
+  },
+  "uses": {
+    "path": "/uses",
+    "seo": {
+      "url": "uses"
     }
   },
   "tags": {
@@ -94,6 +109,14 @@
     },
     "section": "Étiquettes",
     "h1": "Étiquettes: {{name}}"
+  },
+  "bookmarks": {
+    "path": "/bookmarks",
+    "seo": {
+      "title": "Marque-pages",
+      "description": "Voici une liste de marque-pages que je mets à jour régulièrement et en lien avec le développment web, la carrière professionnelle et l'open-source."
+    },
+    "bookmark_filter": "Filter les marques-pages par sujet:"
   },
   "category": {
     "path": "/category",

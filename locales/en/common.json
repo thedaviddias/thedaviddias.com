@@ -69,7 +69,8 @@
       "latest-posts": "Latest articles",
       "viewAll": "→ View all my articles",
       "category_filter": "Access articles by categories",
-      "search": "Search by keyword"
+      "search": "Search by keyword",
+      "search_placeholder": "Type a word to search through the articles"
     }
   },
   "notes": {
@@ -81,7 +82,9 @@
     },
     "sections": {
       "latest-notes": "Latest notes",
-      "viewAll": "→ View all notes"
+      "viewAll": "→ View all notes",
+      "search": "Recherchez par mot clé",
+      "search_placeholder": "Tapez un mot pour faire une recherche"
     }
   },
   "about": {
@@ -111,7 +114,7 @@
     "path": "/bookmarks",
     "seo": {
       "title": "Bookmarks",
-      "description": "My best Bookmarks"
+      "description": "List of bookmarks I regularly update about web development, career and open-source."
     },
     "bookmark_filter": "Filters bookmarks by topic"
   },

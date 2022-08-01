@@ -9,6 +9,21 @@ module.exports = {
       body: ['Source Sans Pro'],
       title: ['Oswald', 'serif'],
     },
+    extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            a: {
+              color: theme('colors.indigo.600'),
+              '&:hover': {
+                underline: 'none',
+                color: theme('colors.indigo.800'),
+              },
+            },
+          },
+        },
+      }),
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),

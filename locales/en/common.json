@@ -102,7 +102,6 @@
   },
   "tags": {
     "path": "/tags",
-    "pathNote": "/notes/tag/",
     "seo": {
       "title": "Notes related to {{name}}",
       "description": "All my posts related to {{name}} topic."
@@ -119,7 +118,7 @@
     "bookmark_filter": "Filters bookmarks by topic"
   },
   "category": {
-    "path": "/category",
+    "path": "/categories",
     "seo": {
       "title": "My content about {{name}}",
       "description": "You will find all my posts related to {{name}}."

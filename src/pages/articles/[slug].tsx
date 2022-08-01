@@ -132,7 +132,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                 {categories?.map((category) => (
                   <CustomLink
                     key={category}
-                    href={`/category/${slugify(category, { lower: true })}`}
+                    href={`${t('category.path')}/${slugify(category, { lower: true })}`}
                     passHref
                     className="mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x !font-semibold transition-colors duration-200"
                   >

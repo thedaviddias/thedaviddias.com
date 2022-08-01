@@ -4,7 +4,7 @@ import useTranslation from 'next-translate/useTranslation'
 import { useState } from 'react'
 
 import { BlogPost } from '@/components/BlogPost'
-import { CategoriesList } from '@/components/CategoriesList'
+import { Categories } from '@/components/Categories'
 import { Container } from '@/components/Container'
 import { H1, H3, H4, H5 } from '@/components/Headings'
 
@@ -46,7 +46,7 @@ const Blog = ({ posts, categories }: BlogProps) => {
           </header>
 
           <H3 as="h2">{t('articles.sections.category_filter')}</H3>
-          <CategoriesList categories={categories} />
+          <Categories categories={categories} />
 
           <form className="relative w-full mb-4">
             <fieldset>

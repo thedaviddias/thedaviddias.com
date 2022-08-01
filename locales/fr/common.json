@@ -119,7 +119,7 @@
     "bookmark_filter": "Filter les marques-pages par sujet:"
   },
   "category": {
-    "path": "/category",
+    "path": "/categories",
     "seo": {
       "title": "Lisez mon contenu sur {{name}}",
       "description": "Vous trouverez l'ensemble de mes publications en lien avec {{name}}."

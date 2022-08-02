@@ -4,7 +4,7 @@
         <title>The David Dias</title>
         <link>https://thedaviddias.dev</link>
         <description>A articles about web development, technologies, expatriation and anything that piques my curiosity and interest</description>
-        <lastBuildDate>Tue, 02 Aug 2022 00:02:44 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 02 Aug 2022 01:18:06 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -97,6 +97,7 @@
             <link>https://thedaviddias.dev/articles/how-my-open-source-project-earned-6000-stars-on-github-in-just-5-days</link>
             <guid>https://thedaviddias.dev/articles/how-my-open-source-project-earned-6000-stars-on-github-in-just-5-days</guid>
             <pubDate>Tue, 28 Nov 2017 03:47:53 GMT</pubDate>
+            <description><![CDATA[The Front-End Checklist is my first open-source project gaining so much attraction and visibility! In this article, I explain what happen the first 5 days my project got published.]]></description>
             <author>hello@thedaviddias.dev (David Dias)</author>
         </item>
         <item>
@@ -104,7 +105,7 @@
             <link>https://thedaviddias.dev/articles/how-morning-routine-can-positively-change-your-life-forever</link>
             <guid>https://thedaviddias.dev/articles/how-morning-routine-can-positively-change-your-life-forever</guid>
             <pubDate>Sat, 21 Jan 2017 00:01:00 GMT</pubDate>
-            <description><![CDATA[An exhaustive list of all the elements that will speed up your current web developments and offer the best user experience.]]></description>
+            <description><![CDATA[Having a Morning Routine can positively change your life in so many good ways. Through experimentation, I explore ways to improve my health and my mindset.]]></description>
             <author>hello@thedaviddias.dev (David Dias)</author>
         </item>
     </channel>

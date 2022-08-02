@@ -24,7 +24,6 @@ export const Header: FC<HeaderProps> = ({ pathname }) => {
           <div className="flex-1 flex items-center sm:justify-between align-middle">
             <CustomLink
               href="/"
-              passHref
               className="font-bold text-2xl lg:text-xl sm:mt-[-3px] sm:mr-6 !no-underline"
             >
               {t('title')}
@@ -35,7 +34,6 @@ export const Header: FC<HeaderProps> = ({ pathname }) => {
                 .map((item) => (
                   <CustomLink
                     href={item.path}
-                    passHref
                     key={item.label}
                     aria-current={pathname === item.path ? 'page' : undefined}
                     className={
@@ -87,7 +85,6 @@ export const Header: FC<HeaderProps> = ({ pathname }) => {
                           <li key={label}>
                             <CustomLink
                               href={path}
-                              passHref
                               className="block mt-2 mb-5 title text-black dark:text-white"
                             >
                               <div

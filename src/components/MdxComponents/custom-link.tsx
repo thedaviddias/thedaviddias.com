@@ -22,9 +22,5 @@ export const CustomLink: FC<CustomLinkProps> = ({ href, children }) => {
       </span>
     )
   }
-  return (
-    <CustomLink href={href} passHref>
-      {children}
-    </CustomLink>
-  )
+  return <CustomLink href={href}>{children}</CustomLink>
 }

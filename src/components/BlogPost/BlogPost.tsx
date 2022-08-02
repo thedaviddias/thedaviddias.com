@@ -40,7 +40,6 @@ export const BlogPost: FC<BlogPostProps> = ({ post, isCategoryPage }) => {
                     href={`${t('category.path')}/${slugify(post.frontMatter.categories[0], {
                       lower: true,
                     })}`}
-                    passHref
                     className="block mb-1 !font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x"
                   >
                     <span className="sr-only">Category: </span>

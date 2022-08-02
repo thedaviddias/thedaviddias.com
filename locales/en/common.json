@@ -85,7 +85,7 @@
     "sections": {
       "latest-notes": "Latest notes",
       "viewAll": "→ View all notes",
-      "search": "Recherchez par mot clé",
+      "search": "Search by keyword",
       "search_placeholder": "Tapez un mot pour faire une recherche"
     }
   },
@@ -109,10 +109,11 @@
       "title": "Notes related to {{name}}",
       "title_all": "All the Tags",
       "description": "All my posts related to {{name}}.",
-      "description_all": "All my posts related to {{name}}."
+      "description_all": "All the tags attached to my articles and notes."
     },
+    "view_all_tags": "→ View all tags",
     "section": "Tags",
-    "latest_posts": "List of posts related to {{name}}",
+    "latest_posts": "List of all the posts related to {{name}}",
     "h1": "Tags: {{name}}"
   },
   "bookmarks": {

@@ -5,6 +5,7 @@ import useTranslation from 'next-translate/useTranslation'
 
 import { BlogPost } from '@/components/BlogPost'
 import { Container } from '@/components/Container'
+import { CustomLink } from '@/components/CustomLink'
 import { Notes } from '@/components/Notes'
 import { PageHeader } from '@/components/PageHeader'
 
@@ -32,21 +33,24 @@ const TagPage: NextPage<CategoryPageProps> = ({ posts, tag }) => {
             description={t('tags.seo.description', { name: tag })}
           />
 
-          <h2 className="sr-only">{t('tags.latest_posts')}</h2>
+          <h2 className="sr-only">{t('tags.latest_posts', { name: tag })}</h2>
 
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">
-            {posts?.map((post) => (
+            {posts?.map((post, i) => (
               <>
                 {post.frontMatter.type === 'article' && (
-                  <BlogPost key={post.frontMatter.title} post={post} />
+                  <BlogPost key={`${i}-article`} post={post} />
                 )}
 
-                {post.frontMatter.type === 'note' && (
-                  <Notes key={post.frontMatter.title} note={post} />
-                )}
+                {post.frontMatter.type === 'note' && <Notes key={`${i}-note`} note={post} />}
               </>
             ))}
           </div>
+          {posts?.length ? (
+            <footer className="text-right">
+              <CustomLink href={t('tags.path')}>{t('tags.view_all_tags')}</CustomLink>
+            </footer>
+          ) : null}
         </section>
       </main>
     </Container>
@@ -73,16 +77,18 @@ export const getStaticProps: GetStaticProps<CategoryPageProps> = async ({
   params,
   locale,
 }: Params) => {
-  const posts = await getAllPostsWithFrontMatter({
-    dataType: 'articles',
-    filterByTag: params.tag,
-    locale,
-  })
-  const notes = await getAllPostsWithFrontMatter({
-    dataType: 'notes',
-    filterByTag: params.tag,
-    locale,
-  })
+  const posts =
+    (await getAllPostsWithFrontMatter({
+      dataType: 'articles',
+      filterByTag: params.tag,
+      locale,
+    })) || {}
+  const notes =
+    (await getAllPostsWithFrontMatter({
+      dataType: 'notes',
+      filterByTag: params.tag,
+      locale,
+    })) || {}
 
   return {
     props: {

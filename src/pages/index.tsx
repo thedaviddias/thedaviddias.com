@@ -61,12 +61,7 @@ const Home: NextPage<HomeProps> = ({ articles, notes }) => {
             />
             <div className="flex justify-left mt-10 space-x-5">
               {HERO_LINKS.map(({ label, link }) => (
-                <CustomLink
-                  href={link}
-                  key={link}
-                  className="font-semibold dark:!text-white"
-                  passHref
-                >
+                <CustomLink href={link} key={link} className="font-semibold dark:!text-white">
                   {label}
                 </CustomLink>
               ))}

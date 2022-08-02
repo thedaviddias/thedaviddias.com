@@ -17,7 +17,6 @@ export const Categories: FC<CategoriesListProps> = ({ categories }) => {
           <li key={category}>
             <CustomLink
               href={`${t('category.path')}/${category}`}
-              passHref
               className="mb-1 !font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x"
             >
               {category}

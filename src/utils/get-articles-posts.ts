@@ -26,6 +26,7 @@ export type BlogPostProps = {
       publishedUrl: string
     }
   }
+  content: string
   permalink: string
   slug: string
 }
@@ -126,6 +127,7 @@ export const getAllPostsWithFrontMatter = ({
               frontMatter: data,
               permalink,
               slug: filenameNoExtension,
+              content,
             },
             ...allPosts,
           ]
@@ -141,6 +143,7 @@ export const getAllPostsWithFrontMatter = ({
               frontMatter: data,
               permalink,
               slug: filenameNoExtension,
+              content,
             },
             ...allPosts,
           ]
@@ -155,6 +158,7 @@ export const getAllPostsWithFrontMatter = ({
           readingTime: readingTime(content),
           permalink,
           slug: filenameNoExtension,
+          content,
         },
         ...allPosts,
       ]

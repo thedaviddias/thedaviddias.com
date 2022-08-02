@@ -60,6 +60,11 @@ export const defaultSEO: NextSeoProps = {
       href: '/rss/feed.xml',
     },
     {
+      rel: 'alternate',
+      type: 'application/rss+xml',
+      href: '/rss/fr/feed.xml',
+    },
+    {
       rel: 'icon',
       href: `/favicon.ico`,
     },

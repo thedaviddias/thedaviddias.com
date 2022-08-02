@@ -2,7 +2,7 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "The David Dias",
     "home_page_url": "https://thedaviddias.dev",
-    "feed_url": "https://thedaviddias.dev/feed.json",
+    "feed_url": "https://thedaviddias.dev/rss/feed.json",
     "description": "A articles about web development, technologies, expatriation and anything that piques my curiosity and interest",
     "icon": "https://thedaviddias.dev/favicon.ico",
     "author": {

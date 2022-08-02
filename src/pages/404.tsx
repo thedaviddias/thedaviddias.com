@@ -22,7 +22,9 @@ const NotFoundPage: NextPage = () => {
         title={routes(t).error404.seo.title}
         description={routes(t).error404.seo.description}
       />
-      <button onClick={() => router.push('/')}>Back Home</button>
+      <div className="mt-10 text-center">
+        <button onClick={() => router.push('/')}>{t('404.back_home')}</button>
+      </div>
     </BaseLayout>
   )
 }

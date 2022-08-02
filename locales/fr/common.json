@@ -130,6 +130,7 @@
     "path": "/rss/fr/feed.xml"
   },
   "404": {
+    "back_home": "Retour à l'accueil",
     "seo": {
       "title": "Désolé 😩, cette page ne peut pas être trouvée.",
       "description": ""

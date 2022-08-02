@@ -50,7 +50,6 @@ export default async function generateRssFeed() {
       id: url,
       link: url,
       description: post.frontMatter.description,
-      content: post.content,
       author: [author],
       contributor: [author],
       date: new Date(post.frontMatter.date),

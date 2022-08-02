@@ -134,7 +134,7 @@
     "h1": "Category: {{name}}"
   },
   "rss": {
-    "path": "/feed.xml"
+    "path": "/rss/feed.xml"
   },
   "404": {
     "back_home": "Back Home",

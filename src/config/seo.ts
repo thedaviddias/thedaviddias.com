@@ -55,6 +55,11 @@ export const defaultSEO: NextSeoProps = {
   ],
   additionalLinkTags: [
     {
+      rel: 'alternate',
+      type: 'application/rss+xml',
+      href: '/rss/feed.xml',
+    },
+    {
       rel: 'icon',
       href: `/favicon.ico`,
     },

@@ -28,6 +28,16 @@ const Til = ({ notes }: BlogProps) => {
         title={routes(t).notes.seo.title}
         description={routes(t).notes.seo.description}
         openGraph={routes(t).notes.seo}
+        languageAlternates={[
+          {
+            hrefLang: 'en',
+            href: 'https://thedaviddias.dev/notes',
+          },
+          {
+            hrefLang: 'fr',
+            href: 'https://thedaviddias.dev/fr/notes',
+          },
+        ]}
       />
       <main className="divide-slate-200 sm:space-y-16 lg:max-w-none">
         <section className="pt-10 border-none">

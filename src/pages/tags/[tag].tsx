@@ -32,19 +32,18 @@ const TagPage: NextPage<CategoryPageProps> = ({ posts, tag }) => {
             description={t('tags.seo.description', { name: tag })}
           />
 
+          <h2 className="sr-only">{t('tags.latest_posts')}</h2>
+
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">
             {posts?.map((post) => (
               <>
-                <>
-                  {post.frontMatter.type === 'article' && (
-                    <BlogPost key={post.frontMatter.title} post={post} />
-                  )}
-                </>
-                <>
-                  {post.frontMatter.type === 'note' && (
-                    <Notes key={post.frontMatter.title} note={post} />
-                  )}
-                </>
+                {post.frontMatter.type === 'article' && (
+                  <BlogPost key={post.frontMatter.title} post={post} />
+                )}
+
+                {post.frontMatter.type === 'note' && (
+                  <Notes key={post.frontMatter.title} note={post} />
+                )}
               </>
             ))}
           </div>

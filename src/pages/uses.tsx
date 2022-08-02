@@ -45,6 +45,16 @@ const Uses: NextPage<UsesProps> = ({ categories, tools, frontMatter, source }) =
       title={titlePage}
       description={descriptionPage}
       openGraph={routes(t).about.seo}
+      languageAlternates={[
+        {
+          hrefLang: 'en',
+          href: 'https://thedaviddias.dev/uses',
+        },
+        {
+          hrefLang: 'fr',
+          href: 'https://thedaviddias.dev/fr/utilise',
+        },
+      ]}
       className="pt-10 border-none"
     >
       <PageHeader title={titlePage} description={descriptionPage} />

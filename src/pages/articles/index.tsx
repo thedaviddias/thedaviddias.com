@@ -32,6 +32,16 @@ const Blog = ({ posts, categories }: BlogProps) => {
         title={routes(t).articles.seo.title}
         description={routes(t).articles.seo.description}
         openGraph={routes(t).articles.seo}
+        languageAlternates={[
+          {
+            hrefLang: 'en',
+            href: 'https://thedaviddias.dev/articles',
+          },
+          {
+            hrefLang: 'fr',
+            href: 'https://thedaviddias.dev/fr/articles',
+          },
+        ]}
       />
       <main className="divide-slate-200 sm:space-y-16 lg:max-w-none">
         <section className="pt-10 border-none">

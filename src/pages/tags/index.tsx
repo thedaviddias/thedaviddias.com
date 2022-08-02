@@ -18,7 +18,20 @@ const TagsPage: NextPage<TagsPageProps> = ({ tags }) => {
 
   return (
     <Container>
-      <NextSeo title={t('tags.seo.title_all')} description={t('tags.seo.description_all')} />
+      <NextSeo
+        title={t('tags.seo.title_all')}
+        description={t('tags.seo.description_all')}
+        languageAlternates={[
+          {
+            hrefLang: 'en',
+            href: 'https://thedaviddias.dev/tags',
+          },
+          {
+            hrefLang: 'fr',
+            href: 'https://thedaviddias.dev/fr/tags',
+          },
+        ]}
+      />
       <PageHeader title={t('tags.seo.title_all')} description={t('tags.seo.description_all')} />
       <ul className="flex flex-wrap gap-x-5">
         {tags?.map((tag) => (

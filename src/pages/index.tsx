@@ -34,6 +34,16 @@ const Home: NextPage<HomeProps> = ({ articles, notes }) => {
         title={routes(t).home.seo.title}
         description={routes(t).home.seo.description}
         titleTemplate="%s"
+        languageAlternates={[
+          {
+            hrefLang: 'en',
+            href: 'https://thedaviddias.dev',
+          },
+          {
+            hrefLang: 'fr',
+            href: 'https://thedaviddias.dev/fr',
+          },
+        ]}
         openGraph={routes(t).home.seo}
       />
       <main id="main" data-skip-link="main content">

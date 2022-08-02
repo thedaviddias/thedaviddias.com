@@ -31,6 +31,12 @@ const About: NextPage<AboutProps> = ({ frontMatter, source }) => {
       title={title}
       description={description}
       openGraph={routes(t).about.seo}
+      languageAlternates={[
+        {
+          hrefLang: 'fr',
+          href: 'https://www.canonical.ie/de',
+        },
+      ]}
       className="pt-10 border-none"
     >
       <SocialProfileJsonLd

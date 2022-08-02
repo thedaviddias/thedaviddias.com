@@ -112,6 +112,7 @@
       "description_all": "All my posts related to {{name}}."
     },
     "section": "Tags",
+    "latest_posts": "List of posts related to {{name}}",
     "h1": "Tags: {{name}}"
   },
   "bookmarks": {

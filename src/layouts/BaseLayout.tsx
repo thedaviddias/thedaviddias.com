@@ -1,11 +1,11 @@
-import { NextSeo } from 'next-seo'
+import { NextSeo, NextSeoProps } from 'next-seo'
 import React, { FC } from 'react'
 
 import { Container } from '@/components/Container'
 
 import { SEOProps } from '@/config/seo'
 
-type BaseLayoutProps = {
+type BaseLayoutProps = NextSeoProps & {
   children: React.ReactNode
   title: string
   description: string

@@ -4,13 +4,13 @@
         <title>The David Dias</title>
         <link>https://thedaviddias.dev</link>
         <description>Parcours mon articles sur le dévelopement web, les technologies, l'expatriation et tous les autres sujets qui attisent ma curiosité et mon intérêt!</description>
-        <lastBuildDate>Tue, 02 Aug 2022 02:14:44 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 03 Aug 2022 12:19:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>fr</language>
         <image>
             <title>The David Dias</title>
-            <url>https://thedaviddias.dev/favicon.ico</url>
+            <url>https://thedaviddias.dev/favicons/android-chrome-144x144.png</url>
             <link>https://thedaviddias.dev</link>
         </image>
         <copyright>Tous droits réservés 2022, David Dias</copyright>

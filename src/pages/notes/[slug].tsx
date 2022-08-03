@@ -137,7 +137,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
     const { data } = matter(source.trim())
 
-    if (!data.draft) {
+    if (!data.draft && process.env.NODE_ENV !== 'production') {
       paths.push({
         params: {
           slug,

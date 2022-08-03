@@ -15,7 +15,7 @@ const FooterMenuLinks = () => {
       <h3 className="small-title">{t('layout.footer.general')}</h3>
       <ul className="mt-3 space-y-3">
         {FOOTER_MENU_LINKS(t).map(({ path, label }) => (
-          <li key={path}>
+          <li key={label}>
             <CustomLink href={path} className="dark:!text-white">
               {label}
             </CustomLink>
@@ -34,7 +34,7 @@ const FooterExtraLinks = () => {
       <h3 className="small-title">{t('layout.footer.extra')}</h3>
       <ul className="mt-3 space-y-3">
         {EXTRA_LINKS(t).map(({ path, label }) => (
-          <li key={path}>
+          <li key={label}>
             <CustomLink href={path} className="dark:!text-white">
               {label}
             </CustomLink>
@@ -53,7 +53,7 @@ const FooterSocialLinks = () => {
       <h3 className="small-title">{t('layout.footer.social')}</h3>
       <ul className="mt-3 space-y-3">
         {SOCIAL_LINKS.map(({ label, link }) => (
-          <li key={link}>
+          <li key={label}>
             <CustomLink href={link} className="dark:!text-white">
               {label}
             </CustomLink>

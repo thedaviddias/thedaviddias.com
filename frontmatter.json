@@ -16,7 +16,11 @@
       "path": "[[workspace]]/content/pages"
     }
   ],
-  "frontMatter.telemetry.disable": false,
+  "frontMatter.preview.pathName": "/articles",
+  "frontMatter.site.baseURL": "https://thedaviddias.dev",
+  "frontMatter.taxonomy.alignFilename": true,
+  "frontMatter.templates.prefix": "",
+  "frontMatter.telemetry.disable": true,
   "frontMatter.panel.freeform": true,
   "frontMatter.templates.enabled": true,
   "frontMatter.content.autoUpdateDate": false,

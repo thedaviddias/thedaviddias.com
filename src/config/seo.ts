@@ -14,7 +14,7 @@ export const defaultSEO: NextSeoProps = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: baseUrl,
+    url: 'https://thedaviddias.dev',
     title,
     description,
     site_name: `${title}`,
@@ -111,11 +111,11 @@ export function extendSEO(options?: SEOProps) {
   return {
     ...defaultSEO,
     ...options,
-    url: `${baseUrl}/${options?.url}`,
+    url: `${baseUrl}`,
     openGraph: {
       ...defaultSEO.openGraph,
       images,
-      url: `${baseUrl}/${options?.url}`,
+      url: `${baseUrl}${options?.url ? `/${options?.url}` : ''}`,
     },
   }
 }

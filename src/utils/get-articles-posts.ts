@@ -6,7 +6,7 @@ import slugify from 'slugify'
 
 import { PreviousNext } from '@/components/AdjacentPosts'
 
-import { baseUrl } from '@/config/seo'
+import { BASE_URL } from '@/constants'
 
 export type BlogPostProps = {
   frontMatter: {
@@ -79,7 +79,7 @@ export const getPost = (slug: string, dataType: string) =>
 export const getPostBySlug = (slug: string, dataType: string, locale?: string) => {
   const source = getPost(slug, dataType)
 
-  const permalink = `${baseUrl}${createPermalink(slug, dataType, locale)}` || ''
+  const permalink = `${BASE_URL}${createPermalink(slug, dataType, locale)}` || ''
 
   const { data, content } = matter(source)
 

@@ -26,8 +26,8 @@ export default async function generateRssFeed() {
 
   // Creating feed
   const feedEn = new Feed({
-    title: localeEN.title,
-    description: localeEN.description,
+    title: localeEN.home.seo.title,
+    description: localeEN.home.seo.description,
     id: siteURL,
     link: siteURL,
     language: 'en',
@@ -63,8 +63,8 @@ export default async function generateRssFeed() {
 
   // Creating feed
   const feedFr = new Feed({
-    title: localeFR.title,
-    description: localeFR.description,
+    title: localeFR.home.seo.title,
+    description: localeFR.home.seo.description,
     id: siteURL,
     link: siteURL,
     language: 'fr',

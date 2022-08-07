@@ -2,7 +2,7 @@ import { Translate } from 'next-translate'
 
 import { LinksInternalResponse } from '@/constants'
 
-import { defaultSEO, extendSEO } from './seo'
+import { extendSEO } from './seo'
 
 export interface RoutesResponse {
   (param: Translate): {
@@ -15,23 +15,35 @@ export const routes: RoutesResponse = (translate) => ({
     label: translate('404.seo.title'),
     path: '',
     seo: extendSEO({
-      title: translate('404.seo.title'),
-      description: translate('404.seo.description'),
+      options: {
+        title: translate('404.seo.title'),
+        description: translate('404.seo.description'),
+      },
+      translate,
     }),
   },
   home: {
     label: translate('layout.nav.home'),
     path: '/',
-    seo: defaultSEO,
+    seo: extendSEO({
+      options: {
+        title: translate('home.seo.title'),
+        description: translate('home.seo.description'),
+      },
+      translate,
+    }),
   },
   articles: {
     label: translate('layout.nav.articles'),
     path: translate('articles.path'),
     h1: translate('articles.h1'),
     seo: extendSEO({
-      title: translate('articles.h1'),
-      description: translate('articles.seo.description'),
-      url: translate('articles.seo.url'),
+      options: {
+        title: translate('articles.h1'),
+        description: translate('articles.seo.description'),
+        url: translate('articles.seo.url'),
+      },
+      translate,
     }),
   },
   notes: {
@@ -39,67 +51,82 @@ export const routes: RoutesResponse = (translate) => ({
     path: translate('notes.path'),
     h1: translate('notes.h1'),
     seo: extendSEO({
-      title: translate('notes.seo.title'),
-      description: translate('notes.seo.description'),
-      url: translate('notes.seo.url'),
+      options: {
+        title: translate('notes.seo.title'),
+        description: translate('notes.seo.description'),
+        url: translate('notes.seo.url'),
+      },
+      translate,
     }),
   },
   bookmarks: {
     label: translate('layout.nav.bookmarks'),
     path: translate('bookmarks.path'),
     seo: extendSEO({
-      title: translate('bookmarks.seo.title'),
-      description: translate('bookmarks.seo.description'),
-      url: translate('bookmarks.seo.url'),
+      options: {
+        title: translate('bookmarks.seo.title'),
+        description: translate('bookmarks.seo.description'),
+        url: translate('bookmarks.seo.url'),
+      },
+      translate,
     }),
   },
   about: {
     label: translate('layout.nav.about'),
     path: translate('about.path'),
     seo: extendSEO({
-      title: translate('about.seo.title'),
-      description: translate('about.seo.description'),
-      url: translate('about.seo.url'),
+      options: {
+        title: translate('about.seo.title'),
+        description: translate('about.seo.description'),
+        url: translate('about.seo.url'),
+      },
+      translate,
     }),
   },
   uses: {
     label: translate('layout.footer.extra_links.uses'),
     path: translate('uses.path'),
     seo: extendSEO({
-      title: translate('uses.seo.title'),
-      description: translate('uses.seo.description'),
-      url: translate('uses.seo.url'),
+      options: {
+        title: translate('uses.seo.title'),
+        description: translate('uses.seo.description'),
+        url: translate('uses.seo.url'),
+      },
+      translate,
     }),
   },
   projects: {
     label: translate('layout.nav.projects'),
     path: translate('projects.path'),
     seo: extendSEO({
-      title: translate('projects.seo.title'),
-      description: translate('projects.seo.description'),
-      url: translate('projects.seo.url'),
+      options: {
+        title: translate('projects.seo.title'),
+        description: translate('projects.seo.description'),
+        url: translate('projects.seo.url'),
+      },
+      translate,
     }),
   },
   analytics: {
     label: translate('layout.footer.extra_links.analytics'),
     path: 'https://plausible.io/thedaviddias.dev',
-    seo: extendSEO(),
+    seo: extendSEO({ options: {}, translate }),
   },
   resume: {
     label: translate('layout.footer.extra_links.resume'),
     path: 'https://read.cv/thedaviddias',
-    seo: extendSEO(),
+    seo: extendSEO({ options: {}, translate }),
   },
   gear: {
     label: translate('layout.footer.extra_links.gear'),
     path: 'https://kit.co/thedaviddias',
-    seo: extendSEO(),
+    seo: extendSEO({ options: {}, translate }),
   },
   rss: {
     menu: false,
     label: translate('layout.nav.rss'),
     path: translate('rss.path'),
-    seo: extendSEO(),
+    seo: extendSEO({ options: {}, translate }),
   },
 })
 

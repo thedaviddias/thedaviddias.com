@@ -78,3 +78,6 @@ export const CONTENT_TYPE = {
 export const CLOUDINARY_NAME = 'thedaviddias'
 export const CLOUDINARY_IMG_WIDTH = 1920
 export const CLOUDINARY_IMG_HEIGHT = 1080
+
+export const BASE_URL = 'https://thedaviddias.dev' || process.env.VERCEL_URL
+export const BASE_EMAIL = 'hello@thedaviddias.com'

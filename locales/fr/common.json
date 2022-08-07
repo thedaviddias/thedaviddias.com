@@ -1,6 +1,5 @@
 {
   "title": "The David Dias",
-  "description": "Parcours mon articles sur le dévelopement web, les technologies, l'expatriation et tous les autres sujets qui attisent ma curiosité et mon intérêt!",
   "titleTemplate": "Front-End Developer, podcaster & content creator",
   "date": "dd MMM yyyy",
   "layout": {
@@ -48,6 +47,10 @@
     }
   },
   "home": {
+    "seo": {
+      "title": "The David Dias | Développeur Front-End, podcasteur & créateur de contenu",
+      "description": "Salut toi! Je m'appele David Dias. Je suis développeur Front-End, podcasteur, créateur de contenu numérique passioné pour résoudre les problèmes digitaux et humains! J'aime rencontré de nouvelles personnes, bâtir des communautées et parler de tech, d'expatriation et de web."
+    },
     "hero": {
       "greetings1": "Salut toi!",
       "greetings2": "Je m'appelle David Dias",

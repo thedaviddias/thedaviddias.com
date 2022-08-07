@@ -1,23 +1,14 @@
 import { NextSeoProps } from 'next-seo'
+import { Translate } from 'next-translate'
 
-export const baseUrl = 'https://thedaviddias.dev' || process.env.VERCEL_URL
-export const baseEmail = 'hello@thedaviddias.com'
+import { BASE_URL } from '@/constants'
 
-const title = 'The David Dias | Front-End Developer, podcaster & content creator'
-const description = `Hey, I'm David Dias! Software Engineer based in Toronto / Canada. I love talking about code, technology, expatriation and life.`
-
-export const defaultSEO: NextSeoProps = {
-  title,
-  description,
+const defaultSEO: NextSeoProps = {
   titleTemplate: '%s | The David Dias',
   defaultTitle: 'The David Dias',
   openGraph: {
     type: 'website',
-    locale: 'en_US',
     url: 'https://thedaviddias.dev',
-    title,
-    description,
-    site_name: `${title}`,
     profile: {
       firstName: 'David',
       lastName: 'Dias',
@@ -25,7 +16,7 @@ export const defaultSEO: NextSeoProps = {
     },
     images: [
       {
-        url: `${baseUrl}/og/default.png`,
+        url: `/og/default.png`,
         alt: 'The David Dias',
       },
     ],
@@ -86,13 +77,13 @@ export const defaultSEO: NextSeoProps = {
       rel: 'icon',
       type: 'image/png',
       sizes: '32x32',
-      href: `${baseUrl}/favicons/favicon-32x32.png`,
+      href: `/favicons/favicon-32x32.png`,
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
-      href: `${baseUrl}/favicons/favicon-16x16.png`,
+      href: `/favicons/favicon-16x16.png`,
     },
   ],
 }
@@ -103,19 +94,31 @@ export interface SEOProps {
   url?: string
 }
 
-export function extendSEO(options?: SEOProps) {
+type ExtendSEOProps = {
+  options?: SEOProps
+  locale?: string
+  translate: Translate
+}
+
+export function extendSEO({ options, locale, translate }: ExtendSEOProps) {
   const images = options?.image
-    ? [{ url: `${baseUrl}/images/og/${options.image}` }]
+    ? [{ url: `${BASE_URL}/images/og/${options.image}` }]
     : defaultSEO?.openGraph?.images
 
   return {
     ...defaultSEO,
+    title: translate('home.seo.title'),
+    description: translate('home.seo.description'),
     ...options,
-    url: `${baseUrl}`,
+    url: `${BASE_URL}`,
     openGraph: {
       ...defaultSEO.openGraph,
+      locale,
+      title: translate('home.seo.title'),
+      description: translate('home.seo.description'),
+      site_name: translate('home.seo.title'),
       images,
-      url: `${baseUrl}${options?.url ? `/${options?.url}` : ''}`,
+      url: `${BASE_URL}${options?.url ? `/${options?.url}` : ''}`,
     },
   }
 }

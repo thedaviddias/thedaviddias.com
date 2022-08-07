@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
+import useTranslation from 'next-translate/useTranslation'
 import { FC } from 'react'
 
 import { Footer } from '@/components/Footer'
@@ -14,10 +15,11 @@ type ContainerProps = {
 
 export const Container: FC<ContainerProps> = ({ children }) => {
   const router = useRouter()
+  const { t, lang } = useTranslation('common')
 
   return (
     <div className="min-h-screen flex flex-col">
-      <NextSeo {...extendSEO()} />
+      <NextSeo {...extendSEO({ locale: lang, translate: t })} />
       <SkipLinks />
       <Header pathname={router.pathname} />
       <div className="py-3 top-0 mb-12">

@@ -1,9 +1,9 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "The David Dias",
+    "title": "The David Dias | Front-End Developer, podcaster & content creator",
     "home_page_url": "https://thedaviddias.dev",
     "feed_url": "https://thedaviddias.dev/rss/feed.json",
-    "description": "A articles about web development, technologies, expatriation and anything that piques my curiosity and interest",
+    "description": "Hey, I'm David Dias! Software Engineer based in Toronto / Canada. I love talking about code, technology, expatriation and life.",
     "icon": "https://thedaviddias.dev/favicons/android-chrome-144x144.png",
     "author": {
         "name": "David Dias",

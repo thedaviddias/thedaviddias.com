@@ -101,7 +101,9 @@
   "uses": {
     "path": "/uses",
     "seo": {
-      "url": "uses"
+      "url": "uses",
+      "title": "",
+      "description": ""
     }
   },
   "projects": {

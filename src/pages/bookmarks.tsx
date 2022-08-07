@@ -44,6 +44,7 @@ const Bookmarks = ({ bookmarks, tags }: Props) => {
       <NextSeo
         title={routes(t).bookmarks.seo.title}
         description={routes(t).bookmarks.seo.description}
+        openGraph={routes(t).bookmarks.seo}
       />
       <PageHeader
         title={routes(t).bookmarks.seo.title}

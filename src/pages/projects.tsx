@@ -38,6 +38,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ ghProjects }) => {
       <NextSeo
         title={routes(t).projects.seo.title}
         description={routes(t).projects.seo.description}
+        openGraph={routes(t).projects.seo}
       />
       <main className="mb-5 mt-5">
         <PageHeader

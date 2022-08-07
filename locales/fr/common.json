@@ -47,6 +47,7 @@
     }
   },
   "home": {
+    "path": "/fr",
     "seo": {
       "title": "The David Dias | Développeur Front-End, podcasteur & créateur de contenu",
       "description": "Salut toi! Je m'appele David Dias. Je suis développeur Front-End, podcasteur, créateur de contenu numérique passioné pour résoudre les problèmes digitaux et humains! J'aime rencontré de nouvelles personnes, bâtir des communautées et parler de tech, d'expatriation et de web."
@@ -99,7 +100,8 @@
     "path": "/about",
     "seo": {
       "url": "about",
-      "title": "À propos de l'auteur"
+      "title": "À propos de l'auteur",
+      "description": "Sachez-en un peu plus sur 'The David Dias'"
     }
   },
   "uses": {
@@ -137,6 +139,7 @@
   "bookmarks": {
     "path": "/bookmarks",
     "seo": {
+      "url": "bookmarks",
       "title": "Mes Marque-pages",
       "description": "Voici une liste de marque-pages que je mets à jour régulièrement et en lien avec le développment web, la carrière professionnelle et l'open-source."
     },

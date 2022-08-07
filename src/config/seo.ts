@@ -110,7 +110,7 @@ export function extendSEO({ options, locale, translate }: ExtendSEOProps) {
     title: translate('home.seo.title'),
     description: translate('home.seo.description'),
     ...options,
-    url: `${BASE_URL}`,
+    url: `${translate('home.path')}${options?.url ? `/${options?.url}` : ''}`,
     openGraph: {
       ...defaultSEO.openGraph,
       locale,
@@ -118,7 +118,7 @@ export function extendSEO({ options, locale, translate }: ExtendSEOProps) {
       description: translate('home.seo.description'),
       site_name: translate('home.seo.title'),
       images,
-      url: `${BASE_URL}${options?.url ? `/${options?.url}` : ''}`,
+      url: `${translate('home.path')}${options?.url ? `/${options?.url}` : ''}`,
     },
   }
 }

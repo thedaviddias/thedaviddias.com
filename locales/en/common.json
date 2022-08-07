@@ -47,6 +47,7 @@
     }
   },
   "home": {
+    "path": "/",
     "seo": {
       "title": "The David Dias | Front-End Developer, podcaster & content creator",
       "description": "Hey, I'm David Dias! Software Engineer based in Toronto / Canada. I love talking about code, technology, expatriation and life."

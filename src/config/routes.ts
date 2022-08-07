@@ -24,7 +24,7 @@ export const routes: RoutesResponse = (translate) => ({
   },
   home: {
     label: translate('layout.nav.home'),
-    path: '/',
+    path: translate('home.path'),
     seo: extendSEO({
       options: {
         title: translate('home.seo.title'),

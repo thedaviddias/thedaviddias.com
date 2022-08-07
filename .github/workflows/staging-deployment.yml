@@ -5,6 +5,7 @@ on:
     branches:
       - main
   pull_request:
+    types: [opened, synchronize, reopened]
     branches:
       - main
 
@@ -12,10 +13,6 @@ jobs:
   lint:
     name: Lint
     runs-on: ubuntu-latest
-    env:
-      RAINDROP_COLLECTION: ${{ secrets.RAINDROP_COLLECTION }}
-      RAINDROP_TOKEN: ${{ secrets.RAINDROP_TOKEN }}
-      GH_PUBLIC_TOKEN: ${{ secrets.GH_PUBLIC_TOKEN }}
 
     steps:
       - name: Cancel Previous Runs
@@ -61,6 +58,13 @@ jobs:
 
       - name: Install dependencies
         run: pnpm build
+        env:
+          RAINDROP_COLLECTION: ${{ secrets.RAINDROP_COLLECTION }}
+          RAINDROP_TOKEN: ${{ secrets.RAINDROP_TOKEN }}
+          GH_PUBLIC_TOKEN: ${{ secrets.GH_PUBLIC_TOKEN }}
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
 
       - uses: cypress-io/github-action@v4
         with:
@@ -71,10 +75,17 @@ jobs:
 
       - name: Deploy to Staging
         id: deploy-vercel-staging
-        uses: amondnet/vercel-action@v20
+        uses: BetaHuhn/deploy-to-vercel-action@v1
         with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          scope: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID}}
+          PRODUCTION: false
+          BUILD_ENV: |
+            RAINDROP_COLLECTION=${{ secrets.RAINDROP_COLLECTION }}
+            RAINDROP_TOKEN=${{ secrets.RAINDROP_TOKEN }}
+            GH_PUBLIC_TOKEN=${{ secrets.GH_PUBLIC_TOKEN }}
+            SPOTIFY_CLIENT_ID=${{ secrets.SPOTIFY_CLIENT_ID }}
+            SPOTIFY_CLIENT_SECRET=${{ secrets.SPOTIFY_CLIENT_SECRET }}
+            SPOTIFY_REFRESH_TOKEN=${{ secrets.SPOTIFY_REFRESH_TOKEN }}

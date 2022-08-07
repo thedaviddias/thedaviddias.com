@@ -46,12 +46,12 @@ const Bookmarks = ({ bookmarks, tags }: Props) => {
         description={routes(t).bookmarks.seo.description}
         openGraph={routes(t).bookmarks.seo}
       />
-      <PageHeader
-        title={routes(t).bookmarks.seo.title}
-        description={routes(t).bookmarks.seo.description}
-      />
 
-      <div className="mb-5 mt-5">
+      <main className="mb-5 mt-5">
+        <PageHeader
+          title={routes(t).bookmarks.seo.title}
+          description={routes(t).bookmarks.seo.description}
+        />
         <H3 as="h2">{t('bookmarks.bookmark_filter')}</H3>
 
         <ul className="flex gap-x-5">
@@ -80,7 +80,7 @@ const Bookmarks = ({ bookmarks, tags }: Props) => {
             </li>
           ))}
         </ul>
-      </div>
+      </main>
 
       <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 text-xl">
         {displayBookmarks?.map(({ cover, link, title, tags }) => (

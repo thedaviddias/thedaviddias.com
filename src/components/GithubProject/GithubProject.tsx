@@ -28,7 +28,7 @@ export const GithubProject: FC<GithubProjectProps> = ({ project }) => {
 
       <div className="mb-3">{project.description}</div>
 
-      <div className="flex space-x-3">
+      <div className="flex space-x-3 mt-auto">
         {project.language && (
           <div className="flex align-middle items-center">
             <span

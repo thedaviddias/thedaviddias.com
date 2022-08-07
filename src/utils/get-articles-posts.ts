@@ -163,9 +163,7 @@ export const getAllPostsWithFrontMatter = ({
         ...allPosts,
       ]
     }, [])
-    .filter((articles: BlogPostProps) =>
-      process.env.NODE_ENV !== 'production' ? articles : !articles.frontMatter.draft
-    )
+    .filter((articles: BlogPostProps) => !articles.frontMatter.draft)
     .filter((articles: BlogPostProps) => articles.frontMatter.locale === locale)
     .sort((a: BlogPostProps, b: BlogPostProps) =>
       dateSortDesc(Number(new Date(a.frontMatter.date)), Number(new Date(b.frontMatter.date)))

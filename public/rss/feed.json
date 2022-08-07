@@ -32,16 +32,6 @@
             }
         },
         {
-            "id": "https://thedaviddias.dev/articles/test",
-            "url": "https://thedaviddias.dev/articles/test",
-            "title": "test",
-            "date_modified": "2022-08-02T22:29:15.286Z",
-            "author": {
-                "name": "David Dias",
-                "url": "https://twitter.com/thedaviddias"
-            }
-        },
-        {
             "id": "https://thedaviddias.dev/articles/how-front-end-developers-ui-ux-could-better-collaborate-together",
             "url": "https://thedaviddias.dev/articles/how-front-end-developers-ui-ux-could-better-collaborate-together",
             "title": "How Front-End Developers, Web and UX/UI Designers could better collaborate together?",

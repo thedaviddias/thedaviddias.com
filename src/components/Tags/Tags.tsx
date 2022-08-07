@@ -17,7 +17,7 @@ export const Tags: FC<TagsProps> = ({ tags, className, slug }) => {
   const currentSlug = t('tags.path') || slug
 
   return (
-    <nav className="mb-5 mt-5" arial-label="Tags">
+    <div className="mb-5 mt-5">
       <ul className={clsx(`flex items-center flex-wrap gap-x-3 gap-y-4`, className)}>
         {tags?.map((tag) => (
           <li key={tag}>
@@ -32,6 +32,6 @@ export const Tags: FC<TagsProps> = ({ tags, className, slug }) => {
           </li>
         ))}
       </ul>
-    </nav>
+    </div>
   )
 }

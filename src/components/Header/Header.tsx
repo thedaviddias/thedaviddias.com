@@ -27,7 +27,7 @@ export const Header: FC<HeaderProps> = ({ pathname }) => {
   const [mobileMenuState, setMobileMenuState] = useState(false)
 
   return (
-    <header className="dark:text-gray-200 transition-colors duration-200 ">
+    <header className="dark:text-gray-100 transition-colors duration-200 ">
       {userLocale === ('fr' || 'fr-FR' || 'fr-CA') ? <BannerLang /> : null}
       <div className="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8 py-3 top-0 mb-12">
         <div className="relative flex justify-between h-16">

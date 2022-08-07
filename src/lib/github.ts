@@ -39,7 +39,7 @@ export const fetchRepos = async (sort: SortType, limit: number) => {
       limit,
       sort,
       headers: {
-        authorization: `token ${process.env.GITHUB_PUBLIC_TOKEN}`,
+        authorization: `token ${process.env.GH_PUBLIC_TOKEN}`,
       },
     }
   )

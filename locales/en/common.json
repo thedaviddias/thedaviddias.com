@@ -9,6 +9,7 @@
       "home": "Home",
       "notes": "Notes",
       "articles": "Articles",
+      "projects": "Projects",
       "bookmarks": "Bookmarks",
       "about": "About",
       "rss": "RSS"
@@ -101,6 +102,19 @@
     "path": "/uses",
     "seo": {
       "url": "uses"
+    }
+  },
+  "projects": {
+    "path": "/projects",
+    "seo": {
+      "url": "projects",
+      "title": "Projects",
+      "description": "My projects"
+    },
+    "updated": "Updated {{date}} ago",
+    "sections": {
+      "viewAll": "→ View all projects",
+      "latest-projects": "Latest updated projects"
     }
   },
   "tags": {

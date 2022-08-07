@@ -5,9 +5,11 @@ import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 
 import generateRssFeed from '@/lib/generateRss'
+import { fetchRepos } from '@/lib/github'
 
 import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
+import { LatestGithubSection } from '@/components/LatestGithubSection'
 import { LatestNotesSection } from '@/components/LatestNotesSection'
 import { LatestPostsSection } from '@/components/LatestPostsSection'
 
@@ -23,9 +25,10 @@ const PodcastSection = dynamic(() => import('../components/PodcastSection'), {
 type HomeProps = {
   articles: any[]
   notes: any[]
+  ghProjects: any[]
 }
 
-const Home: NextPage<HomeProps> = ({ articles, notes }) => {
+const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects }) => {
   const { t } = useTranslation('common')
 
   return (
@@ -80,6 +83,8 @@ const Home: NextPage<HomeProps> = ({ articles, notes }) => {
 
         <LatestNotesSection notes={notes} />
 
+        <LatestGithubSection projects={ghProjects} />
+
         <LatestPostsSection articles={articles} />
 
         {process.env.NODE_ENV === 'production' && <PodcastSection />}
@@ -89,13 +94,16 @@ const Home: NextPage<HomeProps> = ({ articles, notes }) => {
 }
 
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
-  const posts = getAllPostsWithFrontMatter({ dataType: 'articles', locale, limit: 4 })
-  const notes = getAllPostsWithFrontMatter({ dataType: 'notes', locale, limit: 4 })
+  const posts = await getAllPostsWithFrontMatter({ dataType: 'articles', locale, limit: 4 })
+  const notes = await getAllPostsWithFrontMatter({ dataType: 'notes', locale, limit: 4 })
+  const ghProjects = await fetchRepos('PUSHED_AT', 2)
+
   await generateRssFeed().then(null)
 
   const props: HomeProps = {
     articles: JSON.parse(JSON.stringify(posts)),
     notes: JSON.parse(JSON.stringify(notes)),
+    ghProjects,
   }
 
   return {

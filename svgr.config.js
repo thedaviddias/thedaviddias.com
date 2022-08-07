@@ -1,3 +1,3 @@
 module.exports = {
-  dimensions: false,
+  dimensions: true,
 }

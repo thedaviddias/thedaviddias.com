@@ -66,8 +66,8 @@ export const routes: RoutesResponse = (translate) => ({
     label: translate('layout.footer.extra_links.uses'),
     path: translate('uses.path'),
     seo: extendSEO({
-      title: 'What I use',
-      description: 'This is the list of the tools and softwares I use frequently.',
+      title: translate('uses.seo.title'),
+      description: translate('uses.seo.description'),
       url: translate('uses.seo.url'),
     }),
   },
@@ -75,8 +75,8 @@ export const routes: RoutesResponse = (translate) => ({
     label: translate('layout.nav.projects'),
     path: translate('projects.path'),
     seo: extendSEO({
-      title: 'Projects',
-      description: '',
+      title: translate('projects.seo.title'),
+      description: translate('projects.seo.description'),
       url: translate('projects.seo.url'),
     }),
   },

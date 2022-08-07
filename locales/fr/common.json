@@ -2,6 +2,7 @@
   "title": "The David Dias",
   "description": "Parcours mon articles sur le dévelopement web, les technologies, l'expatriation et tous les autres sujets qui attisent ma curiosité et mon intérêt!",
   "titleTemplate": "Front-End Developer, podcaster & content creator",
+  "date": "dd MMM yyyy",
   "layout": {
     "a11y": {
       "skipContent": "Aller directement {{label}}"
@@ -10,6 +11,7 @@
       "home": "Accueil",
       "notes": "Notes",
       "articles": "Articles",
+      "projects": "Projets",
       "bookmarks": "Marque-pages",
       "about": "À propos",
       "rss": "RSS"
@@ -106,13 +108,15 @@
     "path": "/projects",
     "seo": {
       "url": "projects",
-      "title": "Projets",
-      "description": "Mes projets"
+      "title": "Mes Projets",
+      "description": "Découvrez l'ensemble des projets sur lesquels j'ai travaillé et ceux sur lequel je suis toujours en train de travailler."
     },
     "updated": "MàJ il y a {{date}}",
     "sections": {
+      "popular": "Projets populaires sur Github",
+      "popular_description": "Mes projets Open Source les plus populaires. N'hésitez pas à y jeter un coup d'œil et à y participer!",
       "viewAll": "→ Voir tous mes projets",
-      "latest-projects": "Derniers projets mis à jour"
+      "latest-projects": "Derniers projets Màj"
     }
   },
   "tags": {

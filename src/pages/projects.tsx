@@ -1,4 +1,6 @@
 import { GetStaticProps } from 'next'
+import { NextSeo } from 'next-seo'
+import useTranslation from 'next-translate/useTranslation'
 
 import { fetchRepos } from '@/lib/github'
 
@@ -6,6 +8,8 @@ import { Container } from '@/components/Container'
 import { GithubProject } from '@/components/GithubProject'
 import { H2 } from '@/components/Headings'
 import { PageHeader } from '@/components/PageHeader'
+
+import { routes } from '@/config/routes'
 
 type Language = {
   color: string
@@ -27,16 +31,26 @@ interface ProjectPageProps {
 }
 
 const ProjectPage: React.FC<ProjectPageProps> = ({ ghProjects }) => {
+  const { t } = useTranslation('common')
+
   return (
     <Container>
-      <PageHeader title="Projects" />
-
-      <H2>Popular Github Projects</H2>
-      <p>My most popular Github projects</p>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 my-3 max-w-5xl">
-        {ghProjects.map((project, i) => (
-          <GithubProject key={i} project={project} />
-        ))}
+      <NextSeo
+        title={routes(t).projects.seo.title}
+        description={routes(t).projects.seo.description}
+      />
+      <PageHeader
+        title={routes(t).projects.seo.title}
+        description={routes(t).projects.seo.description}
+      />
+      <div className="mb-5 mt-5">
+        <H2>{t('projects.sections.popular')}</H2>
+        <p>{t('projects.sections.popular_description')}</p>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 my-3 max-w-5xl">
+          {ghProjects.map((project, i) => (
+            <GithubProject key={i} project={project} />
+          ))}
+        </div>
       </div>
     </Container>
   )

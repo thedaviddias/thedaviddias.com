@@ -59,7 +59,7 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects }) => {
               </span>
             </h1>
             <div
-              className="max-w-xl lg:px-0.5 text-base lg:text-lg sm:text-xl text-gray-500 dark:text-gray-400"
+              className="max-w-xl lg:px-0.5 text-base lg:text-lg sm:text-xl text-gray-500 dark:text-gray-300"
               dangerouslySetInnerHTML={{ __html: t('home.hero.presentation') }}
             />
             <div className="flex justify-left mt-10 space-x-5">

@@ -6,13 +6,15 @@ import slugify from 'slugify'
 import { CustomLink } from '@/components/CustomLink'
 import { H2 } from '@/components/Headings'
 
+import { convertLangDateFs } from '@/utils/language-date'
+
 type BlogPostProps = {
   post: any
   isCategoryPage?: string | string[]
 }
 
 export const BlogPost: FC<BlogPostProps> = ({ post, isCategoryPage }) => {
-  const { t } = useTranslation('common')
+  const { t, lang } = useTranslation('common')
 
   return (
     <article className="pt-8 pb-6 border-t border-gray-200 dark:border-gray-700" key={post.slug}>
@@ -27,7 +29,7 @@ export const BlogPost: FC<BlogPostProps> = ({ post, isCategoryPage }) => {
             </CustomLink>
           </H2>
 
-          <p className="!text-gray-600 dark:!text-gray-400 !mt-4">{post.frontMatter.description}</p>
+          <p className="!text-gray-600 dark:!text-gray-300 !mt-4">{post.frontMatter.description}</p>
         </div>
         <div className="flex-grow text-left lg:text-right lg:ml-8">
           {!isCategoryPage && (
@@ -47,7 +49,9 @@ export const BlogPost: FC<BlogPostProps> = ({ post, isCategoryPage }) => {
           )}
           <div className="inline-block lg:block !text-gray-500 dark:text-gray-300 !font-medium !mb-1 align-top">
             <time dateTime={post.frontMatter.date.toString()}>
-              {format(new Date(post.frontMatter.date.toString()), 'MMM dd, yyyy')}
+              {format(new Date(post.frontMatter.date.toString()), t('date'), {
+                locale: convertLangDateFs(lang),
+              })}
             </time>
           </div>
         </div>

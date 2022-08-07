@@ -1,4 +1,5 @@
 import { format } from 'date-fns'
+import useTranslation from 'next-translate/useTranslation'
 import { FC } from 'react'
 
 import { CustomLink } from '@/components/CustomLink'
@@ -10,6 +11,8 @@ type NotesProps = {
 }
 
 export const Notes: FC<NotesProps> = ({ note }) => {
+  const { t } = useTranslation('common')
+
   return (
     <>
       <article className="pt-3 pb-0 border-t border-gray-200 dark:border-gray-700">
@@ -30,7 +33,7 @@ export const Notes: FC<NotesProps> = ({ note }) => {
             </div>
             <div className="inline-block lg:block !text-gray-500 dark:text-gray-300 !font-medium !mb-1 align-top">
               <time dateTime={note.frontMatter.date.toString()}>
-                {format(new Date(note.frontMatter.date.toString()), 'MMM dd, yyyy')}
+                {format(new Date(note.frontMatter.date.toString()), t('date'))}
               </time>
             </div>
           </div>

@@ -1,6 +1,7 @@
 {
   "title": "The David Dias",
   "description": "A articles about web development, technologies, expatriation and anything that piques my curiosity and interest",
+  "date": "MMM dd, yyyy",
   "layout": {
     "a11y": {
       "skipContent": "Skip to content"
@@ -85,7 +86,7 @@
     "h1": "All my Notes",
     "sections": {
       "latest-notes": "Latest notes",
-      "viewAll": "→ View all notes",
+      "viewAll": "→ View all my notes",
       "search": "Search by keyword",
       "search_placeholder": "Tapez un mot pour faire une recherche"
     }
@@ -108,12 +109,14 @@
     "path": "/projects",
     "seo": {
       "url": "projects",
-      "title": "Projects",
-      "description": "My projects"
+      "title": "My Projects",
+      "description": "Discover all the projects I've worked on or are currently working on."
     },
     "updated": "Updated {{date}} ago",
     "sections": {
-      "viewAll": "→ View all projects",
+      "popular": "Popular Github Projects",
+      "popular_description": "My most popular open-source projects. Feel free to take a look and contribute!",
+      "viewAll": "→ View all my projects",
       "latest-projects": "Latest updated projects"
     }
   },

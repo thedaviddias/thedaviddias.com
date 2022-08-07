@@ -39,11 +39,11 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ ghProjects }) => {
         title={routes(t).projects.seo.title}
         description={routes(t).projects.seo.description}
       />
-      <PageHeader
-        title={routes(t).projects.seo.title}
-        description={routes(t).projects.seo.description}
-      />
-      <div className="mb-5 mt-5">
+      <main className="mb-5 mt-5">
+        <PageHeader
+          title={routes(t).projects.seo.title}
+          description={routes(t).projects.seo.description}
+        />
         <H2>{t('projects.sections.popular')}</H2>
         <p>{t('projects.sections.popular_description')}</p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 my-3 max-w-5xl">
@@ -51,7 +51,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ ghProjects }) => {
             <GithubProject key={i} project={project} />
           ))}
         </div>
-      </div>
+      </main>
     </Container>
   )
 }

@@ -22,6 +22,8 @@ import { Share } from '@/components/Share'
 import { Tags } from '@/components/Tags'
 
 import { routes } from '@/config/routes'
+import { CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH } from '@/constants'
+import { generateImageUrl } from '@/utils/generate-image-url'
 import { getAdjacentPosts, getAllPosts, getPost, getPostBySlug } from '@/utils/get-articles-posts'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
 
@@ -66,6 +68,7 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
       <ScrollTop />
       <NextSeo
         title={title}
+        description={description}
         openGraph={{
           title,
           description,
@@ -76,7 +79,14 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
             authors: ['https://thedaviddias.dev/authors/@david-dias'],
             tags,
           },
-          images: [],
+          images: [
+            {
+              url: generateImageUrl({ title }),
+              width: CLOUDINARY_IMG_WIDTH,
+              height: CLOUDINARY_IMG_HEIGHT,
+              alt: '',
+            },
+          ],
         }}
       />
       <ArticleJsonLd

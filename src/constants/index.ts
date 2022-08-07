@@ -74,3 +74,7 @@ export const CONTENT_TYPE = {
   ARTICLE: 'articles',
   NOTE: 'notes',
 }
+
+export const CLOUDINARY_NAME = 'thedaviddias'
+export const CLOUDINARY_IMG_WIDTH = 1920
+export const CLOUDINARY_IMG_HEIGHT = 1080

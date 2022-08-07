@@ -27,7 +27,8 @@ import { TableOfContents } from '@/components/TableOfContents'
 import { Tags } from '@/components/Tags'
 
 import { routes } from '@/config/routes'
-import { baseUrl } from '@/config/seo'
+import { CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH } from '@/constants'
+import { generateImageUrl } from '@/utils/generate-image-url'
 import { getAdjacentPosts, getAllPosts, getPost, getPostBySlug } from '@/utils/get-articles-posts'
 import { rehypeExtractHeadings } from '@/utils/rehype-extract-headings'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
@@ -101,15 +102,15 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
           article: {
             publishedTime: date,
             modifiedTime: lastmod,
-            authors: ['https://thedaviddias.dev/about'],
+            authors: ['https://thedaviddias.dev/authors/@david-dias'],
             tags,
           },
           images: [
             {
-              url: preview?.url,
-              width: 850,
-              height: 650,
-              alt: preview?.alt,
+              url: generateImageUrl({ title }),
+              width: CLOUDINARY_IMG_WIDTH,
+              height: CLOUDINARY_IMG_HEIGHT,
+              alt: '',
             },
           ],
         }}
@@ -118,7 +119,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
         type="Blog"
         url={permalink}
         title={title}
-        images={[`${baseUrl}/images/${preview?.url}`]}
+        images={[generateImageUrl({ title })]}
         datePublished={date}
         dateModified={lastmod}
         authorName="David Dias"

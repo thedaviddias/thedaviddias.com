@@ -68,7 +68,7 @@
       "description": "Retrouvez mes articles sur le dévelopement web and sur tous les autres sujets qui me fascinnent et m'intéressent.",
       "url": "articles"
     },
-    "h1": "Tous mes articles",
+    "h1": "Mes articles",
     "sections": {
       "latest-posts": "Derniers articles",
       "viewAll": "→ Voir tous les articles",
@@ -84,6 +84,7 @@
       "description": "Retrouvez l'ensemble de mes notes: des bout de code, des expérimentations, des découvertes, tout ce qu'il me semble intéressant de vous partagez!",
       "url": "notes"
     },
+    "h1": "Mes Notes",
     "sections": {
       "empty": "Pas de publications disponibles pour le moment.",
       "latest-notes": "Dernières Notes",
@@ -118,7 +119,7 @@
       "popular": "Projets populaires sur Github",
       "popular_description": "Mes projets Open Source les plus populaires. N'hésitez pas à y jeter un coup d'œil et à y participer!",
       "viewAll": "→ Voir tous mes projets",
-      "latest-projects": "Derniers projets Màj"
+      "latest-projects": "Derniers projets MàJ"
     }
   },
   "tags": {
@@ -133,7 +134,7 @@
   "bookmarks": {
     "path": "/bookmarks",
     "seo": {
-      "title": "Marque-pages",
+      "title": "Mes Marque-pages",
       "description": "Voici une liste de marque-pages que je mets à jour régulièrement et en lien avec le développment web, la carrière professionnelle et l'open-source."
     },
     "bookmark_filter": "Filter les marques-pages par sujet:"

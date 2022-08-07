@@ -13,6 +13,11 @@ const nextConfig = nextTranslate({
         destination: '/articles/:path*',
         permanent: true,
       },
+      {
+        source: '/authors/@david-dias',
+        destination: '/about',
+        permanent: true,
+      },
     ]
   },
   webpack(config) {

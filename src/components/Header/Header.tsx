@@ -1,5 +1,5 @@
 import useTranslation from 'next-translate/useTranslation'
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 
 import { CustomLink } from '@/components/CustomLink'
 
@@ -12,13 +12,23 @@ type HeaderProps = {
 }
 
 export const Header: FC<HeaderProps> = ({ pathname }) => {
-  const { t, lang } = useTranslation('common')
+  const { t } = useTranslation('common')
+  const [userLocale, setUserLocale] = useState('')
+
+  useEffect(() => {
+    const userLocale =
+      navigator.languages && navigator.languages.length
+        ? window.navigator.languages[0]
+        : window.navigator.language
+
+    setUserLocale(userLocale)
+  }, [])
 
   const [mobileMenuState, setMobileMenuState] = useState(false)
 
   return (
     <header className="dark:text-gray-200 transition-colors duration-200 ">
-      {lang === 'fr' ? <BannerLang /> : null}
+      {userLocale === ('fr' || 'fr-FR' || 'fr-CA') ? <BannerLang /> : null}
       <div className="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8 py-3 top-0 mb-12">
         <div className="relative flex justify-between h-16">
           <div className="flex-1 flex items-center sm:justify-between align-middle">

@@ -71,6 +71,15 @@ export const routes: RoutesResponse = (translate) => ({
       url: translate('uses.seo.url'),
     }),
   },
+  projects: {
+    label: translate('layout.nav.projects'),
+    path: translate('projects.path'),
+    seo: extendSEO({
+      title: 'Projects',
+      description: '',
+      url: translate('projects.seo.url'),
+    }),
+  },
   analytics: {
     label: translate('layout.footer.extra_links.analytics'),
     path: 'https://plausible.io/thedaviddias.dev',

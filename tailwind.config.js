@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { fontFamily } = require('tailwindcss/defaultTheme')
 
 module.exports = {
   mode: 'jit',
@@ -6,7 +8,7 @@ module.exports = {
   darkMode: 'class',
   theme: {
     fontFamily: {
-      body: ['Source Sans Pro'],
+      body: ['Source Sans Pro', ...fontFamily.sans],
       title: ['Oswald', 'serif'],
     },
     extend: {

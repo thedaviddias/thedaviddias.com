@@ -102,6 +102,19 @@
       "url": "uses"
     }
   },
+  "projects": {
+    "path": "/projects",
+    "seo": {
+      "url": "projects",
+      "title": "Projets",
+      "description": "Mes projets"
+    },
+    "updated": "MàJ il y a {{date}}",
+    "sections": {
+      "viewAll": "→ Voir tous mes projets",
+      "latest-projects": "Derniers projets mis à jour"
+    }
+  },
   "tags": {
     "path": "/tags",
     "seo": {
@@ -147,7 +160,7 @@
   "posts": {
     "empty": "Aucun articles trouvé basé sur votre recherche.",
     "continue": "Continuez de lire →",
-    "updated": "Mis à jour le",
+    "updated": "MàJ le",
     "published": "Initialement publié sur ",
     "tableContent": "Table des matières",
     "previous": "Publication précédente",

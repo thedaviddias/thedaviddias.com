@@ -66,6 +66,7 @@
       "description": "Retrouvez mes articles sur le dévelopement web and sur tous les autres sujets qui me fascinnent et m'intéressent.",
       "url": "articles"
     },
+    "h1": "Tous mes articles",
     "sections": {
       "latest-posts": "Derniers articles",
       "viewAll": "→ Voir tous les articles",

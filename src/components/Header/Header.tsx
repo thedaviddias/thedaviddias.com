@@ -35,10 +35,11 @@ export const Header: FC<HeaderProps> = ({ pathname }) => {
             <CustomLink
               href="/"
               className="font-bold text-2xl lg:text-xl sm:mt-[-3px] sm:mr-6 !no-underline"
+              data-testid="thedaviddias-logo"
             >
               {t('title')}
             </CustomLink>
-            <nav className="hidden sm:flex">
+            <nav className="hidden sm:flex" data-testid="desktop-menu">
               {MENU_LINKS(t)
                 .filter((item) => item.menu !== false)
                 .map((item) => (
@@ -59,7 +60,7 @@ export const Header: FC<HeaderProps> = ({ pathname }) => {
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:pr-0 print:hidden">
             <div className="block sm:hidden">
-              <nav>
+              <nav data-testid="mobile-menu">
                 <button
                   aria-label="Toggle menu"
                   aria-expanded="false"

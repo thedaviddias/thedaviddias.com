@@ -1,4 +1,4 @@
-name: Deploy Vercel Staging
+name: Staging deployment
 
 on: [push, pull_request]
 
@@ -52,6 +52,16 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Install dependencies
+        run: pnpm build
+
+      - uses: cypress-io/github-action@v4
+        with:
+          install: false
+          start: npm start
+          wait-on: 'http://localhost:3000'
+          browser: chrome
+
       - name: Deploy to Staging
         id: deploy-vercel-staging
         uses: amondnet/vercel-action@v20
@@ -60,15 +70,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           scope: ${{ secrets.VERCEL_ORG_ID }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
-
-      - name: Vercel deployment
-        uses: amondnet/vercel-action@v20
-        id: deploy-vercel-production
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-args: '--prod'
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}

@@ -193,5 +193,9 @@
       "repost": "a retweeté",
       "like": "a aimé"
     }
+  },
+  "comments": {
+    "title": "Commentaires",
+    "description": "N'hésitez pas à laisser votre commentaire! Si vous ne possédez pas de compte Github, vous pouvez toujours tweeter au sujet de cet article!"
   }
 }

@@ -5,7 +5,6 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import { ArticleJsonLd, NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
-import { useEffect, useState } from 'react'
 import { ReadTimeResults } from 'reading-time'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeImagePlaceholder from 'rehype-image-placeholder'
@@ -17,6 +16,7 @@ import useSWR from 'swr'
 
 import { AdjacentPosts } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
+import { Comments } from '@/components/Comments'
 import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
 import { DatePost } from '@/components/DatePost'
@@ -221,6 +221,8 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                 <Webmentions mentions={data?.links} />
 
                 {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
+
+                <Comments />
               </div>
             </div>
 

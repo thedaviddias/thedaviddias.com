@@ -234,6 +234,7 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
   if (params?.slug) {
     const slug = params.slug as string
     const postContent = await getPostBySlug(slug, contentType, locale)
+
     const headings: Headings[] = []
 
     const {
@@ -253,6 +254,9 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
       readingTime,
     } = postContent
 
+    const resp = await fetch(`https://webmention.io/api/count.json?target=${permalink}/`)
+    const { type, count } = await resp.json()
+
     return {
       props: {
         frontMatter: {
@@ -270,6 +274,11 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
               url: published.url,
             },
           }),
+        },
+        webmention: {
+          likes: type.like + type.repost,
+          mentions: type.mention + type.reply,
+          total: count,
         },
         permalink,
         slug,

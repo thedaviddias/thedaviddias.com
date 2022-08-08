@@ -60,7 +60,7 @@ export const Webmentions: FC<WebMentionsProps> = ({ mentions }) => {
           {isMentionsVisible &&
             mentions?.map((mention, i) => (
               <div key={i} className="mb-5">
-                <div className="grid grid-cols-8 gap-3 p-5 dark:bg-slate-800 rounded-lg items-center transition-all">
+                <div className="grid grid-cols-8 gap-3 p-5 bg-slate-100 dark:bg-slate-800 rounded-lg items-center transition-all">
                   <CustomLink
                     href={mention.data.author.url}
                     className="mr-2 col-span-1"
@@ -78,7 +78,10 @@ export const Webmentions: FC<WebMentionsProps> = ({ mentions }) => {
                     {mention.activity.type === 'reply' && (
                       <div className="font-semibold">
                         {mention.data.author.name}{' '}
-                        <CustomLink href={mention.data.url}>
+                        <CustomLink
+                          href={mention.data.url}
+                          className="text-indigo-600 dark:text-indigo-400 underline"
+                        >
                           {t(`webmentions.activity.${mention.activity.type}`)}
                         </CustomLink>{' '}
                         {t('webmentions.activity_reply', {
@@ -91,14 +94,20 @@ export const Webmentions: FC<WebMentionsProps> = ({ mentions }) => {
                     {(!mention.data.content || mention.activity.type === 'repost') && (
                       <p>
                         {mention.data.author.name}{' '}
-                        <CustomLink href={mention.data.url}>
+                        <CustomLink
+                          href={mention.data.url}
+                          className="text-indigo-600 dark:text-indigo-400 underline"
+                        >
                           {t(`webmentions.activity.${mention.activity.type}`)}
                         </CustomLink>{' '}
                         {t('webmentions.activity_others')}
                       </p>
                     )}
                     {mention.data.content && mention.activity.type !== 'repost' && (
-                      <p dangerouslySetInnerHTML={{ __html: mention.data.content }} />
+                      <p
+                        className="pt-2"
+                        dangerouslySetInnerHTML={{ __html: mention.data.content }}
+                      />
                     )}
                   </div>
                 </div>

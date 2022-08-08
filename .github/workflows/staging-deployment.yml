@@ -53,16 +53,16 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
+      - name: Install dependencies
+        if: steps.pnpm-cache.outputs.cache-hit != 'true'
+        run: pnpm install
+
       - name: Cache Cypress Binary
         id: cache-cypress-binary
         uses: actions/cache@v3
         with:
-          path: /home/runner/.cache/Cypress
+          path: ~/.cache/Cypress
           key: cypress-binary-${{ hashFiles('**/pnpm-lock.yaml') }}
-
-      - name: Install dependencies
-        if: steps.pnpm-cache.outputs.cache-hit != 'true'
-        run: pnpm install
 
       - name: Build Next.js project
         run: pnpm build

@@ -1,4 +1,4 @@
-# The David Dias Blog
+# David Dias's personal website
 
 ## Getting Started
 

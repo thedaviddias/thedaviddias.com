@@ -178,5 +178,20 @@
     "tableContent": "Table des matières",
     "previous": "Publication précédente",
     "next": "Publication suivante"
+  },
+  "webmentions": {
+    "title": "Webmentions",
+    "description": "Tweeter au sujet de cet article et cela s'affichera ici!",
+    "show": "Montrer",
+    "hide": "Cacher",
+    "details": "{{show}} les mentions en détails",
+    "activity_reply": "cet article, il y a {{date}}:",
+    "activity_others": "cet article.",
+    "activity": {
+      "link": "relié à",
+      "reply": "a répoondu à",
+      "repost": "a retweeté",
+      "like": "a aimé"
+    }
   }
 }

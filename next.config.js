@@ -6,6 +6,9 @@ const nextConfig = nextTranslate({
   swcMinify: true,
   pageExtensions: ['ts', 'tsx', 'mdx'],
   poweredByHeader: false,
+  images: {
+    domains: ['webmention.io'],
+  },
   async redirects() {
     return [
       {

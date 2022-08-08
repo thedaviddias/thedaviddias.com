@@ -63,8 +63,13 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects }) => {
               dangerouslySetInnerHTML={{ __html: t('home.hero.presentation') }}
             />
             <div className="flex justify-left mt-10 space-x-5">
-              {HERO_LINKS.map(({ label, link }) => (
-                <CustomLink href={link} key={link} className="font-semibold dark:!text-white">
+              {HERO_LINKS.map(({ label, link, rel }) => (
+                <CustomLink
+                  href={link}
+                  key={link}
+                  rel={rel}
+                  className="font-semibold dark:!text-white"
+                >
                   {label}
                 </CustomLink>
               ))}

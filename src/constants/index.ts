@@ -53,6 +53,7 @@ export const HERO_LINKS = [
   {
     label: 'Twitter',
     link: TWITTER_PROFILE,
+    rel: 'me',
   },
   {
     label: 'Github',

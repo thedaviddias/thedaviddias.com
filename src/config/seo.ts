@@ -85,6 +85,14 @@ const defaultSEO: NextSeoProps = {
       sizes: '16x16',
       href: `/favicons/favicon-16x16.png`,
     },
+    {
+      rel: `webmention`,
+      href: `https://webmention.io/thedaviddias.dev/webmention`,
+    },
+    {
+      rel: `pingback`,
+      href: `https://webmention.io/thedaviddias.dev/xmlrpc`,
+    },
   ],
 }
 export interface SEOProps {

@@ -6,6 +6,7 @@ type CustomLinkProps = LinkProps & {
   href: string
   className?: string
   children: React.ReactNode
+  rel?: string
 }
 
 export const CustomLink: FC<CustomLinkProps> = ({ href, className, children, ...rest }) => {

@@ -182,5 +182,20 @@
     "tableContent": "Table of Contents",
     "previous": "Previous post",
     "next": "Next post"
+  },
+  "webmentions": {
+    "title": "Webmentions",
+    "description": "Tweet about this post and have it showing up here!",
+    "show": "Show",
+    "hide": "Hide",
+    "details": "{{show}} details of mentions",
+    "activity_reply": "this post {{date}} ago:",
+    "activity_others": "this post.",
+    "activity": {
+      "link": "linked to",
+      "reply": "replied to",
+      "repost": "retweeted",
+      "like": "liked"
+    }
   }
 }

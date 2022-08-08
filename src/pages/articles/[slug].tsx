@@ -5,6 +5,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import { ArticleJsonLd, NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
+import { useEffect, useState } from 'react'
 import { ReadTimeResults } from 'reading-time'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeImagePlaceholder from 'rehype-image-placeholder'
@@ -12,6 +13,7 @@ import rehypePrismPlus from 'rehype-prism-plus'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import slugify from 'slugify'
+import useSWR from 'swr'
 
 import { AdjacentPosts } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
@@ -25,9 +27,11 @@ import { ScrollTop } from '@/components/ScrollTop'
 import { Share } from '@/components/Share'
 import { TableOfContents } from '@/components/TableOfContents'
 import { Tags } from '@/components/Tags'
+import { Webmentions } from '@/components/Webmentions'
 
 import { routes } from '@/config/routes'
 import { CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH } from '@/constants'
+import fetcher from '@/utils/fetcher'
 import { generateImageUrl } from '@/utils/generate-image-url'
 import { getAdjacentPosts, getAllPosts, getPost, getPostBySlug } from '@/utils/get-articles-posts'
 import { rehypeExtractHeadings } from '@/utils/rehype-extract-headings'
@@ -70,6 +74,35 @@ type BlogPostPageProps = BlogPostProps & {
   adjacentPosts: any
 }
 
+export type WebMention = {
+  source: string
+  verified: boolean
+  verified_date: string
+  private: boolean
+  data: {
+    author: {
+      name: string
+      url: string
+      photo: string
+    }
+    url: string
+    name: string | null
+    content: string
+    published: string
+    published_ts: number
+  }
+  activity: {
+    type: 'link' | 'reply' | 'repost' | 'like'
+    sentence: string
+    sentence_html: string
+  }
+  target: string
+}
+
+type WebMentionsResponse = {
+  links: WebMention[]
+}
+
 const contentType = 'articles'
 
 const BlogPostPage: NextPage<BlogPostPageProps> = ({
@@ -79,10 +112,14 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
   permalink,
   adjacentPosts,
 }) => {
-  const { title, description, tags, categories, date, lastmod, author, preview, published } =
-    frontMatter
+  const { title, description, tags, categories, date, lastmod, author, published } = frontMatter
   const { isFallback } = useRouter()
   const { t } = useTranslation('common')
+
+  const { data } = useSWR<WebMentionsResponse>(
+    `https://webmention.io/api/mentions.json?target=${permalink}`,
+    fetcher
+  )
 
   if (isFallback || !title) {
     return <div>Loading...</div>
@@ -180,6 +217,8 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                     <Tags tags={tags} />
                   </aside>
                 )}
+
+                <Webmentions mentions={data?.links} />
 
                 {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
               </div>

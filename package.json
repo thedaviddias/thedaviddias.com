@@ -14,7 +14,11 @@
     "lint": "next lint",
     "postbuild": "next-sitemap",
     "prepare": "husky install",
-    "start": "next start"
+    "start": "next start",
+    "cypress": "cypress open",
+    "cypress:headless": "cypress run",
+    "e2e": "start-server-and-test start http://localhost:3000 cypress",
+    "e2e:headless": "start-server-and-test start http://localhost:3000 cypress:headless"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",
@@ -45,6 +49,7 @@
     "@next/env": "^12.2.3",
     "@octokit/graphql": "^5.0.0",
     "@svgr/webpack": "^6.3.1",
+    "@testing-library/cypress": "^8.0.3",
     "@types/node": "18.6.2",
     "@types/prettier": "^2.6.4",
     "@types/react": "18.0.15",
@@ -52,8 +57,11 @@
     "@types/rss": "^0.0.29",
     "@typescript-eslint/eslint-plugin": "^5.31.0",
     "@typescript-eslint/parser": "^5.31.0",
+    "axe-core": "^4.4.3",
     "camel-case": "^4.1.2",
     "clsx": "^1.2.1",
+    "cypress": "^10.4.0",
+    "cypress-axe": "^1.0.0",
     "date-fns": "^2.29.1",
     "eslint": "8.20.0",
     "eslint-config-next": "12.2.3",
@@ -75,6 +83,7 @@
     "rehype-prism-plus": "^1.4.2",
     "rehype-slug": "^5.0.1",
     "remark-gfm": "^3.0.1",
+    "start-server-and-test": "^1.14.0",
     "swr": "^1.3.0",
     "typescript": "4.7.4",
     "unist-util-visit": "^4.1.0"

@@ -201,5 +201,21 @@
   "comments": {
     "title": "Comments",
     "description": "Don't hesitate to leave your comment! In case you don't have a Github account, you can always tweet about it!"
+  },
+  "dashboard": {
+    "path": "/dashboard",
+    "seo": {
+      "url": "dashboard",
+      "title": "Dashboard",
+      "description": ""
+    },
+    "sections": {
+      "latest-dashboard": "Mini Dashboard",
+      "viewAll": "→ View my dashboard"
+    },
+    "unsplash": {
+      "downloads": "Unsplash Downloads",
+      "views": "Unsplash Views"
+    }
   }
 }

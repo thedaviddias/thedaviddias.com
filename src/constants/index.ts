@@ -37,6 +37,7 @@ export const FOOTER_MENU_LINKS = (translate: Translate): LinksInternalResponse[]
 
 export const EXTRA_LINKS = (translate: Translate): LinksInternalResponse[] => [
   routes(translate).uses,
+  routes(translate).dashboard,
   routes(translate).gear,
   routes(translate).resume,
   routes(translate).analytics,

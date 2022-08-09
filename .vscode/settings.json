@@ -30,7 +30,7 @@
   "eslint.lintTask.enable": true,
   "eslint.nodePath": "node_modules",
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
-  "cSpell.words": ["lastmod", "rehype", "semibold"],
+  "cSpell.words": ["lastmod", "Pybh", "rehype", "semibold", "UCXYs"],
   "frontMatter.content.defaultFileType": "mdx",
   "frontMatter.content.draftField": {
     "name": "draft",

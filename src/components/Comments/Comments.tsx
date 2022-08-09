@@ -17,7 +17,7 @@ export const Comments = () => {
       <Giscus
         repo="thedaviddias/thedaviddias.dev"
         repoId="R_kgDOHu_WAA"
-        category="General"
+        category="Comments"
         categoryId="DIC_kwDOHu_WAM4CQsGJ"
         mapping="title"
         reactionsEnabled="0"

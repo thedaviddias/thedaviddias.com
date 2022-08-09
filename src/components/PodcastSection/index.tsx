@@ -14,7 +14,7 @@ const PodcastSection = () => {
   const { data } = useSWR<PodcastsResponse>(`/api/spotify/podcasts?lang=${lang}`, fetcher)
 
   return (
-    <section className="grid grid-cols-1 gap-y-10 border-none">
+    <section className="grid grid-cols-1 gap-y-10 border-none mb-10">
       <header>
         <H5 as="h2">{t('home.sections.podcast.latest_podcasts')}</H5>
       </header>

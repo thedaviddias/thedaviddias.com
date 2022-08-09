@@ -9,6 +9,7 @@ import { fetchRepos } from '@/lib/github'
 
 import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
+import { Dashboard } from '@/components/Dashboard'
 import { LatestGithubSection } from '@/components/LatestGithubSection'
 import { LatestNotesSection } from '@/components/LatestNotesSection'
 import { LatestPostsSection } from '@/components/LatestPostsSection'
@@ -93,6 +94,8 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects }) => {
         <LatestPostsSection articles={articles} />
 
         {process.env.NODE_ENV === 'production' && <PodcastSection />}
+
+        <Dashboard />
       </main>
     </Container>
   )

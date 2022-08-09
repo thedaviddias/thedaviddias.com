@@ -3,6 +3,7 @@ import useTranslation from 'next-translate/useTranslation'
 
 import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
+import { SteamCard } from '@/components/SteamCard'
 import { Unsplash } from '@/components/Unsplash'
 import { WakatimeCard } from '@/components/WakatimeCard'
 
@@ -24,9 +25,11 @@ const DashboardPage = () => {
           description={routes(t).dashboard.seo.description}
         />
 
+        <WakatimeCard />
+
         <Unsplash />
 
-        <WakatimeCard />
+        <SteamCard />
       </main>
     </Container>
   )

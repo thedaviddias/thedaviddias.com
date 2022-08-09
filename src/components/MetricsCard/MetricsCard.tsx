@@ -4,11 +4,12 @@ import { CustomLink } from '../CustomLink'
 import { H5 } from '../Headings'
 
 type MetricsCardProps = {
-  link: string
+  link?: string
   metric?: number
   header: string
   stat?: string
   isCurrency?: boolean
+  side?: string
 }
 
 export const MetricsCard: FC<MetricsCardProps> = ({
@@ -16,16 +17,22 @@ export const MetricsCard: FC<MetricsCardProps> = ({
   link,
   metric,
   stat,
+  side,
   isCurrency = false,
 }) => {
   return (
-    <article className="flex flex-col border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-md p-4 h-full border">
+    <article className="flex flex-col border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-md p-4 h-full border relative">
       <H5 as="h3">
-        <CustomLink href={link} className="dark:text-blue-300 font-semibold mb-3">
-          {header}
-        </CustomLink>
+        {link ? (
+          <CustomLink href={link} className="dark:text-blue-300 font-semibold mb-3">
+            {header}
+          </CustomLink>
+        ) : (
+          <span className="mb-3 font-semibold">{header}</span>
+        )}
+        {side && <div className="absolute right-2 bottom-2 text-sm">{side}</div>}
       </H5>
-      <p className="mt-2 text-3xl font-bold spacing-sm text-black dark:text-white">
+      <p className="mt-2 text-2xl font-bold spacing-sm text-black dark:text-white">
         {metric && metric > 0 && isCurrency
           ? metric.toLocaleString('en-US', {
               style: 'currency',

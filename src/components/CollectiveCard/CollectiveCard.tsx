@@ -30,13 +30,13 @@ export const CollectiveCard = () => {
   return (
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
       <MetricsCard
-        header="Front-End Checklist balance (Open Collective)"
+        header="Front-End Checklist balance"
         link="https://opencollective.com/front-end-checklist"
         metric={frontendchecklist_balance}
         isCurrency={true}
       />
       <MetricsCard
-        header="HTMLHint balance (Open Collective)"
+        header="HTMLHint balance"
         link="https://opencollective.com/htmlhint"
         metric={htmlhint_balance}
         isCurrency={true}

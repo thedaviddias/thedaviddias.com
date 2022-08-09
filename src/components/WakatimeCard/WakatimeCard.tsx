@@ -26,12 +26,14 @@ export const WakatimeCard = () => {
   return (
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
       <MetricsCard
-        header="Average coding activity per day (last 7 days)"
+        header="Average coding activity per day"
+        side="(last 7 days)"
         link={link}
         stat={duration(daily_average)}
       />
       <MetricsCard
-        header="Total coding time (last 7 days)"
+        header="Total coding time"
+        side="(last 7 days)"
         link={link}
         stat={duration(total_seconds)}
       />

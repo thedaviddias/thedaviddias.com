@@ -24,17 +24,16 @@ export const SteamCard = () => {
 
   const count = data?.count
   const recently = data?.recently
-  const link = 'https://steamcommunity.com/id/servitus/'
 
   if (error) return <></>
   if (!data) return <div>Loading...</div>
 
   return (
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
-      <MetricsCard header="Total number of Steam games" link={link} metric={count} />
+      <MetricsCard header="Total number of Steam games" metric={count} />
       <MetricsCard
-        header={`Duration of the most played game (last 2 weeks): ${recently?.name}`}
-        link={link}
+        header={`Most played game duration: ${recently?.name}`}
+        side="(last 2 weeks)"
         stat={minutesToString(recently?.playtime_2weeks)}
       />
     </div>

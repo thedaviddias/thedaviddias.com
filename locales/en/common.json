@@ -207,7 +207,7 @@
     "seo": {
       "url": "dashboard",
       "title": "Dashboard",
-      "description": ""
+      "description": "Find all the metrics related to all my activities and interests"
     },
     "sections": {
       "latest-dashboard": "Mini Dashboard",

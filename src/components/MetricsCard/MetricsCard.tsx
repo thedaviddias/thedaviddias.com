@@ -8,9 +8,16 @@ type MetricsCardProps = {
   metric?: number
   header: string
   stat?: string
+  isCurrency?: boolean
 }
 
-export const MetricsCard: FC<MetricsCardProps> = ({ header, link, metric, stat }) => {
+export const MetricsCard: FC<MetricsCardProps> = ({
+  header,
+  link,
+  metric,
+  stat,
+  isCurrency = false,
+}) => {
   return (
     <article className="flex flex-col border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-md p-4 h-full border">
       <H5 as="h3">
@@ -19,7 +26,13 @@ export const MetricsCard: FC<MetricsCardProps> = ({ header, link, metric, stat }
         </CustomLink>
       </H5>
       <p className="mt-2 text-3xl font-bold spacing-sm text-black dark:text-white">
-        {metric && metric > 0 ? metric.toLocaleString() : ''}
+        {metric && metric > 0 && isCurrency
+          ? metric.toLocaleString('en-US', {
+              style: 'currency',
+              currency: 'USD',
+            })
+          : ''}
+        {metric && metric > 0 && !isCurrency ? metric.toLocaleString() : ''}
         {stat && stat ? stat : ''}
       </p>
     </article>

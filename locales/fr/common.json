@@ -197,5 +197,21 @@
   "comments": {
     "title": "Commentaires",
     "description": "N'hésitez pas à laisser votre commentaire! Si vous ne possédez pas de compte Github, vous pouvez toujours tweeter au sujet de cet article!"
+  },
+  "dashboard": {
+    "path": "/dashboard",
+    "seo": {
+      "url": "dashboard",
+      "title": "Tableau de bord",
+      "description": ""
+    },
+    "sections": {
+      "latest-dashboard": "Mini tableau de bord",
+      "viewAll": "→ Voir mon tableau de bord"
+    },
+    "unsplash": {
+      "downloads": "Téléchargement sur Unsplash",
+      "views": "Vue de mon profile sur Unsplash"
+    }
   }
 }

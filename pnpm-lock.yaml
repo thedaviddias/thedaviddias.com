@@ -43,6 +43,7 @@ specifiers:
   hast-util-to-string: ^2.0.0
   husky: ^8.0.1
   lint-staged: ^13.0.3
+  minutes-to-string: ^1.0.0
   next: 12.2.4
   next-mdx-remote: ^4.1.0
   next-plausible: ^3.2.0
@@ -131,6 +132,7 @@ devDependencies:
   hast-util-to-string: 2.0.0
   husky: 8.0.1
   lint-staged: 13.0.3
+  minutes-to-string: 1.0.0
   next-sitemap: 3.1.16_5zhu3cku25zwtyi2lv2v345ony
   node-fetch: 3.2.10
   react-social-media-embed: 2.2.2_biqbaboplfbrettd7655fr4n2y
@@ -5902,6 +5904,10 @@ packages:
 
   /minimist/1.2.6:
     resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
+
+  /minutes-to-string/1.0.0:
+    resolution: {integrity: sha512-cBqNVXh24srEH0RVGJbMVYOUkf80ka/zwSz4klY2AprwQIjTjjjHbNOJ79W9OnlDERmeoZgifjvbNPqhxQsRRw==}
+    dev: true
 
   /mkdirp-classic/0.5.3:
     resolution: {integrity: sha512-gKLcREMhtuZRwRAfqP3RFW+TK4JqApVBtOIftVgjuABpAtpxhPGaDcfvbhNvD0B8iD1oUr/txX35NjcaY6Ns/A==}

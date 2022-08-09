@@ -1,4 +1,4 @@
-import { formatDistance } from 'date-fns'
+import minutesToString from 'minutes-to-string'
 import useSWR from 'swr'
 
 import fetcher from '@/utils/fetcher'
@@ -33,9 +33,9 @@ export const SteamCard = () => {
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
       <MetricsCard header="Total number of Steam games" link={link} metric={count} />
       <MetricsCard
-        header={`Most played game (last 2 weeks): ${recently?.name}`}
+        header={`Duration of the most played game (last 2 weeks): ${recently?.name}`}
         link={link}
-        metric={recently?.playtime_2weeks}
+        stat={minutesToString(recently?.playtime_2weeks)}
       />
     </div>
   )

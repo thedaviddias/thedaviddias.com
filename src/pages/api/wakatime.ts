@@ -1,7 +1,8 @@
 import { RANGE, WakaTimeApi } from '@nick22985/wakatime-api'
+import { withSentry } from '@sentry/nextjs'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const apiKey = process.env.WAKATIME_API_KEY
   const wakaClient = apiKey && new WakaTimeApi(apiKey)
 
@@ -12,3 +13,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     total_seconds: getMyStats.data.total_seconds_including_other_language,
   })
 }
+
+export default withSentry(handler)

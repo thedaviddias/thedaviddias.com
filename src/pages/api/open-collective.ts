@@ -1,6 +1,7 @@
+import { withSentry } from '@sentry/nextjs'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const frontendchecklist = await fetch(`https://opencollective.com/front-end-checklist.json`, {
     method: 'GET',
   })
@@ -14,3 +15,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   return res.status(200).json({ projects: [dataFrontendchecklist, dataHtmlhint] })
 }
+
+export default withSentry(handler)

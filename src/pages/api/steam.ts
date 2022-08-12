@@ -1,6 +1,7 @@
+import { withSentry } from '@sentry/nextjs'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const steamIds = process.env.STEAM_IDS
   const steamKey = process.env.STEAM_KEY
 
@@ -25,3 +26,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     .status(200)
     .json({ count: dataGames.response.game_count, recently: dataRecently.response.games[0] })
 }
+
+export default withSentry(handler)

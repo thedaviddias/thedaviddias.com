@@ -10,7 +10,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       Authorization: `Bearer ${token}`,
       'Content-Type': 'application/json',
       'simkl-api-key': clientId,
-    },
+    } as any,
     method: 'POST',
   })
 

@@ -14,7 +14,6 @@ import { Dashboard } from '@/components/Dashboard'
 import { LatestGithubSection } from '@/components/LatestGithubSection'
 import { LatestNotesSection } from '@/components/LatestNotesSection'
 import { LatestPostsSection } from '@/components/LatestPostsSection'
-import { Subscribe } from '@/components/Subscribe'
 import { ToRead } from '@/components/ToRead'
 
 import { routes } from '@/config/routes'

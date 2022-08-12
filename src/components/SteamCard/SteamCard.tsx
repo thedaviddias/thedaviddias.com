@@ -34,7 +34,7 @@ export const SteamCard = () => {
       <MetricsCard
         header={`Most played game duration: ${recently?.name}`}
         side="(last 2 weeks)"
-        stat={prettyMilliseconds(recently?.playtime_2weeks * 60000)}
+        stat={prettyMilliseconds(recently?.playtime_2weeks || 1 * 60000)}
       />
     </div>
   )

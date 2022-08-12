@@ -71,3 +71,7 @@ input:-webkit-autofill:focus {
 /* ::marker {
   @apply text-gray-300 dark:text-gray-500;
 } */
+
+.goodreads-shelf img {
+  @apply rounded-lg object-cover h-36;
+}

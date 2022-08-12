@@ -7,7 +7,7 @@ const nextConfig = nextTranslate({
   pageExtensions: ['ts', 'tsx', 'mdx'],
   poweredByHeader: false,
   images: {
-    domains: ['webmention.io'],
+    domains: ['webmention.io', 'i.gr-assets.com'],
   },
   async redirects() {
     return [

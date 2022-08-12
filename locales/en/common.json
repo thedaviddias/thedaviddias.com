@@ -210,12 +210,21 @@
       "description": "Find all the metrics related to all my activities and interests"
     },
     "sections": {
+      "coding": "Coding / Open source",
+      "photos": "Photos",
+      "tv": "TV Shows and Movies",
+      "gaming": "Gaming",
       "latest-dashboard": "Mini Dashboard",
       "viewAll": "→ View my dashboard"
     },
     "unsplash": {
       "downloads": "Unsplash Downloads",
       "views": "Unsplash Views"
+    }
+  },
+  "books": {
+    "sections": {
+      "viewAll": "→ View my profile"
     }
   }
 }

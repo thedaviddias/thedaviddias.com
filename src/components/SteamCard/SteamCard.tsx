@@ -1,4 +1,4 @@
-import minutesToString from 'minutes-to-string'
+import prettyMilliseconds from 'pretty-ms'
 import useSWR from 'swr'
 
 import fetcher from '@/utils/fetcher'
@@ -34,7 +34,7 @@ export const SteamCard = () => {
       <MetricsCard
         header={`Most played game duration: ${recently?.name}`}
         side="(last 2 weeks)"
-        stat={minutesToString(recently?.playtime_2weeks)}
+        stat={prettyMilliseconds(recently?.playtime_2weeks * 60000)}
       />
     </div>
   )

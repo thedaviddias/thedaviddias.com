@@ -5,6 +5,7 @@ import { CollectiveCard } from '@/components/CollectiveCard'
 import { Container } from '@/components/Container'
 import { H2 } from '@/components/Headings'
 import { PageHeader } from '@/components/PageHeader'
+import { SimklCard } from '@/components/Simkl'
 import { SteamCard } from '@/components/SteamCard'
 import { Unsplash } from '@/components/Unsplash'
 import { WakatimeCard } from '@/components/WakatimeCard'
@@ -28,18 +29,23 @@ const DashboardPage = () => {
         />
 
         <section className="mb-10">
-          <H2>Coding / Open source</H2>
+          <H2>{t('dashboard.sections.coding')}</H2>
           <WakatimeCard />
           <CollectiveCard />
         </section>
 
         <section className="mb-10">
-          <H2>Photos</H2>
+          <H2>{t('dashboard.sections.photos')}</H2>
           <Unsplash />
         </section>
 
         <section className="mb-10">
-          <H2>Gaming</H2>
+          <H2>{t('dashboard.sections.tv')}</H2>
+          <SimklCard />
+        </section>
+
+        <section className="mb-10">
+          <H2>{t('dashboard.sections.gaming')}</H2>
           <SteamCard />
         </section>
       </main>

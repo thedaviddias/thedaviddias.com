@@ -43,7 +43,6 @@ specifiers:
   hast-util-to-string: ^2.0.0
   husky: ^8.0.1
   lint-staged: ^13.0.3
-  minutes-to-string: ^1.0.0
   next: 12.2.4
   next-mdx-remote: ^4.1.0
   next-plausible: ^3.2.0
@@ -54,8 +53,10 @@ specifiers:
   node-fetch: ^3.2.10
   postcss: 8.4.16
   prettier: ^2.7.1
+  pretty-ms: ^8.0.0
   react: 18.2.0
   react-dom: 18.2.0
+  react-goodreads-shelf: ^2.3.0
   react-social-media-embed: ^2.2.2
   react-social-sharing: ^3.3.0
   reading-time: ^1.5.0
@@ -132,9 +133,10 @@ devDependencies:
   hast-util-to-string: 2.0.0
   husky: 8.0.1
   lint-staged: 13.0.3
-  minutes-to-string: 1.0.0
   next-sitemap: 3.1.16_5zhu3cku25zwtyi2lv2v345ony
   node-fetch: 3.2.10
+  pretty-ms: 8.0.0
+  react-goodreads-shelf: 2.3.0
   react-social-media-embed: 2.2.2_biqbaboplfbrettd7655fr4n2y
   rehype-autolink-headings: 6.1.1
   rehype-figure: 1.0.1
@@ -5905,10 +5907,6 @@ packages:
   /minimist/1.2.6:
     resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
 
-  /minutes-to-string/1.0.0:
-    resolution: {integrity: sha512-cBqNVXh24srEH0RVGJbMVYOUkf80ka/zwSz4klY2AprwQIjTjjjHbNOJ79W9OnlDERmeoZgifjvbNPqhxQsRRw==}
-    dev: true
-
   /mkdirp-classic/0.5.3:
     resolution: {integrity: sha512-gKLcREMhtuZRwRAfqP3RFW+TK4JqApVBtOIftVgjuABpAtpxhPGaDcfvbhNvD0B8iD1oUr/txX35NjcaY6Ns/A==}
     dev: true
@@ -6335,6 +6333,11 @@ packages:
       lines-and-columns: 1.2.4
     dev: true
 
+  /parse-ms/3.0.0:
+    resolution: {integrity: sha512-Tpb8Z7r7XbbtBTrM9UhpkzzaMrqA2VXMT3YChzYltwV3P3pM6t8wl7TvpMnSTosz1aQAdVib7kdoys7vYOPerw==}
+    engines: {node: '>=12'}
+    dev: true
+
   /parse-numeric-range/1.3.0:
     resolution: {integrity: sha512-twN+njEipszzlMJd4ONUYgSfZPDxgHhT9Ahed5uTigpQn90FggW4SA/AIPq/6a149fTbE9qBEcSwE3FAEp6wQQ==}
     dev: true
@@ -6551,6 +6554,13 @@ packages:
       react-is: 17.0.2
     dev: true
 
+  /pretty-ms/8.0.0:
+    resolution: {integrity: sha512-ASJqOugUF1bbzI35STMBUpZqdfYKlJugy6JBziGi2EE+AL5JPJGSzvpeVXojxrr0ViUYoToUjb5kjSEGf7Y83Q==}
+    engines: {node: '>=14.16'}
+    dependencies:
+      parse-ms: 3.0.0
+    dev: true
+
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
     dev: true
@@ -6650,6 +6660,11 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+
+  /react-goodreads-shelf/2.3.0:
+    resolution: {integrity: sha512-kSGwVXwaKYzeSt/n9NEV8RmhzRV8ATa/6MU5YXaR4AKjPAFXuD5j5MwbHdI6WE9XypTTdQOUulzre6hGOJnnaQ==}
+    engines: {node: '>=14'}
+    dev: true
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}

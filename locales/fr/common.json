@@ -206,6 +206,10 @@
       "description": ""
     },
     "sections": {
+      "coding": "Code / Open source",
+      "photos": "Photos",
+      "tv": "Films et séries",
+      "gaming": "Jeux",
       "latest-dashboard": "Mini tableau de bord",
       "viewAll": "→ Voir mon tableau de bord"
     },

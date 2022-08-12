@@ -8,11 +8,14 @@ import generateRssFeed from '@/lib/generateRss'
 import { fetchRepos } from '@/lib/github'
 
 import { Container } from '@/components/Container'
+import { CurrentlyReading } from '@/components/CurrentlyReading'
 import { CustomLink } from '@/components/CustomLink'
 import { Dashboard } from '@/components/Dashboard'
 import { LatestGithubSection } from '@/components/LatestGithubSection'
 import { LatestNotesSection } from '@/components/LatestNotesSection'
 import { LatestPostsSection } from '@/components/LatestPostsSection'
+import { Subscribe } from '@/components/Subscribe'
+import { ToRead } from '@/components/ToRead'
 
 import { routes } from '@/config/routes'
 import { HERO_LINKS } from '@/constants'
@@ -80,14 +83,21 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects }) => {
             <Image
               className="rounded-full"
               src="/images/david-dias-round.jpg"
-              width={270}
-              height={270}
+              width={250}
+              height={250}
               alt="Photo of David Dias"
             />
           </div>
         </section>
 
         <LatestNotesSection notes={notes} />
+
+        <div>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 max-w-5xl">
+            <CurrentlyReading />
+            <ToRead />
+          </div>
+        </div>
 
         <LatestGithubSection projects={ghProjects} />
 
@@ -96,6 +106,8 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects }) => {
         {process.env.NODE_ENV === 'production' && <PodcastSection />}
 
         <Dashboard />
+
+        {/* <Subscribe /> */}
       </main>
     </Container>
   )

@@ -1,6 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next'
 import dynamic from 'next/dynamic'
-import Image from 'next/image'
+import Image from 'next/future/image'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 
@@ -80,11 +80,12 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects }) => {
           </div>
           <div className="hidden lg:block">
             <Image
-              className="rounded-full"
+              className="rounded-full w-60 h-60"
               src="/images/david-dias-round.jpg"
               width={250}
               height={250}
               alt="Photo of David Dias"
+              priority={true}
             />
           </div>
         </section>

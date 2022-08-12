@@ -24,6 +24,7 @@ export const SteamCard = () => {
 
   const count = data?.count
   const recently = data?.recently
+  const playtime = recently?.playtime_2weeks as number
 
   if (error) return <></>
   if (!data) return <div>Loading...</div>
@@ -34,7 +35,7 @@ export const SteamCard = () => {
       <MetricsCard
         header={`Most played game duration: ${recently?.name}`}
         side="(last 2 weeks)"
-        stat={prettyMilliseconds(recently?.playtime_2weeks || 1 * 60000)}
+        stat={prettyMilliseconds(playtime * 60000)}
       />
     </div>
   )

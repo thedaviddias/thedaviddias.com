@@ -1,5 +1,5 @@
 import { formatDistance } from 'date-fns'
-import Image from 'next/image'
+import Image from 'next/future/image'
 import useTranslation from 'next-translate/useTranslation'
 import { FC, useState } from 'react'
 
@@ -29,7 +29,7 @@ export const Webmentions: FC<WebMentionsProps> = ({ mentions }) => {
 
       {mentions?.length ? (
         <>
-          <ul className="flex">
+          <ul className="flex relative">
             {mentions?.map((mention, i) => (
               <li className={`flex flex-col ${i > 0 && '-ml-8'}`} key={i}>
                 <CustomLink href={mention.data.url} className="mr-2" icon={false}>
@@ -38,7 +38,7 @@ export const Webmentions: FC<WebMentionsProps> = ({ mentions }) => {
                     alt={mention.data.author.name}
                     width={53}
                     height={53}
-                    className="rounded-full border w-4 h-4 absolute top-1 left-0 object-cover"
+                    className="rounded-full border"
                   />
                 </CustomLink>
               </li>
@@ -71,7 +71,7 @@ export const Webmentions: FC<WebMentionsProps> = ({ mentions }) => {
                       alt={mention.data.author.name}
                       width={45}
                       height={45}
-                      className="rounded-full border w-4 h-4 absolute top-1 left-0 object-cover"
+                      className="rounded-full border"
                     />
                   </CustomLink>
                   <div className="col-span-7">

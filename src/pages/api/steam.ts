@@ -2,7 +2,7 @@ import { withSentry } from '@sentry/nextjs'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  const steamIds = process.env.STEAM_IDS
+  const steamIds = process.env.STEAM_USER_ID
   const steamKey = process.env.STEAM_KEY
 
   const games = await fetch(

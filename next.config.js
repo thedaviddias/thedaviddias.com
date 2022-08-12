@@ -8,6 +8,12 @@ const nextConfig = nextTranslate({
   poweredByHeader: false,
   images: {
     domains: ['webmention.io', 'i.gr-assets.com'],
+    formats: ['image/avif', 'image/webp'],
+  },
+  experimental: {
+    images: {
+      allowFutureImage: true,
+    },
   },
   async redirects() {
     return [

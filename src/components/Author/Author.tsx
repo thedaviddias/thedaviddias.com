@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/future/image'
 import useTranslation from 'next-translate/useTranslation'
 import { FC } from 'react'
 
@@ -21,12 +21,13 @@ export const Author: FC<AuthorProps> = ({ name, routes }) => {
           <div className="flex items-center">
             <div>
               <Image
-                className="inline-block rounded-full"
+                className="inline-block rounded-full h-auto max-w-xl"
                 src="/images/david-dias-round.png"
                 width={40}
                 height={40}
                 alt="Profile avatar of David Dias"
                 aria-hidden="true"
+                priority={true}
               />
             </div>
             <div className="ml-3 text-left">

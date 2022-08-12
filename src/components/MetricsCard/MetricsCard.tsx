@@ -1,5 +1,3 @@
-import React, { FC } from 'react'
-
 import { CustomLink } from '../CustomLink'
 import { H5 } from '../Headings'
 
@@ -12,7 +10,7 @@ type MetricsCardProps = {
   side?: string
 }
 
-export const MetricsCard: FC<MetricsCardProps> = ({
+export const MetricsCard: React.FC<MetricsCardProps> = ({
   header,
   link,
   metric,
@@ -24,7 +22,7 @@ export const MetricsCard: FC<MetricsCardProps> = ({
     <article className="flex flex-col border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-md p-4 h-full border relative">
       <H5 as="h3">
         {link ? (
-          <CustomLink href={link} className="dark:text-blue-300 font-semibold mb-3">
+          <CustomLink href={link} className="dark:text-blue-300 font-semibold">
             {header}
           </CustomLink>
         ) : (

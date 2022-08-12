@@ -1,5 +1,5 @@
 import useTranslation from 'next-translate/useTranslation'
-import { FC, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { CustomLink } from '@/components/CustomLink'
 
@@ -11,7 +11,7 @@ type HeaderProps = {
   pathname: string
 }
 
-export const Header: FC<HeaderProps> = ({ pathname }) => {
+export const Header: React.FC<HeaderProps> = ({ pathname }) => {
   const { t } = useTranslation('common')
   const [userLocale, setUserLocale] = useState('')
 

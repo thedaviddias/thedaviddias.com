@@ -1,5 +1,4 @@
 import useTranslation from 'next-translate/useTranslation'
-import { FC } from 'react'
 
 import { GhProjectsProps } from '@/pages/projects'
 
@@ -11,7 +10,7 @@ export type LatestGithubSectionProps = {
   projects: GhProjectsProps[]
 }
 
-export const LatestGithubSection: FC<LatestGithubSectionProps> = ({ projects }) => {
+export const LatestGithubSection: React.FC<LatestGithubSectionProps> = ({ projects }) => {
   const { t } = useTranslation('common')
 
   return (

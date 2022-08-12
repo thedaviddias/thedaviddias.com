@@ -14,6 +14,7 @@ import { Dashboard } from '@/components/Dashboard'
 import { LatestGithubSection } from '@/components/LatestGithubSection'
 import { LatestNotesSection } from '@/components/LatestNotesSection'
 import { LatestPostsSection } from '@/components/LatestPostsSection'
+import { Loader } from '@/components/Loader'
 import { ToRead } from '@/components/ToRead'
 
 import { routes } from '@/config/routes'
@@ -21,7 +22,7 @@ import { HERO_LINKS } from '@/constants'
 import { getAllPostsWithFrontMatter } from '@/utils/get-articles-posts'
 
 const PodcastSection = dynamic(() => import('../components/PodcastSection'), {
-  loading: () => <p>Loading...</p>,
+  loading: () => <Loader />,
   ssr: false,
 })
 

@@ -1,6 +1,5 @@
 import { formatDistance } from 'date-fns'
 import useTranslation from 'next-translate/useTranslation'
-import { FC } from 'react'
 
 import { CustomLink } from '@/components/CustomLink'
 
@@ -15,7 +14,7 @@ export type GithubProjectProps = {
   project: GhProjectsProps
 }
 
-export const GithubProject: FC<GithubProjectProps> = ({ project }) => {
+export const GithubProject: React.FC<GithubProjectProps> = ({ project }) => {
   const { t, lang } = useTranslation('common')
 
   return (

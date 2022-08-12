@@ -1,6 +1,5 @@
 import { format } from 'date-fns'
 import useTranslation from 'next-translate/useTranslation'
-import { FC } from 'react'
 
 import { CustomLink } from '@/components/CustomLink'
 import { H4 } from '@/components/Headings'
@@ -10,7 +9,7 @@ type NotesProps = {
   note: any
 }
 
-export const Notes: FC<NotesProps> = ({ note }) => {
+export const Notes: React.FC<NotesProps> = ({ note }) => {
   const { t } = useTranslation('common')
 
   return (

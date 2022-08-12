@@ -16,6 +16,7 @@ import { Author } from '@/components/Author'
 import { Container } from '@/components/Container'
 import { DatePost } from '@/components/DatePost'
 import { H1 } from '@/components/Headings'
+import { Loader } from '@/components/Loader'
 import { MDXComponents } from '@/components/MdxComponents'
 import { ScrollTop } from '@/components/ScrollTop'
 import { Share } from '@/components/Share'
@@ -60,7 +61,7 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
   const { isFallback } = useRouter()
 
   if (isFallback || !title) {
-    return <div>Loading...</div>
+    return <Loader />
   }
 
   return (

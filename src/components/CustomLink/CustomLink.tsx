@@ -1,6 +1,5 @@
 import clsx from 'clsx'
 import Link, { LinkProps } from 'next/link'
-import React, { FC } from 'react'
 
 type CustomLinkProps = LinkProps & {
   href: string
@@ -10,7 +9,7 @@ type CustomLinkProps = LinkProps & {
   icon?: boolean
 }
 
-export const CustomLink: FC<CustomLinkProps> = ({
+export const CustomLink: React.FC<CustomLinkProps> = ({
   href,
   className,
   children,

@@ -1,6 +1,5 @@
 import Image from 'next/future/image'
 import useTranslation from 'next-translate/useTranslation'
-import { FC } from 'react'
 
 import { CustomLink } from '@/components/CustomLink'
 import { H5 } from '@/components/Headings'
@@ -12,7 +11,7 @@ type ToolCard = {
   tool: Tool
 }
 
-export const ToolCard: FC<ToolCard> = ({ tool }) => {
+export const ToolCard: React.FC<ToolCard> = ({ tool }) => {
   const { lang } = useTranslation('common')
 
   return (

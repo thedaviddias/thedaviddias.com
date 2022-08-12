@@ -2,6 +2,7 @@ import useSWR from 'swr'
 
 import fetcher from '@/utils/fetcher'
 
+import { Loader } from '../Loader'
 import { MetricsCard } from '../MetricsCard'
 
 export type UnsplashRes = {
@@ -17,7 +18,7 @@ export const Unsplash = () => {
   const link = 'https://unsplash.com/@thedaviddias'
 
   if (error) return <></>
-  if (!data) return <div>Loading...</div>
+  if (!data) return <Loader />
 
   return (
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">

@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextTranslate = require('next-translate')
-const { withSentryConfig } = require('@sentry/nextjs');
+const { withSentryConfig } = require('@sentry/nextjs')
 
 const nextConfig = nextTranslate({
   reactStrictMode: true,
@@ -49,9 +49,9 @@ const sentryWebpackPluginOptions = {
   //   urlPrefix, include, ignore
 
   silent: true, // Suppresses all logs
-  dryRun: process.env.VERCEL_ENV !== "production"
-};
+  dryRun: process.env.VERCEL_ENV !== 'production',
+}
 
 // Make sure adding Sentry options is the last code to run before exporting, to
 // ensure that your source maps include changes from all other Webpack plugins
-module.exports = withSentryConfig(nextConfig, sentryWebpackPluginOptions);
+module.exports = withSentryConfig(nextConfig, sentryWebpackPluginOptions)

@@ -1,5 +1,4 @@
 import useTranslation from 'next-translate/useTranslation'
-import { FC } from 'react'
 
 import useSkipLinks, { SkipLinksProps } from '@/hooks/useSkipLinks'
 
@@ -8,7 +7,7 @@ type SkipContentProps = {
   className: string
 }
 
-const SkipContent: FC<SkipContentProps> = ({ link, className }) => {
+const SkipContent: React.FC<SkipContentProps> = ({ link, className }) => {
   const { t } = useTranslation('common')
   return (
     <a href={`#${link.id}`} className={className}>

@@ -1,5 +1,4 @@
 import { NextSeo, NextSeoProps } from 'next-seo'
-import React, { FC } from 'react'
 
 import { Container } from '@/components/Container'
 
@@ -13,7 +12,7 @@ type BaseLayoutProps = NextSeoProps & {
   className?: string
 }
 
-export const BaseLayout: FC<BaseLayoutProps> = ({
+export const BaseLayout: React.FC<BaseLayoutProps> = ({
   children,
   title,
   description,

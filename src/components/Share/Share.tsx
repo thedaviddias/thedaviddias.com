@@ -1,5 +1,5 @@
 import { camelCase } from 'camel-case'
-import React, { FC } from 'react'
+import React from 'react'
 import { Facebook, Linkedin, Reddit, Twitter } from 'react-social-sharing'
 
 type ShareProps = {
@@ -8,7 +8,7 @@ type ShareProps = {
   tags?: string[]
 }
 
-export const Share: FC<ShareProps> = ({ permalink, title, tags }) => {
+export const Share: React.FC<ShareProps> = ({ permalink, title, tags }) => {
   const arr: string[] = []
 
   tags &&

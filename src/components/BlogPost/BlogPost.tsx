@@ -1,6 +1,5 @@
 import { format } from 'date-fns'
 import useTranslation from 'next-translate/useTranslation'
-import { FC } from 'react'
 import slugify from 'slugify'
 
 import { CustomLink } from '@/components/CustomLink'
@@ -13,7 +12,7 @@ type BlogPostProps = {
   isCategoryPage?: string | string[]
 }
 
-export const BlogPost: FC<BlogPostProps> = ({ post, isCategoryPage }) => {
+export const BlogPost: React.FC<BlogPostProps> = ({ post, isCategoryPage }) => {
   const { t, lang } = useTranslation('common')
 
   return (

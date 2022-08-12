@@ -1,9 +1,8 @@
 import Image, { ImageProps } from 'next/image'
-import { FC } from 'react'
 
 import { CustomLink } from '../CustomLink'
 
-export const ResponsiveImage: FC<ImageProps> = ({
+export const ResponsiveImage: React.FC<ImageProps> = ({
   src,
   title,
   alt = '',

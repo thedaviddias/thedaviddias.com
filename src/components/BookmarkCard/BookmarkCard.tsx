@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import clsx from 'clsx'
-import { FC } from 'react'
 
 import { Bookmark } from '@/pages/bookmarks'
 
@@ -12,7 +11,7 @@ type BookmarkCardProps = Bookmark & {
   selectedTag?: string
 }
 
-export const BookmarkCard: FC<BookmarkCardProps> = ({
+export const BookmarkCard: React.FC<BookmarkCardProps> = ({
   title,
   cover,
   link,

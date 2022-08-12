@@ -1,12 +1,11 @@
 import { LinkProps } from 'next/link'
-import { FC } from 'react'
 
 type CustomLinkProps = LinkProps & {
   href: string
   children: React.ReactNode
 }
 
-export const CustomLink: FC<CustomLinkProps> = ({ href, children }) => {
+export const CustomLink: React.FC<CustomLinkProps> = ({ href, children }) => {
   const external = !href.startsWith('/')
   if (external) {
     return (

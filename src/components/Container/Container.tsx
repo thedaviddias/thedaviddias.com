@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
-import { FC } from 'react'
 
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
@@ -13,7 +12,7 @@ type ContainerProps = {
   children: React.ReactNode
 }
 
-export const Container: FC<ContainerProps> = ({ children }) => {
+export const Container: React.FC<ContainerProps> = ({ children }) => {
   const router = useRouter()
   const { t, lang } = useTranslation('common')
 

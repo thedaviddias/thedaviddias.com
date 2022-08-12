@@ -3,6 +3,7 @@ import useSWR from 'swr'
 
 import fetcher from '@/utils/fetcher'
 
+import { Loader } from '../Loader'
 import { MetricsCard } from '../MetricsCard'
 
 type SimklRes = {
@@ -22,7 +23,7 @@ export const SimklCard = () => {
   const link = 'https://simkl.com/5311920'
 
   if (error) return <></>
-  if (!data) return <div>Loading...</div>
+  if (!data) return <Loader />
 
   return (
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">

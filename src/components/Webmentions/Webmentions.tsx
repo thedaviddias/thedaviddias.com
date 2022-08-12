@@ -1,7 +1,7 @@
 import { formatDistance } from 'date-fns'
 import Image from 'next/future/image'
 import useTranslation from 'next-translate/useTranslation'
-import { FC, useState } from 'react'
+import { useState } from 'react'
 
 import { WebMention } from '@/pages/articles/[slug]'
 import { convertLangDateFs } from '@/utils/language-date'
@@ -14,7 +14,7 @@ type WebMentionsProps = {
   mentions?: WebMention[]
 }
 
-export const Webmentions: FC<WebMentionsProps> = ({ mentions }) => {
+export const Webmentions: React.FC<WebMentionsProps> = ({ mentions }) => {
   const { t, lang } = useTranslation('common')
   const [isMentionsVisible, setIsMentionsVisible] = useState(false)
 

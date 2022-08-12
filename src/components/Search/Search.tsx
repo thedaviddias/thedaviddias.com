@@ -5,7 +5,7 @@ type SearchProps = {
   setSearchValue: (arg: string) => void
 }
 
-export const Search: FC<SearchProps> = ({ setSearchValue }) => {
+export const Search: React.FC<SearchProps> = ({ setSearchValue }) => {
   const { t } = useTranslation('common')
 
   return (

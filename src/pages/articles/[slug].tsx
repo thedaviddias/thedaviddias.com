@@ -20,7 +20,9 @@ import { Comments } from '@/components/Comments'
 import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
 import { DatePost } from '@/components/DatePost'
+import { DisplayViews } from '@/components/DisplayViews'
 import { H1 } from '@/components/Headings'
+import { Loader } from '@/components/Loader'
 import { MDXComponents } from '@/components/MdxComponents'
 import { Paragraph } from '@/components/Paragraph'
 import { ScrollTop } from '@/components/ScrollTop'
@@ -110,6 +112,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
   source,
   headings,
   permalink,
+  slug,
   adjacentPosts,
 }) => {
   const { title, description, tags, categories, date, lastmod, author, published } = frontMatter
@@ -122,7 +125,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
   )
 
   if (isFallback || !title) {
-    return <div>Loading...</div>
+    return <Loader />
   }
 
   return (
@@ -192,7 +195,11 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
             <div className="flex justify-between">
               {author && <Author name={author} routes={routes} />}
 
-              {date && <DatePost date={date} lastmod={lastmod} />}
+              <div className="flex flex-col items-end">
+                {date && <DatePost date={date} lastmod={lastmod} />}
+
+                <DisplayViews slug={slug} />
+              </div>
             </div>
           </header>
           <div className="block lg:flex w-full">

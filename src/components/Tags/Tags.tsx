@@ -1,6 +1,5 @@
 import clsx from 'clsx'
 import useTranslation from 'next-translate/useTranslation'
-import { FC } from 'react'
 import slugify from 'slugify'
 
 import { CustomLink } from '@/components/CustomLink'
@@ -11,7 +10,7 @@ type TagsProps = {
   slug?: string
 }
 
-export const Tags: FC<TagsProps> = ({ tags, className, slug }) => {
+export const Tags: React.FC<TagsProps> = ({ tags, className, slug }) => {
   const { t } = useTranslation('common')
 
   const currentSlug = t('tags.path') || slug

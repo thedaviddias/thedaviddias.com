@@ -1,5 +1,4 @@
 import useTranslation from 'next-translate/useTranslation'
-import { FC } from 'react'
 
 import { CustomLink } from '@/components/CustomLink'
 
@@ -17,7 +16,7 @@ type AdjacentPostsProps = {
   posts: PreviousNext
 }
 
-export const AdjacentPosts: FC<AdjacentPostsProps> = ({ posts }) => {
+export const AdjacentPosts: React.FC<AdjacentPostsProps> = ({ posts }) => {
   const { t } = useTranslation('common')
 
   return (

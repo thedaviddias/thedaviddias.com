@@ -1,5 +1,4 @@
 import useTranslation from 'next-translate/useTranslation'
-import { FC } from 'react'
 
 import { CustomLink } from '@/components/CustomLink'
 
@@ -7,7 +6,7 @@ type CategoriesListProps = {
   categories: string[]
 }
 
-export const Categories: FC<CategoriesListProps> = ({ categories }) => {
+export const Categories: React.FC<CategoriesListProps> = ({ categories }) => {
   const { t } = useTranslation('common')
 
   return (

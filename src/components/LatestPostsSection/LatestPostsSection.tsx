@@ -1,5 +1,4 @@
 import useTranslation from 'next-translate/useTranslation'
-import { FC } from 'react'
 
 import { BlogPost } from '../BlogPost'
 import { CustomLink } from '../CustomLink'
@@ -9,7 +8,7 @@ type LatestPostsSection = {
   articles: any[]
 }
 
-export const LatestPostsSection: FC<LatestPostsSection> = ({ articles }) => {
+export const LatestPostsSection: React.FC<LatestPostsSection> = ({ articles }) => {
   const { t } = useTranslation('common')
 
   return (

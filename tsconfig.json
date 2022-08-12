@@ -21,6 +21,6 @@
       "~/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/_error.js"],
   "exclude": ["node_modules", "config", "next-sitemap.config.js", "cypress"]
 }

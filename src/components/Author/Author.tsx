@@ -1,6 +1,5 @@
 import Image from 'next/future/image'
 import useTranslation from 'next-translate/useTranslation'
-import { FC } from 'react'
 
 import { CustomLink } from '@/components/CustomLink'
 
@@ -11,7 +10,7 @@ type AuthorProps = {
   routes: RoutesResponse
 }
 
-export const Author: FC<AuthorProps> = ({ name, routes }) => {
+export const Author: React.FC<AuthorProps> = ({ name, routes }) => {
   const { t } = useTranslation('common')
 
   return (

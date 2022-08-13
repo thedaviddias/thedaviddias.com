@@ -1,4 +1,5 @@
 import { camelCase } from 'camel-case'
+import useTranslation from 'next-translate/useTranslation'
 import React from 'react'
 import { Facebook, Linkedin, Reddit, Twitter } from 'react-social-sharing'
 
@@ -9,6 +10,7 @@ type ShareProps = {
 }
 
 export const Share: React.FC<ShareProps> = ({ permalink, title, tags }) => {
+  const { t } = useTranslation('common')
   const arr: string[] = []
 
   tags &&
@@ -20,6 +22,7 @@ export const Share: React.FC<ShareProps> = ({ permalink, title, tags }) => {
 
   return (
     <aside>
+      <p className="small-title">{t('share.title')}</p>
       <Twitter
         small
         message={`${title} ${hashtags} by @thedaviddias`}

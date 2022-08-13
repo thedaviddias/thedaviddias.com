@@ -240,6 +240,54 @@ export function getAdjacentPosts(slug: string, locale: string, dataType: string)
   }
 }
 
+export type GetRelatedPosts = BlogPostProps & {
+  relevance: number
+}
+
+export function getRelatedPosts(slug: string, locale: string, tags: string[]) {
+  const allPostHeaders = getAllPostsWithFrontMatter({ dataType: 'articles', locale })
+  const allNotesHeaders = getAllPostsWithFrontMatter({ dataType: 'notes', locale })
+  const allPosts: GetRelatedPosts[] = []
+
+  const posts = [...allPostHeaders, ...allNotesHeaders].filter((aPost) => aPost.slug !== slug)
+
+  const maxPosts = 3
+
+  const listTags = tags.map((tag) => {
+    return tag
+  })
+
+  posts
+    .map((post) => {
+      const postTags =
+        post.frontMatter.tags &&
+        post.frontMatter.tags
+          .map((tag) => {
+            return tag
+          })
+          .filter((tag) => {
+            return tag !== ''
+          })
+
+      const intersection = listTags.filter((tag) => {
+        return postTags?.includes(tag)
+      }).length
+
+      if (intersection > 0) {
+        return allPosts.push({
+          ...post,
+          relevance: intersection,
+        })
+      }
+    })
+    // .sort((a, b) => {
+    //   return b.relevance - a.relevance
+    // })
+    .slice(0, maxPosts)
+
+  return allPosts
+}
+
 export const getAllDraftPosts = ({ dataType }: GetAllPostsWithFrontMatter): BlogPostProps[] => {
   const blogs = getAllPosts(dataType)
 

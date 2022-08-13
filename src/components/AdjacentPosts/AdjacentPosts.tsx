@@ -20,8 +20,8 @@ export const AdjacentPosts: React.FC<AdjacentPostsProps> = ({ posts }) => {
   const { t } = useTranslation('common')
 
   return (
-    <div className="mt-10 border-t border-gray-200 dark:border-gray-600 pt-8">
-      <nav aria-label="Notes">
+    <div className="mt-10 border-t border-gray-200 dark:border-gray-300 pt-8">
+      <nav aria-label="Adjacent posts">
         <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 text-xl">
           <div className="nav-previous">
             {posts.previous && (

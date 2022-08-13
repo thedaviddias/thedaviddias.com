@@ -1,4 +1,5 @@
 import { formatDistance } from 'date-fns'
+import useTranslation from 'next-translate/useTranslation'
 import useSWR from 'swr'
 
 import fetcher from '@/utils/fetcher'
@@ -15,11 +16,12 @@ export type WakatimeRes = {
 }
 
 export const WakatimeCard = () => {
+  const { t } = useTranslation('common')
   const { data, error } = useSWR<WakatimeRes>('/api/wakatime', fetcher)
 
   const daily_average = data?.daily_average
   const total_seconds = data?.total_seconds
-  const link = 'https://wakatime.com/@thedaviddias'
+  const link = t('dashboard.sections.coding.url')
 
   if (error) return <></>
   if (!data) return <Loader />
@@ -27,14 +29,14 @@ export const WakatimeCard = () => {
   return (
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
       <MetricsCard
-        header="Average coding activity per day"
-        side="(last 7 days)"
+        header={t('dashboard.sections.coding.average_activity')}
+        side={t('dashboard.sections.coding.average_activity_duration')}
         link={link}
         stat={duration(daily_average)}
       />
       <MetricsCard
-        header="Total coding time"
-        side="(last 7 days)"
+        header={t('dashboard.sections.coding.total_time')}
+        side={t('dashboard.sections.coding.total_time_duration')}
         link={link}
         stat={duration(total_seconds)}
       />

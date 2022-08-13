@@ -1,3 +1,4 @@
+import useTranslation from 'next-translate/useTranslation'
 import prettyMilliseconds from 'pretty-ms'
 import useSWR from 'swr'
 
@@ -16,11 +17,12 @@ type SimklRes = {
 }
 
 export const SimklCard = () => {
+  const { t } = useTranslation('common')
   const { data, error } = useSWR<SimklRes>('/api/simkl', fetcher)
 
   const spent_total_mins = data?.stats.total_mins || 1
   const watched_total_mins = data?.stats.watched_last_week.total_mins || 1
-  const link = 'https://simkl.com/5311920'
+  const link = t('dashboard.sections.tv.url')
 
   if (error) return <></>
   if (!data) return <Loader />
@@ -28,14 +30,14 @@ export const SimklCard = () => {
   return (
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
       <MetricsCard
-        header="Spent watching"
-        side="(since forever)"
+        header={t('dashboard.sections.tv.total_spent')}
+        side={t('dashboard.sections.tv.total_spent_duration')}
         link={link}
         stat={prettyMilliseconds(spent_total_mins * 60000)}
       />
       <MetricsCard
-        header="Spent watching TV Shows"
-        side="(last week)"
+        header={t('dashboard.sections.tv.last_week_spent')}
+        side={t('dashboard.sections.tv.last_week_spent_duration')}
         link={link}
         stat={prettyMilliseconds(watched_total_mins * 60000)}
       />

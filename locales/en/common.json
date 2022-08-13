@@ -210,12 +210,40 @@
       "description": "Find all the metrics related to all my activities and interests."
     },
     "sections": {
-      "coding": "Coding / Open source",
-      "photos": "Photos",
-      "tv": "TV Shows and Movies",
-      "gaming": "Gaming",
+      "coding": {
+        "title": "Coding / Open source",
+        "url": "https://wakatime.com/@thedaviddias",
+        "average_activity": "Average coding activity per day",
+        "average_activity_duration": "(last 7 days)",
+        "total_time": "Total coding time",
+        "total_time_duration": "(last 7 days)",
+        "open_collective_fec": "Front-End Checklist balance",
+        "open_collective_fec_url": "https://opencollective.com/front-end-checklist",
+        "open_collective_htmlhint": "HTMLHint balance",
+        "open_collective_htmlhint_url": "https://opencollective.com/htmlhint"
+      },
+      "photos": {
+        "title": "Photos",
+        "url": "https://unsplash.com/@thedaviddias",
+        "downloads": "Unsplash downloads",
+        "views": "Unsplash views"
+      },
+      "tv": {
+        "title": "TV Shows and Movies",
+        "url": "https://simkl.com/5311920",
+        "total_spent": "Spent watching",
+        "total_spent_duration": "(since forever)",
+        "last_week_spent": "Spent watching TV Shows",
+        "last_week_spent_duration": "(last week)"
+      },
+      "gaming": {
+        "title": "Gaming",
+        "total_number": "Total number of Steam games",
+        "most_played": "Most played game duration: {{name}}",
+        "most_played_duration": "(last 2 weeks)"
+      },
       "latest-dashboard": "Mini Dashboard",
-      "viewAll": "→ View my dashboard"
+      "viewAll": "→ View my full dashboard"
     },
     "unsplash": {
       "downloads": "Unsplash Downloads",
@@ -252,5 +280,12 @@
       }
     },
     "all_issues": "Access all past issues"
+  },
+  "related": {
+    "title": "Related posts",
+    "description": "You might also like these posts:"
+  },
+  "share": {
+    "title": "Share this post"
   }
 }

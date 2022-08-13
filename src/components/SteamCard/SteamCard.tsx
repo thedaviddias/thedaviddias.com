@@ -1,3 +1,4 @@
+import useTranslation from 'next-translate/useTranslation'
 import prettyMilliseconds from 'pretty-ms'
 import useSWR from 'swr'
 
@@ -21,6 +22,7 @@ type SteamRes = {
 }
 
 export const SteamCard = () => {
+  const { t } = useTranslation('common')
   const { data, error } = useSWR<SteamRes>('/api/steam', fetcher)
 
   const count = data?.count
@@ -32,11 +34,11 @@ export const SteamCard = () => {
 
   return (
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
-      <MetricsCard header="Total number of Steam games" metric={count} />
+      <MetricsCard header={t('dashboard.sections.gaming.total_number')} metric={count} />
       <MetricsCard
-        header={`Most played game duration: ${recently?.name}`}
+        header={t('dashboard.sections.gaming.most_played', { name: recently?.name })}
         link={`https://store.steampowered.com/app/${recently?.appid}`}
-        side="(last 2 weeks)"
+        side={t('dashboard.sections.gaming.most_played_duration')}
         stat={prettyMilliseconds(playtime * 60000)}
       />
     </div>

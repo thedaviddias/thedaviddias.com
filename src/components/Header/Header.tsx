@@ -39,7 +39,7 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
             >
               {t('title')}
             </CustomLink>
-            <nav className="hidden sm:flex" data-testid="desktop-menu">
+            <nav className="hidden sm:flex" data-testid="desktop-menu" aria-label="Main navigation">
               {MENU_LINKS(t)
                 .filter((item) => item.menu !== false)
                 .map((item) => (

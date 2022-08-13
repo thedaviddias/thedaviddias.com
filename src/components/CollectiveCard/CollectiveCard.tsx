@@ -1,3 +1,4 @@
+import useTranslation from 'next-translate/useTranslation'
 import useSWR from 'swr'
 
 import fetcher from '@/utils/fetcher'
@@ -20,6 +21,7 @@ type CollectiveRes = {
 }
 
 export const CollectiveCard = () => {
+  const { t } = useTranslation('common')
   const { data, error } = useSWR<CollectiveRes>('/api/open-collective', fetcher)
 
   const frontendchecklist_balance = parseInt(`${data?.projects[0].balance}`.slice(0, -2))
@@ -31,14 +33,14 @@ export const CollectiveCard = () => {
   return (
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
       <MetricsCard
-        header="Front-End Checklist balance"
-        link="https://opencollective.com/front-end-checklist"
+        header={t('dashboard.sections.coding.open_collective_fec')}
+        link={t('dashboard.sections.coding.open_collective_fec_url')}
         metric={frontendchecklist_balance}
         isCurrency={true}
       />
       <MetricsCard
-        header="HTMLHint balance"
-        link="https://opencollective.com/htmlhint"
+        header={t('dashboard.sections.coding.open_collective_htmlhint')}
+        link={t('dashboard.sections.coding.open_collective_htmlhint_url')}
         metric={htmlhint_balance}
         isCurrency={true}
       />

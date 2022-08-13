@@ -18,7 +18,7 @@ export const RelatedPosts: React.FC<RelatedPostsProps> = ({ relatedPosts }) => {
       {relatedPosts.length ? (
         <section className="mt-10 border-t border-gray-200 dark:border-gray-600 pt-8">
           <header>
-            <H4 as="h2">{t('related.title')}</H4>
+            <H4 as="h3">{t('related.title')}</H4>
             <Paragraph className="text-sm">{t('related.description')}</Paragraph>
           </header>
           <ul className="list-disc pl-5">

@@ -23,7 +23,7 @@ export const Webmentions: React.FC<WebMentionsProps> = ({ mentions }) => {
   return (
     <section className="mt-10 border-t border-gray-200 dark:border-gray-600 pt-8">
       <header>
-        <H4 as="h2">{t('webmentions.title')}</H4>
+        <H4 as="h3">{t('webmentions.title')}</H4>
         <Paragraph>{t('webmentions.description')}</Paragraph>
       </header>
 

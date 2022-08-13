@@ -29,23 +29,23 @@ const DashboardPage = () => {
         />
 
         <section className="mb-10">
-          <H2>{t('dashboard.sections.coding')}</H2>
+          <H2>{t('dashboard.sections.coding.title')}</H2>
           <WakatimeCard />
           <CollectiveCard />
         </section>
 
         <section className="mb-10">
-          <H2>{t('dashboard.sections.photos')}</H2>
+          <H2>{t('dashboard.sections.photos.title')}</H2>
           <Unsplash />
         </section>
 
         <section className="mb-10">
-          <H2>{t('dashboard.sections.tv')}</H2>
+          <H2>{t('dashboard.sections.tv.title')}</H2>
           <SimklCard />
         </section>
 
         <section className="mb-10">
-          <H2>{t('dashboard.sections.gaming')}</H2>
+          <H2>{t('dashboard.sections.gaming.title')}</H2>
           <SteamCard />
         </section>
       </main>

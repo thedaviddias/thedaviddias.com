@@ -238,12 +238,17 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                   </aside>
                 )}
 
-                {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
+                <section>
+                  <h2 className="sr-only">Complementary</h2>
 
-                <Webmentions mentions={data?.links} />
-                {relatedPosts.length ? <RelatedPosts relatedPosts={relatedPosts} /> : null}
+                  {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
 
-                <Comments />
+                  <Webmentions mentions={data?.links} />
+
+                  {relatedPosts.length ? <RelatedPosts relatedPosts={relatedPosts} /> : null}
+
+                  <Comments />
+                </section>
               </div>
             </div>
 

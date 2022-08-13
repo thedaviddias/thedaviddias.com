@@ -259,16 +259,18 @@ export function getRelatedPosts(slug: string, locale: string, tags: string[]) {
 
   posts
     .map((post) => {
-      const postTags: string[] = post.frontMatter.tags
-        .map((tag) => {
-          return tag
-        })
-        .filter((tag) => {
-          return tag !== ''
-        })
+      const postTags =
+        post.frontMatter.tags &&
+        post.frontMatter.tags
+          .map((tag) => {
+            return tag
+          })
+          .filter((tag) => {
+            return tag !== ''
+          })
 
       const intersection = listTags.filter((tag) => {
-        return postTags.includes(tag)
+        return postTags?.includes(tag)
       }).length
 
       if (intersection > 0) {
@@ -278,9 +280,9 @@ export function getRelatedPosts(slug: string, locale: string, tags: string[]) {
         })
       }
     })
-    .sort((a, b) => {
-      return b.relevance - a.relevance
-    })
+    // .sort((a, b) => {
+    //   return b.relevance - a.relevance
+    // })
     .slice(0, maxPosts)
 
   return allPosts

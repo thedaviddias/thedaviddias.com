@@ -8,13 +8,15 @@ const nextConfig = nextTranslate({
   pageExtensions: ['ts', 'tsx', 'mdx'],
   poweredByHeader: false,
   images: {
-    domains: ['webmention.io', 'i.gr-assets.com'],
+    domains: ['webmention.io', 'i.gr-assets.com', 'i.ytimg.com'],
     formats: ['image/avif', 'image/webp'],
   },
   experimental: {
     images: {
       allowFutureImage: true,
     },
+    workerThreads: false,
+    cpus: 1,
   },
   async redirects() {
     return [

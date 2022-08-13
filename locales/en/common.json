@@ -226,5 +226,11 @@
     "sections": {
       "viewAll": "→ View my profile"
     }
+  },
+  "youtube": {
+    "sections": {
+      "latest_videos": "Latest Youtube videos",
+      "viewAll": "→ Access my Youtube channel"
+    }
   }
 }

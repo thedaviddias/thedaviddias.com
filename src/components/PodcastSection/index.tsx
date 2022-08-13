@@ -8,10 +8,15 @@ import { H5 } from '@/components/Headings'
 import { PodcastsResponse } from '@/pages/api/spotify/podcasts'
 import fetcher from '@/utils/fetcher'
 
+import { Loader } from '../Loader'
+
 const PodcastSection = () => {
   const { t, lang } = useTranslation('common')
   const { theme, resolvedTheme } = useTheme()
-  const { data } = useSWR<PodcastsResponse>(`/api/spotify/podcasts?lang=${lang}`, fetcher)
+  const { data, error } = useSWR<PodcastsResponse>(`/api/spotify/podcasts?lang=${lang}`, fetcher)
+
+  if (error) return <></>
+  if (!data) return <Loader />
 
   return (
     <section className="grid grid-cols-1 gap-y-10 border-none mb-10">

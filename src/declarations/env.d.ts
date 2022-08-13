@@ -41,6 +41,7 @@ declare global {
       SPOTIFY_REFRESH_TOKEN: string
 
       // YouTube metrics
+      YOUTUBE_CHANNEL_ID: string
       GOOGLE_CLIENT_EMAIL: string
       GOOGLE_PRIVATE_KEY: string
     }

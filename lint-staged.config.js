@@ -33,7 +33,7 @@ module.exports = {
 
   'public/images/**/*': 'imageoptim',
 
-  'locales/**/*.json': 'simplelocalize upload',
+  'locales/**/*.json': 'npm run i18n:upload',
 
   // Format the package.json
   // 'package.json': 'npx sort-package-json',

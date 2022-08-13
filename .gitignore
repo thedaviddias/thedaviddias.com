@@ -40,3 +40,6 @@ public/sitemap-0.xml
 
 # Sentry
 .sentryclirc
+
+# Simple Localize
+simplelocalize.yml

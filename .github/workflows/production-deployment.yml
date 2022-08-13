@@ -40,7 +40,7 @@ jobs:
           run_install: false
 
       - name: SimpleLocalize Download
-        uses: simplelocalize/download@2
+        uses: simplelocalize/download@latest
         with:
           apiKey: ${{ secrets.SIMPLE_LOCALIZE_KEY }}
           downloadPath: ./locales/{lang}/{ns}.json

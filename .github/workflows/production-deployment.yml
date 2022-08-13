@@ -39,13 +39,13 @@ jobs:
           version: 7
           run_install: false
 
-      - name: SimpleLocalize Download
-        uses: simplelocalize/download@latest
-        with:
-          apiKey: ${{ secrets.SIMPLE_LOCALIZE_KEY }}
-          downloadPath: ./locales/{lang}/{ns}.json
-          downloadFormat: single-language-json
-          uploadOptions: 'WRITE_NESTED,ESCAPE_NEW_LINES'
+      # - name: SimpleLocalize Download
+      #   uses: simplelocalize/download@latest
+      #   with:
+      #     apiKey: ${{ secrets.SIMPLE_LOCALIZE_KEY }}
+      #     downloadPath: ./locales/{lang}/{ns}.json
+      #     downloadFormat: single-language-json
+      #     uploadOptions: 'WRITE_NESTED,ESCAPE_NEW_LINES'
 
       - name: Vercel deployment
         uses: amondnet/vercel-action@v20

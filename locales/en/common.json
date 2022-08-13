@@ -207,7 +207,7 @@
     "seo": {
       "url": "dashboard",
       "title": "Dashboard",
-      "description": "Find all the metrics related to all my activities and interests"
+      "description": "Find all the metrics related to all my activities and interests."
     },
     "sections": {
       "coding": "Coding / Open source",
@@ -223,6 +223,8 @@
     }
   },
   "books": {
+    "currently": "Currently reading",
+    "next": "To read next",
     "sections": {
       "viewAll": "→ View my profile"
     }
@@ -232,5 +234,23 @@
       "latest_videos": "Latest Youtube videos",
       "viewAll": "→ Access my Youtube channel"
     }
+  },
+  "newsletter": {
+    "title": "Subscribe to my Newsletter",
+    "description": "Get emails from me about A11y, web development, tech and expatriation!",
+    "subscribers": "{{number}} subscribers",
+    "form": {
+      "input": {
+        "placeholder": "username@email.com",
+        "label": "Email for newsletter"
+      },
+      "submit": {
+        "text": "Subscribe"
+      },
+      "success": {
+        "text": "You're now on the list! Don't forget to validate your subscription with the email you probably received."
+      }
+    },
+    "all_issues": "Access all past issues"
   }
 }

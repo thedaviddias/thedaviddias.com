@@ -17,6 +17,7 @@ import { LatestNotesSection } from '@/components/LatestNotesSection'
 import { LatestPostsSection } from '@/components/LatestPostsSection'
 import LatestYoutubeVideos from '@/components/LatestYoutubeVideos/LatestYoutubeVideos'
 import { Loader } from '@/components/Loader'
+import { Subscribe } from '@/components/Subscribe'
 import { ToRead } from '@/components/ToRead'
 
 import { routes } from '@/config/routes'
@@ -28,11 +29,6 @@ const PodcastSection = dynamic(() => import('../components/PodcastSection'), {
   loading: () => <Loader />,
   ssr: false,
 })
-
-// const LatestYoutubeVideos = dynamic(() => import('../components/LatestYoutubeVideos'), {
-//   loading: () => <Loader />,
-//   ssr: false,
-// })
 
 type HomeProps = {
   articles: any[]
@@ -120,7 +116,7 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
 
           <Dashboard />
 
-          {/* <Subscribe /> */}
+          <Subscribe />
         </main>
       </Container>
     </SWRConfig>

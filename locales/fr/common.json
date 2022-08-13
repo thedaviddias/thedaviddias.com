@@ -50,12 +50,12 @@
     "path": "/fr",
     "seo": {
       "title": "The David Dias | Développeur Front-End, podcasteur & créateur de contenu",
-      "description": "Salut toi! Je m'appele David Dias. Je suis développeur Front-End, podcasteur, créateur de contenu numérique passioné pour résoudre les problèmes digitaux et humains! J'aime rencontré de nouvelles personnes, bâtir des communautées et parler de tech, d'expatriation et de web."
+      "description": "Salut toi! Je m'appele David Dias. Je suis développeur Front-End, podcasteur, créateur de contenu numérique passioné pour résoudre les problèmes digitaux et humains! J'aime rencontrer de nouvelles personnes, bâtir des communautées et parler de tech, d'expatriation et de web."
     },
     "hero": {
       "greetings1": "Salut toi!",
       "greetings2": "Je m'appelle David Dias",
-      "presentation": "Je suis développeur Front-End, podcasteur, créateur de contenu numérique passioné pour résoudre les problèmes digitaux et humains! J'aime rencontré de nouvelles personnes, bâtir des communautées et parler de tech, d'expatriation et de web."
+      "presentation": "Je suis développeur Front-End, podcasteur, créateur de contenu numérique passioné pour résoudre les problèmes digitaux et humains! J'aime rencontrer de nouvelles personnes, bâtir des communautées et parler de tech, d'expatriation et de web."
     },
     "sections": {
       "podcast": {
@@ -217,5 +217,36 @@
       "downloads": "Téléchargement sur Unsplash",
       "views": "Vue de mon profile sur Unsplash"
     }
+  },
+  "books": {
+    "currently": "En train de lire",
+    "next": "À lire prochainement",
+    "sections": {
+      "viewAll": "→ Voir mon profil"
+    }
+  },
+  "youtube": {
+    "sections": {
+      "latest_videos": "Dernières vidéos Youtube",
+      "viewAll": "→ Consulter ma chaîne Youtube"
+    }
+  },
+  "newsletter": {
+    "title": "S'abonner à mon bulletin digital",
+    "description": "Recevez des courriels en liens avec l'accessibilité, le dévelopement web, les technologies et l'expatriation! (en anglais)",
+    "subscribers": "{{number}} abonnés",
+    "form": {
+      "input": {
+        "placeholder": "nom@courriel.com",
+        "label": "Courriel pour le bulletin"
+      },
+      "submit": {
+        "text": "S'abonner"
+      },
+      "success": {
+        "text": "Youpi! Vous êtes maintenant sur la liste! Pensez à valider l'email que vous avez dû recevoir."
+      }
+    },
+    "all_issues": "Voir tous les bulletins précédents"
   }
 }

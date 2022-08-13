@@ -27,6 +27,7 @@ import { MDXComponents } from '@/components/MdxComponents'
 import { Paragraph } from '@/components/Paragraph'
 import { ScrollTop } from '@/components/ScrollTop'
 import { Share } from '@/components/Share'
+import { Subscribe } from '@/components/Subscribe'
 import { TableOfContents } from '@/components/TableOfContents'
 import { Tags } from '@/components/Tags'
 import { Webmentions } from '@/components/Webmentions'
@@ -218,14 +219,14 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                   )}
                 </section>
 
+                <Subscribe />
+
                 {tags && (
                   <aside className="w-full mt-3 print:hidden">
                     <div className="small-title">{t('tags.section')}</div>
                     <Tags tags={tags} />
                   </aside>
                 )}
-
-                {/* <Subscribe /> */}
 
                 <Webmentions mentions={data?.links} />
 

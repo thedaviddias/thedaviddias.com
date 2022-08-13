@@ -15,5 +15,6 @@ Sentry.init({
     // ignore hydration issues
     'Minified React error #418;',
     'Minified React error #423;',
+    'Minified React error #425;',
   ],
 })

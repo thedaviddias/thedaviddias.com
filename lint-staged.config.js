@@ -29,9 +29,11 @@ module.exports = {
   },
 
   // Format YAML, MarkDown, JSON
-  '**/*.(yml|md)': (filenames) => `prettier --write ${filenames.join(' ')}`,
+  '**/*.(yml|md|mdx)': (filenames) => `prettier --write ${filenames.join(' ')}`,
 
   'public/images/**/*': 'imageoptim',
+
+  'locales/**/*.json': 'simplelocalize upload',
 
   // Format the package.json
   // 'package.json': 'npx sort-package-json',

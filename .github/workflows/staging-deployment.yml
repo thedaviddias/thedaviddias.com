@@ -1,9 +1,6 @@
 name: Staging deployment
 
 on:
-  # push:
-  #   branches:
-  #     - main
   pull_request:
     types: [opened, synchronize, reopened]
     branches:
@@ -63,6 +60,13 @@ jobs:
         with:
           path: ~/.cache/Cypress
           key: cypress-binary-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - name: Upload translations
+        uses: simplelocalize/upload@latest
+        with:
+          apiKey: ${{ secrets.SIMPLE_LOCALIZE_KEY }}
+          uploadPath: ./locales/{lang}/{ns}.json
+          uploadFormat: single-language-json
 
       - name: Build Next.js project
         run: pnpm build

@@ -19,6 +19,7 @@ async function getPlausibleViews(slug: string) {
     headers: {
       Authorization: `Bearer ${process.env.PLAUSIBLE_API_KEY}`,
       Accept: 'application/json',
+      'cache-control': 'public, s-maxage=1200, stale-while-revalidate=600',
     },
   })
 }
@@ -42,10 +43,11 @@ const viewsHandler = async (req: NextApiRequest, res: NextApiResponse) => {
       date: now.toUTCString(),
       views: data?.results?.visitors?.value,
     })
-  } catch (err) {
+  } catch (error) {
     // eslint-disable-next-line no-console
-    console.error(err)
-    return res.status(500).json({ err })
+    console.error(error)
+    res.json(error)
+    return res.status(500).end()
   }
 }
 

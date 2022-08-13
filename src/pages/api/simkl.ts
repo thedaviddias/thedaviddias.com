@@ -1,12 +1,11 @@
 import { withSentry } from '@sentry/nextjs'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  const token = process.env.SIMKL_TOKEN
-  const clientId = process.env.SIMKL_CLIENT_ID
-  const userId = process.env.SIMKL_USER_ID
+import fetcher from '@/utils/fetcher'
 
-  const stats = await fetch(`https://api.simkl.com/users/${userId}/stats`, {
+async function GetStatsUser(userId: string, token: string, clientId: string) {
+  const url = `https://api.simkl.com/users/${userId}/stats`
+  return fetcher(url, {
     headers: {
       Authorization: `Bearer ${token}`,
       'Content-Type': 'application/json',
@@ -14,10 +13,21 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     } as any,
     method: 'POST',
   })
+}
 
-  const dataStats = await stats.json()
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
+  const token = process.env.SIMKL_TOKEN
+  const clientId = process.env.SIMKL_CLIENT_ID
+  const userId = process.env.SIMKL_USER_ID
 
-  return res.status(200).json({ stats: dataStats })
+  try {
+    const stats = await GetStatsUser(userId, token, clientId)
+
+    return res.status(200).json({ stats })
+  } catch (error) {
+    res.json(error)
+    res.status(405).end()
+  }
 }
 
 export default withSentry(handler)

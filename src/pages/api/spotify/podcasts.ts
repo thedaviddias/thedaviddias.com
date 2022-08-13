@@ -1,3 +1,4 @@
+import { withSentry } from '@sentry/nextjs'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 import { getPodcastErreur200, getWorldWebStories } from '@/lib/spotify'
@@ -6,7 +7,7 @@ export type PodcastsResponse = {
   podcast: string
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
+const podcastsHandler = async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   const query = req.query
   const { lang } = query
 
@@ -40,3 +41,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     })
   }
 }
+
+export default withSentry(podcastsHandler)

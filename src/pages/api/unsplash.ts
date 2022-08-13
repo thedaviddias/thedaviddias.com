@@ -4,6 +4,7 @@ export const config = {
 
 export default async function handler() {
   const accessToken = process.env.UNSPLASH_ACCESS_KEY
+
   const response = await fetch(
     `https://api.unsplash.com/users/thedaviddias/statistics?client_id=${accessToken}`,
     {

@@ -25,6 +25,7 @@ import { H1 } from '@/components/Headings'
 import { Loader } from '@/components/Loader'
 import { MDXComponents } from '@/components/MdxComponents'
 import { Paragraph } from '@/components/Paragraph'
+import { RelatedPosts } from '@/components/RelatedPosts'
 import { ScrollTop } from '@/components/ScrollTop'
 import { Share } from '@/components/Share'
 import { Subscribe } from '@/components/Subscribe'
@@ -36,7 +37,14 @@ import { routes } from '@/config/routes'
 import { CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH } from '@/constants'
 import fetcher from '@/utils/fetcher'
 import { generateImageUrl } from '@/utils/generate-image-url'
-import { getAdjacentPosts, getAllPosts, getPost, getPostBySlug } from '@/utils/get-articles-posts'
+import {
+  getAdjacentPosts,
+  getAllPosts,
+  getPost,
+  getPostBySlug,
+  GetRelatedPosts,
+  getRelatedPosts,
+} from '@/utils/get-articles-posts'
 import { rehypeExtractHeadings } from '@/utils/rehype-extract-headings'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
 
@@ -75,6 +83,7 @@ type BlogPostPageProps = BlogPostProps & {
   readingTime: ReadTimeResults
   headings: Headings[]
   adjacentPosts: any
+  relatedPosts: GetRelatedPosts[]
 }
 
 export type WebMention = {
@@ -115,6 +124,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
   permalink,
   slug,
   adjacentPosts,
+  relatedPosts,
 }) => {
   const { title, description, tags, categories, date, lastmod, author, published } = frontMatter
   const { isFallback } = useRouter()
@@ -228,9 +238,10 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                   </aside>
                 )}
 
-                <Webmentions mentions={data?.links} />
-
                 {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
+
+                <Webmentions mentions={data?.links} />
+                {relatedPosts.length ? <RelatedPosts relatedPosts={relatedPosts} /> : null}
 
                 <Comments />
               </div>
@@ -335,6 +346,7 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
         slug,
         readingTime,
         headings,
+        relatedPosts: locale && JSON.parse(JSON.stringify(getRelatedPosts(slug, locale, tags))),
         adjacentPosts: locale && getAdjacentPosts(slug, locale, contentType),
         source: await serialize(markdownBody, {
           mdxOptions: {

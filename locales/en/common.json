@@ -252,5 +252,9 @@
       }
     },
     "all_issues": "Access all past issues"
+  },
+  "related": {
+    "title": "Related posts",
+    "description": "You might also like these posts:"
   }
 }

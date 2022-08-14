@@ -36,6 +36,7 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
               href="/"
               className="font-bold text-2xl lg:text-xl sm:mt-[-3px] sm:mr-6 !no-underline"
               data-testid="thedaviddias-logo"
+              data-analytics='"Homepage logo"'
             >
               {t('title')}
             </CustomLink>

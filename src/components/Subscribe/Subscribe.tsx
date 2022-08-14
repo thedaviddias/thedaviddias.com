@@ -1,3 +1,4 @@
+import { usePlausible } from 'next-plausible'
 import useTranslation from 'next-translate/useTranslation'
 import { FormEvent, useRef, useState } from 'react'
 
@@ -30,6 +31,7 @@ export type Views = {
 
 export const Subscribe = () => {
   const { t } = useTranslation('common')
+  const plausible = usePlausible()
   const [form, setForm] = useState<FormState>()
   const inputEl = useRef<HTMLInputElement>(null)
 
@@ -56,6 +58,8 @@ export const Subscribe = () => {
       })
       return
     }
+
+    plausible('subscribe')
 
     if (inputEl.current) {
       inputEl.current.value = ''

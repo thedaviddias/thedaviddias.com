@@ -27,7 +27,6 @@ import { readData } from '@/utils/read-data'
 
 const PodcastSection = dynamic(() => import('../components/PodcastSection'), {
   loading: () => <Loader />,
-  ssr: false,
 })
 
 type HomeProps = {

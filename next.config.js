@@ -1,14 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextTranslate = require('next-translate')
 const { withSentryConfig } = require('@sentry/nextjs')
+const { withPlausibleProxy } = require('next-plausible')
+const withPlugins = require('next-compose-plugins');
+const withBundleAnalyzer = require('@next/bundle-analyzer');
 
-const nextConfig = nextTranslate({
+const plausiblePlugin = withPlausibleProxy;
+const bundleAnalyser = withBundleAnalyzer({ enabled: process.env.ANALYZE === 'true' });
+
+const plugins = [plausiblePlugin, bundleAnalyser]
+
+const nextConfig = withPlugins([plugins, nextTranslate], {
   reactStrictMode: true,
   swcMinify: true,
   pageExtensions: ['ts', 'tsx', 'mdx'],
   poweredByHeader: false,
   images: {
-    domains: ['webmention.io', 'i.gr-assets.com', 'i.ytimg.com'],
+    domains: ['images.unsplash.com', 'webmention.io', 'i.gr-assets.com', 'i.ytimg.com'],
     formats: ['image/avif', 'image/webp'],
   },
   experimental: {
@@ -33,6 +41,18 @@ const nextConfig = nextTranslate({
     ]
   },
   webpack(config) {
+    config.module.rules.push({
+      test: /\.(png|jpe?g|gif|mp4)$/i,
+      use: [
+        {
+          loader: "file-loader",
+          options: {
+            publicPath: "/_next",
+            name: "static/media/[name].[hash].[ext]",
+          },
+        },
+      ],
+    });
     const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'))
     fileLoaderRule.exclude = /\.svg$/
     config.module.rules.push({

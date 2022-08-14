@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticPathsResult, GetStaticProps, NextPage } from '
 import { useRouter } from 'next/router'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
-import { ArticleJsonLd, NextSeo } from 'next-seo'
+import { ArticleJsonLd, BreadcrumbJsonLd, NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { ReadTimeResults } from 'reading-time'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
@@ -175,6 +175,20 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
         dateModified={lastmod}
         authorName="David Dias"
         description={description}
+      />
+      <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: 'Articles',
+            item: 'https://thedaviddias.dev/articles',
+          },
+          {
+            position: 2,
+            name: title,
+            item: permalink,
+          },
+        ]}
       />
       <main id="main" data-skip-link="the article">
         <article className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

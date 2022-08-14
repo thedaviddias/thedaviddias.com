@@ -1,7 +1,8 @@
+import social from 'data/social.json'
 import type { GetStaticProps, NextPage } from 'next'
 import dynamic from 'next/dynamic'
 import Image from 'next/future/image'
-import { NextSeo } from 'next-seo'
+import { NextSeo, SocialProfileJsonLd } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { SWRConfig } from 'swr'
 
@@ -23,6 +24,7 @@ import { ToRead } from '@/components/ToRead'
 import { routes } from '@/config/routes'
 import { HERO_LINKS } from '@/constants'
 import { getAllPostsWithFrontMatter } from '@/utils/get-articles-posts'
+import { listSocialUrl } from '@/utils/list-social-url'
 import { readData } from '@/utils/read-data'
 
 const PodcastSection = dynamic(() => import('../components/PodcastSection'), {
@@ -57,6 +59,12 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
             },
           ]}
           openGraph={routes(t).home.seo}
+        />
+        <SocialProfileJsonLd
+          type="Person"
+          name="David Dias"
+          url="https://thedavidias.dev"
+          sameAs={listSocialUrl(social)}
         />
         <main id="main" data-skip-link="main content">
           <section className="pb-20 pt-0 lg:pt-10 flex justify-evenly">

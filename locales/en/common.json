@@ -77,8 +77,8 @@
       "latest-posts": "Latest articles",
       "viewAll": "→ View all my articles",
       "category_filter": "Access articles by categories",
-      "search": "Search by keyword",
-      "search_placeholder": "Type a word to search through the articles"
+      "search": "Search by title keyword",
+      "search_placeholder": "Type a word to search"
     }
   },
   "notes": {

@@ -1,5 +1,6 @@
 import { format } from 'date-fns'
 import useTranslation from 'next-translate/useTranslation'
+import { useEffect, useState } from 'react'
 import slugify from 'slugify'
 
 import { CustomLink } from '@/components/CustomLink'
@@ -14,6 +15,17 @@ type BlogPostProps = {
 
 export const BlogPost: React.FC<BlogPostProps> = ({ post, isCategoryPage }) => {
   const { t, lang } = useTranslation('common')
+  const [datePublished, setDatePublished] = useState('')
+
+  useEffect(() => {
+    if (post.frontMatter.date && window) {
+      setDatePublished(
+        format(new Date(post.frontMatter.date.toString()), t('date'), {
+          locale: convertLangDateFs(lang),
+        })
+      )
+    }
+  }, [lang, post.frontMatter.date, t])
 
   return (
     <article className="pt-8 pb-6 border-t border-gray-200 dark:border-gray-700" key={post.slug}>
@@ -47,11 +59,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post, isCategoryPage }) => {
             </div>
           )}
           <div className="inline-block lg:block !text-gray-500 dark:text-gray-300 !font-medium !mb-1 align-top">
-            <time dateTime={post.frontMatter.date.toString()}>
-              {format(new Date(post.frontMatter.date.toString()), t('date'), {
-                locale: convertLangDateFs(lang),
-              })}
-            </time>
+            <time dateTime={post.frontMatter.date.toString()}>{datePublished}</time>
           </div>
         </div>
       </div>

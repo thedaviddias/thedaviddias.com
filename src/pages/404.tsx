@@ -27,7 +27,7 @@ const NotFoundPage: NextPage = () => {
       <div className="mt-10 text-center">
         <button onClick={() => router.push('/')}>{t('404.back_home')}</button>
       </div>
-      {plausible('404', { props: { path: document.location.pathname } })}
+      {plausible('404', { props: { path: router.pathname } })}
     </BaseLayout>
   )
 }

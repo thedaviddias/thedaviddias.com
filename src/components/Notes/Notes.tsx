@@ -1,5 +1,6 @@
 import { format } from 'date-fns'
 import useTranslation from 'next-translate/useTranslation'
+import { useEffect, useState } from 'react'
 
 import { CustomLink } from '@/components/CustomLink'
 import { H4 } from '@/components/Headings'
@@ -11,6 +12,13 @@ type NotesProps = {
 
 export const Notes: React.FC<NotesProps> = ({ note }) => {
   const { t } = useTranslation('common')
+  const [datePublished, setDatePublished] = useState('')
+
+  useEffect(() => {
+    if (note.frontMatter.date && window) {
+      setDatePublished(format(new Date(note.frontMatter.date.toString()), t('date')))
+    }
+  }, [note.frontMatter.date, t])
 
   return (
     <>
@@ -31,9 +39,7 @@ export const Notes: React.FC<NotesProps> = ({ note }) => {
               <Tags tags={note.frontMatter.tags} className="justify-center" />
             </div>
             <div className="inline-block lg:block !text-gray-500 dark:text-gray-300 !font-medium !mb-1 align-top">
-              <time dateTime={note.frontMatter.date.toString()}>
-                {format(new Date(note.frontMatter.date.toString()), t('date'))}
-              </time>
+              <time dateTime={note.frontMatter.date.toString()}>{datePublished}</time>
             </div>
           </div>
         </div>

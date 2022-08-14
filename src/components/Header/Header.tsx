@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
 
@@ -14,6 +15,9 @@ type HeaderProps = {
 export const Header: React.FC<HeaderProps> = ({ pathname }) => {
   const { t } = useTranslation('common')
   const [userLocale, setUserLocale] = useState('')
+  const router = useRouter()
+
+  const isHomepage = router.asPath === '/'
 
   useEffect(() => {
     const userLocale =
@@ -32,14 +36,20 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
       <div className="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8 py-3 top-0 mb-12">
         <div className="relative flex justify-between h-16">
           <div className="flex-1 flex items-center sm:justify-between align-middle">
-            <CustomLink
-              href="/"
-              className="font-bold text-2xl lg:text-xl sm:mt-[-3px] sm:mr-6 !no-underline"
-              data-testid="thedaviddias-logo"
-              data-analytics='"Homepage logo"'
-            >
-              {t('title')}
-            </CustomLink>
+            {isHomepage ? (
+              <span className="font-bold text-2xl lg:text-xl sm:mt-[-3px] sm:mr-6 !no-underline">
+                {t('title')}
+              </span>
+            ) : (
+              <CustomLink
+                href="/"
+                className="font-bold text-2xl lg:text-xl sm:mt-[-3px] sm:mr-6 !no-underline"
+                data-testid="thedaviddias-logo"
+                data-analytics='"Homepage logo"'
+              >
+                {t('title')}
+              </CustomLink>
+            )}
             <nav className="hidden sm:flex" data-testid="desktop-menu" aria-label="Main navigation">
               {MENU_LINKS(t)
                 .filter((item) => item.menu !== false)

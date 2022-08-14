@@ -29,9 +29,9 @@ export const ChangeLanguage = () => {
         locale={lng}
       >
         {lng === 'en' ? (
-          <UsFlag className="w-8 h-8 rounded-lg" alt="Site Title" aria-hidden />
+          <UsFlag className="w-8 h-8 rounded-lg" aria-hidden />
         ) : (
-          <FrFlag className="w-8 h-8 rounded-lg" alt="Site Title" aria-hidden />
+          <FrFlag className="w-8 h-8 rounded-lg" aria-hidden />
         )}
       </CustomLink>
     )

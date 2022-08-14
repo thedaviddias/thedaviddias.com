@@ -17,6 +17,7 @@ import { Pre } from './pre'
 import { ResponsiveImage } from './responsive-image'
 import { Strong } from './strong'
 import { Tweet } from './tweet'
+import { Sidenote } from '../Sidenote'
 
 export const MDXComponents: any = {
   hr: (
@@ -24,6 +25,7 @@ export const MDXComponents: any = {
   ) => <hr {...props} />,
   a: CustomLink,
   blockquote: Blockquote,
+  Sidenote,
   strong: Strong,
   h1: (
     props: JSX.IntrinsicAttributes &

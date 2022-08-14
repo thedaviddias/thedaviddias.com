@@ -8,6 +8,8 @@ import path from 'path'
 
 dotenv.config({ path: path.join(process.cwd(), '.env.publish.local') })
 
+export {}
+
 const MEDIUM_USER_ID = process.env.MEDIUM_AUTHOR_ID
 
 const generateBlog = (slug) => {

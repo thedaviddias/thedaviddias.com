@@ -84,3 +84,6 @@ export const CLOUDINARY_IMG_HEIGHT = 1080
 
 export const BASE_URL = 'https://thedaviddias.dev' || process.env.VERCEL_URL
 export const BASE_EMAIL = 'hello@thedaviddias.com'
+
+export const IS_PRODUCTION =
+  process.env.NODE_ENV === 'production' && process.env.VERCEL_ENV === 'production'

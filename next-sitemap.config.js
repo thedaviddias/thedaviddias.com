@@ -16,7 +16,7 @@ const commonOptions = {
 }
 
 const config = {
-  siteUrl: process.env.SITE_URL || 'https://thedaviddias.dev',
+  siteUrl: 'https://thedaviddias.dev',
   generateRobotsTxt: true,
   exclude: ['/404', '/fr/404'],
   additionalPaths: async () => {
@@ -42,10 +42,30 @@ const config = {
       ...commonOptions,
     })
 
-    // using transformation from the current configuration
-    // result.push(await config.transform(config, '/about'))
-    // result.push(await config.transform(config, '/articles'))
-    // result.push(await config.transform(config, '/notes'))
+    result.push({
+      loc: '/projects',
+      ...commonOptions,
+    })
+
+    result.push({
+      loc: '/bookmarks',
+      ...commonOptions,
+    })
+
+    result.push({
+      loc: '/tags',
+      ...commonOptions,
+    })
+
+    result.push({
+      loc: '/dashboard',
+      ...commonOptions,
+    })
+
+    result.push({
+      loc: '/uses',
+      ...commonOptions,
+    })
 
     return result
   },

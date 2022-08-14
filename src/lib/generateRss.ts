@@ -1,6 +1,8 @@
 import { Feed } from 'feed'
 import fs from 'fs'
 
+import { BASE_URL } from '@/constants'
+
 import { getAllPostsWithFrontMatter } from '../utils/get-articles-posts'
 import localeEN from '../../locales/en/common.json'
 import localeFR from '../../locales/fr/common.json'
@@ -16,7 +18,7 @@ export default async function generateRssFeed() {
 
   const postsFr = [...articlesFR, ...notesFr]
 
-  const siteURL = 'https://thedaviddias.dev'
+  const siteURL = BASE_URL
   const date = new Date()
   const author = {
     name: 'David Dias',

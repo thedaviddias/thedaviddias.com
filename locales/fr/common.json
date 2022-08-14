@@ -1,252 +1,50 @@
 {
-  "title": "The David Dias",
-  "titleTemplate": "Front-End Developer, podcaster & content creator",
-  "date": "dd MMM yyyy",
-  "layout": {
-    "a11y": {
-      "skipContent": "Aller directement {{label}}"
-    },
-    "nav": {
-      "home": "Accueil",
-      "notes": "Notes",
-      "articles": "Articles",
-      "projects": "Projets",
-      "bookmarks": "Marque-pages",
-      "about": "À propos",
-      "rss": "RSS"
-    },
-    "darkMode": {
-      "light": "Passer au mode clair",
-      "dark": "Passer au mode sombre"
-    },
-    "language": {
-      "fr": {
-        "fullName": "French",
-        "switch": "Switch to the {{lang}} version",
-        "abbreviation": "FR"
+  "dashboard": {
+    "sections": {
+      "photos": {
+        "url": "https://unsplash.com/@thedaviddias",
+        "title": "Photos",
+        "views": "Vues de Unsplash",
+        "downloads": "Téléchargements sur Unsplash"
       },
-      "en": {
-        "fullName": "Anglaise",
-        "switch": "Changer pour la version {{lang}}",
-        "abbreviation": "EN"
+      "coding": {
+        "total_time": "Temps total en train de coder",
+        "total_time_duration": "(7 derniers jours)",
+        "open_collective_fec": "Balance des dons pour la Front-End Checklist",
+        "open_collective_fec_url": "https://opencollective.com/front-end-checklist",
+        "average_activity_duration": "(7 derniers jours)",
+        "url": "https://wakatime.com/@thedaviddias",
+        "open_collective_htmlhint": "Balance des dons pour HTMLHint",
+        "average_activity": "Temps moyen à coder par jour",
+        "title": "Codage / Open source",
+        "open_collective_htmlhint_url": "https://opencollective.com/htmlhint"
+      },
+      "tv": {
+        "title": "Films et séries télé",
+        "url": "https://simkl.com/5311920",
+        "last_week_spent_duration": "(semaine dernière)",
+        "total_spent": "Temps passé à regarder",
+        "total_spent_duration": "(depuis toujours)",
+        "last_week_spent": "Temps passé à regarder des séries"
+      },
+      "gaming": {
+        "title": "Jeux",
+        "most_played": "Durée du jeu le plus joué: {{name}}",
+        "total_number": "Nombre total de jeux sur Steam",
+        "most_played_duration": "(2 dernières semaines)"
       }
-    },
-    "footer": {
-      "name": "Pied de page",
-      "general": "Général",
-      "social": "Réseaux sociaux",
-      "extra": "Extra liens",
-      "extra_links": {
-        "uses": "Utilise",
-        "gear": "Matériel",
-        "resume": "CV",
-        "dashboard": "Tableau de bord",
-        "newsletter": "Newsletter",
-        "analytics": "Statistiques"
-      }
-    }
-  },
-  "home": {
-    "path": "/fr",
-    "seo": {
-      "title": "The David Dias | Développeur Front-End, podcasteur & créateur de contenu",
-      "description": "Salut toi! Je m'appele David Dias. Je suis développeur Front-End, podcasteur, créateur de contenu numérique passioné pour résoudre les problèmes digitaux et humains! J'aime rencontrer de nouvelles personnes, bâtir des communautées et parler de tech, d'expatriation et de web."
-    },
-    "hero": {
-      "greetings1": "Salut toi!",
-      "greetings2": "Je m'appelle David Dias",
-      "presentation": "Je suis développeur Front-End, podcasteur, créateur de contenu numérique passioné pour résoudre les problèmes digitaux et humains! J'aime rencontrer de nouvelles personnes, bâtir des communautées et parler de tech, d'expatriation et de web."
-    },
-    "sections": {
-      "podcast": {
-        "latest_podcasts": "Dernier podcast",
-        "view_website": "En découvrir plus sur le site",
-        "url": "https://erreur200.com"
-      }
-    }
-  },
-  "articles": {
-    "path": "/articles",
-    "seo": {
-      "title": "Articles",
-      "description": "Retrouvez mes articles sur le dévelopement web and sur tous les autres sujets qui me fascinnent et m'intéressent.",
-      "url": "articles"
-    },
-    "h1": "Mes articles",
-    "sections": {
-      "latest-posts": "Derniers articles",
-      "viewAll": "→ Voir tous les articles",
-      "category_filter": "Filtrer par catégories",
-      "search": "Recherchez par mot clé",
-      "search_placeholder": "Tapez un mot pour faire une recherche"
     }
   },
   "notes": {
-    "path": "/notes",
-    "seo": {
-      "title": "Notes",
-      "description": "Retrouvez l'ensemble de mes notes: des bout de code, des expérimentations, des découvertes, tout ce qu'il me semble intéressant de vous partagez!",
-      "url": "notes"
-    },
-    "h1": "Mes Notes",
     "sections": {
-      "empty": "Pas de publications disponibles pour le moment.",
-      "latest-notes": "Dernières Notes",
-      "search": "Recherchez par mot clé",
-      "search_placeholder": "Tapez un mot pour faire une recherche"
+      "empty": "Pas de publications disponibles pour le moment."
     }
   },
-  "about": {
-    "path": "/about",
-    "seo": {
-      "url": "about",
-      "title": "À propos de l'auteur",
-      "description": "Sachez-en un peu plus sur 'The David Dias'"
-    }
+  "related": {
+    "title": "Articles Similaires",
+    "description": "Vous pourriez également aimer ces messages :"
   },
-  "uses": {
-    "path": "/uses",
-    "seo": {
-      "url": "uses",
-      "title": "",
-      "description": ""
-    }
-  },
-  "projects": {
-    "path": "/projects",
-    "seo": {
-      "url": "projects",
-      "title": "Mes Projets",
-      "description": "Découvrez l'ensemble des projets sur lesquels j'ai travaillé et ceux sur lequel je suis toujours en train de travailler."
-    },
-    "updated": "MàJ il y a {{date}}",
-    "sections": {
-      "popular": "Projets populaires sur Github",
-      "popular_description": "Mes projets Open Source les plus populaires. N'hésitez pas à y jeter un coup d'œil et à y participer!",
-      "viewAll": "→ Voir tous mes projets",
-      "latest-projects": "Derniers projets MàJ"
-    }
-  },
-  "tags": {
-    "path": "/tags",
-    "seo": {
-      "title": "Publication en lien avec {{name}}",
-      "description": "Toutes mes publications en lien avec le thème de {{name}}."
-    },
-    "section": "Étiquettes",
-    "h1": "Étiquettes: {{name}}"
-  },
-  "bookmarks": {
-    "path": "/bookmarks",
-    "seo": {
-      "url": "bookmarks",
-      "title": "Mes Marque-pages",
-      "description": "Voici une liste de marque-pages que je mets à jour régulièrement et en lien avec le développment web, la carrière professionnelle et l'open-source."
-    },
-    "bookmark_filter": "Filter les marques-pages par sujet:"
-  },
-  "category": {
-    "path": "/categories",
-    "seo": {
-      "title": "Lisez mon contenu sur {{name}}",
-      "description": "Vous trouverez l'ensemble de mes publications en lien avec {{name}}."
-    },
-    "h1": "Catégorie: {{name}}"
-  },
-  "rss": {
-    "path": "/rss/fr/feed.xml"
-  },
-  "404": {
-    "back_home": "Retour à l'accueil",
-    "seo": {
-      "title": "Désolé 😩, cette page ne peut pas être trouvée.",
-      "description": ""
-    }
-  },
-  "500": {
-    "title": "Wow 😱, you broke everything.",
-    "seo": {
-      "title": "",
-      "description": ""
-    }
-  },
-  "posts": {
-    "empty": "Aucun articles trouvé basé sur votre recherche.",
-    "continue": "Continuez de lire →",
-    "updated": "MàJ le",
-    "published": "Initialement publié sur ",
-    "tableContent": "Table des matières",
-    "previous": "Publication précédente",
-    "next": "Publication suivante"
-  },
-  "webmentions": {
-    "title": "Webmentions",
-    "description": "Tweeter au sujet de cet article et cela s'affichera ici!",
-    "show": "Montrer",
-    "hide": "Cacher",
-    "details": "{{show}} les mentions en détails",
-    "activity_reply": "cet article, il y a {{date}}:",
-    "activity_others": "cet article.",
-    "activity": {
-      "link": "relié à",
-      "reply": "a répoondu à",
-      "repost": "a retweeté",
-      "like": "a aimé"
-    }
-  },
-  "comments": {
-    "title": "Commentaires",
-    "description": "N'hésitez pas à laisser votre commentaire! Si vous ne possédez pas de compte Github, vous pouvez toujours tweeter au sujet de cet article!"
-  },
-  "dashboard": {
-    "path": "/dashboard",
-    "seo": {
-      "url": "dashboard",
-      "title": "Tableau de bord",
-      "description": ""
-    },
-    "sections": {
-      "coding": "Code / Open source",
-      "photos": "Photos",
-      "tv": "Films et séries",
-      "gaming": "Jeux",
-      "latest-dashboard": "Mini tableau de bord",
-      "viewAll": "→ Voir mon tableau de bord"
-    },
-    "unsplash": {
-      "downloads": "Téléchargement sur Unsplash",
-      "views": "Vue de mon profile sur Unsplash"
-    }
-  },
-  "books": {
-    "currently": "En train de lire",
-    "next": "À lire prochainement",
-    "sections": {
-      "viewAll": "→ Voir mon profil"
-    }
-  },
-  "youtube": {
-    "sections": {
-      "latest_videos": "Dernières vidéos Youtube",
-      "viewAll": "→ Consulter ma chaîne Youtube"
-    }
-  },
-  "newsletter": {
-    "title": "S'abonner à mon bulletin digital",
-    "description": "Recevez des courriels en liens avec l'accessibilité, le dévelopement web, les technologies et l'expatriation! (en anglais)",
-    "subscribers": "{{number}} abonnés",
-    "form": {
-      "input": {
-        "placeholder": "nom@courriel.com",
-        "label": "Courriel pour le bulletin"
-      },
-      "submit": {
-        "text": "S'abonner"
-      },
-      "success": {
-        "text": "Youpi! Vous êtes maintenant sur la liste! Pensez à valider l'email que vous avez dû recevoir."
-      }
-    },
-    "all_issues": "Voir tous les bulletins précédents"
+  "share": {
+    "title": "Partager cette publication"
   }
 }

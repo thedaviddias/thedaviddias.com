@@ -19,7 +19,9 @@
     "lint:write": "eslint . --ext js,ts,tsx,mdx,json --fix --max-warnings=0",
     "prepare": "husky install",
     "publish": "node scripts/publish-blog.js",
-    "start": "next start"
+    "start": "next start",
+    "i18n:upload": "simplelocalize upload",
+    "i18n:download": "simplelocalize download"
   },
   "dependencies": {
     "@giscus/react": "^2.2.0",

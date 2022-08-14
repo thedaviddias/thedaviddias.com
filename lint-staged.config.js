@@ -33,8 +33,6 @@ module.exports = {
 
   'public/images/**/*': 'imageoptim',
 
-  'locales/**/*.json': 'simplelocalize upload',
-
   // Format the package.json
   // 'package.json': 'npx sort-package-json',
 }

@@ -207,10 +207,38 @@
       "description": ""
     },
     "sections": {
-      "coding": "Code / Open source",
-      "photos": "Photos",
-      "tv": "Films et séries",
-      "gaming": "Jeux",
+      "photos": {
+        "url": "https://unsplash.com/@thedaviddias",
+        "title": "Photos",
+        "views": "Vues de Unsplash",
+        "downloads": "Téléchargements sur Unsplash"
+      },
+      "coding": {
+        "total_time": "Temps total en train de coder",
+        "total_time_duration": "(7 derniers jours)",
+        "open_collective_fec": "Balance des dons pour la Front-End Checklist",
+        "open_collective_fec_url": "https://opencollective.com/front-end-checklist",
+        "average_activity_duration": "(7 derniers jours)",
+        "url": "https://wakatime.com/@thedaviddias",
+        "open_collective_htmlhint": "Balance des dons pour HTMLHint",
+        "average_activity": "Temps moyen à coder par jour",
+        "title": "Codage / Open source",
+        "open_collective_htmlhint_url": "https://opencollective.com/htmlhint"
+      },
+      "tv": {
+        "title": "Films et séries télé",
+        "url": "https://simkl.com/5311920",
+        "last_week_spent_duration": "(semaine dernière)",
+        "total_spent": "Temps passé à regarder",
+        "total_spent_duration": "(depuis toujours)",
+        "last_week_spent": "Temps passé à regarder des séries"
+      },
+      "gaming": {
+        "title": "Jeux",
+        "most_played": "Durée du jeu le plus joué: {{name}}",
+        "total_number": "Nombre total de jeux sur Steam",
+        "most_played_duration": "(2 dernières semaines)"
+      },
       "latest-dashboard": "Mini tableau de bord",
       "viewAll": "→ Voir mon tableau de bord"
     },

@@ -4,7 +4,6 @@ import useTranslation from 'next-translate/useTranslation'
 import { useState } from 'react'
 
 import { Container } from '@/components/Container'
-import { H1, H5 } from '@/components/Headings'
 import { Notes } from '@/components/Notes'
 import { PageHeader } from '@/components/PageHeader'
 import { Search } from '@/components/Search'

@@ -5,7 +5,7 @@
   "scripts": {
     "build": "next build",
     "postbuild": "next-sitemap",
-    "check:all": "pnpm check:format && pnpm check:lint && pnpm check:types && pnpm build",
+    "check:all": "pnpm check:format && pnpm check:lint && pnpm build",
     "check:format": "prettier --check .",
     "check:lint": "eslint . --ext js,ts,tsx,mdx,json",
     "check:types": "tsc -p tsconfig.json --noEmit --pretty",

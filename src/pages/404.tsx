@@ -2,6 +2,7 @@ import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { usePlausible } from 'next-plausible'
 import useTranslation from 'next-translate/useTranslation'
+import { useEffect } from 'react'
 
 import { PageHeader } from '@/components/PageHeader'
 
@@ -12,6 +13,12 @@ const NotFoundPage: NextPage = () => {
   const { t } = useTranslation('common')
   const router = useRouter()
   const plausible = usePlausible()
+
+  useEffect(() => {
+    plausible('404', {
+      props: { page: document.location.pathname },
+    })
+  }, [plausible])
 
   return (
     <BaseLayout
@@ -27,7 +34,6 @@ const NotFoundPage: NextPage = () => {
       <div className="mt-10 text-center">
         <button onClick={() => router.push('/')}>{t('404.back_home')}</button>
       </div>
-      {plausible('404', { props: { path: router.pathname } })}
     </BaseLayout>
   )
 }

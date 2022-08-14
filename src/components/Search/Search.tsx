@@ -1,5 +1,5 @@
 import useTranslation from 'next-translate/useTranslation'
-import React, { ChangeEvent, FC } from 'react'
+import React, { ChangeEvent } from 'react'
 
 type SearchProps = {
   setSearchValue: (arg: string) => void

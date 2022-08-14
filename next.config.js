@@ -2,11 +2,11 @@
 const nextTranslate = require('next-translate')
 const { withSentryConfig } = require('@sentry/nextjs')
 const { withPlausibleProxy } = require('next-plausible')
-const withPlugins = require('next-compose-plugins');
-const withBundleAnalyzer = require('@next/bundle-analyzer');
+const withPlugins = require('next-compose-plugins')
+const withBundleAnalyzer = require('@next/bundle-analyzer')
 
-const plausiblePlugin = withPlausibleProxy;
-const bundleAnalyser = withBundleAnalyzer({ enabled: process.env.ANALYZE === 'true' });
+const plausiblePlugin = withPlausibleProxy
+const bundleAnalyser = withBundleAnalyzer({ enabled: process.env.ANALYZE === 'true' })
 
 const plugins = [plausiblePlugin, bundleAnalyser]
 
@@ -45,14 +45,14 @@ const nextConfig = withPlugins([plugins, nextTranslate], {
       test: /\.(png|jpe?g|gif|mp4)$/i,
       use: [
         {
-          loader: "file-loader",
+          loader: 'file-loader',
           options: {
-            publicPath: "/_next",
-            name: "static/media/[name].[hash].[ext]",
+            publicPath: '/_next',
+            name: 'static/media/[name].[hash].[ext]',
           },
         },
       ],
-    });
+    })
     const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'))
     fileLoaderRule.exclude = /\.svg$/
     config.module.rules.push({

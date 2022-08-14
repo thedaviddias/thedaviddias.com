@@ -77,10 +77,7 @@
           "title": "locale",
           "name": "locale",
           "type": "choice",
-          "choices": [
-            "en",
-            "fr"
-          ]
+          "choices": ["en", "fr"]
         },
         {
           "title": "Publishing date",
@@ -187,10 +184,7 @@
           "title": "locale",
           "name": "locale",
           "type": "choice",
-          "choices": [
-            "en",
-            "fr"
-          ]
+          "choices": ["en", "fr"]
         },
         {
           "title": "Publishing date",
@@ -243,10 +237,7 @@
           "title": "locale",
           "name": "locale",
           "type": "choice",
-          "choices": [
-            "en",
-            "fr"
-          ]
+          "choices": ["en", "fr"]
         },
         {
           "title": "Title",
@@ -291,10 +282,7 @@
       "schema": {
         "title": "Social Medias",
         "type": "object",
-        "required": [
-          "label",
-          "link"
-        ],
+        "required": ["label", "link"],
         "properties": {
           "label": {
             "type": "string",
@@ -316,10 +304,7 @@
       "schema": {
         "title": "Category",
         "type": "object",
-        "required": [
-          "name",
-          "description"
-        ],
+        "required": ["name", "description"],
         "properties": {
           "name": {
             "type": "string",
@@ -341,10 +326,7 @@
       "schema": {
         "title": "Tag",
         "type": "object",
-        "required": [
-          "name",
-          "description"
-        ],
+        "required": ["name", "description"],
         "properties": {
           "name": {
             "type": "string",
@@ -370,9 +352,7 @@
       "schema": {
         "title": "Author",
         "type": "object",
-        "required": [
-          "name"
-        ],
+        "required": ["name"],
         "properties": {
           "name": {
             "type": "string",
@@ -394,13 +374,7 @@
       "schema": {
         "title": "Title",
         "type": "object",
-        "required": [
-          "title",
-          "url",
-          "description_en",
-          "category_en",
-          "image"
-        ],
+        "required": ["title", "url", "description_en", "category_en", "image"],
         "properties": {
           "title": {
             "type": "string",

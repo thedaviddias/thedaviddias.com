@@ -40,7 +40,7 @@ export const GithubProject: React.FC<GithubProjectProps> = ({ project }) => {
 
         <div className="flex align-middle items-center">
           <GithubStar className="fill-current text-gray-600 dark:text-gray-100" />
-          <span className="ml-2">{project?.stars}</span>
+          <span className="ml-2">{project?.stars.toLocaleString()}</span>
         </div>
 
         <div className="flex align-middle items-center">

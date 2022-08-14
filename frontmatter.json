@@ -290,19 +290,45 @@
       "title": "Categories",
       "file": "[[workspace]]/data/categories.json",
       "fileType": "json",
-      "labelField": "id",
+      "labelField": "name",
       "schema": {
         "title": "Category",
         "type": "object",
-        "required": ["id", "description"],
+        "required": ["name", "description"],
         "properties": {
-          "id": {
+          "name": {
             "type": "string",
-            "title": "ID"
+            "title": "Name"
           },
           "description": {
             "type": "string",
             "title": "Description"
+          }
+        }
+      }
+    },
+    {
+      "id": "tags",
+      "title": "Tags",
+      "file": "[[workspace]]/data/tags.json",
+      "fileType": "json",
+      "labelField": "name",
+      "schema": {
+        "title": "Tag",
+        "type": "object",
+        "required": ["name", "description"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description"
+          },
+          "logo": {
+            "type": "string",
+            "title": "Logo path"
           }
         }
       }

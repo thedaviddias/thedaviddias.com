@@ -1,0 +1,11 @@
+[
+  {
+    "name": "best-practices",
+    "description": "Best practices"
+  },
+  {
+    "name": "nextjs",
+    "logo": "/images/tags/nextjs.png",
+    "description": "Next.js is a React framework."
+  }
+]

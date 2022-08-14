@@ -24,7 +24,7 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ posts, category }) => {
   const { t } = useTranslation('common')
   const router = useRouter()
   const titleCategory = category?.name || ''
-  const descriptionCategory = category?.description || ''
+  const descriptionCategory = category?.description || category?.name
 
   const titlePage = pages(t, titleCategory).category.title
   const descriptionPage = pages(t, descriptionCategory).category.description
@@ -54,9 +54,9 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ posts, category }) => {
 export const getStaticPaths = async () => {
   const categories = await getCategories('articles')
 
-  const paths = categories.map((category: string) => ({
+  const paths = categories.map((category) => ({
     params: {
-      category,
+      category: category.name,
     },
   }))
 

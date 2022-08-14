@@ -61,9 +61,9 @@ export const getStaticPaths = async () => {
   const tags = await getTags('articles')
   const notes = await getTags('notes')
 
-  const paths = [...tags, ...notes].map((tag: string) => ({
+  const paths = [...tags, ...notes].map((tag) => ({
     params: {
-      tag,
+      tag: tag.name,
     },
   }))
 

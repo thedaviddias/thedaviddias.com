@@ -117,7 +117,7 @@
     "seo": {
       "url": "projects",
       "title": "My Projects",
-      "description": "Discover all the projects I've worked on or are currently working on."
+      "description": "Discover all the projects I've worked on or I'm currently working on."
     },
     "updated": "Updated {{date}} ago",
     "sections": {
@@ -152,7 +152,7 @@
   "category": {
     "path": "/categories",
     "seo": {
-      "title": "My content about {{name}}",
+      "title": "Articles about {{name}}",
       "description": "You will find all my posts related to {{name}}."
     },
     "h1": "Category: {{name}}"

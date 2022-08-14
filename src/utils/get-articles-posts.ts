@@ -176,9 +176,15 @@ export type TagOptions = {
   [key: string]: string[]
 }
 
+type ListAllTags = {
+  name: string
+  occurrences?: number
+}
+
 async function collateTags(dataType: string, type: string, locale = 'en') {
   const files = getAllPosts(dataType)
-  const allTags = new Set<string>() // to ensure only unique tags are added
+  const listAllTags = [] as ListAllTags[]
+  const uniqueTags = new Set()
 
   files.map((postSlug) => {
     const source = fs.readFileSync(path.join(process.cwd(), 'content', dataType, postSlug), 'utf8')
@@ -187,31 +193,55 @@ async function collateTags(dataType: string, type: string, locale = 'en') {
 
     if (data.locale === locale) {
       if (type === 'tags' && data.tags.length) {
-        data.tags && data.tags.forEach((tag: string) => allTags.add(slugify(tag, { lower: true })))
-      }
-
-      if (type === 'categories' && data.categories.length) {
-        data.categories.forEach((category: string) =>
-          allTags.add(slugify(category, { lower: true }))
-        )
+        data.tags.forEach((tag: string) => {
+          listAllTags.push({ name: slugify(tag, { lower: true }) })
+        })
+      } else if (type === 'categories' && data.categories.length) {
+        data.categories.forEach((category: string) => {
+          listAllTags.push({ name: slugify(category, { lower: true }) })
+        })
       }
     }
   })
 
-  return Array.from(allTags)
+  const filteredArr = listAllTags.filter((el) => {
+    const duplicate = uniqueTags.has(el.name)
+    uniqueTags.add(el.name)
+    return !duplicate
+  })
+
+  return Array.from(filteredArr)
 }
 
-export async function getTags(dataType: string, locale?: string) {
-  const tags: TagOptions = {
+export type TagsInfo = {
+  name: string
+  description?: string
+  logo?: string
+}
+
+export async function getTags(dataType: string, locale?: string): Promise<TagsInfo[]> {
+  const tagsInfo = fs.readFileSync(path.join(process.cwd(), 'data', 'tags.json'), 'utf8')
+
+  const tags = {
     articles: await collateTags('articles', 'tags', locale),
     notes: await collateTags('notes', 'tags', locale),
   }
 
-  return tags[dataType]
+  const tagsWithDescription = tags[dataType].map((tag: ListAllTags) => {
+    const tagData = JSON.parse(tagsInfo).find((tagData: TagsInfo) => tagData.name === tag.name)
+
+    return {
+      name: tag.name,
+      description: tagData?.description,
+      logo: tagData?.logo,
+    }
+  })
+
+  return tagsWithDescription
 }
 
-export async function getCategories(dataType: string, locale?: string) {
-  const categories: TagOptions = {
+export async function getCategories(dataType: string, locale?: string): Promise<ListAllTags[]> {
+  const categories = {
     articles: await collateTags('articles', 'categories', locale),
   }
 

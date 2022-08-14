@@ -14,7 +14,7 @@ export const Notes: React.FC<NotesProps> = ({ note }) => {
 
   return (
     <>
-      <article className="pt-3 pb-0 border-t border-gray-200 dark:border-gray-700">
+      <article className="pt-3 pb-0 border-t border-gray-200 dark:border-gray-700 relative hover:scale-[1.01] transition-all">
         <div className="flex flex-col lg:flex-row gap-y-5 lg:gap-x-5">
           <div className="max-w-[30rem] w-full">
             <H4 as="h3">

@@ -59,7 +59,7 @@ const TagsPage: NextPage<TagsPageProps> = ({ tags }) => {
           )}
           {filteredTags.map((tag) => (
             <li key={tag.name}>
-              <div className="flex flex-col border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-md p-4 h-full border relative overflow-hidden">
+              <div className="flex flex-col border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-md p-4 h-full border relative overflow-hidden hover:scale-[1.01] transition-all">
                 <CustomLink
                   href={`${t('tags.path')}/${tag.name}`}
                   className="dark:text-blue-300 font-semibold mb-3 text-xl before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0"
@@ -67,6 +67,9 @@ const TagsPage: NextPage<TagsPageProps> = ({ tags }) => {
                   {tag.name}
                 </CustomLink>
                 <Paragraph>{tag?.description}</Paragraph>
+                <p className="text-sm dark:text-slate-400">{`${tag?.occurrences} post${
+                  tag?.occurrences === 1 ? '' : 's'
+                } published`}</p>
                 {tag?.logo && (
                   <Image
                     src={tag?.logo}

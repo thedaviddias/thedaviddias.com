@@ -133,7 +133,7 @@
       "title": "Notes related to {{name}}",
       "title_all": "All the Tags",
       "description": "All my posts related to {{name}}.",
-      "description_all": "All the tags attached to my articles and notes."
+      "description_all": "All the tags attached to my articles and notes sorted by posts published."
     },
     "view_all_tags": "→ View all tags",
     "section": "Tags",

@@ -29,29 +29,39 @@
   "frontMatter.framework.startCommand": "pnpm dev",
   "frontMatter.preview.host": "http://localhost:3000/",
   "frontMatter.taxonomy.tags": [
-    "a11y",
+    "web-accessibilite",
     "astuces",
     "aws",
     "best-practices",
+    "canada",
+    "coding",
     "collaboration",
+    "dev-journal",
+    "entree-express",
     "front-end-checklist",
     "front-end-development",
+    "gaming",
     "github",
     "github-actions",
     "life-lessons",
     "morning-routines",
     "netlify",
+    "new-zealand",
     "nextjs",
+    "npm",
     "open-source",
     "performance",
-    "psychology",
+    "pnpm",
     "react",
     "security",
     "self-improvement",
-    "teamwork",
+    "steam-deck",
+    "toronto",
+    "travel",
     "typescript",
-    "ui",
-    "user-experience"
+    "usa",
+    "user-experience",
+    "user-interface"
   ],
   "frontMatter.taxonomy.contentTypes": [
     {
@@ -67,7 +77,10 @@
           "title": "locale",
           "name": "locale",
           "type": "choice",
-          "choices": ["en", "fr"]
+          "choices": [
+            "en",
+            "fr"
+          ]
         },
         {
           "title": "Publishing date",
@@ -174,7 +187,10 @@
           "title": "locale",
           "name": "locale",
           "type": "choice",
-          "choices": ["en", "fr"]
+          "choices": [
+            "en",
+            "fr"
+          ]
         },
         {
           "title": "Publishing date",
@@ -227,7 +243,10 @@
           "title": "locale",
           "name": "locale",
           "type": "choice",
-          "choices": ["en", "fr"]
+          "choices": [
+            "en",
+            "fr"
+          ]
         },
         {
           "title": "Title",
@@ -272,7 +291,10 @@
       "schema": {
         "title": "Social Medias",
         "type": "object",
-        "required": ["label", "link"],
+        "required": [
+          "label",
+          "link"
+        ],
         "properties": {
           "label": {
             "type": "string",
@@ -294,7 +316,10 @@
       "schema": {
         "title": "Category",
         "type": "object",
-        "required": ["name", "description"],
+        "required": [
+          "name",
+          "description"
+        ],
         "properties": {
           "name": {
             "type": "string",
@@ -316,7 +341,10 @@
       "schema": {
         "title": "Tag",
         "type": "object",
-        "required": ["name", "description"],
+        "required": [
+          "name",
+          "description"
+        ],
         "properties": {
           "name": {
             "type": "string",
@@ -342,7 +370,9 @@
       "schema": {
         "title": "Author",
         "type": "object",
-        "required": ["name"],
+        "required": [
+          "name"
+        ],
         "properties": {
           "name": {
             "type": "string",
@@ -364,7 +394,13 @@
       "schema": {
         "title": "Title",
         "type": "object",
-        "required": ["title", "url", "description_en", "category_en", "image"],
+        "required": [
+          "title",
+          "url",
+          "description_en",
+          "category_en",
+          "image"
+        ],
         "properties": {
           "title": {
             "type": "string",

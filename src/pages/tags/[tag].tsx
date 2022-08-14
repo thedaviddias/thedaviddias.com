@@ -33,12 +33,6 @@ const TagPage: NextPage<CategoryPageProps> = ({ posts, tag }) => {
             description={t('tags.seo.description', { name: tag })}
           />
 
-          {posts?.length ? (
-            <footer className="text-right">
-              <CustomLink href={t('tags.path')}>{t('tags.view_all_tags')}</CustomLink>
-            </footer>
-          ) : null}
-
           <h2 className="sr-only">{t('tags.latest_posts', { name: tag })}</h2>
 
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">
@@ -52,6 +46,11 @@ const TagPage: NextPage<CategoryPageProps> = ({ posts, tag }) => {
               </>
             ))}
           </div>
+          {posts?.length ? (
+            <footer className="text-right">
+              <CustomLink href={t('tags.path')}>{t('tags.view_all_tags')}</CustomLink>
+            </footer>
+          ) : null}
         </section>
       </main>
     </Container>

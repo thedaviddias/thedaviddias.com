@@ -6,7 +6,7 @@ import slugify from 'slugify'
 
 import { PreviousNext } from '@/components/AdjacentPosts'
 
-import { BASE_URL } from '@/constants'
+import { BASE_URL, CONTENT_TYPE } from '@/constants'
 
 export type BlogPostProps = {
   frontMatter: {
@@ -256,8 +256,8 @@ export async function getTags(dataType: string, locale?: string): Promise<TagsIn
   const tagsInfo = fs.readFileSync(path.join(process.cwd(), 'data', 'tags.json'), 'utf8')
 
   const tags = {
-    articles: await collateTags('articles', 'tags', locale),
-    notes: await collateTags('notes', 'tags', locale),
+    articles: await collateTags(CONTENT_TYPE.ARTICLE, 'tags', locale),
+    notes: await collateTags(CONTENT_TYPE.NOTE, 'tags', locale),
   }
 
   const tagsWithDescription = tags[dataType].map((tag: ListAllTags) => {
@@ -276,7 +276,7 @@ export async function getTags(dataType: string, locale?: string): Promise<TagsIn
 
 export async function getCategories(dataType: string, locale?: string): Promise<ListAllTags[]> {
   const categories = {
-    articles: await collateTags('articles', 'categories', locale),
+    articles: await collateTags(CONTENT_TYPE.ARTICLE, 'categories', locale),
   }
 
   return categories[dataType]
@@ -309,8 +309,8 @@ export type GetRelatedPosts = BlogPostProps & {
 }
 
 export function getRelatedPosts(slug: string, locale: string, tags: string[]) {
-  const allPostHeaders = getAllPostsWithFrontMatter({ dataType: 'articles', locale })
-  const allNotesHeaders = getAllPostsWithFrontMatter({ dataType: 'notes', locale })
+  const allPostHeaders = getAllPostsWithFrontMatter({ dataType: CONTENT_TYPE.ARTICLE, locale })
+  const allNotesHeaders = getAllPostsWithFrontMatter({ dataType: CONTENT_TYPE.NOTE, locale })
   const allPosts: GetRelatedPosts[] = []
 
   const posts = [...allPostHeaders, ...allNotesHeaders].filter((aPost) => aPost.slug !== slug)

@@ -37,7 +37,8 @@
       "social": "Réseaux sociaux",
       "extra": "Extra liens",
       "extra_links": {
-        "uses": "Utilise",
+        "tags": "Sujets",
+        "uses": "J'utilise",
         "gear": "Matériel",
         "resume": "CV",
         "dashboard": "Tableau de bord",

@@ -46,6 +46,19 @@ export const routes: RoutesResponse = (translate) => ({
       translate,
     }),
   },
+  tags: {
+    label: translate('layout.footer.extra_links.tags'),
+    path: translate('tags.path'),
+    h1: translate('tags.h1'),
+    seo: extendSEO({
+      options: {
+        title: translate('tags.h1'),
+        description: translate('tags.seo.description'),
+        url: translate('tags.seo.url'),
+      },
+      translate,
+    }),
+  },
   notes: {
     label: translate('layout.nav.notes'),
     path: translate('notes.path'),

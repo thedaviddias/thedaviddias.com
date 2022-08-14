@@ -231,6 +231,8 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
 
                 <Subscribe />
 
+                {relatedPosts.length ? <RelatedPosts relatedPosts={relatedPosts} /> : null}
+
                 {tags && (
                   <aside className="w-full mt-3 print:hidden">
                     <div className="small-title">{t('tags.section')}</div>
@@ -244,8 +246,6 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                   {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
 
                   <Webmentions mentions={data?.links} />
-
-                  {relatedPosts.length ? <RelatedPosts relatedPosts={relatedPosts} /> : null}
 
                   <Comments />
                 </section>

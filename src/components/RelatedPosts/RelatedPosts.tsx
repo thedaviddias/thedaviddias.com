@@ -16,9 +16,11 @@ export const RelatedPosts: React.FC<RelatedPostsProps> = ({ relatedPosts }) => {
   return (
     <>
       {relatedPosts.length ? (
-        <section className="mt-10 border-t border-gray-200 dark:border-gray-600 pt-8">
+        <section className="mt-10 border-t border-gray-200 dark:border-gray-600 pt-8 pb-8">
           <header>
-            <H4 as="h3">{t('related.title')}</H4>
+            <H4 as="h3" className="small-title">
+              {t('related.title')}
+            </H4>
             <Paragraph className="text-sm">{t('related.description')}</Paragraph>
           </header>
           <ul className="list-disc pl-5">
@@ -26,7 +28,7 @@ export const RelatedPosts: React.FC<RelatedPostsProps> = ({ relatedPosts }) => {
               <li key={post.frontMatter.title}>
                 <CustomLink
                   href={post.permalink}
-                  className="text-gray-600 hover:text-gray-900 p-1 dark:text-gray-200 text-lg"
+                  className="text-gray-600 hover:text-gray-900 p-1 dark:text-gray-200 text-xl"
                 >
                   {post.frontMatter.title}
                 </CustomLink>

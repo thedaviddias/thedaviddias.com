@@ -37,6 +37,7 @@
       "social": "Social media",
       "extra": "Extra links",
       "extra_links": {
+        "tags": "Topics",
         "uses": "Uses",
         "gear": "Gear",
         "dashboard": "Dashboard",
@@ -138,7 +139,7 @@
     "view_all_tags": "→ View all tags",
     "section": "Tags",
     "latest_posts": "List of all the posts related to {{name}}",
-    "h1": "Tags: {{name}}"
+    "h1": "Tag: {{name}}"
   },
   "bookmarks": {
     "path": "/bookmarks",

@@ -67,7 +67,7 @@ const TagsPage: NextPage<TagsPageProps> = ({ tags }) => {
                   {tag.name}
                 </CustomLink>
                 <Paragraph>{tag?.description}</Paragraph>
-                <p className="text-sm dark:text-slate-400">{`${tag?.occurrences} post${
+                <p className="text-sm dark:text-slate-400 mt-auto">{`${tag?.occurrences} post${
                   tag?.occurrences === 1 ? '' : 's'
                 } published`}</p>
                 {tag?.logo && (
@@ -89,7 +89,10 @@ const TagsPage: NextPage<TagsPageProps> = ({ tags }) => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const tags = await getTags(CONTENT_TYPE.ARTICLE, locale)
+  const articleTags = await getTags(CONTENT_TYPE.ARTICLE, locale)
+  const notesTags = await getTags(CONTENT_TYPE.NOTE, locale)
+
+  const tags = [...articleTags, ...notesTags]
 
   const props = {
     tags: JSON.parse(JSON.stringify(tags)),

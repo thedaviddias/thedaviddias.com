@@ -132,9 +132,10 @@
     "path": "/tags",
     "seo": {
       "title": "Notes related to {{name}}",
+      "url": "tags",
       "title_all": "All the Tags",
       "description": "All my posts related to {{name}}.",
-      "description_all": "All the tags attached to my articles and notes sorted by posts published."
+      "description_all": "All the tags attached to my articles and notes, sorted by posts published."
     },
     "view_all_tags": "→ View all tags",
     "section": "Tags",
@@ -201,7 +202,8 @@
   },
   "comments": {
     "title": "Comments",
-    "description": "Don't hesitate to leave your comment! In case you don't have a Github account, you can always tweet about it!"
+    "description": "Don't hesitate to leave your comment! In case you don't have a Github account, you can always tweet about it!",
+    "leave_comment": "Leave a comment"
   },
   "dashboard": {
     "path": "/dashboard",

@@ -35,7 +35,7 @@ export const Comments = () => {
           onClick={() => setIsDisplay(true)}
           className="mt-5 mb-3 bg-indigo-500 dark:bg-indigo-900 text-white font-bold py-1 px-3 rounded"
         >
-          Leave a comment
+          {t('comments.leave_comment')}
         </button>
       )}
     </section>

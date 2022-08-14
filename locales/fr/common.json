@@ -132,9 +132,14 @@
     "path": "/tags",
     "seo": {
       "title": "Publication en lien avec {{name}}",
-      "description": "Toutes mes publications en lien avec le thème de {{name}}."
+      "url": "tags",
+      "title_all": "Toutes les étiquettes",
+      "description": "Toutes mes publications en lien avec le thème de {{name}}.",
+      "description_all": "Toutes les étiquettes attachées à mes articles et notes, ranger par le nombre d'articles publiés."
     },
+    "view_all_tags": "→ Voir toutes les étiquettes",
     "section": "Étiquettes",
+    "latest_posts": "Liste de tous les articles en lien avec {{name}}",
     "h1": "Étiquettes: {{name}}"
   },
   "bookmarks": {
@@ -197,7 +202,8 @@
   },
   "comments": {
     "title": "Commentaires",
-    "description": "N'hésitez pas à laisser votre commentaire! Si vous ne possédez pas de compte Github, vous pouvez toujours tweeter au sujet de cet article!"
+    "description": "N'hésitez pas à laisser votre commentaire! Si vous ne possédez pas de compte Github, vous pouvez toujours tweeter au sujet de cet article!",
+    "leave_comment": "Laissez un commentaire"
   },
   "dashboard": {
     "path": "/dashboard",
@@ -277,5 +283,8 @@
       }
     },
     "all_issues": "Voir tous les bulletins précédents"
+  },
+  "share": {
+    "title": "Partager cet article"
   }
 }

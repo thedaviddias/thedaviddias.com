@@ -10,6 +10,7 @@ import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 
 import { pages } from '@/config/routes'
+import { CONTENT_TYPE } from '@/constants'
 import { getAllPostsWithFrontMatter, getCategories } from '@/utils/get-articles-posts'
 
 type CategoryPageProps = {
@@ -52,7 +53,7 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ posts, category }) => {
 }
 
 export const getStaticPaths = async () => {
-  const categories = await getCategories('articles')
+  const categories = await getCategories(CONTENT_TYPE.ARTICLE)
 
   const paths = categories.map((category) => ({
     params: {
@@ -70,11 +71,13 @@ export const getStaticProps: GetStaticProps<CategoryPageProps> = async ({
   params,
   locale,
 }: Params) => {
-  const posts = await getAllPostsWithFrontMatter({
-    dataType: 'articles',
-    locale,
-    filterByCategory: params.category,
-  })
+  const posts =
+    locale &&
+    (await getAllPostsWithFrontMatter({
+      dataType: CONTENT_TYPE.ARTICLE,
+      locale,
+      filterByCategory: params.category,
+    }))
 
   const currentCategory = Object.values(listCategories).find((cat) => cat.id === params.category)
 

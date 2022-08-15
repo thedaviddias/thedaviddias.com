@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@giscus/react': ^2.2.0
   '@next/bundle-analyzer': ^12.2.5
-  '@next/env': 12.2.4
+  '@next/env': 12.2.5
   '@nick22985/wakatime-api': ^1.0.1
   '@octokit/graphql': ^5.0.0
   '@sentry/nextjs': ^7.10.0
@@ -108,7 +108,7 @@ dependencies:
 
 devDependencies:
   '@next/bundle-analyzer': 12.2.5
-  '@next/env': 12.2.4
+  '@next/env': 12.2.5
   '@nick22985/wakatime-api': 1.0.1
   '@octokit/graphql': 5.0.0
   '@sentry/nextjs': 7.10.0_iphjcfrqrktwghis427jlwhi6y
@@ -143,7 +143,7 @@ devDependencies:
   husky: 8.0.1
   lint-staged: 13.0.3
   next-bundle-analyzer: 0.6.4_next@12.2.4
-  next-sitemap: 3.1.16_5zhu3cku25zwtyi2lv2v345ony
+  next-sitemap: 3.1.16_7p53w2a6m7gojqbkhmjljls5hm
   node-fetch: 3.2.10
   pretty-ms: 8.0.0
   react-goodreads-shelf: 2.3.0
@@ -1683,6 +1683,10 @@ packages:
 
   /@next/env/12.2.4:
     resolution: {integrity: sha512-/gApFXWk5CCLFQJL5IYJXxPQuG5tz5nPX4l27A9Zm/+wJxiwFrRSP54AopDxIv4JRp/rGwcgk/lZS/0Clw8jYA==}
+
+  /@next/env/12.2.5:
+    resolution: {integrity: sha512-vLPLV3cpPGjUPT3PjgRj7e3nio9t6USkuew3JE/jMeon/9Mvp1WyR18v3iwnCuX7eUAm1HmAbJHHLAbcu/EJcw==}
+    dev: true
 
   /@next/eslint-plugin-next/12.2.4:
     resolution: {integrity: sha512-ChDkUIkJeYWKRx+FdF+EhUgvKtK1wF+Xew4Os7ef3iAjMch5GGBiezw2zGXTa/C0E6potz4j11EpX89mngffug==}
@@ -6758,7 +6762,7 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /next-sitemap/3.1.16_5zhu3cku25zwtyi2lv2v345ony:
+  /next-sitemap/3.1.16_7p53w2a6m7gojqbkhmjljls5hm:
     resolution: {integrity: sha512-kczTKLB1ifqi44mMImv/sLRsqxy/O4DXJ4mx/1l23vyx6QFWqeuHxS0duEL/EsChcVJUMWV4FNg2pIiX31xxmg==}
     engines: {node: '>=14.18'}
     hasBin: true
@@ -6767,7 +6771,7 @@ packages:
       next: '*'
     dependencies:
       '@corex/deepmerge': 4.0.29
-      '@next/env': 12.2.4
+      '@next/env': 12.2.5
       minimist: 1.2.6
       next: 12.2.4_qugu52izettqdqqm5qcjcltcia
     dev: true

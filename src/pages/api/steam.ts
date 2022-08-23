@@ -52,9 +52,12 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const ownedGames = await getOwnedGames(steamKey, steamId)
     const recentlyPlayed = await getPlayedGames(steamKey, steamId)
 
-    return res
-      .status(200)
-      .json({ count: ownedGames.response.game_count, recently: recentlyPlayed.response.games[0] })
+    const recentGame =
+      recentlyPlayed.response.games[0].appid === 1737100
+        ? recentlyPlayed.response.games[1]
+        : recentlyPlayed.response.games[0]
+
+    return res.status(200).json({ count: ownedGames.response.game_count, recently: recentGame })
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error(error)

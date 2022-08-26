@@ -33,6 +33,10 @@ export default class MyDocument extends Document {
             type="font/woff2"
             crossOrigin="anonymous"
           />
+          <meta
+            name="google-site-verification"
+            content="_6qNCkTis9PqmGX1r5Nhe_b14nRXmJ9nos2yeCN_eaw"
+          />
         </Head>
         <body className="antialiased">
           <Main />

@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^12.2.5",
-    "@next/env": "12.2.4",
+    "@next/env": "12.2.5",
     "@nick22985/wakatime-api": "^1.0.1",
     "@octokit/graphql": "^5.0.0",
     "@sentry/nextjs": "^7.10.0",

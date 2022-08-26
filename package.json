@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^12.2.5",
-    "@next/env": "12.2.4",
+    "@next/env": "12.2.5",
     "@nick22985/wakatime-api": "^1.0.1",
     "@octokit/graphql": "^5.0.0",
     "@sentry/nextjs": "^7.10.0",
@@ -63,7 +63,7 @@
     "@types/react-dom": "18.0.6",
     "@types/rss": "^0.0.29",
     "@typescript-eslint/eslint-plugin": "5.33.0",
-    "@typescript-eslint/parser": "5.33.0",
+    "@typescript-eslint/parser": "5.35.1",
     "axe-core": "^4.4.3",
     "axios": "^0.27.2",
     "camel-case": "^4.1.2",

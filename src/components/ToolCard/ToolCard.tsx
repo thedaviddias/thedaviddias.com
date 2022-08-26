@@ -5,10 +5,10 @@ import { CustomLink } from '@/components/CustomLink'
 import { H5 } from '@/components/Headings'
 import { Paragraph } from '@/components/Paragraph'
 
-import { Tool } from '@/pages/uses'
+import { UsesType } from '@/types'
 
 type ToolCard = {
-  tool: Tool
+  tool: UsesType
 }
 
 export const ToolCard: React.FC<ToolCard> = ({ tool }) => {
@@ -28,7 +28,7 @@ export const ToolCard: React.FC<ToolCard> = ({ tool }) => {
             {tool.title}
           </CustomLink>
         </H5>
-        <Paragraph>{tool[`description_${lang}` as keyof Tool]}</Paragraph>
+        <Paragraph>{tool[`description_${lang}` as keyof UsesType]}</Paragraph>
       </div>
     </article>
   )

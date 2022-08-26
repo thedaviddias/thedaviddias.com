@@ -1,6 +1,14 @@
 import { graphql } from '@octokit/graphql'
+import { Language, Repository } from '@octokit/graphql-schema'
 
 type SortType = 'PUSHED_AT' | 'STARGAZERS'
+
+export interface GhProjectsProps extends Pick<Repository, 'name' | 'url' | 'description'> {
+  updatedAt: Date
+  stars: Pick<Repository, 'stargazerCount'>
+  forks: number
+  language: Language
+}
 
 export const fetchRepos = async (sort: SortType, limit: number) => {
   // https://docs.github.com/en/graphql/reference/objects#repository
@@ -44,15 +52,17 @@ export const fetchRepos = async (sort: SortType, limit: number) => {
     }
   )
 
-  const repos = user.repositories.edges.map(({ node: repo }: any) => ({
-    name: repo.name,
-    url: repo.url,
-    description: repo.description,
-    updatedAt: repo.pushedAt,
-    stars: repo.stargazerCount,
-    forks: repo.forkCount,
-    language: repo.primaryLanguage,
-  }))
+  const repos: GhProjectsProps[] = user.repositories.edges.map(
+    ({ node: repo }: { node: Repository }) => ({
+      name: repo.name,
+      url: repo.url,
+      description: repo.description,
+      updatedAt: repo.pushedAt,
+      stars: repo.stargazerCount,
+      forks: repo.forkCount,
+      language: repo.primaryLanguage,
+    })
+  )
 
   return repos
 }

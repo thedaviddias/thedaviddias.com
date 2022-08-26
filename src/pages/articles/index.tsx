@@ -13,9 +13,11 @@ import { Search } from '@/components/Search'
 import { routes } from '@/config/routes'
 import { getAllPostsWithFrontMatter, getCategories } from '@/utils/get-articles-posts'
 
+import { ArticlesType, ListAllTags } from '@/types'
+
 type BlogProps = {
-  posts: any[]
-  categories: any[]
+  posts: ArticlesType[]
+  categories: ListAllTags[]
 }
 
 const Blog = ({ posts, categories }: BlogProps) => {

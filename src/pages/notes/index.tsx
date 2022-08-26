@@ -11,11 +11,13 @@ import { Search } from '@/components/Search'
 import { routes } from '@/config/routes'
 import { getAllPostsWithFrontMatter } from '@/utils/get-articles-posts'
 
-type BlogProps = {
-  notes: any[]
+import { NotesType } from '@/types'
+
+type TilProps = {
+  notes: NotesType[]
 }
 
-const Til = ({ notes }: BlogProps) => {
+const Til = ({ notes }: TilProps) => {
   const { t } = useTranslation('common')
   const [searchValue, setSearchValue] = useState('')
 
@@ -71,7 +73,7 @@ const Til = ({ notes }: BlogProps) => {
   )
 }
 
-export const getStaticProps: GetStaticProps<BlogProps> = async ({ locale }) => {
+export const getStaticProps: GetStaticProps<TilProps> = async ({ locale }) => {
   const notes = getAllPostsWithFrontMatter({ dataType: 'notes', locale })
 
   const props = {

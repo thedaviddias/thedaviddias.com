@@ -4,11 +4,13 @@ import { CustomLink } from '../CustomLink'
 import { H5 } from '../Headings'
 import { Notes } from '../Notes'
 
-type LatestPostsSection = {
-  notes: any[]
+import { NotesType } from '@/types'
+
+type LatestNotesSection = {
+  notes: NotesType[]
 }
 
-export const LatestNotesSection: React.FC<LatestPostsSection> = ({ notes }) => {
+export const LatestNotesSection: React.FC<LatestNotesSection> = ({ notes }) => {
   const { t } = useTranslation('common')
 
   return (

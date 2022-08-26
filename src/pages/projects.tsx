@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 
-import { fetchRepos } from '@/lib/github'
+import { fetchRepos, GhProjectsProps } from '@/lib/github'
 
 import { Container } from '@/components/Container'
 import { GithubProject } from '@/components/GithubProject'
@@ -10,21 +10,6 @@ import { H2 } from '@/components/Headings'
 import { PageHeader } from '@/components/PageHeader'
 
 import { routes } from '@/config/routes'
-
-type Language = {
-  color: string
-  name: string
-}
-
-export type GhProjectsProps = {
-  name: string
-  url: string
-  description: string
-  updatedAt: string
-  stars: number
-  forks: number
-  language: Language | null
-}
 
 interface ProjectPageProps {
   ghProjects: GhProjectsProps[]

@@ -1,9 +1,10 @@
 import { formatDistance } from 'date-fns'
 import useTranslation from 'next-translate/useTranslation'
 
+import { GhProjectsProps } from '@/lib/github'
+
 import { CustomLink } from '@/components/CustomLink'
 
-import { GhProjectsProps } from '@/pages/projects'
 import { convertLangDateFs } from '@/utils/language-date'
 
 import { H5 } from '../Headings'
@@ -32,7 +33,7 @@ export const GithubProject: React.FC<GithubProjectProps> = ({ project }) => {
           <div className="flex align-middle items-center">
             <span
               className="inline-block w-3 h-3 rounded-full"
-              style={{ backgroundColor: project.language?.color }}
+              style={{ backgroundColor: project.language?.color || '' }}
             />
             <span className="ml-2">{project.language?.name}</span>
           </div>

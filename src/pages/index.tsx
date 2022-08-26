@@ -7,7 +7,7 @@ import useTranslation from 'next-translate/useTranslation'
 import { SWRConfig } from 'swr'
 
 import generateRssFeed from '@/lib/generateRss'
-import { fetchRepos } from '@/lib/github'
+import { fetchRepos, GhProjectsProps } from '@/lib/github'
 
 import { Container } from '@/components/Container'
 import { CurrentlyReading } from '@/components/CurrentlyReading'
@@ -27,14 +27,16 @@ import { getAllPostsWithFrontMatter } from '@/utils/get-articles-posts'
 import { listSocialUrl } from '@/utils/list-social-url'
 import { readData } from '@/utils/read-data'
 
+import { ArticlesType, NotesType } from '@/types'
+
 const PodcastSection = dynamic(() => import('../components/PodcastSection'), {
   loading: () => <Loader />,
 })
 
 type HomeProps = {
-  articles: any[]
-  notes: any[]
-  ghProjects: any[]
+  articles: ArticlesType[]
+  notes: NotesType[]
+  ghProjects: GhProjectsProps[]
   fallback: any
 }
 

@@ -1,6 +1,6 @@
 import useTranslation from 'next-translate/useTranslation'
 
-import { GhProjectsProps } from '@/pages/projects'
+import { GhProjectsProps } from '@/lib/github'
 
 import { CustomLink } from '../CustomLink'
 import { GithubProject } from '../GithubProject'

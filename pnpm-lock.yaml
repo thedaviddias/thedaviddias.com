@@ -6,6 +6,7 @@ specifiers:
   '@next/env': 12.2.5
   '@nick22985/wakatime-api': ^1.0.1
   '@octokit/graphql': ^5.0.0
+  '@octokit/graphql-schema': ^12.0.0
   '@sentry/nextjs': ^7.10.0
   '@sentry/node': ^7.10.0
   '@svgr/webpack': ^6.3.1
@@ -111,6 +112,7 @@ devDependencies:
   '@next/env': 12.2.5
   '@nick22985/wakatime-api': 1.0.1
   '@octokit/graphql': 5.0.0
+  '@octokit/graphql-schema': 12.0.0
   '@sentry/nextjs': 7.10.0_iphjcfrqrktwghis427jlwhi6y
   '@sentry/node': 7.10.0
   '@svgr/webpack': 6.3.1
@@ -1831,6 +1833,13 @@ packages:
       '@octokit/types': 6.41.0
       is-plain-object: 5.0.0
       universal-user-agent: 6.0.0
+    dev: true
+
+  /@octokit/graphql-schema/12.0.0:
+    resolution: {integrity: sha512-/qw0J/oj/d4G37ynilBeYWQ+BZVqlaDkqHkdOLg7nKa8l85SemNSzNLyr1CcqBjmiu3ME8MqyLjU9mdts+IeYg==}
+    dependencies:
+      graphql: 16.6.0
+      graphql-tag: 2.12.6_graphql@16.6.0
     dev: true
 
   /@octokit/graphql/5.0.0:
@@ -4959,6 +4968,21 @@ packages:
 
   /grapheme-splitter/1.0.4:
     resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
+
+  /graphql-tag/2.12.6_graphql@16.6.0:
+    resolution: {integrity: sha512-FdSNcu2QQcWnM2VNvSCCDCVS5PpPqpzgFT8+GXzqJuoDd0CBncxCY278u4mhRO7tMgo2JjgJA5aZ+nWSQ/Z+xg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    dependencies:
+      graphql: 16.6.0
+      tslib: 2.4.0
+    dev: true
+
+  /graphql/16.6.0:
+    resolution: {integrity: sha512-KPIBPDlW7NxrbT/eh4qPXz5FiFdL5UbaA0XUNz2Rp3Z3hqBSkbj0GVjwFDztsWVauZUWsbKHgMg++sk8UX0bkw==}
+    engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
+    dev: true
 
   /gray-matter/4.0.3:
     resolution: {integrity: sha512-5v6yZd4JK3eMI3FqqCouswVqwugaA9r4dNZB1wwcmrD02QkV5H0y7XBQW8QwQqEaZY1pM9aqORSORhJRdNK44Q==}

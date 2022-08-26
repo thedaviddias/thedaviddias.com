@@ -8,28 +8,7 @@ import { PreviousNext } from '@/components/AdjacentPosts'
 
 import { BASE_URL, CONTENT_TYPE } from '@/constants'
 
-export type BlogPostProps = {
-  frontMatter: {
-    draft: boolean
-    author?: string
-    categories: string[]
-    date: string
-    description: string
-    lastmod?: string
-    locale: string
-    permalink: string
-    tags?: string[]
-    title: string
-    preview: string
-    published?: {
-      publishedOn: string
-      publishedUrl: string
-    }
-  }
-  content: string
-  permalink: string
-  slug: string
-}
+import { ArticlesType, ListAllTags } from '@/types'
 
 export const createPermalink = (filename: string, dataType: string, locale?: string) => {
   const filenameNoExtension = filename.replace('.mdx', '')
@@ -105,7 +84,7 @@ export const getAllPostsWithFrontMatter = ({
   filterByCategory = null,
   locale = 'en',
   limit = 99,
-}: GetAllPostsWithFrontMatter): BlogPostProps[] => {
+}: GetAllPostsWithFrontMatter): ArticlesType[] => {
   const blogs = getAllPosts(dataType)
 
   const allBlogs = blogs
@@ -163,9 +142,9 @@ export const getAllPostsWithFrontMatter = ({
         ...allPosts,
       ]
     }, [])
-    .filter((articles: BlogPostProps) => !articles.frontMatter.draft)
-    .filter((articles: BlogPostProps) => articles.frontMatter.locale === locale)
-    .sort((a: BlogPostProps, b: BlogPostProps) =>
+    .filter((articles: ArticlesType) => !articles.frontMatter.draft)
+    .filter((articles: ArticlesType) => articles.frontMatter.locale === locale)
+    .sort((a: ArticlesType, b: ArticlesType) =>
       dateSortDesc(Number(new Date(a.frontMatter.date)), Number(new Date(b.frontMatter.date)))
     )
 
@@ -174,11 +153,6 @@ export const getAllPostsWithFrontMatter = ({
 
 export type TagOptions = {
   [key: string]: string[]
-}
-
-type ListAllTags = {
-  name: string
-  occurrences: number
 }
 
 async function collateTags(dataType: string, type: string, locale = 'en') {
@@ -304,7 +278,7 @@ export function getAdjacentPosts(slug: string, locale: string, dataType: string)
   }
 }
 
-export type GetRelatedPosts = BlogPostProps & {
+export type GetRelatedPosts = ArticlesType & {
   relevance: number
 }
 
@@ -352,7 +326,7 @@ export function getRelatedPosts(slug: string, locale: string, tags: string[]) {
   return allPosts
 }
 
-export const getAllDraftPosts = ({ dataType }: GetAllPostsWithFrontMatter): BlogPostProps[] => {
+export const getAllDraftPosts = ({ dataType }: GetAllPostsWithFrontMatter): ArticlesType[] => {
   const blogs = getAllPosts(dataType)
 
   const allBlogs = blogs
@@ -366,7 +340,7 @@ export const getAllDraftPosts = ({ dataType }: GetAllPostsWithFrontMatter): Blog
         ...allPosts,
       ]
     }, [])
-    .filter((articles: BlogPostProps) => articles.frontMatter.draft)
+    .filter((articles: ArticlesType) => articles.frontMatter.draft)
 
   return allBlogs
 }

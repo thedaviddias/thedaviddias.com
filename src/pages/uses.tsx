@@ -13,15 +13,7 @@ import { BaseLayout } from '@/layouts/BaseLayout'
 import { getPostBySlug } from '@/utils/get-articles-posts'
 import { readData } from '@/utils/read-data'
 
-export type Tool = {
-  title: string
-  description_en: string
-  description_fr: string
-  url: string
-  image: string
-  category_en: string
-  category_fr: string
-}
+import { UsesType } from '@/types'
 
 type UsesProps = {
   categories: string[]
@@ -68,7 +60,7 @@ const Uses: NextPage<UsesProps> = ({ categories, tools, frontMatter, source }) =
           </header>
 
           <div className="flex flex-col gap-y-3">
-            {tools[category as unknown as number].map((tool: Tool, i: number) => (
+            {tools[category as unknown as number].map((tool: UsesType, i: number) => (
               <ToolCard key={i} tool={tool} />
             ))}
           </div>
@@ -80,15 +72,15 @@ const Uses: NextPage<UsesProps> = ({ categories, tools, frontMatter, source }) =
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const postContent = await getPostBySlug(locale === 'en' ? 'uses' : 'utilise', 'pages', locale)
-  const usesData = await readData<Tool[]>('data/uses.json')
+  const usesData = await readData<UsesType[]>('data/uses.json')
 
   const {
     markdownBody,
     frontMatter: { title, description },
   } = postContent
 
-  const tools: { [key: string]: Tool[] } = {}
-  const category = `category_${locale}` as keyof Tool
+  const tools: { [key: string]: UsesType[] } = {}
+  const category = `category_${locale}` as keyof UsesType
 
   usesData?.forEach((tool) => {
     if (!tools[tool[category]]) {

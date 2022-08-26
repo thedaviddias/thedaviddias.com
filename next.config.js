@@ -64,6 +64,20 @@ const nextConfig = withPlugins([plugins, nextTranslate], {
     })
     return config
   },
+  async redirects() {
+    return [
+      {
+        source: '/articles/what-i-learned-about-side-project-presenting-meetups-europe',
+        destination: '/articles/learned-presenting-side-project-europe',
+        permanent: true,
+      },
+      {
+        source: '/tag/:tag*',
+        destination: '/tags/:tag*',
+        permanent: true,
+      },
+    ]
+  },
 })
 
 const sentryWebpackPluginOptions = {

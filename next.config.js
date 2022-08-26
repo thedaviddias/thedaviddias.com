@@ -72,6 +72,11 @@ const nextConfig = withPlugins([plugins, nextTranslate], {
         permanent: true,
       },
       {
+        source: '/blog/9-best-practices-ux-for-two-factor-authentification',
+        destination: '/articles/9-best-practices-ux-for-two-factor-authentification',
+        permanent: true,
+      },
+      {
         source: '/tag/:tag*',
         destination: '/tags/:tag*',
         permanent: true,

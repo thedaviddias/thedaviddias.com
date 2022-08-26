@@ -8,8 +8,10 @@ import { H2 } from '@/components/Headings'
 
 import { convertLangDateFs } from '@/utils/language-date'
 
+import { ArticlesType } from '@/types'
+
 type BlogPostProps = {
-  post: any
+  post: ArticlesType
   isCategoryPage?: string | string[]
 }
 

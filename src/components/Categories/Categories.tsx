@@ -2,8 +2,10 @@ import useTranslation from 'next-translate/useTranslation'
 
 import { CustomLink } from '@/components/CustomLink'
 
+import { ListAllTags } from '@/types'
+
 type CategoriesListProps = {
-  categories: any[]
+  categories: ListAllTags[]
 }
 
 export const Categories: React.FC<CategoriesListProps> = ({ categories }) => {

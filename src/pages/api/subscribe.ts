@@ -5,7 +5,7 @@ import fetcher from '@/utils/fetcher'
 
 type addSubscribers = {
   error: {
-    email: any
+    email: string
   }
 }
 

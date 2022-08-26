@@ -5,7 +5,7 @@ import slugify from 'slugify'
 import { CustomLink } from '@/components/CustomLink'
 
 type TagsProps = {
-  tags: string[]
+  tags: string[] | undefined
   className?: string
   slug?: string
 }

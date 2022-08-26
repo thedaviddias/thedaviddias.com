@@ -6,8 +6,10 @@ import { CustomLink } from '@/components/CustomLink'
 import { H4 } from '@/components/Headings'
 import { Tags } from '@/components/Tags'
 
+import { NotesType } from '@/types'
+
 type NotesProps = {
-  note: any
+  note: NotesType
 }
 
 export const Notes: React.FC<NotesProps> = ({ note }) => {

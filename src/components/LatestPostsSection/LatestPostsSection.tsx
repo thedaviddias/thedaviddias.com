@@ -4,8 +4,10 @@ import { BlogPost } from '../BlogPost'
 import { CustomLink } from '../CustomLink'
 import { H5 } from '../Headings'
 
+import { ArticlesType } from '@/types'
+
 type LatestPostsSection = {
-  articles: any[]
+  articles: ArticlesType[]
 }
 
 export const LatestPostsSection: React.FC<LatestPostsSection> = ({ articles }) => {

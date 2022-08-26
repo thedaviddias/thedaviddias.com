@@ -10,7 +10,7 @@ async function GetStatsUser(userId: string, token: string, clientId: string) {
       Authorization: `Bearer ${token}`,
       'Content-Type': 'application/json',
       'simkl-api-key': clientId,
-    } as any,
+    },
     method: 'POST',
   })
 }

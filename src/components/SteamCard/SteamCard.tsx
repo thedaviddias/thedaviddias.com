@@ -34,13 +34,15 @@ export const SteamCard = () => {
 
   return (
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
-      <MetricsCard header={t('dashboard.sections.gaming.total_number')} metric={count} />
-      <MetricsCard
-        header={t('dashboard.sections.gaming.most_played', { name: recently?.name })}
-        link={`https://store.steampowered.com/app/${recently?.appid}`}
-        side={t('dashboard.sections.gaming.most_played_duration')}
-        stat={prettyMilliseconds(playtime * 60000)}
-      />
+      {count && <MetricsCard header={t('dashboard.sections.gaming.total_number')} metric={count} />}
+      {playtime && (
+        <MetricsCard
+          header={t('dashboard.sections.gaming.most_played', { name: recently?.name })}
+          link={`https://store.steampowered.com/app/${recently?.appid}`}
+          side={t('dashboard.sections.gaming.most_played_duration')}
+          stat={prettyMilliseconds(playtime * 60000)}
+        />
+      )}
     </div>
   )
 }

@@ -89,7 +89,7 @@
     "next-sitemap": "3.1.16",
     "node-fetch": "^3.2.10",
     "pretty-ms": "^8.0.0",
-    "react-goodreads-shelf": "^2.3.0",
+    "react-goodreads-shelf": "^3.1.2",
     "react-social-media-embed": "^2.2.2",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-figure": "^1.0.1",

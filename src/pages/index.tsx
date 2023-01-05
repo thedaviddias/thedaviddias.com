@@ -18,7 +18,6 @@ import { LatestNotesSection } from '@/components/LatestNotesSection'
 import { LatestPostsSection } from '@/components/LatestPostsSection'
 import LatestYoutubeVideos from '@/components/LatestYoutubeVideos/LatestYoutubeVideos'
 import { Loader } from '@/components/Loader'
-import { Subscribe } from '@/components/Subscribe'
 import { ToRead } from '@/components/ToRead'
 
 import { routes } from '@/config/routes'
@@ -125,7 +124,12 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
 
           <Dashboard />
 
-          <Subscribe />
+          <iframe
+            src="https://thedaviddias.substack.com/embed"
+            width="480"
+            height="320"
+            title="Substack newsletter submit form"
+          ></iframe>
         </main>
       </Container>
     </SWRConfig>

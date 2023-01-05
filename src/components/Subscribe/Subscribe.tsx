@@ -106,10 +106,7 @@ export const Subscribe = () => {
         </form>
 
         <p className="text-sm text-gray-800 dark:text-gray-200">
-          <CustomLink
-            href="https://www.getrevue.co/profile/thedaviddias"
-            className="dark:!text-white"
-          >
+          <CustomLink href="https://thedaviddias.substack.com/" className="dark:!text-white">
             {t('newsletter.all_issues')}
           </CustomLink>
         </p>

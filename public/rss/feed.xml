@@ -4,7 +4,7 @@
         <title>The David Dias | Front-End Developer, podcaster &amp; content creator</title>
         <link>https://thedaviddias.dev</link>
         <description>Hey, I'm David Dias! Front-End Developer based in Toronto/Canada. I love talking about code, technology, expatriation and life.</description>
-        <lastBuildDate>Thu, 05 Jan 2023 01:25:26 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 05 Jan 2023 03:35:41 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -15,7 +15,7 @@
         </image>
         <copyright>All rights reserved 2023, David Dias</copyright>
         <item>
-            <title><![CDATA[How to fix "set-output" for nvmrc used in GitHub Actions?]]></title>
+            <title><![CDATA[How to fix "set-output" when reading nvmrc from the GitHub Actions?]]></title>
             <link>https://thedaviddias.dev/notes/how-to-fix-set-output-nvmrc-github-actions</link>
             <guid>https://thedaviddias.dev/notes/how-to-fix-set-output-nvmrc-github-actions</guid>
             <pubDate>Wed, 04 Jan 2023 04:38:32 GMT</pubDate>

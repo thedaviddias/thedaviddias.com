@@ -13,7 +13,7 @@
         {
             "id": "https://thedaviddias.dev/notes/how-to-fix-set-output-nvmrc-github-actions",
             "url": "https://thedaviddias.dev/notes/how-to-fix-set-output-nvmrc-github-actions",
-            "title": "How to fix \"set-output\" for nvmrc used in GitHub Actions?",
+            "title": "How to fix \"set-output\" when reading nvmrc from the GitHub Actions?",
             "summary": "Find out how to fix the deprecated set-output when you read the Nodejs version from your .nvmrc file in Github workflows.",
             "date_modified": "2023-01-04T04:38:32.569Z",
             "author": {

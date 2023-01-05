@@ -11,6 +11,17 @@
     },
     "items": [
         {
+            "id": "https://thedaviddias.dev/notes/how-to-fix-set-output-nvmrc-github-actions",
+            "url": "https://thedaviddias.dev/notes/how-to-fix-set-output-nvmrc-github-actions",
+            "title": "How to fix \"set-output\" for nvmrc used in GitHub Actions?",
+            "summary": "Find out how to fix the deprecated set-output when you read the Nodejs version from your .nvmrc file in Github workflows.",
+            "date_modified": "2023-01-04T04:38:32.569Z",
+            "author": {
+                "name": "David Dias",
+                "url": "https://twitter.com/thedaviddias"
+            }
+        },
+        {
             "id": "https://thedaviddias.dev/notes/how-to-fix-post-pre-build-pnpm",
             "url": "https://thedaviddias.dev/notes/how-to-fix-post-pre-build-pnpm",
             "title": "How to fix \"postbuild\" and \"prebuild\" not working with pnpm?",

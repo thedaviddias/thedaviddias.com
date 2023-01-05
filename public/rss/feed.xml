@@ -4,7 +4,7 @@
         <title>The David Dias | Front-End Developer, podcaster &amp; content creator</title>
         <link>https://thedaviddias.dev</link>
         <description>Hey, I'm David Dias! Front-End Developer based in Toronto/Canada. I love talking about code, technology, expatriation and life.</description>
-        <lastBuildDate>Sat, 01 Oct 2022 01:23:18 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 05 Jan 2023 01:25:26 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -13,7 +13,15 @@
             <url>https://thedaviddias.dev/favicons/android-chrome-144x144.png</url>
             <link>https://thedaviddias.dev</link>
         </image>
-        <copyright>All rights reserved 2022, David Dias</copyright>
+        <copyright>All rights reserved 2023, David Dias</copyright>
+        <item>
+            <title><![CDATA[How to fix "set-output" for nvmrc used in GitHub Actions?]]></title>
+            <link>https://thedaviddias.dev/notes/how-to-fix-set-output-nvmrc-github-actions</link>
+            <guid>https://thedaviddias.dev/notes/how-to-fix-set-output-nvmrc-github-actions</guid>
+            <pubDate>Wed, 04 Jan 2023 04:38:32 GMT</pubDate>
+            <description><![CDATA[Find out how to fix the deprecated set-output when you read the Nodejs version from your .nvmrc file in Github workflows.]]></description>
+            <author>hello@thedaviddias.dev (David Dias)</author>
+        </item>
         <item>
             <title><![CDATA[How to fix "postbuild" and "prebuild" not working with pnpm?]]></title>
             <link>https://thedaviddias.dev/notes/how-to-fix-post-pre-build-pnpm</link>

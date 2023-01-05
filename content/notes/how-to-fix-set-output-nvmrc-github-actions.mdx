@@ -1,0 +1,63 @@
+---
+draft: false
+locale: en
+date: 2023-01-04T04:38:32.569Z
+title: How to fix "set-output" when reading nvmrc from the GitHub Actions?
+description: Find out how to fix the deprecated set-output when you read the Nodejs version from your .nvmrc file in Github workflows.
+author: David Dias
+tags:
+  - coding
+  - nvmrc
+  - npm
+  - github
+type: note
+---
+
+You may be getting the issue **"The `set-output` command is deprecated and will be disabled soon. Please upgrade to using Environment Files."** from your Github workflow.
+
+![Screenshot showing the 'set-output' issue from the Github workflows](/images/notes/set-output-nvmrc-github-actions.jpg)
+
+Few months ago, I choose to update some of my Github workflows to read from my `.nvmrc` file instead of manually specifying my node version.
+
+```.bash:.github/workflows/production.yml
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Detect Node version
+        run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+        id: nvmrc
+
+      - name: Use Node.js ${{ steps.nvmrc.outputs.NODE_VERSION }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ steps.nvmrc.outputs.NODE_VERSION }}
+```
+
+But [since October 2022](https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/) and the runner version `2.298.2`, Github shows a warning regarding a future depreciation of the `set-output` command.
+
+After few trials, I figured out how to update using the `$GITHUB_OUTPUT` instead:
+
+```.bash:.github/workflows/update-production.yml
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Detect Node version
+        run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
+        id: nvmrc
+        # shell: bash (to be added if you use composite actions)
+
+      - name: Use Node.js ${{ steps.nvmrc.outputs.NODE_VERSION }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: '${{ steps.nvmrc.outputs.NODE_VERSION }}'
+```
+
+And "voilà", the warning should have disappeared and you should see the number of the version right after `Use Node.js XXXX` in your workflow.

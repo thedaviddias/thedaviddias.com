@@ -23,7 +23,7 @@ specifiers:
   '@typescript-eslint/parser': 5.33.0
   autoprefixer: 10.4.8
   axe-core: ^4.4.3
-  axios: ^0.27.2
+  axios: ^1.2.2
   camel-case: ^4.1.2
   clsx: ^1.2.1
   cypress: ^10.4.0
@@ -105,7 +105,7 @@ dependencies:
   react-social-sharing: 3.3.0_biqbaboplfbrettd7655fr4n2y
   reading-time: 1.5.0
   slugify: 1.6.5
-  tailwindcss: 3.1.8_ts-node@10.9.1
+  tailwindcss: 3.1.8_57znarxsqwmnneadci5z5fd5gu
 
 devDependencies:
   '@next/bundle-analyzer': 12.2.5
@@ -125,7 +125,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.33.0_yy5c4q6zhpajzhorvwhnwvctfe
   '@typescript-eslint/parser': 5.33.0_4rv7y5c6xz3vfxwhbrcxxi73bq
   axe-core: 4.4.3
-  axios: 0.27.2
+  axios: 1.2.2
   camel-case: 4.1.2
   clsx: 1.2.1
   cypress: 10.4.0
@@ -2232,7 +2232,7 @@ packages:
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 3.1.8_ts-node@10.9.1
+      tailwindcss: 3.1.8_57znarxsqwmnneadci5z5fd5gu
     dev: false
 
   /@tailwindcss/forms/0.5.2_tailwindcss@3.1.8:
@@ -2241,7 +2241,7 @@ packages:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.1.8_ts-node@10.9.1
+      tailwindcss: 3.1.8_57znarxsqwmnneadci5z5fd5gu
     dev: false
 
   /@tailwindcss/typography/0.5.4_tailwindcss@3.1.8:
@@ -2252,7 +2252,7 @@ packages:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
-      tailwindcss: 3.1.8_ts-node@10.9.1
+      tailwindcss: 3.1.8_57znarxsqwmnneadci5z5fd5gu
     dev: false
 
   /@testing-library/cypress/8.0.3_cypress@10.4.0:
@@ -2880,11 +2880,12 @@ packages:
       - debug
     dev: true
 
-  /axios/0.27.2:
-    resolution: {integrity: sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==}
+  /axios/1.2.2:
+    resolution: {integrity: sha512-bz/J4gS2S3I7mpN/YZfGFTqhXTYzRho8Ay38w2otuuDR322KzFIWm/4W2K6gIwvWaws5n+mnb7D1lN9uD+QH6Q==}
     dependencies:
       follow-redirects: 1.15.1_debug@4.3.2
       form-data: 4.0.0
+      proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
     dev: true
@@ -3958,7 +3959,7 @@ packages:
       eslint: 8.22.0
       eslint-import-resolver-node: 0.3.6
       eslint-import-resolver-typescript: 2.7.1_2iahngt3u2tkbdlu6s4gkur3pu
-      eslint-plugin-import: 2.26.0_42jdfezp7lcuhr3fexihng3k3a
+      eslint-plugin-import: 2.26.0_rg72qmk2p6ydk3qleqiccuhffm
       eslint-plugin-jsx-a11y: 6.6.1_eslint@8.22.0
       eslint-plugin-react: 7.30.1_eslint@8.22.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.22.0
@@ -3995,7 +3996,7 @@ packages:
     dependencies:
       debug: 4.3.4
       eslint: 8.22.0
-      eslint-plugin-import: 2.26.0_42jdfezp7lcuhr3fexihng3k3a
+      eslint-plugin-import: 2.26.0_rg72qmk2p6ydk3qleqiccuhffm
       glob: 7.2.3
       is-glob: 4.0.3
       resolve: 1.22.1
@@ -4029,7 +4030,7 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-module-utils/2.7.3_rtbhofbsy3gzv73dx4xodd3q4u:
+  /eslint-module-utils/2.7.3_oh3tx5uf4prsskzvqzbn7hm6ya:
     resolution: {integrity: sha512-088JEC7O3lDZM9xGe0RerkOMd0EjFl+Yvd1jPWIkMT5u3H9+HC34mWWPnqPrN13gieT9pBOO+Qt07Nb/6TresQ==}
     engines: {node: '>=4'}
     peerDependencies:
@@ -4050,13 +4051,12 @@ packages:
       '@typescript-eslint/parser': 5.33.0_4rv7y5c6xz3vfxwhbrcxxi73bq
       debug: 3.2.7
       eslint-import-resolver-node: 0.3.6
-      eslint-import-resolver-typescript: 2.7.1_2iahngt3u2tkbdlu6s4gkur3pu
       find-up: 2.1.0
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /eslint-plugin-import/2.26.0_42jdfezp7lcuhr3fexihng3k3a:
+  /eslint-plugin-import/2.26.0_rg72qmk2p6ydk3qleqiccuhffm:
     resolution: {integrity: sha512-hYfi3FXaM8WPLf4S1cikh/r4IxnO6zrhZbEGz2b660EJRbuxgpDS5gkCuYgGWg2xxh2rBuIr4Pvhve/7c31koA==}
     engines: {node: '>=4'}
     peerDependencies:
@@ -4073,7 +4073,7 @@ packages:
       doctrine: 2.1.0
       eslint: 8.22.0
       eslint-import-resolver-node: 0.3.6
-      eslint-module-utils: 2.7.3_rtbhofbsy3gzv73dx4xodd3q4u
+      eslint-module-utils: 2.7.3_oh3tx5uf4prsskzvqzbn7hm6ya
       has: 1.0.3
       is-core-module: 2.9.0
       is-glob: 4.0.3
@@ -8529,10 +8529,12 @@ packages:
       tslib: 2.4.0
     dev: true
 
-  /tailwindcss/3.1.8_ts-node@10.9.1:
+  /tailwindcss/3.1.8_57znarxsqwmnneadci5z5fd5gu:
     resolution: {integrity: sha512-YSneUCZSFDYMwk+TGq8qYFdCA3yfBRdBlS7txSq0LUmzyeqRe3a8fBQzbz9M3WS/iFT4BNf/nmw9mEzrnSaC0g==}
     engines: {node: '>=12.13.0'}
     hasBin: true
+    peerDependencies:
+      postcss: ^8.0.9
     dependencies:
       arg: 5.0.2
       chokidar: 3.5.3

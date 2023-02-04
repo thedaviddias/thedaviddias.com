@@ -27,7 +27,6 @@ import { MDXComponents } from '@/components/MdxComponents'
 import { Paragraph } from '@/components/Paragraph'
 import { RelatedPosts } from '@/components/RelatedPosts'
 import { ScrollTop } from '@/components/ScrollTop'
-import { Subscribe } from '@/components/Subscribe'
 import { TableOfContents } from '@/components/TableOfContents'
 import { Tags } from '@/components/Tags'
 import { Webmentions } from '@/components/Webmentions'
@@ -242,7 +241,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                   )}
                 </section>
 
-                <Subscribe />
+                {/* <Subscribe /> */}
 
                 {relatedPosts.length ? <RelatedPosts relatedPosts={relatedPosts} /> : null}
 

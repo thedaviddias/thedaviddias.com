@@ -12,7 +12,7 @@ export const Categories: React.FC<CategoriesListProps> = ({ categories }) => {
   const { t } = useTranslation('common')
 
   return (
-    <nav className="mb-5 mt-5" arial-label="Categories">
+    <nav className="mb-5 mt-5">
       <ul className="flex flex-wrap gap-x-3 gap-y-4">
         {categories?.map((category) => (
           <li key={category.name}>

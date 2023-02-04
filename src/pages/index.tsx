@@ -1,7 +1,7 @@
 import social from 'data/social.json'
 import type { GetStaticProps, NextPage } from 'next'
 import dynamic from 'next/dynamic'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import { NextSeo, SocialProfileJsonLd } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { SWRConfig } from 'swr'

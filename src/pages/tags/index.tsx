@@ -1,5 +1,5 @@
 import { GetStaticProps, NextPage } from 'next'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { useState } from 'react'
@@ -67,9 +67,8 @@ const TagsPage: NextPage<TagsPageProps> = ({ tags }) => {
                   {tag.name}
                 </CustomLink>
                 <Paragraph>{tag?.description}</Paragraph>
-                <p className="text-sm dark:text-slate-400 mt-auto">{`${tag?.occurrences} post${
-                  tag?.occurrences === 1 ? '' : 's'
-                } published`}</p>
+                <p className="text-sm dark:text-slate-400 mt-auto">{`${tag?.occurrences} post${tag?.occurrences === 1 ? '' : 's'
+                  } published`}</p>
                 {tag?.logo && (
                   <Image
                     src={tag?.logo}

@@ -1,4 +1,4 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import useSWR from 'swr'
 
@@ -49,9 +49,13 @@ const LatestYoutubeVideos = () => {
               <Image
                 src={video.snippet.thumbnails.high.url}
                 alt=""
-                width={video.snippet.thumbnails.high.width}
-                height={video.snippet.thumbnails.high.height}
+                width={320}
+                height={230}
                 className="aspect-video object-cover h-44 rounded-lg"
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
               />
             </div>
             <H4 as="h3">

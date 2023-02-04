@@ -1,5 +1,5 @@
 import { GetStaticProps, NextPage } from 'next'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { useState } from 'react'
@@ -77,6 +77,10 @@ const TagsPage: NextPage<TagsPageProps> = ({ tags }) => {
                     width={60}
                     height={60}
                     className="absolute -top-4 -right-4"
+                    style={{
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
                   />
                 )}
               </div>

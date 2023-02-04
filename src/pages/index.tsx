@@ -1,7 +1,7 @@
 import social from 'data/social.json'
 import type { GetStaticProps, NextPage } from 'next'
 import dynamic from 'next/dynamic'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import { NextSeo, SocialProfileJsonLd } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { SWRConfig } from 'swr'
@@ -101,6 +101,10 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
                 height={250}
                 alt="Photo of David Dias"
                 priority={true}
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
               />
             </div>
           </section>
@@ -121,6 +125,7 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
           {process.env.NODE_ENV === 'production' && <PodcastSection />}
 
           {process.env.NODE_ENV === 'production' && <LatestYoutubeVideos />}
+          <LatestYoutubeVideos />
 
           <Dashboard />
 

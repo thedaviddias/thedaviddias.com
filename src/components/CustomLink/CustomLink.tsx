@@ -52,10 +52,8 @@ export const CustomLink: React.FC<CustomLinkProps> = ({
   }
 
   return (
-    <Link href={href} {...rest}>
-      <a href={href} className={`hover:underline ${className}`}>
-        {children}
-      </a>
+    <Link href={href} className={`hover:underline ${className}`} {...rest}>
+      {children}
     </Link>
   )
 }

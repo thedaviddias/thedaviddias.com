@@ -16,7 +16,6 @@ export const ResponsiveImage: React.FC<ImageProps> = ({
         <Image
           alt={alt}
           className="rounded-lg"
-          layout="responsive"
           loading="lazy"
           quality={80}
           src={src}
@@ -24,6 +23,11 @@ export const ResponsiveImage: React.FC<ImageProps> = ({
           width={width}
           placeholder="blur"
           {...rest}
+          sizes="100vw"
+          style={{
+            width: '100%',
+            height: 'auto',
+          }}
         />
       </CustomLink>
       {title && (

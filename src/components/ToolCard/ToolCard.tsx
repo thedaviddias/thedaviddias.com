@@ -1,4 +1,4 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 
 import { CustomLink } from '@/components/CustomLink'
@@ -17,7 +17,16 @@ export const ToolCard: React.FC<ToolCard> = ({ tool }) => {
   return (
     <article className="flex flex-row relative gap-x-5">
       <div className="min-w-[5rem]">
-        <Image alt={`Thumbnail of ${tool.title}`} src={tool.image} width="75" height="75" />
+        <Image
+          alt={`Thumbnail of ${tool.title}`}
+          src={tool.image}
+          width="75"
+          height="75"
+          style={{
+            maxWidth: '100%',
+            height: 'auto',
+          }}
+        />
       </div>
       <div>
         <H5 as="h3">

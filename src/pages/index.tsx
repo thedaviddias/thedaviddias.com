@@ -68,7 +68,7 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
           sameAs={listSocialUrl(social)}
         />
         <main id="main" data-skip-link="main content">
-          <section className="pb-20 pt-0 lg:pt-10 flex justify-evenly">
+          <section className="pb-20 pt-0 lg:pt-10 flex space-between">
             <div className="text-left">
               <h1 className="block mb-4 dark:text-white transition-colors">
                 <p className="text-3xl p-0 font-light uppercase">{t('home.hero.greetings1')}</p>

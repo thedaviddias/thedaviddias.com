@@ -22,13 +22,6 @@ const nextConfig = withPlugins([plugins, nextTranslate], {
   env: {
     VERCEL_ENV: process.env.VERCEL_ENV,
   },
-  experimental: {
-    images: {
-      allowFutureImage: true,
-    },
-    workerThreads: false,
-    cpus: 1,
-  },
   async redirects() {
     return [
       {
@@ -91,7 +84,7 @@ const sentryWebpackPluginOptions = {
   // recommended:
   //   release, url, org, project, authToken, configFile, stripPrefix,
   //   urlPrefix, include, ignore
-
+  hideSourceMaps: true,
   silent: true, // Suppresses all logs
   dryRun: process.env.VERCEL_ENV !== 'production',
 }

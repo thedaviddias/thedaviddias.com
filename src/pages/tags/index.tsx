@@ -1,5 +1,5 @@
 import { GetStaticProps, NextPage } from 'next'
-import Image from 'next/image'
+import Image from "next/legacy/image";
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { useState } from 'react'

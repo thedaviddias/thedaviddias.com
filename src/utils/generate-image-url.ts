@@ -2,7 +2,7 @@ import { CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH, CLOUDINARY_NAME } from '@/
 
 /* Encode characters for Cloudinary URL */
 const cleanText = (text: string) => {
-  return encodeURIComponent(text).replace(/%(23|2C|2F|3F|5C)/g, '%25$1')
+  return encodeURIComponent(text).replace(/%(23|2C|2F|3F|5C)/g, '%25$1');
 }
 
 type GenerateImageUrlProps = {

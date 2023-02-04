@@ -35,7 +35,7 @@ const replaceRelativePath = (content) => {
     /\]\(\/images(?!https?:\/\/)/gi,
     '](' + 'https://thedaviddias.dev/images'
   )
-  return withoutRelativeImage.replace(/\]\((?!https?:\/\/)/gi, '](' + 'https://thedaviddias.dev')
+  return withoutRelativeImage.replace(/\]\((?!https?:\/\/)/gi, '](' + 'https://thedaviddias.dev');
 }
 
 ;(async () => {

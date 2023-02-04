@@ -1,5 +1,5 @@
 import { formatDistance } from 'date-fns'
-import Image from "next/legacy/image";
+import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import { useState } from 'react'
 
@@ -39,6 +39,10 @@ export const Webmentions: React.FC<WebMentionsProps> = ({ mentions }) => {
                     width={53}
                     height={53}
                     className="rounded-full border"
+                    style={{
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
                   />
                 </CustomLink>
               </li>
@@ -72,6 +76,10 @@ export const Webmentions: React.FC<WebMentionsProps> = ({ mentions }) => {
                       width={45}
                       height={45}
                       className="rounded-full border"
+                      style={{
+                        maxWidth: '100%',
+                        height: 'auto',
+                      }}
                     />
                   </CustomLink>
                   <div className="col-span-7">

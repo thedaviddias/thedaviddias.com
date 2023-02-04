@@ -11,7 +11,15 @@ export const CurrentlyReading = ({ limit = 3 }) => {
       <header>
         <H5 as="h2">{t('books.currently')}</H5>
       </header>
-      <GoodreadsBookshelf userId="60055286-david-dias" shelf="currently-reading" limit={limit} />
+      <GoodreadsBookshelf
+        userId="60055286-david-dias"
+        shelf="currently-reading"
+        limit={limit}
+        width={120}
+        displayOptions={{
+          hideDetails: true,
+        }}
+      />
     </section>
   )
 }

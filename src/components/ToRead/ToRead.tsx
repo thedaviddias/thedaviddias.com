@@ -16,6 +16,10 @@ export const ToRead = ({ limit = 3 }) => {
         shelf="to-read"
         limit={limit}
         sort="date_added"
+        width={120}
+        displayOptions={{
+          hideDetails: true,
+        }}
       />
     </section>
   )

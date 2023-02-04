@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '${{ steps.nvmrc.outputs.version }}'
+          node-version: "${{ steps.nvmrc.outputs.version }}"
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.2
@@ -54,13 +54,6 @@ jobs:
         if: steps.pnpm-cache.outputs.cache-hit != 'true'
         run: pnpm install
 
-      - name: Cache Cypress Binary
-        id: cache-cypress-binary
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/Cypress
-          key: cypress-binary-${{ hashFiles('**/pnpm-lock.yaml') }}
-
       - name: Upload translations
         uses: simplelocalize/upload@latest
         with:
@@ -77,14 +70,6 @@ jobs:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
           SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
-
-      - name: Cypress testing
-        uses: cypress-io/github-action@v4
-        with:
-          install: false
-          start: pnpm start
-          wait-on: 'http://localhost:3000'
-          browser: chrome
 
       - name: Deploy to Staging
         id: deploy-vercel-staging

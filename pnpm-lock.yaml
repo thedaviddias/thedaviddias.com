@@ -22,7 +22,7 @@ specifiers:
   '@typescript-eslint/parser': 5.33.0
   autoprefixer: 10.4.13
   axe-core: 4.6.3
-  axios: ^0.27.2
+  axios: 1.3.2
   camel-case: ^4.1.2
   clsx: ^1.2.1
   date-fns: 2.29.3
@@ -59,7 +59,7 @@ specifiers:
   pretty-ms: ^8.0.0
   react: 18.2.0
   react-dom: 18.2.0
-  react-goodreads-shelf: ^2.3.0
+  react-goodreads-shelf: 3.1.2
   react-social-media-embed: ^2.2.2
   reading-time: ^1.5.0
   rehype-autolink-headings: ^6.1.1
@@ -119,7 +119,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.33.0_j4kld4oxfgqrnouo7xjibcaxfa
   '@typescript-eslint/parser': 5.33.0_l36yidrw337hwf2rtnamh77lgq
   axe-core: 4.6.3
-  axios: 0.27.2
+  axios: 1.3.2
   camel-case: 4.1.2
   clsx: 1.2.1
   date-fns: 2.29.3
@@ -140,7 +140,7 @@ devDependencies:
   next-sitemap: 3.1.49_nbdj7yjfxdnq4ffrkrubiboi5q
   node-fetch: 3.2.10
   pretty-ms: 8.0.0
-  react-goodreads-shelf: 2.3.0
+  react-goodreads-shelf: 3.1.2
   react-social-media-embed: 2.2.2_biqbaboplfbrettd7655fr4n2y
   rehype-autolink-headings: 6.1.1
   rehype-figure: 1.0.1
@@ -2764,16 +2764,7 @@ packages:
   /axios/0.25.0:
     resolution: {integrity: sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==}
     dependencies:
-      follow-redirects: 1.15.1
-    transitivePeerDependencies:
-      - debug
-    dev: true
-
-  /axios/0.27.2:
-    resolution: {integrity: sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==}
-    dependencies:
-      follow-redirects: 1.15.1
-      form-data: 4.0.0
+      follow-redirects: 1.15.1_debug@4.3.4
     transitivePeerDependencies:
       - debug
     dev: true
@@ -2783,6 +2774,16 @@ packages:
     dependencies:
       follow-redirects: 1.15.1_debug@4.3.4
       form-data: 4.0.0
+    transitivePeerDependencies:
+      - debug
+    dev: true
+
+  /axios/1.3.2:
+    resolution: {integrity: sha512-1M3O703bYqYuPhbHeya5bnhpYVsDDRyQSabNja04mZtboLNSuZ4YrltestrLXfHgmzua4TpUqRiVKbiQuo2epw==}
+    dependencies:
+      follow-redirects: 1.15.1_debug@4.3.4
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
     dev: true
@@ -4292,16 +4293,6 @@ packages:
   /flow-parser/0.184.0:
     resolution: {integrity: sha512-+RAHizWmCnfnAWX1yD3fSdWRYCMhGiiqZSbHNU38MQxYc8XdTBoFB3ZpL1MEPG6yy/Yb3hg9w9eIf0DNlU8epQ==}
     engines: {node: '>=0.4.0'}
-    dev: true
-
-  /follow-redirects/1.15.1:
-    resolution: {integrity: sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==}
-    engines: {node: '>=4.0'}
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
     dev: true
 
   /follow-redirects/1.15.1_debug@4.3.4:
@@ -7134,8 +7125,8 @@ packages:
       react: 18.2.0
       scheduler: 0.23.0
 
-  /react-goodreads-shelf/2.3.0:
-    resolution: {integrity: sha512-kSGwVXwaKYzeSt/n9NEV8RmhzRV8ATa/6MU5YXaR4AKjPAFXuD5j5MwbHdI6WE9XypTTdQOUulzre6hGOJnnaQ==}
+  /react-goodreads-shelf/3.1.2:
+    resolution: {integrity: sha512-Ir7SwGBJGZljZDhnUz++QhfG2sfpnMyuaVNX3WMEuhAIRzHOjfu/5dRfHM5xL8xg1/iLPtlhGAETdvClBuyFZw==}
     engines: {node: '>=14'}
     dev: true
 

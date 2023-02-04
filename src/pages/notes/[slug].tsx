@@ -19,7 +19,6 @@ import { H1 } from '@/components/Headings'
 import { Loader } from '@/components/Loader'
 import { MDXComponents } from '@/components/MdxComponents'
 import { ScrollTop } from '@/components/ScrollTop'
-import { Share } from '@/components/Share'
 import { Tags } from '@/components/Tags'
 
 import { routes } from '@/config/routes'
@@ -125,7 +124,7 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
               <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl !max-w-full mb-10">
                 <MDXRemote {...source} components={MDXComponents} lazy />
               </section>
-              {permalink && <Share title={title} tags={tags && tags} permalink={permalink} />}
+              {/* {permalink && <Share title={title} tags={tags && tags} permalink={permalink} />} */}
 
               {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
             </div>

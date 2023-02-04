@@ -27,7 +27,6 @@ import { MDXComponents } from '@/components/MdxComponents'
 import { Paragraph } from '@/components/Paragraph'
 import { RelatedPosts } from '@/components/RelatedPosts'
 import { ScrollTop } from '@/components/ScrollTop'
-import { Share } from '@/components/Share'
 import { Subscribe } from '@/components/Subscribe'
 import { TableOfContents } from '@/components/TableOfContents'
 import { Tags } from '@/components/Tags'
@@ -268,7 +267,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
 
             <div className="flex-auto ml-16 hidden lg:block print:hidden">
               <div className="sticky top-10 w-full">
-                {permalink && <Share title={title} tags={tags && tags} permalink={permalink} />}
+                {/* {permalink && <Share title={title} tags={tags && tags} permalink={permalink} />} */}
                 {headings && (
                   <aside className="w-full mt-3">
                     <TableOfContents headings={headings} />

@@ -48,7 +48,7 @@
     "@next/env": "13.1.6",
     "@nick22985/wakatime-api": "^1.0.1",
     "@octokit/graphql": "5.0.5",
-    "@octokit/graphql-schema": "^12.0.0",
+    "@octokit/graphql-schema": "^13.2.0",
     "@sentry/nextjs": "7.36.0",
     "@sentry/node": "7.36.0",
     "@svgr/webpack": "6.5.1",

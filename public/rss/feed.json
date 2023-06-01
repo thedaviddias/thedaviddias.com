@@ -11,6 +11,17 @@
     },
     "items": [
         {
+            "id": "https://thedaviddias.dev/notes/stop-using-thematic-break-to-design-horizontal-line",
+            "url": "https://thedaviddias.dev/notes/stop-using-thematic-break-to-design-horizontal-line",
+            "title": "Stop using the <hr> tag to design a horizontal line!",
+            "summary": "It's sometimes easy to forget that UI doesn't dicated semantics. In this article I'll show you how to use the <hr> tag properly.",
+            "date_modified": "2023-06-01T04:38:32.569Z",
+            "author": {
+                "name": "David Dias",
+                "url": "https://twitter.com/thedaviddias"
+            }
+        },
+        {
             "id": "https://thedaviddias.dev/notes/how-to-fix-set-output-nvmrc-github-actions",
             "url": "https://thedaviddias.dev/notes/how-to-fix-set-output-nvmrc-github-actions",
             "title": "How to fix \"set-output\" when reading nvmrc from the GitHub Actions?",
@@ -37,6 +48,17 @@
             "url": "https://thedaviddias.dev/notes/finally-received-steam-deck-confirmation-email",
             "title": "Finally received my Steam Deck confirmation email!",
             "date_modified": "2022-07-28T15:47:33.508Z",
+            "author": {
+                "name": "David Dias",
+                "url": "https://twitter.com/thedaviddias"
+            }
+        },
+        {
+            "id": "https://thedaviddias.dev/articles/beyond-user-testing-leveraging-frontend-experience",
+            "url": "https://thedaviddias.dev/articles/beyond-user-testing-leveraging-frontend-experience",
+            "title": "Beyond User Testing: Leveraging Frontend Experience",
+            "summary": "For over a decade, I've been collaborating with web designers, and it's clear that we sometimes have differing perspectives. 'User testing' often takes center stage in decision-making, with the rich insights of frontend experience taking a backseat. But here's the thing - collaboration is pivotal. Recognizing the value that frontend developers bring is crucial for any team aiming to succeed in our fast-paced digital age.",
+            "date_modified": "2024-04-01T13:07:27.957Z",
             "author": {
                 "name": "David Dias",
                 "url": "https://twitter.com/thedaviddias"

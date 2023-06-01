@@ -23,7 +23,7 @@ If you need a decorative line, CSS is a more appropriate choice.
 For instance:
 
 ```html
-<div class="styled-line"></div>
+<div class="styled-line">Some content</div>
 ```
 
 Example CSS:
@@ -34,6 +34,8 @@ Example CSS:
   margin: 1em 0;
 }
 ```
+
+You generally don't want to have a single empty `<span>` or `<div>` element just to style it as a horizontal line. Often times, you can just use a bottom border on the element above it.
 
 In terms of accessibility, using `<hr>` as a design element can confuse screen reader users, as it indicates a "thematic break".
 

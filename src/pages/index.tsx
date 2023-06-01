@@ -125,16 +125,15 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
           {process.env.NODE_ENV === 'production' && <PodcastSection />}
 
           {process.env.NODE_ENV === 'production' && <LatestYoutubeVideos />}
-          <LatestYoutubeVideos />
 
           <Dashboard />
-
+          {/*
           <iframe
             src="https://thedaviddias.substack.com/embed"
             width="480"
             height="320"
             title="Substack newsletter submit form"
-          ></iframe>
+          ></iframe> */}
         </main>
       </Container>
     </SWRConfig>

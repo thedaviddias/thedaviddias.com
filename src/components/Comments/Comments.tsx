@@ -19,9 +19,9 @@ export const Comments = () => {
       {isDisplay ? (
         <Giscus
           repo="thedaviddias/thedaviddias.dev"
-          repoId="R_kgDOHu_WAA"
+          repoId="R_kgDOI5zbNw"
           category="Comments"
-          categoryId="DIC_kwDOHu_WAM4CQsGJ"
+          categoryId="DIC_kwDOI5zbN84CW5lY"
           mapping="title"
           reactionsEnabled="0"
           emitMetadata="0"

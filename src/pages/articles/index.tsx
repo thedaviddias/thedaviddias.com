@@ -46,13 +46,13 @@ const Blog = ({ posts, categories }: BlogProps) => {
         ]}
       />
       <main className="divide-slate-200 sm:space-y-16 lg:max-w-none">
-        <section className="pt-10 border-none grid grid-cols-1 md:grid-cols-4 md:gap-4 md:items-end">
+        <section className="pt-10 border-none grid grid-cols-1 md:gap-4 md:items-end">
           <PageHeader
             title={routes(t).articles.h1}
             description={routes(t).articles.seo.description}
-            className=" col-span-3"
+            className="col-span-4"
           />
-          <div className="flex md:justify-end">
+          <div className="flex">
             <Search setSearchValue={setSearchValue} />
           </div>
         </section>
@@ -62,7 +62,7 @@ const Blog = ({ posts, categories }: BlogProps) => {
 
           <Categories categories={categories} />
 
-          <div className="grid grid-cols-1 gap-4 lg:col-span-2 mt-16">
+          <div className="grid grid-cols-1 lg:col-span-2 mt-16">
             {!filteredBlogPosts.length && (
               <p className="mb-4 text-gray-600 dark:text-gray-400">{t('posts.empty')}</p>
             )}

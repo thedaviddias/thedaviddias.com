@@ -23,7 +23,10 @@ export const CustomLink: React.FC<CustomLinkProps> = ({
         href={href}
         rel="noopener noreferrer"
         target="_blank"
-        className={clsx(`inline-flex hover:underline dark:text-indigo-400`, className)}
+        className={clsx(
+          `cursor-pointerinline-flex hover:underline dark:text-indigo-400`,
+          className
+        )}
         {...rest}
       >
         {children}
@@ -52,7 +55,7 @@ export const CustomLink: React.FC<CustomLinkProps> = ({
   }
 
   return (
-    <Link href={href} className={`hover:underline ${className}`} {...rest}>
+    <Link href={href} className={`cursor-pointer hover:underline ${className}`} {...rest}>
       {children}
     </Link>
   )

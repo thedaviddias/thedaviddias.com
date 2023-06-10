@@ -28,28 +28,36 @@ export const GithubProject: React.FC<GithubProjectProps> = ({ project }) => {
 
       <div className="mb-3">{project.description}</div>
 
-      <div className="flex space-x-3 mt-auto">
+      <div className="grid grid-col-4 gap-y-1 mt-auto">
         {project.language && (
-          <div className="flex align-middle items-center">
-            <span
-              className="inline-block w-3 h-3 rounded-full"
-              style={{ backgroundColor: project.language?.color || '' }}
-            />
-            <span className="ml-2">{project.language?.name}</span>
+          <div className="col-span-1">
+            <div className="flex align-middle items-center">
+              <span
+                className="inline-block w-3 h-3 rounded-full"
+                style={{ backgroundColor: project.language?.color || '' }}
+              />
+              <span className="ml-2">{project.language?.name}</span>
+            </div>
           </div>
         )}
 
-        <div className="flex align-middle items-center">
+        <div
+          className={`flex align-middle items-center ${project.language ? 'col-span-2' : 'col-span-1'
+            }`}
+        >
           <GithubStar className="fill-current text-gray-600 dark:text-gray-100" />
           <span className="ml-2">{project?.stars.toLocaleString()}</span>
         </div>
 
-        <div className="flex align-middle items-center">
+        <div
+          className={`flex align-middle items-center ${project.language ? 'col-span-3' : 'col-span-2'
+            }`}
+        >
           <GithubFork className="fill-current text-gray-600 dark:text-gray-100" />
           <span className="ml-2">{project?.forks}</span>
         </div>
 
-        <div>
+        <div className="grid-rows-2 col-span-4">
           {t('projects.updated', {
             date: formatDistance(new Date(project?.updatedAt), new Date(), {
               locale: convertLangDateFs(lang),

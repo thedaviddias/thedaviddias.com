@@ -72,18 +72,6 @@ export const routes: RoutesResponse = (translate) => ({
       translate,
     }),
   },
-  bookmarks: {
-    label: translate('layout.nav.bookmarks'),
-    path: translate('bookmarks.path'),
-    seo: extendSEO({
-      options: {
-        title: translate('bookmarks.seo.title'),
-        description: translate('bookmarks.seo.description'),
-        url: translate('bookmarks.seo.url'),
-      },
-      translate,
-    }),
-  },
   about: {
     label: translate('layout.nav.about'),
     path: translate('about.path'),

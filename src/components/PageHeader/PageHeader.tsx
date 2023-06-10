@@ -8,7 +8,7 @@ type HeaderPageProps = {
 
 export const PageHeader = ({ title, description, className }: HeaderPageProps) => {
   return (
-    <header className={`mb-8 ${className}`}>
+    <header className={`mb-5 ${className}`}>
       {title && <H1>{title}</H1>}
       {description && (
         <p

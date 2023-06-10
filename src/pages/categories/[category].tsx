@@ -37,7 +37,7 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ posts, category }) => {
         <section className="grid grid-cols-1 gap-y-10 gap-x-6 lg:pt-10">
           <PageHeader title={titlePage} description={descriptionPage} />
 
-          <div className="grid grid-cols-1 gap-4 lg:col-span-2">
+          <div className="grid grid-cols-1 lg:col-span-2">
             {posts?.map((post) => (
               <BlogPost
                 key={post.frontMatter.title}

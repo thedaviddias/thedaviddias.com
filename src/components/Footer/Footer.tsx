@@ -90,20 +90,16 @@ export const Footer = () => {
               <div className="flex space-x-6"></div>
             </div>
 
-            <div className="w-full sm:w-1/2 lg:w-[60%] !max-w-full flex-shrink-0 flex-grow flex justify-between text-gray-500 dark:text-gray-400">
+            <div className="sm:w-1/2 lg:w-[60%] !max-w-full w-full flex-shrink-0 flex-grow flex justify-between text-gray-500 dark:text-gray-400">
               <FooterMenuLinks />
               <FooterExtraLinks />
               <FooterSocialLinks />
             </div>
           </div>
-          <div className="mt-8 border-t border-gray-200 dark:border-gray-400 pt-8 flex items-center justify-between">
+          <div className="mt-8 border-t border-gray-200 dark:border-gray-400 pt-3 flex items-center justify-between">
             <p className="text-base text-gray-500 dark:text-gray-400">
               &copy; {new Date().getFullYear()} David Dias
             </p>
-            <div className="flex item space-x-4">
-              <ChangeLanguage />
-              <ThemeSwitch />
-            </div>
           </div>
         </div>
       </footer>

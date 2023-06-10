@@ -4,7 +4,7 @@
         <title>The David Dias | Front-End Developer, podcaster &amp; content creator</title>
         <link>https://thedaviddias.dev</link>
         <description>Hey, I'm David Dias! Front-End Developer based in Toronto/Canada. I love talking about code, technology, expatriation and life.</description>
-        <lastBuildDate>Thu, 01 Jun 2023 23:09:07 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 10 Jun 2023 17:25:20 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -49,7 +49,7 @@
             <title><![CDATA[Beyond User Testing: Leveraging Frontend Experience]]></title>
             <link>https://thedaviddias.dev/articles/beyond-user-testing-leveraging-frontend-experience</link>
             <guid>https://thedaviddias.dev/articles/beyond-user-testing-leveraging-frontend-experience</guid>
-            <pubDate>Mon, 01 Apr 2024 13:07:27 GMT</pubDate>
+            <pubDate>Thu, 01 Jun 2023 13:07:27 GMT</pubDate>
             <description><![CDATA[For over a decade, I've been collaborating with web designers, and it's clear that we sometimes have differing perspectives. 'User testing' often takes center stage in decision-making, with the rich insights of frontend experience taking a backseat. But here's the thing - collaboration is pivotal. Recognizing the value that frontend developers bring is crucial for any team aiming to succeed in our fast-paced digital age.]]></description>
             <author>hello@thedaviddias.dev (David Dias)</author>
         </item>

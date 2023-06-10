@@ -59,7 +59,7 @@ const Til = ({ notes }: TilProps) => {
             <h2 className="sr-only">Recent notes</h2>
           </header>
 
-          <div className="grid grid-cols-1 gap-4 lg:col-span-2">
+          <div className="grid grid-cols-1 lg:col-span-2">
             {!filteredNotes.length && (
               <p className="mb-4 text-gray-600 dark:text-gray-400">{t('posts.empty')}</p>
             )}

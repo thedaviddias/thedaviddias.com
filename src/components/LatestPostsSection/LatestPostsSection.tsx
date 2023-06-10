@@ -18,7 +18,7 @@ export const LatestPostsSection: React.FC<LatestPostsSection> = ({ articles }) =
       <header>
         <H5 as="h2">{t('articles.sections.latest-posts')}</H5>
       </header>
-      <div className="grid grid-cols-1 gap-4 lg:col-span-2">
+      <div className="grid grid-cols-1 lg:col-span-2">
         {articles.map((article) => (
           <BlogPost key={article.frontMatter.title} post={article} />
         ))}

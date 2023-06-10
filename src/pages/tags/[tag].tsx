@@ -35,7 +35,7 @@ const TagPage: NextPage<CategoryPageProps> = ({ posts, tag }) => {
 
           <h2 className="sr-only">{t('tags.latest_posts', { name: tag })}</h2>
 
-          <div className="grid grid-cols-1 gap-4 lg:col-span-2">
+          <div className="grid grid-cols-1 lg:col-span-2">
             {posts?.map((post, i) => (
               <>
                 {post.frontMatter.type === 'article' && (

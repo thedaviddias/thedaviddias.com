@@ -1,4 +1,5 @@
 import social from 'data/social.json'
+import mobile from 'is-mobile'
 import type { GetStaticProps, NextPage } from 'next'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
@@ -12,7 +13,6 @@ import { fetchRepos, GhProjectsProps } from '@/lib/github'
 import { Container } from '@/components/Container'
 import { CurrentlyReading } from '@/components/CurrentlyReading'
 import { CustomLink } from '@/components/CustomLink'
-import { Dashboard } from '@/components/Dashboard'
 import { LatestGithubSection } from '@/components/LatestGithubSection'
 import { LatestNotesSection } from '@/components/LatestNotesSection'
 import { LatestPostsSection } from '@/components/LatestPostsSection'
@@ -68,7 +68,7 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
           sameAs={listSocialUrl(social)}
         />
         <main id="main" data-skip-link="main content">
-          <section className="pb-20 pt-0 lg:pt-10 flex space-between">
+          <section className="pb-20 pt-0 flex justify-between">
             <div className="text-left">
               <h1 className="block mb-4 dark:text-white transition-colors">
                 <p className="text-3xl p-0 font-light uppercase">{t('home.hero.greetings1')}</p>
@@ -113,20 +113,20 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
 
           <div>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 max-w-5xl">
-              <CurrentlyReading />
-              <ToRead />
+              <CurrentlyReading limit={mobile() ? 2 : 3} />
+              <ToRead limit={mobile() ? 2 : 3} />
             </div>
           </div>
 
-          <LatestGithubSection projects={ghProjects} />
-
           <LatestPostsSection articles={articles} />
+
+          <LatestGithubSection projects={ghProjects} />
 
           {process.env.NODE_ENV === 'production' && <PodcastSection />}
 
           {process.env.NODE_ENV === 'production' && <LatestYoutubeVideos />}
 
-          <Dashboard />
+          {/* <Dashboard /> */}
           {/*
           <iframe
             src="https://thedaviddias.substack.com/embed"

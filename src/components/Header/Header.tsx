@@ -7,6 +7,8 @@ import { CustomLink } from '@/components/CustomLink'
 import { MENU_LINKS } from '@/constants'
 
 import { BannerLang } from '../BannerLang'
+import { ChangeLanguage } from '../ChangeLanguage'
+import { ThemeSwitch } from '../ThemeSwitch'
 
 type HeaderProps = {
   pathname: string
@@ -33,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
   return (
     <header className="dark:text-gray-100 transition-colors duration-200 ">
       {userLocale === ('fr' || 'fr-FR' || 'fr-CA') ? <BannerLang /> : null}
-      <div className="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8 py-3 top-0 mb-12">
+      <div className="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8 py-3 top-0 mb-5 lg:mb-12">
         <div className="relative flex justify-between h-16">
           <div className="flex-1 flex items-center sm:justify-between align-middle">
             {isHomepage ? (
@@ -43,31 +45,37 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
             ) : (
               <CustomLink
                 href="/"
-                className="font-bold text-2xl lg:text-xl sm:mt-[-3px] sm:mr-6 !no-underline"
+                className="font-bold text-2xl lg:text-xl sm:mt-[-3px] sm:mr-6 !no-underline cursor-auto"
                 data-testid="thedaviddias-logo"
                 data-analytics='"Homepage logo"'
               >
                 {t('title')}
               </CustomLink>
             )}
-            <nav className="hidden sm:flex" data-testid="desktop-menu" aria-label="Main navigation">
-              {MENU_LINKS(t)
-                .filter((item) => item.menu !== false)
-                .map((item) => (
-                  <CustomLink
-                    href={item.path}
-                    key={item.label}
-                    aria-current={pathname === item.path ? 'page' : undefined}
-                    className={
-                      pathname === item.path
-                        ? 'mr-10 font-bold !no-underline'
-                        : 'mr-10 hover:text-black hover:underline dark:hover:text-white'
-                    }
-                  >
-                    {item.label}
-                  </CustomLink>
-                ))}
-            </nav>
+            <div className="hidden sm:flex" data-testid="desktop-menu">
+              <nav aria-label="Main navigation">
+                {MENU_LINKS(t)
+                  .filter((item) => item.menu !== false)
+                  .map((item) => (
+                    <CustomLink
+                      href={item.path}
+                      key={item.label}
+                      aria-current={pathname === item.path ? 'page' : undefined}
+                      className={
+                        pathname === item.path
+                          ? 'mr-10 font-bold !no-underline'
+                          : 'mr-10 hover:text-black hover:underline dark:hover:text-white'
+                      }
+                    >
+                      {item.label}
+                    </CustomLink>
+                  ))}
+              </nav>
+              <div className="flex item space-x-4">
+                <ChangeLanguage />
+                <ThemeSwitch />
+              </div>
+            </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:pr-0 print:hidden">
             <div className="block sm:hidden">
@@ -94,9 +102,8 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
                   </svg>
                 </button>
                 <div
-                  className={`mobile-header origin-top-right flex flex-col fixed w-full h-full inset-0 top-[81px] bg-white dark:bg-gray-900 py-6 wrapper padding backdrop-filter backdrop-blur-sm bg-opacity-[0.96] dark:bg-opacity-80 transition-colors duration-200 ${
-                    mobileMenuState ? '' : 'hidden'
-                  }`}
+                  className={`mobile-header origin-top-right flex flex-col fixed w-full h-full inset-0 top-[81px] bg-white dark:bg-gray-900 py-6 wrapper padding backdrop-filter backdrop-blur-sm bg-opacity-[0.96] dark:bg-opacity-80 transition-colors duration-200 ${mobileMenuState ? '' : 'hidden'
+                    }`}
                 >
                   <div className="w-[300%] absolute h-[200%] top-0 right-full bg-white dark:bg-gray-900 bg-opacity-90 dark:bg-opacity-80 backdrop-filter backdrop-blur-sm"></div>
                   <div className="w-full absolute h-[300%] top-full left-0 bg-white dark:bg-gray-900 bg-opacity-90 dark:bg-opacity-80 backdrop-filter backdrop-blur-sm"></div>
@@ -119,6 +126,10 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
                         ))}
                       </ul>
                     </nav>
+                    <div className="flex item space-x-4 justify-center">
+                      <ChangeLanguage />
+                      <ThemeSwitch />
+                    </div>
                   </div>
                 </div>
               </nav>

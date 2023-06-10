@@ -19,7 +19,7 @@ const PodcastSection = () => {
   if (!data) return <Loader />
 
   return (
-    <section className="grid grid-cols-1 gap-y-10 border-none mb-10">
+    <section className="grid grid-cols-1 gap-y-10 border-none mb-5">
       <header>
         <H5 as="h2">{t('home.sections.podcast.latest_podcasts')}</H5>
       </header>
@@ -28,9 +28,8 @@ const PodcastSection = () => {
           {data?.podcast && (
             <>
               <iframe
-                src={`${data.podcast}${
-                  theme === 'dark' || resolvedTheme === 'dark' ? `?theme=0` : ''
-                }`}
+                src={`${data.podcast}${theme === 'dark' || resolvedTheme === 'dark' ? `?theme=0` : ''
+                  }`}
                 className="rounded-xl"
                 width="100%"
                 height="232"

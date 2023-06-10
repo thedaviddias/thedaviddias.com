@@ -4,7 +4,7 @@
         <title>The David Dias | Front-End Developer, podcaster &amp; content creator</title>
         <link>https://thedaviddias.dev</link>
         <description>Hey, I'm David Dias! Front-End Developer based in Toronto/Canada. I love talking about code, technology, expatriation and life.</description>
-        <lastBuildDate>Sat, 10 Jun 2023 20:55:12 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 10 Jun 2023 21:04:20 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -15,11 +15,11 @@
         </image>
         <copyright>All rights reserved 2023, David Dias</copyright>
         <item>
-            <title><![CDATA[Stop using the <hr> tag to design a horizontal line!]]></title>
+            <title><![CDATA[Stop using the "<hr/>" tag to design a horizontal line!]]></title>
             <link>https://thedaviddias.dev/notes/stop-using-thematic-break-to-design-horizontal-line</link>
             <guid>https://thedaviddias.dev/notes/stop-using-thematic-break-to-design-horizontal-line</guid>
             <pubDate>Thu, 01 Jun 2023 04:38:32 GMT</pubDate>
-            <description><![CDATA[It's sometimes easy to forget that UI doesn't dicated semantics. In this article I'll show you how to use the <hr> tag properly.]]></description>
+            <description><![CDATA[It's sometimes easy to forget that UI doesn't dicated semantics. In this article I'll show you how to use the "<hr/>" tag properly.]]></description>
             <author>hello@thedaviddias.dev (David Dias)</author>
         </item>
         <item>

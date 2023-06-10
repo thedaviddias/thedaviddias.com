@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
 
@@ -70,9 +71,18 @@ export const Footer = () => {
   if (!mounted) return null
 
   return (
-    <div className="mt-auto">
+    <div className="mt-5 sm:mt-8">
+      <div className="h-36 max-w-5xl mx-auto relative">
+        <Image
+          className="object-cover max-w-xl mx-auto"
+          src="/images/david-dias-banner.png"
+          alt=""
+          aria-hidden="true"
+          fill
+        />
+      </div>
       <footer
-        className="main-footer bg-gray-50 dark:bg-black mt-5 sm:mt-8 transform"
+        className="main-footer bg-gray-50 dark:bg-black transform"
         aria-labelledby="footer-heading"
       >
         <h2 id="footer-heading" className="sr-only">

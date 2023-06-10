@@ -9,7 +9,7 @@ export const Search: React.FC<SearchProps> = ({ setSearchValue }) => {
   const { t } = useTranslation('common')
 
   return (
-    <form className="relative w-full md:w-96">
+    <form className="relative w-full md:w-96" role="search">
       <fieldset>
         <legend>{t('articles.sections.search')}</legend>
         <input

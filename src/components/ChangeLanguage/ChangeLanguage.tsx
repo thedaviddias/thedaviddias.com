@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import useTranslation from 'next-translate/useTranslation'
 
 import { CustomLink } from '@/components/CustomLink'
@@ -11,6 +12,7 @@ const { locales } = i18nConfig
 
 export const ChangeLanguage = () => {
   const { t, lang } = useTranslation('common')
+  const router = useRouter()
 
   const langSwitch = locales.map((lng: string) => {
     if (lng === lang) return null
@@ -25,7 +27,7 @@ export const ChangeLanguage = () => {
         key={lng}
         aria-label={switchLabel}
         className="w-8 h-8 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300  transition-all"
-        href="/"
+        href={router.asPath}
         locale={lng}
       >
         {lng === 'en' ? (

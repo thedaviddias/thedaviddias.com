@@ -52,8 +52,8 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
                 {t('title')}
               </CustomLink>
             )}
-            <div className="hidden sm:flex" data-testid="desktop-menu">
-              <nav aria-label="Main navigation">
+            <div className="hidden sm:flex sm:gap-x-5" data-testid="desktop-menu">
+              <nav aria-label="Main navigation" className="flex gap-x-8">
                 {MENU_LINKS(t)
                   .filter((item) => item.menu !== false)
                   .map((item) => (
@@ -63,8 +63,8 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
                       aria-current={pathname === item.path ? 'page' : undefined}
                       className={
                         pathname === item.path
-                          ? 'mr-10 font-bold !no-underline'
-                          : 'mr-10 hover:text-black hover:underline dark:hover:text-white'
+                          ? 'font-bold !no-underline p-2'
+                          : 'hover:text-black hover:underline dark:hover:text-white p-2'
                       }
                     >
                       {item.label}

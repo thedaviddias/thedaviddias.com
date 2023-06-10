@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const nextTranslate = require('next-translate')
+const nextTranslate = require('next-translate-plugin')
 const { withSentryConfig } = require('@sentry/nextjs')
 const { withPlausibleProxy } = require('next-plausible')
 const withPlugins = require('next-compose-plugins')

@@ -53,7 +53,8 @@ specifiers:
   next-seo: ^5.5.0
   next-sitemap: 4.1.3
   next-themes: 0.2.1
-  next-translate: ^1.5.0
+  next-translate: 2.3.0-canary.3
+  next-translate-plugin: 2.3.0-canary.3
   node-fetch: ^3.3.1
   postcss: ^8.4.24
   prettier: ^2.8.8
@@ -95,7 +96,6 @@ dependencies:
   next-plausible: 3.7.2_z4pol2qj2yv3um3jqqobs4b3eu
   next-seo: 5.5.0_z4pol2qj2yv3um3jqqobs4b3eu
   next-themes: 0.2.1_z4pol2qj2yv3um3jqqobs4b3eu
-  next-translate: 1.5.0_next@13.4.4+react@18.2.0
   postcss: 8.4.24
   prettier: 2.8.8
   react: 18.2.0
@@ -140,6 +140,8 @@ devDependencies:
   lint-staged: 13.2.2
   next-bundle-analyzer: 0.6.7_next@13.4.4
   next-sitemap: 4.1.3_4le57alqltvittyazakkkztd2a
+  next-translate: 2.3.0-canary.3_next@13.4.4+react@18.2.0
+  next-translate-plugin: 2.3.0-canary.3_keq6ur4bdp7ts6gfxgcduvhfiq
   node-fetch: 3.3.1
   pretty-ms: 8.0.0
   react-goodreads-shelf: 3.1.3
@@ -2699,7 +2701,7 @@ packages:
   /axios/1.4.0:
     resolution: {integrity: sha512-S4XCWMEmzvo64T9GfvQDOXgYRDJ/wsSZc7Jvdgx5u1sd0JwsuPLqb3SYmusag+edF6ziyMensPVqLTSc1PiSEA==}
     dependencies:
-      follow-redirects: 1.15.1_debug@4.3.4
+      follow-redirects: 1.15.1
       form-data: 4.0.0
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -4037,6 +4039,16 @@ packages:
 
   /flatted/3.2.6:
     resolution: {integrity: sha512-0sQoMh9s0BYsm+12Huy/rkKxVu4R1+r96YX5cG44rHV0pQ6iC3Q+mkoMFaGWObMFYQxCVT+ssG1ksneA2MI9KQ==}
+
+  /follow-redirects/1.15.1:
+    resolution: {integrity: sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: true
 
   /follow-redirects/1.15.1_debug@4.3.4:
     resolution: {integrity: sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==}
@@ -5953,15 +5965,27 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /next-translate/1.5.0_next@13.4.4+react@18.2.0:
-    resolution: {integrity: sha512-6amnuJWw22XbaM2DVhsYaOXelFLjTbMqTgqvB+h9VfE/H2aQ/edfT06ONQLQbsVV/I7Hn+93LTaV1/qOo6Kf9A==}
+  /next-translate-plugin/2.3.0-canary.3_keq6ur4bdp7ts6gfxgcduvhfiq:
+    resolution: {integrity: sha512-9KA5tMXJFweSS2/xcO/sINTKm9ALE2wOivdk4TioFoUva2h/PQcPfYixTJAcfOSPCyw31eTIwQuiJj3Uo2r92A==}
+    engines: {node: '>=14.15.0'}
+    requiresBuild: true
+    peerDependencies:
+      next-translate: '>= 2.0.0-canary.1'
+    dependencies:
+      next-translate: 2.3.0-canary.3_next@13.4.4+react@18.2.0
+      typescript: 4.5.2
+    dev: true
+
+  /next-translate/2.3.0-canary.3_next@13.4.4+react@18.2.0:
+    resolution: {integrity: sha512-0nhYzpvWhQqnRWRhS98xjhx5RCEkhpe0DXNttUVjadX9/kegjvE597DM8eYxY9UlsBu7si0irLc3Z9xrLca1hQ==}
+    engines: {node: '>=14.15.0'}
     peerDependencies:
       next: '>= 10.0.0'
       react: '>= 16.8.0'
     dependencies:
       next: 13.4.4_pjwopsidmaokadturxaafygjp4
       react: 18.2.0
-    dev: false
+    dev: true
 
   /next/13.4.4_pjwopsidmaokadturxaafygjp4:
     resolution: {integrity: sha512-C5S0ysM0Ily9McL4Jb48nOQHT1BukOWI59uC3X/xCMlYIh9rJZCv7nzG92J6e1cOBqQbKovlpgvHWFmz4eKKEA==}
@@ -7618,6 +7642,12 @@ packages:
       call-bind: 1.0.2
       for-each: 0.3.3
       is-typed-array: 1.1.10
+    dev: true
+
+  /typescript/4.5.2:
+    resolution: {integrity: sha512-5BlMof9H1yGt0P8/WF+wPNw6GfctgGjXp5hkblpyT+8rkASSmkUKMXrxR0Xg8ThVCi/JnHQiKXeBaEwCeQwMFw==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
     dev: true
 
   /typescript/4.7.4:

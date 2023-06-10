@@ -37,6 +37,9 @@ export default class MyDocument extends Document {
             name="google-site-verification"
             content="_6qNCkTis9PqmGX1r5Nhe_b14nRXmJ9nos2yeCN_eaw"
           />
+          <link rel="preconnect" href="https://open.spotifycdn.com" />
+          <link rel="preconnect" href="https://encore.scdn.co" />
+          <link rel="preconnect" href="https://i.gr-assets.com" />
         </Head>
         <body className="antialiased">
           <Main />

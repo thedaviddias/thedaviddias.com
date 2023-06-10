@@ -1,8 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 
-const commonOptions = {
-  changefreq: 'weekly',
-  priority: 0.4,
+const commonOptions = (config) => ({
+  lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
   alternateRefs: [
     {
       href: 'https://thedaviddias.dev',
@@ -13,69 +12,61 @@ const commonOptions = {
       hreflang: 'fr',
     },
   ],
-}
+})
 
 const config = {
   siteUrl: 'https://thedaviddias.dev',
   generateRobotsTxt: true,
   exclude: ['/404', '/fr/404'],
-  additionalPaths: async () => {
+  additionalPaths: async (config) => {
     const result = []
 
     result.push({
       loc: '/',
-      ...commonOptions,
+      ...commonOptions(config),
     })
 
     result.push({
       loc: '/about',
-      ...commonOptions,
+      changefreq: 'weekly',
+      ...commonOptions(config),
     })
 
     result.push({
       loc: '/articles',
-      ...commonOptions,
+      ...commonOptions(config),
     })
 
     result.push({
       loc: '/notes',
-      ...commonOptions,
+      ...commonOptions(config),
     })
 
     result.push({
       loc: '/projects',
-      ...commonOptions,
-    })
-
-    result.push({
-      loc: '/bookmarks',
-      ...commonOptions,
+      changefreq: 'weekly',
+      ...commonOptions(config),
     })
 
     result.push({
       loc: '/tags',
-      ...commonOptions,
+      changefreq: 'weekly',
+      ...commonOptions(config),
     })
 
     result.push({
       loc: '/dashboard',
-      ...commonOptions,
+      changefreq: 'weekly',
+      ...commonOptions(config),
     })
 
     result.push({
       loc: '/uses',
-      ...commonOptions,
+      changefreq: 'monthly',
+      ...commonOptions(config),
     })
 
     return result
-  },
-  robotsTxtOptions: {
-    policies: [
-      {
-        userAgent: '*',
-        allow: '/',
-      },
-    ],
   },
 }
 

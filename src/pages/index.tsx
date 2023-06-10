@@ -122,7 +122,7 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
 
           <LatestGithubSection projects={ghProjects} />
 
-          {process.env.NODE_ENV === 'production' && <PodcastSection />}
+          {process.env.NODE_ENV === 'production' && !mobile() && <PodcastSection />}
 
           {process.env.NODE_ENV === 'production' && <LatestYoutubeVideos />}
 

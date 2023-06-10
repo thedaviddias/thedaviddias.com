@@ -1,9 +1,7 @@
 import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
 
-import { ChangeLanguage } from '@/components/ChangeLanguage'
 import { CustomLink } from '@/components/CustomLink'
-import { ThemeSwitch } from '@/components/ThemeSwitch'
 
 import { EXTRA_LINKS, FOOTER_MENU_LINKS, SOCIAL_LINKS } from '@/constants'
 

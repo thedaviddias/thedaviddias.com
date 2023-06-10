@@ -10,7 +10,9 @@ export type ArticlesType = {
     permalink: string
     tags?: string[]
     title: string
-    preview: string
+    preview: {
+      url: string
+    }
     published?: {
       publishedOn: string
       publishedUrl: string

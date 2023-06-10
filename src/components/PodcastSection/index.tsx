@@ -28,8 +28,9 @@ const PodcastSection = () => {
           {data?.podcast && (
             <>
               <iframe
-                src={`${data.podcast}${theme === 'dark' || resolvedTheme === 'dark' ? `?theme=0` : ''
-                  }`}
+                src={`${data.podcast}${
+                  theme === 'dark' || resolvedTheme === 'dark' ? `?theme=0` : ''
+                }`}
                 className="rounded-xl"
                 width="100%"
                 height="232"

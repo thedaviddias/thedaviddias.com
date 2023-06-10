@@ -42,16 +42,18 @@ export const GithubProject: React.FC<GithubProjectProps> = ({ project }) => {
         )}
 
         <div
-          className={`flex align-middle items-center ${project.language ? 'col-span-2' : 'col-span-1'
-            }`}
+          className={`flex align-middle items-center ${
+            project.language ? 'col-span-2' : 'col-span-1'
+          }`}
         >
           <GithubStar className="fill-current text-gray-600 dark:text-gray-100" />
           <span className="ml-2">{project?.stars.toLocaleString()}</span>
         </div>
 
         <div
-          className={`flex align-middle items-center ${project.language ? 'col-span-3' : 'col-span-2'
-            }`}
+          className={`flex align-middle items-center ${
+            project.language ? 'col-span-3' : 'col-span-2'
+          }`}
         >
           <GithubFork className="fill-current text-gray-600 dark:text-gray-100" />
           <span className="ml-2">{project?.forks}</span>

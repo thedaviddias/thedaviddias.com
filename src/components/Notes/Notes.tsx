@@ -1,7 +1,3 @@
-import { format } from 'date-fns'
-import useTranslation from 'next-translate/useTranslation'
-import { useEffect, useState } from 'react'
-
 import { CustomLink } from '@/components/CustomLink'
 import { H4 } from '@/components/Headings'
 import { Tags } from '@/components/Tags'

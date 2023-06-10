@@ -1,4 +1,5 @@
 import social from 'data/social.json'
+import { LinkProps } from 'next/link'
 import { Translate } from 'next-translate'
 import { routes } from 'src/config/routes'
 
@@ -8,7 +9,7 @@ export const TWITTER_PROFILE = 'https://twitter.com/thedaviddias'
 export const GITHUB_PROFILE = 'https://github.com/thedaviddias'
 export const POLYWORK_PROFILE = 'https://changelog.thedaviddias.dev'
 
-export type LinksInternalResponse = {
+export type LinksInternalResponse = Pick<LinkProps, 'locale'> & {
   /** Indicates if it should show in the navigation menu */
   menu?: boolean
   label: string

@@ -140,6 +140,7 @@ export const routes: RoutesResponse = (translate) => ({
     label: translate('layout.nav.rss'),
     path: translate('rss.path'),
     seo: extendSEO({ options: {}, translate }),
+    locale: false,
   },
 })
 

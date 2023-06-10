@@ -32,9 +32,9 @@ const FooterExtraLinks = () => {
     <div>
       <h3 className="small-title">{t('layout.footer.extra')}</h3>
       <ul className="mt-3 space-y-3">
-        {EXTRA_LINKS(t).map(({ path, label }) => (
+        {EXTRA_LINKS(t).map(({ path, label, locale }) => (
           <li key={label}>
-            <CustomLink href={path} className="dark:!text-white">
+            <CustomLink href={path} className="dark:!text-white" locale={locale}>
               {label}
             </CustomLink>
           </li>

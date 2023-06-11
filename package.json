@@ -45,8 +45,8 @@
     "tailwindcss": "3.3.2"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "13.4.4",
-    "@next/env": "13.4.4",
+    "@next/bundle-analyzer": "13.4.5",
+    "@next/env": "13.4.5",
     "@nick22985/wakatime-api": "^1.0.2",
     "@octokit/graphql": "^5.0.6",
     "@octokit/graphql-schema": "^14.9.1",
@@ -67,7 +67,7 @@
     "date-fns": "2.30.0",
     "dotenv": "16.1.4",
     "eslint": "8.42.0",
-    "eslint-config-next": "13.4.4",
+    "eslint-config-next": "13.4.5",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-mdx": "2.1.0",
     "eslint-plugin-react": "7.32.2",
@@ -84,7 +84,7 @@
     "next-translate-plugin": "2.3.0-canary.3",
     "node-fetch": "^3.3.1",
     "pretty-ms": "^8.0.0",
-    "react-goodreads-shelf": "^3.1.4",
+    "react-goodreads-shelf": "^3.1.5",
     "react-social-media-embed": "^2.3.5",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-figure": "^1.0.1",

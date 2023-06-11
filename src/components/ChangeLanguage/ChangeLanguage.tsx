@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import useTranslation from 'next-translate/useTranslation'
+import { FC } from 'react'
 
 import { CustomLink } from '@/components/CustomLink'
 
@@ -7,7 +8,6 @@ import FrFlag from '../../../public/images/svg/fr-flag.svg'
 import UsFlag from '../../../public/images/svg/us-flag.svg'
 
 import i18nConfig from '~/i18n.json'
-import { FC } from 'react'
 
 const { locales } = i18nConfig
 

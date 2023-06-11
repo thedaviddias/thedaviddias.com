@@ -27,6 +27,7 @@ import { MDXComponents } from '@/components/MdxComponents'
 import { Paragraph } from '@/components/Paragraph'
 import { RelatedPosts } from '@/components/RelatedPosts'
 import { ScrollTop } from '@/components/ScrollTop'
+import { ShareProps } from '@/components/Share'
 import { TableOfContents } from '@/components/TableOfContents'
 import { Tags } from '@/components/Tags'
 import { WebMentionsProps } from '@/components/Webmentions'
@@ -45,7 +46,6 @@ import {
 } from '@/utils/get-articles-posts'
 import { rehypeExtractHeadings } from '@/utils/rehype-extract-headings'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
-import { ShareProps } from '@/components/Share'
 
 const Comments = dynamic<object>(
   () => import('../../components/Comments').then((mod) => mod.Comments),

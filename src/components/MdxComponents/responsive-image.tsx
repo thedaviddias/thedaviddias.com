@@ -1,7 +1,8 @@
 import Image, { ImageProps } from 'next/image'
 
-import { CustomLink } from '../CustomLink'
 import { extractLinks } from '@/utils/extract-links'
+
+import { CustomLink } from '../CustomLink'
 
 export const ResponsiveImage: React.FC<ImageProps> = ({
   src,

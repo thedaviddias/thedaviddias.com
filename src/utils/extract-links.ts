@@ -1,6 +1,6 @@
-import { unified } from 'unified'
 import rehypeParse from 'rehype-parse'
 import rehypeStringify from 'rehype-stringify'
+import { unified } from 'unified'
 import { Parent, visit } from 'unist-util-visit'
 
 export const extractLinks = (html: string) => {

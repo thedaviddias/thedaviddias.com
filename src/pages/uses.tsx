@@ -1,4 +1,5 @@
 import { GetStaticProps, NextPage } from 'next'
+import Image from 'next/image'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import useTranslation from 'next-translate/useTranslation'
@@ -14,7 +15,6 @@ import { getPostBySlug } from '@/utils/get-articles-posts'
 import { readData } from '@/utils/read-data'
 
 import { UsesType } from '@/types'
-import Image from 'next/image'
 
 type UsesProps = {
   categories: string[]

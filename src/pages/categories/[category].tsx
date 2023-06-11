@@ -13,8 +13,10 @@ import { pages } from '@/config/routes'
 import { CONTENT_TYPE } from '@/constants'
 import { getAllPostsWithFrontMatter, getCategories } from '@/utils/get-articles-posts'
 
+import { ArticlesType } from '@/types'
+
 type CategoryPageProps = {
-  posts: any[]
+  posts: ArticlesType[]
   category: {
     name: string
     description?: string

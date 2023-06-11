@@ -1,5 +1,6 @@
 export type ArticlesType = {
   frontMatter: {
+    type: 'article'
     draft: boolean
     author?: string
     categories: string[]
@@ -25,6 +26,7 @@ export type ArticlesType = {
 
 export type NotesType = {
   frontMatter: {
+    type: 'note'
     draft: boolean
     author?: string
     categories: string[]
@@ -59,4 +61,10 @@ export type UsesType = {
 export type ListAllTags = {
   name: string
   occurrences: number
+}
+
+export type YouTubeVideo = {
+  id: string
+  title: string
+  url: string
 }

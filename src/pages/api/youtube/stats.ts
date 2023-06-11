@@ -4,6 +4,12 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 
 import googleAuth from '@/lib/google'
 
+type YouTubeStatistics = {
+  viewCount: string
+  subscriberCount: string
+  videoCount: string
+}
+
 const YoutubeStatsHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   const youtubeId = process.env.YOUTUBE_CHANNEL_ID
 
@@ -20,7 +26,7 @@ const YoutubeStatsHandler = async (req: NextApiRequest, res: NextApiResponse) =>
     })
 
     const channel = response.data.items && response?.data.items[0]
-    const { subscriberCount, viewCount, videoCount } = channel?.statistics as any
+    const { subscriberCount, viewCount, videoCount } = channel?.statistics as YouTubeStatistics
 
     res.setHeader('Cache-Control', 'public, s-maxage=1200, stale-while-revalidate=600')
 

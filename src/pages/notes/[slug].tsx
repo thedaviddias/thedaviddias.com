@@ -13,7 +13,7 @@ import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import useSWR from 'swr'
 
-import { AdjacentPostsProps } from '@/components/AdjacentPosts'
+import { AdjacentPostsProps, PreviousNext } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
 import { Container } from '@/components/Container'
 import { DatePost } from '@/components/DatePost'
@@ -81,7 +81,7 @@ export type Headings = {
 type NotePageProps = BlogPostProps & {
   source: MDXRemoteSerializeResult
   readingTime: ReadTimeResults
-  adjacentPosts: any
+  adjacentPosts: PreviousNext
 }
 
 type WebMentionsResponse = {

@@ -12,8 +12,10 @@ import { PageHeader } from '@/components/PageHeader'
 import { pages } from '@/config/routes'
 import { getAllPostsWithFrontMatter, getTags } from '@/utils/get-articles-posts'
 
+import { ArticlesType, NotesType } from '@/types'
+
 type CategoryPageProps = {
-  posts: any[]
+  posts: (ArticlesType | NotesType)[]
   tag: string
 }
 
@@ -22,6 +24,10 @@ const TagPage: NextPage<CategoryPageProps> = ({ posts, tag }) => {
 
   const titlePage = pages(t, tag).tag.title
   const descriptionPage = pages(t, tag).tag.description
+
+  function isArticleType(post: ArticlesType | NotesType): post is ArticlesType {
+    return post.frontMatter.type === 'article'
+  }
 
   return (
     <Container>
@@ -38,11 +44,11 @@ const TagPage: NextPage<CategoryPageProps> = ({ posts, tag }) => {
           <div className="grid grid-cols-1 lg:col-span-2">
             {posts?.map((post, i) => (
               <>
-                {post.frontMatter.type === 'article' && (
+                {isArticleType(post) ? (
                   <BlogPost key={`${i}-article`} post={post} />
+                ) : (
+                  <Notes key={`${i}-note`} note={post} />
                 )}
-
-                {post.frontMatter.type === 'note' && <Notes key={`${i}-note`} note={post} />}
               </>
             ))}
           </div>

@@ -15,7 +15,7 @@ import remarkGfm from 'remark-gfm'
 import slugify from 'slugify'
 import useSWR from 'swr'
 
-import { AdjacentPostsProps } from '@/components/AdjacentPosts'
+import { AdjacentPostsProps, PreviousNext } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
 import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
@@ -106,7 +106,7 @@ type BlogPostPageProps = BlogPostProps & {
   source: MDXRemoteSerializeResult
   readingTime: ReadTimeResults
   headings: Headings[]
-  adjacentPosts: any
+  adjacentPosts: PreviousNext
   relatedPosts: GetRelatedPosts[]
 }
 
@@ -335,7 +335,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params, locale }) => {
+export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
   if (params?.slug) {
     const slug = params.slug as string
     const postContent = await getPostBySlug(slug, contentType, locale)

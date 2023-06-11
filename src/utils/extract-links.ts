@@ -1,3 +1,4 @@
+import { Element } from 'hast-util-to-string'
 import rehypeParse from 'rehype-parse'
 import rehypeStringify from 'rehype-stringify'
 import { unified } from 'unified'
@@ -8,7 +9,7 @@ export const extractLinks = (html: string) => {
     .use(rehypeParse, { fragment: true }) // Parse as fragment, not full HTML document
     .use(
       () => (tree: Parent) =>
-        visit(tree, 'element', (node: any) => {
+        visit(tree, 'element', (node: Element) => {
           if (node.tagName === 'a') {
             node.properties = node.properties || {}
             node.properties.className = 'external-link'

@@ -76,6 +76,9 @@ const nextConfig = withPlugins([plugins, nextTranslate], {
       },
     ]
   },
+  sentry: {
+    hideSourceMaps: true,
+  },
 })
 
 const sentryWebpackPluginOptions = {
@@ -84,7 +87,6 @@ const sentryWebpackPluginOptions = {
   // recommended:
   //   release, url, org, project, authToken, configFile, stripPrefix,
   //   urlPrefix, include, ignore
-  hideSourceMaps: true,
   silent: true, // Suppresses all logs
   dryRun: process.env.VERCEL_ENV !== 'production',
 }

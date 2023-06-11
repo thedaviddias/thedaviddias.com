@@ -45,6 +45,7 @@ import {
 } from '@/utils/get-articles-posts'
 import { rehypeExtractHeadings } from '@/utils/rehype-extract-headings'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
+import { ShareProps } from '@/components/Share'
 
 const Comments = dynamic<object>(
   () => import('../../components/Comments').then((mod) => mod.Comments),
@@ -66,6 +67,10 @@ const Webmentions = dynamic<WebMentionsProps>(
     loading: () => <Loader />,
   }
 )
+
+const Share = dynamic<ShareProps>(() => import('../../components/Share').then((mod) => mod.Share), {
+  loading: () => <Loader />,
+})
 
 export type BlogPostProps = {
   frontMatter: {
@@ -287,7 +292,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
 
             <div className="flex-auto ml-16 hidden lg:block print:hidden">
               <div className="sticky top-10 w-full">
-                {/* {permalink && <Share title={title} tags={tags && tags} permalink={permalink} />} */}
+                {permalink && <Share title={title} permalink={permalink} />}
                 {headings && (
                   <aside className="w-full mt-3">
                     <TableOfContents headings={headings} />

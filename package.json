@@ -86,6 +86,7 @@
     "pretty-ms": "^8.0.0",
     "react-goodreads-shelf": "^3.1.5",
     "react-social-media-embed": "^2.3.5",
+    "react-social-sharing": "^3.3.0",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-figure": "^1.0.1",
     "rehype-image-placeholder": "^1.0.1",

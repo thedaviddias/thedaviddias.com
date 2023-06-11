@@ -29,8 +29,34 @@ import { remarkCodeTitles } from '@/utils/remark-code-titles'
 import fetcher from '@/utils/fetcher'
 import useSWR from 'swr'
 import { WebMention } from '../articles/[slug]'
-import { AdjacentPostsProps } from '../../components/AdjacentPosts'
-import { WebMentionsProps } from '../../components/Webmentions'
+import { AdjacentPostsProps } from '@/components/AdjacentPosts'
+import { WebMentionsProps } from '@/components/Webmentions'
+import { ShareProps } from '@/components/Share'
+
+const Comments = dynamic<object>(
+  () => import('../../components/Comments').then((mod) => mod.Comments),
+  {
+    loading: () => <Loader />,
+  }
+)
+
+const AdjacentPosts = dynamic<AdjacentPostsProps>(
+  () => import('../../components/AdjacentPosts').then((mod) => mod.AdjacentPosts),
+  {
+    loading: () => <Loader />,
+  }
+)
+
+const Webmentions = dynamic<WebMentionsProps>(
+  () => import('../../components/Webmentions').then((mod) => mod.Webmentions),
+  {
+    loading: () => <Loader />,
+  }
+)
+
+const Share = dynamic<ShareProps>(() => import('../../components/Share').then((mod) => mod.Share), {
+  loading: () => <Loader />,
+})
 
 export type BlogPostProps = {
   frontMatter: {
@@ -61,27 +87,6 @@ type NotePageProps = BlogPostProps & {
 type WebMentionsResponse = {
   links: WebMention[]
 }
-
-const Comments = dynamic<object>(
-  () => import('../../components/Comments').then((mod) => mod.Comments),
-  {
-    loading: () => <Loader />,
-  }
-)
-
-const AdjacentPosts = dynamic<AdjacentPostsProps>(
-  () => import('../../components/AdjacentPosts').then((mod) => mod.AdjacentPosts),
-  {
-    loading: () => <Loader />,
-  }
-)
-
-const Webmentions = dynamic<WebMentionsProps>(
-  () => import('../../components/Webmentions').then((mod) => mod.Webmentions),
-  {
-    loading: () => <Loader />,
-  }
-)
 
 const contentType = 'notes'
 
@@ -161,7 +166,7 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
               <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl !max-w-full mb-10">
                 <MDXRemote {...source} components={MDXComponents} lazy />
               </section>
-              {/* {permalink && <Share title={title} tags={tags && tags} permalink={permalink} />} */}
+              {permalink && <Share title={title} permalink={permalink} />}
 
               {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
 

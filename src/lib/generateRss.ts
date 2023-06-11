@@ -2,8 +2,8 @@ import { Feed } from 'feed'
 import fs from 'fs'
 
 import { BASE_URL } from '@/constants'
+import { getAllPostsWithFrontMatter } from '@/utils/get-article-posts/getAllPostsWithFrontMatter'
 
-import { getAllPostsWithFrontMatter } from '../utils/get-articles-posts'
 import localeEN from '../../locales/en/common.json'
 import localeFR from '../../locales/fr/common.json'
 

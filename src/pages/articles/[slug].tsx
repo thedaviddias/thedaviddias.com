@@ -36,14 +36,11 @@ import { routes } from '@/config/routes'
 import { CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH } from '@/constants'
 import fetcher from '@/utils/fetcher'
 import { generateImageUrl } from '@/utils/generate-image-url'
-import {
-  getAdjacentPosts,
-  getAllPosts,
-  getPost,
-  getPostBySlug,
-  GetRelatedPosts,
-  getRelatedPosts,
-} from '@/utils/get-articles-posts'
+import { getAdjacentPosts } from '@/utils/get-article-posts/getAdjacentPosts'
+import { getAllPosts } from '@/utils/get-article-posts/getAllPosts'
+import { getPost } from '@/utils/get-article-posts/getPost'
+import { getPostBySlug } from '@/utils/get-article-posts/getPostBySlug'
+import { GetRelatedPosts, getRelatedPosts } from '@/utils/get-article-posts/getRelatedPosts'
 import { rehypeExtractHeadings } from '@/utils/rehype-extract-headings'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
 

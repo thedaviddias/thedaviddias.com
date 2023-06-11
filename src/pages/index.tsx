@@ -20,7 +20,7 @@ import { ToRead } from '@/components/ToRead'
 
 import { routes } from '@/config/routes'
 import { HERO_LINKS } from '@/constants'
-import { getAllPostsWithFrontMatter } from '@/utils/get-articles-posts'
+import { getAllPostsWithFrontMatter } from '@/utils/get-article-posts/getAllPostsWithFrontMatter'
 import { listSocialUrl } from '@/utils/list-social-url'
 import { readData } from '@/utils/read-data'
 

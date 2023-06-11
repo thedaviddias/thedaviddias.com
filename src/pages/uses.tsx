@@ -11,7 +11,7 @@ import { ToolCard } from '@/components/ToolCard'
 
 import { routes } from '@/config/routes'
 import { BaseLayout } from '@/layouts/BaseLayout'
-import { getPostBySlug } from '@/utils/get-articles-posts'
+import { getPostBySlug } from '@/utils/get-article-posts/getPostBySlug'
 import { readData } from '@/utils/read-data'
 
 import { UsesType } from '@/types'

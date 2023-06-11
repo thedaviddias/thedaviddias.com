@@ -10,7 +10,8 @@ import { Notes } from '@/components/Notes'
 import { PageHeader } from '@/components/PageHeader'
 
 import { pages } from '@/config/routes'
-import { getAllPostsWithFrontMatter, getTags } from '@/utils/get-articles-posts'
+import { getAllPostsWithFrontMatter } from '@/utils/get-article-posts/getAllPostsWithFrontMatter'
+import { getTags } from '@/utils/get-article-posts/getTags'
 
 import { ArticlesType, NotesType } from '@/types'
 

@@ -1,6 +1,6 @@
 import useTranslation from 'next-translate/useTranslation'
 
-import { GetRelatedPosts } from '@/utils/get-articles-posts'
+import { GetRelatedPosts } from '@/utils/get-article-posts/getRelatedPosts'
 
 import { CustomLink } from '../CustomLink'
 import { H4 } from '../Headings'

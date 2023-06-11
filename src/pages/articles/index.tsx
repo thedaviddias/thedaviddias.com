@@ -11,7 +11,8 @@ import { PageHeader } from '@/components/PageHeader'
 import { Search } from '@/components/Search'
 
 import { routes } from '@/config/routes'
-import { getAllPostsWithFrontMatter, getCategories } from '@/utils/get-articles-posts'
+import { getAllPostsWithFrontMatter } from '@/utils/get-article-posts/getAllPostsWithFrontMatter'
+import { getCategories } from '@/utils/get-article-posts/getCategories'
 
 import { ArticlesType, ListAllTags } from '@/types'
 

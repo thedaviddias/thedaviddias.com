@@ -11,7 +11,7 @@ import { Paragraph } from '@/components/Paragraph'
 import { Search } from '@/components/Search'
 
 import { CONTENT_TYPE } from '@/constants'
-import { getTags, TagsInfo } from '@/utils/get-articles-posts'
+import { getTags, TagsInfo } from '@/utils/get-article-posts/getTags'
 
 type TagsPageProps = {
   tags: TagsInfo[]

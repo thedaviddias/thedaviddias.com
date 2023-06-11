@@ -1,51 +1,43 @@
-export type ArticlesType = {
-  frontMatter: {
-    type: 'article'
-    draft: boolean
-    author?: string
-    categories: string[]
-    date: string
-    description: string
-    lastmod?: string
-    locale: string
-    permalink: string
-    tags?: string[]
-    title: string
-    preview: {
-      url: string
-    }
-    published?: {
-      publishedOn: string
-      publishedUrl: string
-    }
+import { ReadTimeResults } from 'reading-time'
+
+export type FrontMatterType<Type extends 'article' | 'note'> = {
+  type: Type
+  draft: boolean
+  author?: string
+  categories: string[]
+  date: string
+  description: string
+  lastmod?: string
+  locale: string
+  permalink: string
+  tags?: string[]
+  title: string
+  preview: {
+    url: string
   }
+  published?: {
+    on: string
+    url: string
+  }
+}
+
+export type ArticleFrontMatterType = FrontMatterType<'article'>
+export type NoteFrontMatterType = FrontMatterType<'note'>
+
+export type ArticlesType = {
+  frontMatter: ArticleFrontMatterType
   content: string
   permalink: string
   slug: string
+  readingTime: ReadTimeResults
 }
 
 export type NotesType = {
-  frontMatter: {
-    type: 'note'
-    draft: boolean
-    author?: string
-    categories: string[]
-    date: string
-    description: string
-    lastmod?: string
-    locale: string
-    permalink: string
-    tags?: string[]
-    title: string
-    preview: string
-    published?: {
-      publishedOn: string
-      publishedUrl: string
-    }
-  }
+  frontMatter: NoteFrontMatterType
   content: string
   permalink: string
   slug: string
+  readingTime: ReadTimeResults
 }
 
 export type UsesType = {
@@ -67,4 +59,12 @@ export type YouTubeVideo = {
   id: string
   title: string
   url: string
+}
+
+export type GetAllPostsWithFrontMatter = {
+  dataType: string
+  filterByTag?: string | null
+  filterByCategory?: string | null
+  locale?: string
+  limit?: number
 }

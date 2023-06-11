@@ -9,7 +9,7 @@ import { PageHeader } from '@/components/PageHeader'
 import { Search } from '@/components/Search'
 
 import { routes } from '@/config/routes'
-import { getAllPostsWithFrontMatter } from '@/utils/get-articles-posts'
+import { getAllPostsWithFrontMatter } from '@/utils/get-article-posts/getAllPostsWithFrontMatter'
 
 import { NotesType } from '@/types'
 

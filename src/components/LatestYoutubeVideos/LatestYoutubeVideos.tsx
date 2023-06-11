@@ -38,8 +38,8 @@ const LatestYoutubeVideos = () => {
   const videos = data?.videos
 
   return (
-    <section className="border-none mb-10">
-      <header>
+    <section className="border-none mb-5 md:mb-10">
+      <header className="mb-5">
         <H5 as="h2">{t('youtube.sections.latest_videos')}</H5>
       </header>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 my-3 max-w-5xl">

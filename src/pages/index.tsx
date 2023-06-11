@@ -147,8 +147,6 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
           {process.env.NODE_ENV === 'production' && !mobile() && <PodcastSection />}
 
           {process.env.NODE_ENV === 'production' && <LatestYoutubeVideos />}
-
-          {/* <Dashboard /> */}
         </main>
       </Container>
     </SWRConfig>

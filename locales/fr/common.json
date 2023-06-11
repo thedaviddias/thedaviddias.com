@@ -97,14 +97,6 @@
       "search_placeholder": "Tapez un mot pour faire une recherche"
     }
   },
-  "about": {
-    "path": "/about",
-    "seo": {
-      "url": "about",
-      "title": "À propos de l'auteur",
-      "description": "Sachez-en un peu plus sur 'The David Dias'"
-    }
-  },
   "uses": {
     "path": "/uses",
     "seo": {
@@ -161,13 +153,6 @@
   },
   "rss": {
     "path": "/rss/fr/feed.xml"
-  },
-  "404": {
-    "back_home": "Retour à l'accueil",
-    "seo": {
-      "title": "Désolé 😩, cette page ne peut pas être trouvée.",
-      "description": ""
-    }
   },
   "500": {
     "title": "Wow 😱, you broke everything.",

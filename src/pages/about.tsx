@@ -22,7 +22,7 @@ type AboutProps = {
 }
 
 const About: NextPage<AboutProps> = ({ frontMatter, source }) => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation()
 
   const { title, description } = frontMatter
 

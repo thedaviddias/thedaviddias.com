@@ -3,6 +3,8 @@
   "defaultLocale": "en",
   "localeDetection": false,
   "pages": {
-    "*": ["common"]
+    "*": ["common", "about"],
+    "/404": ["404"],
+    "/about": ["about"]
   }
 }

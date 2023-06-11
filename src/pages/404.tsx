@@ -10,7 +10,7 @@ import { routes } from '@/config/routes'
 import { BaseLayout } from '@/layouts/BaseLayout'
 
 const NotFoundPage: NextPage = () => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation()
   const router = useRouter()
   const plausible = usePlausible()
 
@@ -32,7 +32,7 @@ const NotFoundPage: NextPage = () => {
         description={routes(t).error404.seo.description}
       />
       <div className="mt-10 text-center">
-        <button onClick={() => router.push('/')}>{t('404.back_home')}</button>
+        <button onClick={() => router.push('/')}>{t('404:404.back_home')}</button>
       </div>
     </BaseLayout>
   )

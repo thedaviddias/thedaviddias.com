@@ -1,0 +1,9 @@
+{
+  "404": {
+    "back_home": "Back Home",
+    "seo": {
+      "title": "Sorry 😩, this page can't be found.",
+      "description": "This page is the nightmare of any user. It's usually an ugly page that just tells you that the link doesn't exist. Fortunately, the world doesn't end yet!"
+    }
+  }
+}

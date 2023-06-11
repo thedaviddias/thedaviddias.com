@@ -11,7 +11,7 @@ type AuthorProps = {
 }
 
 export const Author: React.FC<AuthorProps> = ({ name, routes }) => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation('about')
 
   return (
     <div className="flex items-center justify-center font-sans">

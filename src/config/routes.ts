@@ -16,8 +16,8 @@ export const routes: RoutesResponse = (translate) => ({
     path: '',
     seo: extendSEO({
       options: {
-        title: translate('404.seo.title'),
-        description: translate('404.seo.description'),
+        title: translate('404:404.seo.title'),
+        description: translate('404:404.seo.description'),
       },
       translate,
     }),
@@ -74,12 +74,12 @@ export const routes: RoutesResponse = (translate) => ({
   },
   about: {
     label: translate('layout.nav.about'),
-    path: translate('about.path'),
+    path: translate('about:about.path'),
     seo: extendSEO({
       options: {
-        title: translate('about.seo.title'),
-        description: translate('about.seo.description'),
-        url: translate('about.seo.url'),
+        title: translate('about:about.seo.title'),
+        description: translate('about:about.seo.description'),
+        url: translate('about:about.seo.url'),
       },
       translate,
     }),

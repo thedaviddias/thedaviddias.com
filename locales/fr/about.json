@@ -1,0 +1,10 @@
+{
+  "about": {
+    "path": "/about",
+    "seo": {
+      "url": "about",
+      "title": "À propos de l'auteur",
+      "description": "Sachez-en un peu plus sur 'The David Dias'"
+    }
+  }
+}

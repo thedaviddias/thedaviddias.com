@@ -14,7 +14,7 @@ export const LatestPostsSection: React.FC<LatestPostsSection> = ({ articles }) =
   const { t } = useTranslation('common')
 
   return (
-    <section className="grid grid-cols-1 gap-y-10 border-none  mb-10">
+    <section className="grid grid-cols-1 gap-y-5 md:gap-y-10 border-none mb-10">
       <header>
         <H5 as="h2">{t('articles.sections.latest-posts')}</H5>
       </header>

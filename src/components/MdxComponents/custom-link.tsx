@@ -10,12 +10,7 @@ export const CustomLink: React.FC<CustomLinkProps> = ({ href, children }) => {
   if (external) {
     return (
       <span className="not-prose">
-        <a
-          href={href}
-          rel="noopener noreferrer"
-          target="_blank"
-          className="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-800 dark:hover:text-indigo-500 hover:no-underline transition-colors duration-200"
-        >
+        <a href={href} rel="noopener noreferrer" target="_blank" className="external-link">
           {children}
         </a>
       </span>

@@ -236,7 +236,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                 {title}
               </span>
               <span className="sr-only"> — </span>
-              <div className="font-body text-lg sm:text-xl text-gray-600 dark:text-gray-400 mt-3 mb-6 tracking-wide font-light">
+              <div className="font-body text-base sm:text-xl text-gray-600 dark:text-gray-300 mt-3 mb-6 tracking-wide font-light">
                 {description}
               </div>
             </H1>

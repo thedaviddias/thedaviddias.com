@@ -1,6 +1,7 @@
 import Image, { ImageProps } from 'next/image'
 
 import { CustomLink } from '../CustomLink'
+import { extractLinks } from '@/utils/extract-links'
 
 export const ResponsiveImage: React.FC<ImageProps> = ({
   src,
@@ -10,6 +11,8 @@ export const ResponsiveImage: React.FC<ImageProps> = ({
   width,
   ...rest
 }) => {
+  const updatedFigcaption = title && extractLinks(title)
+
   return (
     <div className="my-3">
       <CustomLink href={src as string} aria-label="Click to enlarge the image">
@@ -32,7 +35,7 @@ export const ResponsiveImage: React.FC<ImageProps> = ({
       </CustomLink>
       {title && (
         <figcaption className="z-10 mt-4 text-sm italic text-gray-600 text-center dark:text-gray-300">
-          <span dangerouslySetInnerHTML={{ __html: title }} />
+          <span dangerouslySetInnerHTML={{ __html: updatedFigcaption ?? title }} />
         </figcaption>
       )}
     </div>

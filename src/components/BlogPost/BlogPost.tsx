@@ -16,7 +16,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post, isCategoryPage }) => {
   const { t } = useTranslation('common')
 
   return (
-    <article className="pt-6 pb-6 border-t border-gray-200 dark:border-gray-700" key={post.slug}>
+    <article className="md:pt-6 pb-6 border-t border-gray-200 dark:border-gray-700" key={post.slug}>
       <div className="flex flex-col-reverse lg:flex-row-reverse gap-5">
         <div className="max-w-[44rem] w-full">
           {!isCategoryPage && (
@@ -26,7 +26,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post, isCategoryPage }) => {
                   href={`${t('category.path')}/${slugify(post.frontMatter.categories[0], {
                     lower: true,
                   })}`}
-                  className="block !font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x"
+                  className="block pb-2 !font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x"
                 >
                   <span className="sr-only">Category: </span>
                   {post.frontMatter.categories[0]}

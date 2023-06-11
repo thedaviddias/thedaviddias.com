@@ -35,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
   return (
     <header className="dark:text-gray-100 transition-colors duration-200 ">
       {userLocale === ('fr' || 'fr-FR' || 'fr-CA') ? <BannerLang /> : null}
-      <div className="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8 py-3 top-0 mb-5 lg:mb-12">
+      <div className="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8 py-3 top-0 lg:mb-12">
         <div className="relative flex justify-between h-16">
           <div className="flex-1 flex items-center sm:justify-between align-middle">
             {isHomepage ? (

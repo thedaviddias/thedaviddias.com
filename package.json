@@ -90,12 +90,15 @@
     "rehype-autolink-headings": "^6.1.1",
     "rehype-figure": "^1.0.1",
     "rehype-image-placeholder": "^1.0.1",
+    "rehype-parse": "^8.0.4",
     "rehype-prism-plus": "1.5.1",
     "rehype-slug": "5.1.0",
+    "rehype-stringify": "^9.0.3",
     "remark-gfm": "^3.0.1",
     "swr": "2.1.5",
     "ts-node": "^10.9.1",
     "typescript": "4.7.4",
+    "unified": "^10.1.2",
     "unist-util-visit": "^4.1.0"
   }
 }

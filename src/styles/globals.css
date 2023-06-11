@@ -75,3 +75,7 @@ input:-webkit-autofill:focus {
 .goodreads-shelf img {
   @apply rounded-lg object-cover h-36;
 }
+
+.external-link {
+  @apply text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-800 dark:hover:text-indigo-500 hover:no-underline transition-colors duration-200;
+}

@@ -67,14 +67,14 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
   const { title, description, tags, date, author } = frontMatter
   const { isFallback } = useRouter()
 
-  if (isFallback || !title) {
-    return <Loader />
-  }
-
   const { data } = useSWR<WebMentionsResponse>(
     `https://webmention.io/api/mentions.json?target=${permalink}`,
     fetcher
   )
+
+  if (isFallback || !title) {
+    return <Loader />
+  }
 
   const imageOg = `api/og?title=${title}&description=${description}&=author='David Dias'`
 

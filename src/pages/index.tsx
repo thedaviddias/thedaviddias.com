@@ -13,10 +13,8 @@ import { fetchRepos, GhProjectsProps } from '@/lib/github'
 import { Container } from '@/components/Container'
 import { CurrentlyReading } from '@/components/CurrentlyReading'
 import { CustomLink } from '@/components/CustomLink'
-import { LatestGithubSection } from '@/components/LatestGithubSection'
 import { LatestNotesSection } from '@/components/LatestNotesSection'
 import { LatestPostsSection } from '@/components/LatestPostsSection'
-import LatestYoutubeVideos from '@/components/LatestYoutubeVideos/LatestYoutubeVideos'
 import { Loader } from '@/components/Loader'
 import { ToRead } from '@/components/ToRead'
 
@@ -26,7 +24,23 @@ import { getAllPostsWithFrontMatter } from '@/utils/get-articles-posts'
 import { listSocialUrl } from '@/utils/list-social-url'
 import { readData } from '@/utils/read-data'
 
+import { LatestGithubSectionProps } from '../components/LatestGithubSection'
+
 import { ArticlesType, NotesType } from '@/types'
+
+const LatestGithubSection = dynamic<LatestGithubSectionProps>(
+  () => import('../components/LatestGithubSection').then((mod) => mod.LatestGithubSection),
+  {
+    loading: () => <Loader />,
+  }
+)
+
+const LatestYoutubeVideos = dynamic(
+  () => import('../components/LatestYoutubeVideos/LatestYoutubeVideos'),
+  {
+    loading: () => <Loader />,
+  }
+)
 
 const PodcastSection = dynamic(() => import('../components/PodcastSection'), {
   loading: () => <Loader />,

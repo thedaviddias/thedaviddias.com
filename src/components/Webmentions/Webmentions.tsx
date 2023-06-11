@@ -10,7 +10,7 @@ import { CustomLink } from '../CustomLink'
 import { H4 } from '../Headings'
 import { Paragraph } from '../Paragraph'
 
-type WebMentionsProps = {
+export type WebMentionsProps = {
   mentions?: WebMention[]
 }
 

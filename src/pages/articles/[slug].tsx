@@ -1,5 +1,6 @@
 import matter from 'gray-matter'
 import { GetStaticPaths, GetStaticPathsResult, GetStaticProps, NextPage } from 'next'
+import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
@@ -14,7 +15,7 @@ import remarkGfm from 'remark-gfm'
 import slugify from 'slugify'
 import useSWR from 'swr'
 
-import { AdjacentPosts } from '@/components/AdjacentPosts'
+import { AdjacentPostsProps } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
 import { Comments } from '@/components/Comments'
 import { Container } from '@/components/Container'
@@ -29,7 +30,7 @@ import { RelatedPosts } from '@/components/RelatedPosts'
 import { ScrollTop } from '@/components/ScrollTop'
 import { TableOfContents } from '@/components/TableOfContents'
 import { Tags } from '@/components/Tags'
-import { Webmentions } from '@/components/Webmentions'
+import { WebMentionsProps } from '@/components/Webmentions'
 
 import { routes } from '@/config/routes'
 import { CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH } from '@/constants'
@@ -45,6 +46,20 @@ import {
 } from '@/utils/get-articles-posts'
 import { rehypeExtractHeadings } from '@/utils/rehype-extract-headings'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
+
+const DynamicAdjacentPosts = dynamic<AdjacentPostsProps>(
+  () => import('../../components/AdjacentPosts').then((mod) => mod.AdjacentPosts),
+  {
+    loading: () => <Loader />,
+  }
+)
+
+const DynamicWebmentions = dynamic<WebMentionsProps>(
+  () => import('../../components/Webmentions').then((mod) => mod.Webmentions),
+  {
+    loading: () => <Loader />,
+  }
+)
 
 export type BlogPostProps = {
   frontMatter: {
@@ -255,9 +270,9 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                 <section>
                   <h2 className="sr-only">Complementary</h2>
 
-                  {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
+                  {adjacentPosts && <DynamicAdjacentPosts posts={adjacentPosts} />}
 
-                  <Webmentions mentions={data?.links} />
+                  <DynamicWebmentions mentions={data?.links} />
 
                   <Comments />
                 </section>

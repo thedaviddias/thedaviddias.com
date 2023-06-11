@@ -12,7 +12,7 @@ export type PreviousNext = {
   next: AdjacentPosts | null
 }
 
-type AdjacentPostsProps = {
+export type AdjacentPostsProps = {
   posts: PreviousNext
 }
 

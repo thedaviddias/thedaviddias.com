@@ -24,9 +24,11 @@ import { getAllPostsWithFrontMatter } from '@/utils/get-articles-posts'
 import { listSocialUrl } from '@/utils/list-social-url'
 import { readData } from '@/utils/read-data'
 
+import { LatestGithubSectionProps } from '../components/LatestGithubSection'
+
 import { ArticlesType, NotesType } from '@/types'
 
-const LatestGithubSection = dynamic(
+const LatestGithubSection = dynamic<LatestGithubSectionProps>(
   () => import('../components/LatestGithubSection').then((mod) => mod.LatestGithubSection),
   {
     loading: () => <Loader />,

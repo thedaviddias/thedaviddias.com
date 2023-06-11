@@ -15,6 +15,7 @@ import remarkGfm from 'remark-gfm'
 import slugify from 'slugify'
 import useSWR from 'swr'
 
+import { AdjacentPostsProps } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
 import { Comments } from '@/components/Comments'
 import { Container } from '@/components/Container'
@@ -29,6 +30,7 @@ import { RelatedPosts } from '@/components/RelatedPosts'
 import { ScrollTop } from '@/components/ScrollTop'
 import { TableOfContents } from '@/components/TableOfContents'
 import { Tags } from '@/components/Tags'
+import { WebMentionsProps } from '@/components/Webmentions'
 
 import { routes } from '@/config/routes'
 import { CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH } from '@/constants'
@@ -45,14 +47,14 @@ import {
 import { rehypeExtractHeadings } from '@/utils/rehype-extract-headings'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
 
-const DynamicAdjacentPosts = dynamic(
+const DynamicAdjacentPosts = dynamic<AdjacentPostsProps>(
   () => import('../../components/AdjacentPosts').then((mod) => mod.AdjacentPosts),
   {
     loading: () => <Loader />,
   }
 )
 
-const DynamicWebmentions = dynamic(
+const DynamicWebmentions = dynamic<WebMentionsProps>(
   () => import('../../components/Webmentions').then((mod) => mod.Webmentions),
   {
     loading: () => <Loader />,

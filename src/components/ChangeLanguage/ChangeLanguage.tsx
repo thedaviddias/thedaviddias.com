@@ -7,10 +7,15 @@ import FrFlag from '../../../public/images/svg/fr-flag.svg'
 import UsFlag from '../../../public/images/svg/us-flag.svg'
 
 import i18nConfig from '~/i18n.json'
+import { FC } from 'react'
 
 const { locales } = i18nConfig
 
-export const ChangeLanguage = () => {
+type ChangeLanguageProps = {
+  hasTranslation?: boolean
+}
+
+export const ChangeLanguage: FC<ChangeLanguageProps> = ({ hasTranslation = true }) => {
   const { t, lang } = useTranslation('common')
   const router = useRouter()
 
@@ -27,7 +32,7 @@ export const ChangeLanguage = () => {
         key={lng}
         aria-label={switchLabel}
         className="w-8 h-8 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300  transition-all"
-        href={router.asPath}
+        href={hasTranslation ? router.asPath : '/'}
         locale={lng}
       >
         {lng === 'en' ? (

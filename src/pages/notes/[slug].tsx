@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic'
 import matter from 'gray-matter'
 import { GetStaticPaths, GetStaticPathsResult, GetStaticProps, NextPage } from 'next'
 import { useRouter } from 'next/router'
@@ -11,7 +12,6 @@ import rehypePrismPlus from 'rehype-prism-plus'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 
-import { AdjacentPosts } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
 import { Container } from '@/components/Container'
 import { DatePost } from '@/components/DatePost'
@@ -25,11 +25,12 @@ import { routes } from '@/config/routes'
 import { CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH } from '@/constants'
 import { getAdjacentPosts, getAllPosts, getPost, getPostBySlug } from '@/utils/get-articles-posts'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
-import { Comments } from '@/components/Comments'
-import { Webmentions } from '@/components/Webmentions'
+
 import fetcher from '@/utils/fetcher'
 import useSWR from 'swr'
 import { WebMention } from '../articles/[slug]'
+import { AdjacentPostsProps } from '../../components/AdjacentPosts'
+import { WebMentionsProps } from '../../components/Webmentions'
 
 export type BlogPostProps = {
   frontMatter: {
@@ -60,6 +61,27 @@ type NotePageProps = BlogPostProps & {
 type WebMentionsResponse = {
   links: WebMention[]
 }
+
+const Comments = dynamic<object>(
+  () => import('../../components/Comments').then((mod) => mod.Comments),
+  {
+    loading: () => <Loader />,
+  }
+)
+
+const AdjacentPosts = dynamic<AdjacentPostsProps>(
+  () => import('../../components/AdjacentPosts').then((mod) => mod.AdjacentPosts),
+  {
+    loading: () => <Loader />,
+  }
+)
+
+const Webmentions = dynamic<WebMentionsProps>(
+  () => import('../../components/Webmentions').then((mod) => mod.Webmentions),
+  {
+    loading: () => <Loader />,
+  }
+)
 
 const contentType = 'notes'
 

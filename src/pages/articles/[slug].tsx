@@ -17,7 +17,6 @@ import useSWR from 'swr'
 
 import { AdjacentPostsProps } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
-import { Comments } from '@/components/Comments'
 import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
 import { DatePost } from '@/components/DatePost'
@@ -47,14 +46,21 @@ import {
 import { rehypeExtractHeadings } from '@/utils/rehype-extract-headings'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
 
-const DynamicAdjacentPosts = dynamic<AdjacentPostsProps>(
+const Comments = dynamic<object>(
+  () => import('../../components/Comments').then((mod) => mod.Comments),
+  {
+    loading: () => <Loader />,
+  }
+)
+
+const AdjacentPosts = dynamic<AdjacentPostsProps>(
   () => import('../../components/AdjacentPosts').then((mod) => mod.AdjacentPosts),
   {
     loading: () => <Loader />,
   }
 )
 
-const DynamicWebmentions = dynamic<WebMentionsProps>(
+const Webmentions = dynamic<WebMentionsProps>(
   () => import('../../components/Webmentions').then((mod) => mod.Webmentions),
   {
     loading: () => <Loader />,
@@ -270,9 +276,9 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                 <section>
                   <h2 className="sr-only">Complementary</h2>
 
-                  {adjacentPosts && <DynamicAdjacentPosts posts={adjacentPosts} />}
+                  {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
 
-                  <DynamicWebmentions mentions={data?.links} />
+                  <Webmentions mentions={data?.links} />
 
                   <Comments />
                 </section>

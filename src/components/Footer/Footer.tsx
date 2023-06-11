@@ -71,7 +71,7 @@ export const Footer = () => {
   if (!mounted) return null
 
   return (
-    <div className="mt-5 sm:mt-8">
+    <div className="mt-auto pt-5 sm:pt-8">
       <div className="h-36 max-w-5xl mx-auto relative">
         <Image
           className="object-cover max-w-xl mx-auto"

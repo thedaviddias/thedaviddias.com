@@ -43,16 +43,16 @@ const Til = ({ notes }: TilProps) => {
         ]}
       />
       <main className="divide-slate-200 sm:space-y-16 lg:max-w-none">
-        <div className="pt-10 border-none grid grid-cols-1 md:grid-cols-4 md:gap-4 md:items-end">
+        <section className="pt-10 border-none grid grid-cols-1 md:gap-4 md:items-end">
           <PageHeader
             title={routes(t).notes.h1}
             description={routes(t).notes.seo.description}
-            className=" col-span-3"
+            className="col-span-4"
           />
-          <div className="flex md:justify-end">
+          <div className="flex">
             <Search setSearchValue={setSearchValue} />
           </div>
-        </div>
+        </section>
 
         <section className="border-none">
           <header>

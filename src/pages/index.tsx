@@ -123,16 +123,24 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
             </div>
           </section>
 
-          <LatestNotesSection notes={notes} />
+          <LatestPostsSection articles={articles} />
 
-          <div>
+          <section className="mb-10">
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 max-w-5xl">
               <CurrentlyReading limit={mobile() ? 2 : 3} />
               <ToRead limit={mobile() ? 2 : 3} />
             </div>
-          </div>
+            <footer className="text-right">
+              <CustomLink
+                href="https://www.goodreads.com/user/show/60055286-david-dias"
+                className="dark:text-white"
+              >
+                {t('books.sections.viewAll')}
+              </CustomLink>
+            </footer>
+          </section>
 
-          <LatestPostsSection articles={articles} />
+          <LatestNotesSection notes={notes} />
 
           <LatestGithubSection projects={ghProjects} />
 
@@ -141,13 +149,6 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
           {process.env.NODE_ENV === 'production' && <LatestYoutubeVideos />}
 
           {/* <Dashboard /> */}
-          {/*
-          <iframe
-            src="https://thedaviddias.substack.com/embed"
-            width="480"
-            height="320"
-            title="Substack newsletter submit form"
-          ></iframe> */}
         </main>
       </Container>
     </SWRConfig>

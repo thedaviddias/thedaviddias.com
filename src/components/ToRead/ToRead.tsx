@@ -7,7 +7,7 @@ export const ToRead = ({ limit = 3 }) => {
   const { t } = useTranslation('common')
 
   return (
-    <section className="grid grid-cols-1 gap-y-5 border-none mb-10">
+    <section className="grid grid-cols-1 gap-y-5 border-none">
       <header>
         <H5 as="h2">{t('books.next')}</H5>
       </header>

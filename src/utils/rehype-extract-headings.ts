@@ -1,6 +1,6 @@
 import { hasProperty } from 'hast-util-has-property'
 import { headingRank } from 'hast-util-heading-rank'
-import { toString } from 'hast-util-to-string'
+import { Element, toString } from 'hast-util-to-string'
 import { Parent, visit } from 'unist-util-visit'
 
 type ExtractHeadingsConfig = {
@@ -15,12 +15,14 @@ type ExtractHeadingsConfig = {
  */
 export const rehypeExtractHeadings = ({ rank = 2, headings }: ExtractHeadingsConfig) => {
   return (tree: Parent) => {
-    visit(tree, 'element', (node: any) => {
+    visit(tree, 'element', (node: Element) => {
       if (headingRank(node) === rank && node.properties && hasProperty(node, 'id')) {
-        headings.push({
-          title: toString(node),
-          id: node.properties.id.toString(),
-        })
+        if (node.properties.id !== null && node.properties.id !== undefined) {
+          headings.push({
+            title: toString(node),
+            id: node.properties.id.toString(),
+          })
+        }
       }
     })
   }

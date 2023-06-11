@@ -26,7 +26,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post, isCategoryPage }) => {
                   href={`${t('category.path')}/${slugify(post.frontMatter.categories[0], {
                     lower: true,
                   })}`}
-                  className="block pb-2 !font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x"
+                  className="inline-block pb-2 !font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x"
                 >
                   <span className="sr-only">Category: </span>
                   {post.frontMatter.categories[0]}
@@ -36,7 +36,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post, isCategoryPage }) => {
           )}
           <H2 as="h3">
             <CustomLink
-              className="dark:!text-gray-100 block tracking-tight"
+              className="dark:!text-gray-100 inline-block tracking-tight"
               href={`/articles/${post.slug}`}
             >
               {post.frontMatter.title}

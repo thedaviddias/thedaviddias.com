@@ -224,7 +224,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                   <CustomLink
                     key={category}
                     href={`${t('category.path')}/${slugify(category, { lower: true })}`}
-                    className="mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x !font-semibold transition-colors duration-200"
+                    className="mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x md:text-lg !font-semibold transition-colors duration-200"
                   >
                     {category}
                   </CustomLink>
@@ -236,7 +236,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                 {title}
               </span>
               <span className="sr-only"> — </span>
-              <div className="font-body text-base sm:text-xl text-gray-600 dark:text-gray-300 mt-3 mb-6 tracking-wide font-light">
+              <div className="font-body text-base sm:text-lg text-gray-600 dark:text-gray-300 mt-3 mb-6 tracking-wide font-light">
                 {description}
               </div>
             </H1>

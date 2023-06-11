@@ -91,7 +91,7 @@
     },
     "h1": "Mes Notes",
     "sections": {
-      "empty": "Pas de publications disponibles pour le moment.",
+      "empty": "Pas de notes disponibles pour le moment.",
       "latest-notes": "Dernières Notes",
       "search": "Recherchez par mot clé",
       "search_placeholder": "Tapez un mot pour faire une recherche"
@@ -257,7 +257,7 @@
     "currently": "En train de lire",
     "next": "À lire prochainement",
     "sections": {
-      "viewAll": "→ Voir mon profil"
+      "viewAll": "→ Voir mon profil sur Goodreads"
     }
   },
   "youtube": {

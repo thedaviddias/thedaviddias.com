@@ -14,6 +14,7 @@ import { getPostBySlug } from '@/utils/get-articles-posts'
 import { readData } from '@/utils/read-data'
 
 import { UsesType } from '@/types'
+import Image from 'next/image'
 
 type UsesProps = {
   categories: string[]
@@ -50,6 +51,19 @@ const Uses: NextPage<UsesProps> = ({ categories, tools, frontMatter, source }) =
       className="pt-10 border-none"
     >
       <PageHeader title={titlePage} description={descriptionPage} />
+
+      <Image
+        className="inline-block h-auto max-w-xl"
+        src="/images/uses/desk-david-dias.jpg"
+        width={960}
+        height={540}
+        alt="Photo of my desk setup with pink and warm yellow Philips Hue lights. My white desk is composed with 2 screens with a colorful screen background. Two white speakers in each side of the desk. A gray keyboard and a black mouse on a black pad. A microphone on a black arm attached to the right side of the desk."
+        priority={true}
+        style={{
+          maxWidth: '100%',
+          height: 'auto',
+        }}
+      />
 
       <MDXRemote {...source} components={MDXComponents} lazy />
 

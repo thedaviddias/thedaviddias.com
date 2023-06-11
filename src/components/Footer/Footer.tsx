@@ -12,7 +12,7 @@ const FooterMenuLinks = () => {
   return (
     <div>
       <h3 className="small-title">{t('layout.footer.general')}</h3>
-      <ul className="mt-3 space-y-3">
+      <ul className="mt-3 space-y-1">
         {FOOTER_MENU_LINKS(t).map(({ path, label }) => (
           <li key={label}>
             <CustomLink href={path} className="dark:!text-white">
@@ -31,7 +31,7 @@ const FooterExtraLinks = () => {
   return (
     <div>
       <h3 className="small-title">{t('layout.footer.extra')}</h3>
-      <ul className="mt-3 space-y-3">
+      <ul className="mt-3 space-y-1">
         {EXTRA_LINKS(t).map(({ path, label, locale }) => (
           <li key={label}>
             <CustomLink href={path} className="dark:!text-white" locale={locale}>
@@ -50,7 +50,7 @@ const FooterSocialLinks = () => {
   return (
     <div>
       <h3 className="small-title">{t('layout.footer.social')}</h3>
-      <ul className="mt-3 space-y-3">
+      <ul className="mt-3 space-y-1">
         {SOCIAL_LINKS.map(({ label, link }) => (
           <li key={label}>
             <CustomLink href={link} className="dark:!text-white">
@@ -79,6 +79,7 @@ export const Footer = () => {
           alt=""
           aria-hidden="true"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <footer

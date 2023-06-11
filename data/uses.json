@@ -1,12 +1,12 @@
 [
   {
-    "title": "Alfred",
-    "url": "https://www.alfredapp.com/",
-    "description_en": "This is the number one software I installed on any new Mac device. (using since 2015)",
-    "description_fr": "C'est le logiciel numéro un que j'ai installé sur tout nouvel appareil Mac. (utilisé depuis 2015)",
+    "title": "Raycast",
+    "url": "https://www.raycast.com/",
+    "description_en": "Alfred was the number one software I installed on any new Mac device (since 2015). But I decided to switch to Raycast and haven't look back.",
+    "description_fr": "Alfred était le logiciel numéro un que j'ai installé sur tout nouvel appareil Mac (depuis 2015). Mais j'ai décidé de passer à Raycast et je n'ai pas regardé en arrière.",
     "category_en": "Essentials",
     "category_fr": "Essentiels",
-    "image": "/images/uses/alfred.png"
+    "image": "/images/uses/raycast.png"
   },
   {
     "title": "CleanShot X",
@@ -99,12 +99,12 @@
     "category_fr": "Audio / vidéo"
   },
   {
-    "title": "Notion",
+    "title": "Obsidian",
     "category_en": "Productivity",
     "category_fr": "Productivité",
-    "url": "https://www.notion.so/",
-    "description_en": "Notion is a beautiful peace of software. I use it daily to keep track of courses I'm studying, goals for the year and projects I want to work on.",
-    "image": "/images/uses/notion.png",
-    "description_fr": "Notion est un superbe logiciel. Je l'utilise quotidiennement pour garder une trace des cours que j'étudie, des objectifs pour l'année et des projets sur lesquels je veux travailler."
+    "url": "https://obsidian.md/",
+    "image": "/images/uses/obsidian.png",
+    "description_en": "Obsidian is a beautiful peace of software. I use it daily to keep track of courses I'm studying, goals for the year and projects I want to work on.",
+    "description_fr": "Obsidian est un superbe logiciel. Je l'utilise quotidiennement pour garder une trace des cours que j'étudie, des objectifs pour l'année et des projets sur lesquels je veux travailler."
   }
 ]

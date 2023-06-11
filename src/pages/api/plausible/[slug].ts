@@ -40,7 +40,7 @@ const viewsHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     return res.status(200).json({
       requestedSlug: slug,
-      date: now.toUTCString(),
+      date: now.toISOString(),
       views: data?.results?.visitors?.value,
     })
   } catch (error) {

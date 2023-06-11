@@ -25,6 +25,11 @@ import { routes } from '@/config/routes'
 import { CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH } from '@/constants'
 import { getAdjacentPosts, getAllPosts, getPost, getPostBySlug } from '@/utils/get-articles-posts'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
+import { Comments } from '@/components/Comments'
+import { Webmentions } from '@/components/Webmentions'
+import fetcher from '@/utils/fetcher'
+import useSWR from 'swr'
+import { WebMention } from '../articles/[slug]'
 
 export type BlogPostProps = {
   frontMatter: {
@@ -52,6 +57,10 @@ type NotePageProps = BlogPostProps & {
   adjacentPosts: any
 }
 
+type WebMentionsResponse = {
+  links: WebMention[]
+}
+
 const contentType = 'notes'
 
 const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adjacentPosts }) => {
@@ -61,6 +70,11 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
   if (isFallback || !title) {
     return <Loader />
   }
+
+  const { data } = useSWR<WebMentionsResponse>(
+    `https://webmention.io/api/mentions.json?target=${permalink}`,
+    fetcher
+  )
 
   const imageOg = `api/og?title=${title}&description=${description}&=author='David Dias'`
 
@@ -128,6 +142,10 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
               {/* {permalink && <Share title={title} tags={tags && tags} permalink={permalink} />} */}
 
               {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
+
+              <Webmentions mentions={data?.links} />
+
+              <Comments />
             </div>
           </div>
         </article>

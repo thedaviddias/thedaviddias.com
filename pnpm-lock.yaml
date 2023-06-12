@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 dependencies:
   '@giscus/react':
     specifier: ^2.2.8
@@ -179,8 +175,8 @@ devDependencies:
     specifier: 10.0.0
     version: 10.0.0(eslint@8.42.0)
   hast-util-has-property:
-    specifier: ^2.0.0
-    version: 2.0.0
+    specifier: ^2.0.1
+    version: 2.0.1
   hast-util-heading-rank:
     specifier: ^2.1.0
     version: 2.1.0
@@ -5449,8 +5445,8 @@ packages:
       web-namespaces: 2.0.1
     dev: true
 
-  /hast-util-has-property@2.0.0:
-    resolution: {integrity: sha512-4Qf++8o5v14us4Muv3HRj+Er6wTNGA/N9uCaZMty4JWvyFKLdhULrv4KE1b65AthsSO9TXSZnjuxS8ecIyhb0w==}
+  /hast-util-has-property@2.0.1:
+    resolution: {integrity: sha512-X2+RwZIMTMKpXUzlotatPzWj8bspCymtXH3cfG3iQKV+wPF53Vgaqxi/eLqGck0wKq1kS9nvoB1wchbCPEL8sg==}
     dev: true
 
   /hast-util-heading-rank@2.1.0:
@@ -8666,7 +8662,7 @@ packages:
     dependencies:
       '@types/hast': 2.3.4
       extend: 3.0.2
-      hast-util-has-property: 2.0.0
+      hast-util-has-property: 2.0.1
       hast-util-heading-rank: 2.1.0
       hast-util-is-element: 2.1.2
       unified: 10.1.2
@@ -8713,7 +8709,7 @@ packages:
     dependencies:
       '@types/hast': 2.3.4
       github-slugger: 2.0.0
-      hast-util-has-property: 2.0.0
+      hast-util-has-property: 2.0.1
       hast-util-heading-rank: 2.1.0
       hast-util-to-string: 2.0.0
       unified: 10.1.2
@@ -10367,3 +10363,7 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false

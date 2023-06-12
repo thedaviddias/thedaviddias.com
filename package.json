@@ -78,7 +78,7 @@
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "10.0.0",
-    "hast-util-has-property": "^2.0.0",
+    "hast-util-has-property": "^2.0.1",
     "hast-util-heading-rank": "^2.1.0",
     "hast-util-to-string": "^2.0.0",
     "husky": "8.0.3",

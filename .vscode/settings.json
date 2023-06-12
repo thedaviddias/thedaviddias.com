@@ -36,5 +36,7 @@
     "name": "draft",
     "type": "boolean"
   },
-  "frontMatter.content.supportedFileTypes": ["mdx"]
+  "frontMatter.content.supportedFileTypes": ["mdx"],
+  "jest.jestCommandLine": "npm run test --",
+  "jest.rootPath": "/Users/thedaviddias/Projects/thedaviddias-blog"
 }

@@ -1,5 +1,11 @@
 import { Feed } from 'feed'
 import fs from 'fs'
+import { MDXRemote } from 'next-mdx-remote'
+import { serialize } from 'next-mdx-remote/serialize'
+import { renderToStaticMarkup } from 'react-dom/server'
+import rehypeImagePlaceholder from 'rehype-image-placeholder'
+
+import { MDXComponents } from '@/components/MdxComponents'
 
 import { BASE_URL } from '@/constants'
 import { getAllPostsWithFrontMatter } from '@/utils/get-article-posts/getAllPostsWithFrontMatter'
@@ -45,18 +51,30 @@ export default async function generateRssFeed() {
   })
 
   // Adding blogs to the rss feed
-  postsEn.forEach((post) => {
+  for (const post of postsEn) {
     const url = `${siteURL}${post.permalink}`
+
+    const { content } = post
+
+    const source = await serialize(content, {
+      mdxOptions: {
+        rehypePlugins: [[rehypeImagePlaceholder, { dir: 'public/' }]],
+      },
+    })
+
+    const contentHtml = renderToStaticMarkup(<MDXRemote {...source} components={MDXComponents} />)
+
     feedEn.addItem({
       title: post.frontMatter.title,
       id: url,
       link: url,
       description: post.frontMatter.description,
+      content: contentHtml,
       author: [author],
       contributor: [author],
       date: new Date(post.frontMatter.date),
     })
-  })
+  }
 
   // generating the xml and json for rss
   fs.mkdirSync('./public/rss', { recursive: true })
@@ -82,18 +100,30 @@ export default async function generateRssFeed() {
   })
 
   // Adding blogs to the rss feed
-  postsFr.forEach((post) => {
+  for (const post of postsFr) {
     const url = `${siteURL}${post.permalink}`
+
+    const { content } = post
+
+    const source = await serialize(content, {
+      mdxOptions: {
+        rehypePlugins: [[rehypeImagePlaceholder, { dir: 'public/' }]],
+      },
+    })
+
+    const contentHtml = renderToStaticMarkup(<MDXRemote {...source} components={MDXComponents} />)
+
     feedFr.addItem({
       title: post.frontMatter.title,
       id: url,
       link: url,
       description: post.frontMatter.description,
+      content: contentHtml,
       author: [author],
       contributor: [author],
       date: new Date(post.frontMatter.date),
     })
-  })
+  }
 
   fs.mkdirSync('./public', { recursive: true })
   fs.writeFileSync('./public/rss/fr/feed.xml', feedFr.rss2())

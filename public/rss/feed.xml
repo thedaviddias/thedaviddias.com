@@ -4,16 +4,17 @@
         <title>The David Dias | Front-End Developer, podcaster &amp; content creator</title>
         <link>https://thedaviddias.dev</link>
         <description>Hey, I'm David Dias! Front-End Developer based in Toronto/Canada. I love talking about code, technology, expatriation and life.</description>
-        <lastBuildDate>Mon, 12 Jun 2023 23:13:10 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 12 Jun 2023 23:48:59 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
-        <language>en</language>
+        <language>en-US</language>
         <image>
             <title>The David Dias | Front-End Developer, podcaster &amp; content creator</title>
             <url>https://thedaviddias.dev/favicons/android-chrome-144x144.png</url>
             <link>https://thedaviddias.dev</link>
         </image>
         <copyright>All rights reserved 2023, David Dias</copyright>
+        <category>Technology</category>
         <item>
             <title><![CDATA[Stop using the "<hr/>" tag to design a horizontal line!]]></title>
             <link>https://thedaviddias.dev/notes/stop-using-thematic-break-to-design-horizontal-line</link>
@@ -36,7 +37,7 @@ The real purpose of the <code class="before:!content-[&#x27;&#x27;] after:!conte
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">You generally don&#x27;t want to have a single empty <code class="before:!content-[&#x27;&#x27;] after:!content-[&#x27;&#x27;] dark:text-white bg-slate-100 dark:bg-slate-700 rounded-sm border-[1px] border-gray-400 dark:border-gray-400 px-1 py-0.5">&lt;span&gt;</code> or <code class="before:!content-[&#x27;&#x27;] after:!content-[&#x27;&#x27;] dark:text-white bg-slate-100 dark:bg-slate-700 rounded-sm border-[1px] border-gray-400 dark:border-gray-400 px-1 py-0.5">&lt;div&gt;</code> element just to style it as a horizontal line. Often times, you can just use a bottom border on the element above it.</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">In terms of accessibility, using <code class="before:!content-[&#x27;&#x27;] after:!content-[&#x27;&#x27;] dark:text-white bg-slate-100 dark:bg-slate-700 rounded-sm border-[1px] border-gray-400 dark:border-gray-400 px-1 py-0.5">&lt;hr&gt;</code> as a design element can confuse screen reader users, as it indicates a &quot;thematic break&quot;.</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Semantics are important, not only for accessibility but also for SEO. So, please, stop using the <code class="before:!content-[&#x27;&#x27;] after:!content-[&#x27;&#x27;] dark:text-white bg-slate-100 dark:bg-slate-700 rounded-sm border-[1px] border-gray-400 dark:border-gray-400 px-1 py-0.5">&lt;hr&gt;</code> tag to design a horizontal line!</p>]]></content:encoded>
-            <author>hello@thedaviddias.dev (David Dias)</author>
+            <author>thedaviddias@gmail.com (David Dias)</author>
         </item>
         <item>
             <title><![CDATA[How to fix "set-output" when reading nvmrc from the GitHub Actions?]]></title>
@@ -83,7 +84,7 @@ jobs:
           node-version: &#x27;${{ steps.nvmrc.outputs.NODE_VERSION }}&#x27;
 </code></pre></div>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">And &quot;voilà&quot;, the warning should have disappeared and you should see the number of the version right after <code class="before:!content-[&#x27;&#x27;] after:!content-[&#x27;&#x27;] dark:text-white bg-slate-100 dark:bg-slate-700 rounded-sm border-[1px] border-gray-400 dark:border-gray-400 px-1 py-0.5">Use Node.js XXXX</code> in your workflow.</p>]]></content:encoded>
-            <author>hello@thedaviddias.dev (David Dias)</author>
+            <author>thedaviddias@gmail.com (David Dias)</author>
         </item>
         <item>
             <title><![CDATA[How to fix "postbuild" and "prebuild" not working with pnpm?]]></title>
@@ -98,7 +99,7 @@ jobs:
 <div class="relative"><pre><code class="before:!content-[&#x27;&#x27;] after:!content-[&#x27;&#x27;] dark:text-white bg-slate-100 dark:bg-slate-700 rounded-sm border-[1px] border-gray-400 dark:border-gray-400 px-1 py-0.5">enable-pre-post-scripts=true
 </code></pre></div>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Now I can use pre/posts scripts and <code class="before:!content-[&#x27;&#x27;] after:!content-[&#x27;&#x27;] dark:text-white bg-slate-100 dark:bg-slate-700 rounded-sm border-[1px] border-gray-400 dark:border-gray-400 px-1 py-0.5">pnpm</code>. I hope this could save you some time!</p>]]></content:encoded>
-            <author>hello@thedaviddias.dev (David Dias)</author>
+            <author>thedaviddias@gmail.com (David Dias)</author>
         </item>
         <item>
             <title><![CDATA[Finally received my Steam Deck confirmation email!]]></title>
@@ -169,7 +170,7 @@ jobs:
 c51.398-130.047,184.869-203.22,317.483-183.603L295.204,180.593z"></path><path style="fill:#F4F4F4" d="M512,253L295.204,36.204v217.818C159.946,249.655,34.992,339.262,0,475.794
 c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg></div></div></div></a></div><div></div></div></div>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Some more days to wait and I hope to get this new amazing piece of tech (it&#x27;s a computer) in my own hands! Maybe I can find a <span class="not-prose"><a href="https://dbrand.com/shop/steam-deck-skins" rel="noopener noreferrer" target="_blank" class="external-link">nice skin on Dbrand</a></span> in the meantime 😜?!</p>]]></content:encoded>
-            <author>hello@thedaviddias.dev (David Dias)</author>
+            <author>thedaviddias@gmail.com (David Dias)</author>
         </item>
         <item>
             <title><![CDATA[Beyond User Testing: Leveraging Frontend Experience]]></title>
@@ -228,7 +229,8 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
 <li class="nested-list text-lg">&quot;<span class="not-prose"><a href="https://www.usertesting.com/blog/benefits-of-combining-user-testing-and-ux-design/" rel="noopener noreferrer" target="_blank" class="external-link">The Benefits of Combining User Testing and UX Design</a></span>&quot; by UserTesting</li>
 <li class="nested-list text-lg">&quot;<span class="not-prose"><a href="https://echobind.com/blog/why-user-experience-ux-is-vital-for-front-end-developers/" rel="noopener noreferrer" target="_blank" class="external-link">Why User Experience (UX) is Vital for Front-End Developers</a></span>&quot; by Echobind</li>
 </ul>]]></content:encoded>
-            <author>hello@thedaviddias.dev (David Dias)</author>
+            <author>thedaviddias@gmail.com (David Dias)</author>
+            <enclosure url="https://thedaviddias.dev/images/articles/beyond-user-testing-leveraging-frontend-experience/table-computers.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[How Front-End Developers, Web and UX/UI Designers could better collaborate together?]]></title>
@@ -309,7 +311,8 @@ We have more to share than just our “title”, we have more to give than just 
 </ul>
 <hr/>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">What about your experience? How do you like to work with others? What would you like to see happening more often within your team?</p>]]></content:encoded>
-            <author>hello@thedaviddias.dev (David Dias)</author>
+            <author>thedaviddias@gmail.com (David Dias)</author>
+            <enclosure url="https://thedaviddias.dev/images/articles/how-front-end-developers-web-and-ux-ui-designers-could-better-collaborate-together/featured.jpeg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[9 Best Practices & UX Improvements for the two-factor authentication (2FA)]]></title>
@@ -399,7 +402,8 @@ LIST OF CODES
 </ol>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Thanks for reading, I hope these suggestions would help you to have a better UX and improve your 2FA implementation.</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Feel free to ask me anything in the comments below!</p>]]></content:encoded>
-            <author>hello@thedaviddias.dev (David Dias)</author>
+            <author>thedaviddias@gmail.com (David Dias)</author>
+            <enclosure url="https://thedaviddias.dev/images/articles/9-best-practices-ux-for-two-factor-authentification/featured.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[How to deploy your Next.js app on Netlify using Github Actions]]></title>
@@ -621,7 +625,8 @@ jobs:
 <li class="nested-list text-lg"><span class="not-prose"><a href="https://www.netlify.com/articles/2020/10/27/preview-mode-for-next.js-now-fully-supported-on-netlify/" rel="noopener noreferrer" target="_blank" class="external-link">Preview Mode for Next.js now fully supported on Netlify</a></span> by Cassidy Williams</li>
 <li class="nested-list text-lg"><span class="not-prose"><a href="https://www.netlify.com/articles/2020/12/07/announcing-one-click-install-next.js-build-plugin-on-netlify/" rel="noopener noreferrer" target="_blank" class="external-link">Announcing one-click install Next.js Build Plugin on Netlify</a></span> by Cassidy Williams</li>
 </ul>]]></content:encoded>
-            <author>hello@thedaviddias.dev (David Dias)</author>
+            <author>thedaviddias@gmail.com (David Dias)</author>
+            <enclosure url="https://thedaviddias.dev/images/articles/how-to-deploy-your-nextjs-app-on-netlify-using-github-actions/featured.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[You have something in YOU that the world needs]]></title>
@@ -658,7 +663,8 @@ We can battle a whole life and try to change our pasts, but you know and I know 
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Right now, maybe a friend is waiting to receive a message from you. A signal to make him feel he is not alone. Have someone that can reassure him that his/her past will not define his/her tomorrow.</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">…What are you really waiting for? 📲</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 "><em>Disclaimer: I usually write articles about code, immigration, and tech, but a lot of my friends are lately facing the same issues, and even I try my best to help them, it’s also up to them to take action and choose the life they really want. This article is a way to hopefully help other people that may be facing the same issues in their lives. Let me a comment if you find this article relevant for your life!</em></p>]]></content:encoded>
-            <author>hello@thedaviddias.dev (David Dias)</author>
+            <author>thedaviddias@gmail.com (David Dias)</author>
+            <enclosure url="https://thedaviddias.dev/images/articles/you-have-something-in-you-the-world-needs/featured.jpeg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[The Front-End Performance Checklist speeds up your web developments]]></title>
@@ -1366,7 +1372,8 @@ We can battle a whole life and try to change our pasts, but you know and I know 
 <li class="nested-list text-lg">🇯🇵 Japanese: <span class="not-prose"><a href="https://github.com/GameWith/Front-End-Performance-Checklist" rel="noopener noreferrer" target="_blank" class="external-link">GameWith/Front-End-Performance-Checklist</a></span></li>
 <li class="nested-list text-lg">🇵🇱 Polish: <span class="not-prose"><a href="https://github.com/mbiesiad/Front-End-Performance-Checklist" rel="noopener noreferrer" target="_blank" class="external-link">mbiesiad/Front-End-Performance-Checklist</a></span></li>
 </ul>]]></content:encoded>
-            <author>hello@thedaviddias.dev (David Dias)</author>
+            <author>thedaviddias@gmail.com (David Dias)</author>
+            <enclosure url="https://thedaviddias.dev/images/articles/front-end-performance-checklist-speeds-up-web-developments/featured.jpeg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[What I learned after presenting my side project in Europe]]></title>
@@ -1735,7 +1742,8 @@ We can start with something really small, and that small thing can give us the o
 <li class="nested-list text-lg">Follow me on GitHub: https://github.com/thedaviddias</li>
 <li class="nested-list text-lg">Follow me on Twitter: https://twitter.com/thedaviddias</li>
 </ul>]]></content:encoded>
-            <author>hello@thedaviddias.dev (David Dias)</author>
+            <author>thedaviddias@gmail.com (David Dias)</author>
+            <enclosure url="https://thedaviddias.dev/images/articles/learned-presenting-side-project-europe/front-end-checklist-presentation-wall.jpeg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[Help me to choose the best city/country to be a Front-End Developer!]]></title>
@@ -2025,7 +2033,8 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">In January, my IELTS exam will give me more chances to complete some immigration forms.</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">In February, I’ll start sending <span class="not-prose"><a href="https://www.linkedin.com/in/thedaviddias/" rel="noopener noreferrer" target="_blank" class="external-link">my resume</a></span> to some companies I perceive I can fit and by chance, it’ll become easier to decide which country I should focus on more.</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">In May/June, I hope to be in the country which will give me the chance to continue creating products and websites, managing young developers and working with an awesome team of experts who see the future of the web!</p>]]></content:encoded>
-            <author>hello@thedaviddias.dev (David Dias)</author>
+            <author>thedaviddias@gmail.com (David Dias)</author>
+            <enclosure url="https://thedaviddias.dev/images/articles/choose-city-country-front-developer/earth-rounded.jpeg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[The Front-End Checklist is just a tool… everything depends on you]]></title>
@@ -2063,7 +2072,8 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
 <h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight text-black dark:text-white">Conclusion</h2>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">The success the Front-End Checklist received in such a short time reminded me that a lot of people are really interested in finding ways to improve their work. But just because the tool exists doesn’t directly help with that. You also need to commit to using it.</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">In a time where AI is taking over many manual tasks, quality is a must-have. Even if automation takes over a lot of our tasks, some level of quality will remain impossible to automate, and us front-end developers still have many long days to enjoy our jobs.</p>]]></content:encoded>
-            <author>hello@thedaviddias.dev (David Dias)</author>
+            <author>thedaviddias@gmail.com (David Dias)</author>
+            <enclosure url="https://thedaviddias.dev/images/articles/front-end-checklist-just-tool-everything-depends-on-you/featured.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[How my open source project earned 6,000 stars on GitHub in just 5 days]]></title>
@@ -2250,7 +2260,8 @@ Don’t hesitate, everything you do, related to coding and web, take time to pre
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">By the time I wrote this article I was already working on a small open-source web app... Today, you can already access the Front-End Checklist App online!</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Due to many requests, I’m already working on an NPM module which will probably be used by a future website. It was not in my initial plans but when I saw so many people asking for, I couldn’t refuse.</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">I have much more to share! I’m working on other lists that may be as good as the Front-End Checklist… Well, I hope! 😃</p>]]></content:encoded>
-            <author>hello@thedaviddias.dev (David Dias)</author>
+            <author>thedaviddias@gmail.com (David Dias)</author>
+            <enclosure url="https://thedaviddias.dev/images/articles/how-my-open-source-project-earned-6000-stars-on-github-in-just-5-days/github-stars.jpeg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[How a Morning Routine can positively change your life forever]]></title>
@@ -2438,7 +2449,8 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
 <h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight text-black dark:text-white">Tell me about your Daily or Morning Routine</h2>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">And you, do you have a daily or morning routine?</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">What you do daily to <strong class="dark:text-white">improve your life</strong>, <strong class="dark:text-white">achieve your goals</strong> and take actions <strong class="dark:text-white">to build the life you want</strong>?</p>]]></content:encoded>
-            <author>hello@thedaviddias.dev (David Dias)</author>
+            <author>thedaviddias@gmail.com (David Dias)</author>
+            <enclosure url="https://thedaviddias.dev/images/articles/how-morning-routine-can-positively-change-your-life-forever/featured.jpeg" length="0" type="image/jpeg"/>
         </item>
     </channel>
 </rss>

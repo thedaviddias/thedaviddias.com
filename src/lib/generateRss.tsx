@@ -28,7 +28,7 @@ export default async function generateRssFeed() {
   const date = new Date()
   const author = {
     name: 'David Dias',
-    email: 'hello@thedaviddias.dev',
+    email: 'thedaviddias@gmail.com',
     link: 'https://twitter.com/thedaviddias',
   }
 
@@ -38,7 +38,7 @@ export default async function generateRssFeed() {
     description: localeEN.home.seo.description,
     id: siteURL,
     link: siteURL,
-    language: 'en',
+    language: 'en-US',
     image: `${siteURL}/favicons/android-chrome-144x144.png`,
     favicon: `${siteURL}/favicons/android-chrome-144x144.png`,
     copyright: `All rights reserved ${date.getFullYear()}, David Dias`,
@@ -49,6 +49,8 @@ export default async function generateRssFeed() {
     },
     author,
   })
+
+  feedEn.addCategory('Technology')
 
   // Adding blogs to the rss feed
   for (const post of postsEn) {
@@ -73,6 +75,7 @@ export default async function generateRssFeed() {
       author: [author],
       contributor: [author],
       date: new Date(post.frontMatter.date),
+      ...(post.frontMatter.preview && { image: `${siteURL}${post.frontMatter.preview.url}` }),
     })
   }
 
@@ -99,6 +102,8 @@ export default async function generateRssFeed() {
     author,
   })
 
+  feedFr.addCategory('Technologie')
+
   // Adding blogs to the rss feed
   for (const post of postsFr) {
     const url = `${siteURL}${post.permalink}`
@@ -122,6 +127,7 @@ export default async function generateRssFeed() {
       author: [author],
       contributor: [author],
       date: new Date(post.frontMatter.date),
+      ...(post.frontMatter.preview && { image: `${siteURL}${post.frontMatter.preview.url}` }),
     })
   }
 

@@ -33,9 +33,8 @@ import { Tags } from '@/components/Tags'
 import { WebMentionsProps } from '@/components/Webmentions'
 
 import { routes } from '@/config/routes'
-import { CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH } from '@/constants'
+import { BASE_URL, CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH } from '@/constants'
 import fetcher from '@/utils/fetcher'
-import { generateImageUrl } from '@/utils/generate-image-url'
 import { getAdjacentPosts } from '@/utils/get-article-posts/getAdjacentPosts'
 import { getAllPosts } from '@/utils/get-article-posts/getAllPosts'
 import { getPost } from '@/utils/get-article-posts/getPost'
@@ -147,7 +146,8 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
   adjacentPosts,
   relatedPosts,
 }) => {
-  const { title, description, tags, categories, date, lastmod, author, published } = frontMatter
+  const { title, description, tags, categories, date, lastmod, author, published, preview } =
+    frontMatter
   const { isFallback } = useRouter()
   const { t } = useTranslation('common')
 
@@ -179,7 +179,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
           },
           images: [
             {
-              url: generateImageUrl({ title }),
+              url: `${BASE_URL}${preview.url}`,
               width: CLOUDINARY_IMG_WIDTH,
               height: CLOUDINARY_IMG_HEIGHT,
               alt: '',
@@ -191,7 +191,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
         type="Blog"
         url={permalink}
         title={title}
-        images={[generateImageUrl({ title })]}
+        images={[`${BASE_URL}${preview.url}`]}
         datePublished={date}
         dateModified={lastmod}
         authorName="David Dias"

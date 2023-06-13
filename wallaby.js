@@ -7,7 +7,6 @@ module.exports = (wallaby) => ({
   env: {
     type: 'node',
   },
-  files: ['src/**/*.ts?(x)'],
   compilers: {
     '**/*.ts?(x)': wallaby.compilers.typeScript(compilerOptions),
   },

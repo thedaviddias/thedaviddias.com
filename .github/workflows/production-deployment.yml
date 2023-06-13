@@ -45,6 +45,15 @@ jobs:
       - name: Run tests
         run: pnpm test
 
+      - name: Install playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run build
+        run: pnpm build
+
+      - name: Run tests
+        run: pnpm test:e2e
+
       # - name: SimpleLocalize Download
       #   uses: simplelocalize/download@latest
       #   with:

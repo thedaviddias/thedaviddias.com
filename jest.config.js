@@ -9,4 +9,13 @@ module.exports = {
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
+  testRegex: '(/__tests__/.*|\\.(test))\\.(ts|tsx)$',
+  collectCoverage: false,
+  coverageReporters: ['lcov', 'text', 'html'],
+  collectCoverageFrom: ['./src/**'],
+  coverageThreshold: {
+    global: {
+      lines: 80,
+    },
+  },
 }

@@ -1,3 +1,8 @@
 {
-  "recommendations": ["usernamehw.errorlens", "bradlc.vscode-tailwindcss", "esbenp.prettier-vscode"]
+  "recommendations": [
+    "usernamehw.errorlens",
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "eliostruyf.vscode-front-matter"
+  ]
 }

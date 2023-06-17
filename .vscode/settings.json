@@ -16,7 +16,10 @@
   "javascript.validate.enable": false,
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.validate.enable": true,
-  "editor.codeActionsOnSave": ["source.fixAll.eslint", "source.fixAll.format"],
+  "editor.codeActionsOnSave": [
+    "source.fixAll.eslint",
+    "source.fixAll.format"
+  ],
   "[javascript]": {
     "editor.formatOnSave": true
   },
@@ -29,14 +32,30 @@
   "eslint.packageManager": "pnpm",
   "eslint.lintTask.enable": true,
   "eslint.nodePath": "node_modules",
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
-  "cSpell.words": ["lastmod", "Pybh", "rehype", "semibold", "UCXYs"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "cSpell.words": [
+    "lastmod",
+    "Pybh",
+    "rehype",
+    "semibold",
+    "UCXYs"
+  ],
   "frontMatter.content.defaultFileType": "mdx",
   "frontMatter.content.draftField": {
     "name": "draft",
     "type": "boolean"
   },
-  "frontMatter.content.supportedFileTypes": ["mdx"],
+  "frontMatter.content.supportedFileTypes": [
+    "mdx"
+  ],
   "jest.jestCommandLine": "npm run test --",
-  "jest.rootPath": "/Users/thedaviddias/Projects/thedaviddias-blog"
+  "jest.rootPath": "/Users/thedaviddias/Projects/thedaviddias-blog",
+  "i18n-ally.localesPaths": [
+    "locales"
+  ]
 }

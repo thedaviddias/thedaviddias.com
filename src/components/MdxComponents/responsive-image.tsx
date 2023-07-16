@@ -35,7 +35,7 @@ export const ResponsiveImage: React.FC<ImageProps> = ({
         />
       </CustomLink>
       {title && (
-        <figcaption className="z-10 mt-4 text-sm italic text-gray-600 text-center dark:text-gray-300">
+        <figcaption className="z-10 !mt-0 text-sm italic text-gray-600 text-center dark:text-gray-300">
           <span dangerouslySetInnerHTML={{ __html: updatedFigcaption ?? title }} />
         </figcaption>
       )}

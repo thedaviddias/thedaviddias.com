@@ -107,5 +107,13 @@
   {
     "name": "web-accessibilite",
     "description": "L'Accessibilité Web a toujours été un des mes sujets de prédilection. Il est important que chaque développeur soit familiarisé avec le sujet."
+  },
+  {
+    "name": "application",
+    "description": "I love apps, I often test or share my experience with apps I use."
+  },
+  {
+    "name": "audio",
+    "description": " "
   }
 ]

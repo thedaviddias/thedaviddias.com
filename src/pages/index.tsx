@@ -127,6 +127,12 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
 
           <LatestPostsSection articles={articles} />
 
+          <LatestNotesSection notes={notes} />
+
+          <LatestGithubSection projects={ghProjects} />
+
+          {process.env.NODE_ENV === 'production' && !mobile() && <PodcastSection />}
+
           <section className="mb-10">
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 max-w-5xl">
               <CurrentlyReading limit={mobile() ? 2 : 3} />
@@ -141,12 +147,6 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
               </CustomLink>
             </footer>
           </section>
-
-          <LatestNotesSection notes={notes} />
-
-          <LatestGithubSection projects={ghProjects} />
-
-          {process.env.NODE_ENV === 'production' && !mobile() && <PodcastSection />}
 
           {process.env.NODE_ENV === 'production' && <LatestYoutubeVideos />}
         </main>

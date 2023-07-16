@@ -125,7 +125,8 @@
       "popular": "Popular Github Projects",
       "popular_description": "My most popular open-source projects. Feel free to take a look and contribute!",
       "viewAll": "→ View all my projects",
-      "latest-projects": "Latest updated projects"
+      "latest-projects": "Latest projects",
+      "latest-open-source-projects": "Latest open-source projects"
     }
   },
   "tags": {

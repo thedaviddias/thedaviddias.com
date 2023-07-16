@@ -117,7 +117,8 @@
       "popular": "Projets populaires sur Github",
       "popular_description": "Mes projets Open Source les plus populaires. N'hésitez pas à y jeter un coup d'œil et à y participer!",
       "viewAll": "→ Voir tous mes projets",
-      "latest-projects": "Derniers projets MàJ"
+      "latest-projects": "Derniers projets",
+      "latest-open-source-projects": "Derniers projets open-source"
     }
   },
   "tags": {

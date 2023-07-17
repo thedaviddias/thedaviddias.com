@@ -4,7 +4,7 @@
         <title>The David Dias | Front-End Developer, podcaster &amp; content creator</title>
         <link>https://thedaviddias.dev</link>
         <description>Hey, I'm David Dias! Front-End Developer based in Toronto/Canada. I love talking about code, technology, expatriation and life.</description>
-        <lastBuildDate>Mon, 17 Jul 2023 03:45:43 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 17 Jul 2023 03:54:13 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en-US</language>
@@ -15,6 +15,24 @@
         </image>
         <copyright>All rights reserved 2023, David Dias</copyright>
         <category>Technology</category>
+        <item>
+            <title><![CDATA[The methodology and principle of "User First"]]></title>
+            <link>https://thedaviddias.dev/notes/methodology-principle-user-first</link>
+            <guid>https://thedaviddias.dev/notes/methodology-principle-user-first</guid>
+            <pubDate>Mon, 17 Jul 2023 03:41:52 GMT</pubDate>
+            <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">You&#x27;ve probably heard about &quot;mobile first&quot;, &quot;content first&quot;, &quot;design first&quot;, etc. But have you heard about &quot;user first&quot;? I think it&#x27;s the most important principle of all.</p>
+<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">&quot;User First&quot; is a methodology and principle where you put the user first in everything you do.</p>
+<ul class="list-disc">
+<li class="nested-list text-lg">Wondering about creating a new feature? Ask your users.</li>
+<li class="nested-list text-lg">Wondering what could bring your user&#x27;s friend to your platform? Ask your users.</li>
+<li class="nested-list text-lg">Wondering what could make your user not using your platform anymore? Ask your users.</li>
+</ul>
+<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">You get the idea.</p>
+<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">So why some businesses continue to do the opposite? Why some businesses continue to do what they think is best for their users without asking them? Sometimes it can a business think they know better what users want.</p>
+<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">I sometimes hear &quot;our users don&#x27;t know what they want, they always complain...&quot;. Well, if they complain, it&#x27;s because they want something else.</p>
+<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">User needs creates businesses and businesses create user needs. It&#x27;s a virtuous circle. If you don&#x27;t listen to your users, you will lose them. And not excuses will make up for failing to listen to them.</p>]]></content:encoded>
+            <author>thedaviddias@gmail.com (David Dias)</author>
+        </item>
         <item>
             <title><![CDATA[How to Convert MP3 to M4B for Audiobooks lovers, on MacOS?]]></title>
             <link>https://thedaviddias.dev/notes/how-to-convert-mp3-to-m4b-for-audiobooks</link>

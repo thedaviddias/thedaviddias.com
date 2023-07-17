@@ -251,7 +251,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
           <div className="block lg:flex w-full">
             <div className="max-w-full">
               <div className=" w-[40em] lg:w-[37rem] !max-w-full">
-                <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl !max-w-full mb-10">
+                <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl !max-w-full mb-10 break-all">
                   <MDXRemote {...source} components={MDXComponents} lazy />
 
                   {published?.url && (

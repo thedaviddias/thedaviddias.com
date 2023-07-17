@@ -15,6 +15,7 @@ import { CurrentlyReading } from '@/components/CurrentlyReading'
 import { CustomLink } from '@/components/CustomLink'
 import { LatestNotesSection } from '@/components/LatestNotesSection'
 import { LatestPostsSection } from '@/components/LatestPostsSection'
+import { LatestProjectsSection } from '@/components/LatestProjectsSection/LatestProjectsSection'
 import { Loader } from '@/components/Loader'
 import { ToRead } from '@/components/ToRead'
 
@@ -50,12 +51,13 @@ type HomeProps = {
   articles: ArticlesType[]
   notes: NotesType[]
   ghProjects: GhProjectsProps[]
+  projects: any[]
   fallback: {
     '/api/youtube/videos': YouTubeVideo[]
   }
 }
 
-const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) => {
+const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback, projects }) => {
   const { t } = useTranslation('common')
 
   return (
@@ -144,6 +146,8 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
 
           <LatestNotesSection notes={notes} />
 
+          <LatestProjectsSection projects={projects} />
+
           <LatestGithubSection projects={ghProjects} />
 
           {process.env.NODE_ENV === 'production' && !mobile() && <PodcastSection />}
@@ -158,6 +162,7 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const posts = await getAllPostsWithFrontMatter({ dataType: 'articles', locale, limit: 4 })
   const notes = await getAllPostsWithFrontMatter({ dataType: 'notes', locale, limit: 4 })
+  const projects = await readData<any[]>('data/projects.json')
   const youtubeVideos = await readData<YouTubeVideo[]>('data/youtube.json')
   const ghProjects = await fetchRepos('PUSHED_AT', 2)
 
@@ -166,6 +171,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const props: HomeProps = {
     articles: JSON.parse(JSON.stringify(posts)),
     notes: JSON.parse(JSON.stringify(notes)),
+    projects: JSON.parse(JSON.stringify(projects)),
     ghProjects,
     fallback: {
       '/api/youtube/videos': youtubeVideos,

@@ -120,6 +120,21 @@
       "latest-projects": "Derniers projets MàJ"
     }
   },
+  "openProjects": {
+    "path": "/projects",
+    "seo": {
+      "url": "projects",
+      "title": "Mes Projets",
+      "description": "Découvrez l'ensemble des projets sur lesquels j'ai travaillé et ceux sur lequel je suis toujours en train de travailler."
+    },
+    "updated": "MàJ il y a {{date}}",
+    "sections": {
+      "popular": "Projets populaires sur Github",
+      "popular_description": "Mes projets Open Source les plus populaires. N'hésitez pas à y jeter un coup d'œil et à y participer!",
+      "viewAll": "→ Voir tous mes projets",
+      "latest-projects": "Derniers projets MàJ"
+    }
+  },
   "tags": {
     "path": "/tags",
     "seo": {

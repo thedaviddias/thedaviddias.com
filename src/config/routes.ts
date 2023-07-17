@@ -16,8 +16,8 @@ export const routes: RoutesResponse = (translate) => ({
     path: '',
     seo: extendSEO({
       options: {
-        title: translate('404:404.seo.title'),
-        description: translate('404:404.seo.description'),
+        title: translate('404.seo.title'),
+        description: translate('404.seo.description'),
       },
       translate,
     }),

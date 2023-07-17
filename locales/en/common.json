@@ -125,7 +125,22 @@
       "popular": "Popular Github Projects",
       "popular_description": "My most popular open-source projects. Feel free to take a look and contribute!",
       "viewAll": "→ View all my projects",
-      "latest-projects": "Latest updated projects"
+      "latest-projects": "Current projects"
+    }
+  },
+  "openProjects": {
+    "path": "/projects",
+    "seo": {
+      "url": "projects",
+      "title": "My Projects",
+      "description": "Discover all the projects I've worked on or I'm currently working on."
+    },
+    "updated": "Updated {{date}} ago",
+    "sections": {
+      "popular": "Popular Github Projects",
+      "popular_description": "My most popular open-source projects. Feel free to take a look and contribute!",
+      "viewAll": "→ View all my projects",
+      "latest-projects": "Updated Open-Source projects"
     }
   },
   "tags": {

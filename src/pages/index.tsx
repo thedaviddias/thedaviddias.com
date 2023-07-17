@@ -96,7 +96,7 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback }) =>
                 className="max-w-xl lg:px-0.5 text-base lg:text-lg sm:text-xl text-gray-500 dark:text-gray-300"
                 dangerouslySetInnerHTML={{ __html: t('home.hero.presentation') }}
               />
-              <div className="flex justify-left mt-10 space-x-5">
+              <div className="flex justify-left mt-10 space-y-3 md:space-y-0 md:space-x-5 flex-col md:flex-row">
                 {HERO_LINKS.map(({ label, link, rel }) => (
                   <CustomLink
                     href={link}

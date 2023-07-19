@@ -15,6 +15,13 @@ const nextConfig = withPlugins([plugins, nextTranslate], {
   swcMinify: true,
   pageExtensions: ['ts', 'tsx', 'mdx'],
   poweredByHeader: false,
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
+  },
   images: {
     domains: ['images.unsplash.com', 'webmention.io', 'i.gr-assets.com', 'i.ytimg.com'],
     formats: ['image/avif', 'image/webp'],

@@ -15,6 +15,7 @@ const YoutubeStatsHandler = async (req: NextApiRequest, res: NextApiResponse) =>
 
   try {
     const auth = await googleAuth.getClient()
+
     const youtube = google.youtube({
       auth,
       version: 'v3',

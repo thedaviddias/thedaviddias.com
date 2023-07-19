@@ -7,7 +7,7 @@ import { H2 } from '@/components/Headings'
 
 import { ArticlesType } from '@/types'
 
-type BlogPostProps = {
+export type BlogPostProps = {
   post: ArticlesType
   isCategoryPage?: string | string[]
 }

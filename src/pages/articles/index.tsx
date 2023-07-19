@@ -1,20 +1,36 @@
 import { GetStaticProps } from 'next'
+import dynamic from 'next/dynamic'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { useState } from 'react'
 
-import { BlogPost } from '@/components/BlogPost'
+import { BlogPostProps } from '@/components/BlogPost'
 import { Categories } from '@/components/Categories'
 import { Container } from '@/components/Container'
 import { H3 } from '@/components/Headings'
+import { Loader } from '@/components/Loader'
 import { PageHeader } from '@/components/PageHeader'
-import { Search } from '@/components/Search'
+import { SearchProps } from '@/components/Search'
 
 import { routes } from '@/config/routes'
 import { getAllPostsWithFrontMatter } from '@/utils/get-article-posts/getAllPostsWithFrontMatter'
 import { getCategories } from '@/utils/get-article-posts/getCategories'
 
 import { ArticlesType, ListAllTags } from '@/types'
+
+const Search = dynamic<SearchProps>(
+  () => import('../../components/Search').then((mod) => mod.Search),
+  {
+    loading: () => <Loader />,
+  }
+)
+
+const BlogPost = dynamic<BlogPostProps>(
+  () => import('../../components/BlogPost').then((mod) => mod.BlogPost),
+  {
+    loading: () => <Loader />,
+  }
+)
 
 type BlogProps = {
   posts: ArticlesType[]

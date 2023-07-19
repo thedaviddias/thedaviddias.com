@@ -19,10 +19,10 @@ export const Comments = () => {
       {isDisplay ? (
         <Giscus
           repo="thedaviddias/thedaviddias.dev"
-          repoId="R_kgDOI5zbNw"
-          category="Comments"
-          categoryId="DIC_kwDOI5zbN84CW5lY"
-          mapping="title"
+          repoId="R_kgDOHmf8rQ"
+          category="Announcements"
+          categoryId="DIC_kwDOHmf8rc4CQc4s"
+          mapping="og:title"
           reactionsEnabled="0"
           emitMetadata="0"
           theme={theme === 'dark' || resolvedTheme === 'dark' ? 'dark' : 'light'}

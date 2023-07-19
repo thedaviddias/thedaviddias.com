@@ -1,6 +1,7 @@
 module.exports = {
   extends: [
     'next/core-web-vitals',
+    'turbo',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/typescript',
     'plugin:react-hooks/recommended',

@@ -21,9 +21,6 @@ declare global {
       SIMKL_TOKEN: string
       SIMKL_CLIENT_ID: string
 
-      // Newsletters metrics
-      REVUE_API_KEY: string
-
       // Code metrics
       WAKATIME_API_KEY: string
 

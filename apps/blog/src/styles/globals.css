@@ -60,7 +60,7 @@ h6 {
 
 /* .separator {
   @apply border-t dark: border-gray-600;
-} */
+}
 
 /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
 input:-webkit-autofill,

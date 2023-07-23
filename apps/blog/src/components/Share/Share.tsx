@@ -14,9 +14,9 @@ export const Share: React.FC<ShareProps> = ({ permalink, title }) => {
     <aside>
       <p className="small-title">{t('share.title')}</p>
       <Twitter small message={`${title} by @thedaviddias`} link={permalink} className="h-8 w-10" />
-      <Facebook small link={permalink} className="h-8 w-10" />
       <Linkedin small message={title} link={permalink} className="h-8 w-10" />
       <Reddit small link={permalink} className="h-8 w-10" />
+      <Facebook small link={permalink} className="h-8 w-10" />
     </aside>
   )
 }

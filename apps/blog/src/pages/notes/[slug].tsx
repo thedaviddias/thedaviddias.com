@@ -11,7 +11,6 @@ import rehypeImagePlaceholder from 'rehype-image-placeholder'
 import rehypePrismPlus from 'rehype-prism-plus'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
-import useSWR from 'swr'
 
 import { AdjacentPostsProps, PreviousNext } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
@@ -23,18 +22,14 @@ import { MDXComponents } from '@/components/MdxComponents'
 import { ScrollTop } from '@/components/ScrollTop'
 import { ShareProps } from '@/components/Share'
 import { Tags } from '@/components/Tags'
-import { WebMentionsProps } from '@/components/Webmentions'
 
 import { routes } from '@/config/routes'
 import { CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH } from '@/constants'
-import fetcher from '@/utils/fetcher'
 import { getAdjacentPosts } from '@/utils/get-article-posts/getAdjacentPosts'
 import { getAllPosts } from '@/utils/get-article-posts/getAllPosts'
 import { getPost } from '@/utils/get-article-posts/getPost'
 import { getPostBySlug } from '@/utils/get-article-posts/getPostBySlug'
 import { remarkCodeTitles } from '@/utils/remark-code-titles'
-
-import { WebMention } from '../articles/[slug]'
 
 const Comments = dynamic<object>(
   () => import('../../components/Comments').then((mod) => mod.Comments),
@@ -45,13 +40,6 @@ const Comments = dynamic<object>(
 
 const AdjacentPosts = dynamic<AdjacentPostsProps>(
   () => import('../../components/AdjacentPosts').then((mod) => mod.AdjacentPosts),
-  {
-    loading: () => <Loader />,
-  }
-)
-
-const Webmentions = dynamic<WebMentionsProps>(
-  () => import('../../components/Webmentions').then((mod) => mod.Webmentions),
   {
     loading: () => <Loader />,
   }
@@ -87,20 +75,11 @@ type NotePageProps = BlogPostProps & {
   adjacentPosts: PreviousNext
 }
 
-type WebMentionsResponse = {
-  links: WebMention[]
-}
-
 const contentType = 'notes'
 
 const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adjacentPosts }) => {
   const { title, description, tags, date, author } = frontMatter
   const { isFallback } = useRouter()
-
-  const { data } = useSWR<WebMentionsResponse>(
-    `https://webmention.io/api/mentions.json?target=${permalink}`,
-    fetcher
-  )
 
   if (isFallback || !title) {
     return <Loader />
@@ -173,7 +152,7 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
 
               {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
 
-              <Webmentions mentions={data?.links} />
+              {/* <Webmentions mentions={data?.links} /> */}
 
               <Comments />
             </div>

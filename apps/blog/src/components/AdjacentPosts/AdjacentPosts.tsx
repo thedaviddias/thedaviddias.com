@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 
 import { CustomLink } from '@/components/CustomLink'
@@ -5,6 +6,7 @@ import { CustomLink } from '@/components/CustomLink'
 type AdjacentPosts = {
   slug: string
   title: string
+  image?: string
 }
 
 export type PreviousNext = {
@@ -26,16 +28,29 @@ export const AdjacentPosts: React.FC<AdjacentPostsProps> = ({ posts }) => {
           <div className="nav-previous">
             {posts.previous && (
               <>
-                <p className="small-title">{t('posts.previous')}</p>
+                <div className="small-title flex justify-start">{t('posts.previous')}</div>
                 <CustomLink
                   href={posts.previous.slug}
-                  className="flex text-gray-600 hover:text-gray-900 p-1 dark:text-gray-200"
+                  className="flex flex-row-reverse text-gray-600 hover:text-gray-900 dark:text-gray-200 p-1"
                 >
-                  <div className="mr-2">
-                    <span className="text-base mb-2">←</span>
-                    <span className="sr-only">{t('posts.previous')}:</span>
+                  <div className="flex flex-col gap-3 justify-start">
+                    {posts.previous.image ? (
+                      <div className="relative flex justify-start">
+                        <Image
+                          src={posts.previous.image}
+                          alt=""
+                          width={200}
+                          height={200}
+                          className="aspect-video object-cover h-44 rounded-lg"
+                          style={{
+                            maxWidth: '100%',
+                            height: 'auto',
+                          }}
+                        />
+                      </div>
+                    ) : null}
+                    <div className="text-primary-500 leading-6">{posts.previous.title}</div>
                   </div>
-                  <span className="text-primary-500 leading-6">{posts.previous.title}</span>
                 </CustomLink>
               </>
             )}
@@ -43,16 +58,29 @@ export const AdjacentPosts: React.FC<AdjacentPostsProps> = ({ posts }) => {
           <div className="nav-next text-right">
             {posts.next && (
               <>
-                <p className="small-title">{t('posts.next')}</p>
+                <div className="small-title flex justify-end">{t('posts.next')}</div>
                 <CustomLink
                   href={posts.next.slug}
                   className="flex flex-row-reverse text-gray-600 hover:text-gray-900 dark:text-gray-200 p-1"
                 >
-                  <div className="ml-2">
-                    <span className="text-base mb-2">→</span>
-                    <span className="sr-only">{t('posts.next')}:</span>
+                  <div className="flex flex-col gap-3 justify-end">
+                    {posts.next.image ? (
+                      <div className="relative flex justify-end">
+                        <Image
+                          src={posts.next.image}
+                          alt=""
+                          width={200}
+                          height={200}
+                          className="aspect-video object-cover rounded-lg"
+                          style={{
+                            maxWidth: '100%',
+                            height: 'auto',
+                          }}
+                        />
+                      </div>
+                    ) : null}
+                    <div className="text-primary-500 leading-6">{posts.next.title}</div>
                   </div>
-                  <span className="text-primary-500 leading-6">{posts.next.title}</span>
                 </CustomLink>
               </>
             )}

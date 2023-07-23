@@ -13,7 +13,6 @@ import rehypePrismPlus from 'rehype-prism-plus'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import slugify from 'slugify'
-import useSWR from 'swr'
 
 import { AdjacentPostsProps, PreviousNext } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
@@ -30,11 +29,9 @@ import { ScrollTop } from '@/components/ScrollTop'
 import { ShareProps } from '@/components/Share'
 import { TableOfContents } from '@/components/TableOfContents'
 import { Tags } from '@/components/Tags'
-import { WebMentionsProps } from '@/components/Webmentions'
 
 import { routes } from '@/config/routes'
 import { BASE_URL, CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH } from '@/constants'
-import fetcher from '@/utils/fetcher'
 import { getAdjacentPosts } from '@/utils/get-article-posts/getAdjacentPosts'
 import { getAllPosts } from '@/utils/get-article-posts/getAllPosts'
 import { getPost } from '@/utils/get-article-posts/getPost'
@@ -52,13 +49,6 @@ const Comments = dynamic<object>(
 
 const AdjacentPosts = dynamic<AdjacentPostsProps>(
   () => import('../../components/AdjacentPosts').then((mod) => mod.AdjacentPosts),
-  {
-    loading: () => <Loader />,
-  }
-)
-
-const Webmentions = dynamic<WebMentionsProps>(
-  () => import('../../components/Webmentions').then((mod) => mod.Webmentions),
   {
     loading: () => <Loader />,
   }
@@ -131,10 +121,6 @@ export type WebMention = {
   target: string
 }
 
-type WebMentionsResponse = {
-  links: WebMention[]
-}
-
 const contentType = 'articles'
 
 const BlogPostPage: NextPage<BlogPostPageProps> = ({
@@ -150,11 +136,6 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
     frontMatter
   const { isFallback } = useRouter()
   const { t } = useTranslation('common')
-
-  const { data } = useSWR<WebMentionsResponse>(
-    `https://webmention.io/api/mentions.json?target=${permalink}`,
-    fetcher
-  )
 
   if (isFallback || !title) {
     return <Loader />
@@ -174,7 +155,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
           article: {
             publishedTime: date,
             modifiedTime: lastmod,
-            authors: ['https://thedaviddias.dev/authors/@david-dias'],
+            authors: [`https://thedaviddias.dev/authors/@david-dias`],
             tags,
           },
           images: [
@@ -213,7 +194,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
       />
       <main id="main" data-skip-link="the article">
         <article className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <header className="pb-6 text-center border-b border-gray-200 dark:border-gray-700 mb-8 transition-colors duration-200">
+          <header className="pb-6 text-center border-b border-gray-200 dark:border-gray-800 mb-8 transition-colors duration-200">
             {categories.length && (
               <div className="text-gray-500 dark:text-gray-400 font-medium mb-2 text-sm sm:text-base transition-colors duration-200">
                 <span className="sr-only">Category</span>
@@ -264,8 +245,6 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                   )}
                 </section>
 
-                {/* <Subscribe /> */}
-
                 {relatedPosts.length ? <RelatedPosts relatedPosts={relatedPosts} /> : null}
 
                 {tags && (
@@ -280,7 +259,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
 
                   {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
 
-                  <Webmentions mentions={data?.links} />
+                  {/* <Webmentions mentions={data?.links} /> */}
 
                   <Comments />
                 </section>

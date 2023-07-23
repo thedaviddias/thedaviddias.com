@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -17,10 +21,24 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "~/*": ["./*"]
+      "@/*": [
+        "src/*"
+      ],
+      "~/*": [
+        "./*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/_error.js"],
-  "exclude": ["node_modules", "config", "next-sitemap.config.js"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/pages/_error.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.stories.tsx",
+    "config",
+    "next-sitemap.config.js"
+  ]
 }

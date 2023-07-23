@@ -34,11 +34,8 @@ export const Author: React.FC<AuthorProps> = ({ name, routes }) => {
               />
             </div>
             <div className="ml-3 text-left">
-              <p className="text-base font-medium text-gray-700 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-400">
+              <p className="text-base font-medium text-gray-700 group-hover:text-gray-700 dark:text-gray-300 dark:group-hover:text-gray-400">
                 {name}
-              </p>
-              <p className="text-sm font-medium text-gray-500 group-hover:text-gray-700 dark:text-gray-500 dark:group-hover:text-gray-400">
-                {routes(t).about.seo.title}
               </p>
             </div>
           </div>

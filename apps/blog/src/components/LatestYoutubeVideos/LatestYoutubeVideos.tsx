@@ -41,6 +41,7 @@ const LatestYoutubeVideos = () => {
     <section className="border-none mb-5 md:mb-10">
       <header className="mb-5">
         <H5 as="h2">{t('youtube.sections.latest_videos')}</H5>
+        <p className="pt-3 text-s dark:text-gray-400">{t('youtube.seo.description')}</p>
       </header>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 my-3 max-w-5xl">
         {videos?.map((video, i) => (

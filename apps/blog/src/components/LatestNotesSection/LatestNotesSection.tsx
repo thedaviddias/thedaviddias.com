@@ -18,6 +18,7 @@ export const LatestNotesSection: React.FC<LatestNotesSection> = ({ notes }) => {
       <div className="grid grid-cols-1 ">
         <header className="mb-5">
           <H5 as="h2">{t('notes.sections.latest-notes')}</H5>
+          <p className="pt-3 text-s dark:text-gray-400">{t('notes.seo.description')}</p>
         </header>
         <div className="grid grid-cols-1 lg:col-span-2">
           {!notes.length ? (

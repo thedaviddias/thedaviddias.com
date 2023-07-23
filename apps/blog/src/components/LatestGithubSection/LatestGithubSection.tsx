@@ -17,6 +17,7 @@ export const LatestGithubSection: React.FC<LatestGithubSectionProps> = ({ projec
     <section className="border-none mb-5 md:mb-10">
       <header className="mb-5">
         <H5 as="h2">{t('openProjects.sections.latest-projects')}</H5>
+        <p className="pt-3 text-s dark:text-gray-400">{t('openProjects.seo.description')}</p>
       </header>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 max-w-5xl">
         {projects?.map((project, i) => (

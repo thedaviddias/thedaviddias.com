@@ -86,7 +86,7 @@
     "path": "/notes",
     "seo": {
       "title": "My daily Notes about the world around me",
-      "description": "Find short and sweet notes I regularly publish. From discovery to experimentation and technical challenges I finally figured out, I have a lot to share!",
+      "description": "Find short and sweet notes I regularly publish about daily life, web development and more.",
       "url": "notes"
     },
     "h1": "My Notes",
@@ -133,7 +133,7 @@
     "seo": {
       "url": "projects",
       "title": "My Projects",
-      "description": "Discover all the projects I've worked on or I'm currently working on."
+      "description": "All my open-source projects. Feel free to take a look and contribute!"
     },
     "updated": "Updated {{date}} ago",
     "sections": {

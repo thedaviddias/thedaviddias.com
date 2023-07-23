@@ -18,6 +18,7 @@ export const LatestPostsSection: React.FC<LatestPostsSection> = ({ articles }) =
       <div className="grid grid-cols-1">
         <header className="mb-5">
           <H5 as="h2">{t('articles.sections.latest-posts')}</H5>
+          <p className="pt-3 text-s dark:text-gray-400">{t('articles.seo.description')}</p>
         </header>
         <div className="grid grid-cols-1 lg:col-span-2">
           {articles.map((article) => (

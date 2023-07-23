@@ -15,6 +15,7 @@ export const LatestProjectsSection: React.FC<LatestProjectsSectionProps> = ({ pr
     <section className="border-none mb-5 md:mb-10">
       <header className="mb-5">
         <H5 as="h2">{t('projects.sections.latest-projects')}</H5>
+        <p className="pt-3 text-s dark:text-gray-400">{t('projects.seo.description')}</p>
       </header>
 
       <div className="flex flex-col gap-3">

@@ -16,6 +16,7 @@ import slugify from 'slugify'
 
 import { AdjacentPostsProps, PreviousNext } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
+import { BuyMeACoffee } from '@/components/BuyMeACoffee/BuyMeACoffee'
 import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
 import { DatePost } from '@/components/DatePost'
@@ -244,6 +245,8 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                     </Paragraph>
                   )}
                 </section>
+
+                <BuyMeACoffee />
 
                 {relatedPosts.length ? <RelatedPosts relatedPosts={relatedPosts} /> : null}
 

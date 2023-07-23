@@ -14,6 +14,7 @@ import remarkGfm from 'remark-gfm'
 
 import { AdjacentPostsProps, PreviousNext } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
+import { BuyMeACoffee } from '@/components/BuyMeACoffee/BuyMeACoffee'
 import { Container } from '@/components/Container'
 import { DatePost } from '@/components/DatePost'
 import { H1 } from '@/components/Headings'
@@ -149,6 +150,8 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
                 <MDXRemote {...source} components={MDXComponents} lazy />
               </section>
               {permalink && <Share title={title} permalink={permalink} />}
+
+              <BuyMeACoffee />
 
               {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
 

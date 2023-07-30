@@ -1,16 +1,35 @@
 import { ReadTimeResults } from 'reading-time'
 
-export type FrontMatterType<Type extends 'article' | 'note'> = {
+export interface StatusIndicatorProps {
+  status: 'idea' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled'
+}
+
+type ProjectProps = {
+  projects_type: string
+  status: StatusIndicatorProps['status']
+  progress: string
+}
+
+type CommonProps = {
+  tags?: string[]
+  categories: string[]
+}
+
+type ExtraProps<Type extends 'article' | 'note' | 'project'> = Type extends 'project'
+  ? ProjectProps
+  : Type extends 'article' | 'note'
+  ? CommonProps
+  : Record<string, never>
+
+export type FrontMatterType<Type extends 'article' | 'note' | 'project'> = {
   type: Type
   draft: boolean
   author?: string
-  categories: string[]
   date: string
   description: string
   lastmod?: string
   locale: string
   permalink: string
-  tags?: string[]
   title: string
   preview: {
     url: string
@@ -19,10 +38,18 @@ export type FrontMatterType<Type extends 'article' | 'note'> = {
     on: string
     url: string
   }
-}
+} & ExtraProps<Type>
 
 export type ArticleFrontMatterType = FrontMatterType<'article'>
 export type NoteFrontMatterType = FrontMatterType<'note'>
+export type ProjectFrontMatterType = FrontMatterType<'project'>
+
+export type ProjectsType = {
+  frontMatter: ProjectFrontMatterType
+  content: string
+  permalink: string
+  slug: string
+}
 
 export type ArticlesType = {
   frontMatter: ArticleFrontMatterType

@@ -27,7 +27,7 @@ import { readData } from '@/utils/read-data'
 import { LatestGithubSectionProps } from '../components/LatestGithubSection'
 import social from '../../../../data/social.json'
 
-import { ArticlesType, NotesType, YouTubeVideo } from '@/types'
+import { ArticlesType, NotesType, ProjectsType, YouTubeVideo } from '@/types'
 
 const LatestGithubSection = dynamic<LatestGithubSectionProps>(
   () => import('../components/LatestGithubSection').then((mod) => mod.LatestGithubSection),
@@ -51,7 +51,7 @@ type HomeProps = {
   articles: ArticlesType[]
   notes: NotesType[]
   ghProjects: GhProjectsProps[]
-  projects: any[]
+  projects: ProjectsType[]
   fallback: {
     '/api/youtube/videos': YouTubeVideo[]
   }
@@ -164,7 +164,7 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback, proj
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const posts = await getAllPostsWithFrontMatter({ dataType: 'articles', locale, limit: 5 })
   const notes = await getAllPostsWithFrontMatter({ dataType: 'notes', locale, limit: 6 })
-  const projects = await readData<any[]>('../../data/projects.json')
+  const projects = await getAllPostsWithFrontMatter({ dataType: 'projects', locale, limit: 6 })
   const youtubeVideos = await readData<YouTubeVideo[]>('../../data/youtube.json')
   const ghProjects = await fetchRepos('PUSHED_AT', 4)
 

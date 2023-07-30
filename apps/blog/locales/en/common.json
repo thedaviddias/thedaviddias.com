@@ -1,10 +1,10 @@
 {
   "title": "The David Dias",
-  "titleTemplate": "Développeur Front-End, podcasteur & créateur de contenu",
+  "titleTemplate": "Front-End Developer, Podcaster & Content Creator",
   "date": "MMM dd, yyyy",
   "layout": {
     "a11y": {
-      "skipContent": "Skip to content"
+      "skipContent": "Skip to main"
     },
     "nav": {
       "home": "Home",
@@ -27,8 +27,8 @@
         "abbreviation": "FR"
       },
       "en": {
-        "fullName": "Anglaise",
-        "switch": "Changer pour la version {{lang}}",
+        "fullName": "English",
+        "switch": "Switch to {{lang}} version",
         "abbreviation": "EN"
       }
     },
@@ -36,7 +36,7 @@
       "name": "Footer",
       "general": "General",
       "social": "Social media",
-      "extra": "Extra links",
+      "extra": "Additional links",
       "extra_links": {
         "tags": "Topics",
         "uses": "Uses",
@@ -51,18 +51,18 @@
   "home": {
     "path": "/",
     "seo": {
-      "title": "The David Dias | Front-End Developer, podcaster & content creator",
-      "description": "Hey, I'm David Dias! Front-End Developer based in Toronto/Canada. I love talking about code, technology, expatriation and life."
+      "title": "The David Dias | Front-End Developer, Podcaster & Content Creator",
+      "description": "Hey, I'm David Dias, a Front-End Developer based in Toronto/Canada. I love discussing code, technology, expatriation and life."
     },
     "hero": {
-      "greetings1": "Hey there!",
+      "greetings1": "Hello there!",
       "greetings2": " I'm David Dias",
-      "presentation": "I'm a Front-End Developer, podcaster and content creator passionate about solving digital and human problems! I enjoy meeting new people, building communities and talking about tech, expatriation and the web."
+      "presentation": "A Front-End Developer, podcaster and content creator passionate about solving digital and human challenges. I enjoy meeting new people, building communities and discussing tech, expatriation and the web."
     },
     "sections": {
       "podcast": {
-        "latest_podcasts": "Latest podcast",
-        "view_website": "View more on the website",
+        "latest_podcasts": "Recent podcasts",
+        "view_website": "See more on the website",
         "url": "https://worldwebstories.com"
       }
     }
@@ -70,40 +70,40 @@
   "articles": {
     "path": "/articles",
     "seo": {
-      "title": "All my Articles about web development and more",
-      "description": "Articles about web development and anything that piques my curiosity and interest.",
+      "title": "My Web Development Articles and More",
+      "description": "Articles about web development and anything that sparks my curiosity and interest.",
       "url": "articles"
     },
-    "h1": "All my Articles",
+    "h1": "My Articles",
     "sections": {
-      "latest-posts": "Latest articles",
-      "viewAll": "→ View all my articles",
-      "category_filter": "Access articles by categories",
+      "latest-posts": "Recent articles",
+      "viewAll": "→ View all articles",
+      "category_filter": "Browse articles by categories",
       "search": "Search by title keyword",
-      "search_placeholder": "Type a word to search"
+      "search_placeholder": "Enter a word to search"
     }
   },
   "notes": {
     "path": "/notes",
     "seo": {
-      "title": "My daily Notes about the world around me",
-      "description": "Find short and sweet notes I regularly publish about daily life, web development and more.",
+      "title": "My Daily Observations",
+      "description": "Explore short and concise notes I regularly publish about daily life, web development and more.",
       "url": "notes"
     },
     "h1": "My Notes",
     "sections": {
-      "latest-notes": "Latest notes",
-      "viewAll": "→ View all my notes",
+      "latest-notes": "Recent notes",
+      "viewAll": "→ View all notes",
       "search": "Search by keyword",
-      "search_placeholder": "Tapez un mot pour faire une recherche"
+      "search_placeholder": "Enter a keyword to search"
     }
   },
   "about": {
     "path": "/about",
     "seo": {
       "url": "about",
-      "title": "About me",
-      "description": "Learn a little bit about 'The David Dias'"
+      "title": "About Me",
+      "description": "Know more about 'David Dias'"
     }
   },
   "uses": {
@@ -117,7 +117,7 @@
   "supporters": {
     "path": "/supporters",
     "seo": {
-      "title": "Thanks to all my Supporters",
+      "title": "Gratitude to My Supporters",
       "description": "",
       "url": "supporters"
     }
@@ -127,13 +127,13 @@
     "seo": {
       "url": "projects",
       "title": "My Projects",
-      "description": "Discover all the projects I've worked on or I'm currently working on."
+      "description": "Discover the projects I've contributed to or currently working on."
     },
     "updated": "Updated {{date}} ago",
     "sections": {
-      "popular": "Popular Github Projects",
-      "popular_description": "My most popular open-source projects. Feel free to take a look and contribute!",
-      "viewAll": "→ View all my projects",
+      "popular": "Other Projects",
+      "popular_description": "Check out my popular open-source projects. Contributions are always welcome!",
+      "viewAll": "→ View all projects",
       "latest-projects": "Current projects"
     }
   },
@@ -142,28 +142,28 @@
     "seo": {
       "url": "projects",
       "title": "My Projects",
-      "description": "All my open-source projects. Feel free to take a look and contribute!"
+      "description": "Check out my open-source projects. Contributions welcome!"
     },
     "updated": "Updated {{date}} ago",
     "sections": {
-      "popular": "Popular Github Projects",
-      "popular_description": "My most popular open-source projects. Feel free to take a look and contribute!",
-      "viewAll": "→ View all my projects",
-      "latest-projects": "Updated Open-Source projects"
+      "popular": "Trending Github Projects",
+      "popular_description": "These are my most followed open-source projects. Have a look, and feel free to contribute!",
+      "viewAll": "→ Browse all projects",
+      "latest-projects": "Recently Updated Open-Source Projects"
     }
   },
   "tags": {
     "path": "/tags",
     "seo": {
-      "title": "Notes related to {{name}}",
+      "title": "{{name}} Related Notes",
       "url": "tags",
-      "title_all": "All the Tags",
-      "description": "All my posts related to {{name}}.",
-      "description_all": "All the tags attached to my articles and notes, sorted by posts published."
+      "title_all": "Tags Overview",
+      "description": "Posts linked to {{name}}.",
+      "description_all": "All tags for my articles and notes, sorted by publishing date."
     },
-    "view_all_tags": "→ View all tags",
+    "view_all_tags": "→ Explore all tags",
     "section": "Tags",
-    "latest_posts": "List of all the posts related to {{name}}",
+    "latest_posts": "Posts associated with {{name}}",
     "h1": "Tag: {{name}}"
   },
   "bookmarks": {
@@ -171,15 +171,15 @@
     "seo": {
       "url": "bookmarks",
       "title": "Bookmarks",
-      "description": "List of bookmarks I regularly update about web development, career and open-source."
+      "description": "A curated list of bookmarks on web development, career growth, and open-source."
     },
-    "bookmark_filter": "Filters bookmarks by topic"
+    "bookmark_filter": "Filter bookmarks by topic"
   },
   "category": {
     "path": "/categories",
     "seo": {
-      "title": "Articles about {{name}}",
-      "description": "You will find all my posts related to {{name}}."
+      "title": "{{name}} Related Articles",
+      "description": "Explore my posts related to {{name}}."
     },
     "h1": "Category: {{name}}"
   },
@@ -189,32 +189,32 @@
   "404": {
     "back_home": "Back Home",
     "seo": {
-      "title": "Sorry 😩, this page can't be found.",
-      "description": "This page is the nightmare of any user. It's usually an ugly page that just tells you that the link doesn't exist. Fortunately, the world doesn't end yet!"
+      "title": "Oops 😩, this page doesn't exist.",
+      "description": "No one likes a dead end. But it's not the end of the world yet!"
     }
   },
   "500": {
-    "title": "Wow 😱, you broke everything.",
+    "title": "Whoa 😱, something went wrong.",
     "seo": {
       "title": "",
       "description": ""
     }
   },
   "posts": {
-    "empty": "No articles found for that query.",
+    "empty": "Couldn't find any articles for that query.",
     "continue": "Continue reading →",
     "updated": "Updated on",
-    "published": "Originally published on",
+    "published": "First published on",
     "tableContent": "Table of Contents",
     "previous": "Previous post",
     "next": "Next post"
   },
   "webmentions": {
     "title": "Webmentions",
-    "description": "Tweet about this post and have it showing up here!",
+    "description": "Tweet about this post to see it here!",
     "show": "Show",
     "hide": "Hide",
-    "details": "{{show}} details of mentions",
+    "details": "{{show}} mention details",
     "activity_reply": "this post {{date}} ago:",
     "activity_others": "this post.",
     "activity": {
@@ -226,51 +226,51 @@
   },
   "comments": {
     "title": "Comments",
-    "description": "Don't hesitate to leave your comment! In case you don't have a Github account, you can always tweet about it!",
-    "leave_comment": "Leave a comment"
+    "description": "Share your thoughts! If you don't have a Github account, you can tweet it!",
+    "leave_comment": "Post a comment"
   },
   "dashboard": {
     "path": "/dashboard",
     "seo": {
       "url": "dashboard",
       "title": "Dashboard",
-      "description": "Find all the metrics related to all my activities and interests."
+      "description": "All metrics related to my activities and interests at one place."
     },
     "sections": {
       "coding": {
-        "title": "Coding / Open source",
+        "title": "Coding / Open Source",
         "url": "https://wakatime.com/@thedaviddias",
-        "average_activity": "Average coding activity per day",
-        "average_activity_duration": "(last 7 days)",
+        "average_activity": "Average daily coding activity",
+        "average_activity_duration": "(past 7 days)",
         "total_time": "Total coding time",
-        "total_time_duration": "(last 7 days)",
+        "total_time_duration": "(past 7 days)",
         "open_collective_fec": "Front-End Checklist balance",
         "open_collective_fec_url": "https://opencollective.com/front-end-checklist",
         "open_collective_htmlhint": "HTMLHint balance",
         "open_collective_htmlhint_url": "https://opencollective.com/htmlhint"
       },
       "photos": {
-        "title": "Photos",
+        "title": "Photography",
         "url": "https://unsplash.com/@thedaviddias",
-        "downloads": "Unsplash downloads",
-        "views": "Unsplash views"
+        "downloads": "Unsplash Downloads",
+        "views": "Unsplash Views"
       },
       "tv": {
-        "title": "TV Shows and Movies",
+        "title": "TV and Film",
         "url": "https://simkl.com/5311920",
-        "total_spent": "Spent watching",
-        "total_spent_duration": "(since forever)",
-        "last_week_spent": "Spent watching TV Shows",
+        "total_spent": "Total Time Watching",
+        "total_spent_duration": "(since the beginning)",
+        "last_week_spent": "Last Week's TV Time",
         "last_week_spent_duration": "(last week)"
       },
       "gaming": {
         "title": "Gaming",
-        "total_number": "Total number of Steam games",
-        "most_played": "Most played game duration: {{name}}",
+        "total_number": "Total Number of Steam Games",
+        "most_played": "Most Played Game: {{name}}",
         "most_played_duration": "(last 2 weeks)"
       },
       "latest-dashboard": "Mini Dashboard",
-      "viewAll": "→ View my full dashboard"
+      "viewAll": "→ View full dashboard"
     },
     "unsplash": {
       "downloads": "Unsplash Downloads",
@@ -278,41 +278,41 @@
     }
   },
   "books": {
-    "currently": "Currently reading",
-    "next": "To read next",
+    "currently": "Currently Reading",
+    "next": "Reading Queue",
     "sections": {
-      "viewAll": "→ View my profile on Goodreads"
+      "viewAll": "→ Check my Goodreads profile"
     }
   },
   "youtube": {
     "sections": {
-      "latest_videos": "Latest Youtube videos",
-      "viewAll": "→ Access my Youtube channel"
+      "latest_videos": "Latest YouTube Videos",
+      "viewAll": "→ Visit my YouTube channel"
     }
   },
   "newsletter": {
-    "title": "Subscribe to my Newsletter",
-    "description": "Get emails from me about A11y, web development, tech and expatriation!",
+    "title": "Subscribe to My Newsletter",
+    "description": "Receive emails about A11y, web development, tech, and life abroad!",
     "subscribers": "{{number}} subscribers",
     "form": {
       "input": {
         "placeholder": "username@email.com",
-        "label": "Email for newsletter"
+        "label": "Email for Newsletter"
       },
       "submit": {
         "text": "Subscribe"
       },
       "success": {
-        "text": "You're now on the list! Don't forget to validate your subscription with the email you probably received."
+        "text": "Welcome aboard! Please verify your subscription from the email you've received."
       }
     },
-    "all_issues": "Access all past issues"
+    "all_issues": "Browse past issues"
   },
   "related": {
-    "title": "Related posts",
-    "description": "You might also like these posts:"
+    "title": "You Might Also Like",
+    "description": "Check out these other posts:"
   },
   "share": {
-    "title": "Share this post"
+    "title": "Share This Post"
   }
 }

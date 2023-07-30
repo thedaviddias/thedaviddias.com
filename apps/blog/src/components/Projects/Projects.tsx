@@ -1,9 +1,41 @@
-import { ProjectCard } from '../ProjectCard'
+import { CustomLink } from '../CustomLink'
+import { H4 } from '../Headings'
+import { Paragraph } from '../Paragraph'
+import StatusIndicator from '../ProjectsStatus/ProjectsStatus'
+
+import { ProjectsType } from '@/types'
 
 export type ProjectsProps = {
-  project: any
+  project: ProjectsType
 }
 
 export const Projects: React.FC<ProjectsProps> = ({ project }) => {
-  return <ProjectCard tool={project} />
+  return (
+    <>
+      <article className="pt-2 pb-2 border-t border-gray-200 dark:border-gray-700 relative">
+        <div className="flex flex-col lg:flex-row gap-y-5 lg:gap-x-5">
+          <div className="w-full">
+            <H4 as="h3">
+              <CustomLink
+                className="dark:!text-gray-100 block tracking-tight"
+                href={`/projects/${project.slug}`}
+              >
+                {project.frontMatter.title} ({project.frontMatter.projects_type})
+              </CustomLink>
+            </H4>
+            <StatusIndicator status={project.frontMatter.status} />
+            <Paragraph>{project.frontMatter.description}</Paragraph>
+            <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+              <div
+                className="bg-blue-600 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                style={{ width: project.frontMatter.progress }}
+              >
+                {project.frontMatter.progress}
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </>
+  )
 }

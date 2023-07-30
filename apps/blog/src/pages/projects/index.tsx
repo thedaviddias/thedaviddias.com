@@ -8,14 +8,19 @@ import { Container } from '@/components/Container'
 import { GithubProject } from '@/components/GithubProject'
 import { H2 } from '@/components/Headings'
 import { PageHeader } from '@/components/PageHeader'
+import { Projects } from '@/components/Projects'
 
 import { routes } from '@/config/routes'
+import { getAllPostsWithFrontMatter } from '@/utils/get-article-posts/getAllPostsWithFrontMatter'
+
+import { ProjectsType } from '@/types'
 
 interface ProjectPageProps {
   ghProjects: GhProjectsProps[]
+  projects: ProjectsType[]
 }
 
-const ProjectPage: React.FC<ProjectPageProps> = ({ ghProjects }) => {
+const ProjectPage: React.FC<ProjectPageProps> = ({ ghProjects, projects }) => {
   const { t } = useTranslation('common')
 
   return (
@@ -30,24 +35,32 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ ghProjects }) => {
           title={routes(t).projects.seo.title}
           description={routes(t).projects.seo.description}
         />
-        <H2>{t('projects.sections.popular')}</H2>
-        <p>{t('projects.sections.popular_description')}</p>
+        <H2>{t('openProjects.sections.popular')}</H2>
+        <p>{t('openProjects.sections.popular_description')}</p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 my-3 max-w-5xl">
           {ghProjects.map((project, i) => (
             <GithubProject key={i} project={project} />
           ))}
         </div>
+
+        <H2 className="mb-5">{t('projects.sections.popular')}</H2>
+
+        {projects?.map((project, i) => (
+          <Projects key={i} project={project} />
+        ))}
       </main>
     </Container>
   )
 }
 
-export const getStaticProps: GetStaticProps<ProjectPageProps> = async () => {
-  const ghProjects = await fetchRepos('STARGAZERS', 8)
+export const getStaticProps: GetStaticProps<ProjectPageProps> = async ({ locale }) => {
+  const ghProjects = await fetchRepos('STARGAZERS', 4)
+  const projects = await getAllPostsWithFrontMatter({ dataType: 'projects', locale, limit: 6 })
 
   return {
     props: {
       ghProjects,
+      projects: JSON.parse(JSON.stringify(projects)),
     },
     revalidate: 1200, // 20 min
   }

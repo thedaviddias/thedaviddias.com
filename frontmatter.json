@@ -14,6 +14,10 @@
     {
       "title": "pages",
       "path": "[[workspace]]/content/pages"
+    },
+    {
+      "title": "projects",
+      "path": "[[workspace]]/content/projects"
     }
   ],
   "frontMatter.preview.pathName": "/articles",
@@ -66,6 +70,119 @@
     "web-accessibilite"
   ],
   "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "project",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "boolean"
+        },
+        {
+          "title": "locale",
+          "name": "locale",
+          "type": "choice",
+          "choices": [
+            "en",
+            "fr"
+          ]
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Status",
+          "name": "status",
+          "type": "choice",
+          "choices": [
+            "idea",
+            "in-progress",
+            "on-hold",
+            "completed",
+            "cancelled"
+          ]
+        },
+        {
+          "title": "Progress",
+          "name": "progress",
+          "type": "choice",
+          "choices": [
+            "10%",
+            "30%",
+            "50%",
+            "70%",
+            "90%",
+            "100%"
+          ]
+        },
+        {
+          "title": "Preview image",
+          "name": "preview",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Content preview",
+              "name": "url",
+              "type": "image"
+            },
+            {
+              "title": "Content preview alt",
+              "name": "alt",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "Author",
+          "name": "author",
+          "type": "dataFile",
+          "dataFileId": "authors",
+          "dataFileValue": "name",
+          "dataFileKey": "name",
+          "multiple": false
+        },
+        {
+          "title": "Hreflang (Fr)",
+          "name": "langFr",
+          "type": "string"
+        },
+        {
+          "title": "Hreflang (En)",
+          "name": "langEn",
+          "type": "string"
+        },
+        {
+          "title": "Type of publication",
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "title": "Last modification date",
+          "name": "lastmod",
+          "type": "datetime"
+        },
+        {
+          "title": "projects_type",
+          "name": "projects_type",
+          "type": "string"
+        }
+      ]
+    },
     {
       "name": "article",
       "pageBundle": false,
@@ -283,7 +400,32 @@
     "user-experience",
     "web-development"
   ],
+  "frontMatter.data.types": [
+    {
+      "id": "projects-types",
+      "schema": {
+        "title": "Projects type",
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          }
+        }
+      }
+    }
+  ],
   "frontMatter.data.files": [
+    {
+      "title": "All sponsors",
+      "id": "all-projects-type",
+      "file": "[[workspace]]/data/projects_type",
+      "labelField": "name",
+      "type": "projects-types"
+    },
     {
       "id": "social",
       "title": "Social Medias",

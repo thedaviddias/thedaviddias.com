@@ -98,6 +98,14 @@
       "search_placeholder": "Tapez un mot pour faire une recherche"
     }
   },
+  "about": {
+    "path": "/about",
+    "seo": {
+      "url": "about",
+      "title": "À propos de moi",
+      "description": "Sachez-en un peu plus sur 'The David Dias'"
+    }
+  },
   "uses": {
     "path": "/uses",
     "seo": {

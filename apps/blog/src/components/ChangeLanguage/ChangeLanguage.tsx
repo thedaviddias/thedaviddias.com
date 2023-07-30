@@ -27,12 +27,20 @@ export const ChangeLanguage: FC<ChangeLanguageProps> = ({ hasTranslation = true 
         ? t(`layout.language.${lng}.switch`, { lang: t(`layout.language.${lng}.fullName`) })
         : t(`layout.language.${lng}.switch`, { lang: t(`layout.language.${lng}.fullName`) })
 
+    let redirectPath = router.asPath
+    if (
+      (router.asPath.includes('/articles/') || router.asPath.includes('/notes/')) &&
+      !['/articles', '/notes'].includes(router.asPath)
+    ) {
+      redirectPath = '/'
+    }
+
     return (
       <CustomLink
         key={lng}
         aria-label={switchLabel}
         className="w-8 h-8 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300  transition-all"
-        href={hasTranslation ? router.asPath : '/'}
+        href={hasTranslation ? redirectPath : '/'}
         locale={lng}
       >
         {lng === 'en' ? (

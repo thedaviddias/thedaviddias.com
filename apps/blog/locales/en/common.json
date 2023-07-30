@@ -12,6 +12,7 @@
       "articles": "Articles",
       "projects": "Projects",
       "bookmarks": "Bookmarks",
+      "supporters": "Supporters",
       "about": "About",
       "rss": "RSS"
     },
@@ -111,6 +112,14 @@
       "title": "",
       "description": "",
       "url": "uses"
+    }
+  },
+  "supporters": {
+    "path": "/supporters",
+    "seo": {
+      "title": "Thanks to all my Supporters",
+      "description": "",
+      "url": "supporters"
     }
   },
   "projects": {

@@ -96,6 +96,18 @@ export const routes: RoutesResponse = (translate) => ({
       translate,
     }),
   },
+  supporters: {
+    label: translate('common:layout.nav.supporters'),
+    path: translate('common:supporters.path'),
+    seo: extendSEO({
+      options: {
+        title: translate('common:supporters.seo.title'),
+        description: translate('common:supporters.seo.description'),
+        url: translate('common:supporters.seo.url'),
+      },
+      translate,
+    }),
+  },
   projects: {
     label: translate('common:layout.nav.projects'),
     path: translate('common:projects.path'),

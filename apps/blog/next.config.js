@@ -23,7 +23,13 @@ const nextConfig = withPlugins([plugins, nextTranslate], {
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ['images.unsplash.com', 'webmention.io', 'i.gr-assets.com', 'i.ytimg.com'],
+    domains: [
+      'images.unsplash.com',
+      'webmention.io',
+      'i.gr-assets.com',
+      'i.ytimg.com',
+      'github.com',
+    ],
     formats: ['image/avif', 'image/webp'],
   },
   env: {

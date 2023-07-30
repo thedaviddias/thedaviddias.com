@@ -1,0 +1,99 @@
+[
+  {
+    "name": "Syncfusion,Inc",
+    "type": "organization",
+    "image": "/images/supporters/syncfusion.png",
+    "url": "https://www.syncfusion.com/",
+    "category_en": "Previous supporters",
+    "category_fr": "Contributeurs précédents"
+  },
+  {
+    "name": "Scott LaPlant",
+    "type": "person",
+    "url": "https://scottlaplant.com/",
+    "category_en": "Previous supporters",
+    "category_fr": "Contributeurs précédents"
+  },
+  {
+    "name": "Neerthigan Sivananathan",
+    "type": "person",
+    "category_en": "Previous supporters",
+    "category_fr": "Contributeurs précédents"
+  },
+  {
+    "name": "Cedric Poilly",
+    "username": "cedpoilly",
+    "type": "person",
+    "url": "https://twitter.com/cedpoilly",
+    "category_en": "Previous supporters",
+    "category_fr": "Contributeurs précédents"
+  },
+  {
+    "name": "Victor Schinaider",
+    "type": "person",
+    "url": "https://twitter.com/cedpoilly",
+    "category_en": "Previous supporters",
+    "category_fr": "Contributeurs précédents"
+  },
+  {
+    "name": "Mandeep Singh",
+    "type": "person",
+    "username": "meSingh",
+    "url": "https://www.msingh.com/",
+    "category_en": "Previous supporters",
+    "category_fr": "Contributeurs précédents"
+  },
+  {
+    "name": "Gaëtan Bloch",
+    "type": "person",
+    "username": "gaetanbloch",
+    "category_en": "Current supporters",
+    "category_fr": "Contributeurs actuels"
+  },
+  {
+    "name": "SaaS Design",
+    "type": "organization",
+    "url": "https://www.saasdesign.io/",
+    "category_en": "Previous supporters",
+    "category_fr": "Contributeurs précédents"
+  },
+  {
+    "name": "Scraper API 2",
+    "type": "organization",
+    "username": "scraperapi",
+    "url": "https://www.scraperapi.com/",
+    "category_en": "Previous supporters",
+    "category_fr": "Contributeurs précédents"
+  },
+  {
+    "name": "Strapi",
+    "type": "organization",
+    "url": "https://strapi.io/",
+    "image": "/images/supporters/strapi.png",
+    "category_en": "Previous supporters",
+    "category_fr": "Contributeurs précédents"
+  },
+  {
+    "name": "Flatlogic - Web and Mobile Templates",
+    "type": "organization",
+    "username": "flatlogic",
+    "url": "https://flatlogic.com/templates",
+    "category_en": "Previous supporters",
+    "category_fr": "Contributeurs précédents"
+  },
+  {
+    "name": "HostPresto",
+    "type": "organization",
+    "url": "https://hostpresto.com/",
+    "category_en": "Previous supporters",
+    "category_fr": "Contributeurs précédents"
+  },
+  {
+    "name": "Christian Oliff",
+    "type": "person",
+    "username": "coliff",
+    "url": "https://christianoliff.com/",
+    "category_en": "Previous supporters",
+    "category_fr": "Contributeurs précédents"
+  }
+]

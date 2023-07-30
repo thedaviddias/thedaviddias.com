@@ -12,6 +12,7 @@
       "articles": "Articles",
       "projects": "Projets",
       "bookmarks": "Marque-pages",
+      "supporters": "Contributeurs",
       "about": "À propos",
       "rss": "RSS"
     },
@@ -103,6 +104,14 @@
       "url": "uses",
       "title": "",
       "description": ""
+    }
+  },
+  "supporters": {
+    "path": "/contributeurs",
+    "seo": {
+      "title": "Merci à tous mes Contributeurs",
+      "description": "",
+      "url": "contributeurs"
     }
   },
   "projects": {

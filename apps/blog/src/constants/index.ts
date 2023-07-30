@@ -28,6 +28,7 @@ export const MENU_LINKS = (translate: Translate): LinksInternalResponse[] => [
   routes(translate).notes,
   routes(translate).articles,
   routes(translate).projects,
+  routes(translate).supporters,
   routes(translate).about,
 ]
 

@@ -292,8 +292,7 @@
   },
   "newsletter": {
     "title": "Subscribe to My Newsletter",
-    "description": "Receive emails about A11y, web development, tech, and life abroad!",
-    "subscribers": "{{number}} subscribers",
+    "description": "Receive emails about web development, tech, and life abroad!",
     "form": {
       "input": {
         "placeholder": "username@email.com",
@@ -301,9 +300,6 @@
       },
       "submit": {
         "text": "Subscribe"
-      },
-      "success": {
-        "text": "Welcome aboard! Please verify your subscription from the email you've received."
       }
     },
     "all_issues": "Browse past issues"

@@ -3,6 +3,7 @@ import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
 
 import { CustomLink } from '@/components/CustomLink'
+import NewsletterForm from '@/components/NewsletterForm/NewsletterForm'
 
 import { EXTRA_LINKS, FOOTER_MENU_LINKS, SOCIAL_LINKS } from '@/constants'
 
@@ -81,6 +82,9 @@ export const Footer = () => {
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
+      </div>
+      <div>
+        <NewsletterForm />
       </div>
       <footer
         className="main-footer bg-gray-50 dark:bg-black transform"

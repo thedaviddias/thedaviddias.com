@@ -89,7 +89,7 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback, proj
           <section className="pb-10 md:pb-20 pt-0 flex justify-between">
             <div className="text-left">
               <h1 className="block mb-4 dark:text-white transition-colors">
-                <span className="text-3xl p-0 font-light uppercase">
+                <span className="text-3xl p-0 font-light uppercase block">
                   {t('home.hero.greetings1')}
                 </span>
                 <span className="text-5xl lg:text-6xl font-title font-medium leading-snug">

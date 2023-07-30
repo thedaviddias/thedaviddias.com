@@ -294,9 +294,6 @@
       },
       "submit": {
         "text": "S'abonner"
-      },
-      "success": {
-        "text": "Youpi! Vous êtes maintenant sur la liste! Pensez à valider l'email que vous avez dû recevoir."
       }
     },
     "all_issues": "Voir tous les bulletins précédents"

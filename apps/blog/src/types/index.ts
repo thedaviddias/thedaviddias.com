@@ -50,6 +50,14 @@ export type UsesType = {
   image: string
 }
 
+export type SupportersType = {
+  name: string
+  url: string
+  category_en: string
+  category_fr: string
+  image?: string
+}
+
 export type ListAllTags = {
   name: string
   occurrences: number

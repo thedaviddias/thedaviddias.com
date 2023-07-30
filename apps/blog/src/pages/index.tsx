@@ -166,7 +166,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const notes = await getAllPostsWithFrontMatter({ dataType: 'notes', locale, limit: 6 })
   const projects = await readData<any[]>('../../data/projects.json')
   const youtubeVideos = await readData<YouTubeVideo[]>('../../data/youtube.json')
-  const ghProjects = await fetchRepos('PUSHED_AT', 2)
+  const ghProjects = await fetchRepos('PUSHED_AT', 4)
 
   await generateRssFeed().then(null)
 

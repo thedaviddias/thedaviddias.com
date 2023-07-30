@@ -43,7 +43,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ ghProjects }) => {
 }
 
 export const getStaticProps: GetStaticProps<ProjectPageProps> = async () => {
-  const ghProjects = await fetchRepos('STARGAZERS', 6)
+  const ghProjects = await fetchRepos('STARGAZERS', 8)
 
   return {
     props: {

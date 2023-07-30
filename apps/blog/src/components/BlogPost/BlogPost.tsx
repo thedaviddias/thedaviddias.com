@@ -45,7 +45,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post, isCategoryPage }) => {
 
           <p className="!text-gray-600 dark:!text-gray-300 !mt-4">{post.frontMatter.description}</p>
         </div>
-        <div className="flex-grow text-left lg:text-right relative">
+        <div className="flex-grow text-left lg:text-right relative h-[10rem]">
           <Image
             className="object-cover rounded-md"
             src={post.frontMatter.preview.url}

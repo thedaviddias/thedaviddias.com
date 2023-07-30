@@ -162,8 +162,8 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback, proj
 }
 
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
-  const posts = await getAllPostsWithFrontMatter({ dataType: 'articles', locale, limit: 4 })
-  const notes = await getAllPostsWithFrontMatter({ dataType: 'notes', locale, limit: 4 })
+  const posts = await getAllPostsWithFrontMatter({ dataType: 'articles', locale, limit: 5 })
+  const notes = await getAllPostsWithFrontMatter({ dataType: 'notes', locale, limit: 6 })
   const projects = await readData<any[]>('../../data/projects.json')
   const youtubeVideos = await readData<YouTubeVideo[]>('../../data/youtube.json')
   const ghProjects = await fetchRepos('PUSHED_AT', 2)

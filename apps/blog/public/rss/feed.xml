@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>The David Dias | Front-End Developer, podcaster &amp; content creator</title>
+        <title>The David Dias | Front-End Developer, Podcaster &amp; Content Creator</title>
         <link>https://thedaviddias.dev</link>
-        <description>Hey, I'm David Dias! Front-End Developer based in Toronto/Canada. I love talking about code, technology, expatriation and life.</description>
-        <lastBuildDate>Sun, 30 Jul 2023 14:15:58 GMT</lastBuildDate>
+        <description>Hey, I'm David Dias, a Front-End Developer based in Toronto/Canada. I love discussing code, technology, expatriation and life.</description>
+        <lastBuildDate>Sun, 30 Jul 2023 20:01:38 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en-US</language>
         <image>
-            <title>The David Dias | Front-End Developer, podcaster &amp; content creator</title>
+            <title>The David Dias | Front-End Developer, Podcaster &amp; Content Creator</title>
             <url>https://thedaviddias.dev/favicons/android-chrome-144x144.png</url>
             <link>https://thedaviddias.dev</link>
         </image>

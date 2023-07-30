@@ -53,7 +53,7 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
               </CustomLink>
             )}
             <div className="hidden sm:flex sm:gap-x-5" data-testid="desktop-menu">
-              <nav aria-label="Main navigation" className="flex gap-x-8">
+              <nav aria-label="Main navigation" className="flex gap-x-4">
                 {MENU_LINKS(t)
                   .filter((item) => item.menu !== false)
                   .map((item) => (

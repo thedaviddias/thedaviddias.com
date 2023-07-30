@@ -1,4 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 export default class MyDocument extends Document {
   render() {
@@ -40,6 +41,7 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://open.spotifycdn.com" />
           <link rel="preconnect" href="https://encore.scdn.co" />
           <link rel="preconnect" href="https://i.gr-assets.com" />
+          <Script src="https://f.convertkit.com/ckjs/ck.5.js" />
         </Head>
         <body className="antialiased">
           <Main />

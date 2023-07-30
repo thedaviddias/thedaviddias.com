@@ -29,14 +29,8 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
     <>
       <Head>
         <title>David Dias Gallery Photos</title>
-        <meta
-          property="og:image"
-          content=""
-        />
-        <meta
-          name="twitter:image"
-          content=""
-        />
+        <meta property="og:image" content="" />
+        <meta name="twitter:image" content="" />
       </Head>
       <main className="mx-auto max-w-[1960px] p-4">
         {photoId && (
@@ -55,9 +49,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
             <h1 className="mt-8 mb-4 text-base font-bold uppercase tracking-widest">
               David Dias Gallery Photos
             </h1>
-            <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">
-              Gallery
-            </p>
+            <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">Gallery</p>
           </div>
           {images.map(({ id, public_id, format, blurDataUrl }) => (
             <Link
@@ -86,9 +78,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
           ))}
         </div>
       </main>
-      <footer className="p-6 text-center text-white/80 sm:p-12">
-
-      </footer>
+      <footer className="p-6 text-center text-white/80 sm:p-12"></footer>
     </>
   )
 }

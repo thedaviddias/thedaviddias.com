@@ -149,7 +149,7 @@ export const routes: RoutesResponse = (translate) => ({
   },
   newsletter: {
     label: translate('common:layout.footer.extra_links.newsletter'),
-    path: 'https://newsletter.thedaviddias.dev',
+    path: 'https://thedaviddias.substack.com/',
     seo: extendSEO({ options: {}, translate }),
   },
   rss: {

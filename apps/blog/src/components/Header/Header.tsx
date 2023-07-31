@@ -63,7 +63,7 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
                       aria-current={pathname === item.path ? 'page' : undefined}
                       className={
                         pathname === item.path
-                          ? 'font-bold !no-underline p-2'
+                          ? 'font-bold underline p-2'
                           : 'hover:text-black hover:underline dark:hover:text-white p-2'
                       }
                     >

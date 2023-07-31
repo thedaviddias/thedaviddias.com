@@ -1,7 +1,7 @@
-import { CustomLink } from '../CustomLink'
-import { H4 } from '../Headings'
-import { Paragraph } from '../Paragraph'
-import StatusIndicator from '../ProjectsStatus/ProjectsStatus'
+import { CustomLink } from '@/components/CustomLink'
+import { H4 } from '@/components/Headings'
+import { Paragraph } from '@/components/Paragraph'
+import StatusIndicator from '@/components/ProjectsStatus/ProjectsStatus'
 
 import { ProjectsType } from '@/types'
 
@@ -25,14 +25,16 @@ export const Projects: React.FC<ProjectsProps> = ({ project }) => {
             </H4>
             <StatusIndicator status={project.frontMatter.status} />
             <Paragraph>{project.frontMatter.description}</Paragraph>
-            <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-              <div
-                className="bg-blue-600 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
-                style={{ width: project.frontMatter.progress }}
-              >
-                {project.frontMatter.progress}
+            {project.frontMatter.progress !== '100%' ? (
+              <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                <div
+                  className="bg-blue-600 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                  style={{ width: project.frontMatter.progress }}
+                >
+                  {project.frontMatter.progress}
+                </div>
               </div>
-            </div>
+            ) : null}
           </div>
         </div>
       </article>

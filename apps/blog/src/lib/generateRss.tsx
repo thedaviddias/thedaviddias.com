@@ -16,13 +16,15 @@ import localeFR from '../../locales/fr/common.json'
 export default async function generateRssFeed() {
   const notesEn = getAllPostsWithFrontMatter({ dataType: 'notes' })
   const articlesEn = getAllPostsWithFrontMatter({ dataType: 'articles' })
+  const projectsEn = getAllPostsWithFrontMatter({ dataType: 'projects' })
 
-  const postsEn = [...notesEn, ...articlesEn]
+  const postsEn = [...notesEn, ...articlesEn, ...projectsEn]
 
   const articlesFR = getAllPostsWithFrontMatter({ dataType: 'articles', locale: 'fr' })
   const notesFr = getAllPostsWithFrontMatter({ dataType: 'notes', locale: 'fr' })
+  const projectsFr = getAllPostsWithFrontMatter({ dataType: 'projects', locale: 'fr' })
 
-  const postsFr = [...articlesFR, ...notesFr]
+  const postsFr = [...articlesFR, ...notesFr, ...projectsFr]
 
   const siteURL = BASE_URL
   const date = new Date()

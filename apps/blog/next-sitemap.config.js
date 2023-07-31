@@ -61,6 +61,12 @@ const config = {
     })
 
     result.push({
+      loc: '/supporters',
+      changefreq: 'weekly',
+      ...commonOptions(config),
+    })
+
+    result.push({
       loc: '/uses',
       changefreq: 'monthly',
       ...commonOptions(config),

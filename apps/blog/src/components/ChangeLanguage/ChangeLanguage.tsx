@@ -39,14 +39,14 @@ export const ChangeLanguage: FC<ChangeLanguageProps> = ({ hasTranslation = true 
       <CustomLink
         key={lng}
         aria-label={switchLabel}
-        className="w-8 h-8 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300  transition-all"
+        className="w-7 h-7 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300  transition-all"
         href={hasTranslation ? redirectPath : '/'}
         locale={lng}
       >
         {lng === 'en' ? (
-          <UsFlag className="w-8 h-8 rounded-lg" aria-hidden />
+          <UsFlag className="w-7 h-7 rounded-lg" aria-hidden />
         ) : (
-          <FrFlag className="w-8 h-8 rounded-lg" aria-hidden />
+          <FrFlag className="w-7 h-7 rounded-lg" aria-hidden />
         )}
       </CustomLink>
     )

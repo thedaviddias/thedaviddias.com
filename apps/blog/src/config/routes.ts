@@ -147,6 +147,11 @@ export const routes: RoutesResponse = (translate) => ({
     path: 'https://kit.co/thedaviddias',
     seo: extendSEO({ options: {}, translate }),
   },
+  newsletter: {
+    label: translate('common:layout.footer.extra_links.newsletter'),
+    path: 'https://newsletter.thedaviddias.dev',
+    seo: extendSEO({ options: {}, translate }),
+  },
   rss: {
     menu: false,
     label: translate('common:layout.nav.rss'),

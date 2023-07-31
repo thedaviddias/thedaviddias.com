@@ -39,13 +39,13 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
         <div className="relative flex justify-between h-16">
           <div className="flex-1 flex items-center sm:justify-between align-middle">
             {isHomepage ? (
-              <span className="font-bold text-2xl lg:text-xl sm:mt-[-3px] sm:mr-6 !no-underline">
+              <span className="font-bold text-2xl sm:mt-[-3px] sm:mr-6 !no-underline">
                 {t('title')}
               </span>
             ) : (
               <CustomLink
                 href="/"
-                className="font-bold text-2xl lg:text-xl sm:mt-[-3px] sm:mr-6 !no-underline cursor-auto"
+                className="font-bold text-2xl sm:mt-[-3px] sm:mr-6 !no-underline cursor-auto"
                 data-testid="thedaviddias-logo"
                 data-analytics='"Homepage logo"'
               >
@@ -64,14 +64,14 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
                       className={
                         pathname === item.path
                           ? 'font-bold underline p-2'
-                          : 'hover:text-black hover:underline dark:hover:text-white p-2'
+                          : 'hover:text-black hover:underline dark:hover:text-white p-2 text-lg'
                       }
                     >
                       {item.label}
                     </CustomLink>
                   ))}
               </nav>
-              <div className="flex item space-x-4">
+              <div className="flex items-center space-x-4 justify-center">
                 <ChangeLanguage />
                 <ThemeSwitch />
               </div>

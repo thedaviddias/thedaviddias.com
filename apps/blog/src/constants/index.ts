@@ -44,6 +44,7 @@ export const EXTRA_LINKS = (translate: Translate): LinksInternalResponse[] => [
   routes(translate).gear,
   routes(translate).resume,
   routes(translate).analytics,
+  routes(translate).newsletter,
   routes(translate).rss,
 ]
 

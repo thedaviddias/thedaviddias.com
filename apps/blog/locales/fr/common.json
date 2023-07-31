@@ -186,6 +186,13 @@
   "rss": {
     "path": "/rss/fr/feed.xml"
   },
+  "404": {
+    "back_home": "Retour à l'accueil",
+    "seo": {
+      "title": "Oups 😩, cette page n'existe pas.",
+      "description": "Personne n'aime une impasse. Mais ce n'est pas encore la fin du monde !"
+    }
+  },
   "500": {
     "title": "Wow 😱, you broke everything.",
     "seo": {

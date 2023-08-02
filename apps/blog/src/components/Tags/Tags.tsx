@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import humanizeString from 'humanize-string'
 import useTranslation from 'next-translate/useTranslation'
 import slugify from 'slugify'
 
@@ -26,7 +27,7 @@ export const Tags: React.FC<TagsProps> = ({ tags, className, slug }) => {
               rounded-lg border dark:border-gray-800 border-solid
               dark:hover:bg-gray-700"
             >
-              {tag}
+              {humanizeString(tag)}
             </CustomLink>
           </li>
         ))}

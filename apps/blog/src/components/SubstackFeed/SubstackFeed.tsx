@@ -30,9 +30,9 @@ export const SubstackFeed: FC = () => {
             <H5 as="h2">{t('newsletter.sections.latest')}</H5>
             <p className="pt-3 text-s dark:text-gray-400">{t('newsletter.seo.description')}</p>
           </header>
-          <>
+          <ul>
             {feed?.items.map((item: any, index: any) => (
-              <div
+              <li
                 className="relative bg-cover"
                 key={index}
                 style={{
@@ -56,9 +56,9 @@ export const SubstackFeed: FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </li>
             ))}
-          </>
+          </ul>
           <footer className="mt-5 text-right">
             <a href="https://thedaviddias.substack.com/">{t('newsletter.sections.viewAll')}</a>
           </footer>

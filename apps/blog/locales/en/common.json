@@ -178,7 +178,7 @@
   "category": {
     "path": "/categories",
     "seo": {
-      "title": "{{name}} Related Articles",
+      "title": "{{name}} Articles",
       "description": "Explore my posts related to {{name}}."
     },
     "h1": "Category: {{name}}"

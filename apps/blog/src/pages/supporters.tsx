@@ -22,8 +22,8 @@ const categoryDescriptions: { [key: string]: { [key: string]: string } } = {
       'These are the people who have supported me in the past and for whom I will be eternally grateful.',
   },
   fr: {
-    'Supporteurs actuels': 'Voici les personnes qui me soutiennent actuellement.',
-    'Anciens supporteurs':
+    'Contributeurs actuels': 'Voici les personnes qui me soutiennent actuellement.',
+    'Contributeurs précédents':
       "Ce sont les personnes qui m'ont soutenu par le passé et à qui je serai éternellement reconnaissant.",
   },
 }

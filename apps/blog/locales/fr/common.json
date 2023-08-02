@@ -115,11 +115,11 @@
     }
   },
   "supporters": {
-    "path": "/contributeurs",
+    "path": "/supporters",
     "seo": {
       "title": "Merci à tous mes Contributeurs",
       "description": "",
-      "url": "contributeurs"
+      "url": "supporters"
     }
   },
   "projects": {

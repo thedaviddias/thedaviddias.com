@@ -1,3 +1,4 @@
+import humanizeString from 'humanize-string'
 import useTranslation from 'next-translate/useTranslation'
 
 import { CustomLink } from '@/components/CustomLink'
@@ -20,7 +21,7 @@ export const Categories: React.FC<CategoriesListProps> = ({ categories }) => {
               href={`${t('category.path')}/${category.name}`}
               className="mb-1 !font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x"
             >
-              {category.name}
+              {humanizeString(category.name)}
             </CustomLink>
           </li>
         ))}

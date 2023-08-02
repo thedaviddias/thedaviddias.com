@@ -115,5 +115,9 @@
   {
     "name": "audio",
     "description": " "
+  },
+  {
+    "name": "raycast",
+    "description": "Raycast is a blazingly fast, totally extendable launcher. It lets you complete tasks, calculate, share common links, and much more."
   }
 ]

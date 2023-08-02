@@ -1,3 +1,4 @@
+import humanizeString from 'humanize-string'
 import type { GetStaticProps, NextPage } from 'next'
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 import { NextSeo } from 'next-seo'
@@ -23,7 +24,7 @@ type CategoryPageProps = {
 const TagPage: NextPage<CategoryPageProps> = ({ posts, tag }) => {
   const { t } = useTranslation('common')
 
-  const titlePage = pages(t, tag).tag.title
+  const titlePage = humanizeString(pages(t, tag).tag.title)
   const descriptionPage = pages(t, tag).tag.description
 
   function isArticleType(post: ArticlesType | NotesType): post is ArticlesType {
@@ -36,7 +37,7 @@ const TagPage: NextPage<CategoryPageProps> = ({ posts, tag }) => {
       <main className="mx-auto space-y-20 divide-y divide-slate-200 sm:space-y-16 lg:max-w-none lg:space-y-32">
         <section className="grid grid-cols-1 gap-y-10 gap-x-6 lg:pt-10">
           <PageHeader
-            title={pages(t, tag).tag.h1}
+            title={humanizeString(pages(t, tag).tag.h1)}
             description={t('tags.seo.description', { name: tag })}
           />
 

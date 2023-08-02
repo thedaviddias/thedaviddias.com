@@ -1,3 +1,4 @@
+import humanizeString from 'humanize-string'
 import type { GetStaticProps, NextPage } from 'next'
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 import { useRouter } from 'next/router'
@@ -31,7 +32,7 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ posts, category }) => {
   const titleCategory = category?.name || ''
   const descriptionCategory = category?.description || category?.name
 
-  const titlePage = pages(t, titleCategory).category.title
+  const titlePage = humanizeString(pages(t, titleCategory).category.title)
   const descriptionPage = pages(t, descriptionCategory).category.description
 
   return (

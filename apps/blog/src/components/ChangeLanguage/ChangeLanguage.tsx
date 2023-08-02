@@ -29,7 +29,10 @@ export const ChangeLanguage: FC<ChangeLanguageProps> = ({ hasTranslation = true 
 
     let redirectPath = router.asPath
     if (
-      (router.asPath.includes('/articles/') || router.asPath.includes('/notes/')) &&
+      (router.asPath.includes('/articles/') ||
+        router.asPath.includes('/notes/') ||
+        router.asPath.includes('/categories/') ||
+        router.asPath.includes('/tags/')) &&
       !['/articles', '/notes'].includes(router.asPath)
     ) {
       redirectPath = '/'

@@ -3,6 +3,7 @@ import type { GetStaticProps, NextPage } from 'next'
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
+import React from 'react'
 
 import { BlogPost } from '@/components/BlogPost'
 import { Container } from '@/components/Container'
@@ -45,13 +46,9 @@ const TagPage: NextPage<CategoryPageProps> = ({ posts, tag }) => {
 
           <div className="grid grid-cols-1 lg:col-span-2">
             {posts?.map((post, i) => (
-              <>
-                {isArticleType(post) ? (
-                  <BlogPost key={`${i}-article`} post={post} />
-                ) : (
-                  <Notes key={`${i}-note`} note={post} />
-                )}
-              </>
+              <React.Fragment key={i}>
+                {isArticleType(post) ? <BlogPost post={post} /> : <Notes note={post} />}
+              </React.Fragment>
             ))}
           </div>
           {posts?.length ? (

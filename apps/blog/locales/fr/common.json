@@ -291,7 +291,7 @@
     }
   },
   "newsletter": {
-    "title": "S'abonner à mon bulletin digital",
+    "title": "S'abonner à la newsletter \"David's Dev Bytes\"",
     "description": "Recevez des courriels en liens avec l'accessibilité, le dévelopement web, les technologies et l'expatriation! (en anglais)",
     "subscribers": "{{number}} abonnés",
     "form": {
@@ -302,6 +302,13 @@
       "submit": {
         "text": "S'abonner"
       }
+    },
+    "seo": {
+      "description": "Lisez et abonnez-vous à ma newsletter hebdomadaire!"
+    },
+    "sections": {
+      "latest": "Dernières newsletters",
+      "viewAll": "→ Voir ma newsletter"
     },
     "all_issues": "Voir tous les bulletins précédents"
   },

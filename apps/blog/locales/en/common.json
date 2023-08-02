@@ -291,7 +291,7 @@
     }
   },
   "newsletter": {
-    "title": "Subscribe to My Newsletter",
+    "title": "Subscribe to \"David's Dev Bytes\" Newsletter",
     "description": "Receive emails about web development, tech, and life abroad!",
     "form": {
       "input": {
@@ -301,6 +301,13 @@
       "submit": {
         "text": "Subscribe"
       }
+    },
+    "seo": {
+      "description": "Read and subscribe to my weekly newsletter!"
+    },
+    "sections": {
+      "latest": "Latest Newsletters",
+      "viewAll": "→ View my newsletter"
     },
     "all_issues": "Browse past issues"
   },

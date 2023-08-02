@@ -16,6 +16,7 @@ import { LatestNotesSection } from '@/components/LatestNotesSection'
 import { LatestPostsSection } from '@/components/LatestPostsSection'
 import { LatestProjectsSection } from '@/components/LatestProjectsSection/LatestProjectsSection'
 import { Loader } from '@/components/Loader'
+import { SubstackFeed } from '@/components/SubstackFeed'
 import { ToRead } from '@/components/ToRead'
 
 import { routes } from '@/config/routes'
@@ -147,6 +148,8 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback, proj
           </section>
 
           <LatestNotesSection notes={notes} />
+
+          <SubstackFeed />
 
           <LatestProjectsSection projects={projects} />
 

@@ -28,7 +28,7 @@ export const Projects: React.FC<ProjectsProps> = ({ project }) => {
             {project.frontMatter.progress !== '100%' ? (
               <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
                 <div
-                  className="bg-blue-600 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                  className="bg-blue-700 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
                   style={{ width: project.frontMatter.progress }}
                 >
                   {project.frontMatter.progress}

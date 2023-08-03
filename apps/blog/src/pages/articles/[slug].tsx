@@ -16,7 +16,6 @@ import slugify from 'slugify'
 
 import { AdjacentPostsProps, PreviousNext } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
-import { BuyMeACoffee } from '@/components/BuyMeACoffee/BuyMeACoffee'
 import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
 import { DatePost } from '@/components/DatePost'
@@ -33,6 +32,8 @@ import { Tags } from '@/components/Tags'
 
 import { routes } from '@/config/routes'
 import { BASE_URL, CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH } from '@/constants'
+import { addDomainToImagePath } from '@/utils/addDomainToImagePath'
+import { extractImagesFromMarkdown } from '@/utils/extract-images'
 import { getAdjacentPosts } from '@/utils/get-article-posts/getAdjacentPosts'
 import { getAllPosts } from '@/utils/get-article-posts/getAllPosts'
 import { getPost } from '@/utils/get-article-posts/getPost'
@@ -50,6 +51,13 @@ const Comments = dynamic<object>(
 
 const AdjacentPosts = dynamic<AdjacentPostsProps>(
   () => import('../../components/AdjacentPosts').then((mod) => mod.AdjacentPosts),
+  {
+    loading: () => <Loader />,
+  }
+)
+
+const BuyMeACoffee = dynamic(
+  () => import('../../components/BuyMeACoffee').then((mod) => mod.BuyMeACoffee),
   {
     loading: () => <Loader />,
   }
@@ -95,6 +103,7 @@ type BlogPostPageProps = BlogPostProps & {
   headings: Headings[]
   adjacentPosts: PreviousNext
   relatedPosts: GetRelatedPosts[]
+  images: string[]
 }
 
 export type WebMention = {
@@ -132,6 +141,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
   slug,
   adjacentPosts,
   relatedPosts,
+  images,
 }) => {
   const { title, description, tags, categories, date, lastmod, author, published, preview } =
     frontMatter
@@ -156,7 +166,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
           article: {
             publishedTime: date,
             modifiedTime: lastmod,
-            authors: [`https://thedaviddias.dev/authors/@david-dias`],
+            authors: [`https://thedaviddias.dev/about`],
             tags,
           },
           images: [
@@ -170,14 +180,21 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
         }}
       />
       <ArticleJsonLd
-        type="Blog"
+        type="BlogPosting"
         url={permalink}
         title={title}
-        images={[`${BASE_URL}${preview.url}`]}
+        images={[`${BASE_URL}${preview.url}`, ...addDomainToImagePath(images)]}
         datePublished={date}
         dateModified={lastmod}
-        authorName="David Dias"
         description={description}
+        authorName={[
+          {
+            name: 'David Dias',
+            url: 'https://thedaviddias.dev',
+          },
+        ]}
+        publisherName="David Dias"
+        isAccessibleForFree={true}
       />
       <BreadcrumbJsonLd
         itemListElements={[
@@ -341,6 +358,8 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
     const resp = await fetch(`https://webmention.io/api/count.json?target=${permalink}/`)
     const { type, count } = await resp.json()
 
+    const { images } = extractImagesFromMarkdown(markdownBody)
+
     return {
       props: {
         frontMatter: {
@@ -370,6 +389,7 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
         headings,
         relatedPosts: locale && JSON.parse(JSON.stringify(getRelatedPosts(slug, locale, tags))),
         adjacentPosts: locale && getAdjacentPosts(slug, locale, contentType),
+        images,
         source: await serialize(markdownBody, {
           mdxOptions: {
             remarkPlugins: [remarkGfm, remarkCodeTitles],

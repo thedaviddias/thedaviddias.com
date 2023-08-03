@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
-import { ArticleJsonLd, NextSeo } from 'next-seo'
+import { ArticleJsonLd, BreadcrumbJsonLd, NextSeo } from 'next-seo'
 import { ReadTimeResults } from 'reading-time'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeImagePlaceholder from 'rehype-image-placeholder'
@@ -14,7 +14,6 @@ import remarkGfm from 'remark-gfm'
 
 import { AdjacentPostsProps, PreviousNext } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
-import { BuyMeACoffee } from '@/components/BuyMeACoffee/BuyMeACoffee'
 import { Container } from '@/components/Container'
 import { DatePost } from '@/components/DatePost'
 import { H1 } from '@/components/Headings'
@@ -25,7 +24,7 @@ import { ShareProps } from '@/components/Share'
 import { Tags } from '@/components/Tags'
 
 import { routes } from '@/config/routes'
-import { CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH } from '@/constants'
+import { BASE_URL, CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH } from '@/constants'
 import { getAdjacentPosts } from '@/utils/get-article-posts/getAdjacentPosts'
 import { getAllPosts } from '@/utils/get-article-posts/getAllPosts'
 import { getPost } from '@/utils/get-article-posts/getPost'
@@ -41,6 +40,13 @@ const Comments = dynamic<object>(
 
 const AdjacentPosts = dynamic<AdjacentPostsProps>(
   () => import('../../components/AdjacentPosts').then((mod) => mod.AdjacentPosts),
+  {
+    loading: () => <Loader />,
+  }
+)
+
+const BuyMeACoffee = dynamic(
+  () => import('../../components/BuyMeACoffee').then((mod) => mod.BuyMeACoffee),
   {
     loading: () => <Loader />,
   }
@@ -101,7 +107,7 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
           type: 'article',
           article: {
             publishedTime: date,
-            authors: ['https://thedaviddias.dev/authors/@david-dias'],
+            authors: ['https://thedaviddias.dev/about'],
             tags,
           },
           images: [
@@ -115,13 +121,33 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
         }}
       />
       <ArticleJsonLd
-        type="Blog"
+        type="BlogPosting"
         url={permalink}
         title={title}
         images={[]}
         datePublished={date}
-        authorName="David Dias"
+        authorName={[
+          {
+            name: 'David Dias',
+            url: 'https://thedaviddias.dev',
+          },
+        ]}
+        publisherName="David Dias"
         description={description}
+      />
+      <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: 'Notes',
+            item: `${BASE_URL}/notes`,
+          },
+          {
+            position: 2,
+            name: title,
+            item: permalink,
+          },
+        ]}
       />
       <main id="main" data-skip-link="the article">
         <article className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

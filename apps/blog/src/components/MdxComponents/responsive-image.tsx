@@ -15,7 +15,7 @@ export const ResponsiveImage: React.FC<ImageProps> = ({
   const updatedFigcaption = title && extractLinks(title)
 
   return (
-    <div className="my-3">
+    <span className="my-3 block">
       <CustomLink href={src as string} aria-label="Click to enlarge the image">
         <Image
           alt={alt}
@@ -39,6 +39,6 @@ export const ResponsiveImage: React.FC<ImageProps> = ({
           <span dangerouslySetInnerHTML={{ __html: updatedFigcaption ?? title }} />
         </figcaption>
       )}
-    </div>
+    </span>
   )
 }

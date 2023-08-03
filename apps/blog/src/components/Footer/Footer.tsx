@@ -72,12 +72,12 @@ export const Footer = () => {
   if (!mounted) return null
 
   return (
-    <div className="mt-auto pt-5 sm:pt-8">
+    <footer className="mt-auto pt-5 sm:pt-8">
       <div className="h-36 max-w-5xl mx-auto relative">
         <Image
           className="object-cover max-w-xl mx-auto"
           src="/images/david-dias-banner.png"
-          alt=""
+          alt="David mecanic mode, David designer mode, David gaming mode, David sailing mode, David VR mode"
           aria-hidden="true"
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -86,7 +86,7 @@ export const Footer = () => {
       <div>
         <NewsletterForm />
       </div>
-      <footer
+      <div
         className="main-footer bg-gray-50 dark:bg-black transform"
         aria-labelledby="footer-heading"
       >
@@ -115,7 +115,7 @@ export const Footer = () => {
             </p>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   )
 }

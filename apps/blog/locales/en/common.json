@@ -155,7 +155,7 @@
   "tags": {
     "path": "/tags",
     "seo": {
-      "title": "{{name}} Related Notes",
+      "title": "{{name}} Notes",
       "url": "tags",
       "title_all": "Tags Overview",
       "description": "Posts linked to {{name}}.",
@@ -179,7 +179,7 @@
     "path": "/categories",
     "seo": {
       "title": "{{name}} Articles",
-      "description": "Explore my posts related to {{name}}."
+      "description": "Explore posts related to {{name}}."
     },
     "h1": "Category: {{name}}"
   },

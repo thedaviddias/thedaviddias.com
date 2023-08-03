@@ -55,7 +55,11 @@ export const CustomLink: React.FC<CustomLinkProps> = ({
   }
 
   return (
-    <Link href={href} className={`cursor-pointer hover:underline ${className}`} {...rest}>
+    <Link
+      href={href}
+      className={`cursor-pointer hover:underline ${className ? className : ''}`}
+      {...rest}
+    >
       {children}
     </Link>
   )

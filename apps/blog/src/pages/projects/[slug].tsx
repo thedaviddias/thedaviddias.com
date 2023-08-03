@@ -104,10 +104,10 @@ const contentType = 'projects'
 
 const ProjectPage: NextPage<BlogPostPageProps> = ({ frontMatter, source, permalink, slug }) => {
   const { title, description, tags, date, lastmod, author, published, preview } = frontMatter
-  const { isFallback } = useRouter()
+  const test = useRouter()
   const { t } = useTranslation('common')
 
-  if (isFallback || !title) {
+  if (test.isFallback || !title) {
     return <Loader />
   }
 
@@ -125,7 +125,7 @@ const ProjectPage: NextPage<BlogPostPageProps> = ({ frontMatter, source, permali
           article: {
             publishedTime: date,
             modifiedTime: lastmod,
-            authors: [`https://thedaviddias.dev/authors/@david-dias`],
+            authors: [`https://thedaviddias.dev/about`],
             tags,
           },
           images: [
@@ -145,15 +145,21 @@ const ProjectPage: NextPage<BlogPostPageProps> = ({ frontMatter, source, permali
         images={[`${BASE_URL}${preview.url}`]}
         datePublished={date}
         dateModified={lastmod}
-        authorName="David Dias"
+        authorName={[
+          {
+            name: 'David Dias',
+            url: 'https://thedaviddias.dev',
+          },
+        ]}
+        publisherName="David Dias"
         description={description}
       />
       <BreadcrumbJsonLd
         itemListElements={[
           {
             position: 1,
-            name: 'Articles',
-            item: 'https://thedaviddias.dev/articles',
+            name: 'Projects',
+            item: `${BASE_URL}/projects`,
           },
           {
             position: 2,

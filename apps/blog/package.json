@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "analyse": "ANALYZE=true next build",
     "postbuild": "next-sitemap",
     "check:all": "pnpm check:format && pnpm check:lint && pnpm build",
     "check:format": "prettier --check .",

@@ -1,14 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextTranslate = require('next-translate-plugin')
-const { withSentryConfig } = require('@sentry/nextjs')
 const { withPlausibleProxy } = require('next-plausible')
 const withPlugins = require('next-compose-plugins')
-const withBundleAnalyzer = require('@next/bundle-analyzer')
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
+const path = require('path')
 
 const plausiblePlugin = withPlausibleProxy
-const bundleAnalyser = withBundleAnalyzer({ enabled: process.env.ANALYZE === 'true' })
 
-const plugins = [plausiblePlugin, bundleAnalyser]
+const plugins = [plausiblePlugin]
 
 const nextConfig = withPlugins([plugins, nextTranslate], {
   reactStrictMode: true,
@@ -48,6 +50,10 @@ const nextConfig = withPlugins([plugins, nextTranslate], {
         permanent: true,
       },
     ]
+  },
+  // Ref: https://nextjs.org/docs/advanced-features/output-file-tracing#caveats
+  experimental: {
+    outputFileTracingRoot: path.join(__dirname, '../../'),
   },
   webpack(config) {
     config.module.rules.push({
@@ -94,16 +100,8 @@ const nextConfig = withPlugins([plugins, nextTranslate], {
   },
 })
 
-const sentryWebpackPluginOptions = {
-  // Additional config options for the Sentry Webpack plugin. Keep in mind that
-  // the following options are set automatically, and overriding them is not
-  // recommended:
-  //   release, url, org, project, authToken, configFile, stripPrefix,
-  //   urlPrefix, include, ignore
-  silent: true, // Suppresses all logs
-  dryRun: process.env.VERCEL_ENV !== 'production',
-}
+const moduleExports = nextConfig
 
 // Make sure adding Sentry options is the last code to run before exporting, to
 // ensure that your source maps include changes from all other Webpack plugins
-module.exports = withSentryConfig(nextConfig, sentryWebpackPluginOptions)
+module.exports = moduleExports

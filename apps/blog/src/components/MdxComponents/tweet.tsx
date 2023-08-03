@@ -1,4 +1,7 @@
-import { TwitterEmbed, TwitterEmbedProps } from 'react-social-media-embed'
+import {
+  TwitterEmbed,
+  TwitterEmbedProps,
+} from 'react-social-media-embed/dist/components/embeds/TwitterEmbed'
 
 export const Tweet = (props: TwitterEmbedProps) => {
   return (

@@ -255,7 +255,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
 
                   {published?.url && (
                     <Paragraph className="italic pt-8">
-                      {t('posts.published')}{' '}
+                      {t('posts.first_published')}{' '}
                       <CustomLink href={published.url} as="span">
                         {published.on}
                       </CustomLink>

@@ -29,7 +29,10 @@ export const DatePost: React.FC<DatePostProps> = ({ date, lastmod }) => {
             <span>({t('posts.updated')}</span> <time dateTime={lastmod}>{dateUpdated})</time>
           </p>
         )}
-        <time dateTime={date}>{datePublished}</time>
+        <p>
+          <span className="sr-only">{t('posts.published')}</span>{' '}
+          <time dateTime={date}>{datePublished}</time>
+        </p>
       </div>
     </div>
   )

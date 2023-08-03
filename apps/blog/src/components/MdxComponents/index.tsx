@@ -6,6 +6,7 @@ import {
   OlHTMLAttributes,
   ReactNode,
 } from 'react'
+import { LinkedInEmbed } from 'react-social-media-embed/dist/components/embeds/LinkedInEmbed'
 
 import { H1, H2, H3, H4 } from '@/components/Headings'
 import { Paragraph } from '@/components/Paragraph'
@@ -20,6 +21,7 @@ import { Tweet } from './tweet'
 import { Sidenote } from '../Sidenote'
 
 export const MDXComponents: any = {
+  LinkedInEmbed,
   hr: (
     props: JSX.IntrinsicAttributes & ClassAttributes<HTMLHRElement> & HTMLAttributes<HTMLHRElement>
   ) => <hr {...props} />,

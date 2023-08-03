@@ -203,8 +203,9 @@
   "posts": {
     "empty": "Couldn't find any articles for that query.",
     "continue": "Continue reading →",
-    "updated": "Updated on",
-    "published": "First published on",
+    "updated": "Updated",
+    "first_published": "First published on",
+    "published": "Published",
     "tableContent": "Table of Contents",
     "previous": "Previous post",
     "next": "Next post"

@@ -213,7 +213,7 @@ const ProjectPage: NextPage<BlogPostPageProps> = ({ frontMatter, source, permali
 
                   {published?.url && (
                     <Paragraph className="italic pt-8">
-                      {t('posts.published')}{' '}
+                      {t('posts.first_published')}{' '}
                       <CustomLink href={published.url} as="span">
                         {published.on}
                       </CustomLink>

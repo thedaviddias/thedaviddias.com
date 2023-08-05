@@ -1,4 +1,3 @@
-import { formatDistance } from 'date-fns'
 import useTranslation from 'next-translate/useTranslation'
 
 import { GetRelatedPosts } from '@/utils/get-article-posts/getRelatedPosts'

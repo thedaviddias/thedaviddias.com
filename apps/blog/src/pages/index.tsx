@@ -120,8 +120,7 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback, proj
                 src="/images/david-dias-round.jpg"
                 width={250}
                 height={250}
-                alt="Photo of David Dias"
-                priority={true}
+                alt="Photo of David Dias in black and white"
                 style={{
                   maxWidth: '100%',
                   height: 'auto',

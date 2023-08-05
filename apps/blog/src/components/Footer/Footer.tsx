@@ -87,7 +87,7 @@ export const Footer = () => {
         <NewsletterForm />
       </div>
       <div
-        className="main-footer bg-gray-50 dark:bg-[#090808] transform"
+        className="main-footer bg-gray-50 dark:bg-black transform"
         aria-labelledby="footer-heading"
       >
         <h2 id="footer-heading" className="sr-only">

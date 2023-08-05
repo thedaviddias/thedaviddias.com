@@ -84,6 +84,11 @@ const nextConfig = withPlugins([plugins, nextTranslate], {
         permanent: true,
       },
       {
+        source: '/notes/methodology-principle-user-first',
+        destination: '/notes/philosophy-approach-user-first',
+        permanent: true,
+      },
+      {
         source: '/blog/:slug',
         destination: '/articles/:slug',
         permanent: true,

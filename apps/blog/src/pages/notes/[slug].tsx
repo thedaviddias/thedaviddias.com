@@ -11,6 +11,7 @@ import rehypeImagePlaceholder from 'rehype-image-placeholder'
 import rehypePrismPlus from 'rehype-prism-plus'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
+import remarkUnwrapImages from 'remark-unwrap-images'
 
 import { AdjacentPostsProps, PreviousNext } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
@@ -248,7 +249,7 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
         adjacentPosts: locale && getAdjacentPosts(slug, locale, contentType),
         source: await serialize(markdownBody, {
           mdxOptions: {
-            remarkPlugins: [remarkGfm, remarkCodeTitles],
+            remarkPlugins: [remarkGfm, remarkCodeTitles, remarkUnwrapImages],
             rehypePlugins: [
               [rehypePrismPlus, { ignoreMissing: true }],
               [rehypeImagePlaceholder, { dir: 'public/' }],

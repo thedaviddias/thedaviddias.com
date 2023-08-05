@@ -65,31 +65,33 @@ const Supporters: NextPage<SupportersProps> = ({ supporters, frontMatter, source
       ]}
       className="pt-10 border-none"
     >
-      <PageHeader title={titlePage} description={descriptionPage} />
+      <div>
+        <PageHeader title={titlePage} description={descriptionPage} />
 
-      <MDXRemote {...source} components={MDXComponents} lazy />
+        <MDXRemote {...source} components={MDXComponents} lazy />
 
-      {categoryOrder.map((category) => {
-        const sortedSupporters =
-          supporters[category]?.sort((a: SupportersType, b: SupportersType) =>
-            a.name.localeCompare(b.name)
-          ) || []
+        {categoryOrder.map((category) => {
+          const sortedSupporters =
+            supporters[category]?.sort((a: SupportersType, b: SupportersType) =>
+              a.name.localeCompare(b.name)
+            ) || []
 
-        return (
-          <section key={category} className="flex flex-col mt-5 mb-8">
-            <header className="pb-5">
-              <H2 as="h2">{category}</H2>
-              <p>{categoryDescriptionsForLocale[category]}</p>
-            </header>
+          return (
+            <section key={category} className="flex flex-col mt-5 mb-8">
+              <header className="pb-5">
+                <H2 as="h2">{category}</H2>
+                <p>{categoryDescriptionsForLocale[category]}</p>
+              </header>
 
-            <ul className="flex flex-col gap-y-5">
-              {sortedSupporters.map((supporter: SupportersType, i: number) => (
-                <SupporterCard key={i} supporter={supporter} />
-              ))}
-            </ul>
-          </section>
-        )
-      })}
+              <ul className="flex flex-col gap-y-5">
+                {sortedSupporters.map((supporter: SupportersType, i: number) => (
+                  <SupporterCard key={i} supporter={supporter} />
+                ))}
+              </ul>
+            </section>
+          )
+        })}
+      </div>
     </BaseLayout>
   )
 }

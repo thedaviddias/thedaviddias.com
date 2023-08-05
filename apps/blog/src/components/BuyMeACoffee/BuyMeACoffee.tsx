@@ -5,7 +5,7 @@ import { CustomLink } from '../CustomLink'
 
 export const BuyMeACoffee = () => {
   return (
-    <div className="mt-10 border-t border-gray-200 dark:border-gray-600 pt-8 text-center">
+    <div className="mt-10 border-t border-b border-gray-200 dark:border-gray-600 pt-8 pb-8 text-center mb-10">
       <div className="text-2xl">Has this been helpful to you?</div>
       <div className="text-lg">
         You can support my work by sharing this article with others,

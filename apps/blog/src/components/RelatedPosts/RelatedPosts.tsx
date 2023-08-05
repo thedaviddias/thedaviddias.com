@@ -1,3 +1,4 @@
+import { formatDistance } from 'date-fns'
 import useTranslation from 'next-translate/useTranslation'
 
 import { GetRelatedPosts } from '@/utils/get-article-posts/getRelatedPosts'
@@ -25,7 +26,7 @@ export const RelatedPosts: React.FC<RelatedPostsProps> = ({ relatedPosts }) => {
           </header>
           <ul className="list-disc pl-5">
             {relatedPosts.map((post) => (
-              <li key={post.frontMatter.title}>
+              <li key={post.frontMatter.title} className="mb-3">
                 <CustomLink
                   href={post.permalink}
                   className="text-gray-600 hover:text-gray-900 p-1 dark:text-gray-200 text-xl"

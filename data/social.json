@@ -1,5 +1,9 @@
 [
   {
+    "label": "LinkedIn",
+    "link": "https://linkedin.com/in/thedaviddias"
+  },
+  {
     "label": "Twitter",
     "link": "https://twitter.com/thedaviddias"
   },
@@ -18,10 +22,6 @@
   {
     "label": "Twitch",
     "link": "https://twitch.com/thedaviddias"
-  },
-  {
-    "label": "LinkedIn",
-    "link": "https://linkedin.com/in/thedaviddias"
   },
   {
     "label": "Instagram",

@@ -12,6 +12,7 @@ import rehypeImagePlaceholder from 'rehype-image-placeholder'
 import rehypePrismPlus from 'rehype-prism-plus'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
+import remarkUnwrapImages from 'remark-unwrap-images'
 
 import { Author } from '@/components/Author'
 import { Container } from '@/components/Container'
@@ -306,11 +307,10 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
         headings,
         source: await serialize(markdownBody, {
           mdxOptions: {
-            remarkPlugins: [remarkGfm, remarkCodeTitles],
+            remarkPlugins: [remarkGfm, remarkCodeTitles, remarkUnwrapImages],
             rehypePlugins: [
               [rehypePrismPlus, { ignoreMissing: true }],
               [rehypeImagePlaceholder, { dir: 'public/' }],
-              // [rehypeFigure, { className: 'my-3' }],
               rehypeSlug,
               [rehypeAutolinkHeadings],
               [rehypeExtractHeadings, { rank: 2, headings }],

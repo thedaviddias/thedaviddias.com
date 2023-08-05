@@ -4,18 +4,11 @@ import { extractLinks } from '@/utils/extract-links'
 
 import { CustomLink } from '../CustomLink'
 
-export const ResponsiveImage: React.FC<ImageProps> = ({
-  src,
-  title,
-  alt = '',
-  height,
-  width,
-  ...rest
-}) => {
+export const ResponsiveImage: React.FC<ImageProps> = ({ src, title, alt = '', height, width }) => {
   const updatedFigcaption = title && extractLinks(title)
 
   return (
-    <span className="my-3 block">
+    <div className="my-3 block">
       <CustomLink href={src as string} aria-label="Click to enlarge the image">
         <Image
           alt={alt}
@@ -25,9 +18,6 @@ export const ResponsiveImage: React.FC<ImageProps> = ({
           src={src}
           height={height}
           width={width}
-          placeholder="blur"
-          {...rest}
-          sizes="100vw"
           style={{
             width: '100%',
             height: 'auto',
@@ -39,6 +29,6 @@ export const ResponsiveImage: React.FC<ImageProps> = ({
           <span dangerouslySetInnerHTML={{ __html: updatedFigcaption ?? title }} />
         </figcaption>
       )}
-    </span>
+    </div>
   )
 }

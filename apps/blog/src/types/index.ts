@@ -33,6 +33,7 @@ export type FrontMatterType<Type extends 'article' | 'note' | 'project'> = {
   title: string
   preview: {
     url: string
+    alt?: string
   }
   published?: {
     on: string

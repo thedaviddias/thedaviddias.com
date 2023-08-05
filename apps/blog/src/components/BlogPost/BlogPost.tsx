@@ -59,7 +59,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post, isCategoryPage }) => {
             className="object-cover rounded-md"
             src={post.frontMatter.preview.url}
             fill
-            alt=""
+            alt={post.frontMatter.preview.alt || ''}
             aria-hidden="true"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />

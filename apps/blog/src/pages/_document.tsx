@@ -4,7 +4,7 @@ import Script from 'next/script'
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html className="scroll-smooth">
+      <Html className="scroll-smooth ">
         <Head>
           <link
             rel="preload"
@@ -43,7 +43,7 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://i.gr-assets.com" />
           <Script src="https://f.convertkit.com/ckjs/ck.5.js" />
         </Head>
-        <body className="antialiased">
+        <body className="antialiased bg-white dark:text-white dark:bg-[#111010]">
           <Main />
           <NextScript />
         </body>

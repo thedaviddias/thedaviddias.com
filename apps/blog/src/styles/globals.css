@@ -55,7 +55,7 @@ h6 {
 }
 
 .small-title {
-  @apply text-sm font-title font-semibold text-gray-500 tracking-wider uppercase my-2;
+  @apply text-sm font-title font-semibold text-gray-400 tracking-wider uppercase my-2;
 }
 
 /* .separator {

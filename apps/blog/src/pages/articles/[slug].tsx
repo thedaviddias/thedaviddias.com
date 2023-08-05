@@ -158,6 +158,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
       <NextSeo
         title={title}
         description={description}
+        titleTemplate={'%s | David Dias'}
         openGraph={{
           title,
           description,

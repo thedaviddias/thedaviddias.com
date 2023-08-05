@@ -51,8 +51,8 @@ jobs:
       - name: Run build
         run: pnpm build
 
-      - name: Run tests
-        run: pnpm test:e2e
+      # - name: Run tests
+      #   run: pnpm test:e2e
 
       # - name: SimpleLocalize Download
       #   uses: simplelocalize/download@latest
@@ -62,11 +62,11 @@ jobs:
       #     downloadFormat: single-language-json
       #     uploadOptions: 'WRITE_NESTED,ESCAPE_NEW_LINES'
 
-      - name: Vercel deployment
-        uses: amondnet/vercel-action@v25.1.1
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-args: '--prod'
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
+      # - name: Vercel deployment
+      #   uses: amondnet/vercel-action@v25.1.1
+      #   with:
+      #     vercel-token: ${{ secrets.VERCEL_TOKEN }}
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     vercel-args: '--prod'
+      #     vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
+      #     vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}

@@ -74,19 +74,19 @@ jobs:
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
           SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
 
-      - name: Deploy to Staging
-        id: deploy-vercel-staging
-        uses: BetaHuhn/deploy-to-vercel-action@v1
-        with:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID}}
-          PRODUCTION: false
-          BUILD_ENV: |
-            RAINDROP_COLLECTION=${{ secrets.RAINDROP_COLLECTION }}
-            RAINDROP_TOKEN=${{ secrets.RAINDROP_TOKEN }}
-            GH_PUBLIC_TOKEN=${{ secrets.GH_PUBLIC_TOKEN }}
-            SPOTIFY_CLIENT_ID=${{ secrets.SPOTIFY_CLIENT_ID }}
-            SPOTIFY_CLIENT_SECRET=${{ secrets.SPOTIFY_CLIENT_SECRET }}
-            SPOTIFY_REFRESH_TOKEN=${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+      # - name: Deploy to Staging
+      #   id: deploy-vercel-staging
+      #   uses: BetaHuhn/deploy-to-vercel-action@v1
+      #   with:
+      #     VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      #     VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID}}
+      #     PRODUCTION: false
+      #     BUILD_ENV: |
+      #       RAINDROP_COLLECTION=${{ secrets.RAINDROP_COLLECTION }}
+      #       RAINDROP_TOKEN=${{ secrets.RAINDROP_TOKEN }}
+      #       GH_PUBLIC_TOKEN=${{ secrets.GH_PUBLIC_TOKEN }}
+      #       SPOTIFY_CLIENT_ID=${{ secrets.SPOTIFY_CLIENT_ID }}
+      #       SPOTIFY_CLIENT_SECRET=${{ secrets.SPOTIFY_CLIENT_SECRET }}
+      #       SPOTIFY_REFRESH_TOKEN=${{ secrets.SPOTIFY_REFRESH_TOKEN }}

@@ -24,6 +24,7 @@ import { H1 } from '@/components/Headings'
 import { Loader } from '@/components/Loader'
 import { MDXComponents } from '@/components/MdxComponents'
 import { Paragraph } from '@/components/Paragraph'
+import { Popular } from '@/components/Popular'
 import { RelatedPosts } from '@/components/RelatedPosts'
 import { ScrollTop } from '@/components/ScrollTop'
 import { ShareProps } from '@/components/Share'
@@ -293,6 +294,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                 {headings && (
                   <aside className="w-full mt-3">
                     <TableOfContents headings={headings} />
+                    <Popular />
                   </aside>
                 )}
               </div>

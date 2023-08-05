@@ -1,6 +1,7 @@
 import humanizeString from 'humanize-string'
 import type { GetStaticProps, NextPage } from 'next'
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
@@ -37,6 +38,9 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ posts, category }) => {
 
   return (
     <Container>
+      <Head>
+        <meta name="robots" content="noindex" />
+      </Head>
       <NextSeo title={titlePage} description={descriptionPage} />
       <main className="mx-auto space-y-20 divide-y divide-slate-200 sm:space-y-16 lg:max-w-none lg:space-y-32">
         <section className="grid grid-cols-1 gap-y-10 gap-x-6 lg:pt-10">

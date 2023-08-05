@@ -31,6 +31,7 @@ const nextConfig = withPlugins([plugins, nextTranslate], {
       'i.gr-assets.com',
       'i.ytimg.com',
       'github.com',
+      'substack-post-media.s3.amazonaws.com',
     ],
     formats: ['image/avif', 'image/webp'],
   },

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import React, { FC, useCallback, useEffect } from 'react'
 
@@ -33,26 +34,32 @@ export const SubstackFeed: FC = () => {
           <ul>
             {feed?.items.map((item: any, index: any) => (
               <li
-                className="relative bg-cover"
+                className="relative overflow-hidden"
                 key={index}
                 style={{
-                  backgroundImage: `url(${item.enclosures[0].url})`,
-                  backgroundSize: `cover`,
                   height: '300px',
                   width: '300px',
-                  backgroundPosition: `center center`,
                 }}
               >
-                <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-                <div className="relative flex flex-col items-center justify-center w-full px-4 py-3 sm:justify-between">
-                  <div className="items-center justify-center w-full sm:flex">
-                    <div className="max-w-lg">
-                      <a href={item.link}>
-                        <header className="text-white text-2xl font-bold">{item.title}</header>
-                        <p className="mb-4 font-medium text-white sm:mb-0 md:mb-0">
-                          {item.description}
-                        </p>
-                      </a>
+                <div className="absolute inset-0 flex flex-col">
+                  <Image
+                    src={item.enclosures[0].url}
+                    fill={true}
+                    style={{ objectFit: 'cover' }}
+                    aria-hidden="true"
+                    alt=""
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+                  <div className="relative flex flex-col items-center justify-center w-full px-4 py-3 sm:justify-between">
+                    <div className="items-center justify-center w-full sm:flex">
+                      <div className="max-w-lg">
+                        <a href={item.link}>
+                          <header className="text-white text-2xl font-bold">{item.title}</header>
+                          <p className="mb-4 font-medium text-white sm:mb-0 md:mb-0">
+                            {item.description}
+                          </p>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

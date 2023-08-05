@@ -20,9 +20,10 @@ export const BuyMeACoffee = () => {
             rel="noopener noreferrer"
             target="_blank"
             className="external-link plausible-event-name=kofi"
+            aria-label="Buy me a coffee on Ko-fi"
           >
             <Image
-              className="inline-block h-auto max-w-xl pt-2 w-auto h-auto"
+              className="inline-block h-auto max-w-xl pt-2 w-auto"
               src="/images/kofi.png"
               width={40}
               height={40}

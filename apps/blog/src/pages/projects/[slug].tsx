@@ -117,6 +117,7 @@ const ProjectPage: NextPage<BlogPostPageProps> = ({ frontMatter, source, permali
       <NextSeo
         title={title}
         description={description}
+        titleTemplate={'%s | David Dias'}
         openGraph={{
           title,
           description,

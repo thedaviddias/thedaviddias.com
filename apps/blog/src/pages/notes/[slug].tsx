@@ -100,6 +100,7 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
       <NextSeo
         title={title}
         description={description}
+        titleTemplate={'%s | David Dias'}
         openGraph={{
           title,
           description,

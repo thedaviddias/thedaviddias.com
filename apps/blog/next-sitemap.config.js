@@ -1,14 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
 
-const { execSync } = require('child_process')
-const path = require('path')
-
-const hasChanges = () => {
-  const changes = execSync('git diff --name-only').toString()
-
-  return changes.split('\n').some((file) => file.startsWith('content/'))
-}
-
 const commonOptions = (config) => ({
   lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
   alternateRefs: [

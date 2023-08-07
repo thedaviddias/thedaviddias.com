@@ -31,7 +31,7 @@ export const SubstackFeed: FC = () => {
             <H5 as="h2">{t('newsletter.sections.latest')}</H5>
             <p className="pt-3 text-s dark:text-gray-400">{t('newsletter.seo.description')}</p>
           </header>
-          <ul>
+          <ul className="flex flex-col md:flex-row gap-5">
             {feed?.items.map((item: any, index: any) => (
               <li
                 className="relative overflow-hidden"

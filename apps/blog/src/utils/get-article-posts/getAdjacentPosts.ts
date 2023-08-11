@@ -13,8 +13,8 @@ export function getAdjacentPosts(slug: string, locale: string, dataType: string)
       ? {
           slug: allPostHeaders[previousIndex].permalink,
           title: allPostHeaders[previousIndex].frontMatter.title,
-          image: allPostHeaders[previousIndex].frontMatter?.preview?.url || '',
-          alt: allPostHeaders[nextIndex].frontMatter?.preview?.alt || '',
+          image: allPostHeaders[previousIndex]?.frontMatter?.preview?.url || '',
+          alt: allPostHeaders[nextIndex]?.frontMatter?.preview?.alt || '',
         }
       : null
 
@@ -23,8 +23,8 @@ export function getAdjacentPosts(slug: string, locale: string, dataType: string)
       ? {
           slug: allPostHeaders[nextIndex].permalink,
           title: allPostHeaders[nextIndex].frontMatter.title,
-          image: allPostHeaders[nextIndex].frontMatter?.preview?.url || '',
-          alt: allPostHeaders[nextIndex].frontMatter?.preview?.alt || '',
+          image: allPostHeaders[nextIndex]?.frontMatter?.preview?.url || '',
+          alt: allPostHeaders[nextIndex]?.frontMatter?.preview?.alt || '',
         }
       : null
 

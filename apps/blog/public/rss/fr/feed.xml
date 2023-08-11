@@ -4,7 +4,7 @@
         <title>The David Dias | Développeur Front-End, podcasteur &amp; créateur de contenu</title>
         <link>https://thedaviddias.dev</link>
         <description>Salut toi! Je m'appele David Dias. Je suis développeur Front-End, podcasteur, créateur de contenu numérique passioné pour résoudre les problèmes digitaux et humains! J'aime rencontrer de nouvelles personnes, bâtir des communautées et parler de tech, d'expatriation et de web.</description>
-        <lastBuildDate>Sat, 05 Aug 2023 19:26:26 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 11 Aug 2023 19:20:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>fr</language>
@@ -138,8 +138,8 @@ Ce n’est que récemment que j’ai pris le temps de rassembler toutes les info
         </item>
         <item>
             <title><![CDATA[Outils et astuces pour rendre accessible et performante son application React]]></title>
-            <link>https://thedaviddias.dev/fr/articles/outils-astuces-rendre-accessible-performante-application-react</link>
-            <guid>https://thedaviddias.dev/fr/articles/outils-astuces-rendre-accessible-performante-application-react</guid>
+            <link>https://thedaviddias.dev/fr/articles/outils-astuces-pour-rendre-accessible-performante-son-application-react</link>
+            <guid>https://thedaviddias.dev/fr/articles/outils-astuces-pour-rendre-accessible-performante-son-application-react</guid>
             <pubDate>Mon, 24 Dec 2018 02:34:11 GMT</pubDate>
             <description><![CDATA[L'accessibilité et la performance sont deux de mes sujets de prédilection. Je partage dans cet article mes astuces et conseils pour vous assurez une qualité minimum pour votre projet.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">L’accessibilité et la performance sont deux (vastes) sujets qui m’ont toujours passionné et qui sont devenus ces dernières années au centre de nombreux meetups et conférences auquels j’ai pu assister (petit clin d’oeil à <span class="not-prose"><a href="http://a11yto.com/" rel="noopener noreferrer" target="_blank" class="external-link">A11yTO</a></span>). Récemment expatrié au Canada, j’ai eu l’opportunité, dans ma <span class="not-prose"><a href="https://influitive.com/" rel="noopener noreferrer" target="_blank" class="external-link">nouvelle entreprise</a></span>, de dédier mon temps à la refonte d’un project avec React et de devoir du coup, rendre cette application accessible et performante. (Youpi !)</p>

@@ -4,7 +4,7 @@
         <title>The David Dias | Front-End Developer, Podcaster &amp; Content Creator</title>
         <link>https://thedaviddias.dev</link>
         <description>Hey, I'm David Dias, a Front-End Developer based in Toronto/Canada. I love discussing code, technology, expatriation and life.</description>
-        <lastBuildDate>Sat, 05 Aug 2023 19:26:26 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 11 Aug 2023 19:20:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en-US</language>
@@ -15,6 +15,26 @@
         </image>
         <copyright>All rights reserved 2023, David Dias</copyright>
         <category>Technology</category>
+        <item>
+            <title><![CDATA[How To Block ChatGPT form Scraping and Parsing your Website?]]></title>
+            <link>https://thedaviddias.dev/notes/how-to-block-chatgpt-form-scraping-and-parsing-your-website</link>
+            <guid>https://thedaviddias.dev/notes/how-to-block-chatgpt-form-scraping-and-parsing-your-website</guid>
+            <pubDate>Wed, 09 Aug 2023 01:35:47 GMT</pubDate>
+            <description><![CDATA[How to block ChatGPT from scraping and parsing your website? It may be simpler than you think.]]></description>
+            <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">If you want to prevent bots like ChatGPT from scraping and parsing a website, the robots.txt file is the one to update.</p>
+<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">This is the file usually used to tell search engines which pages to index and which ones to ignore. In this case, you can use it to block AI bots or in that case, specifically ChatGPT. The only caveat is that it can&#x27;t remove pages that have already been indexted.</p>
+<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Simply add the following line in your <code class="before:!content-[&#x27;&#x27;] after:!content-[&#x27;&#x27;] dark:text-white bg-slate-100 dark:bg-slate-700 rounded-sm border-[1px] border-gray-400 dark:border-gray-400 px-1 py-0.5">robots.txt</code> file:</p>
+<div class="relative"><pre><code class="before:!content-[&#x27;&#x27;] after:!content-[&#x27;&#x27;] dark:text-white bg-slate-100 dark:bg-slate-700 rounded-sm border-[1px] border-gray-400 dark:border-gray-400 px-1 py-0.5">User-agent: GPTBot
+Disallow: /
+</code></pre></div>
+<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">This code snippet will tell ChatGPT that it is not allowed to access any part or page of the site.</p>
+<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Whatever ChatGPT and Open AI actually respect this standard is up to them, but it&#x27;s a good start. Of course, it may not be enough to prevent unwanted scraping and parsing and you may want to put in place additional measures such as implementing CAPTCHAs, using a content security policy, etc...</p>
+<h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">References</h2>
+<ul class="list-disc">
+<li class="nested-list text-lg"><span class="not-prose"><a href="https://platform.openai.com/docs/gptbot" rel="noopener noreferrer" target="_blank" class="external-link">GPTBot</a></span></li>
+</ul>]]></content:encoded>
+            <author>thedaviddias@gmail.com (David Dias)</author>
+        </item>
         <item>
             <title><![CDATA[The Philosophy and Approach of "User First"]]></title>
             <link>https://thedaviddias.dev/notes/philosophy-approach-user-first</link>
@@ -2512,8 +2532,8 @@ Don’t hesitate, everything you do, related to coding and web, take time to pre
         </item>
         <item>
             <title><![CDATA[How a Morning Routine can positively change your life forever]]></title>
-            <link>https://thedaviddias.dev/articles/how-morning-routine-can-positively-change-your-life-forever</link>
-            <guid>https://thedaviddias.dev/articles/how-morning-routine-can-positively-change-your-life-forever</guid>
+            <link>https://thedaviddias.dev/articles/morning-routine-positively-change-life</link>
+            <guid>https://thedaviddias.dev/articles/morning-routine-positively-change-life</guid>
             <pubDate>Sat, 21 Jan 2017 00:01:00 GMT</pubDate>
             <description><![CDATA[Having a Morning Routine can positively change your life in so many good ways. Through experimentation, I explore ways to improve my health and my mindset.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 "><div class="my-3 block"><a class="cursor-pointer hover:underline " aria-label="Click to enlarge the image" href="/images/articles/how-morning-routine-can-positively-change-your-life-forever/featured.jpeg"><img alt="" loading="lazy" width="700" height="393" decoding="async" data-nimg="1" class="rounded-lg" style="color:transparent;width:100%;height:auto" srcSet="/_next/image?url=%2Fimages%2Farticles%2Fhow-morning-routine-can-positively-change-your-life-forever%2Ffeatured.jpeg&amp;w=750&amp;q=80 1x, /_next/image?url=%2Fimages%2Farticles%2Fhow-morning-routine-can-positively-change-your-life-forever%2Ffeatured.jpeg&amp;w=1920&amp;q=80 2x" src="/_next/image?url=%2Fimages%2Farticles%2Fhow-morning-routine-can-positively-change-your-life-forever%2Ffeatured.jpeg&amp;w=1920&amp;q=80"/></a><figcaption class="z-10 !mt-0 text-sm italic text-gray-600 text-center dark:text-gray-300"><span>Meditation is part of my Morning Routine now…</span></figcaption></div></p>

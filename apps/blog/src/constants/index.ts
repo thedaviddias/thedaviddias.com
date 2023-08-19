@@ -9,6 +9,7 @@ import social from '../../../../data/social.json'
 export const TWITTER_PROFILE = 'https://twitter.com/thedaviddias'
 export const GITHUB_PROFILE = 'https://github.com/thedaviddias'
 export const POLYWORK_PROFILE = 'https://changelog.thedaviddias.dev'
+export const DISCORD = 'https://discord.gg/EG6tmxsESP'
 
 export type LinksInternalResponse = Pick<LinkProps, 'locale'> & {
   /** Indicates if it should show in the navigation menu */
@@ -52,8 +53,8 @@ export const SOCIAL_LINKS: LinksExternalResponse[] = social.slice(0, 6)
 
 export const HERO_LINKS = [
   {
-    label: 'Personal changelog',
-    link: POLYWORK_PROFILE,
+    label: 'Discord',
+    link: DISCORD,
   },
   {
     label: 'Twitter',
@@ -63,6 +64,10 @@ export const HERO_LINKS = [
   {
     label: 'Github',
     link: GITHUB_PROFILE,
+  },
+  {
+    label: 'Personal changelog',
+    link: POLYWORK_PROFILE,
   },
 ]
 

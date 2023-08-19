@@ -53,7 +53,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const recentlyPlayed = await getPlayedGames(steamKey, steamId)
 
     const recentGame =
-      recentlyPlayed.response.games[0].appid === 1737100
+      recentlyPlayed.response.games[0].appid === (1737100 || 2553870)
         ? recentlyPlayed.response.games[1]
         : recentlyPlayed.response.games[0]
 

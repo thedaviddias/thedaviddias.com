@@ -1,6 +1,15 @@
 import useTranslation from 'next-translate/useTranslation'
 import React from 'react'
-import { Facebook, Linkedin, Reddit, Twitter } from 'react-social-sharing'
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  RedditShareButton,
+  TwitterShareButton,
+  LinkedinIcon,
+  XIcon,
+  RedditIcon,
+  FacebookMessengerIcon,
+} from 'react-share'
 
 export type ShareProps = {
   permalink: string
@@ -13,10 +22,18 @@ export const Share: React.FC<ShareProps> = ({ permalink, title }) => {
   return (
     <aside>
       <p className="small-title">{t('share.title')}</p>
-      <Twitter small message={`${title} by @thedaviddias`} link={permalink} className="h-8 w-10" />
-      <Linkedin small message={title} link={permalink} className="h-8 w-10" />
-      <Reddit small link={permalink} className="h-8 w-10" />
-      <Facebook small link={permalink} className="h-8 w-10" />
+      <TwitterShareButton title={`${title} by @thedaviddias`} url={permalink} className="h-8 w-10">
+        <XIcon size={32} round />
+      </TwitterShareButton>
+      <LinkedinShareButton title={title} url={permalink} className="h-8 w-10">
+        <LinkedinIcon size={32} round />
+      </LinkedinShareButton>
+      <RedditShareButton url={permalink} className="h-8 w-10">
+        <RedditIcon size={32} round />
+      </RedditShareButton>
+      <FacebookShareButton url={permalink} className="h-8 w-10">
+        <FacebookMessengerIcon size={32} round />
+      </FacebookShareButton>
     </aside>
   )
 }

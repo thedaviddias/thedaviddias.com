@@ -37,7 +37,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ ghProjects, projects }) => {
         />
         <H2>{t('openProjects.sections.popular')}</H2>
         <p>{t('openProjects.sections.popular_description')}</p>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 my-3 max-w-5xl">
+        <div className="my-3 grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-2">
           {ghProjects.map((project, i) => (
             <GithubProject key={i} project={project} />
           ))}

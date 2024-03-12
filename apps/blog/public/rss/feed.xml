@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>The David Dias | Front-End Developer, Podcaster &amp; Content Creator</title>
-        <link>https://thedaviddias.dev</link>
+        <link>https://thedaviddias.com</link>
         <description>Hey, I'm David Dias, a Front-End Developer based in Toronto/Canada. I love discussing code, technology, expatriation and life.</description>
         <lastBuildDate>Fri, 11 Aug 2023 19:20:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,15 +10,15 @@
         <language>en-US</language>
         <image>
             <title>The David Dias | Front-End Developer, Podcaster &amp; Content Creator</title>
-            <url>https://thedaviddias.dev/favicons/android-chrome-144x144.png</url>
-            <link>https://thedaviddias.dev</link>
+            <url>https://thedaviddias.com/favicons/android-chrome-144x144.png</url>
+            <link>https://thedaviddias.com</link>
         </image>
         <copyright>All rights reserved 2023, David Dias</copyright>
         <category>Technology</category>
         <item>
             <title><![CDATA[How To Block ChatGPT form Scraping and Parsing your Website?]]></title>
-            <link>https://thedaviddias.dev/notes/how-to-block-chatgpt-form-scraping-and-parsing-your-website</link>
-            <guid>https://thedaviddias.dev/notes/how-to-block-chatgpt-form-scraping-and-parsing-your-website</guid>
+            <link>https://thedaviddias.com/notes/how-to-block-chatgpt-form-scraping-and-parsing-your-website</link>
+            <guid>https://thedaviddias.com/notes/how-to-block-chatgpt-form-scraping-and-parsing-your-website</guid>
             <pubDate>Wed, 09 Aug 2023 01:35:47 GMT</pubDate>
             <description><![CDATA[How to block ChatGPT from scraping and parsing your website? It may be simpler than you think.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">If you want to prevent bots like ChatGPT from scraping and parsing a website, the robots.txt file is the one to update.</p>
@@ -37,8 +37,8 @@ Disallow: /
         </item>
         <item>
             <title><![CDATA[The Philosophy and Approach of "User First"]]></title>
-            <link>https://thedaviddias.dev/notes/philosophy-approach-user-first</link>
-            <guid>https://thedaviddias.dev/notes/philosophy-approach-user-first</guid>
+            <link>https://thedaviddias.com/notes/philosophy-approach-user-first</link>
+            <guid>https://thedaviddias.com/notes/philosophy-approach-user-first</guid>
             <pubDate>Mon, 17 Jul 2023 03:41:52 GMT</pubDate>
             <description><![CDATA[User First" approach puts users at the heart of all decisions. Engage with them to understand needs, ensuring your business remains relevant and loved.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">You&#x27;ve likely heard about &quot;mobile first&quot;, &quot;content first&quot;, &quot;design first&quot;, and the like. But what about &quot;user first&quot;? To me, it&#x27;s the most crucial principle of all.</p>
@@ -56,8 +56,8 @@ Disallow: /
         </item>
         <item>
             <title><![CDATA[How to Convert MP3 to M4B for Audiobooks lovers, on MacOS?]]></title>
-            <link>https://thedaviddias.dev/notes/how-to-convert-mp3-to-m4b-for-audiobooks</link>
-            <guid>https://thedaviddias.dev/notes/how-to-convert-mp3-to-m4b-for-audiobooks</guid>
+            <link>https://thedaviddias.com/notes/how-to-convert-mp3-to-m4b-for-audiobooks</link>
+            <guid>https://thedaviddias.com/notes/how-to-convert-mp3-to-m4b-for-audiobooks</guid>
             <pubDate>Sun, 16 Jul 2023 21:04:32 GMT</pubDate>
             <description><![CDATA[Explore "AudioBookBinder", a handy MacOS app designed for making audiobooks. It quickly turns MP3 files into M4B format, making audiobook creation a breeze.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Depending on the platform, sometimes you may get audiobooks in MP3 format. However, MP3 is not the best format for audiobooks. It doesn&#x27;t support chapters, and it&#x27;s not bookmarkable. M4B is the best format for audiobooks. It supports chapters and is bookmarkable. It&#x27;s also the format used by Apple for audiobooks.</p>
@@ -74,8 +74,8 @@ Disallow: /
         </item>
         <item>
             <title><![CDATA[Stop using the "<hr/>" tag to design a horizontal line!]]></title>
-            <link>https://thedaviddias.dev/notes/stop-using-thematic-break-to-design-horizontal-line</link>
-            <guid>https://thedaviddias.dev/notes/stop-using-thematic-break-to-design-horizontal-line</guid>
+            <link>https://thedaviddias.com/notes/stop-using-thematic-break-to-design-horizontal-line</link>
+            <guid>https://thedaviddias.com/notes/stop-using-thematic-break-to-design-horizontal-line</guid>
             <pubDate>Thu, 01 Jun 2023 04:38:32 GMT</pubDate>
             <description><![CDATA[It's sometimes easy to forget that UI doesn't dicated semantics. In this article I'll show you how to use the "<hr/>" tag properly.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">I have seen way too many times people using the <code class="before:!content-[&#x27;&#x27;] after:!content-[&#x27;&#x27;] dark:text-white bg-slate-100 dark:bg-slate-700 rounded-sm border-[1px] border-gray-400 dark:border-gray-400 px-1 py-0.5">&lt;hr&gt;</code> HTML element, which is called &quot;thematic break&quot; instead of CSS.</p>
@@ -98,8 +98,8 @@ The real purpose of the <code class="before:!content-[&#x27;&#x27;] after:!conte
         </item>
         <item>
             <title><![CDATA[How to fix "set-output" when reading nvmrc from the GitHub Actions?]]></title>
-            <link>https://thedaviddias.dev/notes/how-to-fix-set-output-nvmrc-github-actions</link>
-            <guid>https://thedaviddias.dev/notes/how-to-fix-set-output-nvmrc-github-actions</guid>
+            <link>https://thedaviddias.com/notes/how-to-fix-set-output-nvmrc-github-actions</link>
+            <guid>https://thedaviddias.com/notes/how-to-fix-set-output-nvmrc-github-actions</guid>
             <pubDate>Wed, 04 Jan 2023 04:38:32 GMT</pubDate>
             <description><![CDATA[Find out how to fix the deprecated set-output when you read the Nodejs version from your .nvmrc file in Github workflows.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">You may be getting the issue <strong class="dark:text-white">&quot;The <code class="before:!content-[&#x27;&#x27;] after:!content-[&#x27;&#x27;] dark:text-white bg-slate-100 dark:bg-slate-700 rounded-sm border-[1px] border-gray-400 dark:border-gray-400 px-1 py-0.5">set-output</code> command is deprecated and will be disabled soon. Please upgrade to using Environment Files.&quot;</strong> from your Github workflow.</p>
@@ -145,8 +145,8 @@ jobs:
         </item>
         <item>
             <title><![CDATA[How to fix "postbuild" and "prebuild" not working with pnpm?]]></title>
-            <link>https://thedaviddias.dev/notes/how-to-fix-post-pre-build-pnpm</link>
-            <guid>https://thedaviddias.dev/notes/how-to-fix-post-pre-build-pnpm</guid>
+            <link>https://thedaviddias.com/notes/how-to-fix-post-pre-build-pnpm</link>
+            <guid>https://thedaviddias.com/notes/how-to-fix-post-pre-build-pnpm</guid>
             <pubDate>Sat, 30 Jul 2022 04:38:32 GMT</pubDate>
             <description><![CDATA[Find out what I had to update to use pre and posts scripts with pnpm.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">When recently working on my blog, I tried to add a <code class="before:!content-[&#x27;&#x27;] after:!content-[&#x27;&#x27;] dark:text-white bg-slate-100 dark:bg-slate-700 rounded-sm border-[1px] border-gray-400 dark:border-gray-400 px-1 py-0.5">postbuild</code> scripts with <code class="before:!content-[&#x27;&#x27;] after:!content-[&#x27;&#x27;] dark:text-white bg-slate-100 dark:bg-slate-700 rounded-sm border-[1px] border-gray-400 dark:border-gray-400 px-1 py-0.5">next-sitemap</code> in my <code class="before:!content-[&#x27;&#x27;] after:!content-[&#x27;&#x27;] dark:text-white bg-slate-100 dark:bg-slate-700 rounded-sm border-[1px] border-gray-400 dark:border-gray-400 px-1 py-0.5">package.json</code>. My goal was to automatically generate <code class="before:!content-[&#x27;&#x27;] after:!content-[&#x27;&#x27;] dark:text-white bg-slate-100 dark:bg-slate-700 rounded-sm border-[1px] border-gray-400 dark:border-gray-400 px-1 py-0.5">.xml</code> files after each Next.js builds.</p>
@@ -160,8 +160,8 @@ jobs:
         </item>
         <item>
             <title><![CDATA[Finally received my Steam Deck confirmation email!]]></title>
-            <link>https://thedaviddias.dev/notes/finally-received-steam-deck-confirmation-email</link>
-            <guid>https://thedaviddias.dev/notes/finally-received-steam-deck-confirmation-email</guid>
+            <link>https://thedaviddias.com/notes/finally-received-steam-deck-confirmation-email</link>
+            <guid>https://thedaviddias.com/notes/finally-received-steam-deck-confirmation-email</guid>
             <pubDate>Thu, 28 Jul 2022 15:47:33 GMT</pubDate>
             <description><![CDATA[After months of waiting, I finally received my Steam Deck confirmation email!]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">This was a long wait! After months of lurking on Youtube watching others playing with their Deck, I finally got <strong class="dark:text-white">my purchase confirmation email</strong> for the Steam Deck!</p>
@@ -171,11 +171,11 @@ jobs:
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -192,11 +192,11 @@ jobs:
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -223,7 +223,7 @@ jobs:
           100% {
             transform: rotate(360deg);
           }
-        }  
+        }
       </style><div class="rsme-spinner" style="width:10px;height:10px"></div><div style="color:#000000;font-family:Arial,sans-serif;font-size:14px;font-style:normal;font-weight:550;line-height:18px;text-align:center">View post on Twitter</div></div></div><div style="position:absolute;bottom:0;left:0;height:40px;width:100%;background-color:#ffffff;z-index:1"><div style="display:flex;align-items:center;column-gap:14px;margin-left:16px" class=""><div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(0px) translateY(7px)"></div><div style="background-color:#F4F4F4;height:12.5px;transform:rotate(-45deg) translateX(3px) translateY(1px);width:12.5px;flex-grow:0;margin-right:6px;margin-left:2px"></div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(9px) translateY(-18px)"></div></div><div><div style="background-color:#F4F4F4;border-radius:50%;height:20px;width:20px"></div><div style="width:0;height:0;border-top:2px solid transparent;border-left:6px solid #f4f4f4;border-bottom:2px solid transparent;transform:translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="height:25px;width:25px;transform:translateX(0px) translateY(-2px)"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#F4F4F4" d="M295.204,180.593C132.168,180.593,0,312.759,0,475.796
 c51.398-130.047,184.869-203.22,317.483-183.603L295.204,180.593z"></path><path style="fill:#F4F4F4" d="M512,253L295.204,36.204v217.818C159.946,249.655,34.992,339.262,0,475.794
 c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg></div></div></div></a></div><div></div></div></div>
@@ -232,8 +232,8 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         </item>
         <item>
             <title><![CDATA[My Ideal Desk Setup: A Personal Journey]]></title>
-            <link>https://thedaviddias.dev/articles/ideal-desk-setup-personal-journey</link>
-            <guid>https://thedaviddias.dev/articles/ideal-desk-setup-personal-journey</guid>
+            <link>https://thedaviddias.com/articles/ideal-desk-setup-personal-journey</link>
+            <guid>https://thedaviddias.com/articles/ideal-desk-setup-personal-journey</guid>
             <pubDate>Sun, 30 Jul 2023 01:48:39 GMT</pubDate>
             <description><![CDATA[Join me as I take you on a tour of my ideal desk setup, showing how it has evolved over the years, and how it enhances my productivity and creative pursuits.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">I first embarked on my journey to create the perfect desk setup in 2018, when I made the big move from <span class="not-prose"><a href="https://en.wikipedia.org/wiki/Mauritius" rel="noopener noreferrer" target="_blank" class="external-link">Mauritius</a></span> to Canada.</p>
@@ -266,11 +266,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -287,11 +287,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -318,17 +318,17 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
           100% {
             transform: rotate(360deg);
           }
-        }  
+        }
       </style><div class="rsme-spinner" style="width:10px;height:10px"></div><div style="color:#000000;font-family:Arial,sans-serif;font-size:14px;font-style:normal;font-weight:550;line-height:18px;text-align:center">View post on LinkedIn</div></div></div><div style="position:absolute;bottom:0;left:0;height:40px;width:100%;background-color:#ffffff;z-index:1"><div style="display:flex;align-items:center;column-gap:14px;margin-left:16px" class=""><div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(0px) translateY(7px)"></div><div style="background-color:#F4F4F4;height:12.5px;transform:rotate(-45deg) translateX(3px) translateY(1px);width:12.5px;flex-grow:0;margin-right:6px;margin-left:2px"></div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(9px) translateY(-18px)"></div></div><div><div style="background-color:#F4F4F4;border-radius:50%;height:20px;width:20px"></div><div style="width:0;height:0;border-top:2px solid transparent;border-left:6px solid #f4f4f4;border-bottom:2px solid transparent;transform:translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="height:25px;width:25px;transform:translateX(0px) translateY(-2px)"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#F4F4F4" d="M295.204,180.593C132.168,180.593,0,312.759,0,475.796
 c51.398-130.047,184.869-203.22,317.483-183.603L295.204,180.593z"></path><path style="fill:#F4F4F4" d="M512,253L295.204,36.204v217.818C159.946,249.655,34.992,339.262,0,475.794
 c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg></div></div></div></a></div></div></div>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/ideal-desk-setup-personal-journey/desk-setup-front.jpg" length="0" type="image/jpg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/ideal-desk-setup-personal-journey/desk-setup-front.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[My Decade in Web Development: A Personal Journey and Showcase]]></title>
-            <link>https://thedaviddias.dev/articles/decade-web-development-personal-journey-showcase</link>
-            <guid>https://thedaviddias.dev/articles/decade-web-development-personal-journey-showcase</guid>
+            <link>https://thedaviddias.com/articles/decade-web-development-personal-journey-showcase</link>
+            <guid>https://thedaviddias.com/articles/decade-web-development-personal-journey-showcase</guid>
             <pubDate>Sun, 16 Jul 2023 21:43:28 GMT</pubDate>
             <description><![CDATA[Dive into my decade-long journey in web development, chronicling key projects that have shaped my career.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">I published my first website around 2001. Probably before that. Almost 20 years ago. Unfortunately, the exact date I started doing web development is probably lost by now.</p>
@@ -414,12 +414,12 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
 <h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">Conclusion</h2>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Looking back more than 10 years, I&#x27;m very proud and grateful for all the opportunities and projects I had the chance to work on. I&#x27;m also very grateful for all the people I met along the way. Those projects shaped in a way my career and life and I&#x27;m not even mentionning all the professional projects I&#x27;ve worked on.</p>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/decade-web-development-personal-journey/featured.jpg" length="0" type="image/jpg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/decade-web-development-personal-journey/featured.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Raycast Applications That Will Make You a Super Developer!]]></title>
-            <link>https://thedaviddias.dev/articles/raycast-applications-super-developer</link>
-            <guid>https://thedaviddias.dev/articles/raycast-applications-super-developer</guid>
+            <link>https://thedaviddias.com/articles/raycast-applications-super-developer</link>
+            <guid>https://thedaviddias.com/articles/raycast-applications-super-developer</guid>
             <pubDate>Mon, 12 Jun 2023 23:59:58 GMT</pubDate>
             <description><![CDATA[Raycast is one of the best tool if you want to speed up your productivity on Mac. Here are the 10 applications I use the most in Raycast, on a daily basis.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Spolight on Mac is great, but it always lacked the possibility to add custom commands and third party access. And that&#x27;s where <span class="not-prose"><a href="https://www.alfredapp.com/" rel="noopener noreferrer" target="_blank" class="external-link">Alfred</a></span> comes in. It&#x27;s a great application that allows you to do just that. I have been a big fan of &quot;Alfred&quot; at least since 2015. I would recommend this application to anyone who wants to be more productive on their Mac. I was a big fan!</p>
@@ -452,12 +452,12 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">This is not an application, but a feature I loved on Alfred and actually exists on Raycast, even it&#x27;s slighly less powerful.</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">&quot;Clipboard History&quot; give you access to your last copied items. I&#x27;ve assign the double <code class="before:!content-[&#x27;&#x27;] after:!content-[&#x27;&#x27;] dark:text-white bg-slate-100 dark:bg-slate-700 rounded-sm border-[1px] border-gray-400 dark:border-gray-400 px-1 py-0.5">⌥</code> (action) key to open the clipboard history. This is a feature I use constantly, and I&#x27;m glad it&#x27;s available on Raycast.</p>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/raycast-applications-super-developer/featured.jpg" length="0" type="image/jpg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/raycast-applications-super-developer/featured.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Beyond User Testing: Leveraging Frontend Experience]]></title>
-            <link>https://thedaviddias.dev/articles/beyond-user-testing-leveraging-frontend-experience</link>
-            <guid>https://thedaviddias.dev/articles/beyond-user-testing-leveraging-frontend-experience</guid>
+            <link>https://thedaviddias.com/articles/beyond-user-testing-leveraging-frontend-experience</link>
+            <guid>https://thedaviddias.com/articles/beyond-user-testing-leveraging-frontend-experience</guid>
             <pubDate>Thu, 01 Jun 2023 13:07:27 GMT</pubDate>
             <description><![CDATA[For over a decade, I've been collaborating with web designers, and it's clear that we sometimes have differing perspectives. 'User testing' often takes center stage in decision-making, with the rich insights of frontend experience taking a backseat. But here's the thing - collaboration is pivotal. Recognizing the value that frontend developers bring is crucial for any team aiming to succeed in our fast-paced digital age.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">User testing is a crucial tool for gathering feedback on a product, but it&#x27;s not enough to truly understand and improve user engagement. For the past 13 years, I have been building multi-language platforms for international brands and for a wide variety of users. Even in a space that constantly changes, where users have evolving needs, it&#x27;s important to also acknowledge the role that experience plays in understanding them.</p>
@@ -487,7 +487,7 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Front-End Developers (FED) are not just coders. Usually seen as the ones that “just” integrate designs into HTML, CSS and JavaScript, their <span class="not-prose"><a href="https://infinum.com/blog/t-shaped-developers/" rel="noopener noreferrer" target="_blank" class="external-link">t-shape personalities</a></span> is often times overlooked (not all FES have t-shape skills though).</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">A FED can play a critical role in creating engaging user experiences.</p>
 <h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">Collaboration and communication for better user engagement</h2>
-<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">As I said in <span class="not-prose"><a href="https://thedaviddias.dev/articles/how-front-end-developers-ui-ux-could-better-collaborate-together" rel="noopener noreferrer" target="_blank" class="external-link">my previous article</a></span> about Front-End Developers, Web and UX/UI Designers collaboration, collaboration and communication is key in building a successful product.</p>
+<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">As I said in <span class="not-prose"><a href="https://thedaviddias.com/articles/how-front-end-developers-ui-ux-could-better-collaborate-together" rel="noopener noreferrer" target="_blank" class="external-link">my previous article</a></span> about Front-End Developers, Web and UX/UI Designers collaboration, collaboration and communication is key in building a successful product.</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">This collaborative approach allows different perspectives to merge and create a more holistic vision of the product. As Front-End Developers, we have the unique position of working at the intersection of design and technology. We are often the ones who bring the designers&#x27; visions to life while ensuring that the product remains functional and user-friendly.</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Front-end development is about more than just making things look good. It&#x27;s about creating a seamless and intuitive interface that guides users through a product. Every button, every transition, every piece of interactive content is a chance to engage users and keep them invested in the product.</p>
 <h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">The Benefits of Leveraging Front-End Experience</h2>
@@ -510,12 +510,12 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
 <li class="nested-list text-lg">&quot;<span class="not-prose"><a href="https://echobind.com/blog/why-user-experience-ux-is-vital-for-front-end-developers/" rel="noopener noreferrer" target="_blank" class="external-link">Why User Experience (UX) is Vital for Front-End Developers</a></span>&quot; by Echobind</li>
 </ul>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/beyond-user-testing-leveraging-frontend-experience/table-computers.jpg" length="0" type="image/jpg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/beyond-user-testing-leveraging-frontend-experience/table-computers.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[How Front-End Developers, Web and UX/UI Designers could better collaborate together?]]></title>
-            <link>https://thedaviddias.dev/articles/how-front-end-developers-ui-ux-could-better-collaborate-together</link>
-            <guid>https://thedaviddias.dev/articles/how-front-end-developers-ui-ux-could-better-collaborate-together</guid>
+            <link>https://thedaviddias.com/articles/how-front-end-developers-ui-ux-could-better-collaborate-together</link>
+            <guid>https://thedaviddias.com/articles/how-front-end-developers-ui-ux-could-better-collaborate-together</guid>
             <pubDate>Sun, 13 Jun 2021 22:27:03 GMT</pubDate>
             <description><![CDATA[Collaboration between Developers and UX/UI Designers is essential to build a good product. With the right mindset, clear processes and an inclusive culture, everything is possible.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">The web has changed so much in the past 10 years. Technology has enabled new usages, new ways of communication, new ways of seeing the world. Web Design trends are also constantly changing, every year we see new trends that sometimes stick for few years, sometimes they don’t. The same happened in web development: we’ve seen new JavaScript frameworks, new ways to build components, new ways to code CSS, using pre or post-processors. The list is almost infinite. But something that has not changed is the need for collaboration between people working on the same web project.</p>
@@ -592,12 +592,12 @@ We have more to share than just our “title”, we have more to give than just 
 <hr/>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">What about your experience? How do you like to work with others? What would you like to see happening more often within your team?</p>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/how-front-end-developers-web-and-ux-ui-designers-could-better-collaborate-together/featured.jpeg" length="0" type="image/jpeg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/how-front-end-developers-web-and-ux-ui-designers-could-better-collaborate-together/featured.jpeg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[9 Best Practices & UX Improvements for the two-factor authentication (2FA)]]></title>
-            <link>https://thedaviddias.dev/articles/9-best-practices-ux-for-two-factor-authentification</link>
-            <guid>https://thedaviddias.dev/articles/9-best-practices-ux-for-two-factor-authentification</guid>
+            <link>https://thedaviddias.com/articles/9-best-practices-ux-for-two-factor-authentification</link>
+            <guid>https://thedaviddias.com/articles/9-best-practices-ux-for-two-factor-authentification</guid>
             <pubDate>Thu, 25 Feb 2021 00:01:00 GMT</pubDate>
             <description><![CDATA[The best and recommended features for any website or company that takes the security of their users seriously.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">In 2023 alone, cybercriminals will steal 33 billion records. It takes 196 days on average to identify a data breach. The cost of a data breach will reach $150 million by 2020...
@@ -683,12 +683,12 @@ LIST OF CODES
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Thanks for reading, I hope these suggestions would help you to have a better UX and improve your 2FA implementation.</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Feel free to ask me anything in the comments below!</p>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/9-best-practices-ux-for-two-factor-authentification/featured.jpg" length="0" type="image/jpg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/9-best-practices-ux-for-two-factor-authentification/featured.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[How to deploy your Next.js app on Netlify using Github Actions]]></title>
-            <link>https://thedaviddias.dev/articles/how-to-deploy-your-nextjs-app-on-netlify-using-github-actions</link>
-            <guid>https://thedaviddias.dev/articles/how-to-deploy-your-nextjs-app-on-netlify-using-github-actions</guid>
+            <link>https://thedaviddias.com/articles/how-to-deploy-your-nextjs-app-on-netlify-using-github-actions</link>
+            <guid>https://thedaviddias.com/articles/how-to-deploy-your-nextjs-app-on-netlify-using-github-actions</guid>
             <pubDate>Thu, 21 Jan 2021 00:01:00 GMT</pubDate>
             <description><![CDATA[Are you interested in Next.js and how to deploy your app to Netlify using Github Actions? Take a look at how Netlify allows you for free, to deploy your app with Server Side Rendering capabilities and more!.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">I&#x27;ve recently spent some time working with Next.js projects. Once my projects are done, the next logical step is to deploy these apps to be accessible to the world.</p>
@@ -906,12 +906,12 @@ jobs:
 <li class="nested-list text-lg"><span class="not-prose"><a href="https://www.netlify.com/articles/2020/12/07/announcing-one-click-install-next.js-build-plugin-on-netlify/" rel="noopener noreferrer" target="_blank" class="external-link">Announcing one-click install Next.js Build Plugin on Netlify</a></span> by Cassidy Williams</li>
 </ul>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/how-to-deploy-your-nextjs-app-on-netlify-using-github-actions/featured.jpg" length="0" type="image/jpg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/how-to-deploy-your-nextjs-app-on-netlify-using-github-actions/featured.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[You have something in YOU that the world needs]]></title>
-            <link>https://thedaviddias.dev/articles/you-have-something-in-you-the-world-needs</link>
-            <guid>https://thedaviddias.dev/articles/you-have-something-in-you-the-world-needs</guid>
+            <link>https://thedaviddias.com/articles/you-have-something-in-you-the-world-needs</link>
+            <guid>https://thedaviddias.com/articles/you-have-something-in-you-the-world-needs</guid>
             <pubDate>Fri, 21 Jun 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Sometimes the only thing you need to remember is that you are not alone in this world.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">I’m not a psychologist or either a student in psychology. I spent a good amount of time in my life reading personal development books but in the end, I’m just a Front-End Web developer, who writes code. I had the chance to live in different countries and created real and profound relationships with people with different cultures, different colors, different ages, different religions, different visions of the world… I couldn’t imagine my life without all these persons and what they brought to my existence.</p>
@@ -944,12 +944,12 @@ We can battle a whole life and try to change our pasts, but you know and I know 
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">…What are you really waiting for? 📲</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 "><em>Disclaimer: I usually write articles about code, immigration, and tech, but a lot of my friends are lately facing the same issues, and even I try my best to help them, it’s also up to them to take action and choose the life they really want. This article is a way to hopefully help other people that may be facing the same issues in their lives. Let me a comment if you find this article relevant for your life!</em></p>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/you-have-something-in-you-the-world-needs/featured.jpeg" length="0" type="image/jpeg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/you-have-something-in-you-the-world-needs/featured.jpeg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[The Front-End Performance Checklist speeds up your web developments]]></title>
-            <link>https://thedaviddias.dev/articles/front-end-performance-checklist-speeds-up-web-developments</link>
-            <guid>https://thedaviddias.dev/articles/front-end-performance-checklist-speeds-up-web-developments</guid>
+            <link>https://thedaviddias.com/articles/front-end-performance-checklist-speeds-up-web-developments</link>
+            <guid>https://thedaviddias.com/articles/front-end-performance-checklist-speeds-up-web-developments</guid>
             <pubDate>Sun, 22 Jul 2018 00:01:00 GMT</pubDate>
             <description><![CDATA[An exhaustive list of all the elements that will speed up your current web developments and offer the best user experience.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Performance is a huge subject, but it&#x27;s not always a &quot;back-end&quot; or an &quot;admin&quot; subject: it&#x27;s a Front-End responsibility too. The Front-End Performance Checklist is an exhaustive list of elements you should check or at least be aware of, as a Front-End developer and apply to your project (personal and professional).</p>
@@ -1640,12 +1640,12 @@ We can battle a whole life and try to change our pasts, but you know and I know 
 <li class="nested-list text-lg">🇵🇱 Polish: <span class="not-prose"><a href="https://github.com/mbiesiad/Front-End-Performance-Checklist" rel="noopener noreferrer" target="_blank" class="external-link">mbiesiad/Front-End-Performance-Checklist</a></span></li>
 </ul>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/front-end-performance-checklist-speeds-up-web-developments/featured.jpeg" length="0" type="image/jpeg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/front-end-performance-checklist-speeds-up-web-developments/featured.jpeg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[What I learned after presenting my side project in Europe]]></title>
-            <link>https://thedaviddias.dev/articles/learned-presenting-side-project-europe</link>
-            <guid>https://thedaviddias.dev/articles/learned-presenting-side-project-europe</guid>
+            <link>https://thedaviddias.com/articles/learned-presenting-side-project-europe</link>
+            <guid>https://thedaviddias.com/articles/learned-presenting-side-project-europe</guid>
             <pubDate>Tue, 22 May 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[An overview of what I learned presenting the Front-End Checklist during my vacations in Europe]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">In October 2017, I launched my <span class="not-prose"><a href="https://medium.freecodecamp.org/how-my-first-project-won-6000-stars-on-github-in-5-days-6340ec99829e" rel="noopener noreferrer" target="_blank" class="external-link">first open-source project on Github</a></span>: the Front-End Checklist. In few hours, the project gained international visibility. After that, for a number of weeks, I had an incredible journey with many people around the world. I recently started giving talks in local communities around <span class="not-prose"><a href="https://en.wikipedia.org/wiki/Spain" rel="noopener noreferrer" target="_blank" class="external-link">Spain</a></span> and <span class="not-prose"><a href="https://en.wikipedia.org/wiki/Portugal" rel="noopener noreferrer" target="_blank" class="external-link">Portugal</a></span> about the project, and I plan to check out <span class="not-prose"><a href="https://en.wikipedia.org/wiki/France" rel="noopener noreferrer" target="_blank" class="external-link">France</a></span> later on.</p>
@@ -1668,11 +1668,11 @@ I sent a tweet to some people before the meetup in Barcelona, but I didn’t rec
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -1689,11 +1689,11 @@ I sent a tweet to some people before the meetup in Barcelona, but I didn’t rec
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -1720,7 +1720,7 @@ I sent a tweet to some people before the meetup in Barcelona, but I didn’t rec
           100% {
             transform: rotate(360deg);
           }
-        }  
+        }
       </style><div class="rsme-spinner" style="width:10px;height:10px"></div><div style="color:#000000;font-family:Arial,sans-serif;font-size:14px;font-style:normal;font-weight:550;line-height:18px;text-align:center">View post on Twitter</div></div></div><div style="position:absolute;bottom:0;left:0;height:40px;width:100%;background-color:#ffffff;z-index:1"><div style="display:flex;align-items:center;column-gap:14px;margin-left:16px" class=""><div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(0px) translateY(7px)"></div><div style="background-color:#F4F4F4;height:12.5px;transform:rotate(-45deg) translateX(3px) translateY(1px);width:12.5px;flex-grow:0;margin-right:6px;margin-left:2px"></div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(9px) translateY(-18px)"></div></div><div><div style="background-color:#F4F4F4;border-radius:50%;height:20px;width:20px"></div><div style="width:0;height:0;border-top:2px solid transparent;border-left:6px solid #f4f4f4;border-bottom:2px solid transparent;transform:translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="height:25px;width:25px;transform:translateX(0px) translateY(-2px)"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#F4F4F4" d="M295.204,180.593C132.168,180.593,0,312.759,0,475.796
 c51.398-130.047,184.869-203.22,317.483-183.603L295.204,180.593z"></path><path style="fill:#F4F4F4" d="M512,253L295.204,36.204v217.818C159.946,249.655,34.992,339.262,0,475.794
 c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg></div></div></div></a></div><div></div></div></div>
@@ -1735,11 +1735,11 @@ For me, it was an awesome time. I was able to focus more on specific questions a
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -1756,11 +1756,11 @@ For me, it was an awesome time. I was able to focus more on specific questions a
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -1787,7 +1787,7 @@ For me, it was an awesome time. I was able to focus more on specific questions a
           100% {
             transform: rotate(360deg);
           }
-        }  
+        }
       </style><div class="rsme-spinner" style="width:10px;height:10px"></div><div style="color:#000000;font-family:Arial,sans-serif;font-size:14px;font-style:normal;font-weight:550;line-height:18px;text-align:center">View post on Twitter</div></div></div><div style="position:absolute;bottom:0;left:0;height:40px;width:100%;background-color:#ffffff;z-index:1"><div style="display:flex;align-items:center;column-gap:14px;margin-left:16px" class=""><div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(0px) translateY(7px)"></div><div style="background-color:#F4F4F4;height:12.5px;transform:rotate(-45deg) translateX(3px) translateY(1px);width:12.5px;flex-grow:0;margin-right:6px;margin-left:2px"></div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(9px) translateY(-18px)"></div></div><div><div style="background-color:#F4F4F4;border-radius:50%;height:20px;width:20px"></div><div style="width:0;height:0;border-top:2px solid transparent;border-left:6px solid #f4f4f4;border-bottom:2px solid transparent;transform:translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="height:25px;width:25px;transform:translateX(0px) translateY(-2px)"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#F4F4F4" d="M295.204,180.593C132.168,180.593,0,312.759,0,475.796
 c51.398-130.047,184.869-203.22,317.483-183.603L295.204,180.593z"></path><path style="fill:#F4F4F4" d="M512,253L295.204,36.204v217.818C159.946,249.655,34.992,339.262,0,475.794
 c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg></div></div></div></a></div><div></div></div></div>
@@ -1795,11 +1795,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -1816,11 +1816,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -1847,7 +1847,7 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
           100% {
             transform: rotate(360deg);
           }
-        }  
+        }
       </style><div class="rsme-spinner" style="width:10px;height:10px"></div><div style="color:#000000;font-family:Arial,sans-serif;font-size:14px;font-style:normal;font-weight:550;line-height:18px;text-align:center">View post on Twitter</div></div></div><div style="position:absolute;bottom:0;left:0;height:40px;width:100%;background-color:#ffffff;z-index:1"><div style="display:flex;align-items:center;column-gap:14px;margin-left:16px" class=""><div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(0px) translateY(7px)"></div><div style="background-color:#F4F4F4;height:12.5px;transform:rotate(-45deg) translateX(3px) translateY(1px);width:12.5px;flex-grow:0;margin-right:6px;margin-left:2px"></div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(9px) translateY(-18px)"></div></div><div><div style="background-color:#F4F4F4;border-radius:50%;height:20px;width:20px"></div><div style="width:0;height:0;border-top:2px solid transparent;border-left:6px solid #f4f4f4;border-bottom:2px solid transparent;transform:translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="height:25px;width:25px;transform:translateX(0px) translateY(-2px)"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#F4F4F4" d="M295.204,180.593C132.168,180.593,0,312.759,0,475.796
 c51.398-130.047,184.869-203.22,317.483-183.603L295.204,180.593z"></path><path style="fill:#F4F4F4" d="M512,253L295.204,36.204v217.818C159.946,249.655,34.992,339.262,0,475.794
 c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg></div></div></div></a></div><div></div></div></div>
@@ -1855,11 +1855,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -1876,11 +1876,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -1907,7 +1907,7 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
           100% {
             transform: rotate(360deg);
           }
-        }  
+        }
       </style><div class="rsme-spinner" style="width:10px;height:10px"></div><div style="color:#000000;font-family:Arial,sans-serif;font-size:14px;font-style:normal;font-weight:550;line-height:18px;text-align:center">View post on Twitter</div></div></div><div style="position:absolute;bottom:0;left:0;height:40px;width:100%;background-color:#ffffff;z-index:1"><div style="display:flex;align-items:center;column-gap:14px;margin-left:16px" class=""><div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(0px) translateY(7px)"></div><div style="background-color:#F4F4F4;height:12.5px;transform:rotate(-45deg) translateX(3px) translateY(1px);width:12.5px;flex-grow:0;margin-right:6px;margin-left:2px"></div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(9px) translateY(-18px)"></div></div><div><div style="background-color:#F4F4F4;border-radius:50%;height:20px;width:20px"></div><div style="width:0;height:0;border-top:2px solid transparent;border-left:6px solid #f4f4f4;border-bottom:2px solid transparent;transform:translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="height:25px;width:25px;transform:translateX(0px) translateY(-2px)"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#F4F4F4" d="M295.204,180.593C132.168,180.593,0,312.759,0,475.796
 c51.398-130.047,184.869-203.22,317.483-183.603L295.204,180.593z"></path><path style="fill:#F4F4F4" d="M512,253L295.204,36.204v217.818C159.946,249.655,34.992,339.262,0,475.794
 c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg></div></div></div></a></div><div></div></div></div>
@@ -1927,11 +1927,11 @@ But taking a group photo with all your attendees is a fun thing to plan before e
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -1948,11 +1948,11 @@ But taking a group photo with all your attendees is a fun thing to plan before e
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -1979,7 +1979,7 @@ But taking a group photo with all your attendees is a fun thing to plan before e
           100% {
             transform: rotate(360deg);
           }
-        }  
+        }
       </style><div class="rsme-spinner" style="width:10px;height:10px"></div><div style="color:#000000;font-family:Arial,sans-serif;font-size:14px;font-style:normal;font-weight:550;line-height:18px;text-align:center">View post on Twitter</div></div></div><div style="position:absolute;bottom:0;left:0;height:40px;width:100%;background-color:#ffffff;z-index:1"><div style="display:flex;align-items:center;column-gap:14px;margin-left:16px" class=""><div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(0px) translateY(7px)"></div><div style="background-color:#F4F4F4;height:12.5px;transform:rotate(-45deg) translateX(3px) translateY(1px);width:12.5px;flex-grow:0;margin-right:6px;margin-left:2px"></div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(9px) translateY(-18px)"></div></div><div><div style="background-color:#F4F4F4;border-radius:50%;height:20px;width:20px"></div><div style="width:0;height:0;border-top:2px solid transparent;border-left:6px solid #f4f4f4;border-bottom:2px solid transparent;transform:translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="height:25px;width:25px;transform:translateX(0px) translateY(-2px)"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#F4F4F4" d="M295.204,180.593C132.168,180.593,0,312.759,0,475.796
 c51.398-130.047,184.869-203.22,317.483-183.603L295.204,180.593z"></path><path style="fill:#F4F4F4" d="M512,253L295.204,36.204v217.818C159.946,249.655,34.992,339.262,0,475.794
 c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg></div></div></div></a></div><div></div></div></div>
@@ -2010,12 +2010,12 @@ We can start with something really small, and that small thing can give us the o
 <li class="nested-list text-lg">Follow me on Twitter: https://twitter.com/thedaviddias</li>
 </ul>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/learned-presenting-side-project-europe/front-end-checklist-presentation-wall.jpeg" length="0" type="image/jpeg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/learned-presenting-side-project-europe/front-end-checklist-presentation-wall.jpeg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[Help me to choose the best city/country to be a Front-End Developer!]]></title>
-            <link>https://thedaviddias.dev/articles/choose-city-country-front-developer</link>
-            <guid>https://thedaviddias.dev/articles/choose-city-country-front-developer</guid>
+            <link>https://thedaviddias.com/articles/choose-city-country-front-developer</link>
+            <guid>https://thedaviddias.com/articles/choose-city-country-front-developer</guid>
             <pubDate>Thu, 28 Dec 2017 13:07:27 GMT</pubDate>
             <description><![CDATA[Choosing a new city or country to leave is not an easy task. I'm sharing my process to choose the next city where I wanna live.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">After I’ve been invited by <span class="not-prose"><a href="https://www.facebook.com/Proximity-BBDO-Indian-Ocean-378454594936/" rel="noopener noreferrer" target="_blank" class="external-link">my previous company</a></span> to move to Mauritius to manage a Front-End Developer’s team, I’m now looking forward to choose where I want to move next. I’ve been working for many years in Paris, but going back to France, like some of my compatriotes I know, is not an option for me.</p>
@@ -2026,11 +2026,11 @@ We can start with something really small, and that small thing can give us the o
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -2047,11 +2047,11 @@ We can start with something really small, and that small thing can give us the o
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -2078,7 +2078,7 @@ We can start with something really small, and that small thing can give us the o
           100% {
             transform: rotate(360deg);
           }
-        }  
+        }
       </style><div class="rsme-spinner" style="width:10px;height:10px"></div><div style="color:#000000;font-family:Arial,sans-serif;font-size:14px;font-style:normal;font-weight:550;line-height:18px;text-align:center">View post on Twitter</div></div></div><div style="position:absolute;bottom:0;left:0;height:40px;width:100%;background-color:#ffffff;z-index:1"><div style="display:flex;align-items:center;column-gap:14px;margin-left:16px" class=""><div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(0px) translateY(7px)"></div><div style="background-color:#F4F4F4;height:12.5px;transform:rotate(-45deg) translateX(3px) translateY(1px);width:12.5px;flex-grow:0;margin-right:6px;margin-left:2px"></div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(9px) translateY(-18px)"></div></div><div><div style="background-color:#F4F4F4;border-radius:50%;height:20px;width:20px"></div><div style="width:0;height:0;border-top:2px solid transparent;border-left:6px solid #f4f4f4;border-bottom:2px solid transparent;transform:translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="height:25px;width:25px;transform:translateX(0px) translateY(-2px)"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#F4F4F4" d="M295.204,180.593C132.168,180.593,0,312.759,0,475.796
 c51.398-130.047,184.869-203.22,317.483-183.603L295.204,180.593z"></path><path style="fill:#F4F4F4" d="M512,253L295.204,36.204v217.818C159.946,249.655,34.992,339.262,0,475.794
 c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg></div></div></div></a></div><div></div></div></div>
@@ -2104,11 +2104,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -2125,11 +2125,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -2156,7 +2156,7 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
           100% {
             transform: rotate(360deg);
           }
-        }  
+        }
       </style><div class="rsme-spinner" style="width:10px;height:10px"></div><div style="color:#000000;font-family:Arial,sans-serif;font-size:14px;font-style:normal;font-weight:550;line-height:18px;text-align:center">View post on Twitter</div></div></div><div style="position:absolute;bottom:0;left:0;height:40px;width:100%;background-color:#ffffff;z-index:1"><div style="display:flex;align-items:center;column-gap:14px;margin-left:16px" class=""><div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(0px) translateY(7px)"></div><div style="background-color:#F4F4F4;height:12.5px;transform:rotate(-45deg) translateX(3px) translateY(1px);width:12.5px;flex-grow:0;margin-right:6px;margin-left:2px"></div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(9px) translateY(-18px)"></div></div><div><div style="background-color:#F4F4F4;border-radius:50%;height:20px;width:20px"></div><div style="width:0;height:0;border-top:2px solid transparent;border-left:6px solid #f4f4f4;border-bottom:2px solid transparent;transform:translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="height:25px;width:25px;transform:translateX(0px) translateY(-2px)"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#F4F4F4" d="M295.204,180.593C132.168,180.593,0,312.759,0,475.796
 c51.398-130.047,184.869-203.22,317.483-183.603L295.204,180.593z"></path><path style="fill:#F4F4F4" d="M512,253L295.204,36.204v217.818C159.946,249.655,34.992,339.262,0,475.794
 c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg></div></div></div></a></div><div></div></div></div>
@@ -2165,11 +2165,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -2186,11 +2186,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -2217,7 +2217,7 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
           100% {
             transform: rotate(360deg);
           }
-        }  
+        }
       </style><div class="rsme-spinner" style="width:10px;height:10px"></div><div style="color:#000000;font-family:Arial,sans-serif;font-size:14px;font-style:normal;font-weight:550;line-height:18px;text-align:center">View post on Twitter</div></div></div><div style="position:absolute;bottom:0;left:0;height:40px;width:100%;background-color:#ffffff;z-index:1"><div style="display:flex;align-items:center;column-gap:14px;margin-left:16px" class=""><div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(0px) translateY(7px)"></div><div style="background-color:#F4F4F4;height:12.5px;transform:rotate(-45deg) translateX(3px) translateY(1px);width:12.5px;flex-grow:0;margin-right:6px;margin-left:2px"></div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(9px) translateY(-18px)"></div></div><div><div style="background-color:#F4F4F4;border-radius:50%;height:20px;width:20px"></div><div style="width:0;height:0;border-top:2px solid transparent;border-left:6px solid #f4f4f4;border-bottom:2px solid transparent;transform:translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="height:25px;width:25px;transform:translateX(0px) translateY(-2px)"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#F4F4F4" d="M295.204,180.593C132.168,180.593,0,312.759,0,475.796
 c51.398-130.047,184.869-203.22,317.483-183.603L295.204,180.593z"></path><path style="fill:#F4F4F4" d="M512,253L295.204,36.204v217.818C159.946,249.655,34.992,339.262,0,475.794
 c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg></div></div></div></a></div><div></div></div></div>
@@ -2225,11 +2225,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -2246,11 +2246,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -2277,7 +2277,7 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
           100% {
             transform: rotate(360deg);
           }
-        }  
+        }
       </style><div class="rsme-spinner" style="width:10px;height:10px"></div><div style="color:#000000;font-family:Arial,sans-serif;font-size:14px;font-style:normal;font-weight:550;line-height:18px;text-align:center">View post on Twitter</div></div></div><div style="position:absolute;bottom:0;left:0;height:40px;width:100%;background-color:#ffffff;z-index:1"><div style="display:flex;align-items:center;column-gap:14px;margin-left:16px" class=""><div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(0px) translateY(7px)"></div><div style="background-color:#F4F4F4;height:12.5px;transform:rotate(-45deg) translateX(3px) translateY(1px);width:12.5px;flex-grow:0;margin-right:6px;margin-left:2px"></div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(9px) translateY(-18px)"></div></div><div><div style="background-color:#F4F4F4;border-radius:50%;height:20px;width:20px"></div><div style="width:0;height:0;border-top:2px solid transparent;border-left:6px solid #f4f4f4;border-bottom:2px solid transparent;transform:translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="height:25px;width:25px;transform:translateX(0px) translateY(-2px)"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#F4F4F4" d="M295.204,180.593C132.168,180.593,0,312.759,0,475.796
 c51.398-130.047,184.869-203.22,317.483-183.603L295.204,180.593z"></path><path style="fill:#F4F4F4" d="M512,253L295.204,36.204v217.818C159.946,249.655,34.992,339.262,0,475.794
 c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg></div></div></div></a></div><div></div></div></div>
@@ -2301,12 +2301,12 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">In February, I’ll start sending <span class="not-prose"><a href="https://www.linkedin.com/in/thedaviddias/" rel="noopener noreferrer" target="_blank" class="external-link">my resume</a></span> to some companies I perceive I can fit and by chance, it’ll become easier to decide which country I should focus on more.</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">In May/June, I hope to be in the country which will give me the chance to continue creating products and websites, managing young developers and working with an awesome team of experts who see the future of the web!</p>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/choose-city-country-front-developer/earth-rounded.jpeg" length="0" type="image/jpeg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/choose-city-country-front-developer/earth-rounded.jpeg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[The Front-End Checklist is just a tool… everything depends on you]]></title>
-            <link>https://thedaviddias.dev/articles/front-end-checklist-just-tool-everything-depends-on-you</link>
-            <guid>https://thedaviddias.dev/articles/front-end-checklist-just-tool-everything-depends-on-you</guid>
+            <link>https://thedaviddias.com/articles/front-end-checklist-just-tool-everything-depends-on-you</link>
+            <guid>https://thedaviddias.com/articles/front-end-checklist-just-tool-everything-depends-on-you</guid>
             <pubDate>Fri, 08 Dec 2017 00:01:00 GMT</pubDate>
             <description><![CDATA[The steps you need to follow to efficiently use the application frontendchecklist.io]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">One month ago, I launched the <span class="not-prose"><a href="https://github.com/thedaviddias/Front-End-Checklist" rel="noopener noreferrer" target="_blank" class="external-link">Front-End Checklist on GitHub</a></span>. In less than 2 weeks, more than 10,000 people around the world starred the repository. That was completely unexpected and incredible!</p>
@@ -2340,12 +2340,12 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">The success the Front-End Checklist received in such a short time reminded me that a lot of people are really interested in finding ways to improve their work. But just because the tool exists doesn’t directly help with that. You also need to commit to using it.</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">In a time where AI is taking over many manual tasks, quality is a must-have. Even if automation takes over a lot of our tasks, some level of quality will remain impossible to automate, and us front-end developers still have many long days to enjoy our jobs.</p>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/front-end-checklist-just-tool-everything-depends-on-you/featured.jpg" length="0" type="image/jpg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/front-end-checklist-just-tool-everything-depends-on-you/featured.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[How my open source project earned 6,000 stars on GitHub in just 5 days]]></title>
-            <link>https://thedaviddias.dev/articles/how-my-open-source-project-earned-6000-stars-on-github-in-just-5-days</link>
-            <guid>https://thedaviddias.dev/articles/how-my-open-source-project-earned-6000-stars-on-github-in-just-5-days</guid>
+            <link>https://thedaviddias.com/articles/how-my-open-source-project-earned-6000-stars-on-github-in-just-5-days</link>
+            <guid>https://thedaviddias.com/articles/how-my-open-source-project-earned-6000-stars-on-github-in-just-5-days</guid>
             <pubDate>Tue, 28 Nov 2017 03:47:53 GMT</pubDate>
             <description><![CDATA[The Front-End Checklist is my first open-source project gaining so much attraction and visibility! In this article, I explain what happen the first 5 days my project got published.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 "><div class="my-3 block"><a class="cursor-pointer hover:underline " aria-label="Click to enlarge the image" href="/images/articles/how-my-open-source-project-earned-6000-stars-on-github-in-just-5-days/github-stars.jpeg"><img alt="" loading="lazy" width="1287" height="650" decoding="async" data-nimg="1" class="rounded-lg" style="color:transparent;width:100%;height:auto" srcSet="/_next/image?url=%2Fimages%2Farticles%2Fhow-my-open-source-project-earned-6000-stars-on-github-in-just-5-days%2Fgithub-stars.jpeg&amp;w=1920&amp;q=80 1x, /_next/image?url=%2Fimages%2Farticles%2Fhow-my-open-source-project-earned-6000-stars-on-github-in-just-5-days%2Fgithub-stars.jpeg&amp;w=3840&amp;q=80 2x" src="/_next/image?url=%2Fimages%2Farticles%2Fhow-my-open-source-project-earned-6000-stars-on-github-in-just-5-days%2Fgithub-stars.jpeg&amp;w=3840&amp;q=80"/></a><figcaption class="z-10 !mt-0 text-sm italic text-gray-600 text-center dark:text-gray-300"><span>A screenshot of the Front-End Checklist repository (numbers are already outdated since I finished writing that article)</span></figcaption></div></p>
@@ -2375,11 +2375,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -2396,11 +2396,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -2427,7 +2427,7 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
           100% {
             transform: rotate(360deg);
           }
-        }  
+        }
       </style><div class="rsme-spinner" style="width:10px;height:10px"></div><div style="color:#000000;font-family:Arial,sans-serif;font-size:14px;font-style:normal;font-weight:550;line-height:18px;text-align:center">View post on Twitter</div></div></div><div style="position:absolute;bottom:0;left:0;height:40px;width:100%;background-color:#ffffff;z-index:1"><div style="display:flex;align-items:center;column-gap:14px;margin-left:16px" class=""><div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(0px) translateY(7px)"></div><div style="background-color:#F4F4F4;height:12.5px;transform:rotate(-45deg) translateX(3px) translateY(1px);width:12.5px;flex-grow:0;margin-right:6px;margin-left:2px"></div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(9px) translateY(-18px)"></div></div><div><div style="background-color:#F4F4F4;border-radius:50%;height:20px;width:20px"></div><div style="width:0;height:0;border-top:2px solid transparent;border-left:6px solid #f4f4f4;border-bottom:2px solid transparent;transform:translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="height:25px;width:25px;transform:translateX(0px) translateY(-2px)"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#F4F4F4" d="M295.204,180.593C132.168,180.593,0,312.759,0,475.796
 c51.398-130.047,184.869-203.22,317.483-183.603L295.204,180.593z"></path><path style="fill:#F4F4F4" d="M512,253L295.204,36.204v217.818C159.946,249.655,34.992,339.262,0,475.794
 c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg></div></div></div></a></div><div></div></div></div>
@@ -2437,11 +2437,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -2458,11 +2458,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -2489,7 +2489,7 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
           100% {
             transform: rotate(360deg);
           }
-        }  
+        }
       </style><div class="rsme-spinner" style="width:10px;height:10px"></div><div style="color:#000000;font-family:Arial,sans-serif;font-size:14px;font-style:normal;font-weight:550;line-height:18px;text-align:center">View post on Twitter</div></div></div><div style="position:absolute;bottom:0;left:0;height:40px;width:100%;background-color:#ffffff;z-index:1"><div style="display:flex;align-items:center;column-gap:14px;margin-left:16px" class=""><div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(0px) translateY(7px)"></div><div style="background-color:#F4F4F4;height:12.5px;transform:rotate(-45deg) translateX(3px) translateY(1px);width:12.5px;flex-grow:0;margin-right:6px;margin-left:2px"></div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(9px) translateY(-18px)"></div></div><div><div style="background-color:#F4F4F4;border-radius:50%;height:20px;width:20px"></div><div style="width:0;height:0;border-top:2px solid transparent;border-left:6px solid #f4f4f4;border-bottom:2px solid transparent;transform:translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="height:25px;width:25px;transform:translateX(0px) translateY(-2px)"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#F4F4F4" d="M295.204,180.593C132.168,180.593,0,312.759,0,475.796
 c51.398-130.047,184.869-203.22,317.483-183.603L295.204,180.593z"></path><path style="fill:#F4F4F4" d="M512,253L295.204,36.204v217.818C159.946,249.655,34.992,339.262,0,475.794
 c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg></div></div></div></a></div><div></div></div></div>
@@ -2528,12 +2528,12 @@ Don’t hesitate, everything you do, related to coding and web, take time to pre
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Due to many requests, I’m already working on an NPM module which will probably be used by a future website. It was not in my initial plans but when I saw so many people asking for, I couldn’t refuse.</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">I have much more to share! I’m working on other lists that may be as good as the Front-End Checklist… Well, I hope! 😃</p>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/how-my-open-source-project-earned-6000-stars-on-github-in-just-5-days/github-stars.jpeg" length="0" type="image/jpeg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/how-my-open-source-project-earned-6000-stars-on-github-in-just-5-days/github-stars.jpeg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[How a Morning Routine can positively change your life forever]]></title>
-            <link>https://thedaviddias.dev/articles/morning-routine-positively-change-life</link>
-            <guid>https://thedaviddias.dev/articles/morning-routine-positively-change-life</guid>
+            <link>https://thedaviddias.com/articles/morning-routine-positively-change-life</link>
+            <guid>https://thedaviddias.com/articles/morning-routine-positively-change-life</guid>
             <pubDate>Sat, 21 Jan 2017 00:01:00 GMT</pubDate>
             <description><![CDATA[Having a Morning Routine can positively change your life in so many good ways. Through experimentation, I explore ways to improve my health and my mindset.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 "><div class="my-3 block"><a class="cursor-pointer hover:underline " aria-label="Click to enlarge the image" href="/images/articles/how-morning-routine-can-positively-change-your-life-forever/featured.jpeg"><img alt="" loading="lazy" width="700" height="393" decoding="async" data-nimg="1" class="rounded-lg" style="color:transparent;width:100%;height:auto" srcSet="/_next/image?url=%2Fimages%2Farticles%2Fhow-morning-routine-can-positively-change-your-life-forever%2Ffeatured.jpeg&amp;w=750&amp;q=80 1x, /_next/image?url=%2Fimages%2Farticles%2Fhow-morning-routine-can-positively-change-your-life-forever%2Ffeatured.jpeg&amp;w=1920&amp;q=80 2x" src="/_next/image?url=%2Fimages%2Farticles%2Fhow-morning-routine-can-positively-change-your-life-forever%2Ffeatured.jpeg&amp;w=1920&amp;q=80"/></a><figcaption class="z-10 !mt-0 text-sm italic text-gray-600 text-center dark:text-gray-300"><span>Meditation is part of my Morning Routine now…</span></figcaption></div></p>
@@ -2569,11 +2569,11 @@ Don’t hesitate, everything you do, related to coding and web, take time to pre
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -2590,11 +2590,11 @@ Don’t hesitate, everything you do, related to coding and web, take time to pre
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -2621,7 +2621,7 @@ Don’t hesitate, everything you do, related to coding and web, take time to pre
           100% {
             transform: rotate(360deg);
           }
-        }  
+        }
       </style><div class="rsme-spinner" style="width:10px;height:10px"></div><div style="color:#000000;font-family:Arial,sans-serif;font-size:14px;font-style:normal;font-weight:550;line-height:18px;text-align:center">View post on Twitter</div></div></div><div style="position:absolute;bottom:0;left:0;height:40px;width:100%;background-color:#ffffff;z-index:1"><div style="display:flex;align-items:center;column-gap:14px;margin-left:16px" class=""><div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(0px) translateY(7px)"></div><div style="background-color:#F4F4F4;height:12.5px;transform:rotate(-45deg) translateX(3px) translateY(1px);width:12.5px;flex-grow:0;margin-right:6px;margin-left:2px"></div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(9px) translateY(-18px)"></div></div><div><div style="background-color:#F4F4F4;border-radius:50%;height:20px;width:20px"></div><div style="width:0;height:0;border-top:2px solid transparent;border-left:6px solid #f4f4f4;border-bottom:2px solid transparent;transform:translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="height:25px;width:25px;transform:translateX(0px) translateY(-2px)"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#F4F4F4" d="M295.204,180.593C132.168,180.593,0,312.759,0,475.796
 c51.398-130.047,184.869-203.22,317.483-183.603L295.204,180.593z"></path><path style="fill:#F4F4F4" d="M512,253L295.204,36.204v217.818C159.946,249.655,34.992,339.262,0,475.794
 c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg></div></div></div></a></div><div></div></div></div>
@@ -2634,11 +2634,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -2655,11 +2655,11 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
         .rsme-embed .rsme-d-none {
           display: none;
         }
-    
+
         .rsme-embed .twitter-tweet {
           margin: 0 !important;
         }
-    
+
         .rsme-embed blockquote {
           margin: 0 !important;
           padding: 0 !important;
@@ -2686,7 +2686,7 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
           100% {
             transform: rotate(360deg);
           }
-        }  
+        }
       </style><div class="rsme-spinner" style="width:10px;height:10px"></div><div style="color:#000000;font-family:Arial,sans-serif;font-size:14px;font-style:normal;font-weight:550;line-height:18px;text-align:center">View post on Twitter</div></div></div><div style="position:absolute;bottom:0;left:0;height:40px;width:100%;background-color:#ffffff;z-index:1"><div style="display:flex;align-items:center;column-gap:14px;margin-left:16px" class=""><div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(0px) translateY(7px)"></div><div style="background-color:#F4F4F4;height:12.5px;transform:rotate(-45deg) translateX(3px) translateY(1px);width:12.5px;flex-grow:0;margin-right:6px;margin-left:2px"></div><div style="background-color:#F4F4F4;border-radius:50%;height:12.5px;width:12.5px;transform:translateX(9px) translateY(-18px)"></div></div><div><div style="background-color:#F4F4F4;border-radius:50%;height:20px;width:20px"></div><div style="width:0;height:0;border-top:2px solid transparent;border-left:6px solid #f4f4f4;border-bottom:2px solid transparent;transform:translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="height:25px;width:25px;transform:translateX(0px) translateY(-2px)"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#F4F4F4" d="M295.204,180.593C132.168,180.593,0,312.759,0,475.796
 c51.398-130.047,184.869-203.22,317.483-183.603L295.204,180.593z"></path><path style="fill:#F4F4F4" d="M512,253L295.204,36.204v217.818C159.946,249.655,34.992,339.262,0,475.794
 c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg></div></div></div></a></div><div></div></div></div>
@@ -2717,12 +2717,12 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">And you, do you have a daily or morning routine?</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">What you do daily to <strong class="dark:text-white">improve your life</strong>, <strong class="dark:text-white">achieve your goals</strong> and take actions <strong class="dark:text-white">to build the life you want</strong>?</p>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/how-morning-routine-can-positively-change-your-life-forever/featured.jpeg" length="0" type="image/jpeg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/how-morning-routine-can-positively-change-your-life-forever/featured.jpeg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[Release Notification Info Action]]></title>
-            <link>https://thedaviddias.dev/projects/release-notification-info-action</link>
-            <guid>https://thedaviddias.dev/projects/release-notification-info-action</guid>
+            <link>https://thedaviddias.com/projects/release-notification-info-action</link>
+            <guid>https://thedaviddias.com/projects/release-notification-info-action</guid>
             <pubDate>Sun, 30 Jul 2023 19:33:36 GMT</pubDate>
             <description><![CDATA[Github Action that sends release information to Slack keeping your team up-to-date with the latest releases.]]></description>
             <content:encoded><![CDATA[<h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">Introduction</h2>
@@ -2736,21 +2736,21 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
 <h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">Future Plans</h2>
 <h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">Get Involved</h2>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev" length="0" type="image//"/>
+            <enclosure url="https://thedaviddias.com" length="0" type="image//"/>
         </item>
         <item>
             <title><![CDATA[UI Patterns for developers]]></title>
-            <link>https://thedaviddias.dev/projects/ui-patterns-for-developers</link>
-            <guid>https://thedaviddias.dev/projects/ui-patterns-for-developers</guid>
+            <link>https://thedaviddias.com/projects/ui-patterns-for-developers</link>
+            <guid>https://thedaviddias.com/projects/ui-patterns-for-developers</guid>
             <pubDate>Sun, 30 Jul 2023 16:54:20 GMT</pubDate>
             <description><![CDATA[A full guide on all UI Patterns, practices, pitfalls and gotchas for front-end developers.]]></description>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev" length="0" type="image//"/>
+            <enclosure url="https://thedaviddias.com" length="0" type="image//"/>
         </item>
         <item>
             <title><![CDATA[Front-End Checklist V1]]></title>
-            <link>https://thedaviddias.dev/projects/front-end-checklist-v1</link>
-            <guid>https://thedaviddias.dev/projects/front-end-checklist-v1</guid>
+            <link>https://thedaviddias.com/projects/front-end-checklist-v1</link>
+            <guid>https://thedaviddias.com/projects/front-end-checklist-v1</guid>
             <pubDate>Mon, 30 Oct 2017 20:06:48 GMT</pubDate>
             <description><![CDATA[The Front-End Checklist is an exhaustive list of all elements you need to have / to test before launching your website / HTML page to production.]]></description>
             <content:encoded><![CDATA[<h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">Overview</h2>
@@ -2787,7 +2787,7 @@ c59.905-109.171,178.724-165.463,295.204-151.033v145.035L512,253z"></path></svg><
 <li class="nested-list text-lg">The <span class="not-prose"><a href="https://www.producthunt.com/products/front-end-checklist" rel="noopener noreferrer" target="_blank" class="external-link">Front-End Checklist on Product Hunt</a></span></li>
 </ul>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev" length="0" type="image//"/>
+            <enclosure url="https://thedaviddias.com" length="0" type="image//"/>
         </item>
     </channel>
 </rss>

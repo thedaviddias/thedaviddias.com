@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://thedaviddias.dev
+Host: https://thedaviddias.com
 
 # Sitemaps
-Sitemap: https://thedaviddias.dev/sitemap.xml
+Sitemap: https://thedaviddias.com/sitemap.xml

@@ -28,7 +28,7 @@ export const SimklCard = () => {
   if (!data) return <Loader />
 
   return (
-    <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
+    <div className="my-2 grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
       <MetricsCard
         header={t('dashboard.sections.tv.total_spent')}
         side={t('dashboard.sections.tv.total_spent_duration')}

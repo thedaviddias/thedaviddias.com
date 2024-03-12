@@ -11,12 +11,12 @@ type NotesProps = {
 export const Notes: React.FC<NotesProps> = ({ note }) => {
   return (
     <>
-      <article className="pt-2 pb-2 border-t border-gray-200 dark:border-gray-700 relative">
-        <div className="flex flex-col lg:flex-row gap-y-5 lg:gap-x-5">
-          <div className="max-w-[37rem] w-full">
+      <article className="relative border-t border-gray-200 pb-2 pt-2 dark:border-gray-700">
+        <div className="flex flex-col gap-y-5 lg:flex-row lg:gap-x-5">
+          <div className="w-full max-w-[37rem]">
             <H4 as="h3">
               <CustomLink
-                className="dark:!text-gray-100 block tracking-tight"
+                className="block tracking-tight dark:!text-gray-100"
                 href={`/notes/${note.slug}`}
               >
                 {note.frontMatter.title}
@@ -24,7 +24,7 @@ export const Notes: React.FC<NotesProps> = ({ note }) => {
             </H4>
           </div>
           <div className="flex-grow text-left lg:text-right">
-            <div className="flex lg:justify-end flex-wrap">
+            <div className="flex flex-wrap lg:justify-end">
               <Tags tags={note.frontMatter.tags} className="justify-center" />
             </div>
           </div>

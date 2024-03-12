@@ -23,11 +23,11 @@ export const Sidenote: React.FC<SidenoteProps> = ({
   children,
   className,
 }) => {
-  const InfoIcon = <Info className="fill-current h-6 w-6 text-blue-500 mr-4" />
-  const WarningIcon = <Warning className="fill-current h-6 w-6 text-orange-500 mr-4" />
+  const InfoIcon = <Info className="mr-4 h-6 w-6 fill-current text-blue-500" />
+  const WarningIcon = <Warning className="mr-4 h-6 w-6 fill-current text-orange-500" />
 
   return (
-    <aside className={clsx('border-l-4 p-4 relative rounded-md', typeStyled[type], className)}>
+    <aside className={clsx('relative rounded-md border-l-4 p-4', typeStyled[type], className)}>
       <div className="flex">
         <div className="py-1">
           {type === 'info' && InfoIcon}

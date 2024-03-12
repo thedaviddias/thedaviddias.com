@@ -41,14 +41,14 @@ const Uses: NextPage<UsesProps> = ({ categories, tools, frontMatter, source }) =
       languageAlternates={[
         {
           hrefLang: 'en',
-          href: 'https://thedaviddias.dev/uses',
+          href: 'https://thedaviddias.com/uses',
         },
         {
           hrefLang: 'fr',
-          href: 'https://thedaviddias.dev/fr/utilise',
+          href: 'https://thedaviddias.com/fr/utilise',
         },
       ]}
-      className="pt-10 border-none"
+      className="border-none pt-10"
     >
       <PageHeader title={titlePage} description={descriptionPage} />
 
@@ -68,7 +68,7 @@ const Uses: NextPage<UsesProps> = ({ categories, tools, frontMatter, source }) =
       <MDXRemote {...source} components={MDXComponents} lazy />
 
       {categories?.map((category) => (
-        <section key={category} className="flex flex-col mt-5 mb-8">
+        <section key={category} className="mb-8 mt-5 flex flex-col">
           <header className="pb-5">
             <H3 as="h2">{category}</H3>
           </header>

@@ -15,7 +15,7 @@ export const ToolCard: React.FC<ToolCard> = ({ tool }) => {
   const { lang } = useTranslation('common')
 
   return (
-    <article className="flex flex-row relative gap-x-5">
+    <article className="relative flex flex-row gap-x-5">
       {tool.image ? (
         <div className="min-w-[5rem]">
           <Image
@@ -34,7 +34,7 @@ export const ToolCard: React.FC<ToolCard> = ({ tool }) => {
         <H5 as="h3">
           <CustomLink
             href={tool.url}
-            className="before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 font-medium dark:!text-white"
+            className="font-medium before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:content-[''] dark:!text-white"
           >
             {tool.title}
           </CustomLink>

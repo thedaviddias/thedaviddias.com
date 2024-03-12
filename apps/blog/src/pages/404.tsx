@@ -25,7 +25,7 @@ const NotFoundPage: NextPage = () => {
       title={routes(t).error404.seo.title || ''}
       description={routes(t).error404.seo.description || ''}
       openGraph={routes(t).error404.seo}
-      className="pt-10 border-none"
+      className="border-none pt-10"
     >
       <PageHeader
         title={routes(t).error404.seo.title}

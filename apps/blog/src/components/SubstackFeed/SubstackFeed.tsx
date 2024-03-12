@@ -26,12 +26,12 @@ export const SubstackFeed: FC = () => {
   return (
     <>
       {feed?.items.length ? (
-        <section className="relative flex flex-col px-0 pt-0 pb-0 overflow-hidden mb-5 md:mb-10">
+        <section className="relative mb-5 flex flex-col overflow-hidden px-0 pb-0 pt-0 md:mb-10">
           <header className="mb-5">
             <H5 as="h2">{t('newsletter.sections.latest')}</H5>
-            <p className="pt-3 text-s dark:text-gray-400">{t('newsletter.seo.description')}</p>
+            <p className="text-s pt-3 dark:text-gray-400">{t('newsletter.seo.description')}</p>
           </header>
-          <ul className="flex flex-col md:flex-row gap-5">
+          <ul className="flex flex-col gap-5 md:flex-row">
             {feed?.items.map((item: any, index: any) => (
               <li
                 className="relative overflow-hidden"
@@ -50,11 +50,11 @@ export const SubstackFeed: FC = () => {
                     alt=""
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-                  <div className="relative flex flex-col items-center justify-center w-full px-4 py-3 sm:justify-between">
-                    <div className="items-center justify-center w-full sm:flex">
+                  <div className="relative flex w-full flex-col items-center justify-center px-4 py-3 sm:justify-between">
+                    <div className="w-full items-center justify-center sm:flex">
                       <div className="max-w-lg">
                         <a href={item.link}>
-                          <header className="text-white text-2xl font-bold">{item.title}</header>
+                          <header className="text-2xl font-bold text-white">{item.title}</header>
                           <p className="mb-4 font-medium text-white sm:mb-0 md:mb-0">
                             {item.description}
                           </p>

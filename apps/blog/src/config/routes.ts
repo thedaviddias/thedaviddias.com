@@ -134,7 +134,7 @@ export const routes: RoutesResponse = (translate) => ({
   },
   analytics: {
     label: translate('common:layout.footer.extra_links.analytics'),
-    path: 'https://plausible.io/thedaviddias.dev',
+    path: 'https://plausible.io/thedaviddias.com',
     seo: extendSEO({ options: {}, translate }),
   },
   resume: {

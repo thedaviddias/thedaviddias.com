@@ -18,14 +18,14 @@ export const Tags: React.FC<TagsProps> = ({ tags, className, slug }) => {
 
   return (
     <div className="md:mb-5 md:mt-0">
-      <ul className={clsx(`flex items-center flex-wrap gap-x-3 gap-y-4`, className)}>
+      <ul className={clsx(`flex flex-wrap items-center gap-x-3 gap-y-4`, className)}>
         {tags?.map((tag) => (
           <li key={tag}>
             <CustomLink
               href={`${currentSlug}/${slugify(tag, { lower: true })}`}
-              className="!font-semibold hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 uppercase text-x space-y-2 !no-underline py-1 px-2 mb-2 text-xs md:text-sm leading-6 text-gray-600 bg-gray-100 hover:ring-2 ring-gray-300 dark:bg-gray-700
-              rounded-lg border dark:border-gray-800 border-solid
-              dark:hover:bg-gray-700"
+              className="text-x mb-2 space-y-2 rounded-lg border border-solid bg-gray-100 px-2 py-1 text-xs !font-semibold uppercase leading-6 text-gray-600 !no-underline ring-gray-300 hover:text-gray-900 hover:ring-2 md:text-sm
+              dark:border-gray-800 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-700
+              dark:hover:text-gray-100"
             >
               {humanizeString(tag)}
             </CustomLink>

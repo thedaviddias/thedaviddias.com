@@ -19,18 +19,18 @@ export const MetricsCard: React.FC<MetricsCardProps> = ({
   isCurrency = false,
 }) => {
   return (
-    <article className="flex flex-col border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-md p-4 h-full border relative">
+    <article className="relative flex h-full flex-col rounded-md border border-gray-300 p-4 text-gray-800 dark:border-gray-700 dark:text-gray-200">
       <H5 as="h3">
         {link ? (
-          <CustomLink href={link} className="dark:text-blue-300 font-semibold">
+          <CustomLink href={link} className="font-semibold dark:text-blue-300">
             {header}
           </CustomLink>
         ) : (
           <span className="mb-3 font-semibold">{header}</span>
         )}
-        {side && <div className="absolute right-2 bottom-2 text-sm">{side}</div>}
+        {side && <div className="absolute bottom-2 right-2 text-sm">{side}</div>}
       </H5>
-      <p className="mt-2 text-2xl font-bold spacing-sm text-black dark:text-white">
+      <p className="spacing-sm mt-2 text-2xl font-bold text-black dark:text-white">
         {metric && metric > 0 && isCurrency
           ? metric.toLocaleString('en-US', {
               style: 'currency',

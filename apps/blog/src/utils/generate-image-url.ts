@@ -26,7 +26,7 @@ export const generateImageUrl = ({
   title,
   cloudinaryUrlBase = 'https://res.cloudinary.com',
   imagePublicID = 'social-card-template.jpg',
-  subfolder = 'thedaviddias.dev',
+  subfolder = 'thedaviddias.com',
   imageWidth = CLOUDINARY_IMG_WIDTH,
   imageHeight = CLOUDINARY_IMG_HEIGHT,
   textAreaWidth = 1600,

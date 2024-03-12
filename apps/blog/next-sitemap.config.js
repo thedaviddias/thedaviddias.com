@@ -4,18 +4,18 @@ const commonOptions = (config) => ({
   lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
   alternateRefs: [
     {
-      href: 'https://thedaviddias.dev',
+      href: 'https://thedaviddias.com',
       hreflang: 'en',
     },
     {
-      href: 'https://thedaviddias.dev/fr',
+      href: 'https://thedaviddias.com/fr',
       hreflang: 'fr',
     },
   ],
 })
 
 const config = {
-  siteUrl: 'https://thedaviddias.dev',
+  siteUrl: 'https://thedaviddias.com',
   generateRobotsTxt: true,
   exclude: ['/404', '/fr/404'],
   additionalPaths: async (config) => {

@@ -23,7 +23,7 @@ export const ThemeSwitch = () => {
       type="button"
       aria-label={switchLabel}
       title={switchLabel}
-      className="w-7 h-7 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300  transition-all"
+      className="flex h-7 w-7 items-center justify-center rounded-lg bg-gray-200 ring-gray-300 transition-all hover:ring-2  dark:bg-gray-600"
       onClick={() => setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')}
     >
       <svg
@@ -31,7 +31,7 @@ export const ThemeSwitch = () => {
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        className="w-6 h-6 text-gray-800 dark:text-gray-200"
+        className="h-6 w-6 text-gray-800 dark:text-gray-200"
       >
         {mounted && (theme === 'dark' || resolvedTheme === 'dark') ? (
           <path

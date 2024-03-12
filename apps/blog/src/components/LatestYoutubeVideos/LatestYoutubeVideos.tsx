@@ -38,12 +38,12 @@ const LatestYoutubeVideos = () => {
   const videos = data?.videos
 
   return (
-    <section className="border-none mb-5 md:mb-10">
+    <section className="mb-5 border-none md:mb-10">
       <header className="mb-5">
         <H5 as="h2">{t('youtube.sections.latest_videos')}</H5>
-        <p className="pt-3 text-s dark:text-gray-400">{t('youtube.seo.description')}</p>
+        <p className="text-s pt-3 dark:text-gray-400">{t('youtube.seo.description')}</p>
       </header>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 my-3 max-w-5xl">
+      <div className="my-3 grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-3">
         {videos?.map((video, i) => (
           <div key={i} className="relative mt-3">
             <div className="mb-3">
@@ -52,7 +52,7 @@ const LatestYoutubeVideos = () => {
                 alt=""
                 width={320}
                 height={230}
-                className="aspect-video object-cover h-44 rounded-lg"
+                className="aspect-video h-44 rounded-lg object-cover"
                 style={{
                   maxWidth: '100%',
                   height: 'auto',
@@ -62,7 +62,7 @@ const LatestYoutubeVideos = () => {
             <H4 as="h3">
               <CustomLink
                 href={`https://youtube.com/watch?v=${video.id.videoId}`}
-                className="dark:!text-white before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0"
+                className="before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:content-[''] dark:!text-white"
               >
                 {video.snippet.title}
               </CustomLink>

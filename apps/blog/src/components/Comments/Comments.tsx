@@ -11,14 +11,14 @@ export const Comments = () => {
   const { theme, resolvedTheme } = useTheme()
   const { t, lang } = useTranslation('common')
   return (
-    <section className="mt-10 border-t border-gray-200 dark:border-gray-600 pt-8">
+    <section className="mt-10 border-t border-gray-200 pt-8 dark:border-gray-600">
       <header>
         <H4 as="h3">{t('comments.title')}</H4>
         <Paragraph>{t('comments.description')}</Paragraph>
       </header>
       {isDisplay ? (
         <Giscus
-          repo="thedaviddias/thedaviddias.dev"
+          repo="thedaviddias/thedaviddias.com"
           repoId="R_kgDOHmf8rQ"
           category="Announcements"
           categoryId="DIC_kwDOHmf8rc4CQc4s"
@@ -33,7 +33,7 @@ export const Comments = () => {
         <button
           type="button"
           onClick={() => setIsDisplay(true)}
-          className="mt-5 mb-3 bg-indigo-500 dark:bg-indigo-900 text-white font-bold py-1 px-3 rounded"
+          className="mb-3 mt-5 rounded bg-indigo-500 px-3 py-1 font-bold text-white dark:bg-indigo-900"
         >
           {t('comments.leave_comment')}
         </button>

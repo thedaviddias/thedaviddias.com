@@ -54,16 +54,16 @@ const Blog = ({ posts, categories }: BlogProps) => {
         languageAlternates={[
           {
             hrefLang: 'en',
-            href: 'https://thedaviddias.dev/articles',
+            href: 'https://thedaviddias.com/articles',
           },
           {
             hrefLang: 'fr',
-            href: 'https://thedaviddias.dev/fr/articles',
+            href: 'https://thedaviddias.com/fr/articles',
           },
         ]}
       />
       <main className="divide-slate-200 sm:space-y-16 lg:max-w-none">
-        <section className="pt-10 border-none grid grid-cols-1 md:gap-4 md:items-end">
+        <section className="grid grid-cols-1 border-none pt-10 md:items-end md:gap-4">
           <PageHeader
             title={routes(t).articles.h1}
             description={routes(t).articles.seo.description}
@@ -79,7 +79,7 @@ const Blog = ({ posts, categories }: BlogProps) => {
 
           <Categories categories={categories} />
 
-          <div className="grid grid-cols-1 lg:col-span-2 mt-16">
+          <div className="mt-16 grid grid-cols-1 lg:col-span-2">
             {!filteredBlogPosts.length && (
               <p className="mb-4 text-gray-600 dark:text-gray-400">{t('posts.empty')}</p>
             )}

@@ -12,12 +12,12 @@ export type ProjectsProps = {
 export const Projects: React.FC<ProjectsProps> = ({ project }) => {
   return (
     <>
-      <article className="pt-2 pb-2 border-t border-gray-200 dark:border-gray-700 relative">
-        <div className="flex flex-col lg:flex-row gap-y-5 lg:gap-x-5">
+      <article className="relative border-t border-gray-200 pb-2 pt-2 dark:border-gray-700">
+        <div className="flex flex-col gap-y-5 lg:flex-row lg:gap-x-5">
           <div className="w-full">
             <H4 as="h3">
               <CustomLink
-                className="dark:!text-gray-100 block tracking-tight"
+                className="block tracking-tight dark:!text-gray-100"
                 href={`/projects/${project.slug}`}
               >
                 {project.frontMatter.title} ({project.frontMatter.projects_type})
@@ -26,9 +26,9 @@ export const Projects: React.FC<ProjectsProps> = ({ project }) => {
             <StatusIndicator status={project.frontMatter.status} />
             <Paragraph>{project.frontMatter.description}</Paragraph>
             {project.frontMatter.progress !== '100%' ? (
-              <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+              <div className="w-full rounded-full bg-gray-200 dark:bg-gray-700">
                 <div
-                  className="bg-blue-700 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                  className="rounded-full bg-blue-700 p-0.5 text-center text-sm font-medium leading-none text-blue-100"
                   style={{ width: project.frontMatter.progress }}
                 >
                   {project.frontMatter.progress}

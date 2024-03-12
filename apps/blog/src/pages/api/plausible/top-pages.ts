@@ -13,7 +13,7 @@ export type GetPlausibleTopPagesRes = {
 }
 
 async function getPlausibleTopPages() {
-  const url = `https://plausible.io/api/v1/stats/breakdown?site_id=thedaviddias.dev&period=6mo&property=event:page&limit=10`
+  const url = `https://plausible.io/api/v1/stats/breakdown?site_id=thedaviddias.com&period=6mo&property=event:page&limit=10`
   return fetcher<GetPlausibleTopPagesRes>(url, {
     headers: {
       Authorization: `Bearer ${process.env.PLAUSIBLE_API_KEY}`,

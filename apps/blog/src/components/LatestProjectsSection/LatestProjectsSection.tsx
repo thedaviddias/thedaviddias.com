@@ -12,10 +12,10 @@ export const LatestProjectsSection: React.FC<LatestProjectsSectionProps> = ({ pr
   const { t } = useTranslation('common')
 
   return (
-    <section className="border-none mb-5 md:mb-10">
+    <section className="mb-5 border-none md:mb-10">
       <header className="mb-5">
         <H5 as="h2">{t('projects.sections.latest-projects')}</H5>
-        <p className="pt-3 text-s dark:text-gray-400">{t('projects.seo.description')}</p>
+        <p className="text-s pt-3 dark:text-gray-400">{t('projects.seo.description')}</p>
       </header>
 
       <div className="flex flex-col gap-3">

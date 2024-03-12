@@ -23,7 +23,7 @@ export const DatePost: React.FC<DatePostProps> = ({ date, lastmod }) => {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="ml-3 text-right flex gap-2 text-base font-medium text-gray-700 dark:text-gray-300">
+      <div className="ml-3 flex gap-2 text-right text-base font-medium text-gray-700 dark:text-gray-300">
         {lastmod && (
           <p className="font-medium italic text-gray-500 group-hover:text-gray-700">
             <span>({t('posts.updated')}</span> <time dateTime={lastmod}>{dateUpdated})</time>

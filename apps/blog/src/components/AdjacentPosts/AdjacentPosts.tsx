@@ -22,18 +22,18 @@ export const AdjacentPosts: React.FC<AdjacentPostsProps> = ({ posts }) => {
   const { t } = useTranslation('common')
 
   return (
-    <div className="mt-10 border-t border-gray-200 dark:border-gray-300 pt-8">
+    <div className="mt-10 border-t border-gray-200 pt-8 dark:border-gray-300">
       <nav aria-label="Adjacent posts">
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 text-xl">
+        <div className="grid gap-6 text-xl sm:grid-cols-1 md:grid-cols-2">
           <div className="nav-previous">
             {posts.previous && (
               <>
                 <div className="small-title flex justify-start">{t('posts.previous')}</div>
                 <CustomLink
                   href={posts.previous.slug}
-                  className="flex flex-row-reverse text-gray-600 hover:text-gray-900 dark:text-gray-200 p-1"
+                  className="flex flex-row-reverse p-1 text-gray-600 hover:text-gray-900 dark:text-gray-200"
                 >
-                  <div className="flex flex-col gap-3 justify-start">
+                  <div className="flex flex-col justify-start gap-3">
                     {posts.previous.image ? (
                       <div className="relative flex justify-start">
                         <Image
@@ -41,7 +41,7 @@ export const AdjacentPosts: React.FC<AdjacentPostsProps> = ({ posts }) => {
                           alt=""
                           width={200}
                           height={200}
-                          className="aspect-video object-cover h-44 rounded-lg"
+                          className="aspect-video h-44 rounded-lg object-cover"
                           style={{
                             maxWidth: '100%',
                             height: 'auto',
@@ -61,9 +61,9 @@ export const AdjacentPosts: React.FC<AdjacentPostsProps> = ({ posts }) => {
                 <div className="small-title flex justify-end">{t('posts.next')}</div>
                 <CustomLink
                   href={posts.next.slug}
-                  className="flex flex-row-reverse text-gray-600 hover:text-gray-900 dark:text-gray-200 p-1"
+                  className="flex flex-row-reverse p-1 text-gray-600 hover:text-gray-900 dark:text-gray-200"
                 >
-                  <div className="flex flex-col gap-3 justify-end">
+                  <div className="flex flex-col justify-end gap-3">
                     {posts.next.image ? (
                       <div className="relative flex justify-end">
                         <Image
@@ -71,7 +71,7 @@ export const AdjacentPosts: React.FC<AdjacentPostsProps> = ({ posts }) => {
                           alt=""
                           width={200}
                           height={200}
-                          className="aspect-video object-cover rounded-lg"
+                          className="aspect-video rounded-lg object-cover"
                           style={{
                             maxWidth: '100%',
                             height: 'auto',

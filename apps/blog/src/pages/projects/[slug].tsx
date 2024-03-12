@@ -127,7 +127,7 @@ const ProjectPage: NextPage<BlogPostPageProps> = ({ frontMatter, source, permali
           article: {
             publishedTime: date,
             modifiedTime: lastmod,
-            authors: [`https://thedaviddias.dev/about`],
+            authors: [`https://thedaviddias.com/about`],
             tags,
           },
           images: [
@@ -150,7 +150,7 @@ const ProjectPage: NextPage<BlogPostPageProps> = ({ frontMatter, source, permali
         authorName={[
           {
             name: 'David Dias',
-            url: 'https://thedaviddias.dev',
+            url: 'https://thedaviddias.com',
           },
         ]}
         publisherName="David Dias"
@@ -172,7 +172,7 @@ const ProjectPage: NextPage<BlogPostPageProps> = ({ frontMatter, source, permali
       />
       <main id="main" data-skip-link="the article">
         <article className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <header className="pb-6 text-center border-b border-gray-200 dark:border-gray-800 mb-8 transition-colors duration-200">
+          <header className="mb-8 border-b border-gray-200 pb-6 text-center transition-colors duration-200 dark:border-gray-800">
             {/* {categories.length && (
               <div className="text-gray-500 dark:text-gray-400 font-medium mb-2 text-sm sm:text-base transition-colors duration-200">
                 <span className="sr-only">Category</span>
@@ -188,11 +188,11 @@ const ProjectPage: NextPage<BlogPostPageProps> = ({ frontMatter, source, permali
               </div>
             )} */}
             <H1>
-              <span className="block mt-1.5 mb-6 serif:mt-2 text-black dark:text-white leading-none transition-colors duration-200 ">
+              <span className="serif:mt-2 mb-6 mt-1.5 block leading-none text-black transition-colors duration-200 dark:text-white ">
                 {title}
               </span>
               <span className="sr-only"> — </span>
-              <div className="font-body text-base sm:text-lg text-gray-600 dark:text-gray-300 mt-3 mb-6 tracking-wide font-light">
+              <div className="font-body mb-6 mt-3 text-base font-light tracking-wide text-gray-600 sm:text-lg dark:text-gray-300">
                 {description}
               </div>
             </H1>
@@ -207,14 +207,14 @@ const ProjectPage: NextPage<BlogPostPageProps> = ({ frontMatter, source, permali
               </div>
             </div>
           </header>
-          <div className="block lg:flex w-full">
+          <div className="block w-full lg:flex">
             <div className="max-w-full">
               <div className="max-w-full">
-                <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl !max-w-full mb-10 break-words">
+                <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl mb-10 !max-w-full break-words">
                   <MDXRemote {...source} components={MDXComponents} lazy />
 
                   {published?.url && (
-                    <Paragraph className="italic pt-8">
+                    <Paragraph className="pt-8 italic">
                       {t('posts.first_published')}{' '}
                       <CustomLink href={published.url} as="span">
                         {published.on}

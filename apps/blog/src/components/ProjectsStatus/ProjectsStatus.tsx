@@ -24,7 +24,7 @@ const StatusIndicator: React.FC<StatusIndicatorProps> = ({ status }) => {
   }
 
   return (
-    <span className="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium dark:text-white ring-1 ring-inset ring-gray-400 dark:ring-gray-700">
+    <span className="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset ring-gray-400 dark:text-white dark:ring-gray-700">
       <svg className={`h-1.5 w-1.5 ${fillClass}`} viewBox="0 0 6 6" aria-hidden="true">
         <circle cx="3" cy="3" r="3" />
       </svg>

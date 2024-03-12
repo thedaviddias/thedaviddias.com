@@ -169,7 +169,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
           article: {
             publishedTime: date,
             modifiedTime: lastmod,
-            authors: [`https://thedaviddias.dev/about`],
+            authors: [`https://thedaviddias.com/about`],
             tags,
           },
           images: [
@@ -193,7 +193,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
         authorName={[
           {
             name: 'David Dias',
-            url: 'https://thedaviddias.dev',
+            url: 'https://thedaviddias.com',
           },
         ]}
         publisherName="David Dias"
@@ -204,7 +204,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
           {
             position: 1,
             name: 'Articles',
-            item: 'https://thedaviddias.dev/articles',
+            item: 'https://thedaviddias.com/articles',
           },
           {
             position: 2,
@@ -215,15 +215,15 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
       />
       <main id="main" data-skip-link="the article">
         <article className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <header className="pb-6 text-center border-b border-gray-200 dark:border-gray-800 mb-8 transition-colors duration-200">
+          <header className="mb-8 border-b border-gray-200 pb-6 text-center transition-colors duration-200 dark:border-gray-800">
             {categories.length && (
-              <div className="text-gray-500 dark:text-gray-400 font-medium mb-2 text-sm sm:text-base transition-colors duration-200">
+              <div className="mb-2 text-sm font-medium text-gray-500 transition-colors duration-200 sm:text-base dark:text-gray-400">
                 <span className="sr-only">Category</span>
                 {categories?.map((category) => (
                   <CustomLink
                     key={category}
                     href={`${t('category.path')}/${slugify(category, { lower: true })}`}
-                    className="mb-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x md:text-lg !font-semibold transition-colors duration-200"
+                    className="text-x mb-1 !font-semibold uppercase text-gray-600 transition-colors duration-200 hover:text-gray-900 md:text-lg dark:text-gray-400 dark:hover:text-gray-100"
                   >
                     {category}
                   </CustomLink>
@@ -231,11 +231,11 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
               </div>
             )}
             <H1>
-              <span className="block mt-1.5 mb-6 serif:mt-2 text-black dark:text-white leading-none transition-colors duration-200 ">
+              <span className="serif:mt-2 mb-6 mt-1.5 block leading-none text-black transition-colors duration-200 dark:text-white ">
                 {title}
               </span>
               <span className="sr-only"> — </span>
-              <div className="font-body text-base sm:text-lg text-gray-600 dark:text-gray-300 mt-3 mb-6 tracking-wide font-light">
+              <div className="font-body mb-6 mt-3 text-base font-light tracking-wide text-gray-600 sm:text-lg dark:text-gray-300">
                 {description}
               </div>
             </H1>
@@ -250,14 +250,14 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
               </div>
             </div>
           </header>
-          <div className="block lg:flex w-full">
+          <div className="block w-full lg:flex">
             <div className="max-w-full">
-              <div className=" w-[40em] lg:w-[37rem] !max-w-full">
-                <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl !max-w-full mb-10 break-words">
+              <div className=" w-[40em] !max-w-full lg:w-[37rem]">
+                <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl mb-10 !max-w-full break-words">
                   <MDXRemote {...source} components={MDXComponents} lazy />
 
                   {published?.url && (
-                    <Paragraph className="italic pt-8">
+                    <Paragraph className="pt-8 italic">
                       {t('posts.first_published')}{' '}
                       <CustomLink href={published.url} as="span">
                         {published.on}
@@ -271,7 +271,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                 {relatedPosts.length ? <RelatedPosts relatedPosts={relatedPosts} /> : null}
 
                 {tags && (
-                  <aside className="w-full mt-3 print:hidden">
+                  <aside className="mt-3 w-full print:hidden">
                     <div className="small-title">{t('tags.section')}</div>
                     <Tags tags={tags} />
                   </aside>
@@ -289,11 +289,11 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
               </div>
             </div>
 
-            <div className="flex-auto ml-16 hidden lg:block print:hidden">
+            <div className="ml-16 hidden flex-auto lg:block print:hidden">
               <div className="sticky top-10 w-full">
                 {permalink && <Share title={title} permalink={permalink} />}
                 {headings && (
-                  <aside className="w-full mt-3">
+                  <aside className="mt-3 w-full">
                     <TableOfContents headings={headings} />
                     <Popular />
                   </aside>

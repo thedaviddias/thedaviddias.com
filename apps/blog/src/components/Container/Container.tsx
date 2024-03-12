@@ -23,15 +23,15 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col">
+      <div className="flex min-h-screen flex-col">
         {isPost ? (
-          <div className="sticky z-50 top-0 backdrop-blur-3xl py-1" aria-hidden>
+          <div className="sticky top-0 z-50 py-1 backdrop-blur-3xl" aria-hidden>
             <span
               id="progress-bar"
               style={{
                 transform: `translateX(${completion - 100}%)`,
               }}
-              className={`absolute bottom-0 w-full transition-transform duration-150 h-1 bg-slate-900 dark:bg-blue-400`}
+              className={`absolute bottom-0 h-1 w-full bg-slate-900 transition-transform duration-150 dark:bg-blue-400`}
             />
           </div>
         ) : null}
@@ -39,8 +39,8 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
         <SkipLinks />
 
         <Header pathname={router.pathname} />
-        <div className="py-3 top-0 mb-12">
-          <div className="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8">{children}</div>
+        <div className="top-0 mb-12 py-3">
+          <div className="mx-auto max-w-5xl px-2 sm:px-6 lg:px-8">{children}</div>
         </div>
         <Footer />
       </div>

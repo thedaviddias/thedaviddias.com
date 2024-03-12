@@ -27,7 +27,7 @@ export const SkipLinks = () => {
             <li key={link.title}>
               <SkipContent
                 link={link}
-                className="transition left-0 bg-primary text-primary-content absolute p-3 m-3 -translate-y-16 focus:translate-y-0 bg-slate-100 dark:bg-slate-900 z-20"
+                className="bg-primary text-primary-content absolute left-0 z-20 m-3 -translate-y-16 bg-slate-100 p-3 transition focus:translate-y-0 dark:bg-slate-900"
               />
             </li>
           ))}
@@ -38,7 +38,7 @@ export const SkipLinks = () => {
             <SkipContent
               key={link.title}
               link={link}
-              className="transition left-0 bg-primary text-primary-content absolute p-3 m-3 -translate-y-16 focus:translate-y-0 bg-slate-100 dark:bg-slate-900 z-20"
+              className="bg-primary text-primary-content absolute left-0 z-20 m-3 -translate-y-16 bg-slate-100 p-3 transition focus:translate-y-0 dark:bg-slate-900"
             />
           ))}
         </>

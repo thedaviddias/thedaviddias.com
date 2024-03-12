@@ -56,14 +56,14 @@ const Supporters: NextPage<SupportersProps> = ({ supporters, frontMatter, source
       languageAlternates={[
         {
           hrefLang: 'en',
-          href: 'https://thedaviddias.dev/supporters',
+          href: 'https://thedaviddias.com/supporters',
         },
         {
           hrefLang: 'fr',
-          href: 'https://thedaviddias.dev/fr/suporteurs',
+          href: 'https://thedaviddias.com/fr/suporteurs',
         },
       ]}
-      className="pt-10 border-none"
+      className="border-none pt-10"
     >
       <div>
         <PageHeader title={titlePage} description={descriptionPage} />
@@ -77,7 +77,7 @@ const Supporters: NextPage<SupportersProps> = ({ supporters, frontMatter, source
             ) || []
 
           return (
-            <section key={category} className="flex flex-col mt-5 mb-8">
+            <section key={category} className="mb-8 mt-5 flex flex-col">
               <header className="pb-5">
                 <H2 as="h2">{category}</H2>
                 <p>{categoryDescriptionsForLocale[category]}</p>

@@ -3,9 +3,9 @@ import FrFlag from '../../../public/images/svg/fr-flag.svg'
 
 export const BannerLang = () => {
   return (
-    <div className="flex justify-center items-center bg-slate-100 dark:bg-slate-800 p-2 space-x-3">
+    <div className="flex items-center justify-center space-x-3 bg-slate-100 p-2 dark:bg-slate-800">
       <span>
-        <FrFlag className="w-5 h-5 rounded-lg" alt="" aria-hidden />
+        <FrFlag className="h-5 w-5 rounded-lg" alt="" aria-hidden />
       </span>
       <span>
         Ce blog existe aussi en langue française,{' '}

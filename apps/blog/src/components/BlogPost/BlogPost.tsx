@@ -19,9 +19,9 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post, isCategoryPage }) => {
   const { t } = useTranslation('common')
 
   return (
-    <article className="md:pt-6 pb-6 border-t border-gray-200 dark:border-gray-700" key={post.slug}>
-      <div className="flex flex-col-reverse lg:flex-row-reverse gap-5">
-        <div className="max-w-[44rem] w-full">
+    <article className="border-t border-gray-200 pb-6 md:pt-6 dark:border-gray-700" key={post.slug}>
+      <div className="flex flex-col-reverse gap-5 lg:flex-row-reverse">
+        <div className="w-full max-w-[44rem]">
           {!isCategoryPage && (
             <div className="!mb-1">
               {post.frontMatter.categories?.length && (
@@ -29,7 +29,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post, isCategoryPage }) => {
                   href={`${t('category.path')}/${slugify(post.frontMatter.categories[0], {
                     lower: true,
                   })}`}
-                  className="inline-block pb-2 !font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 uppercase text-x"
+                  className="text-x inline-block pb-2 !font-semibold uppercase text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
                 >
                   <span className="sr-only">Category: </span>
                   {humanizeString(post.frontMatter.categories[0])}
@@ -39,14 +39,14 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post, isCategoryPage }) => {
           )}
           <H2 as="h3">
             <CustomLink
-              className="dark:!text-gray-100 inline-block tracking-tight"
+              className="inline-block tracking-tight dark:!text-gray-100"
               href={`/articles/${post.slug}`}
             >
               {post.frontMatter.title}
             </CustomLink>
           </H2>
 
-          <p className="!text-gray-600 dark:!text-gray-300 !mt-4">{post.frontMatter.description}</p>
+          <p className="!mt-4 !text-gray-600 dark:!text-gray-300">{post.frontMatter.description}</p>
 
           {isCategoryPage && (
             <div className="mt-4">
@@ -54,9 +54,9 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post, isCategoryPage }) => {
             </div>
           )}
         </div>
-        <div className="flex-grow text-left lg:text-right relative h-[10rem]">
+        <div className="relative h-[10rem] flex-grow text-left lg:text-right">
           <Image
-            className="object-cover rounded-md"
+            className="rounded-md object-cover"
             src={post.frontMatter.preview.url}
             fill
             alt={post.frontMatter.preview.alt || ''}

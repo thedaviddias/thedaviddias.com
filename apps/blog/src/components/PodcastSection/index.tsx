@@ -19,7 +19,7 @@ const PodcastSection = () => {
   if (!data) return <Loader />
 
   return (
-    <section className="grid grid-cols-1 gap-y-10 border-none mb-5">
+    <section className="mb-5 grid grid-cols-1 gap-y-10 border-none">
       <header>
         <H5 as="h2">{t('home.sections.podcast.latest_podcasts')}</H5>
       </header>

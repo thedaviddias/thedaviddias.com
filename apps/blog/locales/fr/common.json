@@ -292,7 +292,7 @@
     }
   },
   "newsletter": {
-    "title": "S'abonner à la newsletter \"David's Dev Bytes\"",
+    "title": "S'abonner à la newsletter \"David's Dev Diary\"",
     "description": "Recevez des courriels en liens avec l'accessibilité, le dévelopement web, les technologies et l'expatriation! (en anglais)",
     "subscribers": "{{number}} abonnés",
     "form": {

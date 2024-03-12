@@ -42,7 +42,7 @@ export const TableOfContents = ({ headings }: TableOfContentsType) => {
   const activeId = useActiveId(idList)
 
   return (
-    <div className="mb-2  text-gray-400 dark:text-gray-500 text-sm">
+    <div className="mb-2  text-sm text-gray-400 dark:text-gray-500">
       <details open>
         <summary className="small-title">{t('posts.tableContent')}</summary>
         <ol>
@@ -52,8 +52,8 @@ export const TableOfContents = ({ headings }: TableOfContentsType) => {
                 href={`#${heading.id}`}
                 className={
                   heading.id === activeId
-                    ? 'text-gray-800 font-bold text-base dark:text-white'
-                    : `text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:underline`
+                    ? 'text-base font-bold text-gray-800 dark:text-white'
+                    : `text-gray-600 hover:text-gray-900 hover:underline dark:text-gray-400 dark:hover:text-gray-100`
                 }
                 data-title="h2"
               >

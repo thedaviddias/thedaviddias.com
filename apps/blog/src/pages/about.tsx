@@ -38,7 +38,7 @@ const About: NextPage<AboutProps> = ({ frontMatter, source }) => {
           href: 'https://www.canonical.ie/de',
         },
       ]}
-      className="pt-10 border-none"
+      className="border-none pt-10"
     >
       <SocialProfileJsonLd
         type="Person"

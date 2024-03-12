@@ -10,7 +10,7 @@ import SEO from '../../next-seo.config'
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <PlausibleProvider domain="thedaviddias.dev" trackOutboundLinks={true}>
+    <PlausibleProvider domain="thedaviddias.com" trackOutboundLinks={true}>
       <ThemeProvider attribute="class">
         <DefaultSeo {...SEO} />
         <Component {...pageProps} />

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>The David Dias | Développeur Front-End, podcasteur &amp; créateur de contenu</title>
-        <link>https://thedaviddias.dev</link>
+        <link>https://thedaviddias.com</link>
         <description>Salut toi! Je m'appele David Dias. Je suis développeur Front-End, podcasteur, créateur de contenu numérique passioné pour résoudre les problèmes digitaux et humains! J'aime rencontrer de nouvelles personnes, bâtir des communautées et parler de tech, d'expatriation et de web.</description>
         <lastBuildDate>Fri, 11 Aug 2023 19:20:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,15 +10,15 @@
         <language>fr</language>
         <image>
             <title>The David Dias | Développeur Front-End, podcasteur &amp; créateur de contenu</title>
-            <url>https://thedaviddias.dev/favicons/android-chrome-144x144.png</url>
-            <link>https://thedaviddias.dev</link>
+            <url>https://thedaviddias.com/favicons/android-chrome-144x144.png</url>
+            <link>https://thedaviddias.com</link>
         </image>
         <copyright>Tous droits réservés 2023, David Dias</copyright>
         <category>Technologie</category>
         <item>
             <title><![CDATA[Mes astuces d'expat pour faciliter vos démarches administratives]]></title>
-            <link>https://thedaviddias.dev/fr/articles/astuces-dexpat-pour-faciliter-demarches-administratives</link>
-            <guid>https://thedaviddias.dev/fr/articles/astuces-dexpat-pour-faciliter-demarches-administratives</guid>
+            <link>https://thedaviddias.com/fr/articles/astuces-dexpat-pour-faciliter-demarches-administratives</link>
+            <guid>https://thedaviddias.com/fr/articles/astuces-dexpat-pour-faciliter-demarches-administratives</guid>
             <pubDate>Fri, 21 Jun 2019 00:01:00 GMT</pubDate>
             <description><![CDATA[Toute préparation à une possible expatriation passe par une phase inévitable: celle de rassembler tous les documents requis pour avoir la possibilité d’accomplir son rêve. Pour vous faciliter cette phase et vous permettre de sereinement vous préparer, j’ai rassemblé toutes mes astuces et habitudes qui m’ont permis de vivre sereinement mes 3 expatriations.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 "><div class="my-3 block"><a class="cursor-pointer hover:underline " aria-label="Click to enlarge the image" href="/images/articles/astuces-dexpat-pour-faciliter-demarches-administratives/featured.jpg"><img alt="La main d&#x27;un homme tenant une plume prêt à signer un document." loading="lazy" width="1000" height="668" decoding="async" data-nimg="1" class="rounded-lg" style="color:transparent;width:100%;height:auto" srcSet="/_next/image?url=%2Fimages%2Farticles%2Fastuces-dexpat-pour-faciliter-demarches-administratives%2Ffeatured.jpg&amp;w=1080&amp;q=80 1x, /_next/image?url=%2Fimages%2Farticles%2Fastuces-dexpat-pour-faciliter-demarches-administratives%2Ffeatured.jpg&amp;w=2048&amp;q=80 2x" src="/_next/image?url=%2Fimages%2Farticles%2Fastuces-dexpat-pour-faciliter-demarches-administratives%2Ffeatured.jpg&amp;w=2048&amp;q=80"/></a></div>
@@ -57,12 +57,12 @@ Ce n’est que récemment que j’ai pris le temps de rassembler toutes les info
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Il se peut que vous ayez beaucoup voyagé, ou que votre appartement ai pris feux un jour (je vous le souhaite pas) et que vous ayez perdu vos documents importants. <strong class="dark:text-white">Ne paniquez pas</strong>!</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Les démarches administratives font parties de tout processus d’immigration, et la majorité des personnes savent cela. Il vous manque un document? Voyez un moyen de pouvoir en récupérer une copie: il y a toujours en règle générale une alternative ou possibilité de récupérer ou avoir accès à un document important. Ne vous mettez pas davantage de pression inutile et essayer de suivre les astuces que je vous partage. Je vous assure que vos démarches n’en seront que moins stressantes et plus simples à affronter.</p>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/astuces-dexpat-pour-faciliter-demarches-administratives/featured.jpg" length="0" type="image/jpg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/astuces-dexpat-pour-faciliter-demarches-administratives/featured.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[9 réponses aux questions que vous vous posez sur Toronto et le Canada]]></title>
-            <link>https://thedaviddias.dev/fr/articles/9-reponses-questions-vous-vous-posez-toronto-canada</link>
-            <guid>https://thedaviddias.dev/fr/articles/9-reponses-questions-vous-vous-posez-toronto-canada</guid>
+            <link>https://thedaviddias.com/fr/articles/9-reponses-questions-vous-vous-posez-toronto-canada</link>
+            <guid>https://thedaviddias.com/fr/articles/9-reponses-questions-vous-vous-posez-toronto-canada</guid>
             <pubDate>Mon, 17 Jun 2019 00:01:00 GMT</pubDate>
             <description><![CDATA[Régulièrement, beaucoup de personnes me contactent pour me poser des questions sur le Canada et Toronto : parfois des jeunes qui souhaiterai s’expatrier pour la premiere fois, des couples qui souhaitent changer de vie. J’essaye autant que je peux de leur répondre avec ma petite expérience (bientôt un an) de vie dans la grande métropole. ]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Régulièrement, beaucoup de personnes me contactent pour me poser des questions sur le Canada et Toronto : parfois des jeunes qui souhaiterai s’expatrier pour la premiere fois, des couples qui souhaitent changer de vie. J’essaye autant que je peux de leur répondre avec ma petite expérience (bientôt un an) de vie dans la grande métropole.</p>
@@ -107,12 +107,12 @@ Ce n’est que récemment que j’ai pris le temps de rassembler toutes les info
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Le plus gros défi, que j’ai personnellement dû affronter récemment concerne la manière dont certains Canadiens (attention toujours à ne pas généraliser) ont pour communiquer lorsqu’il y a des problèmes. J’ai été surpris, dans le cadre professionnel, de passer du tout va très bien à tout va très mal, en l’espace simplement de quelques semaines. A ma grande surprise, tous les francophones, immigrés à Toronto que je connais, m’ont témoigné être passer par là, souvent durant leur première année au Canada. C’est rassurant de savoir que mon cas n’est pas isolé.</p>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Il existe un certain non-dit parfois, qui peut parfois être une bonne chose mais qui lorsque nous n’avons pas l’habitude peut aussi être déroutant. C’est quelque chose à avoir en tête, mais qui fait partie du jeu.</p>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/9-reponses-questions-vous-vous-posez-toronto-canada/featured.jpg" length="0" type="image/jpg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/9-reponses-questions-vous-vous-posez-toronto-canada/featured.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Comment le Canada est devenu ma maison après 4 ans de tentatives?]]></title>
-            <link>https://thedaviddias.dev/fr/articles/comment-canada-devenu-maison-4-ans-tentatives</link>
-            <guid>https://thedaviddias.dev/fr/articles/comment-canada-devenu-maison-4-ans-tentatives</guid>
+            <link>https://thedaviddias.com/fr/articles/comment-canada-devenu-maison-4-ans-tentatives</link>
+            <guid>https://thedaviddias.com/fr/articles/comment-canada-devenu-maison-4-ans-tentatives</guid>
             <pubDate>Tue, 02 Apr 2019 00:01:00 GMT</pubDate>
             <description><![CDATA[C’est en 2014 que je pose les pieds au Canada pour la première fois. Depuis cette année, j’ai tenté de tout mettre en œuvre pour que ce pays, et spécialement la ville de Toronto, devienne ma maison. En juin 2018, après deux tentatives de PVT, un déménagement de deux ans à l’Île Maurice, je pose enfin les pieds au Canada avec ma femme et mon permis de travail en poche. Ce n’est que le début de l’aventure!]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">C’est en 2014 que je pose les pieds au Canada pour la première fois. Depuis cette année, j’ai tenté de tout mettre en œuvre pour que ce pays, et spécialement la ville de Toronto, devienne ma maison. En juin 2018, après deux tentatives de PVT, un déménagement de deux ans à l’Île Maurice, je pose enfin les pieds au Canada avec ma femme et mon permis de travail en poche. Ce n’est que le début de l’aventure!</p>
@@ -134,12 +134,12 @@ Ce n’est que récemment que j’ai pris le temps de rassembler toutes les info
 <hr/>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Un an s’est presque écoulé depuis notre arrivée au Canada. Il n’y a pas un jour qui se passe où nous regrettons notre choix. Nous commençons à nous préparer pour notre demande de résidence via l’Entrée express. Une autre étape confirmant notre volonté de faire partie de ce merveilleux pays qui nous permet de connaître de nouvelles personnes chaque jour, souvent eux aussi expatriés au Canada!</p>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/comment-canada-devenu-maison-4-ans-tentatives/featured.jpg" length="0" type="image/jpg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/comment-canada-devenu-maison-4-ans-tentatives/featured.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Outils et astuces pour rendre accessible et performante son application React]]></title>
-            <link>https://thedaviddias.dev/fr/articles/outils-astuces-pour-rendre-accessible-performante-son-application-react</link>
-            <guid>https://thedaviddias.dev/fr/articles/outils-astuces-pour-rendre-accessible-performante-son-application-react</guid>
+            <link>https://thedaviddias.com/fr/articles/outils-astuces-pour-rendre-accessible-performante-son-application-react</link>
+            <guid>https://thedaviddias.com/fr/articles/outils-astuces-pour-rendre-accessible-performante-son-application-react</guid>
             <pubDate>Mon, 24 Dec 2018 02:34:11 GMT</pubDate>
             <description><![CDATA[L'accessibilité et la performance sont deux de mes sujets de prédilection. Je partage dans cet article mes astuces et conseils pour vous assurez une qualité minimum pour votre projet.]]></description>
             <content:encoded><![CDATA[<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">L’accessibilité et la performance sont deux (vastes) sujets qui m’ont toujours passionné et qui sont devenus ces dernières années au centre de nombreux meetups et conférences auquels j’ai pu assister (petit clin d’oeil à <span class="not-prose"><a href="http://a11yto.com/" rel="noopener noreferrer" target="_blank" class="external-link">A11yTO</a></span>). Récemment expatrié au Canada, j’ai eu l’opportunité, dans ma <span class="not-prose"><a href="https://influitive.com/" rel="noopener noreferrer" target="_blank" class="external-link">nouvelle entreprise</a></span>, de dédier mon temps à la refonte d’un project avec React et de devoir du coup, rendre cette application accessible et performante. (Youpi !)</p>
@@ -247,7 +247,7 @@ import { module } from &#x27;package&#x27;
 </ul>
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Et bientôt, j’aurais le plaisir de publier la « Front-End Accessibility Checklist » sur GitHub, restez attentif !</p>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.dev/images/articles/outils-astuces-rendre-accessible-performante-application-react/featured.jpg" length="0" type="image/jpg"/>
+            <enclosure url="https://thedaviddias.com/images/articles/outils-astuces-rendre-accessible-performante-application-react/featured.jpg" length="0" type="image/jpg"/>
         </item>
     </channel>
 </rss>

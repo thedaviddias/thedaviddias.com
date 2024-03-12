@@ -293,7 +293,7 @@
     }
   },
   "newsletter": {
-    "title": "Subscribe to \"David's Dev Bytes\" Newsletter",
+    "title": "Subscribe to \"David's Dev Diary\" Newsletter",
     "description": "Receive emails about web development, tech, and life abroad!",
     "form": {
       "input": {

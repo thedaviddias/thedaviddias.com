@@ -21,7 +21,7 @@
     }
   ],
   "frontMatter.preview.pathName": "/articles",
-  "frontMatter.site.baseURL": "https://thedaviddias.dev",
+  "frontMatter.site.baseURL": "https://thedaviddias.com",
   "frontMatter.taxonomy.alignFilename": true,
   "frontMatter.templates.prefix": "",
   "frontMatter.telemetry.disable": true,

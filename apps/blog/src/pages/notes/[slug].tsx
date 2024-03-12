@@ -109,7 +109,7 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
           type: 'article',
           article: {
             publishedTime: date,
-            authors: ['https://thedaviddias.dev/about'],
+            authors: ['https://thedaviddias.com/about'],
             tags,
           },
           images: [
@@ -131,7 +131,7 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
         authorName={[
           {
             name: 'David Dias',
-            url: 'https://thedaviddias.dev',
+            url: 'https://thedaviddias.com',
           },
         ]}
         publisherName="David Dias"
@@ -153,19 +153,19 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
       />
       <main id="main" data-skip-link="the article">
         <article className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <header className="pb-6 text-center border-b border-gray-200 dark:border-gray-700 mb-8 transition-colors duration-200">
+          <header className="mb-8 border-b border-gray-200 pb-6 text-center transition-colors duration-200 dark:border-gray-700">
             {tags && (
               <aside className="print:hidden">
                 <Tags tags={tags} className="mx-auto justify-center" />
               </aside>
             )}
             <H1>
-              <span className="block mt-1.5 mb-6 serif:mt-2 text-black dark:text-white leading-none transition-colors duration-200 ">
+              <span className="serif:mt-2 mb-6 mt-1.5 block leading-none text-black transition-colors duration-200 dark:text-white ">
                 {title}
               </span>
             </H1>
 
-            <div className="flex justify-between mx-auto mt-16">
+            <div className="mx-auto mt-16 flex justify-between">
               {author && <Author name={author} routes={routes} />}
 
               {date && <DatePost date={date} />}
@@ -173,8 +173,8 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
           </header>
 
           <div className="max-w-full">
-            <div className="lg:w-[37rem] mx-auto">
-              <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl !max-w-full mb-10">
+            <div className="mx-auto lg:w-[37rem]">
+              <section className="prose prose-sm sm:prose dark:prose-invert prose-img:rounded-xl mb-10 !max-w-full">
                 <MDXRemote {...source} components={MDXComponents} lazy />
               </section>
               {permalink && <Share title={title} permalink={permalink} />}

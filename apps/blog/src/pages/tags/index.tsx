@@ -33,16 +33,16 @@ const TagsPage: NextPage<TagsPageProps> = ({ tags }) => {
         languageAlternates={[
           {
             hrefLang: 'en',
-            href: 'https://thedaviddias.dev/tags',
+            href: 'https://thedaviddias.com/tags',
           },
           {
             hrefLang: 'fr',
-            href: 'https://thedaviddias.dev/fr/tags',
+            href: 'https://thedaviddias.com/fr/tags',
           },
         ]}
       />
       <main>
-        <section className="pt-10 border-none grid grid-cols-1 md:grid-cols-4 md:gap-4 md:items-end">
+        <section className="grid grid-cols-1 border-none pt-10 md:grid-cols-4 md:items-end md:gap-4">
           <PageHeader
             title={t('tags.seo.title_all')}
             description={t('tags.seo.description_all')}
@@ -59,15 +59,15 @@ const TagsPage: NextPage<TagsPageProps> = ({ tags }) => {
           )}
           {filteredTags.map((tag) => (
             <li key={tag.name}>
-              <div className="flex flex-col border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-md p-4 h-full border relative overflow-hidden hover:scale-[1.01] transition-all">
+              <div className="relative flex h-full flex-col overflow-hidden rounded-md border border-gray-300 p-4 text-gray-800 transition-all hover:scale-[1.01] dark:border-gray-700 dark:text-gray-200">
                 <CustomLink
                   href={`${t('tags.path')}/${tag.name}`}
-                  className="dark:text-blue-300 font-semibold mb-3 text-xl before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0"
+                  className="mb-3 text-xl font-semibold before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:content-[''] dark:text-blue-300"
                 >
                   {tag.name}
                 </CustomLink>
                 <Paragraph>{tag?.description}</Paragraph>
-                <p className="text-sm dark:text-slate-400 mt-auto">{`${tag?.occurrences} post${
+                <p className="mt-auto text-sm dark:text-slate-400">{`${tag?.occurrences} post${
                   tag?.occurrences === 1 ? '' : 's'
                 } published`}</p>
                 {tag?.logo && (
@@ -76,7 +76,7 @@ const TagsPage: NextPage<TagsPageProps> = ({ tags }) => {
                     alt=""
                     width={60}
                     height={60}
-                    className="absolute -top-4 -right-4"
+                    className="absolute -right-4 -top-4"
                     style={{
                       maxWidth: '100%',
                       height: 'auto',

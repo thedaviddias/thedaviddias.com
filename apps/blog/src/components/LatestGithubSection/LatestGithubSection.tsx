@@ -14,12 +14,12 @@ export const LatestGithubSection: React.FC<LatestGithubSectionProps> = ({ projec
   const { t } = useTranslation('common')
 
   return (
-    <section className="border-none mb-5 md:mb-10">
+    <section className="mb-5 border-none md:mb-10">
       <header className="mb-5">
         <H5 as="h2">{t('openProjects.sections.latest-projects')}</H5>
-        <p className="pt-3 text-s dark:text-gray-400">{t('openProjects.seo.description')}</p>
+        <p className="text-s pt-3 dark:text-gray-400">{t('openProjects.seo.description')}</p>
       </header>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 max-w-5xl">
+      <div className="grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-2">
         {projects?.map((project, i) => (
           <GithubProject key={i} project={project} />
         ))}

@@ -71,11 +71,11 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback, proj
           languageAlternates={[
             {
               hrefLang: 'en',
-              href: 'https://thedaviddias.dev',
+              href: 'https://thedaviddias.com',
             },
             {
               hrefLang: 'fr',
-              href: 'https://thedaviddias.dev/fr',
+              href: 'https://thedaviddias.com/fr',
             },
           ]}
           openGraph={routes(t).home.seo}
@@ -87,21 +87,21 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback, proj
           sameAs={listSocialUrl(social)}
         />
         <main id="main" data-skip-link="main content">
-          <section className="pb-10 md:pb-20 pt-0 flex justify-between">
+          <section className="flex justify-between pb-10 pt-0 md:pb-20">
             <div className="text-left">
-              <h1 className="block mb-4 dark:text-white transition-colors">
-                <span className="text-3xl p-0 font-light uppercase block">
+              <h1 className="mb-4 block transition-colors dark:text-white">
+                <span className="block p-0 text-3xl font-light uppercase">
                   {t('home.hero.greetings1')}
                 </span>
-                <span className="text-5xl lg:text-6xl font-title font-medium leading-snug">
+                <span className="font-title text-5xl font-medium leading-snug lg:text-6xl">
                   {t('home.hero.greetings2')}
                 </span>
               </h1>
               <div
-                className="max-w-xl lg:px-0.5 text-base lg:text-lg sm:text-xl text-gray-500 dark:text-gray-300"
+                className="max-w-xl text-base text-gray-500 sm:text-xl lg:px-0.5 lg:text-lg dark:text-gray-300"
                 dangerouslySetInnerHTML={{ __html: t('home.hero.presentation') }}
               />
-              <div className="flex justify-left mt-10 space-y-3 md:space-y-0 md:space-x-5 flex-col md:flex-row">
+              <div className="justify-left mt-10 flex flex-col space-y-3 md:flex-row md:space-x-5 md:space-y-0">
                 {HERO_LINKS.map(({ label, link, rel }) => (
                   <CustomLink
                     href={link}
@@ -116,7 +116,7 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback, proj
             </div>
             <div className="hidden lg:block">
               <Image
-                className="rounded-full w-60 h-60"
+                className="h-60 w-60 rounded-full"
                 src="/images/david-dias-round.jpg"
                 width={250}
                 height={250}
@@ -132,7 +132,7 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback, proj
           <LatestPostsSection articles={articles} />
 
           <section className="mb-10">
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 max-w-5xl">
+            <div className="grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-2">
               <CurrentlyReading limit={mobile() ? 2 : 3} />
               <ToRead limit={mobile() ? 2 : 3} />
             </div>

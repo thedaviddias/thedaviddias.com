@@ -34,16 +34,16 @@ const Til = ({ notes }: TilProps) => {
         languageAlternates={[
           {
             hrefLang: 'en',
-            href: 'https://thedaviddias.dev/notes',
+            href: 'https://thedaviddias.com/notes',
           },
           {
             hrefLang: 'fr',
-            href: 'https://thedaviddias.dev/fr/notes',
+            href: 'https://thedaviddias.com/fr/notes',
           },
         ]}
       />
       <main className="divide-slate-200 sm:space-y-16 lg:max-w-none">
-        <section className="pt-10 border-none grid grid-cols-1 md:gap-4 md:items-end">
+        <section className="grid grid-cols-1 border-none pt-10 md:items-end md:gap-4">
           <PageHeader
             title={routes(t).notes.h1}
             description={routes(t).notes.seo.description}

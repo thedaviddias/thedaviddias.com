@@ -33,19 +33,19 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
   const [mobileMenuState, setMobileMenuState] = useState(false)
 
   return (
-    <header className="dark:text-gray-100 transition-colors duration-200 ">
+    <header className="transition-colors duration-200 dark:text-gray-100 ">
       {userLocale === ('fr' || 'fr-FR' || 'fr-CA') ? <BannerLang /> : null}
-      <div className="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8 py-3 top-0 lg:mb-12">
-        <div className="relative flex justify-between h-16">
-          <div className="flex-1 flex items-center sm:justify-between align-middle">
+      <div className="top-0 mx-auto max-w-5xl px-2 py-3 sm:px-6 lg:mb-12 lg:px-8">
+        <div className="relative flex h-16 justify-between">
+          <div className="flex flex-1 items-center align-middle sm:justify-between">
             {isHomepage ? (
-              <span className="font-bold text-2xl sm:mt-[-3px] sm:mr-6 !no-underline">
+              <span className="text-2xl font-bold !no-underline sm:mr-6 sm:mt-[-3px]">
                 {t('title')}
               </span>
             ) : (
               <CustomLink
                 href="/"
-                className="font-bold text-2xl sm:mt-[-3px] sm:mr-6 !no-underline cursor-auto"
+                className="cursor-auto text-2xl font-bold !no-underline sm:mr-6 sm:mt-[-3px]"
                 data-testid="thedaviddias-logo"
                 data-analytics='"Homepage logo"'
               >
@@ -63,15 +63,15 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
                       aria-current={pathname === item.path ? 'page' : undefined}
                       className={
                         pathname === item.path
-                          ? 'font-bold underline p-2'
-                          : 'hover:text-black hover:underline dark:hover:text-white p-2 text-lg'
+                          ? 'p-2 font-bold underline'
+                          : 'p-2 text-lg hover:text-black hover:underline dark:hover:text-white'
                       }
                     >
                       {item.label}
                     </CustomLink>
                   ))}
               </nav>
-              <div className="flex items-center space-x-4 justify-center">
+              <div className="flex items-center justify-center space-x-4">
                 <ChangeLanguage />
                 <ThemeSwitch />
               </div>
@@ -85,14 +85,14 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
                   aria-expanded="false"
                   aria-controls="mobile-menu"
                   type="button"
-                  className="w-8 h-8 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300  transition-all"
+                  className="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-200 ring-gray-300 transition-all hover:ring-2  dark:bg-gray-600"
                   onClick={() => setMobileMenuState(!mobileMenuState)}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="w-5 h-5 text-gray-800 dark:text-gray-200"
+                    className="h-5 w-5 text-gray-800 dark:text-gray-200"
                   >
                     <path
                       fillRule="evenodd"
@@ -102,20 +102,20 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
                   </svg>
                 </button>
                 <div
-                  className={`mobile-header origin-top-right flex flex-col fixed w-full h-full inset-0 top-[81px] bg-white dark:bg-gray-900 py-6 wrapper padding backdrop-filter backdrop-blur-sm bg-opacity-[0.96] dark:bg-opacity-80 transition-colors duration-200 ${
+                  className={`mobile-header wrapper padding fixed inset-0 top-[81px] flex h-full w-full origin-top-right flex-col bg-white bg-opacity-[0.96] py-6 backdrop-blur-sm backdrop-filter transition-colors duration-200 dark:bg-gray-900 dark:bg-opacity-80 ${
                     mobileMenuState ? '' : 'hidden'
                   }`}
                 >
-                  <div className="w-[300%] absolute h-[200%] top-0 right-full bg-white dark:bg-gray-900 bg-opacity-90 dark:bg-opacity-80 backdrop-filter backdrop-blur-sm"></div>
-                  <div className="w-full absolute h-[300%] top-full left-0 bg-white dark:bg-gray-900 bg-opacity-90 dark:bg-opacity-80 backdrop-filter backdrop-blur-sm"></div>
+                  <div className="absolute right-full top-0 h-[200%] w-[300%] bg-white bg-opacity-90 backdrop-blur-sm backdrop-filter dark:bg-gray-900 dark:bg-opacity-80"></div>
+                  <div className="absolute left-0 top-full h-[300%] w-full bg-white bg-opacity-90 backdrop-blur-sm backdrop-filter dark:bg-gray-900 dark:bg-opacity-80"></div>
                   <div id="mobile-menu">
-                    <nav className="text-center mt-6 inset-y-1/2 flex-grow">
+                    <nav className="inset-y-1/2 mt-6 flex-grow text-center">
                       <ul className="mt-12">
                         {MENU_LINKS(t).map(({ path, label }) => (
                           <li key={label}>
                             <CustomLink
                               href={path}
-                              className="block mt-2 mb-5 title text-black dark:text-white"
+                              className="title mb-5 mt-2 block text-black dark:text-white"
                             >
                               <div
                                 className={pathname === path ? 'text-2xl font-bold' : 'text-2xl'}
@@ -127,7 +127,7 @@ export const Header: React.FC<HeaderProps> = ({ pathname }) => {
                         ))}
                       </ul>
                     </nav>
-                    <div className="flex item space-x-4 justify-center">
+                    <div className="item flex justify-center space-x-4">
                       <ChangeLanguage />
                       <ThemeSwitch />
                     </div>

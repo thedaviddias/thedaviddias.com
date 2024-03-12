@@ -48,7 +48,7 @@ export default async function handler(request: NextRequest) {
                   src="http://localhost:3000/images/david-dias-round.png"
                   width="50"
                   height="50"
-                  className="rounded-full h-8 w-8"
+                  className="h-8 w-8 rounded-full"
                   alt=""
                 />
                 <span className="p-2">{author}</span>

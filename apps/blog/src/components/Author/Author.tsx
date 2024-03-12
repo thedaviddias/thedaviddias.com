@@ -15,12 +15,12 @@ export const Author: React.FC<AuthorProps> = ({ name, routes }) => {
 
   return (
     <div className="flex items-center justify-center font-sans">
-      <div className="flex-shrink-0 group block">
+      <div className="group block flex-shrink-0">
         <CustomLink href={routes(t).about.path}>
           <div className="flex items-center">
             <div>
               <Image
-                className="inline-block rounded-full h-auto max-w-xl"
+                className="inline-block h-auto max-w-xl rounded-full"
                 src="/images/david-dias-round.png"
                 width={40}
                 height={40}

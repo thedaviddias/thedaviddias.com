@@ -4,7 +4,7 @@ type SuccessMessageProps = {
 
 export default function SuccessMessage({ children }: SuccessMessageProps) {
   return (
-    <p className="flex items-center font-bold text-green-700 dark:text-green-400 mt-3">
+    <p className="mt-3 flex items-center font-bold text-green-700 dark:text-green-400">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"

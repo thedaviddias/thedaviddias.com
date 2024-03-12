@@ -12,7 +12,7 @@ export const PageHeader = ({ title, description, className }: HeaderPageProps) =
       {title && <H1>{title}</H1>}
       {description && (
         <p
-          className="text-base sm:text-lg text-gray-500 dark:text-gray-400 mt-6"
+          className="mt-6 text-base text-gray-500 sm:text-lg dark:text-gray-400"
           dangerouslySetInnerHTML={{ __html: description }}
         />
       )}

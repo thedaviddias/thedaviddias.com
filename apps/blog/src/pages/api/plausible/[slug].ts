@@ -14,7 +14,7 @@ export type GetPlausibleViewsRes = {
 }
 
 async function getPlausibleViews(slug: string) {
-  const url = `https://plausible.io/api/v1/stats/aggregate?site_id=thedaviddias.dev&period=12mo&filters=event:page==/articles/${slug}`
+  const url = `https://plausible.io/api/v1/stats/aggregate?site_id=thedaviddias.com&period=12mo&filters=event:page==/articles/${slug}`
   return fetcher<GetPlausibleViewsRes>(url, {
     headers: {
       Authorization: `Bearer ${process.env.PLAUSIBLE_API_KEY}`,

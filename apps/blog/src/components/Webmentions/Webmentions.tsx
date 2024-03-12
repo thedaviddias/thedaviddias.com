@@ -21,7 +21,7 @@ export const Webmentions: React.FC<WebMentionsProps> = ({ mentions }) => {
   const showHide = isMentionsVisible ? t('webmentions.hide') : t('webmentions.show')
 
   return (
-    <section className="mt-10 border-t border-gray-200 dark:border-gray-600 pt-8">
+    <section className="mt-10 border-t border-gray-200 pt-8 dark:border-gray-600">
       <header>
         <H4 as="h3">{t('webmentions.title')}</H4>
         <Paragraph>{t('webmentions.description')}</Paragraph>
@@ -29,7 +29,7 @@ export const Webmentions: React.FC<WebMentionsProps> = ({ mentions }) => {
 
       {mentions?.length ? (
         <>
-          <ul className="flex relative">
+          <ul className="relative flex">
             {mentions?.map((mention, i) => (
               <li className={`flex flex-col ${i > 0 && '-ml-8'}`} key={i}>
                 <CustomLink href={mention.data.url} className="mr-2" icon={false}>
@@ -56,7 +56,7 @@ export const Webmentions: React.FC<WebMentionsProps> = ({ mentions }) => {
           <button
             type="button"
             onClick={() => setIsMentionsVisible(!isMentionsVisible)}
-            className="mt-10 mb-3 bg-indigo-500 dark:bg-indigo-900 text-white font-bold py-1 px-3 rounded"
+            className="mb-3 mt-10 rounded bg-indigo-500 px-3 py-1 font-bold text-white dark:bg-indigo-900"
           >
             {t('webmentions.details', { show: showHide })}
           </button>
@@ -64,10 +64,10 @@ export const Webmentions: React.FC<WebMentionsProps> = ({ mentions }) => {
           {isMentionsVisible &&
             mentions?.map((mention, i) => (
               <div key={i} className="mb-5">
-                <div className="grid grid-cols-8 gap-3 p-5 bg-slate-100 dark:bg-slate-800 rounded-lg items-center transition-all">
+                <div className="grid grid-cols-8 items-center gap-3 rounded-lg bg-slate-100 p-5 transition-all dark:bg-slate-800">
                   <CustomLink
                     href={mention.data.author.url}
-                    className="mr-2 col-span-1"
+                    className="col-span-1 mr-2"
                     icon={false}
                   >
                     <Image
@@ -88,7 +88,7 @@ export const Webmentions: React.FC<WebMentionsProps> = ({ mentions }) => {
                         {mention.data.author.name}{' '}
                         <CustomLink
                           href={mention.data.url}
-                          className="text-indigo-600 dark:text-indigo-400 underline"
+                          className="text-indigo-600 underline dark:text-indigo-400"
                         >
                           {t(`webmentions.activity.${mention.activity.type}`)}
                         </CustomLink>{' '}
@@ -104,7 +104,7 @@ export const Webmentions: React.FC<WebMentionsProps> = ({ mentions }) => {
                         {mention.data.author.name}{' '}
                         <CustomLink
                           href={mention.data.url}
-                          className="text-indigo-600 dark:text-indigo-400 underline"
+                          className="text-indigo-600 underline dark:text-indigo-400"
                         >
                           {t(`webmentions.activity.${mention.activity.type}`)}
                         </CustomLink>{' '}

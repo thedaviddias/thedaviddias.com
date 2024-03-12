@@ -5,12 +5,12 @@ import { CustomLink } from '../CustomLink'
 
 export const BuyMeACoffee = () => {
   return (
-    <div className="mt-10 border-t border-b border-gray-200 dark:border-gray-600 pt-8 pb-8 text-center mb-10">
+    <div className="mb-10 mt-10 border-b border-t border-gray-200 pb-8 pt-8 text-center dark:border-gray-600">
       <div className="text-2xl">Has this been helpful to you?</div>
       <div className="text-lg">
         You can support my work by sharing this article with others,
         <br />
-        <CustomLink href="/supporters" className="underline plausible-event-name=supporters">
+        <CustomLink href="/supporters" className="plausible-event-name=supporters underline">
           sponsoring me on Github
         </CustomLink>{' '}
         or perhaps buy me a cup of coffee 😊
@@ -23,7 +23,7 @@ export const BuyMeACoffee = () => {
             aria-label="Buy me a coffee on Ko-fi"
           >
             <Image
-              className="inline-block h-auto max-w-xl pt-2 w-auto"
+              className="inline-block h-auto w-auto max-w-xl pt-2"
               src="/images/kofi.png"
               width={40}
               height={40}

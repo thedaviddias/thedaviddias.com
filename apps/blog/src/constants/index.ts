@@ -8,7 +8,7 @@ import social from '../../../../data/social.json'
 
 export const TWITTER_PROFILE = 'https://twitter.com/thedaviddias'
 export const GITHUB_PROFILE = 'https://github.com/thedaviddias'
-export const POLYWORK_PROFILE = 'https://changelog.thedaviddias.dev'
+export const LINKED_IN = 'https://linkedin.com/in/thedaviddias'
 export const DISCORD = 'https://discord.gg/EG6tmxsESP'
 
 export type LinksInternalResponse = Pick<LinkProps, 'locale'> & {
@@ -53,21 +53,21 @@ export const SOCIAL_LINKS: LinksExternalResponse[] = social.slice(0, 6)
 
 export const HERO_LINKS = [
   {
-    label: 'Discord',
-    link: DISCORD,
-  },
-  {
-    label: 'Twitter',
-    link: TWITTER_PROFILE,
-    rel: 'me',
+    label: 'LinkedIn',
+    link: LINKED_IN,
   },
   {
     label: 'Github',
     link: GITHUB_PROFILE,
   },
   {
-    label: 'Personal changelog',
-    link: POLYWORK_PROFILE,
+    label: 'Discord',
+    link: DISCORD,
+  },
+  {
+    label: 'X',
+    link: TWITTER_PROFILE,
+    rel: 'me',
   },
 ]
 
@@ -90,7 +90,7 @@ export const CLOUDINARY_NAME = 'thedaviddias'
 export const CLOUDINARY_IMG_WIDTH = 1920
 export const CLOUDINARY_IMG_HEIGHT = 1080
 
-export const BASE_URL = 'https://thedaviddias.dev' || process.env.VERCEL_URL
+export const BASE_URL = 'https://thedaviddias.com' || process.env.VERCEL_URL
 export const BASE_EMAIL = 'hello@thedaviddias.com'
 
 export const IS_PRODUCTION =

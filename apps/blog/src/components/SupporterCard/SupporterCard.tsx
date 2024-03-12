@@ -12,7 +12,7 @@ type SupporterCardProps = {
 
 export const SupporterCard: React.FC<SupporterCardProps> = ({ supporter }) => {
   return (
-    <li className="flex flex-row relative gap-x-5">
+    <li className="relative flex flex-row gap-x-5">
       {supporter.image || supporter.username ? (
         <div className="min-w-[3rem]">
           <Image
@@ -33,7 +33,7 @@ export const SupporterCard: React.FC<SupporterCardProps> = ({ supporter }) => {
           <>
             <CustomLink
               href={supporter.url}
-              className="before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 font-base dark:!text-white text-xl"
+              className="font-base text-xl before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:content-[''] dark:!text-white"
             >
               {supporter.name}
             </CustomLink>

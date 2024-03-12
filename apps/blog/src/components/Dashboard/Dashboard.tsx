@@ -11,7 +11,7 @@ export const Dashboard = () => {
   const { t } = useTranslation('common')
 
   return (
-    <section className="border-none mb-10">
+    <section className="mb-10 border-none">
       <header>
         <H5 as="h2">{t('dashboard.sections.latest-dashboard')}</H5>
       </header>

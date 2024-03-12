@@ -5,7 +5,7 @@ const config: DefaultSeoProps = {
   defaultTitle: 'The David Dias',
   openGraph: {
     type: 'website',
-    url: 'https://thedaviddias.dev',
+    url: 'https://thedaviddias.com',
     profile: {
       firstName: 'David',
       lastName: 'Dias',
@@ -13,7 +13,7 @@ const config: DefaultSeoProps = {
     },
     images: [
       {
-        url: `https://thedaviddias.dev/images/og/default.png`,
+        url: `https://thedaviddias.com/images/og/default.png`,
         alt: 'The David Dias',
       },
     ],
@@ -84,11 +84,11 @@ const config: DefaultSeoProps = {
     },
     {
       rel: `webmention`,
-      href: `https://webmention.io/thedaviddias.dev/webmention`,
+      href: `https://webmention.io/thedaviddias.com/webmention`,
     },
     {
       rel: `pingback`,
-      href: `https://webmention.io/thedaviddias.dev/xmlrpc`,
+      href: `https://webmention.io/thedaviddias.com/xmlrpc`,
     },
   ],
 }

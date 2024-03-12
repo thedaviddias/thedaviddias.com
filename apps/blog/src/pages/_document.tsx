@@ -43,7 +43,7 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://i.gr-assets.com" />
           <Script src="https://f.convertkit.com/ckjs/ck.5.js" />
         </Head>
-        <body className="antialiased bg-white dark:text-white dark:bg-[#111010]">
+        <body className="bg-white antialiased dark:bg-[#111010] dark:text-white">
           <Main />
           <NextScript />
         </body>

@@ -4,7 +4,7 @@
         <title>The David Dias | Développeur Front-End, podcasteur &amp; créateur de contenu</title>
         <link>https://thedaviddias.com</link>
         <description>Salut toi! Je m'appele David Dias. Je suis développeur Front-End, podcasteur, créateur de contenu numérique passioné pour résoudre les problèmes digitaux et humains! J'aime rencontrer de nouvelles personnes, bâtir des communautées et parler de tech, d'expatriation et de web.</description>
-        <lastBuildDate>Sun, 28 Jul 2024 14:10:50 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 28 Jul 2024 14:58:04 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>fr</language>
@@ -248,48 +248,6 @@ import { module } from &#x27;package&#x27;
 <p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">Et bientôt, j’aurais le plaisir de publier la « Front-End Accessibility Checklist » sur GitHub, restez attentif !</p>]]></content:encoded>
             <author>thedaviddias@gmail.com (David Dias)</author>
             <enclosure url="https://thedaviddias.com/images/articles/outils-astuces-rendre-accessible-performante-application-react/featured.jpg" length="0" type="image/jpg"/>
-        </item>
-        <item>
-            <title><![CDATA[La Checklist Front-End V1]]></title>
-            <link>https://thedaviddias.com/fr/projects/checklist-front-end-v1</link>
-            <guid>https://thedaviddias.com/fr/projects/checklist-front-end-v1</guid>
-            <pubDate>Mon, 30 Oct 2017 20:06:48 GMT</pubDate>
-            <description><![CDATA[The Front-End Checklist is an exhaustive list of all elements you need to have / to test before launching your website / HTML page to production.]]></description>
-            <content:encoded><![CDATA[<h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">Overview</h2>
-<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">The Frontend Checklist is an exhaustive list of all elements needed to have a thorough checked before launching any website on production. Hosted at frontendchecklist.io, the checklist includes everything from the essentials and accessibility, to SEO, performance and more.</p>
-<h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">Key Details</h2>
-<ul class="list-disc">
-<li class="nested-list text-lg"><strong class="dark:text-white">Initial Date</strong>: The start date of the project</li>
-<li class="nested-list text-lg"><strong class="dark:text-white">Status</strong>: Completed</li>
-<li class="nested-list text-lg"><strong class="dark:text-white">Technologies</strong>: Markdown, HTML, CSS, JavaScript.</li>
-</ul>
-<h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">Problem Statement</h2>
-<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">My initial problem was tied to my personnal situation: as I was leaving Mauritius and my entire team of front-end developers, I wanted to make sure that they could continue to deliver high quality work without me. Turned out that the content I created for them was also useful for so many other developers and companies around the world.</p>
-<h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">Goals</h2>
-<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">The main goal of the Front-End Checklist is to provide a comprehensive, accessible resource for frontend developers, covering all aspects of frontend development. All the elements that needs to be checked before launching a website or a web application.</p>
-<h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">Approach</h2>
-<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">I did a lot of research in 2017 to find other checklists. But the few I found at the time were outdated or incomplete. So I decided to create my own checklist, based on my experience and I had the chance to learn trough the years and the projects I worked on.</p>
-<h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">Progress</h2>
-<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">The Front-End Checklist project is currently completed and in the maintenance phase. I have been promissing for a long time a version 2.0, but I am still working on it.</p>
-<h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">Challenges and Learnings</h2>
-<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">To this day, the Front-End Checklist has not less than 65,000 stars on Github and translated in 14 languages!</p>
-<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">I learned a lot about the open-source community and how to manage a project with so many contributors.</p>
-<h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">Conclusion / Reflection</h2>
-<p class="prose max-w-full text-lg my-3 leading-relaxed dark:text-gray-300 ">The Front-End Checklist turned to be a valuable resource for many frontend developers around the world.</p>
-<h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">Featured on</h2>
-<ul class="list-disc">
-<li class="nested-list text-lg">Article: <span class="not-prose"><a href="https://css-tricks.com/front-end-checklist-just-tool-everything-depends/" rel="noopener noreferrer" target="_blank" class="external-link">The Front-End Checklist is just a tool... everything depends on you.</a></span> published on CSS-Tricks (November 30, 2017)</li>
-<li class="nested-list text-lg">Talk: <span class="not-prose"><a href="https://www.meetup.com/barcelona-front-end-development-meetup/events/248466245" rel="noopener noreferrer" target="_blank" class="external-link">Barcelona Front-End Development Meetup</a></span> (March 14, 2018)</li>
-<li class="nested-list text-lg">Newsletter: Web Design Weekly — Issue #340 (November 29, 2018)</li>
-</ul>
-<h2 class="leading-tight text-3xl md:text-4xl font-title font-medium tracking-tight !mt-0 text-black dark:text-white">Links</h2>
-<ul class="list-disc">
-<li class="nested-list text-lg">Live Project: <span class="not-prose"><a href="https://frontendchecklist.io" rel="noopener noreferrer" target="_blank" class="external-link">frontendchecklist.io</a></span></li>
-<li class="nested-list text-lg">Code Repository: <span class="not-prose"><a href="https://github.com/thedaviddias/Front-End-Checklist" rel="noopener noreferrer" target="_blank" class="external-link">Frontend Checklist on GitHub</a></span></li>
-<li class="nested-list text-lg">The <span class="not-prose"><a href="https://www.producthunt.com/products/front-end-checklist" rel="noopener noreferrer" target="_blank" class="external-link">Front-End Checklist on Product Hunt</a></span></li>
-</ul>]]></content:encoded>
-            <author>thedaviddias@gmail.com (David Dias)</author>
-            <enclosure url="https://thedaviddias.com" length="0" type="image//"/>
         </item>
     </channel>
 </rss>

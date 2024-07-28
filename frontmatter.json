@@ -32,44 +32,6 @@
   "frontMatter.taxonomy.seoTitleLength": 70,
   "frontMatter.framework.startCommand": "pnpm dev",
   "frontMatter.preview.host": "http://localhost:3000/",
-  "frontMatter.taxonomy.tags": [
-    "astuces",
-    "aws",
-    "best-practices",
-    "canada",
-    "coding",
-    "collaboration",
-    "dev-journal",
-    "entree-express",
-    "front-end-checklist",
-    "front-end-development",
-    "gaming",
-    "github",
-    "github-actions",
-    "html",
-    "life-lessons",
-    "morning-routines",
-    "netlify",
-    "new-zealand",
-    "nextjs",
-    "npm",
-    "open-source",
-    "performance",
-    "pnpm",
-    "raycast",
-    "react",
-    "security",
-    "self-improvement",
-    "steam-deck",
-    "toronto",
-    "travel",
-    "typescript",
-    "usa",
-    "user-experience",
-    "user-interface",
-    "user-testing",
-    "web-accessibilite"
-  ],
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "project",
@@ -390,16 +352,6 @@
         }
       ]
     }
-  ],
-  "frontMatter.taxonomy.categories": [
-    "automation",
-    "expatriation",
-    "management",
-    "productivity",
-    "reflexion",
-    "side-project",
-    "user-experience",
-    "web-development"
   ],
   "frontMatter.data.types": [
     {

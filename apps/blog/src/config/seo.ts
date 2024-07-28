@@ -36,6 +36,7 @@ export function extendSEO({ options, locale, translate }: ExtendSEOProps) {
       site_name: translate('home.seo.title'),
       images,
       url: `${translate('common:home.path')}${options?.url ? `/${options?.url}` : ''}`,
+      inLanguage: locale,
     },
   }
 }

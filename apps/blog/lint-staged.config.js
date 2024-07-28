@@ -14,7 +14,7 @@ const removeIgnoredFiles = async (files) => {
 
 module.exports = {
   // Type check TypeScript files
-  '**/*.(ts|tsx)': () => 'npm run check:types',
+  '**/*.(ts|tsx)': () => 'pnpm run check:types',
 
   // Lint then format TypeScript and JavaScript files
   '**/*.(ts|tsx|js)': async (files) => {

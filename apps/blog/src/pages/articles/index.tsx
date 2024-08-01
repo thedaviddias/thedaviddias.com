@@ -18,13 +18,6 @@ import { getCategories } from '@/utils/get-article-posts/getCategories'
 
 import { ArticlesType, ListAllTags } from '@/types'
 
-const Search = dynamic<SearchProps>(
-  () => import('../../components/Search').then((mod) => mod.Search),
-  {
-    loading: () => <Loader />,
-  }
-)
-
 const BlogPost = dynamic<BlogPostProps>(
   () => import('../../components/BlogPost').then((mod) => mod.BlogPost),
   {
@@ -66,12 +59,9 @@ const Blog = ({ posts, categories }: BlogProps) => {
         <section className="grid grid-cols-1 border-none pt-10 md:items-end md:gap-4">
           <PageHeader
             title={routes(t).articles.h1}
-            description={routes(t).articles.seo.description}
+            description={routes(t).articles.description}
             className="col-span-4"
           />
-          <div className="flex">
-            <Search setSearchValue={setSearchValue} />
-          </div>
         </section>
 
         <section className="border-none">

@@ -8,7 +8,6 @@ import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
 import { PageHeader } from '@/components/PageHeader'
 import { Paragraph } from '@/components/Paragraph'
-import { Search } from '@/components/Search'
 
 import { CONTENT_TYPE } from '@/constants'
 import { getTags, TagsInfo } from '@/utils/get-article-posts/getTags'
@@ -48,9 +47,6 @@ const TagsPage: NextPage<TagsPageProps> = ({ tags }) => {
             description={t('tags.seo.description_all')}
             className=" col-span-3"
           />
-          <div className="flex md:justify-end">
-            <Search setSearchValue={setSearchValue} />
-          </div>
         </section>
 
         <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -67,9 +63,8 @@ const TagsPage: NextPage<TagsPageProps> = ({ tags }) => {
                   {tag.name}
                 </CustomLink>
                 <Paragraph>{tag?.description}</Paragraph>
-                <p className="mt-auto text-sm dark:text-slate-400">{`${tag?.occurrences} post${
-                  tag?.occurrences === 1 ? '' : 's'
-                } published`}</p>
+                <p className="mt-auto text-sm dark:text-slate-400">{`${tag?.occurrences} post${tag?.occurrences === 1 ? '' : 's'
+                  } published`}</p>
                 {tag?.logo && (
                   <Image
                     src={tag?.logo}

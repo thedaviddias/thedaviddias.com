@@ -17,6 +17,7 @@ export type LinksInternalResponse = Pick<LinkProps, 'locale'> & {
   label: string
   path: string
   h1?: string
+  description?: string
   seo: SEOProps
 }
 

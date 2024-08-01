@@ -6,7 +6,6 @@ import { useState } from 'react'
 import { Container } from '@/components/Container'
 import { Notes } from '@/components/Notes'
 import { PageHeader } from '@/components/PageHeader'
-import { Search } from '@/components/Search'
 
 import { routes } from '@/config/routes'
 import { getAllPostsWithFrontMatter } from '@/utils/get-article-posts/getAllPostsWithFrontMatter'
@@ -49,9 +48,6 @@ const Til = ({ notes }: TilProps) => {
             description={routes(t).notes.seo.description}
             className="col-span-4"
           />
-          <div className="flex">
-            <Search setSearchValue={setSearchValue} />
-          </div>
         </section>
 
         <section className="border-none">

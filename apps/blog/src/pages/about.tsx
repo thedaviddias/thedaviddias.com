@@ -43,7 +43,7 @@ const About: NextPage<AboutProps> = ({ frontMatter, source }) => {
       <SocialProfileJsonLd
         type="Person"
         name="David Dias"
-        url="https://thedavidias.dev"
+        url="https://thedavidias.com"
         sameAs={listSocialUrl(social)}
       />
       <PageHeader title={title} description={description} />

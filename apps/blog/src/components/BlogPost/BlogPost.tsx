@@ -11,11 +11,12 @@ import { DisplayViews } from '../DisplayViews'
 import { ArticlesType } from '@/types'
 
 export type BlogPostProps = {
+  index: number
   post: ArticlesType
   isCategoryPage?: string | string[]
 }
 
-export const BlogPost: React.FC<BlogPostProps> = ({ post, isCategoryPage }) => {
+export const BlogPost: React.FC<BlogPostProps> = ({ post, index, isCategoryPage }) => {
   const { t } = useTranslation('common')
 
   return (
@@ -57,6 +58,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post, isCategoryPage }) => {
         <div className="relative h-[10rem] flex-grow text-left lg:text-right">
           <Image
             className="rounded-md object-cover"
+            priority={index < 1}
             src={post.frontMatter.preview.url}
             fill
             alt={post.frontMatter.preview.alt || ''}

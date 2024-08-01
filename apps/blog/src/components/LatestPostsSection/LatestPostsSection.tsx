@@ -21,8 +21,8 @@ export const LatestPostsSection: React.FC<LatestPostsSection> = ({ articles }) =
           <p className="text-s pt-3 dark:text-gray-400">{t('articles.seo.description')}</p>
         </header>
         <div className="grid grid-cols-1 lg:col-span-2">
-          {articles.map((article) => (
-            <BlogPost key={article.frontMatter.title} post={article} />
+          {articles.map((article, index) => (
+            <BlogPost key={article.frontMatter.title} post={article} index={index} />
           ))}
         </div>
         <footer className="text-right">

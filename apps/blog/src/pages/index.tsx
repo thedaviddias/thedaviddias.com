@@ -83,7 +83,7 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback, proj
         <SocialProfileJsonLd
           type="Person"
           name="David Dias"
-          url="https://thedavidias.dev"
+          url="https://thedavidias.com"
           sameAs={listSocialUrl(social)}
         />
         <main id="main" data-skip-link="main content">

@@ -27,6 +27,7 @@
     "@tailwindcss/forms": "0.5.7",
     "@tailwindcss/typography": "0.5.13",
     "@vercel/og": "^0.6.2",
+    "@vercel/speed-insights": "^1.0.12",
     "autoprefixer": "^10.4.19",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "^4.2.1",

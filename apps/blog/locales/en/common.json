@@ -71,10 +71,11 @@
     "path": "/articles",
     "seo": {
       "title": "My Web Development Articles and More",
-      "description": "Articles about web development and anything that sparks my curiosity and interest.",
+      "description": "Explore insightful articles on web development, coding best practices, and tech innovations by David Dias. Find expert tips and in-depth analysis for developers.",
       "url": "articles"
     },
     "h1": "My Articles",
+    "description": "Dive into a collection of articles covering web development techniques, coding challenges, emerging technologies, and personal insights from my journey as a developer.",
     "sections": {
       "latest-posts": "Recent articles",
       "viewAll": "→ View all articles",

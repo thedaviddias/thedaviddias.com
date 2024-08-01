@@ -37,9 +37,10 @@ export const routes: RoutesResponse = (translate) => ({
     label: translate('common:layout.nav.articles'),
     path: translate('common:articles.path'),
     h1: translate('common:articles.h1'),
+    description: translate('common:articles.description'),
     seo: extendSEO({
       options: {
-        title: translate('common:articles.h1'),
+        title: translate('common:articles.seo.title'),
         description: translate('common:articles.seo.description'),
         url: translate('common:articles.seo.url'),
       },

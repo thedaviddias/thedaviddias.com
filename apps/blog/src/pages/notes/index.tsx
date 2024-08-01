@@ -1,7 +1,6 @@
 import { GetStaticProps } from 'next'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
-import { useState } from 'react'
 
 import { Container } from '@/components/Container'
 import { Notes } from '@/components/Notes'
@@ -18,11 +17,6 @@ type TilProps = {
 
 const Til = ({ notes }: TilProps) => {
   const { t } = useTranslation('common')
-  const [searchValue, setSearchValue] = useState('')
-
-  const filteredNotes = notes.filter((note) =>
-    note.frontMatter.title.toLowerCase().includes(searchValue.toLowerCase())
-  )
 
   return (
     <Container>
@@ -56,10 +50,7 @@ const Til = ({ notes }: TilProps) => {
           </header>
 
           <div className="grid grid-cols-1 lg:col-span-2">
-            {!filteredNotes.length && (
-              <p className="mb-4 text-gray-600 dark:text-gray-400">{t('posts.empty')}</p>
-            )}
-            {filteredNotes.map((post) => (
+            {notes.map((post) => (
               <Notes key={post.frontMatter.title} note={post} />
             ))}
           </div>

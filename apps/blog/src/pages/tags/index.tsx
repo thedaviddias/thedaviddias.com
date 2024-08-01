@@ -2,7 +2,6 @@ import { GetStaticProps, NextPage } from 'next'
 import Image from 'next/image'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
-import { useState } from 'react'
 
 import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
@@ -18,11 +17,6 @@ type TagsPageProps = {
 
 const TagsPage: NextPage<TagsPageProps> = ({ tags }) => {
   const { t } = useTranslation('common')
-  const [searchValue, setSearchValue] = useState('')
-
-  const filteredTags = tags.filter((tag) =>
-    tag.name.toLowerCase().includes(searchValue.toLowerCase())
-  )
 
   return (
     <Container>
@@ -50,10 +44,7 @@ const TagsPage: NextPage<TagsPageProps> = ({ tags }) => {
         </section>
 
         <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {!filteredTags.length && (
-            <p className="mb-4 text-gray-600 dark:text-gray-400">{t('posts.empty')}</p>
-          )}
-          {filteredTags.map((tag) => (
+          {tags.map((tag) => (
             <li key={tag.name}>
               <div className="relative flex h-full flex-col overflow-hidden rounded-md border border-gray-300 p-4 text-gray-800 transition-all hover:scale-[1.01] dark:border-gray-700 dark:text-gray-200">
                 <CustomLink
@@ -63,8 +54,9 @@ const TagsPage: NextPage<TagsPageProps> = ({ tags }) => {
                   {tag.name}
                 </CustomLink>
                 <Paragraph>{tag?.description}</Paragraph>
-                <p className="mt-auto text-sm dark:text-slate-400">{`${tag?.occurrences} post${tag?.occurrences === 1 ? '' : 's'
-                  } published`}</p>
+                <p className="mt-auto text-sm dark:text-slate-400">{`${tag?.occurrences} post${
+                  tag?.occurrences === 1 ? '' : 's'
+                } published`}</p>
                 {tag?.logo && (
                   <Image
                     src={tag?.logo}

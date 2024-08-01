@@ -2,7 +2,6 @@ import { GetStaticProps } from 'next'
 import dynamic from 'next/dynamic'
 import { NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
-import { useState } from 'react'
 
 import { BlogPostProps } from '@/components/BlogPost'
 import { Categories } from '@/components/Categories'
@@ -10,7 +9,6 @@ import { Container } from '@/components/Container'
 import { H3 } from '@/components/Headings'
 import { Loader } from '@/components/Loader'
 import { PageHeader } from '@/components/PageHeader'
-import { SearchProps } from '@/components/Search'
 
 import { routes } from '@/config/routes'
 import { getAllPostsWithFrontMatter } from '@/utils/get-article-posts/getAllPostsWithFrontMatter'
@@ -32,11 +30,6 @@ type BlogProps = {
 
 const Blog = ({ posts, categories }: BlogProps) => {
   const { t } = useTranslation('common')
-  const [searchValue, setSearchValue] = useState('')
-
-  const filteredBlogPosts = posts.filter((post) =>
-    post.frontMatter.title.toLowerCase().includes(searchValue.toLowerCase())
-  )
 
   return (
     <Container>
@@ -70,10 +63,7 @@ const Blog = ({ posts, categories }: BlogProps) => {
           <Categories categories={categories} />
 
           <div className="mt-16 grid grid-cols-1 lg:col-span-2">
-            {!filteredBlogPosts.length && (
-              <p className="mb-4 text-gray-600 dark:text-gray-400">{t('posts.empty')}</p>
-            )}
-            {filteredBlogPosts.map((post) => (
+            {posts.map((post) => (
               <BlogPost key={post.frontMatter.title} post={post} />
             ))}
           </div>

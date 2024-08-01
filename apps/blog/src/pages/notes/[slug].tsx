@@ -67,6 +67,7 @@ export type BlogPostProps = {
     permalink: string
     tags?: string[]
     title: string
+    schema?: string
   }
   permalink: string
   slug: string

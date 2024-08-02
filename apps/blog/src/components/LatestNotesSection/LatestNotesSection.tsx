@@ -33,7 +33,7 @@ export const LatestNotesSection: React.FC<LatestNotesSection> = ({ notes }) => {
         </div>
         {notes.length ? (
           <footer className="text-right">
-            <CustomLink href="/articles">{t('notes.sections.viewAll')}</CustomLink>
+            <CustomLink href="/notes">{t('notes.sections.viewAll')}</CustomLink>
           </footer>
         ) : null}
       </div>

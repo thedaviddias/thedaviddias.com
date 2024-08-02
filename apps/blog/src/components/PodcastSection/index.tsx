@@ -11,9 +11,9 @@ import fetcher from '@/utils/fetcher'
 import { Loader } from '../Loader'
 
 const PodcastSection = () => {
-  const { t, lang } = useTranslation('common')
+  const { t } = useTranslation('common')
   const { theme, resolvedTheme } = useTheme()
-  const { data, error } = useSWR<PodcastsResponse>(`/api/spotify/podcasts?lang=${lang}`, fetcher)
+  const { data, error } = useSWR<PodcastsResponse>(`/api/spotify/podcasts?lang=fr`, fetcher)
 
   if (error) return <></>
   if (!data) return <Loader />
@@ -34,7 +34,6 @@ const PodcastSection = () => {
                 className="rounded-xl"
                 width="100%"
                 height="232"
-                frameBorder="0"
                 allow="encrypted-media"
                 title="Spotify player for the podcast World Web Stories"
               ></iframe>

@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
-import { ArticleJsonLd, BreadcrumbJsonLd, NextSeo } from 'next-seo'
+import { ArticleJsonLd, BreadcrumbJsonLd, FAQPageJsonLd, NextSeo } from 'next-seo'
 import { ReadTimeResults } from 'reading-time'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeImagePlaceholder from 'rehype-image-placeholder'
@@ -67,10 +67,11 @@ export type BlogPostProps = {
     permalink: string
     tags?: string[]
     title: string
-    schema?: string
+    schema: string
   }
   permalink: string
   slug: string
+  plainText: string
 }
 
 export type Headings = {
@@ -86,8 +87,14 @@ type NotePageProps = BlogPostProps & {
 
 const contentType = 'notes'
 
-const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adjacentPosts }) => {
-  const { title, description, tags, date, author } = frontMatter
+const NotePage: NextPage<NotePageProps> = ({
+  frontMatter,
+  source,
+  permalink,
+  adjacentPosts,
+  plainText,
+}) => {
+  const { title, description, tags, date, author, schema } = frontMatter
   const { isFallback } = useRouter()
 
   if (isFallback || !title) {
@@ -123,21 +130,34 @@ const NotePage: NextPage<NotePageProps> = ({ frontMatter, source, permalink, adj
           ],
         }}
       />
-      <ArticleJsonLd
-        type="BlogPosting"
-        url={permalink}
-        title={title}
-        images={[]}
-        datePublished={date}
-        authorName={[
-          {
-            name: 'David Dias',
-            url: 'https://thedaviddias.com',
-          },
-        ]}
-        publisherName="David Dias"
-        description={description}
-      />
+      {schema === 'faq' && (
+        <FAQPageJsonLd
+          mainEntity={[
+            {
+              questionName: { title },
+              acceptedAnswerText: plainText,
+            },
+          ]}
+        />
+      )}
+      {schema === 'article' && (
+        <ArticleJsonLd
+          type="BlogPosting"
+          url={permalink}
+          title={title}
+          images={[]}
+          datePublished={date}
+          authorName={[
+            {
+              name: 'David Dias',
+              url: 'https://thedaviddias.com',
+            },
+          ]}
+          publisherName="David Dias"
+          description={description}
+        />
+      )}
+
       <BreadcrumbJsonLd
         itemListElements={[
           {
@@ -230,10 +250,28 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
 
     const {
       markdownBody,
-      frontMatter: { title, description, tags, date, author },
+      frontMatter: { title, description, tags, date, author, schema },
       permalink,
       readingTime,
     } = postContent
+
+    const mdxSource = await serialize(markdownBody, {
+      mdxOptions: {
+        remarkPlugins: [remarkGfm, remarkCodeTitles, remarkUnwrapImages],
+        rehypePlugins: [
+          [rehypePrismPlus, { ignoreMissing: true }],
+          [rehypeImagePlaceholder, { dir: 'public/' }],
+          rehypeSlug,
+          [rehypeAutolinkHeadings],
+        ],
+      },
+    })
+
+    const plainText = markdownBody
+      .replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1') // Remove markdown links
+      .replace(/[#*_~`]/g, '') // Remove markdown syntax
+      .replace(/\n+/g, ' ') // Replace newlines with spaces
+      .trim() // Trim whitespace
 
     return {
       props: {
@@ -243,22 +281,14 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
           date: JSON.parse(JSON.stringify(date)),
           tags,
           author: author || null,
+          schema,
         },
         permalink,
         slug,
         readingTime,
         adjacentPosts: locale && getAdjacentPosts(slug, locale, contentType),
-        source: await serialize(markdownBody, {
-          mdxOptions: {
-            remarkPlugins: [remarkGfm, remarkCodeTitles, remarkUnwrapImages],
-            rehypePlugins: [
-              [rehypePrismPlus, { ignoreMissing: true }],
-              [rehypeImagePlaceholder, { dir: 'public/' }],
-              rehypeSlug,
-              [rehypeAutolinkHeadings],
-            ],
-          },
-        }),
+        source: mdxSource,
+        plainText,
       },
     }
   }

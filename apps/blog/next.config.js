@@ -100,9 +100,6 @@ const nextConfig = withPlugins([plugins, nextTranslate], {
       },
     ]
   },
-  sentry: {
-    hideSourceMaps: true,
-  },
 })
 
 const moduleExports = nextConfig

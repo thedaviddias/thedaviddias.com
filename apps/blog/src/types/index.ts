@@ -31,6 +31,7 @@ export type FrontMatterType<Type extends 'article' | 'note' | 'project'> = {
   locale: string
   permalink: string
   title: string
+  schema?: string
   preview: {
     url: string
     alt?: string

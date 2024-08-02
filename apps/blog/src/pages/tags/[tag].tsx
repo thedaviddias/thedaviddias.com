@@ -51,7 +51,7 @@ const TagPage: NextPage<CategoryPageProps> = ({ posts, tag }) => {
           <div className="grid grid-cols-1 lg:col-span-2">
             {posts?.map((post, i) => (
               <React.Fragment key={i}>
-                {isArticleType(post) ? <BlogPost post={post} /> : <Notes note={post} />}
+                {isArticleType(post) ? <BlogPost post={post} index={i} /> : <Notes note={post} />}
               </React.Fragment>
             ))}
           </div>

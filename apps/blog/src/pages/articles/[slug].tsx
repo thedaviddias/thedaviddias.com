@@ -148,7 +148,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
   const { title, description, tags, categories, date, lastmod, author, published, preview } =
     frontMatter
   const { isFallback } = useRouter()
-  const { t } = useTranslation('common')
+  const { t, lang } = useTranslation('common')
 
   if (isFallback || !title) {
     return <Loader />
@@ -187,9 +187,11 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
         url={permalink}
         title={title}
         images={[`${BASE_URL}${preview.url}`, ...addDomainToImagePath(images)]}
+        dateCreated={date}
         datePublished={date}
         dateModified={lastmod}
         description={description}
+        inLanguage={lang}
         authorName={[
           {
             name: 'David Dias',

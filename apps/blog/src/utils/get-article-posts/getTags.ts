@@ -18,7 +18,7 @@ export type TagsInfo = {
 export async function getTags(dataType: string, locale?: string): Promise<TagsInfo[]> {
   const tagsInfo = fs.readFileSync(path.join(DATA_DIR, 'tags.json'), 'utf8')
 
-  const tags = {
+  const tags: { [key: string]: ListAllTags[] } = {
     articles: await collateTags(CONTENT_TYPE.ARTICLE, 'tags', locale),
     notes: await collateTags(CONTENT_TYPE.NOTE, 'tags', locale),
   }

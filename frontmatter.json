@@ -306,6 +306,14 @@
           "type": "tags"
         },
         {
+          "title": "Schema",
+          "name": "schema",
+          "type": "choice",
+          "choices": [
+            "faq"
+          ]
+        },
+        {
           "title": "Type of publication",
           "name": "type",
           "type": "string"

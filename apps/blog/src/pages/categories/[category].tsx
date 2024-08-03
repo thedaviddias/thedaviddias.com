@@ -47,8 +47,9 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ posts, category }) => {
           <PageHeader title={titlePage} description={descriptionPage} />
 
           <div className="grid grid-cols-1 lg:col-span-2">
-            {posts?.map((post) => (
+            {posts?.map((post, index) => (
               <BlogPost
+                index={index}
                 key={post.frontMatter.title}
                 post={post}
                 isCategoryPage={router.query?.category}

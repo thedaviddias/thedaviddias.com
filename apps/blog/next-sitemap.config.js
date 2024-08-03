@@ -16,7 +16,7 @@ const commonOptions = (config) => ({
 
 const config = {
   siteUrl: 'https://thedaviddias.com',
-  generateRobotsTxt: true,
+  generateRobotsTxt: false,
   exclude: ['/404', '/fr/404'],
   additionalPaths: async (config) => {
     const result = []
@@ -44,24 +44,6 @@ const config = {
 
     result.push({
       loc: '/projects',
-      changefreq: 'weekly',
-      ...commonOptions(config),
-    })
-
-    result.push({
-      loc: '/tags',
-      changefreq: 'weekly',
-      ...commonOptions(config),
-    })
-
-    result.push({
-      loc: '/dashboard',
-      changefreq: 'weekly',
-      ...commonOptions(config),
-    })
-
-    result.push({
-      loc: '/supporters',
       changefreq: 'weekly',
       ...commonOptions(config),
     })

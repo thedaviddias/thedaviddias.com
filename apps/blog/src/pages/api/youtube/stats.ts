@@ -1,4 +1,3 @@
-import { withSentry } from '@sentry/nextjs'
 import { google } from 'googleapis'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
@@ -42,4 +41,4 @@ const YoutubeStatsHandler = async (req: NextApiRequest, res: NextApiResponse) =>
   }
 }
 
-export default withSentry(YoutubeStatsHandler)
+export default YoutubeStatsHandler

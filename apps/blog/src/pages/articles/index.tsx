@@ -63,8 +63,8 @@ const Blog = ({ posts, categories }: BlogProps) => {
           <Categories categories={categories} />
 
           <div className="mt-16 grid grid-cols-1 lg:col-span-2">
-            {posts.map((post) => (
-              <BlogPost key={post.frontMatter.title} post={post} />
+            {posts.map((post, index) => (
+              <BlogPost index={index} key={post.frontMatter.title} post={post} />
             ))}
           </div>
         </section>

@@ -12,14 +12,14 @@ import SEO from '../../next-seo.config'
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <PlausibleProvider domain="thedaviddias.com" trackOutboundLinks={true}>
-      <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class">
+      <PlausibleProvider domain="thedaviddias.com" trackOutboundLinks={true}>
         <DefaultSeo {...SEO} />
         <Component {...pageProps} />
         {process.env.NODE_ENV === 'production' && <SpeedInsights />}
         {process.env.NODE_ENV === 'production' && <GoogleAnalytics gaId="G-4NMCVETX8K" />}
-      </ThemeProvider>
-    </PlausibleProvider>
+      </PlausibleProvider>
+    </ThemeProvider>
   )
 }
 

@@ -6,6 +6,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { ArticleJsonLd, BreadcrumbJsonLd, NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { ReadTimeResults } from 'reading-time'
+import wordsCounter from 'word-counting'
 
 import { Author } from '@/components/Author'
 import { Container } from '@/components/Container'
@@ -24,7 +25,6 @@ import { getAllPosts } from '@/utils/get-article-posts/getAllPosts'
 import { getPost } from '@/utils/get-article-posts/getPost'
 import { getPostBySlug } from '@/utils/get-article-posts/getPostBySlug'
 import { serializeMarkdown } from '@/utils/serializeMarkdown'
-import wordsCounter from 'word-counting'
 
 const Comments = dynamic<object>(
   () => import('../../components/Comments').then((mod) => mod.Comments),

@@ -1,9 +1,9 @@
-import { NextSeo, NextSeoProps } from 'next-seo'
+import { NextSeo } from 'next-seo'
+import { PropsWithChildren } from 'react'
 
 import { Container } from '@/components/Container'
 
 import { SEOProps } from '@/config/seo'
-import { PropsWithChildren, ReactNode } from 'react'
 
 type BaseLayoutProps = {
   title: string

@@ -1,9 +1,9 @@
+import { GoogleAnalytics } from '@next/third-parties/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { AppProps } from 'next/app'
 import PlausibleProvider from 'next-plausible'
 import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
-import { GoogleAnalytics } from '@next/third-parties/google'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import '@/styles/globals.css'
 import '@/styles/prism.css'

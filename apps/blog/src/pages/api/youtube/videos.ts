@@ -1,4 +1,3 @@
-import { withSentry } from '@sentry/nextjs'
 import { google } from 'googleapis'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
@@ -6,13 +5,15 @@ import googleAuth from '@/lib/google'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const youtubeId = process.env.YOUTUBE_CHANNEL_ID
+  if (!youtubeId) {
+    throw Error('YOUTUBE_CHANNEL_ID not found in .env!')
+  }
 
   try {
     const auth = await googleAuth.getClient()
-    const youtube = google.youtube({
-      auth,
-      version: 'v3',
-    })
+
+    // @ts-ignore
+    const youtube = google.youtube({ version: 'v3', auth })
 
     const listVideos = await youtube.search.list({
       channelId: youtubeId,
@@ -36,4 +37,4 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 }
 
-export default withSentry(handler)
+export default handler

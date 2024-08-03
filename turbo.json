@@ -21,7 +21,15 @@
     "YOUTUBE_CHANNEL_ID",
     "RAINDROP_COLLECTION",
     "RAINDROP_TOKEN",
-    "ANALYSE"
+    "ANALYSE",
+    "SENTRY_DSN",
+    "NEXT_PUBLIC_SENTRY_DSN",
+    "MEDIUM_AUTHOR_ID",
+    "MEDIUM_TOKEN",
+    "DEV_TOKEN",
+    "ANALYZE",
+    "PORT",
+    "CI"
   ],
   "globalDependencies": [
     "**/.env.*local"
@@ -34,6 +42,7 @@
       ]
     },
     "lint": {},
+    "lint:write": {},
     "test": {},
     "analyse": {},
     "check:types": {},

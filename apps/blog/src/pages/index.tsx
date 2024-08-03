@@ -15,6 +15,7 @@ import { CustomLink } from '@/components/CustomLink'
 import { LatestNotesSection } from '@/components/LatestNotesSection'
 import { LatestPostsSection } from '@/components/LatestPostsSection'
 import { LatestProjectsSection } from '@/components/LatestProjectsSection/LatestProjectsSection'
+import { LazyRender } from '@/components/lazy-render/LazyRender'
 import { Loader } from '@/components/Loader'
 import { SubstackFeed } from '@/components/SubstackFeed'
 import { ToRead } from '@/components/ToRead'
@@ -29,7 +30,6 @@ import { LatestGithubSectionProps } from '../components/LatestGithubSection'
 import social from '../../../../data/social.json'
 
 import { ArticlesType, NotesType, ProjectsType, YouTubeVideo } from '@/types'
-import { LazyRender } from '@/components/lazy-render/LazyRender'
 
 const LatestGithubSection = dynamic<LatestGithubSectionProps>(
   () => import('../components/LatestGithubSection').then((mod) => mod.LatestGithubSection),

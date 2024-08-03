@@ -8,9 +8,11 @@ import { ReadTimeResults } from 'reading-time'
 
 import { AdjacentPostsProps, PreviousNext } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
+import { BuyMeACoffee } from '@/components/BuyMeACoffee'
 import { Container } from '@/components/Container'
 import { DatePost } from '@/components/DatePost'
 import { H1 } from '@/components/Headings'
+import { LazyRender } from '@/components/lazy-render/LazyRender'
 import { Loader } from '@/components/Loader'
 import { MDXComponents } from '@/components/MdxComponents'
 import { ScrollTop } from '@/components/ScrollTop'
@@ -34,13 +36,6 @@ const Comments = dynamic<object>(
 
 const AdjacentPosts = dynamic<AdjacentPostsProps>(
   () => import('../../components/AdjacentPosts').then((mod) => mod.AdjacentPosts),
-  {
-    loading: () => <Loader />,
-  }
-)
-
-const BuyMeACoffee = dynamic(
-  () => import('../../components/BuyMeACoffee').then((mod) => mod.BuyMeACoffee),
   {
     loading: () => <Loader />,
   }
@@ -194,13 +189,17 @@ const NotePage: NextPage<NotePageProps> = ({
               </section>
               {permalink && <Share title={title} permalink={permalink} />}
 
-              <BuyMeACoffee />
+              <LazyRender>
+                <BuyMeACoffee />
+              </LazyRender>
 
               {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
 
               {/* <Webmentions mentions={data?.links} /> */}
 
-              <Comments />
+              <LazyRender>
+                <Comments />
+              </LazyRender>
             </div>
           </div>
         </article>

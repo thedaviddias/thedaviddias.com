@@ -7,14 +7,17 @@ import { ArticleJsonLd, BreadcrumbJsonLd, NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { ReadTimeResults } from 'reading-time'
 import slugify from 'slugify'
+import wordsCounter from 'word-counting'
 
 import { AdjacentPostsProps, PreviousNext } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
+import { BuyMeACoffee } from '@/components/BuyMeACoffee'
 import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
 import { DatePost } from '@/components/DatePost'
 import { DisplayViews } from '@/components/DisplayViews'
 import { H1 } from '@/components/Headings'
+import { LazyRender } from '@/components/lazy-render/LazyRender'
 import { Loader } from '@/components/Loader'
 import { MDXComponents } from '@/components/MdxComponents'
 import { Paragraph } from '@/components/Paragraph'
@@ -35,7 +38,6 @@ import { getPost } from '@/utils/get-article-posts/getPost'
 import { getPostBySlug } from '@/utils/get-article-posts/getPostBySlug'
 import { GetRelatedPosts, getRelatedPosts } from '@/utils/get-article-posts/getRelatedPosts'
 import { serializeMarkdown } from '@/utils/serializeMarkdown'
-import wordsCounter from 'word-counting'
 
 const Comments = dynamic<object>(
   () => import('../../components/Comments').then((mod) => mod.Comments),
@@ -46,13 +48,6 @@ const Comments = dynamic<object>(
 
 const AdjacentPosts = dynamic<AdjacentPostsProps>(
   () => import('../../components/AdjacentPosts').then((mod) => mod.AdjacentPosts),
-  {
-    loading: () => <Loader />,
-  }
-)
-
-const BuyMeACoffee = dynamic(
-  () => import('../../components/BuyMeACoffee').then((mod) => mod.BuyMeACoffee),
   {
     loading: () => <Loader />,
   }
@@ -269,7 +264,9 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                   )}
                 </section>
 
-                <BuyMeACoffee />
+                <LazyRender>
+                  <BuyMeACoffee />
+                </LazyRender>
 
                 {relatedPosts.length ? <RelatedPosts relatedPosts={relatedPosts} /> : null}
 
@@ -287,7 +284,9 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
 
                   {/* <Webmentions mentions={data?.links} /> */}
 
-                  <Comments />
+                  <LazyRender>
+                    <Comments />
+                  </LazyRender>
                 </section>
               </div>
             </div>

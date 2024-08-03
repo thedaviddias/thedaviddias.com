@@ -51,5 +51,6 @@ module.exports = {
     'no-console': ['error'],
     'react/jsx-no-undef': ['off', { allowGlobals: true }],
     '@typescript-eslint/no-unused-vars': ['error'],
+    '@typescript-eslint/ban-ts-comment': 'off',
   },
 }

@@ -3,16 +3,9 @@ import { GetStaticPaths, GetStaticPathsResult, GetStaticProps, NextPage } from '
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
-import { serialize } from 'next-mdx-remote/serialize'
 import { ArticleJsonLd, BreadcrumbJsonLd, NextSeo } from 'next-seo'
 import useTranslation from 'next-translate/useTranslation'
 import { ReadTimeResults } from 'reading-time'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypeImagePlaceholder from 'rehype-image-placeholder'
-import rehypePrismPlus from 'rehype-prism-plus'
-import rehypeSlug from 'rehype-slug'
-import remarkGfm from 'remark-gfm'
-import remarkUnwrapImages from 'remark-unwrap-images'
 
 import { Author } from '@/components/Author'
 import { Container } from '@/components/Container'
@@ -30,8 +23,8 @@ import { BASE_URL, CLOUDINARY_IMG_HEIGHT, CLOUDINARY_IMG_WIDTH } from '@/constan
 import { getAllPosts } from '@/utils/get-article-posts/getAllPosts'
 import { getPost } from '@/utils/get-article-posts/getPost'
 import { getPostBySlug } from '@/utils/get-article-posts/getPostBySlug'
-import { rehypeExtractHeadings } from '@/utils/rehype-extract-headings'
-import { remarkCodeTitles } from '@/utils/remark-code-titles'
+import { serializeMarkdown } from '@/utils/serializeMarkdown'
+import wordsCounter from 'word-counting'
 
 const Comments = dynamic<object>(
   () => import('../../components/Comments').then((mod) => mod.Comments),
@@ -63,6 +56,7 @@ export type BlogPostProps = {
   }
   permalink: string
   slug: string
+  plainText: string
 }
 
 export type Headings = {
@@ -103,12 +97,18 @@ export type WebMention = {
 
 const contentType = 'projects'
 
-const ProjectPage: NextPage<BlogPostPageProps> = ({ frontMatter, source, permalink, slug }) => {
+const ProjectPage: NextPage<BlogPostPageProps> = ({
+  frontMatter,
+  source,
+  permalink,
+  slug,
+  plainText,
+}) => {
   const { title, description, tags, date, lastmod, author, published, preview } = frontMatter
-  const test = useRouter()
-  const { t } = useTranslation('common')
+  const { isFallback } = useRouter()
+  const { t, lang } = useTranslation('common')
 
-  if (test.isFallback || !title) {
+  if (isFallback || !title) {
     return <Loader />
   }
 
@@ -147,6 +147,11 @@ const ProjectPage: NextPage<BlogPostPageProps> = ({ frontMatter, source, permali
         images={[`${BASE_URL}${preview.url}`]}
         datePublished={date}
         dateModified={lastmod}
+        description={description}
+        wordCount={wordsCounter(plainText).wordsCount}
+        articleBody={plainText}
+        inLanguage={lang}
+        keywords={tags?.join(',')}
         authorName={[
           {
             name: 'David Dias',
@@ -154,7 +159,6 @@ const ProjectPage: NextPage<BlogPostPageProps> = ({ frontMatter, source, permali
           },
         ]}
         publisherName="David Dias"
-        description={description}
       />
       <BreadcrumbJsonLd
         itemListElements={[
@@ -305,18 +309,8 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
         slug,
         readingTime,
         headings,
-        source: await serialize(markdownBody, {
-          mdxOptions: {
-            remarkPlugins: [remarkGfm, remarkCodeTitles, remarkUnwrapImages],
-            rehypePlugins: [
-              [rehypePrismPlus, { ignoreMissing: true }],
-              [rehypeImagePlaceholder, { dir: 'public/' }],
-              rehypeSlug,
-              [rehypeAutolinkHeadings],
-              [rehypeExtractHeadings, { rank: 2, headings }],
-            ],
-          },
-        }),
+        source: (await serializeMarkdown(markdownBody)).mdxSource,
+        plainText: (await serializeMarkdown(markdownBody)).plainText,
       },
     }
   }

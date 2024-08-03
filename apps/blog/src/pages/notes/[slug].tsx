@@ -3,15 +3,8 @@ import { GetStaticPaths, GetStaticPathsResult, GetStaticProps, NextPage } from '
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
-import { serialize } from 'next-mdx-remote/serialize'
 import { ArticleJsonLd, BreadcrumbJsonLd, FAQPageJsonLd, NextSeo } from 'next-seo'
 import { ReadTimeResults } from 'reading-time'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypeImagePlaceholder from 'rehype-image-placeholder'
-import rehypePrismPlus from 'rehype-prism-plus'
-import rehypeSlug from 'rehype-slug'
-import remarkGfm from 'remark-gfm'
-import remarkUnwrapImages from 'remark-unwrap-images'
 
 import { AdjacentPostsProps, PreviousNext } from '@/components/AdjacentPosts'
 import { Author } from '@/components/Author'
@@ -30,7 +23,7 @@ import { getAdjacentPosts } from '@/utils/get-article-posts/getAdjacentPosts'
 import { getAllPosts } from '@/utils/get-article-posts/getAllPosts'
 import { getPost } from '@/utils/get-article-posts/getPost'
 import { getPostBySlug } from '@/utils/get-article-posts/getPostBySlug'
-import { remarkCodeTitles } from '@/utils/remark-code-titles'
+import { serializeMarkdown } from '@/utils/serializeMarkdown'
 
 const Comments = dynamic<object>(
   () => import('../../components/Comments').then((mod) => mod.Comments),
@@ -106,30 +99,7 @@ const NotePage: NextPage<NotePageProps> = ({
   return (
     <Container>
       <ScrollTop />
-      <NextSeo
-        title={title}
-        description={description}
-        titleTemplate={'%s | David Dias'}
-        openGraph={{
-          title,
-          description,
-          url: permalink,
-          type: 'article',
-          article: {
-            publishedTime: date,
-            authors: ['https://thedaviddias.com/about'],
-            tags,
-          },
-          images: [
-            {
-              url: imageOg,
-              width: CLOUDINARY_IMG_WIDTH,
-              height: CLOUDINARY_IMG_HEIGHT,
-              alt: '',
-            },
-          ],
-        }}
-      />
+      <NextSeo title={title} description={description} titleTemplate={'%s | David Dias'} />
       {schema === 'faq' && (
         <FAQPageJsonLd
           mainEntity={[
@@ -147,6 +117,7 @@ const NotePage: NextPage<NotePageProps> = ({
           title={title}
           images={[]}
           datePublished={date}
+          wordCount={plainText.length}
           authorName={[
             {
               name: 'David Dias',
@@ -255,24 +226,6 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
       readingTime,
     } = postContent
 
-    const mdxSource = await serialize(markdownBody, {
-      mdxOptions: {
-        remarkPlugins: [remarkGfm, remarkCodeTitles, remarkUnwrapImages],
-        rehypePlugins: [
-          [rehypePrismPlus, { ignoreMissing: true }],
-          [rehypeImagePlaceholder, { dir: 'public/' }],
-          rehypeSlug,
-          [rehypeAutolinkHeadings],
-        ],
-      },
-    })
-
-    const plainText = markdownBody
-      .replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1') // Remove markdown links
-      .replace(/[#*_~`]/g, '') // Remove markdown syntax
-      .replace(/\n+/g, ' ') // Replace newlines with spaces
-      .trim() // Trim whitespace
-
     return {
       props: {
         frontMatter: {
@@ -287,8 +240,8 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
         slug,
         readingTime,
         adjacentPosts: locale && getAdjacentPosts(slug, locale, contentType),
-        source: mdxSource,
-        plainText,
+        source: (await serializeMarkdown(markdownBody)).mdxSource,
+        plainText: (await serializeMarkdown(markdownBody)).plainText,
       },
     }
   }

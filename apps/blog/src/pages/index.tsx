@@ -29,6 +29,7 @@ import { LatestGithubSectionProps } from '../components/LatestGithubSection'
 import social from '../../../../data/social.json'
 
 import { ArticlesType, NotesType, ProjectsType, YouTubeVideo } from '@/types'
+import { LazyRender } from '@/components/lazy-render/LazyRender'
 
 const LatestGithubSection = dynamic<LatestGithubSectionProps>(
   () => import('../components/LatestGithubSection').then((mod) => mod.LatestGithubSection),
@@ -120,6 +121,7 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback, proj
                 src="/images/david-dias-round.jpg"
                 width={250}
                 height={250}
+                priority={true}
                 alt="Photo of David Dias in black and white"
                 style={{
                   maxWidth: '100%',
@@ -132,10 +134,12 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback, proj
           <LatestPostsSection articles={articles} />
 
           <section className="mb-10">
-            <div className="grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-2">
-              <CurrentlyReading limit={mobile() ? 2 : 3} />
-              <ToRead limit={mobile() ? 2 : 3} />
-            </div>
+            <LazyRender>
+              <div className="grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-2">
+                <CurrentlyReading limit={mobile() ? 2 : 3} />
+                <ToRead limit={mobile() ? 2 : 3} />
+              </div>
+            </LazyRender>
             <footer className="text-right">
               <CustomLink
                 href="https://www.goodreads.com/user/show/60055286-david-dias"
@@ -148,15 +152,27 @@ const Home: NextPage<HomeProps> = ({ articles, notes, ghProjects, fallback, proj
 
           <LatestNotesSection notes={notes} />
 
-          <SubstackFeed />
+          <LazyRender>
+            <SubstackFeed />
+          </LazyRender>
 
           <LatestProjectsSection projects={projects} />
 
-          <LatestGithubSection projects={ghProjects} />
+          <LazyRender>
+            <LatestGithubSection projects={ghProjects} />
+          </LazyRender>
 
-          {process.env.NODE_ENV === 'production' && !mobile() && <PodcastSection />}
+          {process.env.NODE_ENV === 'production' && !mobile() && (
+            <LazyRender>
+              <PodcastSection />
+            </LazyRender>
+          )}
 
-          {process.env.NODE_ENV === 'production' && <LatestYoutubeVideos />}
+          {process.env.NODE_ENV === 'production' && (
+            <LazyRender>
+              <LatestYoutubeVideos />
+            </LazyRender>
+          )}
         </main>
       </Container>
     </SWRConfig>

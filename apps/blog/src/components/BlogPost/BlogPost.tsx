@@ -58,12 +58,17 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post, index, isCategoryPage 
         <div className="relative h-[10rem] flex-grow text-left lg:text-right">
           <Image
             className="rounded-md object-cover"
-            priority={index < 1}
+            loading={index < 2 ? 'eager' : 'lazy'}
             src={post.frontMatter.preview.url}
-            fill
+            // priority={index < 1}
+            width="236"
+            height="160"
             alt={post.frontMatter.preview.alt || ''}
             aria-hidden="true"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizes="(max-width: 640px) 100vw,
+            (max-width: 1280px) 50vw,
+            (max-width: 1536px) 33vw,
+            25vw"
           />
         </div>
       </div>

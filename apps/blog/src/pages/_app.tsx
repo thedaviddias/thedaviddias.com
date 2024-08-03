@@ -2,7 +2,7 @@ import type { AppProps } from 'next/app'
 import PlausibleProvider from 'next-plausible'
 import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import '@/styles/globals.css'
@@ -17,7 +17,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <DefaultSeo {...SEO} />
         <Component {...pageProps} />
         {process.env.NODE_ENV === 'production' && <SpeedInsights />}
-        {process.env.NODE_ENV === 'production' && <GoogleTagManager gtmId="G-4NMCVETX8K" />}
+        {process.env.NODE_ENV === 'production' && <GoogleAnalytics gaId="G-4NMCVETX8K" />}
       </ThemeProvider>
     </PlausibleProvider>
   )

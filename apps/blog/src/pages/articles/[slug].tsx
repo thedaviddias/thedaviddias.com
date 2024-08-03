@@ -155,6 +155,9 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
       <NextSeo
         title={title}
         description={description}
+        robotsProps={{
+          maxImagePreview: 'large',
+        }}
         titleTemplate={'%s | David Dias'}
         openGraph={{
           title,

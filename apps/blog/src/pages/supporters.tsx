@@ -52,6 +52,7 @@ const Supporters: NextPage<SupportersProps> = ({ supporters, frontMatter, source
     <BaseLayout
       title={titlePage}
       description={descriptionPage}
+      noindex={true}
       openGraph={routes(t).about.seo}
       languageAlternates={[
         {

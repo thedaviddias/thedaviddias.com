@@ -23,6 +23,7 @@ const TagsPage: NextPage<TagsPageProps> = ({ tags }) => {
       <NextSeo
         title={t('tags.seo.title_all')}
         description={t('tags.seo.description_all')}
+        noindex={true}
         languageAlternates={[
           {
             hrefLang: 'en',
@@ -54,9 +55,8 @@ const TagsPage: NextPage<TagsPageProps> = ({ tags }) => {
                   {tag.name}
                 </CustomLink>
                 <Paragraph>{tag?.description}</Paragraph>
-                <p className="mt-auto text-sm dark:text-slate-400">{`${tag?.occurrences} post${
-                  tag?.occurrences === 1 ? '' : 's'
-                } published`}</p>
+                <p className="mt-auto text-sm dark:text-slate-400">{`${tag?.occurrences} post${tag?.occurrences === 1 ? '' : 's'
+                  } published`}</p>
                 {tag?.logo && (
                   <Image
                     src={tag?.logo}

@@ -2,8 +2,9 @@ Sitemap: https://thedaviddias.com/sitemap.xml
 
 User-agent: *
 Disallow: /tags/
-Disallow: /dashboard/
-Disallow: /supporters/
+Disallow: /categories/
+Disallow: /dashboard
+Disallow: /supporters
 
 Disallow: /*.rss
 

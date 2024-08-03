@@ -20,6 +20,7 @@ const DashboardPage = () => {
       <NextSeo
         title={routes(t).dashboard.seo.title}
         description={routes(t).dashboard.seo.description}
+        noindex={true}
         openGraph={routes(t).dashboard.seo}
       />
       <main className="mb-5 mt-5">

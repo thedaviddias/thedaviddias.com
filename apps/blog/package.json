@@ -83,7 +83,7 @@
     "date-fns": "2.30.0",
     "dotenv": "16.4.5",
     "eslint": "8.42.0",
-    "eslint-config-next": "13.4.5",
+    "eslint-config-next": "14.2.5",
     "eslint-plugin-jsx-a11y": "6.9.0",
     "eslint-plugin-mdx": "2.1.0",
     "eslint-plugin-react": "7.35.0",

@@ -60,7 +60,6 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post, index, isCategoryPage 
             className="rounded-md object-cover"
             loading={index < 2 ? 'eager' : 'lazy'}
             src={post.frontMatter.preview.url}
-            // priority={index < 1}
             width="236"
             height="160"
             alt={post.frontMatter.preview.alt || ''}

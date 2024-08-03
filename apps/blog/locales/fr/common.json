@@ -71,7 +71,7 @@
     "path": "/articles",
     "seo": {
       "title": "Articles",
-      "description": "Retrouvez mes articles sur le dévelopement web and sur tous les autres sujets qui me fascinnent et m'intéressent.",
+      "description": "Plongez dans une mine d'articles sur le développement web, les meilleures pratiques de codage et les innovations technologiques de pointe. Que vous soyez un développeur chevronné ou débutant, vous y trouverez mes conseils d'expert, des analyses approfondies et des solutions pratiques pour améliorer vos compétences en programmation et rester à la pointe dans le monde en constante évolution de la technologie.",
       "url": "articles"
     },
     "h1": "Mes articles",
@@ -87,7 +87,7 @@
     "path": "/notes",
     "seo": {
       "title": "Notes",
-      "description": "Retrouvez l'ensemble de mes notes: des bout de code, des expérimentations, des découvertes, tout ce qu'il me semble intéressant de vous partagez!",
+      "description": "Découvrez une collection de notes brèves et concises que je publie régulièrement. Ces aperçus condensés couvrent un éventail de sujets, allant des réflexions sur la vie quotidienne aux subtilités du développement web et au-delà. Explorez de nouvelles perspectives et des conseils pratiques dans des formats facilement assimilables.",
       "url": "notes"
     },
     "h1": "Mes Notes",

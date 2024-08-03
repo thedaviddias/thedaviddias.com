@@ -57,7 +57,7 @@
     "hero": {
       "greetings1": "Hello there!",
       "greetings2": " I'm David Dias",
-      "presentation": "A Front-End Developer, podcaster and content creator passionate about solving digital and human challenges. I enjoy meeting new people, building communities and discussing tech, expatriation and the web."
+      "presentation": "A Front-End Developer, podcaster, and content creator passionate about solving digital and human challenges. I thrive on building communities, exploring tech innovations, and discussing the intricacies of web development and expatriate life. Let's connect and share ideas that shape the digital world."
     },
     "sections": {
       "podcast": {
@@ -71,7 +71,7 @@
     "path": "/articles",
     "seo": {
       "title": "My Web Development Articles and More",
-      "description": "Explore insightful articles on web development, coding best practices, and tech innovations by David Dias. Find expert tips and in-depth analysis for developers.",
+      "description": "Delve into insightful articles on web development, coding best practices, and cutting-edge tech innovations. Whether you're a seasoned developer or just starting out, you'll find my expert tips, in-depth analysis, and practical solutions to enhance your coding skills and stay ahead in the ever-evolving world of technology.",
       "url": "articles"
     },
     "h1": "My Articles",
@@ -88,7 +88,7 @@
     "path": "/notes",
     "seo": {
       "title": "My Daily Observations about daily life, web development and more",
-      "description": "Explore short and concise notes I regularly publish about daily life, web development and more.",
+      "description": "Explore a collection of short and concise notes I regularly publish. These bite-sized insights cover a range of topics, from the musings of daily life to the intricacies of web development and beyond. Discover fresh perspectives and practical tips in easily digestible formats.",
       "url": "notes"
     },
     "h1": "My Notes",

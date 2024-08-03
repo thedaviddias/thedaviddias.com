@@ -20,6 +20,7 @@ export const Categories: React.FC<CategoriesListProps> = ({ categories }) => {
             <CustomLink
               href={`${t('category.path')}/${category.name}`}
               className="text-x mb-1 !font-semibold uppercase text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+              rel="noindex nofollow"
             >
               {humanizeString(category.name)}
             </CustomLink>

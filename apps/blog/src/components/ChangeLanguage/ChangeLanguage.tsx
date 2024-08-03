@@ -32,6 +32,7 @@ export const ChangeLanguage: FC<ChangeLanguageProps> = ({ hasTranslation = true 
       (router.asPath.includes('/articles/') ||
         router.asPath.includes('/notes/') ||
         router.asPath.includes('/categories/') ||
+        router.asPath.includes('/projects/') ||
         router.asPath.includes('/tags/')) &&
       !['/articles', '/notes'].includes(router.asPath)
     ) {

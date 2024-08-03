@@ -24,6 +24,8 @@ import { getAllPosts } from '@/utils/get-article-posts/getAllPosts'
 import { getPost } from '@/utils/get-article-posts/getPost'
 import { getPostBySlug } from '@/utils/get-article-posts/getPostBySlug'
 import { serializeMarkdown } from '@/utils/serializeMarkdown'
+import { BuyMeACoffee } from '@/components/BuyMeACoffee'
+import { LazyRender } from '@/components/lazy-render/LazyRender'
 
 const Comments = dynamic<object>(
   () => import('../../components/Comments').then((mod) => mod.Comments),
@@ -34,13 +36,6 @@ const Comments = dynamic<object>(
 
 const AdjacentPosts = dynamic<AdjacentPostsProps>(
   () => import('../../components/AdjacentPosts').then((mod) => mod.AdjacentPosts),
-  {
-    loading: () => <Loader />,
-  }
-)
-
-const BuyMeACoffee = dynamic(
-  () => import('../../components/BuyMeACoffee').then((mod) => mod.BuyMeACoffee),
   {
     loading: () => <Loader />,
   }
@@ -194,13 +189,17 @@ const NotePage: NextPage<NotePageProps> = ({
               </section>
               {permalink && <Share title={title} permalink={permalink} />}
 
-              <BuyMeACoffee />
+              <LazyRender>
+                <BuyMeACoffee />
+              </LazyRender>
 
               {adjacentPosts && <AdjacentPosts posts={adjacentPosts} />}
 
               {/* <Webmentions mentions={data?.links} /> */}
 
-              <Comments />
+              <LazyRender>
+                <Comments />
+              </LazyRender>
             </div>
           </div>
         </article>

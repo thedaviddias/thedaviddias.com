@@ -36,6 +36,8 @@ import { getPostBySlug } from '@/utils/get-article-posts/getPostBySlug'
 import { GetRelatedPosts, getRelatedPosts } from '@/utils/get-article-posts/getRelatedPosts'
 import { serializeMarkdown } from '@/utils/serializeMarkdown'
 import wordsCounter from 'word-counting'
+import { BuyMeACoffee } from '@/components/BuyMeACoffee'
+import { LazyRender } from '@/components/lazy-render/LazyRender'
 
 const Comments = dynamic<object>(
   () => import('../../components/Comments').then((mod) => mod.Comments),
@@ -46,13 +48,6 @@ const Comments = dynamic<object>(
 
 const AdjacentPosts = dynamic<AdjacentPostsProps>(
   () => import('../../components/AdjacentPosts').then((mod) => mod.AdjacentPosts),
-  {
-    loading: () => <Loader />,
-  }
-)
-
-const BuyMeACoffee = dynamic(
-  () => import('../../components/BuyMeACoffee').then((mod) => mod.BuyMeACoffee),
   {
     loading: () => <Loader />,
   }
@@ -269,7 +264,9 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
                   )}
                 </section>
 
-                <BuyMeACoffee />
+                <LazyRender>
+                  <BuyMeACoffee />
+                </LazyRender>
 
                 {relatedPosts.length ? <RelatedPosts relatedPosts={relatedPosts} /> : null}
 
@@ -287,7 +284,9 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({
 
                   {/* <Webmentions mentions={data?.links} /> */}
 
-                  <Comments />
+                  <LazyRender>
+                    <Comments />
+                  </LazyRender>
                 </section>
               </div>
             </div>

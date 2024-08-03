@@ -16,20 +16,20 @@ module.exports = {
   // Type check TypeScript files
   '**/*.(ts|tsx)': () => 'pnpm run check:types',
 
-  // Lint then format TypeScript and JavaScript files
-  '**/*.(ts|tsx|js)': async (files) => {
-    const filesToLint = await removeIgnoredFiles(files)
-    return filesToLint ? [`eslint --fix ${filesToLint}`, `prettier --write ${filesToLint}`] : []
-  },
+  // // Lint then format TypeScript and JavaScript files
+  // '**/*.(ts|tsx|js)': async (files) => {
+  //   const filesToLint = await removeIgnoredFiles(files)
+  //   return filesToLint ? [`eslint --fix ${filesToLint}`, `prettier --write ${filesToLint}`] : []
+  // },
 
-  // Lint then format JSON files
-  '/**/*.json,!package.json,!package-lock.json': async (files) => {
-    const filesToLint = await removeIgnoredFiles(files)
-    return [`eslint --fix ${filesToLint}`, `prettier --write ${filesToLint}`]
-  },
+  // // Lint then format JSON files
+  // '/**/*.json,!package.json,!package-lock.json': async (files) => {
+  //   const filesToLint = await removeIgnoredFiles(files)
+  //   return [`eslint --fix ${filesToLint}`, `prettier --write ${filesToLint}`]
+  // },
 
-  // Format YAML, MarkDown, JSON
-  '**/*.(yml|md|mdx)': (filenames) => `prettier --write ${filenames.join(' ')}`,
+  // // Format YAML, MarkDown, JSON
+  // '**/*.(yml|md|mdx)': (filenames) => `prettier --write ${filenames.join(' ')}`,
 
   'public/images/**/*': 'imageoptim',
 

@@ -30,7 +30,7 @@ const categoryDescriptions: { [key: string]: { [key: string]: string } } = {
 
 type SupportersProps = {
   categories: string[]
-  supporters: SupportersType[]
+  supporters: { [key: string]: SupportersType[] }
   frontMatter: {
     title: string
     description: string
